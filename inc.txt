@@ -1,0 +1,3125 @@
+# sorted alphabetically by provider.
+# Be sure to include the source(s) of new information and updates
+#   when possible, as well as the date last updated.
+#
+#
+# format:
+# <speed> <city>, <state>, <country>     <dest_city>, <dest_state>, <dest_country>~ <dest_city2>, <dest_state2>, dest_country2> ...]
+# 
+# where <speed> is in Mbps and city is initial caps, state is all caps abbreviated, and country is abbreviated if possible
+#   <1.5Mbps = 1
+#   T1       = 1.5 Mbps
+#   E1       = 2 
+#   T3       = 45
+#   OC3      = 155 
+#   OC12     = 622
+#   OC48     = 2488  (622 Mbps * 4)
+#   OC192    = 10000 (2.4 Gbps * 4)
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+above.net (updated 01/28/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# updated by Ying Zhang (ying@caida.org)
+# source: http://above.net/network/network.html
+# date: 01/28/2000
+
+
+622 San Jose, CA, US                     Vienna, VA, US~ Chicago, IL, US~
+155 San Jose, CA, US                    Los Angeles, CA, US~  Portland, OR, US~ Chicago, IL, US~ Vienna, VA, US~ Seattle, WA, US~
+
+45 Dallas, TX, US                       Los Angeles, CA, US~ Chicago, IL, US~
+
+45 Los Angeles, CA, US                  Dallas, TX, US~ 
+45 Chicago, IL, US                      Dallas, TX, US~ Atlanta, GA, US~
+155 Chicago, IL, US                      Vienna, VA, US~
+45 Atlanta, GA, US                      Vienna, VA, US~
+155 Vienna, VA, US                       Pennsauken, NJ, US~
+#155 Pennsauken, NJ, US                   Chicago, IL, US
+45 Vienna, VA, US                        New York, NY, US~
+622 New York, NY, US                     London, *, England~ 
+155 London, *, England                   Paris, *, France~ Amsterdam, *, Netherlands 
+155 Paris, *, France                     Frankfurt, *, Germany~
+155 Amsterdam, *, Netherlands            Frankfurt, *, Germany~
+155 Frankfurt, *, Germany                Vienna, *, Austria~
+45 San Jose, CA, US                      Tokyo, *, Japan~ Seoul, *, Korea~ Beijing, *, China~ 
+45 San Jose, CA, US                     Taipei, *, Taiwan~ Hong kong, *, China~
+45 San Jose, CA, US                     Singapore, *, Singapore~ Canberra, *, AU~
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+At Home Network (updated 01/16/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# updated by Ying Zhang (ying@caida.org)
+# source: http://work.home.net/images/backmap.gif
+# date: 01/16/2000
+
+
+2488 Seattle, WA, US                     Portland, OR, US~ Spokane, WA, US~
+2488 Spokane, WA, US                     Billings, MT, US~
+2488 Billings, MT, US                    Longmont, CO, US~
+2488 Longmont, CO, US                    Denver, CO, US~ Salt Lake City, UT, US~ Omaha, NE, US~ 
+2488 Omaha, NE, US                       Kansas City, MO, US~ Des Moines, IA, US~
+2488 Des Moines, IA, US                  Omaha, NE, US~
+2488 Kansas City, MO, US                 Tulsa, OK, US~
+2488 Tulsa, OK, US                       Oklahoma City, OK, US~ Dallas, TX, US~
+2488 Oklahoma City, OK, US               Denver, CO, US
+2488 Dallas, TX, US                      Phoenix, AZ, US~ Tulsa, OK, US~ Houston, TX, US~ 
+2488 Chicago, IL, US                     Milwaukee, WI, US~ Des Moines, IA, US~ Detroit, MI, US~
+2488 Chicago, IL, US                     Cleveland, OH, US~
+2488 Detroit, MI, US                     Buffalo, NY, US~ Cleveland, OH, US~
+2488 Cleveland, OH, US                   Buffalo, NY, US~ Pittsburgh, PA, US~ Indianapolis, IN, US~
+2488 Buffalo, NY, US                     Hartford, CT, US~
+2488 Boston, MA, US                      London, *, UK~ Providence, RI, US~ Hartford, CT, US~
+2488 Providence, RI, US                  New York, NY, US~  
+2488 New York, *, US                     Union, NJ, US~
+2488 Union, NJ, US                       Philadelphia, PA, US~
+2488 Philadelphia, PA, US                Baltimore, MD, US~ Pittsburgh, PA, US~
+2488 Baltimore, MD, US                   Washington, DC, US~    
+2488 Norfolk, VA, US                     Washington, DC, US~   
+2488 Columbia, SC, US                    Norfolk, VA, US~ Jacksonville, FL, US~
+2488 Jacksonville, FL, US                Miami, FL, US~ 
+2488 Tampa, FL, US                       Miami, FL, US~  New Orleans, LA, US~ Atlanta, GA, US~
+2488 New Orleans, LA, US                 Baton Rouge, LA~
+2488 Baton Rouge, LA, US                 Houston, TX, US~
+2488 Dallas, TX, US                      Phoenix, AZ, US~ Houston, TX, US~ Tulsa, OK, US~
+2488 Lexington, KY, US                   Nashville, TN, US~ Indianapolis, IN, US~
+2488 Montgomery, AL, US                  Atlanta, GA, US~  Nashville, TN, US~ New Orleans, LA, US~ 
+2488 Indianapolis, IN, US                Cleveland, OH, US~
+ 
+2488 Portland, OR, US                    San Jose, CA, US~
+2488 San Jose, CA, US                    Los Angeles, CA, US~ Salt Lake City, UT, US~ 
+2488 Los Angeles, CA, US                 Orange County, CA, US~
+2488 Orange County, CA, US               San Diego, CA, US
+2488 San Diego, CA, US                   Phoenix, AZ, US~
+2488 Nashville, TN, US                   Atlanta, GA, US~
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+AGIS (updated 03/02/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+# updated by Ying Zhang (ying@caida.org)
+# source: http://www.agis.net/
+# date: 03/02/2000
+
+822 Oakland, CA, US                      Sacramento, CA, US~ 
+822 Reno, NV, US                         Sacramento, CA, US~ 
+822 Reno, NV, US                         Salt Lake City, UT, US~ 
+822 Salt Lake City, UT, US               Provo, UT, US~ 
+822 Provo, UT, US                        Grand Junction, CO, US~ 
+822 Denver, CO, US                       Grand Junction, CO, US~ 
+822 Denver, CO, US                       Kansas City, KS, US~ 
+822 St. Louis, MO, US                    Kansas City, KS, US~ 
+822 St. Louis, MO, US                    Indianapolis, IN, US~ 
+822 Cincinnati, OH, US                   Indianapolis, IN, US~ 
+822 Cincinnati, OH, US                   Waynesville, OH, US~ 
+822 Akron, OH, US                        Waynesville, OH, US~ Pittsburgh, PA, US~ 
+822 Altoona, PA, US                      Pittsburgh, PA, US~ Harrisburg, PA, US~ 
+822 Bronx, NY, US                        Harrisburg, PA, US~ Washington, DC, US~ 
+-1 Seattle, WA, US                       Portland, OR, US~ 
+-1 Salt Lake City, UT, US                Portland, OR, US~ Las Vegas, NV, US~ 
+-1 Las Vegas, NV, US                     Los Angeles, CA, US~ 
+-1 Tucson, AZ, US                        Phoenix, AZ, US~ El Paso, TX, US~ 
+-1 El Paso, TX, US                       Albuquerque, NM, US~ 
+-1 El Paso, TX, US                       San Antonio, TX, US~ 
+-1 Albuquerque, NM, US                   Santa Fe, NM, US~ 
+-1 Santa Fe, NM, US                      Pueblo, CO, US~ 
+-1 Pueblo, CO, US                        Colorado Springs, CO, US~ 
+-1 Austin, TX, US                        San Antonio, TX, US~ Houston, TX, US~ 
+-1 Houston, TX, US                       Beaumont, TX, US~ 
+-1 Lake Charles, LA, US                  Beaumont, TX, US~ Lafayette, LA, US~ 
+-1 Morgan City, LA, US                   Lafayette, LA, US~ Mobile, AL, US~ 
+-1 Pensacola, FL, US                     Mobile, AL, US~ Cottondale, FL, US~ 
+45 Las Vegas, NV, US                     Los Angeles, CA, US~ Phoenix, AZ, US~ 
+45 Dallas, TX, US                        Phoenix, AZ, US~ Little Rock, AR, US~ 
+45 Atlanta, GA, US                       Little Rock, AR, US~ Ocala, FL, US~ 
+45 Atlanta, GA, US                       Washington, DC, US~ 
+45 Washington, DC, US                    Columbus, OH, US~ Boston, MA, US~ 
+45 Downers Grove, IL, US                 Columbus, OH, US~ Minneapolis, MN, US~ 
+45 Fort Lauderdale, FL, US               Jacksonville, FL, US~ 
+155 San Francisco, CA, US                Seattle, WA, US~ Bronx, NY, US~ 
+155 Bronx, NY, US                        Boston, MA, US~ 
+155 Winston Salem, NC, US                Fort Lauderdale, FL, US~ 
+155 Houston, TX, US                      Atlanta, GA, US~ 
+155 San Diego, CA, US                    Yuma, AZ, US~ 
+155 Houston, TX, US                      Yuma, AZ, US~ 
+155 Yuma, AZ, US                         San Diego, CA, US~ Phoenix, AZ, US~ 
+155 Portland, OR, US                     Seattle, WA, US~ Salem, OR, US~ 
+155 Salem, OR, US                        Eugene, OR, US~ 
+155 Eugene, OR, US                       Medford, OR, US~ 
+155 Medford, OR, US                      Redding, CA, US~ 
+155 Redding, CA, US                      Chico, CA, US~ 
+155 Chico, CA, US                        Roseville, CA, US~ 
+155 Roseville, CA, US                    Sacramento, CA, US~ 
+155 Sacramento, CA, US                   Stockton, CA, US~ 
+155 Stockton, CA, US                     Fresno, CA, US~ 
+155 Bakersfield, CA, US                  Los Angeles, CA, US~ Fresno, CA, US~ 
+155 Los Angeles, CA, US                  Santa Barbara, CA, US~ Anaheim, CA, US~ 
+155 Anaheim, CA, US                      San Diego, CA, US~ 
+155 San Luis Obispo, CA, US              Oakland, CA, US~ Santa Barbara, CA, US~ 
+155 Kansas City, KS, US                  Tulsa, OK, US~ 
+155 Oklahoma City, OK, US                Tulsa, OK, US~ Dallas, TX, US~ 
+155 College Station, TX, US              Dallas, TX, US~ Beaumont, TX, US~ 
+155 Eau Claire, WI, US                   Minneapolis, MN, US~ Green Bay, WI, US~ 
+155 Green Bay, WI, US                    Milwaukee, WI, US~ 
+155 Milwaukee, WI, US                    Downers Grove, IL, US~ 
+155 Downers Grove, IL, US                Indianapolis, IN, US~ 
+155 Battle Creek, MI, US                 South Bend, IN, US~ Dearborn, MI, US~ 
+155 Dearborn, MI, US                     Detroit, MI, US~ 
+155 Detroit, MI, US                      Toledo, OH, US~ 
+155 Toledo, OH, US                       Columbus, OH, US~ 
+155 Columbus, OH, US                     Akron, PA, US~ 
+155 Lake City, FL, US                    Gainesville, FL, US~ 
+155 Gainesville, FL, US                  Ocala, FL, US~ 
+155 Ocala, FL, US                        Tampa, FL, US~ Orlando, FL, US~ 
+155 Melbourne, FL, US                    Daytona, FL, US~ 
+155 Melbourne, FL, US                    West palm beach, FL, US~ 
+155 Fort Lauderdale, FL, US              West palm beach, FL, US~ Miami, FL, US~ 
+155 Jacksonville, FL, US                 Daytona, FL, US~ Savannah, GA, US~ 
+155 Savannah, GA, US                     Augusta, GA, US~ 
+155 Augusta, GA, US                      Columbia, SC, US~ 
+155 Columbia, SC, US                     Charlotte, NC, US~ 
+155 Charlotte, NC, US                    Greensboro, NC, US~ 
+155 Winston Salem, NC, US                Greensboro, NC, US~ 
+155 Winston Salem, NC, US                Raleigh, NC, US~ 
+155 Raleigh, NC, US                      Rocky Mount, NC, US~ 
+155 Rocky Mount, NC, US                  Portsmouth, VA, US~ 
+155 Portsmouth, VA, US                   Norfolk, VA, US~ 
+155 Richmond, VA, US                     Norfolk, VA, US~ 
+155 Richmond, VA, US                     Fredericksburg, VA, US~ 
+155 Fredericksburg, VA, US               Boston, MA, US~ 
+
+##              Interconnects
+???             -                                   San Jose, CA, US~ Washington, DC, US~ 
+???             -                                   Pennsauken, NJ, US~ 
+???             -                                   San Francisco, CA, US~ 
+                 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+AT&T WorldNet (updated 07/08/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# http://www.att.com/worldnet/wmis/misb.html
+# updated by ying 07/08/2000
+
+
+################ following is old  CERFnet 
+45 Boston, MA, US                        Detroit, MI, US~ 
+45 Chicago, IL, US                       Detroit, MI, US~ Dallas, TX, US~ 
+45 Chicago, IL, US                       Pittsburgh, PA, US~ Denver, CO, US~ 
+45 Dallas, TX, US                        Houston, TX, US~ Chicago, IL, US~ 
+45 Dallas, TX, US                        Washington, DC, US~ Phoenix, AZ, US~ 
+45 Denver, CO, US                        Chicago, IL, US~ San Francisco, CA, US~ 
+45 Detroit, MI, US                       Chicago, IL, US~ Boston, MA, US~ 
+45 Houston, TX, US                       Dallas, TX, US~ 
+45 New York, NY, US                      Seattle, WA, US~ 
+45 Philadelphia, PA, US                  Pittsburgh, PA, US~ 
+45 Phoenix, AZ, US                       Dallas, TX, US~ San Diego, CA, US~ 
+45 Pittsburgh, PA, US                    Philadelphia, PA, US~ Chicago, IL, US~ 
+45 Portland, OR, US                      San Francisco, CA, US~ Seattle, WA, US~ 
+45 San Diego, CA, US                     Phoenix, AZ, US~ 
+45 San Francisco, CA, US                 Denver, CO, US~ Portland, OR, US~ 
+45 San Jose, CA, US                      Seattle, WA, US~ 
+45 Seattle, WA, US                       San Jose, CA, US~ New York, NY, US~ 
+45 Seattle, WA, US                       Portland, OR, US~ 
+45 Washington, DC, US                    Dallas, TX, US~ 
+
+155 Boston, MA, US                       New York, NY, US~ 
+155 Los Angeles, CA, US                  San Diego, CA, US~ 
+155 Los Angeles, CA, US                  San Francisco, CA, US~ 
+155 New York, NY, US                     Boston, MA, US~ Philadelphia, PA, US~ 
+155 Philadelphia, PA, US                 Washington, DC, US~ New York, NY, US~ 
+155 Philadelphia, PA, US                 San Diego, CA, US~ San Jose, CA, US~ 
+155 San Diego, CA, US                    Los Angeles, CA, US~ San Jose, CA, US~ 
+155 San Diego, CA, US                    Philadelphia, PA, US~ 
+155 San Francisco, CA, US                Los Angeles, CA, US~ San Jose, CA, US~ 
+155 San Jose, CA, US                     San Diego, CA, US~ 
+155 San Jose, CA, US                     San Francisco, CA, US~ 
+155 Washington, DC, US                   Philadelphia, PA, US~ 
+
+
+##INTERCONNECT POINTS
+##
+???	-                                    Palo Alto, CA, US~ Pennsauken, NJ, US~ 
+???	-                                    San Jose, CA, US~ 
+???	-                                    San Jose, CA, US~ 
+## Baordwatch
+???	-                                    Pennsauken, NJ, US~ Washington, DC, US~ 
+???	-                                    Los Angeles, CA, US~ 
+???	-                                    Santa Clara, CA, US~ Chicago, IL, US~ 
+
+
+
+##################### following is  old IBM Global Network 
+
+#Sydney, Australia
+#Hong Kong
+#Jakarta, Indonesia
+#Kawasaki, Japan
+#Kuala-Lumpur, Malaysia
+#Manila, Philippines
+#Taipei, Taiwan
+#Auckland, New Zealand
+#Wellington, New Zealand
+#
+#Vienna, Austria
+#Diegem, Belgium
+#La Hulpe, Belgium
+#Brno, Czechia
+#Prague, Czech Republic
+#Copenhagen, Denmark
+#Helsinki, Finland
+#Paris, France
+#Berlin, Germany
+#Dusseldorf, Germany
+#Ehningen, Germany
+#Hamburg, Germany
+#Mainz, Germany
+#Munich, Germany
+#Athens, Greece
+#Budapest, Hungary
+#Milan, Italy
+#Haifa, Israel
+#Tel-Aviv, Israel
+#Oslo, Norway
+#Uithoom, Netherlands
+#Zoetermeer, Netherlands
+#Moscow, Russia
+#St. Petersburg, Russia
+#Bratislava, Slovakia
+#Ljubljana, Slovenia
+#Stockholm, Sweden
+#Kloten, Switzerland
+#Winterthur, Switzerland
+#Madrid, Spain
+#Edinburgh, United Kingdom
+# London, *, England
+#Portsmouth, United Kingdom
+#Warwick, United Kingdom
+#
+#Fortaleza, Brazil
+#Rio de Janeiro, Brazil
+#Sao Paulo, Brazil
+#Salvador, Brazil
+#Bogota, Columbia
+#Santiago, Chile
+#Mexico City, Mexico
+#Lima, Peru
+#Caracas, Venezuela
+
+45 Atlanta, GA, US                       Tampa, FL, US~ Dallas, TX, US~ 
+45 Atlanta, GA, US                       Bethesda, MD, US~ 
+45 Bethesda, MD, US                      White Plains, NY, US~ New York, NY, US~ 
+45 Bethesda, MD, US                      Atlanta, GA, US~ Columbus, GA, US~ 
+45 Chicago, IL, US                       San Francisco, CA, US~ Dallas, TX, US~ 
+45 Chicago, IL, US                       St. Louis, MO, US~ White Plains, NY, US~ 
+45 Columbus, OH, US                      Detroit, MI, US~ New York, NY, US~ 
+45 Columbus, OH, US                      Bethesda, MD, US~ Schaumburg, IL, US~ 
+45 Dallas, TX, US                        Atlanta, GA, US~ Chicago, IL, US~ 
+45 Dallas, TX, US                        Phoenix, AZ, US~ 
+45 Detroit, MI, US                       Columbus, GA, US~ Toronto, *, Canada~ 
+45 Detroit, MI, US                       St. Louis, MO, US~ 
+45 Los Angeles, CA, US                   Phoenix, AZ, US~ San Francisco, CA, US~ 
+45 Los Angeles, CA, US                   Schaumburg, IL, US~ 
+45 Montreal, *, Canada                   Toronto, *, Canada~ 
+45 Montreal, *, Canada                   White Plains, NY, US~ 
+45 New York, NY, US                      White Plains, NY, US~ Columbus, GA, US~ 
+45 New York, NY, US                      Philadelphia, PA, US~ Tampa, FL, US~ 
+45 New York, NY, US                      Bethesda, MD, US~ 
+45 Philadelphia, PA, US                  New York, NY, US~ White Plains, NY, US~ 
+45 Phoenix, AZ, US                       Los Angeles, CA, US~ Dallas, TX, US~ 
+45 San Francisco, CA, US                 Chicago, IL, US~ Los Angeles, CA, US~ 
+45 San Francisco, CA, US                 Vancouver, *, Canada~ 
+45 Schaumburg, IL, US                    Columbus, OH, US~ Los Angeles, CA, US~ 
+45 Schaumburg, IL, US                    Chicago, IL, US~ 
+45 St. Louis, MO, US                     Chicago, IL, US~ Detroit, MI, US~ 
+45 Tampa, FL, US                         Atlanta, GA, US~ New York, NY, US~ 
+45 Toronto, *, Canada                    Montreal, *, Canada~ Detroit, MI, US~ 
+45 Vancouver, *, Canada                  San Francisco, CA, US~ 
+45 White Plains, NY, US                  Montreal, *, Canada~ 
+45 White Plains, NY, US                  Philadelphia, PA, US~ New York, NY, US~ 
+45 White Plains, NY, US                  Chicago, IL, US~ Bethesda, MD, US~ 
+
+
+##INTERCONNECTs 
+##
+???		-                                   Palo Alto, CA, US~ Pennsauken, NJ, US~ 
+???		-                                   Chicago, IL, US~ 
+???		-                                   Washington, DC, US~ San Jose, CA, US~ 
+???		-                                   Pennsauken, NJ, US~ 
+???		-                                   Chicago, IL, US~ Toronto, *, Canada~ 
+
+## Boardwatch
+Peterborough, England		-               London, *, England~ 
+X_ROUTER	-                               Brussels, *, Belgium~ 
+AMX-IX		-                               Amsterdam, *, Netherlands~ 
+MFS		-                                   Eschborn, *, Germany~ 
+DGIX		-                               Stockholm, *, Sweden~ 
+GIX		-                                   Paris, *, France~ 
+HKIX		-                               Hong Kong, *, China~ 
+???		-                                   Vienna, *, Austria~ 
+IIX		-                                   Jerusalem, *, Israel~ 
+
+##		London Internet Exchange - LINX - United Kingdom
+##		Belgian IP Interconnection Point - X-ROUTER -Belgium
+##		Amsterdam Internet Exchange - AMS-IX - The Netherlands
+##		MFS Frankfurt Exchange
+##		Stockholm Exchange (DGIX) 
+##		French GIX Exchange - Paris
+##		HKIX - Hong Kong
+##		NZIX - New Zealand
+##		Vienna NAP - Austria
+##		Israeli Internet Exchange (IIX) 
+
+
+## http://www.att.com/worldnet/wmis/misb.html
+##  updated by ying  06/07/2000
+
+10000 New York, NY, US                   Cambridge, ME, US~ 
+2488 Seattle, WA, US                     Chicago, IL, US~ San Francisco, CA, US~ 
+2488 Sacramento, CA, US                  Salt Lake City, UT, US~ 
+2488 Sacramento, CA, US                  San Francisco, CA, US~ 
+2488 San Francisco, CA, US               Chicago, IL, US~ Denver, CO, US~ 
+2488 San Francisco, CA, US               St. Louis, MO, US~ 
+2488 Denver, CO, US                      Dallas, TX, US~ 
+2488 Los Angeles, CA, US                 Kansas City, MO, US~ 
+2488 Kansas City, MO, US                 San Diego, CA, US~ Dallas, TX, US~ 
+2488 San Diego, CA, US                   Phoenix, AZ, US~ 
+2488 Phoenix, AZ, US                     Dallas, TX, US~ 
+2488 Salt Lake City, UT, US              Denver, CO, US~ 
+2488 Denver, CO, US                      Dallas, TX, US~ 
+2488 Dallas, TX, US                      Austin, TX, US~ Orlando, FL, US~ 
+2488 Dallas, TX, US                      Atlanta, GA, US~ Kansas City, MO, US~ 
+2488 Dallas, TX, US                      Houston, TX, US~ 
+2488 Austin, TX, US                      Houston, TX, US~ 
+2488 Orlando, FL, US                     Atlanta, GA, US~ 
+2488 Atlanta, GA, US                     Washington, DC, US~ 
+2488 Washington, DC, US                  St. Louis, MO, US~ Philadelphia, PA, US~ 
+2488 Washington, DC, US                  New York, NY, US~ 
+2488 New York, NY, US                    Philadelphia, PA, US~ Chicago, IL, US~ 
+2488 New York, NY, US                    Pittsburgh, PA, US~ Cambridge, ME, US~ 
+2488 New York, NY, US                    Hartford, CT, US~ 
+2488 Cambridge, ME, US                   Hartford, CT, US~ Chicago, IL, US~ 
+2488 Chicago, IL, US                     Detroit, MI, US~ St. Louis, MO, US~ 
+2488 Chicago, IL, US                     Kansas City, MO, US~ 
+2488 Chicago, IL, US                     Minneapolis, MN, US~ 
+2488 Minneapolis, MN, US                 Omaha, NE, US~ 
+2488 Omaha, NE, US                       Kansas City, MO, US~ 
+2488 Kansas City, MO, US                 St. Louis, MO, US~ 
+155 Seattle, WA, US                      Spokane, WA, US~ Portland, OR, US~ 
+155 San Francisco, CA, US                San Jose, CA, US~ Redwood City, CA, US~ 
+155 San Francisco, CA, US                Oakland, CA, US~ 
+155 Los Angeles, CA, US                  Las Vegas, NV, US~ Phoenix, AZ, US~ 
+155 Los Angeles, CA, US                  Anaheim, CA, US~ Gardena, CA, US~ 
+155 Los Angeles, CA, US                  Sherman Oaks, CA, US~ 
+155 Phoenix, AZ, US                      Albuquerque, NM, US~ 
+155 Denver, CO, US                       Colorado Springs, CO, US~ 
+155 Dallas, TX, US                       Oklahoma City, OK, US~ Tulsa, OK, US~ 
+155 Dallas, TX, US                       Fort Worth, TX, US~ 
+155 Austin, TX, US                       San Antonio, TX, US~ 
+155 Houston, TX, US                      New Orleans, LA, US~ 
+155 Atlanta, GA, US                      Birmingham, AL, US~ Columbus, OH, US~ 
+155 Atlanta, GA, US                      Charlotte, NC, US~ Columbia, SC, US~ 
+155 Atlanta, GA, US                      Nashville, TN, US~ 
+155 Orlando, FL, US                      Miami, FL, US~ Fort Lauderdale, FL, US~ 
+155 Orlando, FL, US                      Palm Beach, FL, US~ Ojus, FL, US~ 
+155 St. Louis, MO, US                    Memphis, TN, US~ Little Rock, AR, US~ 
+155 Kansas City, MO, US                  Springfield, MO, US~ 
+155 Omaha, NE, US                        Des Moines, IA, US~ 
+155 Chicago, IL, US                      Birmingham, AL, US~ Plymouth, OH, US~ 
+155 Chicago, IL, US                      Indianapolis, IN, US~ Cleveland, OH, US~ 
+155 Chicago, IL, US                      Cincinnati, OH, US~ Milwaukee, WI, US~ 
+155 Pittsburgh, PA, US                   Akron, PA, US~ Rochester, NY, US~ 
+155 Washington, DC, US                   Richmond, VA, US~ Raleigh, NC, US~ 
+155 Washington, DC, US                   Norfolk, VA, US~ 
+155 New York, NY, US                     Newark, NJ, US~ New York, NY, US~ 
+155 New York, NY, US                     wayne, *, US~ West Greenwich, RI, US~ 
+155 New York, NY, US                     White Plains, NY, US~ Albany, NY, US~ 
+155 New York, NY, US                     Stamford, *, US~ Bridgeport, *, US~ 
+155 New York, NY, US                     Framingham, *, US~ Syracuse, NY, US~ 
+
+155 Philadelphia, PA, US                 Harrisburg, PA, US~ Norfolk, VA, US~ 
+155 Cambridge, ME, US                    Portland, OR, US~ Boston, *, US~ 
+155 Cambridge, ME, US                    Boston, MA, US~ Framingham, *, US~ 
+45 Seattle, WA, US                       Spokane, WA, US~ Anchorage, AK, US~ 
+45 San Francisco, CA, US                 Oakland, CA, US~ Honolulu, HI, US~ 
+45 San Francisco, CA, US                 San Jose, CA, US~ Redwood City, CA, US~ 
+45 San Francisco, CA, US                 Oakland, CA, US~ 
+45 Los Angeles, CA, US                   Las Vegas, NV, US~ Phoenix, AZ, US~ 
+45 Los Angeles, CA, US                   Anaheim, CA, US~ Gardena, CA, US~ 
+45 Los Angeles, CA, US                   Sherman Oaks, CA, US~ 
+45 Denver, CO, US                        Colorado Springs, CO, US~ 
+45 Denver, CO, US                        Salt Lake City, UT, US~ 
+45 Denver, CO, US                        Albuquerque, NM, US~ 
+45 Dallas, TX, US                        Oklahoma City, OK, US~ Tulsa, OK, US~ 
+45 Dallas, TX, US                        Fort Worth, TX, US~ 
+45 Atlanta, GA, US                       Orlando, FL, US~ Columbus, OH, US~ 
+45 Atlanta, GA, US                       Charlotte, NC, US~ Columbia, SC, US~ 
+45 Atlanta, GA, US                       Nashville, TN, US~ 
+45 St. Louis, MO, US                     Little Rock, AR, US~ 
+45 St. Louis, MO, US                     Springfield, VA, US~ 
+45 Omaha, NE, US                         Kansas City, MO, US~ 
+45 Chicago, IL, US                       Birmingham, AL, US~ Plymouth, OH, US~ 
+45 Chicago, IL, US                       Indianapolis, IN, US~ Cleveland, OH, US~ 
+45 Chicago, IL, US                       Cincinnati, OH, US~ Milwaukee, WI, US~ 
+45 Chicago, IL, US                       Minneapolis, MN, US~  Paul, *, US~ 
+45 Chicago, IL, US                       Grand Rapids, *, US~ Pittsburgh, PA, US~ 
+45 Washington, DC, US                    Richmond, VA, US~ Raleigh, NC, US~ 
+45 New York, NY, US                      Newark, NJ, US~ New York, NY, US~ 
+45 New York, NY, US                      wayne, *, US~ West Greenwich, RI, US~ 
+45 New York, NY, US                      White Plains, NY, US~ Albany, NY, US~ 
+45 New York, NY, US                      Stamford, *, US~ bridgeport, *, US~ 
+45 New York, NY, US                      Framingham, *, US~ Syracuse, NY, US~ 
+
+
+
+45 Atlanta, GA, US                       St. Louis, MO, US~ Washington, DC, US~ 
+45 Bridgeton, MO, US                     St. Louis, MO, US~ 
+45 Cambridge, ME, US                     New York, NY, US~ Detroit, MI, US~ 
+45 Chicago, IL, US                       Seattle, WA, US~ St. Louis, MO, US~ 
+45 Chicago, IL, US                       Washington, DC, US~ New York, NY, US~ 
+45 Chicago, IL, US                       Denver, CO, US~ San Francisco, CA, US~ 
+45 Dallas, TX, US                        Los Angeles, CA, US~ 
+45 Dallas, TX, US                        San Francisco, CA, US~ New York, NY, US~ 
+45 Dallas, TX, US                        St. Louis, MO, US~ 
+45 Denver, CO, US                        Chicago, IL, US~ San Francisco, CA, US~ 
+45 Detroit, MI, US                       Cambridge, *, England~ 
+45 Houston, TX, US                       Orlando, FL, US~ 
+45 Los Angeles, CA, US                   San Francisco, CA, US~ Dallas, TX, US~ 
+45 Middletown, NC, US                    Washington, DC, US~ 
+45 New York, NY, US                      Cambridge, *, England~ Chicago, IL, US~ 
+45 New York, NY, US                      Dallas, TX, US~ San Francisco, CA, US~ 
+45 New York, NY, US                      Washington, DC, US~ 
+45 Orlando, FL, US                       Houston, TX, US~ San Francisco, CA, US~ 
+45 Orlando, FL, US                       New York, NY, US~ 
+45 San Francisco, CA, US                 Los Angeles, CA, US~ Orlando, FL, US~ 
+45 San Francisco, CA, US                 Dallas, TX, US~ Denver, CO, US~ 
+45 San Francisco, CA, US                 Chicago, IL, US~ New York, NY, US~ 
+45 Seattle, WA, US                       Chicago, IL, US~ 
+45 St. Louis, MO, US                     Chicago, IL, US~ Atlanta, GA, US~ 
+45 St. Louis, MO, US                     Bridgeton, MO, US~ Dallas, TX, US~ 
+45 Washington, DC, US                    Orlando, FL, US~ Middletown, NJ, US~ 
+45 Washington, DC, US                    Atlanta, GA, US~ New York, NY, US~ 
+45 Washington, DC, US                    Chicago, IL, US~ 
+
+##INTERCONNECT POINTS
+???          -                           San Jose, CA, US~ Washington, DC, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+BBN Planet  (updated 04/16/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+##http://www.genuity.com/infrastructure/us_back100.htm
+##updated by Ying Zhang 04/16/2000
+
+155 Everett, WA, US                      Portland, OR, US~ Beaverton, OR, US~ 
+155 Everett, WA, US                      San Francisco, CA, US~ 
+155 Denver, CO, US                       San Francisco, CA, US~ Chicago, IL, US~ 
+622 San Francisco, CA, US                San Jose, CA, US~ Palo Alto, CA, US~ 
+622 San Francisco, CA, US                Los Angeles, CA, US~ 
+622 Stanford, CA, US                     San Jose, CA, US~ 
+622 Los Angeles, CA, US                  San Francisco, CA, US~ Ontario, CA, US~ 
+155 Los Angeles, CA, US                  Long Beach, ca, US~ 
+155 Los Angeles, CA, US                  San Diego, CA, US~ Phoenix, AZ, US~ 
+45 Honolulu, HI, US						 San Francisco, CA, US~ San Jose, CA, US~ 
+45 Atlanta, GA, US                       Jackson, MS, US~ 
+622 Dallas, TX, US                       Los Angeles, CA, US~ Atlanta, GA, US~ 
+155 Dallas, TX, US                       Austin, TX, US~ Bryan, TX, US~ 
+155 Dallas, TX, US                       Houston, TX, US~ 
+622 Chicago, IL, US                      Kansas City, KS, US~ 
+622 Chicago, IL, US                      San Francisco, CA, US~ New York, NY, US~ 
+622 Chicago, IL, US                      Boston, MA, US~ 
+155 Chicago, IL, US                      Minneapolis, MN, US~ Denver, CO, US~ 
+155 Chicago, IL, US                      Indianapolis, IN, US~ Cleveland, OH, US~ 
+155 Cleveland, OH, US                    Detroit, MI, US~ Columbus, GA, US~ 
+155 Cleveland, OH, US                    Pittsburgh, PA, US~ 
+155 Indianapolis, IN, US                 St. Louis, MO, US~ Cincinnati, OH, US~ 
+155 Atlanta, GA, US                      Nashville, TN, US~ 
+622 Washington, DC, US                   Los Angeles, CA, US~ Atlanta, GA, US~ 
+622 Washington, DC, US                   Tampa, FL, US~ Tyson's Corner, VA, US~ 
+622 Washington, DC, US                   New York, NY, US~ 
+622 Tampa, FL, US                        Atlanta, GA, US~ Miami, FL, US~ 
+622 Tampa, FL, US                        Washington, DC, US~ 
+622 New York, NY, US                     San Francisco, CA, US~ Chicago, IL, US~ 
+622 New York, NY, US                     Cambridge, ME, US~ Boston, MA, US~ 
+622 Boston, MA, US                       Cambridge, ME, US~ Waltham, MA, US~ 
+155 New York, NY, US                     Philadelphia, PA, US~ Rochester, NY, US~ 
+155 Kansas City, KS, US                  Dallas, TX, US~ 
+
+##INTERCONNECT (04/16/2000)
+
+???		-                                   Dallas, TX, US~ Washington, DC, US~ 
+???		-                                   Stanford, CA, US~ San Jose, CA, US~ 
+???		-                                   Los Angeles, CA, US~ Chicago, IL, US~ 
+???		-                                   Cambridge, ME, US~ New York, NY, US~ 
+???		-                                   Atlanta, GA, US~ 
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Cable Internet (updated 06/06/2001)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# source: "Mike" <mike@cableinet.net>
+# by: Bradley Huffaker
+# date: 06/06/2001
+
+155 London, *, England					Paris, *, FR~ Amsterdam, *, NL~
+34  London, *, England					Manchester, *, England~
+622 London, *, England					Washington, DC, US~
+155 Washington, DC, US					Vienna, VA, US~ San Jose, CA, US~ New York, NY, US~
+
+
+  ##INTERCONNECT
+   CARRIER1    -   London, *, England~
+   ???              -   London, *, England~
+   ???              -   Manchester, *, England~
+   ???              -   Paris, *, FR~
+   ???              -   Amsterdam, *, NL~
+   ???              -   Vienna, VA, US~
+   ???              -   San Jose, CA, US~
+   ???              -   New York, NY, US~
+   LEVEL3       -   Washington, DC, US~
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+CAIS Internet (updated 04/23/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# source: http://www.cais.com/network/network.htm  
+#updated by ying zhang  04/23/2000
+
+622 San Francisco, CA, US                Salt Lake City, UT, US~ 
+622 Salt Lake City, UT, US               Denver, CO, US~ 
+622 Denver, CO, US                       Kansas City, MO, US~ 
+622 Kansas City, MO, US                  Chicago, IL, US~ 
+622 Chicago, IL, US                      Detroit, MI, US~ 
+622 Detroit, MI, US                      Cleveland, OH, US~ Pittsburgh, PA, US~ 
+622 Pittsburgh, PA, US                   Washington, DC, US~ 
+622 Washington, DC, US                   Baltimore, MD, US~ 
+622 Baltimore, MD, US                    Philadelphia, PA, US~ 
+622 Philadelphia, PA, US                 New York, NY, US~ 
+155 Seattle, WA, US                      Portland, OR, US~ 
+155 Portland, OR, US                     Sacramento, CA, US~ 
+155 San Francisco, CA, US                Sacramento, CA, US~ 
+155 San Francisco, CA, US                Los Angeles, CA, US~ 
+155 Los Angeles, CA, US                  Las Vegas, NV, US~ San Diego, CA, US~ 
+155 San Diego, CA, US                    Phoenix, AZ, US~ 
+155 Phoenix, AZ, US                      San Antonio, TX, US~ 
+155 San Antonio, TX, US                  Austin, TX, US~ 
+155 Austin, TX, US                       Houston, TX, US~ 
+155 Houston, TX, US                      Dallas, TX, US~ New Orleans, LA, US~ 
+155 Dallas, TX, US                       Fort Worth, TX, US~ Atlanta, GA, US~ 
+155 Dallas, TX, US                       St. Louis, MO, US~ 
+
+45 New Orleans, LA, US                   Tampa, FL, US~ 
+45 Tampa, FL, US                         Miami, FL, US~ 
+155 Miami, FL, US                        Orlando, FL, US~ 
+155 Orlando, FL, US                      Atlanta, GA, US~ 
+155 Atlanta, GA, US                      Charlotte, NC, US~ 
+155 Charlotte, NC, US                    Raleigh, NC, US~ 
+155 Richmond, VA, US                     Raleigh, NC, US~ McLean, VA, US~ 
+155 Richmond, VA, US                     Washington, DC, US~ 
+155 New York, NY, US                     Boston, MA, US~ 
+155 Chicago, IL, US                      St. Louis, MO, US~ 
+155 Las Vegas, NV, US                    Salt Lake City, UT, US~ 
+45 Seattle, WA, US                       Salt Lake City, UT, US~ 
+45 Kansas City, MO, US                   Minneapolis, MN, US~ 
+45 Minneapolis, MN, US                   Chicago, IL, US~ 
+45 Nashville, TN, US                     Charlotte, NC, US~ 
+45 Boston, MA, US                        Pittsburgh, PA, US~ 
+45 St. Louis, MO, US                     Nashville, TN, US
+ 
+  ##INTERCONNECT 
+
+??? 		-                            San Jose, CA, US~ Washington, DC, US~ 
+???		-                                Chicago, IL, US~ 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+CompuServe Network Services
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+45 Atlanta, GA, US                       Houston, TX, US~ Washington, DC, US~ 
+45 Boston, MA, US                        Bronx, NY, US~ Downers Grove, IL, US~ 
+45 Downers Grove, IL, US                 Columbus, GA, US~ Seattle, WA, US~ 
+45 Downers Grove, IL, US                 Boston, MA, US~ 
+45 Columbus, OH, US                      Downers Grove, IL, US~ 
+45 Columbus, OH, US                      Washington, DC, US~ Dallas, TX, US~ 
+45 Columbus, OH, US                      San Francisco, CA, US~ 
+1.5 Columbus, OH, US                     London, *, Canada~ Munich, *, DE~ 
+1.5 Columbus, OH, US                     Paris, *, France~ 
+45 Dallas, TX, US                        Houston, TX, US~ Los Angeles, CA, US~ 
+45 Dallas, TX, US                        Columbus, GA, US~ 
+45 Houston, TX, US                       Dallas, TX, US~ Atlanta, GA, US~ 
+45 Los Angeles, CA, US                   Dallas, TX, US~ San Francisco, CA, US~ 
+45 Bronx, NY, US                         Washington, DC, US~ Boston, MA, US~ 
+45 San Francisco, CA, US                 Los Angeles, CA, US~ Seattle, WA, US~ 
+45 Seattle, WA, US                       San Francisco, CA, US~ 
+45 Seattle, WA, US                       Downers Grove, IL, US~ 
+45 Washington, DC, US                    Columbus, GA, US~ Atlanta, GA, US~ 
+45 Washington, DC, US                    Bronx, NY, US~ 
+
+1.5 London, *, England                   Columbus, GA, US~ 
+1.5 Paris, *, France                     Columbus, GA, US~ 
+1.5 Munich, *, DE                        Columbus, GA, US~ 
+
+
+##Interconnects
+##
+???		-                                   Palo Alto, CA, US~ Chicago, IL, US~ 
+???		-                                   Hayward, CA, US~ 
+???		-                                   Washington, DC, US~ San Jose, CA, US~ 
+???		-                                   Downers Grove, IL, US~ 
+## Boardwatch
+Peterborough, England    -					London, *, England~ 
+
+##  T1	London Internet Exchange (LINX)
+##  T1	EBONE via ECRC, Munich
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+CRL Network Services (updated 06/18/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# source:  http://boardwatch.internet.com/isp/summer99/bb/crl.jpg
+# updated by ying zhang  06/18/2000
+
+
+45 Albuquerque, NM, US                   Phoenix, AZ, US~ Dallas, TX, US~ 
+45 Albuquerque, NM, US                   Denver, CO, US~ 
+45 Anaheim, CA, US                       Los Angeles, CA, US~ San Diego, CA, US~ 
+45 Atlanta, GA, US                       Tampa, FL, US~ Dallas, TX, US~ 
+45 Atlanta, GA, US                       Raleigh, NC, US~ 
+45 Austin, TX, US                        Brooks Air Force Base, TX, US~ 
+45 Austin, TX, US                        Dallas, TX, US~ 
+45 Baltimore, MD, US                     Philadelphia, PA, US~ 
+45 Baltimore, MD, US                     Washington, DC, US~ 
+45 Boston, MA, US                        Bronx, NY, US~ Cleveland, OH, US~ 
+45 Boston, MA, US                        Downers Grove, IL, US~ 
+45 Downers Grove, IL, US                 Detroit, MI, US~ Seattle, WA, US~ 
+45 Downers Grove, IL, US                 St. Louis, MO, US~ 
+45 Downers Grove, IL, US                 San Francisco, CA, US~ 
+45 Downers Grove, IL, US                 Boston, MA, US~ Bronx, NY, US~ 
+45 Cleveland, OH, US                     Detroit, MI, US~ Boston, MA, US~ 
+45 Cleveland, OH, US                     Pittsburgh, PA, US~ 
+45 Concord, CA, US                       San Francisco, CA, US~ Stockton, CA, US~ 
+45 Dallas, TX, US                        Houston, TX, US~ Atlanta, GA, US~ 
+45 Dallas, TX, US                        St. Louis, MO, US~ Albuquerque, NM, US~ 
+45 Dallas, TX, US                        Austin, TX, US~ 
+45 Dallas, TX, US                        San Francisco, CA, US~ 
+45 Dallas, TX, US                        Kansas City, MO, US~ 
+45 Dallas, TX, US                        Downers Grove, IL, US~ 
+45 Dallas, TX, US                        Washington, DC, US~ Houston, TX, US~ 
+45 Denver, CO, US                        Albuquerque, NM, US~ 
+45 Denver, CO, US                        Salt Lake City, UT, US~ 
+45 Denver, CO, US                        St. Louis, MO, US~ 
+45 Detroit, MI, US                       Cleveland, OH, US~ 
+45 Detroit, MI, US                       Downers Grove, IL, US~ 
+45 Houston, TX, US                       Brooks Air Force Base, TX, US~ 
+45 Houston, TX, US                       Dallas, TX, US~ 
+45 Kansas City, MO, US                   St. Louis, MO, US~ Dallas, TX, US~ 
+45 Los Angeles, CA, US                   Anaheim, CA, US~ San Jose, CA, US~ 
+45 Bronx, NY, US                         Boston, MA, US~ Philadelphia, PA, US~ 
+45 Bronx, NY, US                         Downers Grove, IL, US~ 
+45 Philadelphia, PA, US                  Baltimore, MD, US~ Bronx, NY, US~ 
+45 Phoenix, AZ, US                       Albuquerque, NM, US~ San Diego, CA, US~ 
+45 Pittsburgh, PA, US                    Washington, DC, US~ Cleveland, OH, US~ 
+45 Portland, OR, US                      Seattle, WA, US~ Santa Rosa, CA, US~ 
+45 Raleigh, NC, US                       Atlanta, GA, US~ Washington, DC, US~ 
+45 Sacramento, CA, US                    Stockton, CA, US~ Santa Rosa, CA, US~ 
+45 Brooks Air Force Base, TX, US         Austin, TX, US~ Houston, TX, US~ 
+45 San Diego, CA, US                     Anaheim, CA, US~ Phoenix, AZ, US~ 
+45 San Francisco, CA, US                 San Jose, CA, US~ San Rafael, CA, US~ 
+45 San Francisco, CA, US                 Concord, MA, US~ 
+45 San Francisco, CA, US                 Dallas, TX, US~ Salt Lake City, UT, US~ 
+45 San Francisco, CA, US                 Downers Grove, IL, US~ 
+45 San Francisco, CA, US                 Washington, DC, US~ 
+45 San Jose, CA, US                      San Francisco, CA, US~ 
+45 San Jose, CA, US                      Los Angeles, CA, US~ 
+45 San Rafael, CA, US                    Santa Rosa, CA, US~ 
+45 San Rafael, CA, US                    San Francisco, CA, US~ 
+45 Santa Rosa, CA, US                    Sacramento, CA, US~ San Rafael, CA, US~ 
+45 Santa Rosa, CA, US                    Portland, OR, US~ 
+45 Seattle, WA, US                       Portland, OR, US~ 
+45 Seattle, WA, US                       Salt Lake City, UT, US~ 
+45 St. Louis, MO, US                     Kansas City, MO, US~ 
+45 St. Louis, MO, US                     Downers Grove, IL, US~ Dallas, TX, US~ 
+45 Stockton, CA, US                      Sacramento, CA, US~ Concord, CA, US~ 
+45 Tampa, FL, US                         Atlanta, GA, US~ 
+45 Washington, DC, US                    Raleigh, NC, US~ Baltimore, MD, US~ 
+45 Washington, DC, US                    Pittsburgh, PA, US~ Dallas, TX, US~ 
+#
+##INTERCONNECT 
+##
+???		-                                   Palo Alto, CA, US~ Chicago, IL, US~ 
+???		-                                   Hayward, CA, US~ 
+???		-                                   Washington, DC, US~ San Jose, CA, US~ 
+???		-                                   Downers Grove, IL, US~ 
+
+## Boardwatch
+???		-                                   Pennsauken, NJ, US~ 
+
+
+
+##INTERCONNECT
+##
+???		-                                   Pennsauken, NJ, US~ Washington, DC, US~ 
+???		-                                   San Jose, CA, US~ Pennsauken, NJ, US~ 
+
+## BoardwatcH
+Peterborough, England		-                 London, *, England~ 
+HKIX		-                                  Hong Kong, *, China~ 
+NSP_IXP		-                               Tokyo, *, Japan~ 
+EBone		-                                 Paris, *, France~ 
+EBone		-                                 Munich, *, DE~ 
+GIX		-                                   Paris, *, France~ 
+
+## London Internet Exchange (LINX)
+## Hong Kong Internet Exchange (HKIX)
+## Tokyo Network Service Provider Internet Exchange (NSP-IXP)
+## Ebone-Paris
+## Ebone-Munich
+## GIX (Paris) 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+DataXchange Network, Inc.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+45 Los Angeles, CA, US                   San Francisco, CA, US~ 
+45 San Francisco, CA, US                 Los Angeles, CA, US~ 
+
+155 Atlanta, GA, US                      Los Angeles, CA, US~ 
+155 Atlanta, GA, US                      San Francisco, CA, US~ 
+155 Atlanta, GA, US                      Downers Grove, IL, US~ 
+155 Atlanta, GA, US                      Washington, DC, US~ 
+155 Atlanta, GA, US                      Dallas, TX, US~ Bronx, NY, US~ 
+155 Downers Grove, IL, US                Atlanta, GA, US~ Washington, DC, US~ 
+155 Downers Grove, IL, US                Los Angeles, CA, US~ 
+155 Downers Grove, IL, US                San Francisco, CA, US~ 
+155 Downers Grove, IL, US                Dallas, TX, US~ Bronx, NY, US~ 
+155 Dallas, TX, US                       Atlanta, GA, US~ Downers Grove, IL, US~ 
+155 Dallas, TX, US                       Los Angeles, CA, US~ McLean, VA, US~ 
+155 Dallas, TX, US                       Bronx, NY, US~ 
+155 Dallas, TX, US                       San Francisco, CA, US~ 
+155 Dallas, TX, US                       Washington, DC, US~ 
+155 Los Angeles, CA, US                  Atlanta, GA, US~ Washington, DC, US~ 
+155 Los Angeles, CA, US                  Downers Grove, IL, US~ Dallas, TX, US~ 
+155 Los Angeles, CA, US                  Bronx, NY, US~ 
+155 McLean, VA, US                       Washington, DC, US~ Bronx, NY, US~ 
+155 McLean, VA, US                       Dallas, TX, US~ 
+155 Bronx, NY, US                        McLean, VA, US~ Downers Grove, IL, US~ 
+155 Bronx, NY, US                        Washington, DC, US~ 
+155 Bronx, NY, US                        San Francisco, CA, US~ 
+155 Bronx, NY, US                        Los Angeles, CA, US~ 
+155 Bronx, NY, US                        Dallas, TX, US~ Atlanta, GA, US~ 
+155 San Francisco, CA, US                Atlanta, GA, US~ Downers Grove, IL, US~ 
+155 San Francisco, CA, US                Washington, DC, US~ Dallas, TX, US~ 
+155 San Francisco, CA, US                Bronx, NY, US~ 
+155 Washington, DC, US                   Los Angeles, CA, US~ 
+155 Washington, DC, US                   San Francisco, CA, US~ 
+155 Washington, DC, US                   Downers Grove, IL, US~ Atlanta, GA, US~ 
+155 Washington, DC, US                   Dallas, TX, US~ McLean, VA, US~ 
+155 Washington, DC, US                   Bronx, NY, US~ 
+
+## INTERCONNECT 
+## 
+
+## Boardwatch
+???		-                                   Palo Alto, CA, US~ Pennsauken, NJ, US~ 
+???		-                                   Chicago, IL, US~ 
+???		-                                   Hayward, CA, US~ Washington, DC, US~ 
+???		-                                   San Jose, CA, US~ 
+Cable&Wireless	-							Washington, DC, US~ 
+UUNET -										Washington, DC, US~ 
+
+
+## MCI (45 Mbps)
+## UUNET (45 Mbps) 
+#http://www.intermedia.com/products/businessinternet/  Betty Tso 03/15/2002
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Allegiance Telecom  (updated 03/15/2002)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+155 Portland, OR, US                     Seattle, WA, US~ San Francisco, CA, US~ 
+155 Salt Lake City, UT, US               Seattle, WA, US~ San Francisco, CA, US~ 
+155 Salt Lake City, UT, US               Denver, CO, US~ 
+155 Los Angeles, CA, US                  San Francisco, CA, US~ 
+155 San Francisco, CA, US                Los Angeles, CA, US~  Chicago, IL, US~ 
+155 San Francisco, CA, US                Washington, DC, US~ 
+155 Minneapolis, MN, US                  Denver, CO, US~ 
+155 Chicago, IL, US                      Minneapolis, MN, US~ Washington, DC, US~ 
+155 Chicago, IL, US                      Kansas City, MO, US~ Dallas, TX, US~ 
+155 Chicago, IL, US                      Atlanta, GA, US~ New York, NY, US~ 
+155 Dallas, TX, US                       Houston, TX, US~ Kansas City, MO, US~ 
+155 Dallas, TX, US                       Washington, DC, US~ 
+155 Atlanta, GA, US                      Miami, FL, US~ Raleigh, NC, US~ 
+155 Miami, FL, US                        Tampa, FL, US~ Washington, DC, US~ 
+155 Washington, DC, US                   Raleigh, NC, US~ Pittsburgh, PA, US~ 
+155 Washington, DC, US                   Philadelphia, PA, US~ New York, NY, US~ 
+155 New York, NY, US                     Boston, MA, US~ West Greenwich, RI, US~ 
+45 San Francisco, CA, US                 Sacramento, CA, US~ Los Angeles, CA, US~ 
+45 San Francisco, CA, US                 San Diego, CA, US~ Dallas, TX, US~ 
+45 San Francisco, CA, US                 Omaha, NE, US~ Washington, DC, US~ 
+45 Los Angeles, CA, US                   San Diego, CA, US~ Las Vegas, NV, US~ 
+45 Los Angeles, CA, US                   Phoenix, AZ, US~ Houston, TX, US~ 
+45 Salt Lake City, UT, US                Sacramento, CA, US~ Las Vegas, NV, US~ 
+45 Salt Lake City, UT, US                Denver, CO, US~ 
+45 Denver, CO, US                        Phoenix, AZ, US~ Minneapolis, MN, US~ 
+45 Phoenix, AZ, US                       Houston, TX, US~ 
+45 Minneapolis, MN, US                   Milwaukee, WI, US~ Chicago, IL, US~ 
+45 Chicago, IL, US                       Omaha, NE, US~ Milwaukee, WI, US~ 
+45 Chicago, IL, US                       St. Louis, MO, US~ Indianapolis, IN, US~ 
+45 Chicago, IL, US                       Detroit, MI, US~ 
+45 Dallas, TX, US                        Oklahoma City, OK, US~ Austin, TX, US~ 
+45 Dallas, TX, US                        Houston, TX, US~ shreveport, *, US~ 
+45 Austin, TX, US                        Dallas, TX, US~ San Antonio, TX, US~ 
+45 Houston, TX, US                       San Antonio, TX, US~ Dallas, TX, US~ 
+45 Houston, TX, US                       Atlanta, GA, US~ New Orleans, LA, US~ 
+45 Memphis, TN, US                       Shreveport, *, US~ Nashville, TN, US~ 
+45 Nashville, TN, US                     Louisville, KY, US~ Orlando, FL, US~ 
+45 Orlando, FL, US                       Tampa, FL, US~ Jacksonville, FL, US~ 
+45 Miami, FL, US                         Tampa, FL, US~ Fort Lauderdale, FL, US~ 
+45 Fort Lauderdale, FL, US               Jacksonville, FL, US~ 
+45 Atlanta, GA, US                       New Orleans, LA, US~ 
+45 Atlanta, GA, US                       Jacksonville, FL, US~ Charlotte, NC, US~ 
+45 Cincinnati, OH, US                    Indianapolis, IN, US~ Detroit, MI, US~ 
+45 Cincinnati, OH, US                    Cleveland, OH, US~ 
+45 Cleveland, OH, US                     Detroit, MI, US~ Buffalo, NY, US~ 
+45 Cleveland, OH, US                     Louisville, KY, US~ 
+45 Albany, NY, US                        Boston, MA, US~ New York, NY, US~ 
+45 Boston, MA, US                        West Greenwich, RI, US~ 
+45 West Greenwich, RI, US                New York, NY, US~ 
+45 New York, NY, US                      Newark, DE, US~ Philadelphia, PA, US~ 
+45 Baltimore, MD, US                     Trenton, NJ, US~ Washington, DC, US~ 
+45 Washington, DC, US                    Pittsburgh, PA, US~ Richmond, VA, US~ 
+45 Washington, DC, US                    Norfolk, VA, US~ 
+45 Richmond, VA, US                      Norfolk, VA, US~ Raleigh, NC, US~ 
+45 Richmond, VA, US                      Charlotte, NC, US~ 
+45 Charlotte, NC, US                     Raleigh, NC, US~ Atlanta, GA, US~ 
+2488 San Francisco, CA, US               Los Angeles, CA, US~ Dallas, TX, US~ 
+2488 San Francisco, CA, US               Chicago, IL, US~ 
+2488 Los Angeles, CA, US                 Dallas, TX, US~ 
+2488 Chicago, IL, US                     Dallas, TX, US~ New York, NY, US~ 
+2488 Chicago, IL, US                     Washington, DC, US~ 
+2488 New York, NY, US                    Washington, DC, US~ Newark, DE, US~ 
+2488 Newark, NJ, US                      Philadelphia, PA, US~ 
+2488 Philadelphia, PA, US                Baltimore, MD, US~ 
+2488 Baltimore, MD, US                   Washington, DC, US~ 
+2488 Washington, DC, US                  Chicago, IL, US~ Atlanta, GA, US~ 
+2488 Washington, DC, US                  Dallas, TX, US~ 
+2488 Atlanta, GA, US                     Dallas, TX, US~ 
+2488 Dallas, TX, US                      Chicago, IL, US~ Los Angeles, CA, US~ 
+622 San Francisco, CA, US                Los Angeles, CA, US~ Dallas, TX, US~ 
+622 San Francisco, CA, US                Chicago, IL, US~ 
+622 Chicago, IL, US                      Dallas, TX, US~ New York, NY, US~ 
+622 Chicago, IL, US                      Washington, DC, US~ 
+622 New York, NY, US                     Washington, DC, US~ 
+622 New York, NY, US                     Philadelphia, PA, US~ 
+622 Philadelphia, PA, US                 Baltimore, MD, US~ 
+622 Washington, DC, US                   Chicago, IL, US~ Atlanta, GA, US~ 
+622 Washington, DC, US                   Dallas, TX, US~ 
+622 Atlanta, GA, US                      Miami, FL, US~ Dallas, TX, US~ 
+622 Dallas, TX, US                       Chicago, IL, US~ Los Angeles, CA, US~ 
+622 Boston, MA, US                       West Greenwich, RI, US~ 
+
+##INTERCONNECT 
+##
+
+???             -                        San Francisco, CA, US~ 
+???             -                        Los Angeles, CA, US~ Dallas, TX, US~ 
+???             -                        Chicago, IL, US~ Washington, DC, US~ 
+???             -                        New York, NY, US~ Atlanta, GA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+EPOCH Networks, Inc. (updated (06/30/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# source: http://boardwatch.internet.com/isp/summer99/bb/epoch.jpg
+#updaated by ying zhang  06/30/2000
+
+45 Portland, OR, US                      Seattle, WA, US~ 
+45 Stanford, CA, US                      Napa, *, US~ Chicago, IL, US~ 
+45 Stanford, CA, US                      Salt Lake City, UT, US~ 
+45 Stanford, CA, US                      Baltimore, MD, US~ Las Vegas, NV, US~ 
+45 Stanford, CA, US                      Los Angeles, CA, US~ Seattle, WA, US~ 
+45 Los Angeles, CA, US                   San Diego, CA, US~ Palm Springs, CA, US~ 
+45 Los Angeles, CA, US                   Las Vegas, NV, US~ Phoenix, AZ, US~ 
+45 Las Vegas, NV, US                     Denver, CO, US~ 
+45 Chicago, IL, US                       Cleveland, OH, US~ Denver, CO, US~ 
+45 Chicago, IL, US                       Columbus, OH, US~ 
+45 New York, NY, US                      Stamford, *, US~ Pennsauken, NJ, US~ 
+45 New York, NY, US                      Baltimore, MD, US~ Albany, NY, US~ 
+45 New York, NY, US                      Boston, MA, US~ Syracuse, NY, US~ 
+45 Baltimore, MD, US                     Tyson's Corner, VA, US~ Atlanta, GA, US~ 
+45 Baltimore, MD, US                     Lexington, KY, US~ 
+45 Atlanta, GA, US                       Rome, NY, US~ Savannah, *, US~ 
+45 Atlanta, GA, US                       Tampa, FL, US~
+45 Atlanta, GA, US                       Dallas, TX, US~ 
+45 Dallas, TX, US                        Austin, TX, US~ 
+
+
+## Boardwatch
+???		-                                   Palo Alto, CA, US~ Pennsauken, NJ, US~ 
+???		-                                   Chicago, IL, US~ 
+???		-                                   Hayward, CA, US~ Washington, DC, US~ 
+???		-                                   San Jose, CA, US~ 
+???		-                                   Los Angeles, CA, US~ 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+EUnet (updated 11/22/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+# source http://www.romania.eu.net/Images/global_map_current0199.gif
+# updated by Alex Ma (ama@caida.org) 11/22/2000
+# bandwidth unknown, assuming 45 
+
+45 Oslo, *, Norway               Stockholm, *, Sweden~
+45 Stockholm, *, Sweden          Amsterdam, *, Netherlands~
+45 Riga, *, Latvia               Tallinn, *, Estonia~
+45 Tallinn, *, Estonia           Helsinki, *, Finland~
+45 Helsinki, *, Finland          Amsterdam, *, Netherlands~
+45 Amsterdam, *, Netherlands     Pennsauken, NJ, US~
+45 Amsterdam, *, Netherlands     Vienna, *, MD~
+45 Amsterdam, *, Netherlands     Dublin, *, Ireland~
+45 Amsterdam, *, Netherlands     London, *, England~
+45 Amsterdam, *, Netherlands     Lisbon, *, Portugal~
+45 Amsterdam, *, Netherlands     Madrid, *, Spain~
+45 Amsterdam, *, Netherlands     Paris, *, France~
+45 Amsterdam, *, Netherlands     Valetta, *, Malta~
+45 Amsterdam, *, Netherlands     Frankfurt, *, Germany~
+45 Amsterdam, *, Netherlands     Zurich, *, Switzerland~
+45 Amsterdam, *, Netherlands     Cairo, *, Egypt~
+45 Amsterdam, *, Netherlands     Ljubljana, *, Slovenia~
+45 Amsterdam, *, Netherlands     Belgrade, *, Yugoslavia~
+45 Amsterdam, *, Netherlands     Damascus, *, Syria~
+45 Amsterdam, *, Netherlands     Vienna, *, Austria~
+45 Amsterdam, *, Netherlands     Bucharest, *, Romania~
+45 Amsterdam, *, Netherlands     Prague, *, Czech Republic~
+45 Amsterdam, *, Netherlands     Bratislava, *, Slovakia~
+45 Amsterdam, *, Netherlands     Brussels, *, Belgium~
+45 Brussels, *, Belgium          Toulouse, *, France~
+45 Toulouse, *, France           Geneva, *, Switzerland~
+45 Geneva, *, Switzerland        Zurich, *, Switzerland~
+45 London, *, England            Dublin, *, Ireland~
+45 London, *, England            New York, NY, US~
+45 London, *, England            Pennsauken, NJ, US~
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Exodus (updated 05/31/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#source http://www.exodus.net/network/network_map.html
+# updated by ying zhang 05/31/2000
+
+
+155 Seattle, WA, US                      San Jose, CA, US~ Chicago, IL, US~ 
+155 San Jose, CA, US                     
+155 Los Angeles, CA, US                  New York, NY, US~ Austin, TX, US~ 
+155 Austin, TX, US                       Dallas, TX, US~ 
+155 Chicago, IL, US                      Boston, MA, US~ 
+155 New York, NY, US                     London, *, England~ Berlin, *, Germany~ 
+155 New York, NY, US                     Amsterdam, *, Netherlands~ 
+155 New York, NY, US                     Paris, *, France~ 
+622 San Jose, CA, US                     Washington, DC, US~ Chicago, IL, US~ 
+622 San Jose, CA, US                     Los Angeles, CA, US~ 
+622 Chicago, IL, US                      Boston, MA, US~ New York, NY, US~ 
+622 New York, NY, US                     Boston, MA, US~ Chicago, IL, US~ 
+622 New York, NY, US                     Washington, DC, US~ 
+622 Washington, DC, US                   Atlanta, GA, US~ 
+622 Austin, TX, US                       Atlanta, GA, US~ Chicago, IL, US~ 
+
+##INTERCONNECT POINTS
+???          -                           New York, NY, US~ Washington, DC, US~ 
+???          -                           San Jose, CA, US~ Los Angeles, CA, US~ 
+???          -                           Chicago, IL, US~ San Jose, CA, US~ 
+???          -                           Mountain View, CA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Genuity
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# http://www.genuity.net/products_services/networking.html
+# redirect to http://www.genuity.com/infrastructure/gni.htm
+# (just used all 45, since they don't specify except to
+#  mention ds3/oc3, and then later offering to connect
+#  people at 0.056 to 45)
+45 Albany, NY, US                        Poughkeepsie, NY, US~ Syracuse, NY, US~ 
+45 Baltimore, MD, US                     Philadelphia, PA, US~ 
+45 Baltimore, MD, US                     Washington, DC, US~ 
+45 Boston, MA, US                        Shirley, NY, US~ 
+45 Buffalo, NY, US                       Cleveland, OH, US~ Rochester, MN, US~ 
+45 Bronx, NY, US                         Fort Worth, TX, US~ Houston, TX, US~ 
+45 Carrollton, TX, US                    Oklahoma City, OK, US~ Dallas, TX, US~ 
+45 Downers Grove, IL, US                 Indianapolis, IN, US~ 
+45 Cincinnati, OH, US                    Indianapolis, IN, US~ Columbus, GA, US~ 
+45 Cleveland, OH, US                     Pittsburgh, PA, US~ Buffalo, NY, US~ 
+45 Columbus, OH, US                      Cincinnati, OH, US~ Cleveland, OH, US~ 
+45 Dallas, TX, US                        Fort Worth, TX, US~ Carrollton, TX, US~ 
+45 Denver, CO, US                        Salt Lake City, UT, US~ Topeka, KS, US~ 
+45 Everett, WA, US                       Seattle, WA, US~ 
+45 Fort Worth, TX, US                    Dallas, TX, US~ Bryan, TX, US~ 
+45 Houston, TX, US                       Bryan, TX, US~ 
+45 Indianapolis, IN, US                  Downers Grove, IL, US~ 
+45 Indianapolis, IN, US                  Cincinnati, OH, US~ St. Louis, MO, US~ 
+45 Kansas City, KS, US                   St. Louis, MO, US~ Topeka, KS, US~ 
+45 Kansas City, KS, US                   Tulsa, OK, US~ 
+45 Los Angeles, CA, US                   San Diego, CA, US~ 
+45 Los Angeles, CA, US                   Santa Barbara, CA, US~ 
+45 Bronx, NY, US                         White Plains, NY, US~ Newark, DE, US~ 
+45 Newark, NY, US                        Bronx, NY, US~ Philadelphia, PA, US~ 
+45 Oakland, CA, US                       San Francisco, CA, US~ 
+45 Oklahoma City, OK, US                 Tulsa, OK, US~ Carrollton, TX, US~ 
+45 Philadelphia, PA, US                  Baltimore, MD, US~ Newark, DE, US~ 
+45 Portland, OR, US                      Seattle, WA, US~ Sacramento, CA, US~ 
+45 Poughkeepsie, NY, US                  Albany, NY, US~ White Plains, NY, US~ 
+45 Reno, NV, US                          Sacramento, CA, US~ 
+45 Reno, NV, US                          Salt Lake City, UT, US~ 
+45 Rochester, NY, US                     Buffalo, NY, US~ Syracuse, NY, US~ 
+45 Sacramento, CA, US                    San Francisco, CA, US~ Reno, NV, US~ 
+45 Sacramento, CA, US                    Portland, OR, US~ 
+45 Salinas, CA, US                       San Jose, CA, US~ 
+45 Salinas, CA, US                       San Luis Obispo, CA, US~ 
+45 Salt Lake City, UT, US                Reno, NV, US~ Denver, CO, US~ 
+45 San Diego, CA, US                     Los Angeles, CA, US~ 
+45 San Francisco, CA, US                 Sacramento, CA, US~ Oakland, CA, US~ 
+45 San Francisco, CA, US                 San Jose, CA, US~ 
+45 San Jose, CA, US                      San Francisco, CA, US~ Salinas, CA, US~ 
+45 San Luis Obispo, CA, US               Salinas, CA, US~ Santa Barbara, CA, US~ 
+45 Santa Barbara, CA, US                 San Luis Obispo, CA, US~ 
+45 Santa Barbara, CA, US                 Los Angeles, CA, US~ 
+45 Seattle, WA, US                       Everett, WA, US~ Portland, OR, US~ 
+45 Shirley, NY, US                       Boston, MA, US~ White Plains, NY, US~ 
+45 St. Louis, MO, US                     Kansas City, MO, US~ 
+45 St. Louis, MO, US                     Indianapolis, IN, US~ 
+45 Syracuse, NY, US                      Rochester, MN, US~ Albany, NY, US~ 
+45 Topeka, KS, US                        Denver, CO, US~ Kansas City, MO, US~ 
+45 Tulsa, OK, US                         Kansas City, MO, US~ 
+45 Tulsa, OK, US                         Oklahoma City, OK, US~ 
+45 Washington, DC, US                    Baltimore, MD, US~ 
+45 White Plains, NY, US                  Bronx, NY, US~ Shirley, NY, US~ 
+45 White Plains, NY, US                  Poughkeepsie, NY, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+GeoNet Communications, Inc.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+1.5 Oakland, CA, US                      San Francisco, CA, US~ 
+1.5 Stanford, CA, US                     San Francisco, CA, US~ 
+1.5 Pleasanton, CA, US                   San Francisco, CA, US~ 
+1.5 Santa Clara, CA, US                  San Francisco, CA, US~ 
+1.5 San Jose, CA, US                     San Francisco, CA, US~ 
+1.5 Walnut Creek, CA, US                 San Francisco, CA, US~ 
+
+45 Boston, MA, US                        Bronx, NY, US~ 
+45 Downers Grove, IL, US                 Bronx, NY, US~ San Francisco, CA, US~ 
+45 Las Vegas, NV, US                     Los Angeles, CA, US~ 
+45 Las Vegas, NV, US                     San Francisco, CA, US~ 
+45 Las Vegas, NV, US                     Washington, DC, US~ 
+45 Los Angeles, CA, US                   San Francisco, CA, US~ 
+45 Los Angeles, CA, US                   Las Vegas, NV, US~ 
+45 Bronx, NY, US                         Boston, MA, US~ Downers Grove, IL, US~ 
+45 Bronx, NY, US                         Washington, DC, US~ 
+45 San Francisco, CA, US                 Downers Grove, IL, US~ 
+45 San Francisco, CA, US                 Las Vegas, NV, US~ Los Angeles, CA, US~ 
+45 San Francisco, CA, US                 Washington, DC, US~ 
+45 Washington, DC, US                    Bronx, NY, US~ Las Vegas, NV, US~ 
+45 Washington, DC, US                    San Francisco, CA, US~ 
+
+
+##INTERCONNECT 
+##
+
+## Boardwatch
+???		-                                   Pennsauken, NJ, US~ Hayward, CA, US~ 
+???		-                                   Washington, DC, US~ 
+???		-                                   San Jose, CA, US~ Pennsauken, NJ, US~ 
+???		-                                   San Francisco, CA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+GetNet International
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+45 Baltimore, MD, US                     Washington, DC, US~ Pittsburgh, PA, US~ 
+45 Phoenix, AZ, US                       Santa Clara, CA, US~ Washington, DC, US~ 
+45 Pittsburgh, PA, US                    Baltimore, MD, US~ Santa Clara, CA, US~ 
+45 Santa Clara, CA, US                   Washington, DC, US~ Pittsburgh, PA, US~ 
+45 Santa Clara, CA, US                   Phoenix, AZ, US~ 
+45 Washington, DC, US                    Santa Clara, CA, US~ Baltimore, MD, US~ 
+45 Washington, DC, US                    Phoenix, AZ, US~ 
+
+
+##INTERCONNECT 
+##
+
+## Boardwatch
+???		-                                   Hayward, CA, US~ Washington, DC, US~ 
+???		-                                   San Jose, CA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+GlobalCenter
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+45 Atlanta, GA, US                       Downers Grove, IL, US~ Dallas, TX, US~ 
+45 Atlanta, GA, US                       Minneapolis, MN, US~ Phoenix, AZ, US~ 
+45 Atlanta, GA, US                       San Jose, CA, US~ Seattle, WA, US~ 
+45 Atlanta, GA, US                       Tyson's Corner, VA, US~ Bronx, NY, US~ 
+45 Downers Grove, IL, US                 Atlanta, GA, US~ Dallas, TX, US~ 
+45 Downers Grove, IL, US                 Minneapolis, MN, US~ Phoenix, AZ, US~ 
+45 Downers Grove, IL, US                 San Jose, CA, US~ Seattle, WA, US~ 
+45 Downers Grove, IL, US                 Tyson's Corner, VA, US~ Bronx, NY, US~ 
+45 Dallas, TX, US                        Atlanta, GA, US~ Downers Grove, IL, US~ 
+45 Dallas, TX, US                        Minneapolis, MN, US~ Phoenix, AZ, US~ 
+45 Dallas, TX, US                        San Jose, CA, US~ Seattle, WA, US~ 
+45 Dallas, TX, US                        Tyson's Corner, VA, US~ Bronx, NY, US~ 
+45 Minneapolis, MN, US                   Atlanta, GA, US~ Downers Grove, IL, US~ 
+45 Minneapolis, MN, US                   Dallas, TX, US~ Phoenix, AZ, US~ 
+45 Minneapolis, MN, US                   San Jose, CA, US~ Seattle, WA, US~ 
+45 Minneapolis, MN, US                   Tyson's Corner, VA, US~ Bronx, NY, US~ 
+45 Phoenix, AZ, US                       Atlanta, GA, US~ Downers Grove, IL, US~ 
+45 Phoenix, AZ, US                       Dallas, TX, US~ Minneapolis, MN, US~ 
+45 Phoenix, AZ, US                       San Jose, CA, US~ Seattle, WA, US~ 
+45 Phoenix, AZ, US                       Tyson's Corner, VA, US~ Bronx, NY, US~ 
+45 San Jose, CA, US                      Atlanta, GA, US~ Downers Grove, IL, US~ 
+45 San Jose, CA, US                      Dallas, TX, US~ Minneapolis, MN, US~ 
+45 San Jose, CA, US                      Phoenix, AZ, US~ Seattle, WA, US~ 
+45 San Jose, CA, US                      Tyson's Corner, VA, US~ Bronx, NY, US~ 
+45 Seattle, WA, US                       Atlanta, GA, US~ Downers Grove, IL, US~ 
+45 Seattle, WA, US                       Dallas, TX, US~ Minneapolis, MN, US~ 
+45 Seattle, WA, US                       Phoenix, AZ, US~ San Jose, CA, US~ 
+45 Seattle, WA, US                       Tyson's Corner, VA, US~ Bronx, NY, US~ 
+45 Tyson's Corner, VA, US                Atlanta, GA, US~ Downers Grove, IL, US~ 
+45 Tyson's Corner, VA, US                Dallas, TX, US~ Minneapolis, MN, US~ 
+45 Tyson's Corner, VA, US                Phoenix, AZ, US~ San Jose, CA, US~ 
+45 Tyson's Corner, VA, US                Seattle, WA, US~ Bronx, NY, US~ 
+45 Bronx, NY, US                         Atlanta, GA, US~ Downers Grove, IL, US~ 
+45 Bronx, NY, US                         Dallas, TX, US~ Minneapolis, MN, US~ 
+45 Bronx, NY, US                         Phoenix, AZ, US~ San Jose, CA, US~ 
+45 Bronx, NY, US                         Seattle, WA, US~ Tyson's Corner, VA, US~ 
+
+???		-                                   Downers Grove, IL, US~ 
+???		-                                   Washington, DC, US~ San Jose, CA, US~ 
+???		-                                   Downers Grove, IL, US~ Stanford, CA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+GoodNet
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+45 Atlanta, GA, US                       Birmingham, AL, US~ New Orleans, LA, US~ 
+45 Atlanta, GA, US                       Jacksonville, FL, US~ 
+45 Atlanta, GA, US                       Washington, DC, US~ 
+45 Birmingham, AL, US                    Atlanta, GA, US~ 
+45 Charlotte, NC, US                     Downers Grove, IL, US~ San Jose, CA, US~ 
+45 Chattanooga, TN, US                   Washington, DC, US~ 
+45 Chattanooga, TN, US                   Downers Grove, IL, US~ 
+45 Chattanooga, TN, US                   Washington, DC, US~ 
+45 Downers Grove, IL, US                 Charlotte, NC, US~ Chattanooga, TN, US~ 
+45 Downers Grove, IL, US                 Dallas, TX, US~ 
+45 Downers Grove, IL, US                 Denver, CO, US~ Detroit, MI, US~ 
+45 Downers Grove, IL, US                 Houston, TX, US~ Indianapolis, IN, US~ 
+45 Downers Grove, IL, US                 Los Angeles, CA, US~ 
+45 Downers Grove, IL, US                 Minneapolis, MN, US~ 
+45 Downers Grove, IL, US                 New Orleans, LA, US~ 
+45 Downers Grove, IL, US                 Bronx, NY, US~ Phoenix, AZ, US~ 
+45 Downers Grove, IL, US                 Salt Lake City, UT, US~ 
+45 Downers Grove, IL, US                 San Jose, CA, US~ Washington, DC, US~ 
+45 Dallas, TX, US                        San Jose, CA, US~ Washington, DC, US~ 
+45 Dallas, TX, US                        Houston, TX, US~ Downers Grove, IL, US~ 
+45 Denver, CO, US                        Downers Grove, IL, US~ San Jose, CA, US~ 
+45 Hartford, CT, US                      Bronx, NY, US~ 
+45 Indianapolis, IN, US                  Downers Grove, IL, US~ 
+45 Indianapolis, IN, US                  Washington, DC, US~ 
+45 Jacksonville, FL, US                  Tampa, FL, US~ Washington, DC, US~ 
+45 Jacksonville, FL, US                  Atlanta, GA, US~ 
+45 Jacksonville, FL, US                  San Jose, CA, US~ 
+45 Los Angeles, CA, US                   Downers Grove, IL, US~ San Jose, CA, US~ 
+45 Los Angeles, CA, US                   Washington, DC, US~ 
+45 Tyson's Corner, VA, US                Dallas, TX, US~ Salt Lake City, UT, US~ 
+45 Minneapolis, MN, US                   Downers Grove, IL, US~ San Jose, CA, US~ 
+45 New Orleans, LA, US                   Atlanta, GA, US~ Downers Grove, IL, US~ 
+45 New Orleans, LA, US                   Tampa, FL, US~ 
+45 New Orleans, LA, US                   San Jose, CA, US~ 
+45 Bronx, NY, US                         Downers Grove, IL, US~ Hartford, CT, US~ 
+45 Bronx, NY, US                         San Jose, CA, US~ 
+45 Bronx, NY, US                         Washington, DC, US~ 
+45 Oklahoma City, OK, US                 San Jose, CA, US~ Washington, DC, US~ 
+45 Phoenix, AZ, US                       Downers Grove, IL, US~ San Jose, CA, US~ 
+45 Phoenix, AZ, US                       Tucson, AZ, US~ 
+45 Phoenix, AZ, US                       Washington, DC, US~ 
+45 Salt Lake City, UT, US                Downers Grove, IL, US~ San Jose, CA, US~ 
+45 San Jose, CA, US                      Downers Grove, IL, US~ 
+45 San Jose, CA, US                      Chattanooga, TN, US~ Dallas, TX, US~ 
+45 San Jose, CA, US                      Denver, CO, US~ Houston, TX, US~ 
+45 San Jose, CA, US                      Jacksonville, FL, US~ 
+45 San Jose, CA, US                      Los Angeles, CA, US~ 
+45 San Jose, CA, US                      Minneapolis, MN, US~ 
+45 San Jose, CA, US                      New Orleans, LA, US~ Bronx, NY, US~ 
+45 San Jose, CA, US                      Oklahoma City, OK, US~ Phoenix, AZ, US~ 
+45 San Jose, CA, US                      Salt Lake City, UT, US~ 
+45 San Jose, CA, US                      Santa Clara, CA, US~ 
+45 San Jose, CA, US                      Washington, DC, US~ 
+45 Santa Clara, CA, US                   San Jose, CA, US~ 
+45 Tampa, FL, US                         Jacksonville, FL, US~ 
+45 Tampa, FL, US                         New Orleans, LA, US~ 
+45 Tucson, AZ, US                        Phoenix, AZ, US~ 
+45 Washington, DC, US                    Atlanta, GA, US~ Charlotte, NC, US~ 
+45 Washington, DC, US                    Chattanooga, TN, US~ 
+45 Washington, DC, US                    Downers Grove, IL, US~ Dallas, TX, US~ 
+45 Washington, DC, US                    Indianapolis, IN, US~ 
+45 Washington, DC, US                    Jacksonville, FL, US~ 
+45 Washington, DC, US                    Los Angeles, CA, US~ Bronx, NY, US~ 
+45 Washington, DC, US                    Oklahoma City, OK, US~ Phoenix, AZ, US~ 
+45 Washington, DC, US                    San Jose, CA, US~ 
+
+155 Downers Grove, IL, US                Philadelphia, PA, US~ 
+155 Downers Grove, IL, US                Santa Clara, CA, US~ Pennsauken, NJ, US~ 
+155 Pennsauken, NJ, US                   Santa Clara, CA, US~ 
+155 Pennsauken, NJ, US                   Philadelphia, PA, US~ 
+155 Pennsauken, NJ, US                   Washington, DC, US~ 
+155 Santa Clara, CA, US                  Pennsauken, NJ, US~ 
+155 Santa Clara, CA, US                  Downers Grove, IL, US~ 
+155 Santa Clara, CA, US                  Washington, DC, US~ 
+155 Washington, DC, US                   Downers Grove, IL, US~ 
+155 Washington, DC, US                   Santa Clara, CA, US~ 
+155 Washington, DC, US                   Philadelphia, PA, US~ 
+155 Philadelphia, PA, US                 Washington, DC, US~ 
+155 Philadelphia, PA, US                 Downers Grove, IL, US~ 
+155 Philadelphia, PA, US                 Pennsauken, NJ, US~ 
+
+???		-                                   San Jose, CA, US~ Pennsauken, NJ, US~ 
+???		-                                   Downers Grove, IL, US~ 
+???		-                                   Hayward, CA, US~ Washington, DC, US~ 
+???		-                                   San Jose, CA, US~ 
+???		-                                   Downers Grove, IL, US~ 
+???		-                                   Pennsauken, NJ, US~ 
+???		-                                   San Francisco, CA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+IDT Corp (updated 07/02/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#source: http://boardwatch.internet.com/isp/summer99/bb/idt.jpg
+#updated by ying zhang 07/02/2000
+
+45 San Jose, CA, US                      Los Angeles, CA, US~ Denver, CO, US~ 
+45 Los Angeles, CA, US                   Phoenix, AZ, US~ Houston, TX, US~ 
+45 Phoenix, AZ, US                       Denver, CO, US~ 
+45 Denver, CO, US                        Chicago, IL, US~ 
+45 Chicago, IL, US                       Cleveland, OH, US~ 
+45 Cleveland, OH, US                     Cincinnati, OH, US~ Chicago, IL, US~ 
+45 Cleveland, OH, US                     New York, NY, US~ 
+45 New York, NY, US                      Hackensack, NJ, US~ Washington, DC, US~ 
+45 New York, NY, US                      Boston, MA, US~ 
+45 Hackensack, NJ, US                    Washington, DC, US~ 
+45 Washington, DC, US                    Richmond, VA, US~ Cincinnati, OH, US~ 
+45 Washington, DC, US                    Houston, TX, US~ 
+45 Richmond, VA, US                      Atlanta, GA, US~ 
+45 Atlanta, GA, US                       Miami, FL, US~ 
+
+##              Interconnects
+???		-                                   Pennsauken, NJ, US~ Chicago, IL, US~ 
+???		-                                   Washington, DC, US~ 
+???		-                                   San Jose, CA, US~ Chicago, IL, US~ 
+???		-                                   Pennsauken, NJ, US~ 
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ipf.net
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+# Homepage is on http://www.ipf.net
+
+# Backbone Links
+
+1.536 San Jose, CA, US                   Palo Alto, CA, US~ 
+
+4 San Jose, CA, US                       Washington, DC, US~ 
+4 San Jose, CA, US                       London, *, UK~ 
+4 Washington, DC, US                     Eschborn, *, Germany~ 
+4 London, *, UK                          Eschborn, *, Germany~ 
+
+##INTERCONNECT 
+???                     -                Palo Alto, CA, US~ San Jose, CA, US~ 
+???                     -                Washington, DC, US~ MFS, *, US~ 
+???                     -                Peterborough, *, UK~ 
+???			-							 Munich, *, DE~ 
+???                     -                Stuttgart, *, DE~ 
+???                     -                Eschborn, *, Germany~ 
+UUNET			-						 Eschborn, *, Germany~ 
+UNISOURCE		-						 Eschborn, *, Germany~ 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+iSTAR Internet Inc.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+1.5 Calgary, *, Canada                   Lethbridge, *, Canada~ 
+1.5 Calgary, *, Canada                   Edmonton, *, Canada~ 
+1.5 Calgary, *, Canada                   Vancouver, *, Canada~ 
+1.5 Edmonton, *, Canada                  Calgary, *, Canada~ 
+1.5 Halifax, *, Canada                   Moncton, *, Canada~ Yarmouth, *, Canada~ 
+1.5 Halifax, *, Canada                   Sydney, *, Canada~ 
+1.5 Hamilton, *, Canada                  Toronto, *, Canada~ 
+1.5 Kitchener, *, Canada                 Toronto, *, Canada~ 
+1.5 Lethbridge, *, Canada                Calgary, *, Canada~ 
+1.5 London, *, Canada                    Toronto, *, Canada~ 
+1.5 Moncton, *, Canada                   Montreal, *, Canada~ 
+1.5 Moncton, *, Canada                   Saint John, *, Canada~ 
+1.5 Moncton, *, Canada                   Halifax, *, Canada~ 
+1.5 Montreal, *, Canada                  Quebec, *, Canada~ 
+1.5 Montreal, *, Canada                  Sherbrooke, *, Canada~ 
+1.5 Montreal, *, Canada                  Moncton, *, Canada~ 
+1.5 Nepean, *, Ontario                   Winnipeg, *, Canada~ 
+1.5 Nepean, *, Ontario                   Vancouver, *, Canada~ 
+1.5 Quebec, *, Canada                    Montreal, *, Canada~ 
+1.5 Sherbrooke, *, Canada                Montreal, *, Canada~ 
+1.5 St. John's, *, Canada                Moncton, *, Canada~ 
+1.5 Sydney, *, Canada                    Halifax, *, Canada~ 
+1.5 Toronto, *, Canada                   Kitchener, *, Canada~ London, *, Canada~ 
+1.5 Toronto, *, Canada                   Hamilton, *, Canada~ 
+1.5 Vancouver, *, Canada                 Calgary, *, Canada~ Montreal, *, Canada~ 
+1.5 Vancouver, *, Canada                 Victoria, *, Canada~ 
+1.5 Victoria, *, Canada                  Vancouver, *, Canada~ 
+1.5 Winnipeg, *, Canada                  Montreal, *, Canada~ 
+1.5 Yarmouth, *, Canada                  Halifax, *, Canada~ 
+
+45 Montreal, *, Canada                   Nepean, *, Ontario~ Toronto, *, Canada~ 
+45 Nepean, *, Ontario                    Montreal, *, Canada~ Toronto, *, Canada~ 
+45 Toronto, *, Canada                    Nepean, *, Ontario~ Montreal, *, Canada~ 
+
+???		-                                   Toronto, *, Canada~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Cable & Wireless (updated 07/02/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#source: http://boardwatch.internet.com/isp/summer99/bb/cablewireless.jpg
+# updated by ying zhang  07/2/2000
+
+622 Seattle, WA, US                      Aurora, CO, US~ Minneapolis, MN, US~ 
+622 Seattle, WA, US                      San Jose, CA, US~ 
+622 Minneapolis, MN, US                  Aurora, CO, US~ Chicago, IL, US~ 
+622 Chicago, IL, US                      Willow Springs, IL, US~ 
+622 Willow Springs, IL, US               Memphis, TN, US~ 
+622 Independence, KS, US                 Aurora, CO, US~
+622 Willow Springs, IL, US               Aurora, CO, US~ North Royalton, OH, US~ 
+622 Willow Springs, IL, US               Memphis, TN, US~ 
+622 North Royalton, OH, US               Independence, KS, US~ Charleston, WV, US~ 
+622 North Royalton, OH, US               Austell, GA, US~ 
+622 Memphis, TN, US                      North Royalton, OH, US~ Dallas, TX, US~ 
+622 Memphis, TN, US                      Austell, GA, US~ 
+622 West Orange, NJ, US                  Charleston, WV, US~ 
+622 Memphis, TN, US                      Austell, GA, US~ Dallas, TX, US~ 
+622 Dallas, TX, US                       Austell, GA, US~ Independence, KS, US~ 
+622 Independence, KS, US                 aurora, CO, US~ Willow Springs, IL, US~ 
+
+2488 North Royalton, OH, US              West Orange, NJ, US~ 
+2488 West Orange, NJ, US                 Washington, DC, US~ 
+2488 Washington, DC, US                  Greensboro, NC, US~ 
+2488 Greensboro, NC, US                  Austell, GA, US~ 
+2488 Sacramento, CA, US                  San Jose, CA, US~ Aurora, *, US~ 
+2488 San Jose, CA, US                    San Bernardino, CA, US~ 
+2488 San Bernardino, CA, US              Dallas, TX, US~ 
+45 San Jose, CA, US                      Los Angeles, CA, US~ 
+45 Los Angeles, CA, US                   San Bernardino, CA, US~ 
+45 Houston, TX, US                       Dallas, TX, US~ Memphis, TN, US~ 
+45 Dallas, TX, US                        Pompano Beach, FL, US~ 
+45 Pompano Beach, FL, US                 Austell, GA, US~ 
+
+
+##INTERCONNECT: 
+???		-                                   Pennsauken, NJ, US~ Chicago, IL, US~ 
+???		-                                   Hayward, CA, US~ 
+???		-                                   Washington, DC, US~ San Jose, CA, US~ 
+???		-                                   Pennsauken, NJ, US~ 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+MindSpring (last updated 03/30/99)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+1.5 Atlanta, GA, US                      Harrisburg, PA, US~ 
+1.5 Atlanta, GA, US                      Charlottesville, VA, US~ 
+1.5 Atlanta, GA, US                      Washington, DC, US~ 
+1.5 Chattanooga, TN, US                  Bowling Green, KY, US~ 
+1.5 Chattanooga, TN, US                  Owensboro, KY, US~ 
+1.5 Phoenix, AZ, US                      Los Angeles, CA, US~ 
+1.5 Raleigh, NC, US                      Research Triangle Park, NC, US~ 
+1.5 Birmingham, AL, US                   Montgomery, AL, US~ 
+1.5 Boston, MA, US                       Brooklyn, NY, US~ 
+
+3 Atlanta, GA, US                        Oakland, CA, US~ Stockton, CA, US~ 
+3 Atlanta, GA, US                        Jacksonville, FL, US~ 
+3 Atlanta, GA, US                        Downers Grove, IL, US~ 
+3 Atlanta, GA, US                        Oakland, CA, US~ West Point, GA, US~ 
+3 Atlanta, GA, US                        Columbus, GA, US~ 
+3 Oakland, CA, US                        Stockton, CA, US~ Seattle, WA, US~ 
+3 Birmingham, AL, US                     Arab, AL, US~ 
+3 Bronx, NY, US                          Harrisburg, PA, US~ 
+3 Chattanooga, TN, US                    Louisville, KY, US~ Lexington, KY, US~ 
+3 Orlando, FL, US                        Melbourne, FL, US~ Daytona, FL, US~ 
+3 Orlando, FL, US                        Gainesville, FL, US~ 
+
+4.5 Bronx, NY, US                        Boston, MA, US~ Brooklyn, NY, US~ 
+4.5 Dallas, TX, US                       Phoenix, AZ, US~ 
+4.5 Chattanooga, TN, US                  Knoxville, TN, US~ 
+4.5 Atlanta, GA, US                      Columbus, GA, US~ Macon, GA, US~ 
+4.5 Atlanta, GA, US                      Augusta, GA, US~ Los Angeles, CA, US~ 
+
+6 Atlanta, GA, US                        Norfolk, VA, US~ Richmond, VA, US~ 
+6 Atlanta, GA, US                        Oakland, CA, US~ 
+6 Birmingham, AL, US                     Dallas, TX, US~ 
+
+7.5 Chattanooga, TN, US                  Nashville, TN, US~ 
+7.5 Atlanta, GA, US                      Los Angeles, CA, US~ Seattle, WA, US~ 
+7.5 Orlando, FL, US                      Tampa, FL, US~ 
+9 Atlanta, GA, US                        Miami, FL, US~ 
+10 Atlanta, GA, US                       Cumberland, MD, US~ 
+12 Atlanta, GA, US                       Raleigh, NC, US~ 
+14 Atlanta, GA, US                       Birmingham, AL, US~ 
+18 Atlanta, GA, US                       Bronx, NY, US~ 
+21 Atlanta, GA, US                       Chattanooga, TN, US~ 
+22 Atlanta, GA, US                       Columbia, SC, US~ 
+45 Atlanta, GA, US                       Orlando, FL, US~ 
+
+##INTERCONNECT POINTS
+GTEI            -                        Atlanta, GA, US~ Bronx, NY, US~ 
+GTEI            -                        Dallas, TX, US~ Los Angeles, CA, US~ 
+GTEI            -                        Oakland, CA, US~ 
+Digex           -                        Atlanta, GA, US~ Raleigh, NC, US~ 
+Digex           -                        Miami, FL, US~ 
+ViperNet        -                        Birmingham, AL, US~ Columbia, SC, US~ 
+ViperNet        -                        Ocala, FL, US~ 
+Verio           -                        Seattle, WA, US~ 
+MWAN            -                        Seattle, WA, US~ Atlanta, GA, US~ 
+UUNet           -                        Atlanta, GA, US~ 
+GridNet         -                        Atlanta, GA, US~ 
+PSINet          -                        Atlanta, GA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Nap.Net, LLC
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#LDDS/Worldcom ATM network, T3 interface~ Fore
+
+45 Downers Grove, IL, US                 Dallas, TX, US~ Minneapolis, MN, US~ 
+45 Downers Grove, IL, US                 San Jose, CA, US~ Seattle, WA, US~ 
+45 Downers Grove, IL, US                 Tyson's Corner, VA, US~ 
+45 Dallas, TX, US                        Downers Grove, IL, US~ 
+45 Minneapolis, MN, US                   Downers Grove, IL, US~ 
+45 San Jose, CA, US                      Downers Grove, IL, US~ Seattle, WA, US~ 
+45 San Jose, CA, US                      Tyson's Corner, VA, US~ 
+45 Seattle, WA, US                       Downers Grove, IL, US~ San Jose, CA, US~ 
+45 Tyson's Corner, VA, US                Downers Grove, IL, US~ San Jose, CA, US~ 
+
+##INTERCONNECT 
+##
+
+## Boardwatch
+???		-                                   Chicago, IL, US~ Washington, DC, US~ 
+???		-                                   San Jose, CA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Netrail Incorporated (updated 07/03/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#source: http://boardwatch.internet.com/isp/summer99/bb/netrail.jpg
+#updated by ying zhang 07/03/2000
+
+45 Stanford, CA, US                      Portland, OR, US~ Los Angeles, CA, US~ 
+45 Stanford, CA, US                      Chicago, IL, US~ Atlanta, GA, US~ 
+45 Los Angeles, CA, US                   San Diego, CA, US~ 
+45 San Diego, CA, US                     Dallas, TX, US~ 
+45 Chicago, IL, US                       Atlanta, GA, US~ San Francisco, CA, US~ 
+45 Chicago, IL, US                       Indianapolis, IN, US~ New York, NY, US~ 
+45 New York, NY, US                      Chicago, IL, US~ Boston, MA, US~ 
+45 New York, NY, US                      Philadelphia, PA, US~ 
+45 New York, NY, US                      Washington, DC, US~ 
+45 Washington, DC, US                    Baltimore, MD, US~ Atlanta, GA, US~ 
+45 Washington, DC, US                    New York, NY, US~ Miami, FL, US~ 
+45 Atlanta, GA, US                       Dallas, TX, US~ San Francisco, CA, US~ 
+45 Atlanta, GA, US                       Miami, FL, US~ Washington, DC, US~ 
+45 Atlanta, GA, US                       Chicago, IL, US~ 
+45 Miami, FL, US                         Tampa, FL, US~ Washington, DC, US~ 
+45 Miami, FL, US                         Atlanta, GA, US~ Orlando, FL, US~ 
+
+
+## INTERCONNECT 
+##
+???		-                                   Chicago, IL, US~ Washington, DC, US~ 
+???		-                                   San Jose, CA, US~ 
+
+## Boardwatch
+???		-                                   Palo Alto, CA, US~ Pennsauken, NJ, US~ 
+???		-                                   Hayward, CA, US~ 
+???		-                                   Santa Clara, CA, US~ Atlanta, GA, US~ 
+???		-                                   College Park, MD, US~ 
+???		-                                   Mountain View, CA, US~ Chicago, IL, US~ 
+???		-                                   Pennsauken, NJ, US~ 
+???		-                                   Stanford, CA, US~ 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+PSINet (updated 06/12/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#http://boardwatch.internet.com/isp/summer99/bb/psinet.jpg
+# updated by ying zhang 06/12/2000
+
+
+45 Tokyo, *, Japan                       San Jose, CA, US~ 
+45 Yokohama, *, Japan                    Portland, OR, US~ 
+45 Los Angeles, CA, US                   Honolulu, HI, US~ 
+155 San Jose, CA, US                     Chicago, IL, US~ Columbus, OH, US~  
+45 Las Vegas, NV, US                     Salt Lake City, UT, US~ 
+45 Calgary, *, Canada                    Vancouver, *, Canada~ 
+45 Vancouver, *, Canada                  Victoria, *, Canada~ 
+45 Edmonton, *, Canada                   Saskatoon, *, Canada~ 
+45 Regina, *, Canada                     Saskatoon, *, Canada~ 
+45 Boston, MA, US                        Regina, *, Canada~ 
+155 St. Louis, MO, US                    Chicago, IL, US~ Miami, FL, US~ 
+155 Orlando, FL, US                      Charlotte, NC, US~ 
+155 Raleigh, NC, US                      Charlotte, NC, US~ 
+155 Washington, DC, US                   New York, NY, US~ Raleigh, NC, US~ 
+155 New York, NY, US                     Boston, MA, US~ 
+155 Minneapolis, MN, US                  Milwaukee, WI, US~ 
+45 London, *, England                    New York, NY, US~ Pennsauken, NJ, US~ 
+2 Akron, OH, US                          Cleveland, OH, US~ Columbus, GA, US~ 
+2 Albany, NY, US                         New York, NY, US~ Syracuse, NY, US~ 
+2 Atlanta, GA, US                        Jackson, MS, US~ Charlotte, NC, US~ 
+2 Baton Rouge, LA, US                    Jackson, MS, US~ Houston, TX, US~ 
+2 Buffalo, NY, US                        Cleveland, OH, US~ Rochester, MN, US~ 
+2 Charlotte, NC, US                      Atlanta, GA, US~ Salem, OR, US~ 
+2 Chicago, IL, US                        Indianapolis, IN, US~ 
+2 Cincinnati, OH, US                     Waynesville, OH, US~ 
+2 Cincinnati, OH, US                     Indianapolis, IN, US~ 
+2 Cleveland, OH, US                      Buffalo, NY, US~ Akron, OH, US~ 
+2 Columbus, OH, US                       Akron, OH, US~ Waynesville, OH, US~ 
+2 Dallas, TX, US                         Fort Worth, TX, US~ 
+2 Waynesville, OH, US                    Columbus, GA, US~ Cincinnati, OH, US~ 
+2 Denver, CO, US                         Salt Lake City, UT, US~ 
+2 El Paso, TX, US                        Tucson, AZ, US~ 
+2 Hunter Woods, VA, US                   New York, NY, US~ Roanoke, *, US~ 
+2 Houston, TX, US                        Baton Rouge, LA, US~ 
+2 Indianapolis, IN, US                   St. Louis, MO, US~ Cincinnati, OH, US~ 
+2 Indianapolis, IN, US                   Chicago, IL, US~ 
+2 Jackson, LA, US                        Atlanta, GA, US~ Baton Rouge, LA, US~ 
+2 Las Vegas, NV, US                      Phoenix, AZ, US~ Los Angeles, CA, US~ 
+2 Los Angeles, CA, US                    Las Vegas, NV, US~ 
+2 Midland, TX, US                        el paso, *, US~ Fort Worth, TX, US~ 
+2 New York, NY, US                       Albany, NY, US~ 
+2 Oklahoma City, OK, US                  Dallas, TX, US~ Tulsa, OK, US~ 
+2 Phoenix, AZ, US                        Las Vegas, NV, US~ 
+2 Roanoke, VA, US                        winston salem, *, US~ 
+2 Roanoke, VA, US                        Hunter Woods, VA, US~ 
+2 Rochester, NY, US                      Buffalo, NY, US~ Syracuse, NY, US~ 
+2 Salt Lake City, UT, US                 Denver, CO, US~ San Francisco, CA, US~ 
+2 San Francisco, CA, US                  Salt Lake City, UT, US~ 
+2 St. Louis, MO, US                      Tulsa, OK, US~ Indianapolis, IN, US~ 
+2 Syracuse, NY, US                       Albany, NY, US~ Rochester, MN, US~ 
+2 Tucson, AZ, US                         Phoenix, AZ, US~ el paso, *, US~ 
+2 Tulsa, OK, US                          Oklahoma City, OK, US~ 
+2 Tulsa, OK, US                          St. Louis, MO, US~ 
+2 Winston Salem, NC, US                  Roanoke, *, US~ Charlotte, NC, US~ 
+
+45 Atlanta, GA, US                       Houston, TX, US~ Hunter Woods, VA, US~ 
+45 Atlanta, GA, US                       Orlando, FL, US~ 
+45 Austin, TX, US                        Houston, TX, US~ 
+45 Baltimore, MD, US                     Washington, DC, US~ Wilmington, NC, US~ 
+45 Boston, MA, US                        New York, NY, US~ 
+45 Charlotte, NC, US                     Durham, NH, US~ 
+45 Chicago, IL, US                       Toledo, OH, US~ Dublin, *, Ireland~ 
+45 Chicago, IL, US                       Madison, WI, US~ St. Louis, MO, US~ 
+45 Cincinnati, OH, US                    St. Louis, MO, US~ 
+45 Dallas, TX, US                        Kansas City, MO, US~ Houston, TX, US~ 
+45 Dallas, TX, US                        Tulsa, OK, US~ San Francisco, CA, US~ 
+45 Denver, CO, US                        Kansas City, MO, US~ Phoenix, AZ, US~ 
+45 Detroit, MI, US                       Toledo, OH, US~ 
+45 Dublin, OH, US                        Toledo, OH, US~ Chicago, IL, US~ 
+45 Dublin, OH, US                        Baltimore, MD, US~ 
+45 Research Triangle Park, NC, US        Charlotte, NC, US~ Hunter Woods, VA, US~ 
+45 Fort Worth, TX, US                    Dallas, TX, US~ midland, *, US~ 
+45 Hunter Woods, VA, US                  Atlanta, GA, US~ Washington, DC, US~ 
+45 Hunter Woods, VA, US                  Durham, NH, US~ 
+45 Houston, TX, US                       Austin, TX, US~ Dallas, TX, US~ 
+45 Houston, TX, US                       Atlanta, GA, US~ 
+45 Kansas City, MO, US                   St. Louis, MO, US~ Dallas, TX, US~ 
+45 Kansas City, MO, US                   Phoenix, AZ, US~ Denver, CO, US~ 
+45 Kansas City, MO, US                   Tulsa, OK, US~ 
+45 Los Angeles, CA, US                   Phoenix, AZ, US~ San Francisco, CA, US~ 
+45 Miami, FL, US                         Orlando, FL, US~ 
+45 Minneapolis, MN, US                   Portland, OR, US~ Madison, WI, US~ 
+45 New York, NY, US                      Newark, DE, US~ Boston, MA, US~ 
+45 New York, NY, US                      Washington, DC, US~ Troy, MI, US~ 
+45 Newark, NJ, US                        New York, NY, US~ Philadelphia, PA, US~ 
+45 Orlando, FL, US                       Atlanta, GA, US~ Miami, FL, US~ 
+45 Philadelphia, PA, US                  Newark, DE, US~ Wilmington, NC, US~ 
+45 Phoenix, AZ, US                       Kansas City, MO, US~ 
+45 Phoenix, AZ, US                       Los Angeles, CA, US~ Denver, CO, US~ 
+45 Portland, OR, US                      Seattle, WA, US~ Salt Lake City, UT, US~ 
+45 Portland, OR, US                      San Francisco, CA, US~ 
+45 Salt Lake City, UT, US                Portland, OR, US~ 
+45 San Francisco, CA, US                 Santa Clara, CA, US~ 
+45 San Francisco, CA, US                 Los Angeles, CA, US~ Portland, OR, US~ 
+45 Santa Clara, CA, US                   San Francisco, CA, US~ 
+45 Seattle, WA, US                       Portland, OR, US~ Minneapolis, MN, US~ 
+45 St. Louis, MO, US                     Kansas City, MO, US~ Chicago, IL, US~ 
+45 St. Louis, MO, US                     Cincinnati, OH, US~ 
+45 Toledo, OH, US                        Dublin, *, Ireland~ Detroit, MI, US~ 
+45 Toledo, OH, US                        Chicago, IL, US~ 
+45 Troy, NY, US                          New York, NY, US~ 
+45 Tulsa, OK, US                         Dallas, TX, US~ Kansas City, MO, US~ 
+45 Washington, DC, US                    Hunter Woods, VA, US~ Baltimore, MD, US~ 
+45 Wilmington, DE, US                    Baltimore, MD, US~ Philadelphia, PA, US~ 
+
+#London, UK		@@
+#Naarden, Netherlands		@@
+#Seoul, Korea		@@
+#Tokyo, Japan		@@
+#Yokohama, Japan		@@
+		
+##INTERCONNECT 
+
+## Boardwatch
+##              Interconnects
+???		-                                   Santa Clara, CA, US~ 
+???		-                                   Hunter Woods, VA, US~ 
+???		-                                   Pennsauken, NJ, US~ 
+???		-                                   Hayward, CA, US~ Washington, DC, US~ 
+???		-                                   Stanford, CA, US~ 
+Peterborough, England		-                 London, *, England~ 
+NSP/IXP		-                               Tokyo, *, Japan~ 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Qwest
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# from powerpoint slide from Paul Dial sent Dec 5, 2000
+# Eureka Junction considered to be in Houston
+# added by Alex Ma
+
+2488 Seattle, WA, US			Tukwila, WA, US
+2488 Tukwila, WA, US			Seattle, WA, US, US
+2488 San Francisco, CA, US		New York, NY, US
+2488 San Francisco, CA, US		San Jose, CA, US
+622 San Francisco, CA, US		Chicago, IL, US
+2488 Sunnyvale, CA, US			Chicago, IL, US
+2488 Sunnyvale, CA, US			Kansas City, KS, US
+2488 Sunnyvale, CA, US			San Jose, CA, US
+2488 San Jose, CA, US			San Francisco, CA, US
+2488 San Jose, CA, US			Sunnyvale, CA, US
+2488 San Jose, CA, US			Houston, TX, US
+2488 San Jose, CA, US			Los Angeles, CA, US
+2488 Los Angeles, CA, US		San Jose, CA, US
+2488 Los Angeles, CA, US		Houston, TX, US
+2488 Los Angeles, CA, US		Burbank, CA
+2488 Burbank, CA, US			Los Angeles, CA, US
+2488 Kansas City, KS, US		Sunnyvale, CA, US
+2488 Kansas City, KS, US		Chicago, IL, US
+2488 Kansas City, KS, US		Washington, DC, US
+2488 Kansas City, KS, US		Dallas, TX, US
+2488 Dallas, TX, US				Kansas City, KS, US
+2488 Dallas, TX, US				Houston, TX, US
+2488 Houston, TX, US			Los Angeles, CA, US
+2488 Houston, TX, US			San Jose, CA, US
+2488 Houston, TX, US			Dallas, TX, US
+2488 Houston, TX, US			Washington, DC, US
+2488 Houston, TX, US			Atlanta, GA, US
+2488 Houston, TX, US			Houston, TX, US
+2488 Houston, TX, US		 	Tampa, FL, US
+2488 Chicago, IL, US			Sunnyvale, CA, US
+622 Chicago, IL, US				San Francisco, CA, US
+2488 Chicago, IL, US			Kansas City, KS, US
+2488 Chicago, IL, US			Washington, DC, US
+2488 Chicago, IL, US			New York, NY, US
+2488 Chicago, IL, US			Boston, MA, US
+2488 Atlanta, GA, US			Houston, TX, US
+2488 Atlanta, GA, US			Tampa, FL, US
+2488 Atlanta, GA, US			Washington, DC, US
+2488 Tampa, FL, US				Houston, TX, US
+2488 Tampa, FL, US				Atlanta, GA, US
+2488 Tampa, FL, US				Washington, DC, US
+2488 Boston, MA, US				Chicago, IL, US
+2488 Boston, MA, US				New York, NY, US
+2488 New York, NY, US			Boston, MA, US
+2488 New York, NY, US			Chicago, IL, US
+2488 New York, NY, US			Washington, DC, US
+2488 Washington, DC, US			New York, NY, US
+2488 Washington, DC, US			Chicago, IL, US
+2488 Washington, DC, US			Houston, TX, US
+2488 Washington, DC, US			Atlanta, GA, US
+2488 Washington, DC, US			Kansas City, KS, US
+2488 Washington, DC, US			San Jose, CA, US
+2488 Washington, DC, US			Tampa, FL, US
+2488 Tampa, FL, US				Atlanta, GA, US
+2488 Tampa, FL, US				Houston, TX, US
+2488 Tampa, FL, US				Washington, DC, US
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+RISQ Network (updated 10/16/2001)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#http://www.risq.qc.ca/file/reseauRISQ191099.pdf
+# updated by Betty Tso 10/19/2001 btty@sdsc.edu
+
+45 Hull, *, Canada						Montreal, *, Canada~
+
+10000 Montreal, *, Canada				Quebec, *, Canada~
+45  Montreal, *, Canada			        Hull, *, Canada~
+155 Montreal, *, Canada 				St-Hyacinthe, *, Canada~
+155 Montreal, *, Canada 				Drummondville, *, Canada~
+155 Montreal, *, Canada 				Victoriaville, *, Canada~
+622 Montreal, *, Canada 				Sherbrooke, *, Canada~
+155 Montreal, *, Canada 				Trois-Rivieres, *, Canada~
+155 St-Hyacinthe, *, Canada				Montreal, *, Canada~
+155 Trois-Rivieres, *, Canada			Montreal, *, Canada~
+155 Drummondville, *, Canada			Montreal, *, Canada~
+155 Victoriaville, *, Canada			Montreal, *, Canada~
+622 Sherbrooke, *, Canada				Montreal, *, Canada~
+155 Sherbrooke, *, Canada				Lennoxville, *, Canada~
+155 Lennoxville, *, Canada				Sherbrooke, *, Canada~
+128 Quebec, *, Canada					Baie-Comeau, *, Canada~
+45 Quebec, *, Canada					Chicoutimi, *, Canada~
+155 Quebec, *, Canada					Rimouski, *, Canada~
+10000 Quebec, *, Canada					Montreal, *, Canada~
+45 Chicoutimi, *, Canada				Quebec, *, Canada~
+1 Baie-Comeau, *, Canada				Quebec, *, Canada~
+1 Baie-Comeau, *, Canada				Sept Iles, *, Canada~
+155 Rimouski, *, Canada					Quebec, *, Canada~
+1 Sept Iles, *, Canada					Baie-Comeau, *, Canada~
+
+#peering points
+CA*net II    -                          Montreal, *, Canada~
+CA*net III   -                          Montreal, *, Canada~
+UUNET        -                          Montreal, *, Canada~
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+RNP  (updated 10/23/2001)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+# http://www.rnp.br/backbone_en/bkb-mapa.html
+# updated by Betty Tso 10/23/2001 btty@sdsc.edu 
+
+1 Rio Branco, *, Brazil					Brasilia, *, Brazil~
+1 Porto Velho, *, Brazil				Brasilia, *, Brazil~
+1 Boa Vista, *, Brazil					Brasilia, *, Brazil~
+2 Manaus, *, Brazil						Brasilia, *, Brazil~
+1 Cuiabá, *, Brazil						Brasilia, *, Brazil~
+1 Campo Grande, *, Brazil				Brasilia, *, Brazil~
+1 Macapá, *, Brazil						Brasilia, *, Brazil~
+2 Belem, *, Brazil						Brasilia, *, Brazil~
+1 Palmas, *, Brazil						Brasilia, *, Brazil~
+2 Brasilia, *, Brazil					Belem, *, Brazil~
+15 Brasilia, *, Brazil					Rio de Janeiro, *, Brazil~
+10 Brasilia, *, Brazil					Sao Paulo, *, Brazil~
+5 Brasilia, *, Brazil					Goiania, *, Brazil~
+1 Brasilia, *, Brazil					Campo Grande, *, Brazil~
+1 Brasilia, *, Brazil					Rio Branco, *, Brazil~
+1 Brasilia, *, Brazil					Porto Velho, *, Brazil~
+1 Brasilia, *, Brazil					Cuiabá, *, Brazil~
+2 Brasilia, *, Brazil					Manaus, *, Brazil~
+1 Brasilia, *, Brazil					Palmas, *, Brazil~
+1 Brasilia, *, Brazil					Boa Vista, *, Brazil~
+1 Brasilia, *, Brazil					Macapá, *, Brazil~
+5 Goiania, *, Brazil					Brasilia, *, Brazil~
+10 Sao Paulo, *, Brazil					Brasilia, *, Brazil~
+3 Sao Paulo, *, Brazil					Fortaleza, *, Brazil~
+18 Sao Paulo, *, Brazil					Belo Horizonte, *, Brazil~
+7 Sao Paulo, *, Brazil					Recife, *, Brazil~
+4 Sao Paulo, *, Brazil					Salvador, *, Brazil~
+3 Sao Paulo, *, Brazil					Natal, *, Brazil~
+20 Sao Paulo, *, Brazil					Rio de Janeiro, *, Brazil~
+10 Sao Paulo, *, Brazil					Porto Alegre, *, Brazil~
+12 Sao Paulo, *, Brazil					Florianopolis, *, Brazil~
+8 Sao Paulo, *, Brazil					Curitiba, *, Brazil~
+8 Curitiba, *, Brazil					Sao Paulo, *, Brazil~
+14 Curitiba, *, Brazil					Rio de Janeiro, *, Brazil~
+12 Florianopolis, *, Brazil				Sao Paulo, *, Brazil~
+20 Florianopolis, *, Brazil				Rio de Janeiro, *, Brazil~
+10 Porto Alegre, *, Brazil				Sao Paulo, *, Brazil~
+25 Porto Alegre, *, Brazil				Rio de Janeiro, *, Brazil~
+1 Sao Luis, *, Brazil					Belo Horizonte, *, Brazil~
+4 Teresina, *, Brazil					Belo Horizonte, *, Brazil~
+1 Belo Horizonte, *, Brazil				Sao Luis, *, Brazil~
+4 Belo Horizonte, *, Brazil				Teresina, *, Brazil~
+1 Belo Horizonte, *, Brazil				Maceió, *, Brazil~
+1 Belo Horizonte, *, Brazil				Aracaju, *, Brazil~
+20 Belo Horizonte, *, Brazil			Rio de Janeiro, *, Brazil~
+18 Belo Horizonte, *, Brazil			Sao Paulo, *, Brazil~
+20 Rio de Janeiro, *, Brazil			Belo Horizonte, *, Brazil~	
+15 Rio de Janeiro, *, Brazil			Brasilia, *, Brazil~
+2 Rio de Janeiro, *, Brazil				Victoria, *, Brazil~
+4 Rio de Janeiro, *, Brazil				Fortaleza, *, Brazil~
+6 Rio de Janeiro, *, Brazil				Salvador, *, Brazil~
+10 Rio de Janeiro, *, Brazil			Recife, *, Brazil~
+3 Rio de Janeiro, *, Brazil				Natal, *, Brazil~
+25 Rio de Janeiro, *, Brazil			Porto Alegre, *, Brazil~
+20 Rio de Janeiro, *, Brazil			Florianopolis, *, Brazil~
+14 Rio de Janeiro, *, Brazil			Curitiba, *, Brazil~
+20 Rio de Janeiro, *, Brazil			Sao Paulo, *, Brazil~
+4 Fortaleza, *, Brazil					Rio de Janeiro, *, Brazil~
+3 Fortaleza, *, Brazil					Sao Paulo, *, Brazil~
+6 Salvador, *, Brazil					Rio de Janeiro, *, Brazil~
+4 Salvador, *, Brazil					Sao Paulo, *, Brazil~
+2 Victoria, *, Brazil					Rio de Janeiro, *, Brazil~
+3 Natal, *, Brazil						Sao Paulo, *, Brazil~
+3 Natal, *, Brazil						Rio de Janeiro, *, Brazil~
+6 Campina Grande, *, Brazil				Recife, *, Brazil~
+10 Recife, *, Brazil					Rio de Janeiro, *, Brazil~
+7 Recife, *, Brazil						Sao Paulo, *, Brazil~
+1 Maceió, *, Brazil						Belo Horizonte, *, Brazil~
+1 Aracaju, *, Brazil					Belo Horizonte, *, Brazil~
+
+#peering points
+???				-						Rio de Janeiro, *, Brazil	
+internet2       -						Rio de Janeiro, *, Brazil	
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Savvis Communications
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#HTTP://www.savvis.net/network/us.html 04/15/00 
+# updated by ying zhang
+
+155 Seattle, WA, US                      San Francisco, CA, US~ 
+155 Seattle, WA, US                      Los Angeles, CA, US~ Dallas, TX, US~ 
+155 Seattle, WA, US                      Atlanta, GA, US~ St. Louis, MO, US~ 
+155 Seattle, WA, US                      Chicago, IL, US~ New York, NY, US~ 
+155 San Francisco, CA, US                Los Angeles, CA, US~ Dallas, TX, US~ 
+155 San Francisco, CA, US                Denver, CO, US~ Atlanta, GA, US~ 
+155 San Francisco, CA, US                St. Louis, MO, US~ Chicago, IL, US~ 
+155 San Francisco, CA, US                New York, NY, US~ 
+155 Los Angeles, CA, US                  Dallas, TX, US~ Atlanta, GA, US~ 
+155 Los Angeles, CA, US                  St. Louis, MO, US~ Chicago, IL, US~ 
+155 Los Angeles, CA, US                  New York, NY, US~ 
+155 Chicago, IL, US                      Minneapolis, MN, US~ St. Louis, MO, US~ 
+155 Chicago, IL, US                      Dallas, TX, US~ Atlanta, GA, US~ 
+155 Chicago, IL, US                      Boston, MA, US~ 
+155 St. Louis, MO, US                    Dallas, TX, US~ Fort Worth, TX, US~ 
+155 St. Louis, MO, US                    New York, NY, US~ 
+155 Dallas, TX, US                       New York, NY, US~ Atlanta, GA, US~ 
+155 Atlanta, GA, US                      Miami, FL, US~ New York, NY, US~ 
+155 New York, NY, US                     Boston, MA, US~ 
+45 Seattle, WA, US                       Portland, OR, US~ San Francisco, CA, US~ 
+45 Portland, OR, US                      San Francisco, CA, US~ 
+45 San Francisco, CA, US                 Los Angeles, CA, US~ 
+45 San Francisco, CA, US                 Kansas City, MO, US~ 
+45 Los Angeles, CA, US                   Phoenix, AZ, US~ 
+45 Phoenix, AZ, US                       Dallas, TX, US~ 
+45 Dallas, TX, US                        Austin, TX, US~ Houston, TX, US~ 
+45 Austin, TX, US                        Houston, TX, US~ 
+45 Houston, TX, US                       Atlanta, GA, US~ 
+45 Kansas City, MO, US                   St. Louis, MO, US~ 
+45 Atlanta, GA, US                       St. Louis, MO, US~ Miami, FL, US~ 
+45 Atlanta, GA, US                       Washington, DC, US~ 
+45 Chicago, IL, US                       Minneapolis, MN, US~ Detroit, MI, US~ 
+45 Chicago, IL, US                       Indianapolis, IN, US~ Cleveland, OH, US~ 
+45 Indianapolis, IN, US                  Cincinnati, OH, US~ 
+45 Cincinnati, OH, US                    Columbus, OH, US~ 
+45 Columbus, OH, US                      Cleveland, OH, US~ 
+45 Pittsburgh, PA, US                    Detroit, MI, US~ New York, NY, US~ 
+45 New York, NY, US                      Boston, MA, US~ 
+45 New York, NY, US                      Newark, NJ, US~ Philadelphia, PA, US~ 
+45 Philadelphia, PA, US                  Washington, DC, US~ Baltimore, MD, US~ 
+
+
+#only private interconnects
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ServInt Internet Services (updated 05/31/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#http://www.servint.net/backbone/info/topology.html
+# updated by ying zhang 05/31/2000
+  
+155 San Jose, CA, US                     Seattle, WA, US~ Los Angeles, CA, US~ 
+155 San Jose, CA, US                     Denver, CO, US~ 
+155 Seattle, WA, US                      Denver, CO, US~ Minneapolis, MN, US~ 
+155 Minneapolis, MN, US                  Chicago, IL, US~ 
+155 Chicago, IL, US                      Detroit, MI, US~ Denver, CO, US~ 
+155 Chicago, IL, US                      St. Louis, MO, US~ 
+155 Detroit, MI, US                      Boston, MA, US~ 
+155 McLean, VA, US                       Baltimore, MD, US~ Chicago, IL, US~ 
+155 McLean, VA, US                       Denver, CO, US~ Norfolk, VA, US~ 
+155 McLean, VA, US                       Richmond, VA, US~ Miami, FL, US~ 
+155 McLean, VA, US                       Atlanta, GA, US~ 
+
+155 New York, NY, US                     Philadelphia, PA, US~ Boston, MA, US~ 
+155 Philadelphia, PA, US                 Trenton, *, US~ Baltimore, MD, US~ 
+155 Boston, MA, US                       Detroit, MI, US~ 
+155 Norfolk, VA, US                      Richmond, VA, US~ 
+155 Richmond, VA, US                     McLean, VA, US~ 
+155 Atlanta, GA, US                      St. Louis, MO, US~ Miami, FL, US~ 
+155 Atlanta, GA, US                      Houston, TX, US~ 
+155 Austin, TX, US                       San Antonio, TX, US~
+155 Houston, TX, US                      Miami, FL, US~ Austin, TX, US~ 
+155 Houston, TX, US                      Atlanta, GA, US~ Dallas, TX, US~ 
+155 Dallas, TX, US                       Houston, TX, US~ Austin, TX, US~ 
+155 Dallas, TX, US                       St. Louis, MO, US~ Los Angeles, CA, US~ 
+155 Dallas, TX, US                       San Antonio, TX, US~ 
+155 St. Louis, MO, US                    Kansas City, MO, US~ 
+
+
+
+
+##INTERCONNECT POINTS
+???          -                           San Jose, CA, US~ Chicago, IL, US~ 
+???          -                           Pennsauken, NJ, US~ 
+???          -                           Tyson's Corner, VA, US~ McLean, VA, US~ 
+
+
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Sprint (last modified 08/22/2001)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#email:David Meyer 
+#updated by Bradley Huffaker
+
+2488  Anaheim, CA	San Jose, CA~ San Jose, CA2~ San Jose, CA3~ San Jose, CA4~
+155   Anaheim, CA	Honolulu, HI, US~
+2488  Atlanta, GA	Fort Worth, TX~ Fort Worth, TX2~
+2488  Atlanta, GA	New York, NY~ New York, NY2~
+2488  Atlanta, GA	Orlando, FL~
+2488  Cheyenne, WY	Chicago, IL~ Chicago, IL2~
+2488  Chicago, IL	Fort Worth, TX~ Fort Worth, TX2~
+2488  Chicago, IL	Atlanta, GA~ Atlanta, GA2~
+2488  Chicago, IL	New York, NY~ New York, NY2~
+2488  Chicago, IL	Fort Worth, TX~ Fort Worth, TX2~
+2488  Chicago, IL	Kansas City, KS~
+2488  Chicago, IL	Roachdale, IN~
+2488  Chicago, IL	Springfield, MA~
+2488  Fort Worth, TX	Anaheim, CA~ Anaheim, CA2~ Anaheim, CA3~
+2488  Fort Worth, TX	Pennsauken, NJ, US~ Pennsauken, NJ, US2~
+2488  Fort Worth, TX	Kansas City, KS~ Kansas City, KS2~ Kansas City, KS3~ Kansas City, KS4~
+2488  Kansas City, KS	Pennsauken, NJ, US~ Pennsauken, NJ, US2~
+9952  Manasquan, NJ	Copenhagen, *, Denmark~
+9952  Manasquan, NJ	 London, *, England~
+2488  New York, NY	Pennsauken, NJ, US~ Pennsauken, NJ, US2~
+2488  New York, NY	Pennsauken, NJ, US3~ 
+2488  New York, NY	Pennsauken, NJ, US4~ Pennsauken, NJ, US5~ Pennsauken, NJ, US6~
+2488  New York, NY      Manasquan, NJ~ Manasquan, NJ2~
+155   New York, NY       London, *, England~  London, *, England2~
+155   New York, NY	 London, *, England3~  London, *, England4~
+2488  Pennsauken, NJ, US	Stockton, CA~ Stockton, CA2~ Stockton, CA3~ 
+2488  Roachdale, IN     Pennsauken, NJ, US~
+2488  San Jose, CA      Tacoma, WA~ Tacoma, WA2~
+2488  Seattle, WA       Chicago, IL~
+2488  Seattle, WA       Tacoma, WA~ Tacoma, WA2~ Tacoma, WA3~
+2488  Seattle, WA       Kansas City, KS~
+2488  Springfield, MA   Pennsauken, NJ, US~
+2488  Stockton, CA      San Jose, CA~ San Jose, CA2~ San Jose, CA3~ San Jose, CA4~
+155   Stockton, CA      Tokyo, *, JP~
+155   Stockton, CA      Honolulu, HI~
+2488  Tacoma, WA	Cheyenne, WY~ Cheyenne, WY2~
+2488  Tacoma, WA	Tokyo, *, Japan~
+2488  Tacoma, WA	Sydney, *, Australia~ 
+2488  Washington, DC    San Jose, CA~ San Jose, CA2~
+2488  Washington, DC    New York, NY~ New York, NY2~ New York, NY3~ New York, NY4~
+2488  Washington, DC    Pennsauken, NJ, US~ Pennsauken, NJ, US2~ 
+2488  Washington, DC    Atlanta, GA~ Atlanta, GA2~
+2488  Washington, DC    Manasquan, NJ~
+
+##INTERCONNECTs: 
+##
+???	-                                    Santa Clara, CA, US~ Pennsauken, NJ, US~ 
+???	-                                    Chicago, IL, US~ 
+???	-                                    Hayward, CA, US~ Washington, DC, US~ 
+iDREN	-                                  Stanford, CA, US~ Mountain View, CA, US~ 
+iDREN	-                                  Mountain View, CA, US~ Stanford, CA, US~ 
+iDREN	-                                  Mountain View, CA, US~ 
+iDREN	-                                  Mountain View, CA, US~ 
+iDREN	-                                  College Park, MD, US~ 
+iDREN	-                                  Pennsauken, NJ, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Telstra Internet
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+2.0 Darwin, *, Australia                 Sydney, *, Australia~ 
+2.0 Grafton, *, Australia                Sydney, *, Australia~ 
+2.0 Hobart, *, Australia                 Laucnceston, *, Tasmania~ 
+2.0 Hobart, *, Australia                 Melbourne, *, Australia~ 
+2.0 Laucnceston, *, Tasmania             Hobart, *, Australia~ 
+2.0 Mackay, *, Australia                 Esk, *, Australia~ 
+2.0 Marlborough, *, Australia            Esk, *, Australia~ 
+2.0 Orange, *, Australia                 Sydney, *, Australia~ 
+2.0 Sydney, *, Australia                 Tokyo, *, Japan~ 
+2.0 Sydney, *, Australia                 Seoul, *, Korea~ 
+2.0 Sydney, *, Australia                 Taree, *, Australia~ 
+
+4.0 Adelaide, *, Australia               Sydney, *, Australia~ 
+4.0 Ballarat, *, Australia               Melbourne, *, Australia~ 
+4.0 Bendigo, *, Australia                Melbourne, *, Australia~ 
+4.0 Brisbane, *, Australia               Esk, *, Australia~ 
+4.0 Chinchilla, *, Australia             Esk, *, Australia~ 
+4.0 Esk, *, Australia                    Townsville, *, Australia~ 
+4.0 Geelong, *, Australia                Melbourne, *, Australia~ 
+4.0 Melbourne, *, Australia              Port Albert, *, Australia~ 
+4.0 Newcastle, *, Australia              Sydney, *, Australia~ 
+
+6.0 Adelaide, *, Australia               Melbourne, *, Australia~ 
+6.0 Perth, *, Australia                  Sydney, *, Australia~ 
+6.0 Sydney, *, Australia                 Auckland, *, New Zealand~ 
+
+8.0 Albury, *, Australia                 Sydney, *, Australia~ 
+8.0 Canberra, *, Australia               Melbourne, *, Australia~ 
+8.0 Canberra, *, Australia               Sydney, *, Australia~ 
+8.0 Perth, *, Australia                  San Diego, CA, US~ 
+
+32.0 Melbourne, *, Australia             San Diego, CA, US~ 
+
+34.0 Melbourne, *, Australia             Sydney, *, Australia~ 
+
+106.0 Sydney, *, Australia               San Diego, CA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Unilat Inc. (last updated 04/08/1999)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+1.5 Riverside, CA, US                    Burbank, CA, US~ 
+1.5 Riverside, CA, US                    Burbank, CA, US~ 
+1.5 Riverside, CA, US                    Ontario, CA, US~ 
+45 Riverside, CA, US                     Burbank, CA, US~ 
+45 Riverside, CA, US                     Palm Springs, CA, US~ 
+45 San Francisco, CA, US                 Seattle, WA, US~ 
+
+##INTERCONNECT 
+GlobalCenter        -                    Riverside, CA, US~ 
+GlobalCenter        -                    Riverside, CA, US~ 
+GST Telecom         -                    Ontario, CA, US~ 
+GlobalCenter        -                    Riverside, CA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+UUNET (last updated 12/03/2001)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# source:http://www1.worldcom.com/global/about/network/maps/pdf/asia.pdf?SetLang=en
+# update by: Betty Tso <btty@caida.org>
+          
+#NORTH AMERICA
+#roughly west to east, north to south
+#Q-how do I title Hawaii, HI, US? (city,state,etc) = Hawaii, HI, US
+#Q-what is London, *, Canada connected to!? nothing-ignore it
+#Q-amibiguous x between Detroit, MI, US and Windsor...not sure if its Newark, NY, US/Santa Clara, CA, US or New York, NY, US/Salt Lake City, UT, US
+
+155 Vancouver, *, Canada		 Edmonton, *, Canada~                     
+45 Vancouver, *, Canada			 Calgary, *, Canada~  Calgary, *, Canada2~  Calgary, *, Canada3~ 
+155 Vancouver, *, Canada		 Calgary, *, Canada~ 
+622 Vancouver, *, Canada		 Calgary, *, Canada~ 
+155 Vancouver, *, Canada		 Seattle, WA, US~  Seattle, WA, US2~  Seattle, WA, US3~  
+622 Vancouver, *, Canada		 Seattle, WA, US~  
+45 Vancouver, *, Canada			 Victoria, *, Canada~ 
+45 Victoria, *, Canada			 Vancouver, *, Canada~ 
+155 Seattle, WA, US			 Vancouver, *, Canada~  Vancouver, *, Canada2~  Vancouver, *, Canada3~  
+622 Seattle, WA, US			 Vancouver, *, Canada~  
+622 Seattle, WA, US			 Washington, DC, US~  
+622 Seattle, WA, US			 Chicago, IL, US~  
+622 Seattle, WA, US			 Kirkland, WA, US~   Kirkland, WA, US2~  
+2488 Seattle, WA, US		 Kirkland, WA, US~  
+622 Seattle, WA, US			 Salt Lake City, UT, US~ Salt Lake City, UT, US2~ 
+622 Seattle, WA, US			 Santa Clara, CA, US~ Santa Clara, CA, US2~ Santa Clara, CA, US3~ Santa Clara, CA, US4~ 
+2488 Seattle, WA, US		 Portland, OR, US~ 
+622 Seattle, WA, US			 Portland, OR, US~ Portland, OR, US2~ 
+2488 Portland, OR, US		 Seattle, WA, US~ Seattle, WA, US2~ Seattle, WA, US3~ 
+2488 Portland, OR, US		 Kirkland, WA, US~ 
+2488 Portland, OR, US		 Chicago, IL, US~ 
+2488 Portland, OR, US		 Salt Lake City, UT, US~ Salt Lake City, UT, US2~ 
+2488 Portland, OR, US		 Sacramento, CA, US~ 
+622 Portland, OR, US		 Seattle, WA, US~ Seattle, WA, US2~ 
+2488 Sacramento, CA, US		 Portland, OR, US~ 
+2488 Sacramento, CA, US		 Chicago, IL, US~ 
+2488 Sacramento, CA, US		 New York, NY, US~ 
+2488 Sacramento, CA, US		 Santa Clara, CA, US~ Santa Clara, CA, US2~ 
+2488 Sacramento, CA, US		 San Jose, CA, US~ San Jose, CA, US2~ 
+622 Sacramento, CA, US		 Santa Clara, CA, US~ 
+622 Sacramento, CA, US		 San Jose, CA, US~ San Jose, CA, US2~ San Jose, CA, US3~ San Jose, CA, US4~ 
+622 Sacramento, CA, US		 Hayward, CA, US~ Hayward, CA, US2~ Hayward, CA, US3~ Hayward, CA, US4~ 
+622 Sacramento, CA, US		 Los Angeles, CA, US~ 
+45 Sacramento, CA, US		 Honolulu, HI, US~ Honolulu, HI, US2~ 
+622 Sacramento, CA, US		 San Francisco, CA, US~ San Francisco, CA, US2~ 
+2488 Sacramento, CA, US		 Los Angeles, CA, US~ 
+2488 Sacramento, CA, US		 San Francisco, CA, US~ San Francisco, CA, US2~ 
+155 Sacramento, CA, US		 Osaka, *, Japan~ 
+155 Sacramento, CA, US		 Hong Kong, *, HK~ Hong Kong, *, HK2~ Hong Kong, *, HK3~ 
+155 Sacramento, CA, US		 Sydney, *, Australia~ Sydney, *, Australia2~ Sydney, *, Australia3~ Sydney, *, Australia4~ 
+155 Sacramento, CA, US		 Singapore, *, Singapore~ Singapore, *, Singapore2~ 
+45 Sacramento, CA, US		 Taipei, *, Taiwan~ 
+2 Sacramento, CA, US		 Singapore, *, Singapore~  
+2 Sacramento, CA, US		 Singapore, *, Singapore2~  
+2 Sacramento, CA, US		 Singapore, *, Singapore3~  
+2 Sacramento, CA, US		 Singapore, *, Singapore4~  
+2 Sacramento, CA, US		 Singapore, *, Singapore5~  
+2488 Santa Clara, CA, US	 Sacramento, CA, US~ Sacramento, CA, US2~ 
+622 Santa Clara, CA, US		 Seattle, WA, US~ Seattle, WA, US2~ Seattle, WA, US3~ Seattle, WA, US4~ 
+622 Santa Clara, CA, US		 Newark, NY, US~ 
+622 Santa Clara, CA, US		 Washington, DC, US~ 
+622 Santa Clara, CA, US		 Salt Lake City, UT, US~ 
+2488 Santa Clara, CA, US	 Palo Alto, CA, US~ Palo Alto, CA, US2~ 
+622 Santa Clara, CA, US		 Kansas City, KS, US~ Kansas City, KS, US2~ 
+622 Santa Clara, CA, US		 Chicago, IL, US~ Chicago, IL, US2~ 
+622 Santa Clara, CA, US		 San Jose, CA, US~ San Jose, CA, US2~ San Jose, CA, US3~ San Jose, CA, US4~ San Jose, CA, US5~ 
+2488 Santa Clara, CA, US	 San Jose, CA, US~ San Jose, CA, US2~ San Jose, CA, US3~ 
+2488 Santa Clara, CA, US	 San Francisco, CA, US~ San Francisco, CA, US2~ 
+622 Santa Clara, CA, US		 San Francisco, CA, US~ San Francisco, CA, US2~ San Francisco, CA, US3~ San Francisco, CA, US4~ 
+622 Santa Clara, CA, US		 Los Angeles, CA, US~ Los Angeles, CA, US2~ Los Angeles, CA, US3~ Los Angeles, CA, US4~ 
+622 Santa Clara, CA, US		 Hayward, CA, US~ Hayward, CA, US2~ Hayward, CA, US3~ Hayward, CA, US4~ 
+622 Santa Clara, CA, US		 Palo Alto, CA, US~ Palo Alto, CA, US2~ Palo Alto, CA, US3~ Palo Alto, CA, US4~ 
+622 Santa Clara, CA, US		 Sacramento, CA, US~ 
+622 San Francisco, CA, US		 Santa Clara, CA, US~ Santa Clara, CA, US2~ Santa Clara, CA, US3~ Santa Clara, CA, US4~ 
+45 San Francisco, CA, US		 San Jose, CA, US~ 
+45 San Francisco, CA, US		 Hawaii, HI, US~ Hawaii, HI, US2~ 
+622 San Francisco, CA, US		 San Jose, CA, US~ San Jose, CA, US2~ 
+622 San Francisco, CA, US		 Sacramento, CA, US~ Sacramento, CA, US2~ 
+2488 San Francisco, CA, US		 Sacramento, CA, US~ Sacramento, CA, US2~ 
+622 Palo Alto, CA, US		 Santa Clara, CA, US~ Santa Clara, CA, US2~ Santa Clara, CA, US3~ Santa Clara, CA, US4~ 
+2488 Palo Alto, CA, US		 Santa Clara, CA, US~ Santa Clara, CA, US2~ 
+45 Palo Alto, CA, US		 Hawaii, HI, US~ 
+622 Palo Alto, CA, US		 San Jose, CA, US~ San Jose, CA, US2~ San Jose, CA, US3~ San Jose, CA, US4~ 
+2488 Palo Alto, CA, US		 San Jose, CA, US~ San Jose, CA, US2~ 
+155 Palo Alto, CA, US		 Sydney, *, Australia~ Sydney, *, Australia2~ Sydney, *, Australia3~ 
+622 Hayward, CA, US			 Santa Clara, CA, US~ Santa Clara, CA, US2~ Santa Clara, CA, US3~ Santa Clara, CA, US4~ 
+622 Hayward, CA, US			 Los Angeles, CA, US~ 
+622 Hayward, CA, US			 San Jose, CA, US~ 
+622 Hayward, CA, US			 Santa Clara, CA, US~ Santa Clara, CA, US2~ Santa Clara, CA, US3~ Santa Clara, CA, US4~ 
+45 San Jose, CA, US			 San Francisco, CA, US~ 
+45 San Jose, CA, US			 Santa Clara, CA, US~ 
+622 San Jose, CA, US		 Hayward, CA, US~ 
+2488 San Jose, CA, US		 Santa Clara, CA, US~ Santa Clara, CA, US2~ Santa Clara, CA, US3~ 
+2488 San Jose, CA, US		 Sacramento, CA, US~ Sacramento, CA, US2~ 
+622 San Jose, CA, US		 Santa Clara, CA, US~ Santa Clara, CA, US2~ Santa Clara, CA, US3~ Santa Clara, CA, US4~ 
+622 San Jose, CA, US		 Los Angeles, CA, US~ Los Angeles, CA, US2~ 
+2488 San Jose, CA, US		 Palo Alto, CA, US~ Palo Alto, CA, US2~ 
+622 San Jose, CA, US		 San Francisco, CA, US~ San Francisco, CA, US2~ 
+622 San Jose, CA, US		 Palo Alto, CA, US~ Palo Alto, CA, US2~ Palo Alto, CA, US3~ Palo Alto, CA, US4~ 
+45 Los Angeles, CA, US		 Las Vegas, NV, US~ Las Vegas, NV, US2~ 
+155 Los Angeles, CA, US		 Albuquerque, NM, US~ 
+2488 Los Angeles, CA, US	 Salt Lake City, UT, US~ 
+622 Los Angeles, CA, US		 Kansas City, KS, US~ Kansas City, KS, US2~ 
+2488 Los Angeles, CA, US	 St. Louis, MO, US~ 
+622 Los Angeles, CA, US		 Chicago, IL, US~ 
+622 Los Angeles, CA, US		 New York, NY, US~ 
+622 Los Angeles, CA, US		 Phoenix, AZ, US~ Phoenix, AZ, US2~ Phoenix, AZ, US3~ Phoenix, AZ, US4~ Phoenix, AZ, US5~ Phoenix, AZ, US6~ Phoenix, AZ, US7~ Phoenix, AZ, US8~ 
+622 Los Angeles, CA, US		 Dallas, TX, US~ Dallas, TX, US2~ Dallas, TX, US3~ 
+2488 Los Angeles, CA, US	 Dallas, TX, US~ Dallas, TX, US2~ 
+622 Los Angeles, CA, US		 San Diego, CA, US~ San Diego, CA, US2~ San Diego, CA, US3~ 
+2488 Los Angeles, CA, US	 Sacramento, CA, US~ 
+622 Los Angeles, CA, US		 Sacramento, CA, US~ 
+622 Los Angeles, CA, US		 San Jose, CA, US~ San Jose, CA, US2~ 
+622 Los Angeles, CA, US		 Hayward, CA, US~ 
+622 Los Angeles, CA, US		 Santa Clara, CA, US~ Santa Clara, CA, US2~ Santa Clara, CA, US3~ Santa Clara, CA, US4~ 
+155 Los Angeles, CA, US		 Singapore, *, Singapore~ 
+155 Los Angeles, CA, US	     Sydney, *, Australia~ Sydney, *, Australia2~ 
+155 Los Angeles, CA, US		 Hong Kong, *, HK~ Hong Kong, *, HK2~ 
+155 Los Angeles, CA, US		 Tokyo, *, Japan~ Tokyo, *, Japan2~ 
+45 Los Angeles, CA, US		 Seoul, *, Korea~ 
+622 San Diego, CA, US		 Los Angeles, CA, US~ Los Angeles, CA, US2~ Los Angeles, CA, US3~ 
+45 Honolulu, HI, US			 Sacramento, CA, US~ Sacramento, CA, US2~ 
+45 Honolulu, HI, US			 Hawaii, HI, US~ 
+45 Hawaii, HI, US			 San Francisco, CA, US~ San Francisco, CA, US2~ 
+45 Hawaii, HI, US			 Palo Alto, CA, US~ 
+45 Hawaii, HI, US			 Honolulu, HI, US~ 
+622 Kirkland, WA, US		 Seattle, WA, US~ Seattle, WA, US2~ 
+2488 Kirkland, WA, US		 Seattle, WA, US~ 
+2488 Kirkland, WA, US		 Portland, OR, US~ 
+45 Las Vegas, NV, US		 Los Angeles, CA, US~ Los Angeles, CA, US2~ 
+45 Las Vegas, NV, US		 Phoenix, AZ, US~ Phoenix, AZ, US2~ 
+622 Phoenix, AZ, US			 Los Angeles, CA, US~ Los Angeles, CA, US2~ Los Angeles, CA, US3~ Los Angeles, CA, US4~ Los Angeles, CA, US5~ Los Angeles, CA, US6~ Los Angeles, CA, US7~ Los Angeles, CA, US8~ 
+45 Phoenix, AZ, US			 Las Vegas, NV, US~ Las Vegas, NV, US2~ 
+45 Edmonton, *, Canada		 Calgary, *, Canada~ Calgary, *, Canada2~ Calgary, *, Canada3~ 
+155 Edmonton, *, Canada		 Vancouver, *, Canada~ 
+45 Calgary, *, Canada		 Edmonton, *, Canada~ Edmonton, *, Canada2~ Edmonton, *, Canada3~ 
+155 Calgary, *, Canada		 Toronto, *, Canada~ 
+45 Calgary, *, Canada		 Toronto, *, Canada~ 
+1 Calgary, *, Canada		 Saskatoon, *, Canada~ Saskatoon, *, Canada2~ Saskatoon, *, Canada3~ 
+1 Calgary, *, Canada		 Regina, *, Canada~ Regina, *, Canada2~ 
+45 Calgary, *, Canada		 Regina, *, Canada~ 
+622 Calgary, *, Canada		 Chicago, IL, US~ 
+155 Calgary, *, Canada		 Chicago, IL, US~ 
+622 Calgary, *, Canada		 Vancouver, *, Canada~ 
+155 Calgary, *, Canada		 Vancouver, *, Canada~ 
+45 Calgary, *, Canada		 Vancouver, *, Canada~ Vancouver, *, Canada2~ Vancouver, *, Canada3~ 
+2488 Salt Lake City, UT, US		 Sacramento, CA, US~ 
+2488 Salt Lake City, UT, US		 St. Louis, MO, US~ St. Louis, MO, US2~ St. Louis, MO, US3~ 
+622 Salt Lake City, UT, US		 New York, NY, US~ 
+622 Salt Lake City, UT, US		 Denver, CO, US~ Denver, CO, US2~ 
+2488 Salt Lake City, UT, US		 Dallas, TX, US~ 
+2488 Salt Lake City, UT, US		 Atlanta, GA, US~ 
+622 Salt Lake City, UT, US		 St. Louis, MO, US~ 
+622 Salt Lake City, UT, US		 Kansas City, KS, US~ Kansas City, KS, US2~ 
+622 Salt Lake City, UT, US		 Dallas, TX, US~ 
+2488 Salt Lake City, UT, US		 Los Angeles, CA, US~ 
+622 Salt Lake City, UT, US		 Santa Clara, CA, US~ 
+622 Salt Lake City, UT, US		 Seattle, WA, US~ Seattle, WA, US2~ 
+2488 Salt Lake City, UT, US		 Portland, OR, US~ Portland, OR, US2~ 
+155 Albuquerque, NM, US		 Los Angeles, CA, US~ 
+1 Saskatoon, *, Canada		 Calgary, *, Canada~ Calgary, *, Canada2~ Calgary, *, Canada3~ 
+1 Saskatoon, *, Canada		 Toronto, *, Canada~ 
+1 Regina, *, Canada			 Calgary, *, Canada~ Calgary, *, Canada2~ 
+45 Regina, *, Canada		 Calgary, *, Canada~ 
+622 Denver, CO, US			 Salt Lake City, UT, US~ Salt Lake City, UT, US2~ 
+622 Denver, CO, US			 Kansas City, KS, US~ 
+45 Winnipeg, *, Canada		 Toronto, *, Canada~ 
+622 Minneapolis, MN, US		 Chicago, IL, US~ Chicago, IL, US2~ 
+622 Kansas City, KS, US		 Chicago, IL, US~ Chicago, IL, US2~ Chicago, IL, US3~ 
+622 Kansas City, KS, US		 Washington, DC, US~ Washington, DC, US3~ 
+622 Kansas City, KS, US		 Dallas, TX, US~ Dallas, TX, US2~ Dallas, TX, US3~ 
+622 Kansas City, KS, US		 Los Angeles, CA, US~ Los Angeles, CA, US2~ 
+622 Kansas City, KS, US		 Santa Clara, CA, US~ Santa Clara, CA, US2~ 
+622 Kansas City, KS, US		 Salt Lake City, UT, US~ 
+622 Kansas City, KS, US		 Denver, CO, US~ 
+622 Dallas, TX, US			 Kansas City, KS, US~ Kansas City, KS, US2~ Kansas City, KS, US3~ 
+2488 Dallas, TX, US			 St. Louis, MO, US~ 
+622 Dallas, TX, US			 St. Louis, MO, US~ 
+2488 Dallas, TX, US			 Washington, DC, US~ 
+2488 Dallas, TX, US			 Atlanta, GA, US~ 
+622 Dallas, TX, US			 Atlanta, GA, US~ Atlanta, GA, US2~ Atlanta, GA, US3~ 
+622 Dallas, TX, US			 New Orleans, LA, US~ 
+2488 Dallas, TX, US			 Houston, TX, US~ Houston, TX, US2~ 
+622 Dallas, TX, US			 Houston, TX, US~ Houston, TX, US2~ Houston, TX, US3~ Houston, TX, US4~ 
+45 Dallas, TX, US			 Austin, TX, US~ Austin, TX, US2~ Austin, TX, US3~ Austin, TX, US4~ Austin, TX, US5~ Austin, TX, US6~ 
+622 Dallas, TX, US			 Los Angeles, CA, US~ Los Angeles, CA, US2~ Los Angeles, CA, US3~ 
+2488 Dallas, TX, US			 Los Angeles, CA, US~ Los Angeles, CA, US2~ 
+622 Dallas, TX, US			 Salt Lake City, UT, US~ 
+2488 Dallas, TX, US			 Salt Lake City, UT, US~ 
+45 Austin, TX, US			 Dallas, TX, US~ Dallas, TX, US2~ Dallas, TX, US3~ Dallas, TX, US4~ Dallas, TX, US5~ Dallas, TX, US6~ 
+45 Austin, TX, US			 Houston, TX, US~ Houston, TX, US2~ Houston, TX, US3~ Houston, TX, US4~ Houston, TX, US5~ Houston, TX, US6~ 
+2488 Houston, TX, US		 Dallas, TX, US~ Dallas, TX, US2~ 
+2488 Houston, TX, US		 Atlanta, GA, US~ Atlanta, GA, US2~ 
+622 Houston, TX, US			 Atlanta, GA, US~ Atlanta, GA, US2~ 
+622 Houston, TX, US			 New Orleans, LA, US~ 
+45 Houston, TX, US			 Austin, TX, US~ Austin, TX, US2~ Austin, TX, US3~ Austin, TX, US4~ Austin, TX, US5~ Austin, TX, US6~ 
+622 Houston, TX, US			 Dallas, TX, US~ Dallas, TX, US2~ Dallas, TX, US3~ Dallas, TX, US4~ 
+155 Chicago, IL, US			 Toronto, *, Canada~ Toronto, *, Canada2~ 
+622 Chicago, IL, US			 Toronto, *, Canada~ Toronto, *, Canada2~ 
+10000 Chicago, IL, US		 New York, NY, US~ 
+622 Chicago, IL, US			 Detroit, MI, US~ Detroit, MI, US2~ 
+2488 Chicago, IL, US		 New York, NY, US~ 
+622 Chicago, IL, US			 New York, NY, US~ New York, NY, US2~ New York, NY, US3~ New York, NY, US4~ New York, NY, US5~ New York, NY, US6~ 
+155 Chicago, IL, US			 Philadelphia, PA, US~ 
+622 Chicago, IL, US			 Philadelphia, PA, US~ 
+10000 Chicago, IL, US		 Washington, DC, US~ Washington, DC, US2~ Washington, DC, US3~ Washington, DC, US4~ 
+622 Chicago, IL, US			 Columbus, OH, US~ 
+622 Chicago, IL, US			 Washington, DC, US~ Washington, DC, US2~ 
+622 Chicago, IL, US			 Indianapolis, IN, US~ 
+622 Chicago, IL, US			 Atlanta, GA, US~ Atlanta, GA, US2~ Atlanta, GA, US3~ 
+155 Chicago, IL, US			 St. Louis, MO, US~ 
+2488 Chicago, IL, US		 St. Louis, MO, US~ 
+622 Chicago, IL, US			 Los Angeles, CA, US~ 
+622 Chicago, IL, US			 Kansas City, KS, US~ Kansas City, KS, US2~ Kansas City, KS, US3~ 
+622 Chicago, IL, US			 Seattle, WA, US~ 
+622 Chicago, IL, US			 Minneapolis, MN, US~ Minneapolis, MN, US2~ 
+622 Chicago, IL, US			 Santa Clara, CA, US~ Santa Clara, CA, US2~ 
+2488 Chicago, IL, US		 Portland, OR, US~  
+155 Chicago, IL, US			 Calgary, *, Canada~ 
+622 Chicago, IL, US			 Calgary, *, Canada~ 
+2488 St. Louis, MO, US		 Chicago, IL, US~ 
+155 St. Louis, MO, US		 Chicago, IL, US~ 
+2488 St. Louis, MO, US		 New York, NY, US~ 
+2488 St. Louis, MO, US		 Washington, DC, US~ 
+622 St. Louis, MO, US		 Dallas, TX, US~ 
+2488 St. Louis, MO, US		 Los Angeles, CA, US~ 
+622 St. Louis, MO, US		 Dallas, TX, US~ 
+2488 St. Louis, MO, US		 Dallas, TX, US~ 
+2488 St. Louis, MO, US		 Sacramento, CA, US~ 
+2488 St. Louis, MO, US		 Salt Lake City, UT, US~ Salt Lake City, UT, US2~ Salt Lake City, UT, US3~ 
+622 New Orleans, LA, US		 Dallas, TX, US~ 
+622 New Orleans, LA, US		 Houston, TX, US~ 
+622 Indianapolis, IN, US	 Chicago, IL, US~ 
+622 Indianapolis, IN, US	 Philadelphia, PA, US~ 
+155 Waterloo, *, Canada		 Chicago, IL, US~ Chicago, IL, US2~ 
+622 Waterloo, *, Canada		 Chicago, IL, US~ Chicago, IL, US2~ 
+155 Waterloo, *, Canada		 Toronto, *, Canada~ 
+622 Waterloo, *, Canada		 Toronto, *, Canada~ 
+45 Toronto, *, Canada		 Peterborough, *, Canada~ 
+622 Toronto, *, Canada		 Montreal, *, Canada~ Montreal, *, Canada2~ 
+622 Toronto, *, Canada		 Ottawa, *, Canada~ 
+622 Toronto, *, Canada		 Elmsford, NY, US~ 
+622 Toronto, *, Canada		 New York, NY, US~ 
+155 Toronto, *, Canada		 Ottawa, *, Canada~ 
+155 Toronto, *, Canada		 New York, NY, US~ New York, NY, US2~ New York, NY, US3~ New York, NY, US4~ 
+155 Toronto, *, Canada		 Tysons Corner, VA, US~ Tysons Corner, VA, US2~ 
+622 Toronto, *, Canada		 Tysons Corner, VA, US~ Tysons Corner, VA, US2~ 
+155 Toronto, *, Canada		 Hamilton, *, Canada~ Hamilton, *, Canada2~ 
+155 Toronto, *, Canada		 Windsor, *, Canada~ 
+622 Toronto, *, Canada		 Chicago, IL, US~ Chicago, IL, US2~ 
+155 Toronto, *, Canada		 Waterloo, *, Canada~ Waterloo, *, Canada2~ 
+45 Toronto, *, Canada		 Winnipeg, *, Canada~ 
+1 Toronto, *, Canada		 Saskatoon, *, Canada~ 
+45 Toronto, *, Canada		 Calgary, *, Canada~ 
+622 Toronto, *, Canada		 Calgary, *, Canada~ 
+155 Hamilton, *, Canada		 Toronto, *, Canada~ Toronto, *, Canada2~ 
+#London, *, Canada -- what about London, *, Canada? it doesn't seem connected. www.uu.net/network/maps/pdf/northam.pdf
+622 Detroit, MI, US			 Chicago, IL, US~ Chicago, IL, US2~ 
+155 Windsor, *, Canada       Toronto, *, Canada~ 
+622 Cleveland, OH, US		 Indianapolis, IN, US~ 
+622 Cleveland, OH, US		 Chicago, IL, US~ 
+155 Cleveland, OH, US		 Chicago, IL, US~ 
+622 Columbus, OH, US		 Chicago, IL, US~ Chicago, IL, US2~ 
+622 Atlanta, GA, US			 Washington, DC, US~ Washington, DC, US2~ Washington, DC, US3~ 
+2488 Atlanta, GA, US		 Washington, DC, US~ Washington, DC, US2~ Washington, DC, US3~ 
+2488 Atlanta, GA, US		 New York, NY, US~  New York, NY, US2~ 
+622 Atlanta, GA, US			 Orlando, FL, US~ Orlando, FL, US2~ 
+622 Atlanta, GA, US			 Jacksonville, FL, US~ Jacksonville, FL, US2~ 
+622 Atlanta, GA, US			 Miami, FL, US~ Miami, FL, US2~ Miami, FL, US3~ Miami, FL, US4~ Miami, FL, US5~ Miami, FL, US6~ Miami, FL, US7~ 
+622 Atlanta, GA, US			 Houston, TX, US~ Houston, TX, US2~ 
+2488 Atlanta, GA, US		 Houston, TX, US~ Houston, TX, US2~ 
+622 Atlanta, GA, US			 Dallas, TX, US~ Dallas, TX, US2~ Dallas, TX, US3~ 
+2488 Atlanta, GA, US		 Dallas, TX, US~ 
+2488 Atlanta, GA, US		 Salt Lake City, UT, US~ 
+622 Atlanta, GA, US			 Chicago, IL, US~ Chicago, IL, US2~ Chicago, IL, US3~ 
+45 Barrie, *, Canada		 Peterborough, *, Canada~ 
+#St. Catharines, *, Canada - no connections found
+622 Buffalo, NY, US			 New York, NY, US~ New York, NY, US2~ 
+622 Pittsburgh, PA, US		 Philadelphia, PA, US~ 
+622 Pittsburgh, PA, US		 Washington, DC, US~ 
+622 Kernersville, NC, US	 Washington, DC, US~ Washington, DC, US2~ Washington, DC, US3~ Washington, DC, US4~ Washington, DC, US5~ 
+155 Ottawa, *, Canada		 Montreal, *, Canada~ Montreal, *, Canada2~ 
+155 Ottawa, *, Canada		 Toronto, *, Canada~ 
+622 Ottawa, *, Canada		 Toronto, *, Canada~ 
+45 Ottawa, *, Canada		 Peterborough, *, Canada~ 
+622 Ottawa, *, Canada		 Montreal, *, Canada~ Montreal, *, Canada2~ 
+45 Peterborough, *, Canada		 Ottawa, *, Canada~ 
+45 Peterborough, *, Canada		 Barrie, *, Canada~ 
+45 Peterborough, *, Canada		 Toronto, *, Canada~ 
+622 Elmsford, NY, US			 Montreal, *, Canada~ Montreal, *, Canada2~ 
+155 Newark, NY, US				 Holmdel, NJ, US~ Holmdel, NJ, US2~ 
+45 Newark, NY, US				 Pennsauken, NJ, US~ 
+622 Newark, NY, US				 New York, NY, US~ New York, NY, US2~ New York, NY, US3~ New York, NY, US4~ New York, NY, US5~ New York, NY, US6~ New York, NY, US7~ New York, NY, US8~ New York, NY, US9~ New York, NY, US10~ New York, NY, US11~ 
+622 Newark, NY, US				 Boston, MA, US~ Boston, MA, US2~ 
+622 Philadelphia, PA, US		 Baltimore, MD, US~ 
+622 Philadelphia, PA, US		 Washington, DC, US~ 
+622 Philadelphia, PA, US		 Pittsburgh, PA, US~ 
+155 Holmdel, NJ, US				 Newark, NY, US~ Newark, NY, US2~ 
+622 Holmdel, NJ, US				 New York, NY, US~ New York, NY, US2~ 
+45 Pennsauken, NJ, US		 Newark, NY, US~ 
+45 Pennsauken, NJ, US		 New York, NY, US~ 
+2488 Pennsauken, NJ, US		 Washington, DC, US~ 
+622 Baltimore, MD, US		 Philadelphia, PA, US~ 
+622 Baltimore, MD, US		 Washington, DC, US~ 
+622 Fairfax, VA, US			 Washington, DC, US~ Washington, DC, US2~ Washington, DC, US3~ Washington, DC, US4~ Washington, DC, US5~ Washington, DC, US6~ 
+2488 Fairfax, VA, US		 Washington, DC, US~ 
+622 Fairfax, VA, US			 Tysons Corner, VA, US~ Tysons Corner, VA, US2~ Tysons Corner, VA, US3~ Tysons Corner, VA, US4~ 
+622 Washington, DC, US		 Baltimore, MD, US~ Baltimore, MD, US2~ 
+622 Washington, DC, US		 Newark, NY, US~ Newark, NY, US2~ Newark, NY, US3~ 
+622 Washington, DC, US		 New York, NY, US~ New York, NY, US2~ New York, NY, US3~ 
+2488 Washington, DC, US		 New York, NY, US~ New York, NY, US2~ New York, NY, US3~ New York, NY, US4~ New York, NY, US5~ New York, NY, US6~ 
+10000 Washington, DC, US	 New York, NY, US~ 
+2488 Washington, DC, US		 Pennsauken, NJ, US~ 
+622 Washington, DC, US		 Manassas, VA, US~ Manassas, VA, US2~ 
+2488 Washington, DC, US		 London, *, England~ London, *, England2~ 
+622 Washington, DC, US		 Raleigh, NC, US~ Raleigh, NC, US2~ Raleigh, NC, US3~ 
+622 Washington, DC, US		 Richmond, VA, US~ 
+622 Washington, DC, US		 Tysons Corner, VA, US~ 
+622 Washington, DC, US		 Atlanta, GA, US~ Atlanta, GA, US2~ Atlanta, GA, US3~ 
+622 Washington, DC, US		 Fairfax, VA, US~ Fairfax, VA, US2~ Fairfax, VA, US3~ Fairfax, VA, US4~ Fairfax, VA, US5~ Fairfax, VA, US6~ 
+2488 Washington, DC, US		 Fairfax, VA, US~ 
+622 Washington, DC, US		 Kernersville, NC, US~ Kernersville, NC, US2~ Kernersville, NC, US3~ Kernersville, NC, US4~ Kernersville, NC, US5~ 
+2488 Washington, DC, US		 Kansas City, KS, US~ Kansas City, KS, US2~ 
+622 Washington, DC, US		 Santa Clara, CA, US~ 
+622 Washington, DC, US		 Pittsburgh, PA, US~ 
+622 Washington, DC, US		 Chicago, IL, US~ Chicago, IL, US2~ 
+622 Washington, DC, US		 Pittsburgh, PA, US~ 
+10000 Washington, DC, US	 Chicago, IL, US~ Chicago, IL, US2~ Chicago, IL, US3~ Chicago, IL, US4~ 
+622 Washington, DC, US		 Seattle, WA, US~ 
+2488 Washington, DC, US		 Sacramento, CA, US~ Sacramento, CA, US2~ 
+622 Washington, DC, US		 Philadelphia, PA, US~ 
+622 Tysons Corner, VA, US	 Washington, DC, US
+622 Tysons Corner, VA, US		 Fairfax, VA, US~ Fairfax, VA, US2~ Fairfax, VA, US3~ Fairfax, VA, US4~ 
+622 Tysons Corner, VA, US		 Toronto, *, Canada~ Toronto, *, Canada2~ 
+155 Tysons Corner, VA, US		 Toronto, *, Canada~ Toronto, *, Canada2~ 
+622 Manassas, VA, US		 Washington, DC, US~ Washington, DC, US2~ 
+622 Richmond, VA, US		 Washington, DC, US~ 
+622 Richmond, VA, US		 Raleigh, NC, US~ 
+622 Raleigh, NC, US			 Washington, DC, US~ Washington, DC, US2~ Washington, DC, US3~ 
+622 Raleigh, NC, US			 Richmond, VA, US~ 
+622 Jacksonville, FL, US	 Atlanta, GA, US~ Atlanta, GA, US2~ 
+622 Jacksonville, FL, US	 Orlando, FL, US~ Orlando, FL, US2~ 
+622 Orlando, FL, US			 Atlanta, GA, US~ Atlanta, GA, US2~ 
+622 Orlando, FL, US			 Miami, FL, US~ Miami, FL, US2~ Miami, FL, US3~ Miami, FL, US4~ 
+622 Orlando, FL, US			 Tampa, FL, US~ Tampa, FL, US2~ Tampa, FL, US3~ 
+622 Orlando, FL, US			 Jacksonville, FL, US~ Jacksonville, FL, US2~ 
+622 Tampa, FL, US			 Orlando, FL, US~ Orlando, FL, US2~ Orlando, FL, US3~ 
+622 Miami, FL, US			 Orlando, FL, US~ Orlando, FL, US2~ Orlando, FL, US3~ Orlando, FL, US4~ 
+622 Miami, FL, US			 Atlanta, GA, US~ Atlanta, GA, US2~ Atlanta, GA, US3~ Atlanta, GA, US4~ Atlanta, GA, US5~ Atlanta, GA, US6~ Atlanta, GA, US6~ 
+2 Miami, FL, US				 San Juan, *, PR~ San Juan, *, PR2~ San Juan, *, PR3~ San Juan, *, PR4~ San Juan, *, PR5~ San Juan, *, PR6~ San Juan, *, PR7~ San Juan, *, PR8~ San Juan, *, PR9~ San Juan, *, PR10~ San Juan, *, PR11~ San Juan, *, PR12~ 
+45 Quebec, *, Canada		 Halifax, *, Canada~ 
+155 Quebec, *, Canada		 Montreal, *, Canada~ 
+45 Quebec, *, Canada		 Montreal, *, Canada~ Montreal, *, Canada2~ 
+45 Montreal, *, Canada		 Quebec, *, Canada~ Quebec, *, Canada2~ 
+155 Montreal, *, Canada		 Quebec, *, Canada~ 
+45 Montreal, *, Canada		 Halifax, *, Canada~ 
+622 Montreal, *, Canada		 New York, NY, US~ New York, NY, US2~ 
+155 Montreal, *, Canada		 New York, NY, US~ 
+622 Montreal, *, Canada		 Elmsford, NY, US~ Elmsford, NY, US2~ 
+155 Montreal, *, Canada		 Ottawa, *, Canada~ Ottawa, *, Canada2~ 
+622 Montreal, *, Canada		 Toronto, *, Canada~ Toronto, *, Canada2~ 
+622 Montreal, *, Canada		 Ottawa, *, Canada~ Ottawa, *, Canada2~ 
+622 Hartford, CT, US		 Boston, MA, US~ 
+155 Hartford, CT, US		 Boston, MA, US~ 
+622 Hartford, CT, US		 New York, NY, US~ New York, NY, US2~ 
+155 Hartford, CT, US		 New York, NY, US~ 
+155 New York, NY, US		 Montreal, *, Canada~ 
+622 New York, NY, US		 Montreal, *, Canada~ Montreal, *, Canada2~ 
+155 New York, NY, US		 Hartford, CT, US~ Hartford, CT, US2~ Hartford, CT, US3~ Hartford, CT, US4~ Hartford, CT, US5~ Hartford, CT, US6~ 
+2488 New York, NY, US		 Boston, MA, US~ 
+155 New York, NY, US		 Amsterdam, *, Netherlands~ Amsterdam, *, Netherlands2~ Amsterdam, *, Netherlands3~ Amsterdam, *, Netherlands4~ Amsterdam, *, Netherlands5~ 
+155 New York, NY, US		 Frankfurt, *, Germany~ Frankfurt, *, Germany2~ Frankfurt, *, Germany3~ Frankfurt, *, Germany4~ Frankfurt, *, Germany5~ 
+622 New York, NY, US		 Hartford, CT, US~ Hartford, CT, US2~ 
+45 New York, NY, US			 Vernon Valley, NJ, US~ Vernon Valley, NJ, US2~ Vernon Valley, NJ, US3~ 
+155 New York, NY, US		 London, *, England~ London, *, England2~ London, *, England3~ London, *, England4~ 
+10000 New York, NY, US		 Washington, DC, US~ 
+155 New York, NY, US		 Paris, *, France~ Paris, *, France2~ 
+2488 New York, NY, US		 London, *, England~ London, *, England2~ 
+2488 New York, NY, US		 Washington, DC, US~ Washington, DC, US2~ Washington, DC, US3~ Washington, DC, US4~ Washington, DC, US5~ Washington, DC, US6~ 
+622 New York, NY, US		 Washington, DC, US~ Washington, DC, US2~ Washington, DC, US3~ 
+622 New York, NY, US		 Holmdel, NJ, US~ Holmdel, NJ, US2~ 
+622 New York, NY, US		 Pennsauken, NJ, US~ Pennsauken, NJ, US2~ 
+622 New York, NY, US		 Newark, NY, US~ Newark, NY, US2~ Newark, NY, US3~ 
+2488 New York, NY, US		 St. Louis, MO, US~ St. Louis, MO, US2~ 
+2488 New York, NY, US		 Atlanta, GA, US~ Atlanta, GA, US2~ 
+622 New York, NY, US		 Los Angeles, CA, US~ 
+622 New York, NY, US		 Chicago, IL, US~ Chicago, IL, US2~ Chicago, IL, US3~ Chicago, IL, US4~ Chicago, IL, US5~ Chicago, IL, US6~ 
+622 New York, NY, US		 Los Angeles, CA, US~ 
+622 New York, NY, US		 Salt Lake City, UT, US~ 
+2488 New York, NY, US		 Chicago, IL, US~ Chicago, IL, US2~ 
+10000 New York, NY, US		 Chicago, IL, US~ 
+622 New York, NY, US		 Newark, NY, US~ Newark, NY, US2~ Newark, NY, US3~ Newark, NY, US4~ Newark, NY, US5~ Newark, NY, US6~ Newark, NY, US7~ Newark, NY, US8~ Newark, NY, US9~ Newark, NY, US10~ Newark, NY, US11~ 
+155 New York, NY, US		 Toronto, *, Canada~ Toronto, *, Canada2~ Toronto, *, Canada3~ Toronto, *, Canada4~ 
+622 New York, NY, US		 Toronto, *, Canada~ 
+622 New York, NY, US		 Boston, MA, US~ Boston, MA, US2~ Boston, MA, US3~ 
+2488 New York, NY, US		 Sacramento, CA, US~ 
+45 Vernon Valley, NJ, US	 New York, NY, US~ New York, NY, US2~ New York, NY, US3~ 
+2488 Boston, MA, US			 New York, NY, US~ 
+155 Boston, MA, US			 Hartford, CT, US~ 
+622 Boston, MA, US		     Hartford, CT, US~ 
+622 Boston, MA, US			 New York, NY, US~ New York, NY, US2~ New York, NY, US3~ 
+622 Boston, MA, US			 Newark, NY, US~ Newark, NY, US2~ 
+45 Agana, GU, US			 Tokyo, *, Japan~ Tokyo, *, Japan2~ 
+15 Provincetown, Ma, US		 Auckland, *, NZ~ 
+
+# SOUTH AMERICA
+45 San Juan, *, PR					 Tysons Corner, VA, US~ 
+45 Buenos Aires, *, Argentina		 Rio De Janeiro, *, Brazil~ 
+45 Buenos Aires, *, Argentina		 Sao Paulo, *, Brazil~ 
+1 Buenos Aires, *, Argentina		 Sao Paulo, *, Brazil~ 
+2 Sao Paulo, *, Brazil				 Atlanta, GA, US~ 
+155 Sao Paulo, *, Brazil			 Rio De Janeiro, *, Brazil~ 
+155 Sao Paulo, *, Brazil			 Miami, FL, US~ 
+2 Sao Paulo, *, Brazil				 Miami, FL, US~ Miami, FL, US2~ Miami, FL, US3~ Miami, FL, US4~ Miami, FL, US5~ Miami, FL, US6~ Miami, FL, US7~ Miami, FL, US8~ Miami, FL, US9~ Miami, FL, US10~ Miami, FL, US11~ Miami, FL, US12~ 
+45 Sao Paulo, *, Brazil				 Buenos Aires, *, Argentina~ 
+1 Sao Paulo, *, Brazil				 Buenos Aires, *, Argentina~ 
+2 Rio De Janeiro, *, Brazil			 Dallas, TX, US~ 
+155 Rio De Janeiro, *, Brazil		 Miami, FL, US~ 
+45 Rio De Janeiro, *, Brazil		 Buenos Aires, *, Argentina~ 
+155 Rio De Janeiro, *, Brazil		 Sao Paulo, *, Brazil~ Sao Paulo, *, Brazil2~ 
+
+# EUROPE
+45 Dublin, *, Ireland				 London, *, England~ London, *, England2~ 
+45 Madrid, *, Spain					 London, *, England~ 
+45 Madrid, *, Spain					 Paris, *, France~ 
+2488 London, *, England				 Amsterdam, *, Netherlands~ 
+155 London, *, England				 Amsterdam, *, Netherlands~ Amsterdam, *, Netherlands2~ Amsterdam, *, Netherlands3~ 
+155 London, *, England				 Brussels, *, Belgium~ 
+155 London, *, England				 Frankfurt, *, Germany~ Frankfurt, *, Germany2~ 
+45 London, *, England				 Zurich, *, Switzerland~ 
+2488 London, *, England				 Paris, *, France~ 
+45 London, *, England				 Milan, *, Italy~ 
+2 London, *, England				 Hong Kong, *, HK~ Hong Kong, *, HK2~ 
+155 London, *, England				 Paris, *, France~ 
+2488 London, *, England				 Washington, DC, US~ Washington, DC, US2~ 
+45 London, *, England				 Madrid, *, Spain~ 
+2488 London, *, England				 New York, NY, US~ New York, NY, US2~ 
+155 London, *, England				 New York, NY, US~ New York, NY, US2~ New York, NY, US3~ New York, NY, US4~ 
+45 London, *, England				 Dublin, *, Ireland~ Dublin, *, Ireland2~ 
+2488 Paris, *, France				 Brussels, *, Belgium~ 
+155 Paris, *, France				 Brussels, *, Belgium~ 
+2488 Paris, *, France				 Frankfurt, *, Germany~ 
+155 Paris, *, France				 Frankfurt, *, Germany~ 
+155 Paris, *, France				 Zurich, *, Switzerland~ 
+155 Paris, *, France				 Milan, *, Italy~ 
+155 Paris, *, France				 New York, NY, US~ New York, NY, US2~ 
+45 Paris, *, France					 Madrid, *, Spain~ 
+155 Paris, *, France				 London, *, England~ 
+2488 Paris, *, France				 London, *, England~ 
+155 Amsterdam, *, Netherlands		 Stockholm, *, Sweden~ Stockholm, *, Sweden2~ 
+45 Amsterdam, *, Netherlands		 Stockholm, *, Sweden~ Stockholm, *, Sweden2~ Stockholm, *, Sweden3~ 
+155 Amsterdam, *, Netherlands		 Copenhagen, *, Denmark~ 
+45 Amsterdam, *, Netherlands		 Budapest, *, Hungary~ 
+45 Amsterdam, *, Netherlands		 Prague, *, Czech Republic~ 
+155 Amsterdam, *, Netherlands		 Frankfurt, *, Germany~ 
+45 Amsterdam, *, Netherlands		 Vienna, *, Austria~ 
+2488 Amsterdam, *, Netherlands		 Hilden, *, Germany~ 
+45 Amsterdam, *, Netherlands		 Zurich, *, Switzerland~ 
+2488 Amsterdam, *, Netherlands		 Brussels, *, Belgium~ 
+155 Amsterdam, *, Netherlands		 Brussels, *, Belgium~ 
+155 Amsterdam, *, Netherlands		 New York, NY, US~ New York, NY, US2~ New York, NY, US3~ New York, NY, US4~ New York, NY, US5~ 
+155 Amsterdam, *, Netherlands		 London, *, England~ London, *, England2~ London, *, England3~ 
+2488 Amsterdam, *, Netherlands		 London, *, England~ 
+155 Brussels, *, Belgium		 Amsterdam, *, Netherlands~ 
+2488 Brussels, *, Belgium		 Amsterdam, *, Netherlands~ 
+155 Brussels, *, Belgium		 Paris, *, France~ 
+2488 Brussels, *, Belgium		 Paris, *, France~ 
+155 Brussels, *, Belgium		 London, *, England~ 
+2488 Hilden, *, Germany			 Amsterdam, *, Netherlands~ 
+2488 Hilden, *, Germany			 Frankfurt, *, Germany~ 
+155 Frankfurt, *, Germany		 Amsterdam, *, Netherlands~ 
+155 Frankfurt, *, Germany		 Copenhagen, *, Denmark~ 
+155 Frankfurt, *, Germany		 Stockholm, *, Sweden~ 
+45 Frankfurt, *, Germany		 Prague, *, Czech Republic~ 
+45 Frankfurt, *, Germany		 Budapest, *, Hungary~ 
+45 Frankfurt, *, Germany		 Vienna, *, Austria~ 
+155 Frankfurt, *, Germany		 Milan, *, Italy~ 
+45 Frankfurt, *, Germany		 Milan, *, Italy~  
+155 Frankfurt, *, Germany		 Zurich, *, Switzerland~ 
+45 Frankfurt, *, Germany		 Zurich, *, Switzerland~ 
+155 Frankfurt, *, Germany		 New York, NY, US~ New York, NY, US2~ New York, NY, US3~ New York, NY, US4~ New York, NY, US5~ 
+155 Frankfurt, *, Germany		 Paris, *, France~ 
+2488 Frankfurt, *, Germany		 Paris, *, France~ 
+155 Frankfurt, *, Germany		 London, *, England~ London, *, England2~ 
+2488 Frankfurt, *, Germany		 Hilden, *, Germany~ 
+45 Zurich, *, Switzerland		 Frankfurt, *, Germany~ 
+155 Zurich, *, Switzerland		 Frankfurt, *, Germany~ 
+155 Zurich, *, Switzerland		 Paris, *, France~ 
+45 Zurich, *, Switzerland		 London, *, England~ 
+45 Zurich, *, Switzerland		 Amsterdam, *, Netherlands~ 
+45 Milan, *, Italy				 Frankfurt, *, Germany~ 
+155 Milan, *, Italy				 Frankfurt, *, Germany~ 
+45 Milan, *, Italy				 London, *, England~ 
+155 Milan, *, Italy				 Paris, *, France~ 
+155 Oslo, *, Norway				 Stockholm, *, Sweden~ 
+155 Oslo, *, Norway				 Copenhagen, *, Denmark~ 
+155 Copenhagen, *, Denmark		 Oslo, *, Norway~ 
+155 Copenhagen, *, Denmark		 Stockholm, *, Sweden~ 
+155 Copenhagen, *, Denmark		 Helsinki, *, Finland~ 
+155 Copenhagen, *, Denmark		 Frankfurt, *, Germany~ 
+155 Copenhagen, *, Denmark		 Amsterdam, *, Netherlands~ 
+45 Prague, *, CzechRepublic		 Amsterdam, *, Netherlands~ 
+45 Prague, *, CzechRepublic		 Frankfurt, *, Germany~ 
+45 Vienna, *, Austria			 Amsterdam, *, Netherlands~ 
+45 Vienna, *, Austria			 Frankfurt, *, Germany~ 
+155 Stockholm, *, Sweden		 Helsinki, *, Finland~ 
+155 Stockholm, *, Sweden		 Frankfurt, *, Germany~ 
+155 Stockholm, *, Sweden		 Copenhagen, *, Denmark~ 
+155 Stockholm, *, Sweden		 New York, NY, US~ 
+45 Stockholm, *, Sweden		     Amsterdam, *, Netherlands~ Amsterdam, *, Netherlands2~ Amsterdam, *, Netherlands3~ 
+155 Stockholm, *, Sweden		 Amsterdam, *, Netherlands~ Amsterdam, *, Netherlands2~ 
+155 Stockholm, *, Sweden		 Oslo, *, Norway~ 
+45 Budapest, *, Hungary			 Amsterdam, *, Netherlands~ 
+45 Budapest, *, Hungary			 Frankfurt, *, Germany~ 
+155 Helsinki, *, Finland		 Stockholm, *, Sweden~ 
+155 Helsinki, *, Finland		 Copenhagen, *, Denmark~ 
+
+# ASIA
+2 Hong Kong, *, HK				 London, *, England~ London, *, England2~ 
+45 Singapore, *, Singapore		 Hong Kong, *, HK~ Hong Kong, *, HK2~ Hong Kong, *, HK3~ Hong Kong, *, HK4~ Hong Kong, *, HK5~ Hong Kong, *, HK6~ Hong Kong, *, HK7~ 
+45 Singapore, *, Singapore		 Sydney, *, Australia~ 
+155 Singapore, *, Singapore		 Los Angeles, CA, US~ 
+155 Singapore, *, Singapore		 Sacramento, CA, US~ Sacramento, CA, US2~ 
+45 Hong Kong, *, HK				 Osaka, *, Japan~ 
+45 Hong Kong, *, HK				 Sydney, *, Australia~ 
+45 Hong Kong, *, HK				 Singapore, *, Singapore~ Singapore, *, Singapore2~ Singapore, *, Singapore3~ Singapore, *, Singapore4~ Singapore, *, Singapore5~ Singapore, *, Singapore6~ Singapore, *, Singapore7~ 
+155 Hong Kong, *, HK			 Los Angeles, CA, US~ Los Angeles, CA, US2~ 
+155 Hong Kong, *, HK			 Sacramento, CA, US~ Sacramento, CA, US2~ Sacramento, CA, US3~ 
+6 Fukuoka, *, Japan				Osaka, *, Japan~ Osaka, *, Japan~ 
+45 Fukuoka, *, Japan			Osaka, *, Japan~ Osaka, *, Japan2~ 
+45 Kyoto, *, Japan				Nagoya, *, Japan~ 
+45 Kyoto, *, Japan				Kobe, *, Japan~ 
+45 Kobe, *, Japan				Kyoto, *, Japan~ 
+45 Kobe, *, Japan				Osaka, *, Japan~ 
+155 Osaka, *, Japan				Nagano, *, Japan~ Nagano, *, Japan2~ 
+45 Osaka, *, Japan				Nagoya, *, Japan~ 
+45 Osaka, *, Japan				Tokyo, *, Japan~ Tokyo, *, Japan2~ Tokyo, *, Japan3~ Tokyo, *, Japan4~ 
+155 Osaka, *, Japan				Tokyo, *, Japan~ Tokyo, *, Japan2~ 
+622 Osaka, *, Japan				Tokyo, *, Japan~ Tokyo, *, Japan2~ 
+155 Osaka, *, Japan				Sacramento, CA, US~ 
+45 Osaka, *, Japan				Hong Kong, *, HK~ 
+45 Osaka, *, Japan				Fukuoka, *, Japan~ Fukuoka, *, Japan2~ 
+6 Osaka, *, Japan				Fukuoka, *, Japan~ Fukuoka, *, Japan2~ 
+45 Osaka, *, Japan				Kobe, *, Japan~ 
+45 Osaka, *, Japan				Nagano, *, Japan~ 
+45 Nagoya, *, Japan				Yokohama, *, Japan~ 
+45 Nagoya, *, Japan				Osaka, *, Japan~ 
+45 Nagoya, *, Japan				Kyoto, *, Japan~ 
+155 Yokohama, *, Japan			Tokyo, *, Japan~ 
+155 Yokohama, *, Japan			Chiba, *, Japan~ 
+45 Yokohama, *, Japan			Chiba, *, Japan~ 
+45 Yokohama, *, Japan			Tokyo, *, Japan~ Tokyo, *, Japan2~ Tokyo, *, Japan3~ Tokyo, *, Japan4~ 
+45 Yokohama, *, Japan			Nagoya, *, Japan~ 
+45 Yokohama, *, Japan			Nagano, *, Japan~ 
+155 Yokohama, *, Japan			Nagano, *, Japan~ 
+155 Nagano, *, Japan			Yokohama, *, Japan~ 
+155 Nagano, *, Japan			Osaka, *, Japan~ 
+45 Nagano, *, Japan				Yokohama, *, Japan~ 
+45 Nagano, *, Japan				Osaka, *, Japan~ 
+155 Chiba, *, Japan				Yokohama, *, Japan~ 
+45 Chiba, *, Japan				Tokyo, *, Japan~ 
+45 Chiba, *, Japan				Yokohama, *, Japan~ 
+155 Chiba, *, Japan				Tokyo, *, Japan~ 
+45 Sapporo, *, Japan			Tokyo, *, Japan~ 
+6 Sapporo, *, Japan				Tokyo, *, Japan~ 
+45 Sapporo, *, Japan			Sendai, *, Japan~ 
+6 Sapporo, *, Japan				Sendai, *, Japan~ 
+45 Urawa, *, Japan				Tokyo, *, Japan~ Tokyo, *, Japan2~ 
+6 Sendai, *, Japan				Sapporo, *, Japan~ 
+45 Sendai, *, Japan				Sapporo, *, Japan~ 
+45 Sendai, *, Japan				Chiba, *, Japan~ Chiba, *, Japan2~ 
+6 Sendai, *, Japan				Chiba, *, Japan~ 
+622 Tokyo, *, Japan				Osaka, *, Japan~ Osaka, *, Japan2~ 
+6 Tokyo, *, Japan				Sapporo, *, Japan~ 
+45 Tokyo, *, Japan				Urawa, *, Japan~ Urawa, *, Japan2~ 
+45 Tokyo, *, Japan				Sapporo, *, Japan~ 
+45 Tokyo, *, Japan				Osaka, *, Japan~ Osaka, *, Japan2~ Osaka, *, Japan3~ Osaka, *, Japan4~ 
+155 Tokyo, *, Japan				Osaka, *, Japan~ Osaka, *, Japan2~ 
+45 Tokyo, *, Japan				Yokohama, *, Japan~ Yokohama, *, Japan2~ 
+45 Tokyo, *, Japan				Chiba, *, Japan~ 
+155 Tokyo, *, Japan				Chiba, *, Japan~ 
+155 Tokyo, *, Japan				Yokohama, *, Japan~ 
+45 Tokyo, *, Japan				Sydney, *, Australia~ 
+155 Tokyo, *, Japan				Los Angeles, CA, US~ Los Angeles, CA, US2~ 
+45 Tokyo, *, Japan				Agana, GU, US~ Agana, GU, US2~ 
+45 Seoul, *, Korea				Los Angeles, CA, US~ 
+45 Taipei, *, Taiwan			Sacramento, CA, US~ 
+
+# AUSTRALIA
+155 Perth, *, Australia			 Sydney, *, Australia~ 
+155 Perth, *, Australia			 Adelaide, *, Australia~ 
+155 Adelaide, *, Australia		 Sydney, *, Australia~ 
+155 Adelaide, *, Australia		 Perth, *, Australia~ 
+155 Melbourne, *, Australia      Sydney, *, Australia~ Sydney, *, Australia2~ 
+155 Brisbane, *, Australia		 Sydney, *, Australia~ Sydney, *, Australia2~ 
+155 Sydney, *, Australia		 Melbourne, *, Australia~ Melbourne, *, Australia2~ 
+155 Sydney, *, Australia		 Adelaide, *, Australia~ 
+155 Sydney, *, Australia		 Perth, *, Australia~ 
+155 Sydney, *, Australia		 Brisbane, *, Australia~ Brisbane, *, Australia2~ 
+155 Sydney, *, Australia		 Los Angeles, CA, US~ Los Angeles, CA, US2~ 
+155 Sydney, *, Australia		 Sacramento, CA, US~ Sacramento, CA, US2~ Sacramento, CA, US3~ Sacramento, CA, US4~ 
+155 Sydney, *, Australia		 Palo Alto, CA, US~ Palo Alto, CA, US2~ Palo Alto, CA, US3~ 
+45 Sydney, *, Australia			 Hong Kong, *, HK~ 
+45 Sydney, *, Australia			 Singapore, *, Singapore~ 
+45 Sydney, *, Australia		  	 Tokyo, *, Japan~ 
+
+15 Auckland, *, NZ			     Provincetown, Ma, US~ 
+
+
+## updated 12/04/2000 by Alex Ma <ama@caida.org>
+# upgraded chicago-washingtonDC-newyork-chicago net to OC192 (10000)
+
+##followig is old GridNet International
+
+45 Atlanta, GA, US                       Miami, FL, US~ New York, NY, US~  
+45 Atlanta, GA, US                       Dallas, TX, US~ Washington, DC, US~  
+45 Atlanta, GA, US                       Newark, NJ, US~  
+45 Dallas, TX, US                        Houston, TX, US~ Atlanta, GA, US~  
+45 Dallas, TX, US                        Washington, DC, US~  
+45 Dallas, TX, US                        San Francisco, CA, US~ Newark, DE, US~  
+45 Houston, TX, US                       Dallas, TX, US~ Miami, FL, US~  
+45 Houston, TX, US                       Los Angeles, CA, US~ New York, NY, US~  
+45 Los Angeles, CA, US                   Houston, TX, US~ San Francisco, CA, US~  
+45 Los Angeles, CA, US                   Miami, FL, US~ New York, NY, US~  
+45 Miami, FL, US                         New York, NY, US~ Houston, TX, US~  
+45 Miami, FL, US                         Los Angeles, CA, US~ Atlanta, GA, US~  
+45 Newark, NJ, US                        New York, NY, US~ San Francisco, CA, US~  
+45 Newark, NJ, US                        Dallas, TX, US~ Washington, DC, US~  
+45 Newark, NJ, US                        Atlanta, GA, US~  
+45 New York, NY, US                      Newark, DE, US~ Miami, FL, US~  
+45 New York, NY, US                      Houston, TX, US~ Los Angeles, CA, US~  
+45 San Francisco, CA, US                 Los Angeles, CA, US~ Dallas, TX, US~  
+45 San Francisco, CA, US                 Atlanta, GA, US~ Washington, DC, US~  
+45 San Francisco, CA, US                 Newark, DE, US~  
+45 Washington, DC, US                    Newark, DE, US~ San Francisco, CA, US~  
+45 Washington, DC, US                    Dallas, TX, US~ Atlanta, GA, US~  
+
+#INTRENATIONAL BACKBONE CITIES (ignore for now)
+#
+#Sydney, Australia
+#Tokyo, Japan
+#Vienna, Austria
+#Howald, Luxembourg
+#Brussels, Belgium
+#Mexico City, Mexico
+#Toronto, Canada
+#Amsterdam, Netherlands
+#WATS, Canada
+#Auckland, New Zealand
+#Denmark, Copenhagen
+#Oslo, Norway
+#Helsinki, Finland
+#Lisbon, Portugal
+#In Country, Finland
+#Singapore, Japan
+#Paris, France
+#Johannesburg, South Africa
+#Frankfurt, Germany
+#Madrid, Spain
+#Hong Kong
+#Stockholm, Sweden
+#Dublin, Ireland~ 
+#Bern, Switzerland
+#Tel Aviv , Israel
+#Taipei, Taiwan
+#Milan, Italy
+# London, *, England 
+#
+##INTERCONNECT 
+##
+
+## Boardwatch
+???		-                                   Hayward, CA, US~  Washington, DC, US~  
+???		-                                   San Jose, CA, US~  
+???		-                                   San Francisco, CA, US~  
+
+
+###################### following is old ANS 
+
+45 Albuquerque, NM, US                   Los Angeles, CA, US~  Hawaii, HI, US~  
+45 Albuquerque, NM, US                   Houston, TX, US~  
+45 Atlanta, GA, US                       Houston, TX, US~  Greensboro, NC, US~  
+45 Chicago, IL, US                       St. Louis, MO, US~  Cleveland, OH, US~  
+45 Chicago, IL, US                       Cleveland, OH, US~  Denver, CO, US~  
+45 Cleveland, OH, US                     Chicago, IL, US~  Chicago, IL, US2~  
+45 Cleveland, OH, US                     Hartford, CT, US~  New York, NY, US~  
+45 Dallas, TX, US                        San Jose, CA, US~  Houston, TX, US~  
+45 Dallas, TX, US                        St. Louis, MO, US~  Reston, VA, US~  
+45 Denver, CO, US                        San Francisco, CA, US~  Chicago, IL, US~  
+45 Denver, CO, US                        Seattle, WA, US~  
+45 Greensboro, NC, US                    Atlanta, GA, US~  Washington, DC, US~  
+45 Hartford, CT, US                      New York, NY, US~  Cleveland, OH, US~  
+45 Houston, TX, US                       Albuquerque, NM, US~  Dallas, TX, US~  
+45 Houston, TX, US                       Atlanta, GA, US~  
+45 Los Angeles, CA, US                   Albuquerque, NM, US~  
+45 Los Angeles, CA, US                   San Francisco, CA, US~  
+45 New York, NY, US                      Washington, DC, US~  Reston, VA, US~  
+45 New York, NY, US                      Reston, VA, US~  Hartford, CT, US~  
+45 New York, NY, US                      Cleveland, OH, US~  
+45 Reston, VA, US                        Washington, DC, US~  Washington, DC, US2~  
+45 Reston, VA, US                        St. Louis, MO, US~  Dallas, TX, US~  
+45 Reston, VA, US                        New York, NY, US~  New York, NY, US2~  
+45 San Francisco, CA, US                 San Jose, CA, US~  Denver, CO, US~  
+45 San Francisco, CA, US                 Los Angeles, CA, US~  Seattle, WA, US~  
+45 San Jose, CA, US                      San Francisco, CA, US~  Dallas, TX, US~  
+45 Seattle, WA, US                       Denver, CO, US~  San Francisco, CA, US~  
+45 St. Louis, MO, US                     Chicago, IL, US~  Reston, VA, US~  
+45 St. Louis, MO, US                     Dallas, TX, US~  
+10000 Washington, DC, US                 New York, NY, US~  New York, NY, US2~  
+45 Washington, DC, US                    Greensboro, NC, US~  Reston, VA, US~  
+45 Washington, DC, US                    Reston, VA, US~  
+
+##INTERCONNECT POINTS
+???		-                                   Palo Alto, CA, US~  Pennsauken, NJ, US~  
+???		-                                   Hayward, CA, US~  
+???		-                                   Washington, DC, US~  San Jose, CA, US~  
+???		-                                   Pennsauken, NJ, US~  
+
+
+#http://www.uunet.com/network/maps/index.html 
+#following (03/31/00) updated by ying zhang
+
+2488 Seattle, WA, US                     New York, NY, US~  Chicago, IL, US~  
+2488 Seattle, WA, US                     Dallas, TX, US~  Salt Lake City, UT, US~  
+622 Seattle, WA, US                      Santa Clara, CA, US~  
+622 Seattle, WA, US                      Vancouver, *, Canada~  
+622 Seattle, WA, US                      Salt Lake City, UT, US~  
+622 Seattle, WA, US                      San Jose, CA, US~  Sacramento, CA, US~  
+622 Seattle, WA, US                      San Francisco, CA, US~  
+2488 Sacramento, CA, US                  Santa Clara, CA, US~  
+2488 San Francisco, CA, US               Sacramento, CA, US~  San Jose, CA, US~  
+2488 San Francisco, CA, US               Washington, DC, US~  
+2488 San Francisco, CA, US               Salt Lake City, UT, US~  
+2488 Portland, OR, US                    Sacramento, CA, US~  
+2488 Sacramento, CA, US                  Los Angeles, CA, US~  
+2488 Portland, OR, US                    Chicago, IL, US~  San Francisco, CA, US~  
+2488 Los Angeles, CA, US                 Salt Lake City, UT, US~  
+2488 Dallas, TX, US                      Houston, TX, US~  Los Angeles, CA, US~  
+2488 Houston, TX, US                     Atlanta, GA, US~  
+2488 Atlanta, GA, US                     Washington, DC, US~  New York, NY, US~  
+2488 New York, NY, US                    Boston, MA, US~  
+622 Boston, MA, US                       New York, NY, US~  White Plains, NY, US~  
+10000 New York, NY, US                   Washington, DC, US~  Chicago, IL, US~  
+2488 St. Louis, MO, US                   Salt Lake City, UT, US~  
+2488 St. Louis, MO, US                   Washington, DC, US~  Chicago, IL, US~  
+622 San Francisco, CA, US                Los Angeles, CA, US~  San Jose, CA, US~  
+622 San Francisco, CA, US                Santa Clara, CA, US~  New York, NY, US~  
+622 San Francisco, CA, US                Washington, DC, US~  Chicago, IL, US~  
+622 San Francisco, CA, US                Salt Lake City, UT, US~  
+622 San Francisco, CA, US                Tyson's Corner, VA, US~  
+622 Los Angeles, CA, US                  Phoenix, AZ, US~  Santa Clara, CA, US~  
+622 Los Angeles, CA, US                  San Diego, CA, US~  Dallas, TX, US~  
+622 Los Angeles, CA, US                  Phoenix, AZ, US~  Washington, DC, US~  
+622 Los Angeles, CA, US                  Chicago, IL, US~  Kansas City, KS, US~  
+ 
+45 Seattle, WA, US                       San Francisco, CA, US~  Portland, OR, US~  
+45 Seattle, WA, US                       Salt Lake City, UT, US~  
+45 Seattle, WA, US                       Vancouver, *, Canada~  San Jose, CA, US~  
+45 Seattle, WA, US                       Santa Clara, CA, US~  Dallas, TX, US~  
+45 Seattle, WA, US                       Kansas City, MO, US~  Chicago, IL, US~  
+45 Seattle, WA, US                       Newark, DE, US~  
+45 Vancouver, *, Canada                  Victoria, *, Canada~  
+45 San Francisco, CA, US                 Wailuku, HI, US~  Los Angeles, CA, US~  
+45 San Francisco, CA, US                 Salt Lake City, UT, US~  
+45 Los Angeles, CA, US                   San Diego, CA, US~  Santa Clara, CA, US~  
+45 San Diego, CA, US                     Phoenix, AZ, US~  
+45 Phoenix, AZ, US                       Los Angeles, CA, US~  Las Vegas, NV, US~  
+45 Denver, CO, US                        Salt Lake City, UT, US~  Dallas, TX, US~  
+45 Denver, CO, US                        St. Louis, MO, US~  Kansas City, KS, US~  
+45 Denver, CO, US                        Chicago, IL, US~  
+45 Dallas, TX, US                        Denver, CO, US~  Austin, TX, US~  
+45 Dallas, TX, US                        Houston, TX, US~  New Orleans, LA, US~  
+45 Dallas, TX, US                        Kansas City, MO, US~  Atlanta, GA, US~  
+45 Atlanta, GA, US                       Tampa, FL, US~  Washington, DC, US~  
+45 Richmond, VA, US                      Harrisburg, PA, US~  
+45 Raleigh, NC, US                       Washington, DC, US~  
+45 Chicago, IL, US                       Minneapolis, MN, US~  Seattle, WA, US~  
+10000 Chicago, IL, US                       Washington, DC, US~  
+45 Chicago, IL, US                       Indianapolis, IN, US~  Cleveland, OH, US~  
+45 Chicago, IL, US                       Detroit, MI, US~  
+
+45 Toronto, *, Canada                    Detroit, MI, US~  Regina, *, Canada~  
+45 Toronto, *, Canada                    Winnipeg, *, Canada~  
+45 Toronto, *, Canada                    Edmonton, *, Canada~  
+45 Calgary, *, Canada                    Toronto, *, Canada~  Montreal, *, Canada~  
+45 Montreal, *, Canada                   Quebec, *, Canada~  
+45 Boston, MA, US                        Hartford, CT, US~  
+45 New York, NY, US                      Buffalo, NY, US~  Philadelphia, PA, US~  
+45 Philadelphia, PA, US                  Washington, DC, US~  
+45 Cleveland, OH, US                     Minneapolis, MN, US~  Chicago, IL, US~  
+45 Cleveland, OH, US                     Hartford, CT, US~  Indianapolis, IN, US~  
+45 Cleveland, OH, US                     Pittsburgh, PA, US~  New York, NY, US~  
+45 Cleveland, OH, US                     Washington, DC, US~  
+45 Cleveland, OH, US                     Philadelphia, PA, US~  
+
+622 Salt Lake City, UT, US               Denver, CO, US~  Dallas, TX, US~  
+622 Salt Lake City, UT, US               Kansas City, KS, US~  
+622 Denver, CO, US                       Dallas, TX, US~  St. Louis, MO, US~  
+622 Dallas, TX, US                       Minneapolis, MN, US~  St. Louis, MO, US~  
+622 Dallas, TX, US                       Kansas City, KS, US~  Atlanta, GA, US~  
+622 Dallas, TX, US                       New Orleans, LA, US~  Houston, TX, US~  
+622 Kansas City, KS, US                  Washington, DC, US~  Chicago, IL, US~  
+622 Houston, TX, US                      New Orleans, LA, US~  Atlanta, GA, US~  
+622 Chicago, IL, US                      Toronto, *, Canada~  New York, NY, US~  
+622 Chicago, IL, US                      Cleveland, OH, US~  Indianapolis, IN, US~  
+622 Chicago, IL, US                      Buffalo, NY, US~  
+622 Indianapolis, IN, US                 Cleveland, OH, US~  
+622 Toronto, *, Canada                   Montreal, *, Canada~  
+622 New Orleans, LA, US                  Atlanta, GA, US~  
+622 Atlanta, GA, US                      Washington, DC, US~  Orlando, FL, US~  
+622 Atlanta, GA, US                      Jacksonville, FL, US~  Miami, FL, US~  
+622 Orlando, FL, US                      Tampa, FL, US~  Jacksonville, FL, US~  
+622 Orlando, FL, US                      Miami, FL, US~  
+622 Buffalo, NY, US                      New York, NY, US~  Newark, DE, US~  
+622 Washington, DC, US                   Pittsburgh, PA, US~  New York, NY, US~  
+622 Washington, DC, US                   Raleigh, NC, US~  
+155 Vancouver, *, Canada                 Seattle, WA, US~  Calgary, *, Canada~  
+155 Vancouver, *, Canada                 Edmonton, *, Canada~  
+155 Calgary, *, Canada                   Chicago, IL, US~  Toronto, *, Canada~  
+155 Sacramento, CA, US                   Osaka, *, Japan~  
+155 Los Angeles, CA, US                  Tokyo, *, Japan~  
+155 Chicago, IL, US                      Toronto, *, Canada~  Buffalo, NY, US~  
+155 Chicago, IL, US                      Newark, NY, US~  
+155 New York, NY, US                     Stockholm, *, Sweden~  
+155 New York, NY, US                     Eschborn, *, Germany~  
+155 New York, NY, US                     Amsterdam, *, Netherlands~  
+155 New York, NY, US                     London, *, England~  Montreal, *, Canada~  
+155 New York, NY, US                     Toronto, *, Canada~  
+155 Washington, DC, US                   London, *, England~  
+155 Washington, DC, US                   Eschborn, *, Germany~  
+155 Washington, DC, US                   Amsterdam, *, Netherlands~  
+155 Washington, DC, US                   New York, NY, US~  Toronto, *, Canada~  
+155 Toronto, *, Canada                   Chicago, IL, US~  Nepean, *, Ontario~  
+155 Toronto, *, Canada                   Toronto, *, Canada~  
+155 Nepean, *, Ontario                   New York, NY, US~  
+155 London, *, England                   Amsterdam, *, Netherlands~  
+155 London, *, England                   Paris, *, France~  Brussels, *, Canada~  
+155 London, *, England                   Eschborn, *, Germany~  
+155 Brussels, *, Canada                  Amsterdam, *, Netherlands~  
+155 Brussels, *, Canada                  London, *, England~  Paris, *, France~  
+155 Eschborn, *, Germany                 Zurich, *, Switzerland~  
+155 Eschborn, *, Germany                 Stockholm, *, Sweden~  
+45 London, *, England                    Madrid, *, Spain~  Milan, *, Italy~  
+45 London, *, England                    Zurich, *, Switzerland~  
+45 London, *, England                    Dublin, *, Ireland~  
+45 Amsterdam, *, Netherlands             Stockholm, *, Sweden~  
+45 Amsterdam, *, Netherlands             Zurich, *, Switzerland~  
+45 Amsterdam, *, Netherlands             Vienna, *, Austria~  
+45 Eschborn, *, Germany                  Oslo, *, Norway~  Zurich, *, Switzerland~  
+45 Eschborn, *, Germany                  Vienna, *, Austria~  
+45 Madrid, *, Spain                      Paris, *, France~  London, *, England~  
+45 Madrid, *, Spain                      Barcelona, *, Spain~  
+
+
+
+##INTERCONNECT 
+##
+
+## Baordwatch
+##              Interconnects
+???		-                                   Palo Alto, CA, US~  Hayward, CA, US~  
+???		-                                   Washington, DC, US~  
+???		-                                   San Jose, CA, US~  Pennsauken, NJ, US~  
+???		-                                   Toronto, *, Canada~  
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Verio (updated 07/08/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#last updated by ying zhang
+# 07/08/2000
+
+##following is old ATMNet
+# http://www.atmnet.net/realworld/atmnet_integrated/sld005.htm
+
+155 Los Angeles, CA, US                  San Diego, CA, US~  Phoenix, AZ, US~  
+155 Los Angeles, CA, US                  Santa Clara, CA, US~  
+155 San Francisco, CA, US                Santa Clara, CA, US~  Sacramento, CA, US~  
+155 San Francisco, CA, US                Seattle, WA, US~  
+155 Salt Lake City, UT, US               Sacramento, CA, US~  Denver, CO, US~  
+155 Kansas City, MO, US                  Denver, CO, US~  St. Louis, MO, US~  
+155 Dallas, TX, US                       Phoenix, AZ, US~  Houston, TX, US~  
+155 Atlanta, GA, US                      Houston, TX, US~  Washington, DC, US~  
+155 Atlanta, GA, US                      St. Louis, MO, US~  
+155 Champaign, IL, US                    St. Louis, MO, US~  Chicago, IL, US~  
+155 Chicago, IL, US                      Minneapolis, MN, US~  Detroit, MI, US~  
+155 Pittsburgh, PA, US                   Detroit, MI, US~  New York, NY, US~  
+155 New York, NY, US                     Boston, MA, US~  Philadelphia, PA, US~  
+155 Philadelphia, PA, US                 Washington, DC, US~  
+
+
+#http://boardwatch.internet.com/isp/summer99/bb/verio.jpg 
+#http://home.verio.com/company/network.cfm 
+#updated by ying zhang 06/10/2000 test
+
+45 Albuquerque, NM, US                   Los Angeles, CA, US~  
+45 Atlanta, GA, US                       Dallas, TX, US~  Washington, DC, US~  
+45 Baltimore, MD, US                     Washington, DC, US~  
+45 Baltimore, MD, US                     Philadelphia, PA, US~  
+45 Boston, MA, US                        Rochester, MN, US~  
+45 Chicago, IL, US                       San Jose, CA, US~  Detroit, MI, US~  
+45 Dallas, TX, US                        Houston, TX, US~  Atlanta, GA, US~  
+45 Dallas, TX, US                        San Jose, CA, US~  
+45 Denver, CO, US                        Washington, DC, US~  San Jose, CA, US~  
+45 Detroit, MI, US                       Chicago, IL, US~  Pittsburgh, PA, US~  
+45 Harrisburg, PA, US                    Philadelphia, PA, US~  
+45 Harrisburg, PA, US                    Pittsburgh, PA, US~  
+45 Houston, TX, US                       New Orleans, LA, US~  Dallas, TX, US~  
+45 Los Angeles, CA, US                   Washington, DC, US~  San Jose, CA, US~  
+45 Los Angeles, CA, US                   Albuquerque, NM, US~  
+45 New Orleans, LA, US                   Houston, TX, US~  Orlando, FL, US~  
+45 New Orleans, LA, US                   Dallas, TX, US~  
+45 New York, NY, US                      Rochester, MN, US~  San Jose, CA, US~  
+45 Orlando, FL, US                       New Orleans, LA, US~  Washington, DC, US~  
+45 Philadelphia, PA, US                  Baltimore, MD, US~  Harrisburg, PA, US~  
+45 Pittsburgh, PA, US                    Detroit, MI, US~  Harrisburg, PA, US~  
+45 Portland, OR, US                      Washington, DC, US~  
+45 Rochester, NY, US                     Boston, MA, US~  New York, NY, US~  
+45 Rochester, NY, US                     Washington, DC, US~  San Jose, CA, US~  
+45 San Jose, CA, US                      Los Angeles, CA, US~  Dallas, TX, US~  
+45 San Jose, CA, US                      Washington, DC, US~  Denver, CO, US~  
+45 San Jose, CA, US                      Chicago, IL, US~  
+45 San Jose, CA, US                      New York, NY, US~  Rochester, MN, US~  
+45 San Francisco, CA, US                 Stanford, CA, US~  
+45 Washington, DC, US                    Orlando, FL, US~  Atlanta, GA, US~  
+45 Washington, DC, US                    Los Angeles, CA, US~  San Jose, CA, US~  
+45 Washington, DC, US                    Denver, CO, US~  
+45 Washington, DC, US                    Portland, OR, US~  Chicago, IL, US~  
+45 Washington, DC, US                    Seattle, WA, US~  Rochester, MN, US~  
+45 Washington, DC, US                    Baltimore, MD, US~  
+
+155 Boston, MA, US                       New York, NY, US~  
+155 Chicago, IL, US                      St. Louis, MO, US~  Seattle, WA, US~  
+155 Chicago, IL, US                      Philadelphia, PA, US~  
+155 Dallas, TX, US                       Washington, DC, US~  
+155 Dallas, TX, US                       Salt Lake City, UT, US~  
+155 Dallas, TX, US                       Kansas City, KS, US~  
+155 Kansas City, KS, US                  St. Louis, MO, US~  
+155 Denver, CO, US                       Washington, DC, US~  San Jose, CA, US~  
+155 Los Angeles, CA, US                  San Diego, CA, US~  
+155 New York, NY, US                     Boston, MA, US~  Philadelphia, PA, US~  
+155 Stanford, CA, US                     San Francisco, CA, US~  San Jose, CA, US~  
+155 Philadelphia, PA, US                 Washington, DC, US~  Chicago, IL, US~  
+155 Philadelphia, PA, US                 New York, NY, US~  
+155 Portland, OR, US                     Seattle, WA, US~  Sacramento, CA, US~  
+155 Sacramento, CA, US                   Portland, OR, US~  San Jose, CA, US~  
+155 Salt Lake City, UT, US               Dallas, TX, US~  San Jose, CA, US~  
+155 Salt Lake City, UT, US               St. Louis, MO, US~  
+155 San Diego, CA, US                    San Jose, CA, US~  Dallas, TX, US~  
+155 San Diego, CA, US                    Los Angeles, CA, US~  San Jose, CA, US~  
+155 San Jose, CA, US                     San Diego, CA, US~  Los Angeles, CA, US~  
+155 San Jose, CA, US                     San Diego, CA, US~  
+155 San Jose, CA, US                     Salt Lake City, UT, US~  
+155 San Jose, CA, US                     Sacramento, CA, US~  Stanford, CA, US~  
+155 St. Louis, MO, US                    Tulsa, OK, US~  Salt Lake City, UT, US~  
+155 St. Louis, MO, US                    Chicago, IL, US~  
+155 Tulsa, OK, US                        St. Louis, MO, US~ Dallas, TX, US~ 
+155 Washington, DC, US                   Dallas, TX, US~ Denver, CO, US~ 
+155 Washington, DC, US                   Philadelphia, PA, US~ 
+
+622 Seattle, WA, US                      San Jose, CA, US~ 
+622 San Jose, CA, US                     Washington, DC, US~ 
+
+# planned for 1998:
+#45 San Jose, CA            los angeles
+#45 Los Angeles, CA         irvine
+#45 Albuquerque, NM         irvine~ dallas
+#45 New Orleans, LA         dallas~ washington
+#45 Detroit, MI             chicago~ rochester~ pittsburgh
+#45 Pittsburg, PA           philadelphia
+
+##INTERCONNECT POINTS
+???          -                           New York, NY, US~ Washington, DC, US~ 
+???          -                           Stanford, CA, US~ San Jose, CA, US~ 
+???          -                           Mountain View, CA, US~ 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+VisiNet (updated 06/10/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#http://www.visi.net/connectivity/network.html 
+# updated by ying zhang  06/10/2000
+
+45 San Francisco, CA, US                 Chicago, IL, US~ Washington, DC, US~ 
+45 San Francisco, CA, US                 Newport News, VA, US~ 
+45 San Francisco, CA, US                 Los Angeles, CA, US~ 
+45 Los Angeles, CA, US                   Dallas, TX, US~ 
+45 Dallas, TX, US                        Washington, DC, US~ 
+45 Chicago, IL, US                       Washington, DC, US~ 
+45 Washington, DC, US                    New York, NY, US~ Atlanta, GA, US~ 
+45 Washington, DC, US                    Raleigh, NC, US~ Richmond, VA, US~ 
+45 Richmond, VA, US                      Newport News, VA, US~ 
+45 Norfolk, VA, US                       Newport News, VA, US~ 
+
+##INTERCONNECT 
+##
+
+## Baordwatch
+##              Interconnects
+???		-                                   Santa Clara, CA, US~ Palo Alto, CA, US~ 
+???		-                                   Pennsauken, NJ, US~ 
+???		-                                   Chicago, IL, US~ Hayward, CA, US~ 
+???		-                                   Tyson's Corner, VA, US~ 
+???		-                                   San Jose, CA, US~ Washington, DC, US~ 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+XO Communications (last updated 06/05/2002)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# source:http://www.xo.com/ourstory/pop_up_network_map.html
+# update by: Betty Tso <btty@caida.org>
+
+#North America
+622 Seattle, WA, US				San Jose, CA, US~  San Jose, CA, US2~ 
+155 Seattle, WA, US				Spokane, WA, US~  Spokane, WA, US2~
+622 Portland, OR, US			San Jose, CA, US~ San Jose, CA, US2~
+622 Fremont, CA, US				San Jose, CA, US~ San Jose, CA, US2~
+622 Sacramento, CA, US			San Jose, CA, US~ San Jose, CA, US2~
+622 San Jose, CA, US			Portland, OR, US~ Portland, OR, US2~ Seattle, WA, US~ Seattle, WA, US2~ Fremont, CA, US~ Fremont, CA, US2~ Irvine, CA, US~ Los Angeles, CA, US~ Los Angeles, CA, US2~ Sacramento, CA, US~ Sacramento, CA, US2~
+10000 San Jose, CA, US			Los Angeles, CA, US~ Washington, DC, US~ Denver, CO, US~
+622 Santa Ana, CA, US			Los Angeles, CA, US~ Los Angeles, CA, US2~
+622 Irvine, CA, US				San Jose, CA, US~ Los Angeles, CA, US~
+622 Los Angeles, CA, US			San Jose, CA, US~ San Jose, CA, US2~ Irvine, CA, US~ Santa Ana, CA, US~ Santa Ana, CA, US2~ Irvine, CA, US~ San Diego, CA, US~ San Diego, CA, US2~ Phoenix, AZ, US~ Phoenix, AZ, US2~ Las Vegas, NV, US~ Las Vegas, NV, US2~
+10000 Los Angeles, CA, US		San Jose, CA, US~ Dallas, TX, US~
+622 San Diego, CA, US			Los Angeles, CA, US~ Los Angeles, CA, US2~
+155 Spokane, WA, US				Seattle, WA, US~ Seattle, WA, US2~
+622 Salt Lake City, UT, US		Denver, CO, US~ Denver, CO, US2~
+10000 Denver, CO, US			San Jose, CA, US~ Dallas, TX, US~ Chicago, IL, US~
+10000 Dallas, TX, US			Denver, CO, US~ Los Angeles, CA, US~ Atlanta, GA, US~ Chicago, IL, US~
+622 Dallas, TX, US				San Antonio, TX, US~ San Antonio, TX, US2~ Austin, TX, US~ Austin, TX, US2~ Houston, TX, US~ Houston, TX, US2~ Memphis, TN, US~ Memphis, TN, US2~
+622 Minneapolis, MN, US			Chicago, IL, US~ Chicago, IL, US2~
+622 Chicago, IL, US				St. Louis, MO, US~ St. Louis, MO, US2~ Columbus, OH, US~ Columbus, OH, US2~ Detroit, MI, US~ Detroit, MI, US2~
+10000 Chicago, IL, US			Denver, CO, US~ Dallas, TX, US~ Washington, DC, US~ New York, NY, US~
+622 Nashville,TN, US			Atlanta, GA, US~ Atlanta, GA, US2~
+622 Atlanta, GA, US				Tampa, FL, US~ Tampa, FL, US2~ Miami, FL, US~ Miami, FL, US2~
+10000 Atlanta, GA, US			Dallas, TX, US~ Washington, DC, US~
+622 Boston, MA, US				New York, NY, US~ New York, NY, US2~ 
+10000 New York, NY, US			Chicago, IL, US~ Washington, DC, US~ 
+622 Washington, DC, US			Cleveland, OH, US~ Cleveland, OH, US2~ Philadelphia, PA, US~ Philadelphia, PA, US2~
+10000 Washington, DC, US		Chicago, IL, US~ San Jose, CA, US~ Atlanta, GA, US~
