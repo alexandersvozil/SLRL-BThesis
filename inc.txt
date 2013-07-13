@@ -1783,7 +1783,6 @@ CA*net II    -                          Montreal, *, Canada~
 CA*net III   -                          Montreal, *, Canada~
 UUNET        -                          Montreal, *, Canada~
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 RNP  (updated 10/23/2001)
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -1795,9 +1794,9 @@ RNP  (updated 10/23/2001)
 1 Porto Velho, *, Brazil				Brasilia, *, Brazil~
 1 Boa Vista, *, Brazil					Brasilia, *, Brazil~
 2 Manaus, *, Brazil						Brasilia, *, Brazil~
-1 Cuiabá, *, Brazil						Brasilia, *, Brazil~
+1 Cuiabï¿½, *, Brazil						Brasilia, *, Brazil~
 1 Campo Grande, *, Brazil				Brasilia, *, Brazil~
-1 Macapá, *, Brazil						Brasilia, *, Brazil~
+1 Macapï¿½, *, Brazil						Brasilia, *, Brazil~
 2 Belem, *, Brazil						Brasilia, *, Brazil~
 1 Palmas, *, Brazil						Brasilia, *, Brazil~
 2 Brasilia, *, Brazil					Belem, *, Brazil~
@@ -1807,11 +1806,11 @@ RNP  (updated 10/23/2001)
 1 Brasilia, *, Brazil					Campo Grande, *, Brazil~
 1 Brasilia, *, Brazil					Rio Branco, *, Brazil~
 1 Brasilia, *, Brazil					Porto Velho, *, Brazil~
-1 Brasilia, *, Brazil					Cuiabá, *, Brazil~
+1 Brasilia, *, Brazil					Cuiabï¿½, *, Brazil~
 2 Brasilia, *, Brazil					Manaus, *, Brazil~
 1 Brasilia, *, Brazil					Palmas, *, Brazil~
 1 Brasilia, *, Brazil					Boa Vista, *, Brazil~
-1 Brasilia, *, Brazil					Macapá, *, Brazil~
+1 Brasilia, *, Brazil					Macapï¿½, *, Brazil~
 5 Goiania, *, Brazil					Brasilia, *, Brazil~
 10 Sao Paulo, *, Brazil					Brasilia, *, Brazil~
 3 Sao Paulo, *, Brazil					Fortaleza, *, Brazil~
@@ -1833,7 +1832,7 @@ RNP  (updated 10/23/2001)
 4 Teresina, *, Brazil					Belo Horizonte, *, Brazil~
 1 Belo Horizonte, *, Brazil				Sao Luis, *, Brazil~
 4 Belo Horizonte, *, Brazil				Teresina, *, Brazil~
-1 Belo Horizonte, *, Brazil				Maceió, *, Brazil~
+1 Belo Horizonte, *, Brazil				Maceiï¿½, *, Brazil~
 1 Belo Horizonte, *, Brazil				Aracaju, *, Brazil~
 20 Belo Horizonte, *, Brazil			Rio de Janeiro, *, Brazil~
 18 Belo Horizonte, *, Brazil			Sao Paulo, *, Brazil~
@@ -1858,7 +1857,7 @@ RNP  (updated 10/23/2001)
 6 Campina Grande, *, Brazil				Recife, *, Brazil~
 10 Recife, *, Brazil					Rio de Janeiro, *, Brazil~
 7 Recife, *, Brazil						Sao Paulo, *, Brazil~
-1 Maceió, *, Brazil						Belo Horizonte, *, Brazil~
+1 Maceiï¿½, *, Brazil						Belo Horizonte, *, Brazil~
 1 Aracaju, *, Brazil					Belo Horizonte, *, Brazil~
 
 #peering points

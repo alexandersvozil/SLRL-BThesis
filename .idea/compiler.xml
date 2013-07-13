@@ -25,6 +25,9 @@
         <module name="BachelorarbeitSLP" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BachelorarbeitSLP" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 
