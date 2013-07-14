@@ -3,6 +3,7 @@ import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,7 +22,10 @@ public class ParseTestInstances {
      * @return List of SLRL Test instances
      */
     public List<SLRLInstance> parse(){
+        List<SLRLInstance> instances  = new ArrayList<SLRLInstance>();
         boolean beginningSeparator = true;
+        SLRLInstance curInstance = new SLRLInstance();
+        boolean firstParse = true;
         try {
             Scanner sc = new Scanner(new File("inc.txt"));
             while(sc.hasNext()){
@@ -31,17 +35,31 @@ public class ParseTestInstances {
                     sc.nextLine();
                 }
                 else{
+                    //log.error(curWord);
 
                     if(curWord.contains("::")){
                         if(beginningSeparator == true){
+                            if(!firstParse)
+                                instances.add(curInstance);
+                            else
+                                firstParse=false;
                             curWord = sc.next();
                             String barboneName = "";
                             while(!curWord.contains("::") && !curWord.contains("(") ){
                                 barboneName+=" " + curWord;
                                 curWord = sc.next();
                             }
-                            System.out.println(barboneName);
-                            beginningSeparator = false;
+                            //new name acknowledged
+                            curInstance = new SLRLInstance();
+                            curInstance.setTestInstanceName(barboneName);
+
+
+                            //special case if there is no update date
+                            if(curWord.contains("::")){
+                                beginningSeparator = true;
+                            }else{
+                                beginningSeparator = false;
+                            }
 
                         }
                         else {
@@ -59,6 +77,8 @@ public class ParseTestInstances {
         } catch (FileNotFoundException e) {
             log.error("File inc.txt  was not found");
         }
-        return null;
+
+        instances.add(curInstance);
+        return instances;
     }
 }

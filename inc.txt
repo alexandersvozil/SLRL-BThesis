@@ -584,7 +584,7 @@ Cable Internet (updated 06/06/2001)
 CAIS Internet (updated 04/23/2000)
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # source: http://www.cais.com/network/network.htm  
-#updated by ying zhang  04/23/2000
+# updated by ying zhang  04/23/2000
 
 622 San Francisco, CA, US                Salt Lake City, UT, US~ 
 622 Salt Lake City, UT, US               Denver, CO, US~ 
@@ -634,51 +634,35 @@ CAIS Internet (updated 04/23/2000)
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-CompuServe Network Services
+CompuServe Network Services(
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-45 Atlanta, GA, US                       Houston, TX, US~ Washington, DC, US~ 
-45 Boston, MA, US                        Bronx, NY, US~ Downers Grove, IL, US~ 
-45 Downers Grove, IL, US                 Columbus, GA, US~ Seattle, WA, US~ 
-45 Downers Grove, IL, US                 Boston, MA, US~ 
-45 Columbus, OH, US                      Downers Grove, IL, US~ 
-45 Columbus, OH, US                      Washington, DC, US~ Dallas, TX, US~ 
-45 Columbus, OH, US                      San Francisco, CA, US~ 
-1.5 Columbus, OH, US                     London, *, Canada~ Munich, *, DE~ 
-1.5 Columbus, OH, US                     Paris, *, France~ 
-45 Dallas, TX, US                        Houston, TX, US~ Los Angeles, CA, US~ 
-45 Dallas, TX, US                        Columbus, GA, US~ 
-45 Houston, TX, US                       Dallas, TX, US~ Atlanta, GA, US~ 
-45 Los Angeles, CA, US                   Dallas, TX, US~ San Francisco, CA, US~ 
-45 Bronx, NY, US                         Washington, DC, US~ Boston, MA, US~ 
-45 San Francisco, CA, US                 Los Angeles, CA, US~ Seattle, WA, US~ 
-45 Seattle, WA, US                       San Francisco, CA, US~ 
-45 Seattle, WA, US                       Downers Grove, IL, US~ 
-45 Washington, DC, US                    Columbus, GA, US~ Atlanta, GA, US~ 
-45 Washington, DC, US                    Bronx, NY, US~ 
-
-1.5 London, *, England                   Columbus, GA, US~ 
-1.5 Paris, *, France                     Columbus, GA, US~ 
-1.5 Munich, *, DE                        Columbus, GA, US~ 
-
-
-##Interconnects
-##
-???		-                                   Palo Alto, CA, US~ Chicago, IL, US~ 
-???		-                                   Hayward, CA, US~ 
-???		-                                   Washington, DC, US~ San Jose, CA, US~ 
-???		-                                   Downers Grove, IL, US~ 
-## Boardwatch
-Peterborough, England    -					London, *, England~ 
-
-##  T1	London Internet Exchange (LINX)
-##  T1	EBONE via ECRC, Munich
+45 Atlanta, GA, US                       Houston, TX, US~ Washington, DC, US~
+45 Boston, MA, US                        Bronx, NY, US~ Downers Grove, IL, US~
+45 Downers Grove, IL, US                 Columbus, GA, US~ Seattle, WA, US~
+45 Downers Grove, IL, US                 Boston, MA, US~
+45 Columbus, OH, US                      Downers Grove, IL, US~
+45 Columbus, OH, US                      Washington, DC, US~ Dallas, TX, US~
+45 Columbus, OH, US                      San Francisco, CA, US~
+1.5 Columbus, OH, US                     London, *, Canada~ Munich, *, DE~
+1.5 Columbus, OH, US                     Paris, *, France~
+45 Dallas, TX, US                        Houston, TX, US~ Los Angeles, CA, US~
+45 Dallas, TX, US                        Columbus, GA, US~
+45 Houston, TX, US                       Dallas, TX, US~ Atlanta, GA, US~
+45 Los Angeles, CA, US                   Dallas, TX, US~ San Francisco, CA, US~
+45 Bronx, NY, US                         Washington, DC, US~ Boston, MA, US~
+45 San Francisco, CA, US                 Los Angeles, CA, US~ Seattle, WA, US~
+45 Seattle, WA, US                       San Francisco, CA, US~
+45 Seattle, WA, US                       Downers Grove, IL, US~
+45 Washington, DC, US                    Columbus, GA, US~ Atlanta, GA, US~
+45 Washington, DC, US                    Bronx, NY, US~
+1.5 London, *, England                   Columbus, GA, US~
+1.5 Paris, *, France                     Columbus, GA, US~
+1.5 Munich, *, DE                        Columbus, GA, US~
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 CRL Network Services (updated 06/18/2000)
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-# source:  http://boardwatch.internet.com/isp/summer99/bb/crl.jpg
-# updated by ying zhang  06/18/2000
 
 
 45 Albuquerque, NM, US                   Phoenix, AZ, US~ Dallas, TX, US~ 

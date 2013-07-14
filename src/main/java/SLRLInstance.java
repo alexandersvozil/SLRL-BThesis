@@ -11,6 +11,11 @@ import java.util.Map;
 public class SLRLInstance {
 
     /**
+     * Name of the instance
+     */
+    private String testInstanceName;
+
+    /**
      *maximum # of servers for the solution, calculated by number of (vertices * 0.1) and then rounded up
      * e.g. 14 vertices: 14 * 0.1 = 1,4 => r = 2
      */
@@ -62,6 +67,24 @@ public class SLRLInstance {
     private Map<Node, Node[]> graph = new HashMap<Node,Node[]>();
 
 
+    public void setTestInstanceName(String testInstanceName) {
+        this.testInstanceName = testInstanceName;
+    }
 
-
+    @Override
+    public String toString() {
+        return "SLRLInstance{" +
+                "testInstanceName='" + testInstanceName + '\'' +
+                ", k=" + k +
+                ", r=" + r +
+                ", r_lower=" + r_lower +
+                ", ratio_r=" + ratio_r +
+                ", c=" + c +
+                ", c_lower=" + c_lower +
+                ", maxDegree=" + maxDegree +
+                ", V=" + V +
+                ", E=" + E +
+                ", graph=" + graph +
+                '}';
+    }
 }
