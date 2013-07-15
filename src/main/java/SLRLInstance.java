@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Vector;
 
 /**
  * Created with IntelliJ IDEA.
@@ -56,19 +57,24 @@ public class SLRLInstance {
      */
     private int V;
 
+
     /**
      * number of Edges
      */
     private int E;
 
+
     /**
      * Adjacence List for storing all the Nodes, with their neighbours
      */
-    private Map<Node, Node[]> graph = new HashMap<Node,Node[]>();
+    private Map<Node, Vector<Node>> graph = new HashMap<Node,Vector<Node>>();
 
 
     public void setTestInstanceName(String testInstanceName) {
         this.testInstanceName = testInstanceName;
+    }
+    public void setGraph(Map<Node, Vector<Node>> graph) {
+        this.graph = graph;
     }
 
     @Override
@@ -84,7 +90,41 @@ public class SLRLInstance {
                 ", maxDegree=" + maxDegree +
                 ", V=" + V +
                 ", E=" + E +
-                ", graph=" + graph +
+                ", graph=" + graphToString() +
                 '}';
+    }
+
+    private String graphToString() {
+        String totalString = "";
+        for(Map.Entry<Node,Vector<Node>> entry : graph.entrySet() ){
+            totalString+= "Key: "+entry.getKey().toString() + " Adj. Nodes: \n";
+            for(Node n: entry.getValue()){
+                totalString+=n.toString()+" ";
+
+            }
+            totalString+= "\n";
+
+        }
+        return totalString;  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public Map<Node,Vector<Node>> getGraph() {
+        return graph;
+    }
+
+    public int getE() {
+        return E;
+    }
+
+    public void setE(int e) {
+        E = e;
+    }
+
+    public int getV() {
+        return V;
+    }
+
+    public void setV(int v) {
+        V = v;
     }
 }

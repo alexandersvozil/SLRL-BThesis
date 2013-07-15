@@ -18,6 +18,8 @@ public class Application {
         log.debug("Instance Size: "+instanceList.size());
         for(SLRLInstance slrlInstance: instanceList){
             log.debug(slrlInstance.toString());
+            log.debug("------------------------------");
+            log.debug("number of nodes (n): " + slrlInstance.getGraph().size());
         }
     }
 }
