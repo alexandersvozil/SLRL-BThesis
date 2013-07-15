@@ -1,0 +1,31 @@
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+above.net (updated 01/28/2000)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# updated by Ying Zhang (ying@caida.org)
+# source: http://above.net/network/network.html
+# date: 01/28/2000
+
+
+622 San Jose, CA, US                     Vienna, VA, US~ Chicago, IL, US~
+155 San Jose, CA, US                    Los Angeles, CA, US~  Portland, OR, US~ Chicago, IL, US~ Vienna, VA, US~ Seattle, WA, US~
+
+45 Dallas, TX, US                       Los Angeles, CA, US~ Chicago, IL, US~
+
+45 Los Angeles, CA, US                  Dallas, TX, US~
+45 Chicago, IL, US                      Dallas, TX, US~ Atlanta, GA, US~
+155 Chicago, IL, US                      Vienna, VA, US~
+45 Atlanta, GA, US                      Vienna, VA, US~
+155 Vienna, VA, US                       Pennsauken, NJ, US~
+#155 Pennsauken, NJ, US                   Chicago, IL, US
+45 Vienna, VA, US                        New York, NY, US~
+622 New York, NY, US                     London, *, England~
+155 London, *, England                   Paris, *, France~ Amsterdam, *, Netherlands
+155 Paris, *, France                     Frankfurt, *, Germany~
+155 Amsterdam, *, Netherlands            Frankfurt, *, Germany~
+155 Frankfurt, *, Germany                Vienna, *, Austria~
+45 San Jose, CA, US                      Tokyo, *, Japan~ Seoul, *, Korea~ Beijing, *, China~
+45 San Jose, CA, US                     Taipei, *, Taiwan~ Hong kong, *, China~
+45 San Jose, CA, US                     Singapore, *, Singapore~ Canberra, *, AU~
+
+
+
