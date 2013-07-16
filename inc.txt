@@ -2939,7 +2939,7 @@ Verio (updated 07/08/2000)
 #last updated by ying zhang
 # 07/08/2000
 
-##following is old ATMNet
+##following is old ~MNet
 # http://www.atmnet.net/realworld/atmnet_integrated/sld005.htm
 
 155 Los Angeles, CA, US                  San Diego, CA, US~  Phoenix, AZ, US~  

@@ -98,10 +98,10 @@ public class SLRLInstance {
         String totalString = "";
         for(Map.Entry<Node,Vector<Node>> entry : graph.entrySet() ){
             totalString+= "Key: "+entry.getKey().toString() + " Adj. Nodes: \n";
-            for(Node n: entry.getValue()){
+           /* for(Node n: entry.getValue()){
                 totalString+=n.toString()+" ";
 
-            }
+            }*/
             totalString+= "\n";
 
         }

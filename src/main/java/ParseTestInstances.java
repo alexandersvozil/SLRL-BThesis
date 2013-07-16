@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
+import java.util.regex.Pattern;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,6 +21,7 @@ public class ParseTestInstances {
      * @return List of SLRL Test instances
      */
     public List<SLRLInstance> parse(){
+        boolean newInstance = false;
         List<SLRLInstance> instances  = new ArrayList<SLRLInstance>();
         boolean firstString = true;
         boolean beginningSeparator = true;
@@ -29,8 +31,13 @@ public class ParseTestInstances {
         boolean firstParse = true;
         try {
             Scanner sc = new Scanner(new File("test.txt"));
+            String curWord = "";
             while(sc.hasNext()){
-                String curWord = sc.next();
+                if(!newInstance)
+                curWord = sc.next();
+                else{
+                    newInstance=false;
+                }
                 //comment
                 if(curWord.contains("#")){
                     sc.nextLine();
@@ -77,7 +84,7 @@ public class ParseTestInstances {
 
                     }
                     //create nodes
-                    if(sc.hasNextInt()|| curWord.matches("-?\\d+(\\.\\d+)?")){
+                    if(sc.hasNextDouble() || sc.hasNextInt()|| curWord.matches("-?\\d+(\\.\\d+)?")){
                         //speed is not needed yet
                         curWord = sc.next();
                         Node curNode = new Node();
@@ -100,51 +107,77 @@ public class ParseTestInstances {
 
                             curWord = sc.next();
                         }
-
-                        //connections
-                        curNode.setName(curNodeName);
+                        //needed if the city has a name like "los angeles"
+                        if(jump)
+                            curWord = sc.next();
+                        curNodeName+=curWord;
                         //state
+                        //curNodeName+=sc.next();
                         sc.next();
                         //country
                         curWord = sc.next();
+                        //connections
+                        curNode.setName(curNodeName);
 
-                        //needed if the city has a name like "los angeles"
-                        if(jump)
-                        curWord = sc.next();
 
                         Vector<Node> nodeVectorN = new Vector<Node>();
-                        log.debug(curWord);
+                        //log.debug(curWord);
 
                         //second point of connection (right side of the file)
-                        while(!curWord.contains("#") && !sc.hasNextInt() && !sc.hasNextDouble() && !sc.hasNext("-?\\d+(\\.\\d+)?") ){
-
-                       /*curWord = sc.next();
+                        while(!sc.hasNext("#+") && !sc.hasNextInt() && !sc.hasNextDouble() && !sc.hasNext("-?\\d+(\\.\\d+)?") ){
+                            curNodeName="";
+                           // curWord=sc.next();
                             while(true){
-                                curNodeName += " " + curWord;
-                                if(curWord.contains(","))
+                                curNodeName += curWord+" ";
+                                if(curNodeName.contains(","))
                                     break;
+                                if(sc.hasNext())
                                 curWord = sc.next();
+                                else break;
                             }
+                            //state
+                            curNodeName+=sc.next();
+                            //country
+                            curWord=sc.next();
+                            if(curWord.contains("~")){
+                                curWord = curWord.substring(0,curWord.length()-1);
+                            }
+                            //curNodeName+=curWord;
+
+                            //add node to vector list
                             Node n = new Node();
                             n.setName(curNodeName);
-                            log.debug("added adj.node:"+ n);
                             nodeVectorN.add(n);
+                             if(!curNodeMap.containsKey(n))
+                             {
+                                  curNodeMap.put(n,nodeVectorN);
+                             }
 
-                            //state
-                            curWord=sc.next();
-                            //log.debug("state:"+curWord);
-                            //country
-                             curWord=sc.next();
+                            if(!sc.hasNextDouble() && !sc.hasNextInt()) {
+                                if(!sc.hasNext())
+                                    break;
+                              curWord= sc.next();
+                                if(curWord.contains("#")){
+                                    sc.nextLine();
+                                    break;
+                                }
+                                if(curWord.contains(":")){
+                                    newInstance=true;
+                                    break;
+                                }
+
+
+                            }
+
                              //log.debug("country:"+ curWord);
-                            */
-                            curWord=sc.next();
+
                         }
                         firstString=true;
 
-                        log.debug ("start "+ curNode);
+                        //log.debug ("start "+ curNode);
                         if(!curNodeMap.containsKey(curNode))
                         {
-                            curNodeMap.put(curNode,null);//nodeVectorN);
+                            curNodeMap.put(curNode,nodeVectorN);
                         }
                         else{
                             //node already in map
