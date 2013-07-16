@@ -21,7 +21,7 @@ public class ParseTestInstances {
      */
     public List<SLRLInstance> parse(){
         List<SLRLInstance> instances  = new ArrayList<SLRLInstance>();
-
+        boolean firstString = true;
         boolean beginningSeparator = true;
         SLRLInstance curInstance = new SLRLInstance();
         Map<Node,Vector<Node>> curNodeMap = new HashMap<Node, Vector<Node>>();
@@ -34,6 +34,7 @@ public class ParseTestInstances {
                 //comment
                 if(curWord.contains("#")){
                     sc.nextLine();
+                    firstString=true;
                 }
                 //not a comment
                 else{
@@ -76,33 +77,48 @@ public class ParseTestInstances {
 
                     }
                     //create nodes
-                    if(sc.hasNextInt()){
+                    if(sc.hasNextInt()|| curWord.matches("-?\\d+(\\.\\d+)?")){
                         //speed is not needed yet
-                        sc.next();
+                        curWord = sc.next();
                         Node curNode = new Node();
                         String curNodeName = "";
+                        if(firstString){
+                            curNodeName += curWord+ " ";
+                        }
                         curWord = sc.next();
 
+                        boolean jump = false;
                         while(true){
-                            curNodeName +=" " + curWord;
+                            if(!curNodeName.contains(",")){
+                            jump = true;
+                            curNodeName +=curWord +" ";
+                            }
 
-                            if(curWord.contains(","))
+                            if(curWord.contains(",")){
                                 break;
+                            }
 
                             curWord = sc.next();
                         }
+
                         //connections
                         curNode.setName(curNodeName);
                         //state
                         sc.next();
                         //country
-                        sc.next();
+                        curWord = sc.next();
 
+                        //needed if the city has a name like "los angeles"
+                        if(jump)
                         curWord = sc.next();
+
                         Vector<Node> nodeVectorN = new Vector<Node>();
-                        while(!curWord.contains("#") ){
-                            curNodeName = curWord;
-                        curWord = sc.next();
+                        log.debug(curWord);
+
+                        //second point of connection (right side of the file)
+                        while(!curWord.contains("#") && !sc.hasNextInt() && !sc.hasNextDouble() && !sc.hasNext("-?\\d+(\\.\\d+)?") ){
+
+                       /*curWord = sc.next();
                             while(true){
                                 curNodeName += " " + curWord;
                                 if(curWord.contains(","))
@@ -120,25 +136,24 @@ public class ParseTestInstances {
                             //country
                              curWord=sc.next();
                              //log.debug("country:"+ curWord);
-
-                            if(sc.hasNextDouble() || sc.hasNextInt() )
-                                break;
-//                            curWord=sc.next();
-
-
+                            */
+                            curWord=sc.next();
                         }
+                        firstString=true;
 
+                        log.debug ("start "+ curNode);
                         if(!curNodeMap.containsKey(curNode))
                         {
-                            System.out.println(curNode);
-                            curNodeMap.put(curNode,nodeVectorN);
+                            curNodeMap.put(curNode,null);//nodeVectorN);
                         }
                         else{
                             //node already in map
-                            log.debug("bing");
+                            //log.debug("bing");
                         }
 
 
+                    }else{
+                        //log.debug("shit:"+ curWord);
                     }
 
                 }

@@ -8,9 +8,7 @@ above.net (updated 01/28/2000)
 
 622 San Jose, CA, US                     Vienna, VA, US~ Chicago, IL, US~
 155 San Jose, CA, US                    Los Angeles, CA, US~  Portland, OR, US~ Chicago, IL, US~ Vienna, VA, US~ Seattle, WA, US~
-
 45 Dallas, TX, US                       Los Angeles, CA, US~ Chicago, IL, US~
-
 45 Los Angeles, CA, US                  Dallas, TX, US~
 45 Chicago, IL, US                      Dallas, TX, US~ Atlanta, GA, US~
 155 Chicago, IL, US                      Vienna, VA, US~
