@@ -75,7 +75,16 @@ public class SLRLInstance {
     }
     public void setGraph(Map<Node, Vector<Node>> graph) {
         this.graph = graph;
+        setV(graph.size());
+        int sum= 0;
+            for(Map.Entry<Node,Vector<Node>> entry : graph.entrySet() ){
+                sum+=entry.getValue().size();
+            }
+        setE(sum/2);
+
     }
+
+
 
     @Override
     public String toString() {
@@ -90,7 +99,7 @@ public class SLRLInstance {
                 ", maxDegree=" + maxDegree +
                 ", V=" + V +
                 ", E=" + E +
-                ", graph=" + graphToString() +
+                ", graph=" +// graphToString() +
                 '}';
     }
 
@@ -98,10 +107,10 @@ public class SLRLInstance {
         String totalString = "";
         for(Map.Entry<Node,Vector<Node>> entry : graph.entrySet() ){
             totalString+= "Key: "+entry.getKey().toString() + " Adj. Nodes: \n";
-           /* for(Node n: entry.getValue()){
+            for(Node n: entry.getValue()){
                 totalString+=n.toString()+" ";
 
-            }*/
+            }
             totalString+= "\n";
 
         }

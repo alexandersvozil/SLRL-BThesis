@@ -1944,68 +1944,54 @@ ServInt Internet Services (updated 05/31/2000)
 
 
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Sprint (last modified 08/22/2001)
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-#email:David Meyer 
+#email:David Meyer
 #updated by Bradley Huffaker
 
-2488  Anaheim, CA	San Jose, CA~ San Jose, CA2~ San Jose, CA3~ San Jose, CA4~
-155   Anaheim, CA	Honolulu, HI, US~
-2488  Atlanta, GA	Fort Worth, TX~ Fort Worth, TX2~
-2488  Atlanta, GA	New York, NY~ New York, NY2~
-2488  Atlanta, GA	Orlando, FL~
-2488  Cheyenne, WY	Chicago, IL~ Chicago, IL2~
-2488  Chicago, IL	Fort Worth, TX~ Fort Worth, TX2~
-2488  Chicago, IL	Atlanta, GA~ Atlanta, GA2~
-2488  Chicago, IL	New York, NY~ New York, NY2~
-2488  Chicago, IL	Fort Worth, TX~ Fort Worth, TX2~
-2488  Chicago, IL	Kansas City, KS~
-2488  Chicago, IL	Roachdale, IN~
-2488  Chicago, IL	Springfield, MA~
-2488  Fort Worth, TX	Anaheim, CA~ Anaheim, CA2~ Anaheim, CA3~
-2488  Fort Worth, TX	Pennsauken, NJ, US~ Pennsauken, NJ, US2~
-2488  Fort Worth, TX	Kansas City, KS~ Kansas City, KS2~ Kansas City, KS3~ Kansas City, KS4~
-2488  Kansas City, KS	Pennsauken, NJ, US~ Pennsauken, NJ, US2~
-9952  Manasquan, NJ	Copenhagen, *, Denmark~
-9952  Manasquan, NJ	 London, *, England~
-2488  New York, NY	Pennsauken, NJ, US~ Pennsauken, NJ, US2~
-2488  New York, NY	Pennsauken, NJ, US3~ 
-2488  New York, NY	Pennsauken, NJ, US4~ Pennsauken, NJ, US5~ Pennsauken, NJ, US6~
-2488  New York, NY      Manasquan, NJ~ Manasquan, NJ2~
-155   New York, NY       London, *, England~  London, *, England2~
-155   New York, NY	 London, *, England3~  London, *, England4~
-2488  Pennsauken, NJ, US	Stockton, CA~ Stockton, CA2~ Stockton, CA3~ 
-2488  Roachdale, IN     Pennsauken, NJ, US~
-2488  San Jose, CA      Tacoma, WA~ Tacoma, WA2~
-2488  Seattle, WA       Chicago, IL~
-2488  Seattle, WA       Tacoma, WA~ Tacoma, WA2~ Tacoma, WA3~
-2488  Seattle, WA       Kansas City, KS~
-2488  Springfield, MA   Pennsauken, NJ, US~
-2488  Stockton, CA      San Jose, CA~ San Jose, CA2~ San Jose, CA3~ San Jose, CA4~
-155   Stockton, CA      Tokyo, *, JP~
-155   Stockton, CA      Honolulu, HI~
-2488  Tacoma, WA	Cheyenne, WY~ Cheyenne, WY2~
-2488  Tacoma, WA	Tokyo, *, Japan~
-2488  Tacoma, WA	Sydney, *, Australia~ 
-2488  Washington, DC    San Jose, CA~ San Jose, CA2~
-2488  Washington, DC    New York, NY~ New York, NY2~ New York, NY3~ New York, NY4~
-2488  Washington, DC    Pennsauken, NJ, US~ Pennsauken, NJ, US2~ 
-2488  Washington, DC    Atlanta, GA~ Atlanta, GA2~
-2488  Washington, DC    Manasquan, NJ~
+2488  Anaheim, CA, US	San Jose, CA~, US San Jose, CA2~, US San Jose, CA3~, US San Jose, CA4~, US
+155   Anaheim, CA, US	Honolulu, HI, US~
+2488  Atlanta, GA, US	Fort Worth, TX~, US Fort Worth, TX2~, US
+2488  Atlanta, GA, US	New York, NY~, US New York, NY2~, US
+2488  Atlanta, GA, US	Orlando, FL~, US
+2488  Cheyenne, WY, US	Chicago, IL~, US Chicago, IL2~, US
+2488  Chicago, IL, US	Fort Worth, TX~, US Fort Worth, TX2~, US
+2488  Chicago, IL, US	Atlanta, GA~, US Atlanta, GA2~, US
+2488  Chicago, IL, US	New York, NY~, US New York, NY2~, US
+2488  Chicago, IL, US	Fort Worth, TX~, US Fort Worth, TX2~, US
+2488  Chicago, IL, US	Kansas City, KS~, US
+2488  Chicago, IL, US	Roachdale, IN~, US
+2488  Chicago, IL, US	Springfield, MA~, US
+2488  Fort Worth, TX, US	Anaheim, CA~, US Anaheim, CA3~, US Anaheim, CA3~, US
+2488  Fort Worth, TX, US	Pennsauken, NJ, US~ Pennsauken, NJ, US2~
+2488  Fort Worth, TX, US	Kansas City, KS~, US Kansas City, KS2~, US Kansas City, KS3~, US Kansas City, KS4~, US
+2488  Kansas City, KS, US	Pennsauken, NJ, US~ Pennsauken, NJ, US2~
+2488  New York, NY, US	    Pennsauken, NJ, US~ Pennsauken, NJ, US2~
+2488  New York, NY, US	    Pennsauken, NJ, US3~
+2488  New York, NY,	US      Pennsauken, NJ, US4~ Pennsauken, NJ, US5~ Pennsauken, NJ, US6~
+2488  New York, NY, US      Manasquan, NJ~, US Manasquan, NJ2~, US
+155   New York, NY, US      London, *, England~  London, *, England2~
+155   New York, NY,	US      London, *, England3~  London, *, England4~
+2488  Pennsauken, NJ, US	Stockton, CA~, US Stockton, CA2~, US Stockton, CA3~, US
+2488  Roachdale, IN, US     Pennsauken, NJ, US~
+2488  San Jose, CA, US      Tacoma, WA~, US Tacoma, WA2~, US
+2488  Seattle, WA, US       Chicago, IL~, US
+2488  Seattle, WA, US       Tacoma, WA~, US Tacoma, WA2~, US Tacoma, WA3~, US
+2488  Seattle, WA, US       Kansas City, KS~, US
+2488  Springfield, MA, US   Pennsauken, NJ, US~
+2488  Stockton, CA, US      San Jose, CA~, US San Jose, CA3~, US San Jose, CA3~, US San Jose, CA4~, US
+155   Stockton, CA,  US     Tokyo, *, JP~, US
+155   Stockton, CA,  US     Honolulu, HI~,US
+2488  Tacoma, WA, US	Cheyenne, WY~ Cheyenne, WY3~
+2488  Tacoma, WA, US	Tokyo, *, Japan~
+2488  Tacoma, WA, US	Sydney, *, Australia~
+2488  Washington, DC, US    San Jose, CA~, US San Jose, CA5~, US
+2488  Washington, DC, US    New York, NY~, US New York, NY2~, US New York, NY3~, US New York, NY4~, US
+2488  Washington, DC, US    Pennsauken, NJ, US~ Pennsauken, NJ, US2~
+2488  Washington, DC, US    Atlanta, GA~, US Atlanta, GA2~, US
+2488  Washington, DC, US    Manasquan, NJ~, US
 
-##INTERCONNECTs: 
-##
-???	-                                    Santa Clara, CA, US~ Pennsauken, NJ, US~ 
-???	-                                    Chicago, IL, US~ 
-???	-                                    Hayward, CA, US~ Washington, DC, US~ 
-iDREN	-                                  Stanford, CA, US~ Mountain View, CA, US~ 
-iDREN	-                                  Mountain View, CA, US~ Stanford, CA, US~ 
-iDREN	-                                  Mountain View, CA, US~ 
-iDREN	-                                  Mountain View, CA, US~ 
-iDREN	-                                  College Park, MD, US~ 
-iDREN	-                                  Pennsauken, NJ, US~ 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Telstra Internet

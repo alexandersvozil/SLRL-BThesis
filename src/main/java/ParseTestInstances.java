@@ -14,103 +14,107 @@ import java.util.regex.Pattern;
  * To change this template use File | Settings | File Templates.
  */
 public class ParseTestInstances {
-    private final Logger log  = Logger.getLogger(ParseTestInstances.class);
+    private final Logger log = Logger.getLogger(ParseTestInstances.class);
 
     /**
      * Parses inc.txt into SLRLInstance Objects taken from quaida.com
+     *
      * @return List of SLRL Test instances
      */
-    public List<SLRLInstance> parse(){
+    public List<SLRLInstance> parse() {
         boolean newInstance = false;
-        List<SLRLInstance> instances  = new ArrayList<SLRLInstance>();
+        List<SLRLInstance> instances = new ArrayList<SLRLInstance>();
         boolean firstString = true;
         boolean beginningSeparator = true;
         SLRLInstance curInstance = new SLRLInstance();
-        Map<Node,Vector<Node>> curNodeMap = new HashMap<Node, Vector<Node>>();
+        Map<Node, Vector<Node>> curNodeMap = new HashMap<Node, Vector<Node>>();
 
         boolean firstParse = true;
         try {
-            Scanner sc = new Scanner(new File("test.txt"));
+            Scanner sc = new Scanner(new File("inc.txt"));
             String curWord = "";
-            while(sc.hasNext()){
-                if(!newInstance)
-                curWord = sc.next();
-                else{
-                    newInstance=false;
+            while (sc.hasNext()) {
+                if (!newInstance)
+                    curWord = sc.next();
+                else {
+                    newInstance = false;
                 }
                 //comment
-                if(curWord.contains("#")){
+                if (curWord.contains("#") || curWord.contains("?")) {
                     sc.nextLine();
-                    firstString=true;
+                    firstString = true;
                 }
                 //not a comment
-                else{
+                else {
                     //log.error(curWord);
 
-                    if(curWord.contains("::")){
-                        if(beginningSeparator == true){
+                    if (curWord.contains("::")) {
+                        if (beginningSeparator == true) {
 
-                            if(!firstParse){
+                            if (!firstParse) {
                                 curInstance.setGraph(curNodeMap);
                                 instances.add(curInstance);
-                            }else{
-                                firstParse=false;
+                            } else {
+                                firstParse = false;
                             }
 
                             curWord = sc.next();
                             String barboneName = "";
-                            while(!curWord.contains("::") && !curWord.contains("(") ){
-                                barboneName+=" " + curWord;
+                            while (!curWord.contains("::") && !curWord.contains("(")) {
+                                barboneName += " " + curWord;
                                 curWord = sc.next();
                             }
                             //new name acknowledged
                             curInstance = new SLRLInstance();
-                            curNodeMap = new HashMap<Node,Vector<Node>>();
+                            curNodeMap = new HashMap<Node, Vector<Node>>();
 
                             curInstance.setTestInstanceName(barboneName);
 
 
                             //special case if there is no update date
-                            if(curWord.contains("::")){
+                            if (curWord.contains("::")) {
                                 beginningSeparator = true;
-                            }else{
+                            } else {
                                 beginningSeparator = false;
                             }
 
-                        }
-                        else {
+                        } else {
                             beginningSeparator = true;
                         }
 
                     }
                     //create nodes
-                    if(sc.hasNextDouble() || sc.hasNextInt()|| curWord.matches("-?\\d+(\\.\\d+)?")){
+                    if (sc.hasNextDouble() || sc.hasNextInt() || curWord.matches("-?\\d+(\\.\\d+)?")) {
                         //speed is not needed yet
                         curWord = sc.next();
+
+                        if (curWord.matches("-?\\d+(\\.\\d+)?"))
+                            curWord = sc.next();
+
                         Node curNode = new Node();
                         String curNodeName = "";
-                        if(firstString){
-                            curNodeName += curWord+ " ";
+                        if (firstString) {
+                            curNodeName += curWord + " ";
                         }
                         curWord = sc.next();
 
                         boolean jump = false;
-                        while(true){
-                            if(!curNodeName.contains(",")){
-                            jump = true;
-                            curNodeName +=curWord +" ";
+                        while (true) {
+                            if (!curNodeName.contains(",")) {
+                                jump = true;
+                                curNodeName += curWord + " ";
                             }
 
-                            if(curWord.contains(",")){
+                            if (curWord.contains(",")) {
                                 break;
                             }
 
                             curWord = sc.next();
                         }
                         //needed if the city has a name like "los angeles"
-                        if(jump)
+                        if (jump)
                             curWord = sc.next();
-                        curNodeName+=curWord;
+                        curNodeName += curWord;
                         //state
                         //curNodeName+=sc.next();
                         sc.next();
@@ -124,23 +128,23 @@ public class ParseTestInstances {
                         //log.debug(curWord);
 
                         //second point of connection (right side of the file)
-                        while(!sc.hasNext("#+") && !sc.hasNextInt() && !sc.hasNextDouble() && !sc.hasNext("-?\\d+(\\.\\d+)?") ){
-                            curNodeName="";
-                           // curWord=sc.next();
-                            while(true){
-                                curNodeName += curWord+" ";
-                                if(curNodeName.contains(","))
+                        while (!sc.hasNext("#+") && !sc.hasNextInt() && !sc.hasNextDouble() && !sc.hasNext("-?\\d+(\\.\\d+)?")) {
+                            curNodeName = "";
+                            // curWord=sc.next();
+                            while (true) {
+                                curNodeName += curWord + " ";
+                                if (curNodeName.contains(","))
                                     break;
-                                if(sc.hasNext())
-                                curWord = sc.next();
+                                if (sc.hasNext())
+                                    curWord = sc.next();
                                 else break;
                             }
                             //state
-                            curNodeName+=sc.next();
+                            curNodeName += sc.next();
                             //country
-                            curWord=sc.next();
-                            if(curWord.contains("~")){
-                                curWord = curWord.substring(0,curWord.length()-1);
+                            curWord = sc.next();
+                            if (curWord.contains("~")) {
+                                curWord = curWord.substring(0, curWord.length() - 1);
                             }
                             //curNodeName+=curWord;
 
@@ -148,50 +152,56 @@ public class ParseTestInstances {
                             Node n = new Node();
                             n.setName(curNodeName);
                             nodeVectorN.add(n);
-                             if(!curNodeMap.containsKey(n))
-                             {
-                                  curNodeMap.put(n,nodeVectorN);
-                             }
+                            Vector<Node> nVectorBack = new Vector<Node>();
+                            nVectorBack.add(curNode);
+                            if (!curNodeMap.containsKey(n)) {
+                                curNodeMap.put(n, nVectorBack);
+                            }else{
+                                Vector<Node> ne = curNodeMap.get(n);
+                                if(!ne.contains(curNode))
+                                    ne.add(curNode);
+                            }
 
-                            if(!sc.hasNextDouble() && !sc.hasNextInt()) {
-                                if(!sc.hasNext())
+                            if (!sc.hasNextDouble() && !sc.hasNextInt()) {
+                                if (!sc.hasNext())
                                     break;
-                              curWord= sc.next();
-                                if(curWord.contains("#")){
+                                curWord = sc.next();
+                                if (curWord.contains("#")) {
                                     sc.nextLine();
                                     break;
                                 }
-                                if(curWord.contains(":")){
-                                    newInstance=true;
+                                if (curWord.contains(":")) {
+                                    newInstance = true;
                                     break;
                                 }
 
 
                             }
 
-                             //log.debug("country:"+ curWord);
+                            //log.debug("country:"+ curWord);
 
                         }
-                        firstString=true;
+                        firstString = true;
 
                         //log.debug ("start "+ curNode);
-                        if(!curNodeMap.containsKey(curNode))
-                        {
-                            curNodeMap.put(curNode,nodeVectorN);
-                        }
-                        else{
+                        if (!curNodeMap.containsKey(curNode)) {
+                            curNodeMap.put(curNode, nodeVectorN);
+                        } else {
                             //node already in map
-                            //log.debug("bing");
+                            Vector<Node> tmp = curNodeMap.get(curNode);
+                            for(Node n : nodeVectorN){
+                               if(!tmp.contains(n))
+                                   tmp.add(n);
+
+                            }
                         }
 
 
-                    }else{
-                        //log.debug("shit:"+ curWord);
+                    } else {
+                        //didnt get caught curWord);
                     }
 
                 }
-
-
 
 
             }
