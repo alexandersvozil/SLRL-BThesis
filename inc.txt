@@ -71,7 +71,7 @@ At Home Network (updated 01/16/2000)
 2488 Buffalo, NY, US                     Hartford, CT, US~
 2488 Boston, MA, US                      London, *, UK~ Providence, RI, US~ Hartford, CT, US~
 2488 Providence, RI, US                  New York, NY, US~  
-2488 New York, *, US                     Union, NJ, US~
+2488 New York, NY, US                     Union, NJ, US~
 2488 Union, NJ, US                       Philadelphia, PA, US~
 2488 Philadelphia, PA, US                Baltimore, MD, US~ Pittsburgh, PA, US~
 2488 Baltimore, MD, US                   Washington, DC, US~    
@@ -79,7 +79,7 @@ At Home Network (updated 01/16/2000)
 2488 Columbia, SC, US                    Norfolk, VA, US~ Jacksonville, FL, US~
 2488 Jacksonville, FL, US                Miami, FL, US~ 
 2488 Tampa, FL, US                       Miami, FL, US~  New Orleans, LA, US~ Atlanta, GA, US~
-2488 New Orleans, LA, US                 Baton Rouge, LA~
+2488 New Orleans, LA, US                 Baton Rouge, LA, US~
 2488 Baton Rouge, LA, US                 Houston, TX, US~
 2488 Dallas, TX, US                      Phoenix, AZ, US~ Houston, TX, US~ Tulsa, OK, US~
 2488 Lexington, KY, US                   Nashville, TN, US~ Indianapolis, IN, US~
@@ -116,21 +116,7 @@ AGIS (updated 03/02/2000)
 822 Akron, OH, US                        Waynesville, OH, US~ Pittsburgh, PA, US~ 
 822 Altoona, PA, US                      Pittsburgh, PA, US~ Harrisburg, PA, US~ 
 822 Bronx, NY, US                        Harrisburg, PA, US~ Washington, DC, US~ 
--1 Seattle, WA, US                       Portland, OR, US~ 
--1 Salt Lake City, UT, US                Portland, OR, US~ Las Vegas, NV, US~ 
--1 Las Vegas, NV, US                     Los Angeles, CA, US~ 
--1 Tucson, AZ, US                        Phoenix, AZ, US~ El Paso, TX, US~ 
--1 El Paso, TX, US                       Albuquerque, NM, US~ 
--1 El Paso, TX, US                       San Antonio, TX, US~ 
--1 Albuquerque, NM, US                   Santa Fe, NM, US~ 
--1 Santa Fe, NM, US                      Pueblo, CO, US~ 
--1 Pueblo, CO, US                        Colorado Springs, CO, US~ 
--1 Austin, TX, US                        San Antonio, TX, US~ Houston, TX, US~ 
--1 Houston, TX, US                       Beaumont, TX, US~ 
--1 Lake Charles, LA, US                  Beaumont, TX, US~ Lafayette, LA, US~ 
--1 Morgan City, LA, US                   Lafayette, LA, US~ Mobile, AL, US~ 
--1 Pensacola, FL, US                     Mobile, AL, US~ Cottondale, FL, US~ 
-45 Las Vegas, NV, US                     Los Angeles, CA, US~ Phoenix, AZ, US~ 
+45 Las Vegas, NV, US                     Los Angeles, CA, US~ Phoenix, AZ, US~
 45 Dallas, TX, US                        Phoenix, AZ, US~ Little Rock, AR, US~ 
 45 Atlanta, GA, US                       Little Rock, AR, US~ Ocala, FL, US~ 
 45 Atlanta, GA, US                       Washington, DC, US~ 
@@ -634,7 +620,7 @@ CAIS Internet (updated 04/23/2000)
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-CompuServe Network Services(
+CompuServe Network Services
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 45 Atlanta, GA, US                       Houston, TX, US~ Washington, DC, US~
@@ -644,7 +630,7 @@ CompuServe Network Services(
 45 Columbus, OH, US                      Downers Grove, IL, US~
 45 Columbus, OH, US                      Washington, DC, US~ Dallas, TX, US~
 45 Columbus, OH, US                      San Francisco, CA, US~
-1.5 Columbus, OH, US                     London, *, Canada~ Munich, *, DE~
+1.5 Columbus, OH, US                     London, CA, Canada~ Munich, *, DE~
 1.5 Columbus, OH, US                     Paris, *, France~
 45 Dallas, TX, US                        Houston, TX, US~ Los Angeles, CA, US~
 45 Dallas, TX, US                        Columbus, GA, US~
@@ -940,11 +926,6 @@ EPOCH Networks, Inc. (updated (06/30/2000)
 
 
 ## Boardwatch
-???		-                                   Palo Alto, CA, US~ Pennsauken, NJ, US~ 
-???		-                                   Chicago, IL, US~ 
-???		-                                   Hayward, CA, US~ Washington, DC, US~ 
-???		-                                   San Jose, CA, US~ 
-???		-                                   Los Angeles, CA, US~ 
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -960,7 +941,7 @@ EUnet (updated 11/22/2000)
 45 Tallinn, *, Estonia           Helsinki, *, Finland~
 45 Helsinki, *, Finland          Amsterdam, *, Netherlands~
 45 Amsterdam, *, Netherlands     Pennsauken, NJ, US~
-45 Amsterdam, *, Netherlands     Vienna, *, MD~
+45 Amsterdam, *, Netherlands     Vienna, MD, MD~
 45 Amsterdam, *, Netherlands     Dublin, *, Ireland~
 45 Amsterdam, *, Netherlands     London, *, England~
 45 Amsterdam, *, Netherlands     Lisbon, *, Portugal~
@@ -995,8 +976,7 @@ Exodus (updated 05/31/2000)
 
 
 155 Seattle, WA, US                      San Jose, CA, US~ Chicago, IL, US~ 
-155 San Jose, CA, US                     
-155 Los Angeles, CA, US                  New York, NY, US~ Austin, TX, US~ 
+155 Los Angeles, CA, US                  New York, NY, US~ Austin, TX, US~
 155 Austin, TX, US                       Dallas, TX, US~ 
 155 Chicago, IL, US                      Boston, MA, US~ 
 155 New York, NY, US                     London, *, England~ Berlin, *, Germany~ 
@@ -1011,10 +991,6 @@ Exodus (updated 05/31/2000)
 622 Austin, TX, US                       Atlanta, GA, US~ Chicago, IL, US~ 
 
 ##INTERCONNECT POINTS
-???          -                           New York, NY, US~ Washington, DC, US~ 
-???          -                           San Jose, CA, US~ Los Angeles, CA, US~ 
-???          -                           Chicago, IL, US~ San Jose, CA, US~ 
-???          -                           Mountain View, CA, US~ 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Genuity
@@ -1178,9 +1154,6 @@ GlobalCenter
 45 Bronx, NY, US                         Phoenix, AZ, US~ San Jose, CA, US~ 
 45 Bronx, NY, US                         Seattle, WA, US~ Tyson's Corner, VA, US~ 
 
-???		-                                   Downers Grove, IL, US~ 
-???		-                                   Washington, DC, US~ San Jose, CA, US~ 
-???		-                                   Downers Grove, IL, US~ Stanford, CA, US~ 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 GoodNet
@@ -1267,13 +1240,6 @@ GoodNet
 155 Philadelphia, PA, US                 Downers Grove, IL, US~ 
 155 Philadelphia, PA, US                 Pennsauken, NJ, US~ 
 
-???		-                                   San Jose, CA, US~ Pennsauken, NJ, US~ 
-???		-                                   Downers Grove, IL, US~ 
-???		-                                   Hayward, CA, US~ Washington, DC, US~ 
-???		-                                   San Jose, CA, US~ 
-???		-                                   Downers Grove, IL, US~ 
-???		-                                   Pennsauken, NJ, US~ 
-???		-                                   San Francisco, CA, US~ 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 IDT Corp (updated 07/02/2000)
@@ -1296,11 +1262,6 @@ IDT Corp (updated 07/02/2000)
 45 Richmond, VA, US                      Atlanta, GA, US~ 
 45 Atlanta, GA, US                       Miami, FL, US~ 
 
-##              Interconnects
-???		-                                   Pennsauken, NJ, US~ Chicago, IL, US~ 
-???		-                                   Washington, DC, US~ 
-???		-                                   San Jose, CA, US~ Chicago, IL, US~ 
-???		-                                   Pennsauken, NJ, US~ 
 
 
 
@@ -1366,7 +1327,6 @@ iSTAR Internet Inc.
 45 Nepean, *, Ontario                    Montreal, *, Canada~ Toronto, *, Canada~ 
 45 Toronto, *, Canada                    Nepean, *, Ontario~ Montreal, *, Canada~ 
 
-???		-                                   Toronto, *, Canada~ 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Cable & Wireless (updated 07/02/2000)
@@ -1389,13 +1349,13 @@ Cable & Wireless (updated 07/02/2000)
 622 West Orange, NJ, US                  Charleston, WV, US~ 
 622 Memphis, TN, US                      Austell, GA, US~ Dallas, TX, US~ 
 622 Dallas, TX, US                       Austell, GA, US~ Independence, KS, US~ 
-622 Independence, KS, US                 aurora, CO, US~ Willow Springs, IL, US~ 
+622 Independence, KS, US                 Aurora, CO, US~ Willow Springs, IL, US~
 
 2488 North Royalton, OH, US              West Orange, NJ, US~ 
 2488 West Orange, NJ, US                 Washington, DC, US~ 
 2488 Washington, DC, US                  Greensboro, NC, US~ 
 2488 Greensboro, NC, US                  Austell, GA, US~ 
-2488 Sacramento, CA, US                  San Jose, CA, US~ Aurora, *, US~ 
+2488 Sacramento, CA, US                  San Jose, CA, US~ Aurora, CO, US~
 2488 San Jose, CA, US                    San Bernardino, CA, US~ 
 2488 San Bernardino, CA, US              Dallas, TX, US~ 
 45 San Jose, CA, US                      Los Angeles, CA, US~ 
@@ -1405,11 +1365,6 @@ Cable & Wireless (updated 07/02/2000)
 45 Pompano Beach, FL, US                 Austell, GA, US~ 
 
 
-##INTERCONNECT: 
-???		-                                   Pennsauken, NJ, US~ Chicago, IL, US~ 
-???		-                                   Hayward, CA, US~ 
-???		-                                   Washington, DC, US~ San Jose, CA, US~ 
-???		-                                   Pennsauken, NJ, US~ 
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -1982,7 +1937,7 @@ Sprint (last modified 08/22/2001)
 2488  Springfield, MA, US   Pennsauken, NJ, US~
 2488  Stockton, CA, US      San Jose, CA~, US San Jose, CA3~, US San Jose, CA3~, US San Jose, CA4~, US
 155   Stockton, CA,  US     Tokyo, *, JP~, US
-155   Stockton, CA,  US     Honolulu, HI~,US
+155   Stockton, CA,  US     Honolulu, HI~, US
 2488  Tacoma, WA, US	Cheyenne, WY~ Cheyenne, WY3~
 2488  Tacoma, WA, US	Tokyo, *, Japan~
 2488  Tacoma, WA, US	Sydney, *, Australia~
@@ -2725,9 +2680,6 @@ UUNET (last updated 12/03/2001)
 ##
 
 ## Boardwatch
-???		-                                   Hayward, CA, US~  Washington, DC, US~  
-???		-                                   San Jose, CA, US~  
-???		-                                   San Francisco, CA, US~  
 
 
 ###################### following is old ANS 
@@ -2766,10 +2718,6 @@ UUNET (last updated 12/03/2001)
 45 Washington, DC, US                    Reston, VA, US~  
 
 ##INTERCONNECT POINTS
-???		-                                   Palo Alto, CA, US~  Pennsauken, NJ, US~  
-???		-                                   Hayward, CA, US~  
-???		-                                   Washington, DC, US~  San Jose, CA, US~  
-???		-                                   Pennsauken, NJ, US~  
 
 
 #http://www.uunet.com/network/maps/index.html 
@@ -2913,10 +2861,6 @@ UUNET (last updated 12/03/2001)
 
 ## Baordwatch
 ##              Interconnects
-???		-                                   Palo Alto, CA, US~  Hayward, CA, US~  
-???		-                                   Washington, DC, US~  
-???		-                                   San Jose, CA, US~  Pennsauken, NJ, US~  
-???		-                                   Toronto, *, Canada~  
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -3025,9 +2969,6 @@ Verio (updated 07/08/2000)
 #45 Pittsburg, PA           philadelphia
 
 ##INTERCONNECT POINTS
-???          -                           New York, NY, US~ Washington, DC, US~ 
-???          -                           Stanford, CA, US~ San Jose, CA, US~ 
-???          -                           Mountain View, CA, US~ 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 VisiNet (updated 06/10/2000)
@@ -3085,7 +3026,7 @@ XO Communications (last updated 06/05/2002)
 622 Minneapolis, MN, US			Chicago, IL, US~ Chicago, IL, US2~
 622 Chicago, IL, US				St. Louis, MO, US~ St. Louis, MO, US2~ Columbus, OH, US~ Columbus, OH, US2~ Detroit, MI, US~ Detroit, MI, US2~
 10000 Chicago, IL, US			Denver, CO, US~ Dallas, TX, US~ Washington, DC, US~ New York, NY, US~
-622 Nashville,TN, US			Atlanta, GA, US~ Atlanta, GA, US2~
+622 Nashville, TN, US			Atlanta, GA, US~ Atlanta, GA, US2~
 622 Atlanta, GA, US				Tampa, FL, US~ Tampa, FL, US2~ Miami, FL, US~ Miami, FL, US2~
 10000 Atlanta, GA, US			Dallas, TX, US~ Washington, DC, US~
 622 Boston, MA, US				New York, NY, US~ New York, NY, US2~ 

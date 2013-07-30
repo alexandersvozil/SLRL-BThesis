@@ -67,7 +67,7 @@ public class ParseTestInstances {
                             //new name acknowledged
                             curInstance = new SLRLInstance();
                             curNodeMap = new HashMap<Node, Vector<Node>>();
-
+                            barboneName = barboneName.substring(1);
                             curInstance.setTestInstanceName(barboneName);
 
 
@@ -122,10 +122,10 @@ public class ParseTestInstances {
                         curWord = sc.next();
                         //connections
                         curNode.setName(curNodeName);
+                        //log.debug("current key node: "+ curNodeName);
 
 
                         Vector<Node> nodeVectorN = new Vector<Node>();
-                        //log.debug(curWord);
 
                         //second point of connection (right side of the file)
                         while (!sc.hasNext("#+") && !sc.hasNextInt() && !sc.hasNextDouble() && !sc.hasNext("-?\\d+(\\.\\d+)?")) {
@@ -152,14 +152,22 @@ public class ParseTestInstances {
                             Node n = new Node();
                             n.setName(curNodeName);
                             nodeVectorN.add(n);
+
                             Vector<Node> nVectorBack = new Vector<Node>();
                             nVectorBack.add(curNode);
                             if (!curNodeMap.containsKey(n)) {
                                 curNodeMap.put(n, nVectorBack);
                             }else{
                                 Vector<Node> ne = curNodeMap.get(n);
-                                if(!ne.contains(curNode))
+                                if(!ne.contains(curNode)){
+                                  /*  log.debug("adding from right side:"+ curNode);
+                                    log.debug("adding from right side nodelist:");
+                                    for(Node yolo : ne){
+                                        log.debug(yolo);
+                                    }
+                                    log.debug("end rightside nodelist");*/
                                     ne.add(curNode);
+                                }
                             }
 
                             if (!sc.hasNextDouble() && !sc.hasNextInt()) {
@@ -185,13 +193,27 @@ public class ParseTestInstances {
 
                         //log.debug ("start "+ curNode);
                         if (!curNodeMap.containsKey(curNode)) {
-                            curNodeMap.put(curNode, nodeVectorN);
+                            Vector<Node> tmp = new Vector<Node>();//curNodeMap.get(curNode);
+                            for(Node n : nodeVectorN){
+                                if(!tmp.contains(n)){
+                                    tmp.add(n);
+                                }
+                            }
+                            curNodeMap.put(curNode, tmp);
+                            //log.debug("Curnode: " + curNode );
                         } else {
                             //node already in map
                             Vector<Node> tmp = curNodeMap.get(curNode);
                             for(Node n : nodeVectorN){
-                               if(!tmp.contains(n))
-                                   tmp.add(n);
+                               if(!tmp.contains(n)){
+                                /*log.debug("adding from left side:"+ curNode);
+                                log.debug("adding from left side nodelist:");
+                                for(Node yolo : tmp){
+                                    log.debug(yolo);
+                                }
+                                log.debug("end leftside nodelist");*/
+                                tmp.add(n);
+                               }
 
                             }
                         }

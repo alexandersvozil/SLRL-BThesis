@@ -1,20 +1,40 @@
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-GetNet International
+Telstra Internet
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+2.0 Darwin, *, Australia                 Sydney, *, Australia~
+2.0 Grafton, *, Australia                Sydney, *, Australia~
+2.0 Hobart, *, Australia                 Laucnceston, *, Tasmania~
+2.0 Hobart, *, Australia                 Melbourne, *, Australia~
+2.0 Laucnceston, *, Tasmania             Hobart, *, Australia~
+2.0 Mackay, *, Australia                 Esk, *, Australia~
+2.0 Marlborough, *, Australia            Esk, *, Australia~
+2.0 Orange, *, Australia                 Sydney, *, Australia~
+2.0 Sydney, *, Australia                 Tokyo, *, Japan~
+2.0 Sydney, *, Australia                 Seoul, *, Korea~
+2.0 Sydney, *, Australia                 Taree, *, Australia~
 
-45 Baltimore, MD, US                     Washington, DC, US~ Pittsburgh, PA, US~
-45 Phoenix, AZ, US                       Santa Clara, CA, US~ Washington, DC, US~
-45 Pittsburgh, PA, US                    Baltimore, MD, US~ Santa Clara, CA, US~
-45 Santa Clara, CA, US                   Washington, DC, US~ Pittsburgh, PA, US~
-45 Santa Clara, CA, US                   Phoenix, AZ, US~
-45 Washington, DC, US                    Santa Clara, CA, US~ Baltimore, MD, US~
-45 Washington, DC, US                    Phoenix, AZ, US~
+4.0 Adelaide, *, Australia               Sydney, *, Australia~
+4.0 Ballarat, *, Australia               Melbourne, *, Australia~
+4.0 Bendigo, *, Australia                Melbourne, *, Australia~
+4.0 Brisbane, *, Australia               Esk, *, Australia~
+4.0 Chinchilla, *, Australia             Esk, *, Australia~
+4.0 Esk, *, Australia                    Townsville, *, Australia~
+4.0 Geelong, *, Australia                Melbourne, *, Australia~
+4.0 Melbourne, *, Australia              Port Albert, *, Australia~
+4.0 Newcastle, *, Australia              Sydney, *, Australia~
 
+6.0 Adelaide, *, Australia               Melbourne, *, Australia~
+6.0 Perth, *, Australia                  Sydney, *, Australia~
+6.0 Sydney, *, Australia                 Auckland, *, New Zealand~
 
-##INTERCONNECT
-##
+8.0 Albury, *, Australia                 Sydney, *, Australia~
+8.0 Canberra, *, Australia               Melbourne, *, Australia~
+8.0 Canberra, *, Australia               Sydney, *, Australia~
+8.0 Perth, *, Australia                  San Diego, CA, US~
 
-## Boardwatch
-???		-                                   Hayward, CA, US~ Washington, DC, US~
-???		-                                   San Jose, CA, US~
+32.0 Melbourne, *, Australia             San Diego, CA, US~
+
+34.0 Melbourne, *, Australia             Sydney, *, Australia~
+
+106.0 Sydney, *, Australia               San Diego, CA, US~

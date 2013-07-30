@@ -11,6 +11,10 @@ import java.util.Vector;
  */
 public class SLRLInstance {
 
+    public String getTestInstanceName() {
+        return testInstanceName;
+    }
+
     /**
      * Name of the instance
      */
@@ -85,6 +89,38 @@ public class SLRLInstance {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        SLRLInstance that = (SLRLInstance) o;
+        if (!testInstanceName.equals(that.testInstanceName)) return false;
+        if (E != that.E) return false;
+        if (V != that.V) return false;
+
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = testInstanceName != null ? testInstanceName.hashCode() : 0;
+        result = 31 * result + k;
+        result = 31 * result + r;
+        result = 31 * result + r_lower;
+        temp = Double.doubleToLongBits(ratio_r);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + c;
+        result = 31 * result + c_lower;
+        result = 31 * result + maxDegree;
+        result = 31 * result + V;
+        result = 31 * result + E;
+        result = 31 * result + (graph != null ? graph.hashCode() : 0);
+        return result;
+    }
 
     @Override
     public String toString() {
@@ -99,19 +135,19 @@ public class SLRLInstance {
                 ", maxDegree=" + maxDegree +
                 ", V=" + V +
                 ", E=" + E +
-                ", graph=" +// graphToString() +
+                ", graph=" + graphToString() +
                 '}';
     }
 
-    private String graphToString() {
+    public String graphToString() {
         String totalString = "";
         for(Map.Entry<Node,Vector<Node>> entry : graph.entrySet() ){
-            totalString+= "Key: "+entry.getKey().toString() + " Adj. Nodes: \n";
-            for(Node n: entry.getValue()){
-                totalString+=n.toString()+" ";
+            totalString+= "\nKey: "+entry.getKey().toString(); //+ "\n Adj. Nodes: \n";
+            /*for(Node n: entry.getValue()){
+                totalString+=n.toString()+"\n ";
 
             }
-            totalString+= "\n";
+            totalString+= "\n";*/
 
         }
         return totalString;  //To change body of created methods use File | Settings | File Templates.
