@@ -1,3 +1,5 @@
+import org.apache.log4j.Logger;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
@@ -10,6 +12,7 @@ import java.util.Vector;
  * To change this template use File | Settings | File Templates.
  */
 public class SLRLInstance {
+    private final static Logger log = Logger.getLogger(SLRLInstance.class);
 
     public String getTestInstanceName() {
         return testInstanceName;
@@ -21,18 +24,18 @@ public class SLRLInstance {
     private String testInstanceName;
 
     /**
-     *maximum # of servers for the solution, calculated by number of (vertices * 0.1) and then rounded up
+     * maximum # of servers for the solution, calculated by number of (vertices * 0.1) and then rounded up
      * e.g. 14 vertices: 14 * 0.1 = 1,4 => r = 2
      */
     private int k;
 
     /**
-     *max size of neighbour set
+     * max size of neighbour set
      */
     private int r;
 
     /**
-     *lower bound of r, calculated by: |V| / k
+     * lower bound of r, calculated by: |E| / k
      */
     private int r_lower;
 
@@ -42,17 +45,18 @@ public class SLRLInstance {
     private double ratio_r;
 
     /**
-     * maximum # of shortest paths which pass any edge e, calculated by (|V|/(k * maxDegree))*d rounded up, where d = 4
+     * maximum # of shortest paths which pass any edge e, calculated by ceil(|V|/(k * maxDegree))*d, where d = 4
      */
     private int c;
 
     /**
-     * lower bound for c, calculated by (|V|/(k*maxDegree)) rounded up
+     * lower bound for c, calculated by ceil(|V|/(k*maxDegree))
      */
     private int c_lower;
 
+
     /**
-     *  maximum Degree of an SLRL Instance
+     * maximum Degree of the SLRL Instance
      */
     private int maxDegree;
 
@@ -71,20 +75,46 @@ public class SLRLInstance {
     /**
      * Adjacence List for storing all the Nodes, with their neighbours
      */
-    private Map<Node, Vector<Node>> graph = new HashMap<Node,Vector<Node>>();
+    private Map<Node, Vector<Node>> graph = new HashMap<Node, Vector<Node>>();
 
 
     public void setTestInstanceName(String testInstanceName) {
         this.testInstanceName = testInstanceName;
     }
+
     public void setGraph(Map<Node, Vector<Node>> graph) {
         this.graph = graph;
         setV(graph.size());
-        int sum= 0;
-            for(Map.Entry<Node,Vector<Node>> entry : graph.entrySet() ){
-                sum+=entry.getValue().size();
+        int sum = 0;
+        int curMaxDegree = 0;
+        for (Map.Entry<Node, Vector<Node>> entry : graph.entrySet()) {
+            sum += entry.getValue().size();
+                /* check for max degree */
+            if (entry.getValue().size() > curMaxDegree) {
+                curMaxDegree = entry.getValue().size();
             }
-        setE(sum/2);
+                /* set max degree */
+            setMaxDegree(curMaxDegree);
+        }
+        setE(sum / 2);
+
+        //set k
+        this.k = (int) Math.ceil(((double) getE()) * 0.1);
+
+        //set r_lower
+        if (k != 0) {
+            this.r_lower = Math.round(getE() / k);
+        } else {
+            log.error("this instance doesnt work: (same for the paper)\t  " + this.toString());
+        }
+
+        //set c
+        int d = 4;
+        this.c = (int) Math.ceil(((double)getV()/(double)(this.k * maxDegree)) * (double)d);
+
+        this.c_lower = (int) Math.ceil(((double)getV()/(double)(this.k * maxDegree)));
+
+
 
     }
 
@@ -135,25 +165,25 @@ public class SLRLInstance {
                 ", maxDegree=" + maxDegree +
                 ", V=" + V +
                 ", E=" + E +
-                ", graph=" + graphToString() +
+                //", graph=" + graphToString() +
                 '}';
     }
 
     public String graphToString() {
         String totalString = "";
-        for(Map.Entry<Node,Vector<Node>> entry : graph.entrySet() ){
-            totalString+= "\nKey: "+entry.getKey().toString(); //+ "\n Adj. Nodes: \n";
-            /*for(Node n: entry.getValue()){
-                totalString+=n.toString()+"\n ";
+        for (Map.Entry<Node, Vector<Node>> entry : graph.entrySet()) {
+            totalString += "\nKey: " + entry.getKey().toString(); //+ "\n Adj. Nodes: \n";
+            for (Node n : entry.getValue()) {
+                totalString += n.toString() + "\n ";
 
             }
-            totalString+= "\n";*/
+            totalString += "\n";
 
         }
         return totalString;  //To change body of created methods use File | Settings | File Templates.
     }
 
-    public Map<Node,Vector<Node>> getGraph() {
+    public Map<Node, Vector<Node>> getGraph() {
         return graph;
     }
 
@@ -171,5 +201,13 @@ public class SLRLInstance {
 
     public void setV(int v) {
         V = v;
+    }
+
+    public int getMaxDegree() {
+        return maxDegree;
+    }
+
+    public void setMaxDegree(int maxDegree) {
+        this.maxDegree = maxDegree;
     }
 }

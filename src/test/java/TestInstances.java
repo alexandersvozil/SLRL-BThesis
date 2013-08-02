@@ -405,6 +405,7 @@ public class TestInstances {
         assertTrue(found);
 
     }
+    //wrong in the paper
     @Test
     public void Qwest(){
         String instancename = "Qwest";
@@ -412,8 +413,8 @@ public class TestInstances {
         for(SLRLInstance instance : instanceList){
             if(instance.getTestInstanceName().equals(instancename)){
                 found = true;
-                assertTrue(instance.graphToString(),instance.getV()==14);
-                assertTrue(instance.getE()==26);
+                assertTrue(instance.graphToString(),instance.getV()==16);
+                assertTrue(instance.getE()==27);
             }
         }
         assertTrue(found);
