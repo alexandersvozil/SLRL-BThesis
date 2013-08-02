@@ -3,3 +3,7 @@
 /target/*
 *.iml
 /.idea/*
+*.aux
+*.log
+*.toc
+
