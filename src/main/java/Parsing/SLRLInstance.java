@@ -1,8 +1,8 @@
+package Parsing;
+
 import org.apache.log4j.Logger;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Vector;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,13 +18,18 @@ public class SLRLInstance {
         return testInstanceName;
     }
 
+
+    //servers
+    private List<ParseNode> servers;
+
     /**
      * Name of the instance
      */
     private String testInstanceName;
 
+
     /**
-     * maximum # of servers for the solution, calculated by number of (vertices * 0.1) and then rounded up
+     * maximum # of servers for the solution, calculated by number of (vertices * 0.1) and then rounded up (ceil)
      * e.g. 14 vertices: 14 * 0.1 = 1,4 => r = 2
      */
     private int k;
@@ -43,6 +48,7 @@ public class SLRLInstance {
      * ratio of calculated solution and r_lower: r/r*, shall not be more than 2
      */
     private double ratio_r;
+
 
     /**
      * maximum # of shortest paths which pass any edge e, calculated by ceil(|V|/(k * maxDegree))*d, where d = 4
@@ -75,19 +81,19 @@ public class SLRLInstance {
     /**
      * Adjacence List for storing all the Nodes, with their neighbours
      */
-    private Map<Node, Vector<Node>> graph = new HashMap<Node, Vector<Node>>();
+    private Map<ParseNode, Vector<ParseNode>> nodeVectorHashMap = new HashMap<ParseNode, Vector<ParseNode>>();
 
 
     public void setTestInstanceName(String testInstanceName) {
         this.testInstanceName = testInstanceName;
     }
 
-    public void setGraph(Map<Node, Vector<Node>> graph) {
-        this.graph = graph;
-        setV(graph.size());
+    public void setNodeVectorHashMap(Map<ParseNode, Vector<ParseNode>> nodeVectorHashMap) {
+        this.nodeVectorHashMap = nodeVectorHashMap;
+        setV(nodeVectorHashMap.size());
         int sum = 0;
         int curMaxDegree = 0;
-        for (Map.Entry<Node, Vector<Node>> entry : graph.entrySet()) {
+        for (Map.Entry<ParseNode, Vector<ParseNode>> entry : nodeVectorHashMap.entrySet()) {
             sum += entry.getValue().size();
                 /* check for max degree */
             if (entry.getValue().size() > curMaxDegree) {
@@ -99,7 +105,7 @@ public class SLRLInstance {
         setE(sum / 2);
 
         //set k
-        this.k = (int) Math.ceil(((double) getE()) * 0.1);
+        this.k = (int) Math.ceil(((double) getV()) * 0.1);
 
         //set r_lower
         if (k != 0) {
@@ -148,13 +154,13 @@ public class SLRLInstance {
         result = 31 * result + maxDegree;
         result = 31 * result + V;
         result = 31 * result + E;
-        result = 31 * result + (graph != null ? graph.hashCode() : 0);
+        result = 31 * result + (nodeVectorHashMap != null ? nodeVectorHashMap.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
-        return "SLRLInstance{" +
+        return "Parsing.SLRLInstance{" +
                 "testInstanceName='" + testInstanceName + '\'' +
                 ", k=" + k +
                 ", r=" + r +
@@ -165,15 +171,15 @@ public class SLRLInstance {
                 ", maxDegree=" + maxDegree +
                 ", V=" + V +
                 ", E=" + E +
-                //", graph=" + graphToString() +
+                //", nodeVectorHashMap=" + graphToString() +
                 '}';
     }
 
     public String graphToString() {
         String totalString = "";
-        for (Map.Entry<Node, Vector<Node>> entry : graph.entrySet()) {
+        for (Map.Entry<ParseNode, Vector<ParseNode>> entry : nodeVectorHashMap.entrySet()) {
             totalString += "\nKey: " + entry.getKey().toString(); //+ "\n Adj. Nodes: \n";
-            for (Node n : entry.getValue()) {
+            for (ParseNode n : entry.getValue()) {
                 totalString += n.toString() + "\n ";
 
             }
@@ -183,8 +189,8 @@ public class SLRLInstance {
         return totalString;  //To change body of created methods use File | Settings | File Templates.
     }
 
-    public Map<Node, Vector<Node>> getGraph() {
-        return graph;
+    public Map<ParseNode, Vector<ParseNode>> getNodeVectorHashMap() {
+        return nodeVectorHashMap;
     }
 
     public int getE() {
@@ -209,5 +215,20 @@ public class SLRLInstance {
 
     public void setMaxDegree(int maxDegree) {
         this.maxDegree = maxDegree;
+    }
+
+    public int getC() {
+        return c;
+    }
+
+    public int getK() {
+        return k;
+    }
+    public List<ParseNode> getServers() {
+        return servers;
+    }
+
+    public void setServers(List<ParseNode> servers) {
+        this.servers = servers;
     }
 }

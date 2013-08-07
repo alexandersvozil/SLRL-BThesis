@@ -1,3 +1,5 @@
+import Parsing.ParseTestInstances;
+import Parsing.SLRLInstance;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -14,7 +16,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class TestInstances {
     private static List<SLRLInstance> instanceList;
-//    private List<SLRLInstance> instanceList;// = parseTestInstances.parse();
+//    private List<Parsing.SLRLInstance> instanceList;// = parseTestInstances.parse();
 
     @BeforeClass
     public static void prepare(){

@@ -1,10 +1,10 @@
+package Parsing;
 
 import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
-import java.util.regex.Pattern;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,7 +17,7 @@ public class ParseTestInstances {
     private final Logger log = Logger.getLogger(ParseTestInstances.class);
 
     /**
-     * Parses inc.txt into SLRLInstance Objects taken from quaida.com
+     * Parses inc.txt into Parsing.SLRLInstance Objects taken from quaida.com
      *
      * @return List of SLRL Test instances
      */
@@ -27,7 +27,7 @@ public class ParseTestInstances {
         boolean firstString = true;
         boolean beginningSeparator = true;
         SLRLInstance curInstance = new SLRLInstance();
-        Map<Node, Vector<Node>> curNodeMap = new HashMap<Node, Vector<Node>>();
+        Map<ParseNode, Vector<ParseNode>> curNodeMap = new HashMap<ParseNode, Vector<ParseNode>>();
 
         boolean firstParse = true;
         try {
@@ -52,7 +52,7 @@ public class ParseTestInstances {
                         if (beginningSeparator == true) {
 
                             if (!firstParse) {
-                                curInstance.setGraph(curNodeMap);
+                                curInstance.setNodeVectorHashMap(curNodeMap);
                                 instances.add(curInstance);
                             } else {
                                 firstParse = false;
@@ -66,7 +66,7 @@ public class ParseTestInstances {
                             }
                             //new name acknowledged
                             curInstance = new SLRLInstance();
-                            curNodeMap = new HashMap<Node, Vector<Node>>();
+                            curNodeMap = new HashMap<ParseNode, Vector<ParseNode>>();
                             barboneName = barboneName.substring(1);
                             curInstance.setTestInstanceName(barboneName);
 
@@ -91,7 +91,7 @@ public class ParseTestInstances {
                         if (curWord.matches("-?\\d+(\\.\\d+)?"))
                             curWord = sc.next();
 
-                        Node curNode = new Node();
+                        ParseNode curNode = new ParseNode();
                         String curNodeName = "";
                         if (firstString) {
                             curNodeName += curWord + " ";
@@ -125,7 +125,7 @@ public class ParseTestInstances {
                         //log.debug("current key node: "+ curNodeName);
 
 
-                        Vector<Node> nodeVectorN = new Vector<Node>();
+                        Vector<ParseNode> nodeVectorN = new Vector<ParseNode>();
 
                         //second point of connection (right side of the file)
                         while (!sc.hasNext("#+") && !sc.hasNextInt() && !sc.hasNextDouble() && !sc.hasNext("-?\\d+(\\.\\d+)?")) {
@@ -149,20 +149,21 @@ public class ParseTestInstances {
                             //curNodeName+=curWord;
 
                             //add node to vector list
-                            Node n = new Node();
+                            ParseNode n = new ParseNode();
                             n.setName(curNodeName);
                             nodeVectorN.add(n);
 
-                            Vector<Node> nVectorBack = new Vector<Node>();
-                            nVectorBack.add(curNode);
+                            Vector<ParseNode> nVectorBack = new Vector<ParseNode>();
+
+                            nVectorBack.add(new ParseNode(curNode));
                             if (!curNodeMap.containsKey(n)) {
                                 curNodeMap.put(n, nVectorBack);
                             }else{
-                                Vector<Node> ne = curNodeMap.get(n);
+                                Vector<ParseNode> ne = curNodeMap.get(n);
                                 if(!ne.contains(curNode)){
                                   /*  log.debug("adding from right side:"+ curNode);
                                     log.debug("adding from right side nodelist:");
-                                    for(Node yolo : ne){
+                                    for(Parsing.ParseNode yolo : ne){
                                         log.debug(yolo);
                                     }
                                     log.debug("end rightside nodelist");*/
@@ -193,8 +194,8 @@ public class ParseTestInstances {
 
                         //log.debug ("start "+ curNode);
                         if (!curNodeMap.containsKey(curNode)) {
-                            Vector<Node> tmp = new Vector<Node>();//curNodeMap.get(curNode);
-                            for(Node n : nodeVectorN){
+                            Vector<ParseNode> tmp = new Vector<ParseNode>();//curNodeMap.get(curNode);
+                            for(ParseNode n : nodeVectorN){
                                 if(!tmp.contains(n)){
                                     tmp.add(n);
                                 }
@@ -203,12 +204,12 @@ public class ParseTestInstances {
                             //log.debug("Curnode: " + curNode );
                         } else {
                             //node already in map
-                            Vector<Node> tmp = curNodeMap.get(curNode);
-                            for(Node n : nodeVectorN){
+                            Vector<ParseNode> tmp = curNodeMap.get(curNode);
+                            for(ParseNode n : nodeVectorN){
                                if(!tmp.contains(n)){
                                 /*log.debug("adding from left side:"+ curNode);
                                 log.debug("adding from left side nodelist:");
-                                for(Node yolo : tmp){
+                                for(Parsing.ParseNode yolo : tmp){
                                     log.debug(yolo);
                                 }
                                 log.debug("end leftside nodelist");*/
@@ -230,7 +231,7 @@ public class ParseTestInstances {
         } catch (FileNotFoundException e) {
             log.error("File inc.txt  was not found");
         }
-        curInstance.setGraph(curNodeMap);
+        curInstance.setNodeVectorHashMap(curNodeMap);
         instances.add(curInstance);
         return instances;
     }

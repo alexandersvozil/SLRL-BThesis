@@ -1,3 +1,5 @@
+package Parsing;
+
 /**
  * Created with IntelliJ IDEA.
  * User: svozil
@@ -5,20 +7,22 @@
  * Time: 4:20 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Node {
+public class ParseNode {
 
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * Name of the Node e.g. "San Francisco"
+     * Name of the Parsing.ParseNode e.g. "San Francisco"
      */
     private String name;
-
+    /**
+     * Naive implementation of the nodes that used this path as shortest
+     */
     @Override
     public String toString() {
-        return "Node: {" +
+        return "Parsing.ParseNode: {" +
                 "name='" + name + '\'' +
                 '}';
     }
@@ -26,7 +30,13 @@ public class Node {
     private boolean isServer;
     private int neighbhouringSetSize;
 
-    public Node(){
+    public ParseNode(){
+    }
+    public ParseNode(String name){
+        this.name = name;
+    }
+    public ParseNode(ParseNode n){
+        this.name = n.name;
     }
 
 
@@ -35,7 +45,7 @@ public class Node {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Node node = (Node) o;
+        ParseNode node = (ParseNode) o;
 
         if (name != null ? !name.equals(node.name) : node.name != null) return false;
 
