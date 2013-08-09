@@ -1,8 +1,12 @@
+import Graph.Node;
+import Graph.NodeNotFoundException;
 import Parsing.ParseTestInstances;
 import Parsing.SLRLInstance;
+import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.util.Iterator;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
@@ -16,6 +20,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class TestInstances {
     private static List<SLRLInstance> instanceList;
+    private static Logger log = Logger.getLogger(TestInstances.class);
 //    private List<Parsing.SLRLInstance> instanceList;// = parseTestInstances.parse();
 
     @BeforeClass
@@ -564,6 +569,27 @@ public class TestInstances {
 
     }
 
+    @Test
+    public void XOCommunicationsPath() throws NodeNotFoundException {
+        String instancename = "XO Communications";
+        for(SLRLInstance instance : instanceList){
+            if(instance.getTestInstanceName().equals(instancename)){
+            Iterator<Node> nodeIterator =  instance.getGraph().getGraph().iterator();
+                Node node1 = nodeIterator.next();
+                Node node2 = nodeIterator.next();
+                Node path = node1.BFS(node2);
+
+                while(path.getParent() != null){
+                    log.debug(path);
+                    path = path.getParent();
+                }
+                log.debug(node1);
+            }
+        }
+        assert(false);
+
+
+    }
 
 
 }

@@ -37,4 +37,9 @@ public class Graph {
             }
         }
     }
+
+    public Set<Node> getGraph() {
+        return graph;
+    }
+
 }

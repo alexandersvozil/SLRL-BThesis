@@ -1,5 +1,8 @@
 package Parsing;
 
+import Graph.Node;
+import Graph.Graph;
+import Graph.Edge;
 import org.apache.log4j.Logger;
 
 import java.util.*;
@@ -20,7 +23,7 @@ public class SLRLInstance {
 
 
     //servers
-    private List<ParseNode> servers;
+    private List<Node> servers;
 
     /**
      * Name of the instance
@@ -77,6 +80,11 @@ public class SLRLInstance {
      */
     private int E;
 
+    /**
+     * Graph
+     */
+     private Graph graph;
+
 
     /**
      * Adjacence List for storing all the Nodes, with their neighbours
@@ -86,6 +94,41 @@ public class SLRLInstance {
 
     public void setTestInstanceName(String testInstanceName) {
         this.testInstanceName = testInstanceName;
+    }
+    private void transformGraph(Map<ParseNode, Vector<ParseNode>> nodeVectorHashMap) {
+        Graph graph = new Graph();
+        Map<String, Node> nodemap = new HashMap<String, Node>();
+        for (Map.Entry<ParseNode, Vector<ParseNode>> entry : nodeVectorHashMap.entrySet()) {
+            Node node = null;
+            if(nodemap.containsKey(entry.getKey().getName()))
+            node = nodemap.get(entry.getKey().getName());
+            else{
+                node = new Node (entry.getKey().getName());
+                nodemap.put(entry.getKey().getName(), node);
+            }
+
+            Set<Edge> edges = new HashSet<Edge>();
+
+            for(ParseNode n : entry.getValue())
+            {
+                if(nodemap.containsKey(n.getName())){
+                Edge e = new Edge(node, nodemap.get(n.getName()));
+                edges.add(e);
+                }
+                else{
+                    Node newNode = new Node(n.getName());
+                    nodemap.put(n.getName(),newNode);
+                    Edge e = new Edge(node, newNode);
+                    edges.add(e);
+
+                }
+            }
+            node.setEdges(edges);
+
+            graph.addNode(node);
+        }
+
+        this.graph = graph;
     }
 
     public void setNodeVectorHashMap(Map<ParseNode, Vector<ParseNode>> nodeVectorHashMap) {
@@ -120,6 +163,7 @@ public class SLRLInstance {
 
         this.c_lower = (int) Math.ceil(((double)getV()/(double)(this.k * maxDegree)));
 
+        transformGraph(nodeVectorHashMap);
 
 
     }
@@ -224,11 +268,16 @@ public class SLRLInstance {
     public int getK() {
         return k;
     }
-    public List<ParseNode> getServers() {
+
+    public List<Node> getServers() {
         return servers;
     }
 
-    public void setServers(List<ParseNode> servers) {
+    public void setServers(List<Node> servers) {
         this.servers = servers;
+    }
+
+    public Graph getGraph() {
+        return graph;
     }
 }
