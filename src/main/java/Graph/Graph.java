@@ -32,14 +32,47 @@ public class Graph {
 
     public void clearUsages () {
         for(Node n : graph) {
+            n.resetNeighbourhood();
             for(Edge e : n.getEdges()){
                 e.setTimesUsed(0);
             }
         }
     }
 
+    /**
+     * returns maximum of m(e)
+     */
+    public int getMaxUsage () {
+        int max = 0;
+        for(Node n : graph) {
+            for(Edge e : n.getEdges()){
+                if (max < e.getTimesUsed())
+                    max = e.getTimesUsed();
+            }
+        }
+        return max;
+
+    }
+
     public Set<Node> getGraph() {
         return graph;
     }
 
+    public int getMaxNeighbourSet() {
+        int max = 0;
+        for(Node n : graph) {
+            if (max < n.getNeighbourhood())
+            {
+                max = n.getNeighbourhood();
+            }
+        }
+        return max;  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public void clearParents() {
+        for(Node n : graph) {
+            n.setParent(null);
+        }
+
+    }
 }

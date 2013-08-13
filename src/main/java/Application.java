@@ -1,3 +1,5 @@
+import Algorithms.GreedyLocation;
+import Graph.NodeNotFoundException;
 import Parsing.ParseTestInstances;
 import Parsing.SLRLInstance;
 import org.apache.log4j.Logger;
@@ -12,15 +14,18 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class Application {
-    public static void main (String args[]) {
+    public static void main (String args[]) throws NodeNotFoundException {
         final Logger log = Logger.getLogger(Application.class);
 
         ParseTestInstances parseTestInstances = new ParseTestInstances();
         List<SLRLInstance> instanceList = parseTestInstances.parse();
         log.debug("Instance Size: "+instanceList.size());
+        GreedyLocation greedyLocation = new GreedyLocation() ;
         for(SLRLInstance slrlInstance: instanceList){
             log.debug(slrlInstance.toString());
             log.debug("------------------------------");
+            //if(slrlInstance.getTestInstanceName().equals("ipf.net"))
+            greedyLocation.solve(slrlInstance);
         }
     }
 }

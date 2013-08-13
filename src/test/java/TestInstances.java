@@ -123,7 +123,7 @@ public class TestInstances {
         for(SLRLInstance instance : instanceList){
             if(instance.getTestInstanceName().equals(instancename)){
                 found = true;
-                assertTrue(instance.graphToString(),instance.getV()==19);
+                assertTrue(""+instance.getV(),instance.getV()==19);
                 assertTrue(instance.getE()==33);
             }
         }
@@ -405,7 +405,7 @@ public class TestInstances {
         for(SLRLInstance instance : instanceList){
             if(instance.getTestInstanceName().equals(instancename)){
                 found = true;
-                assertTrue(instance.graphToString(),instance.getV()==78);
+                assertTrue(""+instance.getV(),instance.getV()==78);
                 assertTrue(instance.getE()==110);
             }
         }
@@ -420,7 +420,7 @@ public class TestInstances {
         for(SLRLInstance instance : instanceList){
             if(instance.getTestInstanceName().equals(instancename)){
                 found = true;
-                assertTrue(instance.graphToString(),instance.getV()==16);
+                assertTrue(""+instance.getV(),instance.getV()==12);
                 assertTrue(instance.getE()==27);
             }
         }
@@ -490,7 +490,7 @@ public class TestInstances {
         for(SLRLInstance instance : instanceList){
             if(instance.getTestInstanceName().equals(instancename)){
                 found = true;
-                assertTrue(instance.graphToString(),instance.getV()==22);
+                assertTrue(""+instance.getV(),instance.getV()==22);
                 assertTrue(instance.getE()==39);
             }
         }
@@ -520,7 +520,7 @@ public class TestInstances {
             if(instance.getTestInstanceName().equals(instancename)){
                 found = true;
                 assertTrue(instance.getV()==128);
-                assertTrue(instance.graphToString(),instance.getE()==321);
+                assertTrue(""+instance.getE(),instance.getE()==321);
             }
         }
         assertTrue(found);
@@ -578,15 +578,8 @@ public class TestInstances {
                 Node node1 = nodeIterator.next();
                 Node node2 = nodeIterator.next();
                 Node path = node1.BFS(node2);
-
-                while(path.getParent() != null){
-                    log.debug(path);
-                    path = path.getParent();
-                }
-                log.debug(node1);
             }
         }
-        assert(false);
 
 
     }

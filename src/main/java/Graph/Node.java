@@ -19,6 +19,9 @@ public class Node {
     private String name;
     private Logger log =  Logger.getLogger(Node.class);
     private Node parent;
+    private boolean isServer;
+    private int neighbourhood;
+    private int maxEdgeUsage;
 
     public Node(String name) {
         this.id = counter++;
@@ -84,8 +87,7 @@ public class Node {
             //log.debug("expanding"+node);
             if (node.equals(goalNode)) {
              //ziel erreicht
-            log.debug("Found node"+ goalNode+"coming from"+ node.getParent());
-            markPath(goalNode);
+            //log.debug("Found node"+ goalNode+"coming from"+ node.getParent());
             return goalNode;
             }
                 for(Edge e: node.getEdges()){
@@ -99,7 +101,7 @@ public class Node {
         throw new NodeNotFoundException("Node was not found by bfs");
     }
 
-    private void markPath(Node n) {
+    public void markPath(Node n) {
         Node tmp = n;
         Node lastNode = null;
         while(tmp.getParent() != null)
@@ -152,5 +154,31 @@ public class Node {
 
     public void setEdges(Set<Edge> edges) {
         this.edges = edges;
+    }
+
+    public boolean isServer() {
+        return isServer;
+    }
+
+    public void setServer(boolean server) {
+        isServer = server;
+    }
+    public void increaseNeighbourhood(){
+        this.neighbourhood++;
+    }
+    public void resetNeighbourhood(){
+        this.neighbourhood = 0;
+    }
+
+    public int getNeighbourhood() {
+        return neighbourhood;
+    }
+
+    public int getMaxEdgeUsage() {
+        return maxEdgeUsage;
+    }
+
+    public void setMaxEdgeUsage(int maxEdgeUsage) {
+        this.maxEdgeUsage = maxEdgeUsage;
     }
 }

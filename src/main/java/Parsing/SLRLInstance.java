@@ -280,4 +280,20 @@ public class SLRLInstance {
     public Graph getGraph() {
         return graph;
     }
+
+    public double getRatio_r() {
+        return ratio_r;
+    }
+
+    public void setRatio_r(double ratio_r) {
+        this.ratio_r = ratio_r;
+    }
+
+    public int getR_lower() {
+        return r_lower;
+    }
+
+    public void setR_lower(int r_lower) {
+        this.r_lower = r_lower;
+    }
 }
