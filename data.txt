@@ -3,3716 +3,3715 @@
 # --------------------------
 # written Ying
 #
-# T^num_cities
+# T ^ num_cities
 #       (total number of nodes)
 #       num_cities - the number of cities (int)
 #
-# t^num_clouds
+# t ^ num_clouds
 #       (total number of clouds)
 #       num_clouds - the number of clouds (int)
 #
-# R^num_isps
+# R ^ num_isps
 #       (total number of isps)
 #       num_isps - the number of isps
 #
-# C^city_index^lat^long^city_name
+# C ^ city_index ^ lat ^ long ^ city_name
 #       (city)
 #       city_index - unque index for each city (int)
 #       lat - latidtie (float)
 #       long - longitude (float)
 #       city_name - the name of the city (string)
 #
-# c^cloud_index^cloud_name
+# c ^ cloud_index ^ cloud_name
 #       (cloud)
 #       cloud_index - unque index for each cloud (int)
 #       cloud_name - name of the cloud (string)
 #
-# I^isp_index^isp2type^isp_name
+# I ^ isp_index ^ isp2type ^ isp_name
 #       (I isp with link data add to list)
 #       (i isp without link data do not add to list)
 #       isp_index - unque index for each isp (int)
 #       isp_name - the name of the isp (string)
 #       type - R or I (research or Indusrty)
 #
-# E^isp_name
+# E ^ isp_name
 #       (end of isp
 #       marks the end of a isp
 #
-# P^city_index1^city_index2^bandwidth
+# P ^ city_index1 ^ city_index2 ^ bandwidth
 #       (pipe)
 #       city_index1 - the index of the to city (int)
 #       city_index2 - the index of the from city (int)
 #       bandwidth - bandwidth of the connection (float)
 #
-# L^cloud_index^city_index^bandwidth
+# L ^ cloud_index ^ city_index ^ bandwidth
 #       (link)
 #       cloud- the index of the to cloud (int)
 #       city_index - the index of the to city (int)
 #       bandwidth - bandwidth of the connection (float)
 #
-# p^node_index^isp_index^isp_index
+# p ^ node_index ^ isp_index ^ isp_index
 #       (peer)
 #       node_index - where
-T^495
-t^4
-R^113
-C^0^39.51^-76.18^aberdeen, md, us
-C^1^-34.866^138.5^adelaide, *, australia
-C^2^39.003055555555555145^-76.972222222222228538^adelphi, md, us
-C^3^13.47511^144.74844E^agana, gu, us
-C^4^41.08040^-81.52149^akron, oh, us
-C^5^40.16^-76.21^akron, pa, us
-C^6^42.65030^-73.75030^albany, ny, us
-C^7^35.08^-106.65^albuquerque, nm, us
-C^8^-36.00^146.75^albury, *, australia
-C^9^38.804722222222217454^-77.047222222222217169^alexandria, va, us
-C^10^40.52^-78.41^altoona, pa, us
-C^11^35.20^-101.84^amarillo, tx, us
-C^12^42.034722222222221433^-93.619722222222222285^ames, ia, us
-C^13^52.35000^4.86660^amsterdam, *, netherlands
-C^14^52.35^4.90^amsterdam, *, nl
-C^15^33.835277777777783115^-117.91361111111112336^anaheim, ca, us
-C^16^61.21^-149.88^anchorage, ak, us
-C^17^38.97165^-76.50303^annapolis, md, us
-C^18^34.33^-86.49^arab, al, us
-C^19^-10.90^-37.12^aracaju, *, brazil
-C^20^38.870833333333337123^-77.101388888888877204^arlington, va, us
-C^21^36.69^-97.55^arm, ok, us
-C^22^37.95^23.7^athens, *, greece
-C^23^33.748888888888892268^-84.388055555555567366^atlanta, ga, us
-C^24^-36.92^174.78^auckland, *, new zealand
-C^25^-36.92^174.78^auckland, *, nz
-C^26^33.45735^-81.99499^augusta, ga, us
-C^27^39.74^-104.86^aurora, *, us
-C^28^39.74^-104.86^aurora, co, us
-C^29^33.822000^-84.64293^austell, ga, us
-C^30^30.30588^-97.742777777777774872^austin, tx, us
-C^31^49.22^-68.15^baie-comeau, *, canada
-C^32^35.39^-119.02^bakersfield, ca, us
-C^33^-37.55^143.833^ballarat, *, australia
-C^34^39.271944444444443434^-76.732222222222219443^baltimore, md, us
-C^35^41.5^2.0^barcelona, *, spain
-C^36^44.37^-79.70^barrie, *, canada
-C^37^41.850000000000001421^-88.3125^batavia, il, us
-C^38^30.44896^-091.12604^baton rouge, la, us
-C^39^42.30^-85.21^battle creek, mi, us
-C^40^30.31^-89.33^bay saint louis, ms, us
-C^41^30.07^-94.10^beaumont, tx, us
-C^42^45.487222222222222001^-122.80249999999999488^beaverton, or, us
-C^43^42.490555555555559408^-71.276666666666670835^bedford, ma, us
-C^44^39.92^116.43^beijing, *, china
-C^45^-1.45^-48.48^belem, *, brazil
-C^46^44.83^20.50^belgrade, *, yugoslavia
-C^47^-19.90^-43.90^belo horizonte, *, brazil
-C^48^-36.75^144.25^bendigo, *, australia
-C^49^37.871666666666669698^-122.27166666666666117^berkeley, ca, us
-C^50^52.51670^13.33330^berlin, *, germany
-C^51^39.04445^-77.11912^bethesda, md, us
-C^52^45.77^-108.50^billings, mt, us
-C^53^33.52774^-86.79922^birmingham, al, us
-C^54^2.85^-60.72^boa vista, *, brazil
-C^55^30.79^-83.80^boston, *, us
-C^56^42.358333333333334281^-71.060277777777770325^boston, ma, us
-C^57^36.97370^-86.44124^bowling green, ky, us
-C^58^-15.7833^-47.91667^brasilia, *, brazil
-C^59^48.17^17.17^bratislava, *, slovakia
-C^60^34.94^-85.73^bridgeport, *, us
-C^61^38.77^-90.4^bridgeton, mo, us
-C^62^-27.4166^153.033^brisbane, *, australia
-C^63^40.714166666666670835^-74.006388888888892552^bronx, ny, us
-C^64^40.69^-73.99^brooklyn, ny, us
-C^65^29.42^-98.49^brooks air force base, tx, us
-C^66^50.850^4.350^brussels, *, belgium
-C^67^43.73^-81.25^brussels, *, canada
-C^68^30.63^-96.37^bryan, tx, us
-C^69^44.43^26.10^bucharest, *, romania
-C^70^47.43300^19.25000^budapest, *, hungary
-C^71^-34.67^-58.50^buenos aires, *, argentina
-C^72^42.8898^-78.85968^buffalo, ny, us
-C^73^34.19^-118.30^burbank, ca, us
-C^74^44.475833333333333997^-73.212500000000005684^burlington, vt, us
-C^75^30.00000^31.28330^cairo, *, egypt
-C^76^51.05000^-114.08300^calgary, *, canada
-C^77^52.19000^0.17000^cambridge, *, england
-C^78^42.36500000000000199^-71.104999999999989768^cambridge, ma, us
-C^79^45.05^-69.44^cambridge, me, us
-C^80^-7.25^-35.83^campina grande, *, brazil
-C^81^-22.90^-43.57^campo grande, *, brazil
-C^82^-35.30^149.13^canberra, *, au
-C^83^-35.25^149.133^canberra, *, australia
-C^84^38.59^-77.12^carderock, md, us
-C^85^32.97^-96.88^carrollton, tx, us
-C^86^40.116388888888891984^-88.243333333333339397^champaign, il, us
-C^87^38.35^-81.63^charleston, wv, us
-C^88^35.226944444444448834^-80.843333333333333712^charlotte, nc, us
-C^89^38.03745^-78.48574^charlottesville, va, us
-C^90^35.04470^-85.30890^chattanooga, tn, us
-C^91^37.3077777777778^-75.9522222222222^chesapeake, va, us
-C^92^41.14545^-104.79234^cheyenne, wy, us
-C^93^35.500^140.117^chiba, *, japan
-C^94^41.850000000000001421^-87.650000000000005684^chicago, il, us
-C^95^39.728611111111113985^-121.83638888888889085^chico, ca, us
-C^96^48.43^-71.10^chicoutimi, *, canada
-C^97^-26.85^150.33^chinchilla, *, australia
-C^98^39.104166666666671404^-84.519444444444445708^cincinnati, oh, us
-C^99^41.48^-81.68^cleveland, oh, us
-C^100^38.980555555555554292^-76.937222222222231949^college park, md, us
-C^101^30.627777777777779988^-96.334166666666661172^college station, tx, us
-C^102^38.833889^-104.82083^colorado springs, co, us
-C^103^34.000555555555557419^-81.034999999999996589^columbia, sc, us
-C^104^32.51071^-84.87497^columbus, ga, us
-C^105^39.96111111111111569^-82.998888888888885162^columbus, oh, us
-C^106^37.978055555555556566^-122.03000000000000114^concord, ca, us
-C^107^42.45^-71.33^concord, ma, us
-C^108^55.71670^12.45000^copenhagen, *, denmark
-C^109^30.80^-85.38^cottondale, fl, us
-C^110^42.442^-76.500^ctc, ny, us
-C^111^-15.53^-56.08^cuiabá, *, brazil
-C^112^39.65^-78.76^cumberland, md, us
-C^113^-25.42^-49.42^curitiba, *, brazil
-C^114^38.331111111111113132^-77.051388888888880047^dahlgren, va, us
-C^115^32.783333333333331439^-96.799999999999997158^dallas, tx, us
-C^116^33.50^36.32^damascus, *, syria
-C^117^36.58318^-79.40830^danville, va, us
-C^118^-12.4166^130.85^darwin, *, australia
-C^119^38.97165^-076.50303^david taylor research center, md, us
-C^120^29.210555555555554719^-81.023055555555558271^daytona, fl, us
-C^121^42.316666666667^-83.183333333^dearborn, mi, us
-C^122^39.739166666666669414^-104.98416666666666686^denver, co, us
-C^123^41.59^-93.62^des moines, ia, us
-C^124^42.331388888888895394^-83.045833333333334281^detroit, mi, us
-C^125^38.850277777777777^-77.129999999999995^disa, va, us
-C^126^41.79720^-88.0173^dng, il, us
-C^127^41.850000000000001421^-87.650000000000005684^downers grove, il, us
-C^128^45.87^-72.50^drummondville, *, canada
-C^129^53.82^-6.08^dublin, *, ireland
-C^130^40.099166666666668846^-83.114166666666662309^dublin, oh, us
-C^131^43.133^-70.917^durham, nh, us
-C^132^44.78^-91.49^eau claire, wi, us
-C^133^53.55^-113.46667^edmonton, *, canada
-C^134^34.90962^-117.93457^edwards, ca, us
-C^135^35.11^-92.09^el paso, *, us
-C^136^31.76^-106.48^el paso, tx, us
-C^137^41.054999999999999716^-73.820555555555557703^elmsford, ny, us
-C^138^50.117^8.667^eschborn, *, germany
-C^139^-27.350^152.430^esk, *, australia
-C^140^44.052222222222219727^-123.08555555555554406^eugene, or, us
-C^141^47.99^-122.20^everett, wa, us
-C^142^64.837777777777773736^-147.71638888888887209^fairbanks, ak, us
-C^143^38.846111111111113701^-77.306666666666657761^fairfax, va, us
-C^144^37.38^-122.08^fix west, ca, us
-C^145^-27.5^-48.5^florianopolis, *, brazil
-C^146^38.70971^-077.14698^fort belvoir, va, us
-C^147^26.121944444444444855^-80.143611111111113132^fort lauderdale, fl, us
-C^148^32.75390^-97.33624^fort worth, tx, us
-C^149^-3.75^-38.58^fortaleza, *, brazil
-C^150^42.30^-71.43^framingham, *, us
-C^151^50.117^8.667^frankfurt, *, germany
-C^152^39.43^-77.41^frederick, md, us
-C^153^38.30^-77.48^fredericksburg, va, us
-C^154^37.56^-122.00^fremont, ca, us
-C^155^36.74777777777777743^-119.77138888888889312^fresno, ca, us
-C^156^33.65^130.35^fukuoka, *, japan
-C^157^29.651388888888888573^-82.325000000000002842^gainesville, fl, us
-C^158^33.89^-118.30^gardena, ca, us
-C^159^-38.166^144.366^geelong, *, australia
-C^160^46.23330^6.06670^geneva, *, switzerland
-C^161^-16.72^-49.30^goiania, *, brazil
-C^162^-29.575^152.85^grafton, *, australia
-C^163^39.08^-108.55^grand junction, co, us
-C^164^42.97^-85.65^grand rapids, *, us
-C^165^44.50^-87.98^green bay, wi, us
-C^166^36.072500000000005116^-79.792222222222221717^greensboro, nc, us
-C^167^40.88930^-74.04611^hackensack, nj, us
-C^168^44.65^-63.6^halifax, *, canada
-C^169^43.25^-79.85^hamilton, *, canada
-C^170^40.273611111111108585^-76.884722222222222854^harrisburg, pa, us
-C^171^41.75^-72.68^hartford, ct, us
-C^172^20.75^-156.5^hawaii, hi, us
-C^173^37.67^-122.1^hayward, ca, us
-C^174^60.16660^24.88330^helsinki, *, finland
-C^175^51.20^6.93^hilden, *, germany
-C^176^-42.833^147.35^hobart, *, australia
-C^177^40.39^-74.17^holmdel, nj, us
-C^178^22.1833^114.2333^hong kong, *, china
-C^179^22.25^114.17^hong kong, *, hk
-C^180^21.306944444444443576^-157.85833333333332007^honolulu, hi, us
-C^181^29.763055555555556708^-95.363055555555547471^houston, tx, us
-C^182^45.43^-75.75^hull, *, canada
-C^183^38.96944444444444855^-77.386388888888902216^hunter woods, va, us
-C^184^43.466666666666668561^-112.03333333333333144^idaho falls, id, us
-C^185^37.23^-95.72^independence, ks, us
-C^186^39.77640^-86.14619^indianapolis, in, us
-C^187^33.669444444444444287^-117.82222222222222285^irvine, ca, us
-C^188^30.83^-91.21^jackson, la, us
-C^189^32.32050^-90.20759^jackson, ms, us
-C^190^30.331944444444445708^-81.655833333333333712^jacksonville, fl, us
-C^191^31.76670^35.23330^jerusalem, *, israel
-C^192^39.114166666666669414^-94.627222222222215464^kansas city, ks, us
-C^193^39.12231^-94.55200^kansas city, mo, us
-C^194^36.12^-80.08^kernersville, nc, us
-C^195^47.68460^-122.19393^kirkland, wa, us
-C^196^36.73^-108.35^kirtland, nm, us
-C^197^43.45^-80.483^kitchener, *, canada
-C^198^35.960555555555558271^-83.920833333333334281^knoxville, tn, us
-C^199^34.75^135.16666^kobe, *, japan
-C^200^35.000^135.750^kyoto, *, japan
-C^201^32.847222222222221433^-117.27333333333332632^la jolla, ca, us
-C^202^30.223888888888886584^-92.01972222222222797^lafayette, la, us
-C^203^30.23^-93.19^lake charles, la, us
-C^204^30.17^-82.66^lake city, fl, us
-C^205^37.04985^-76.29497^larc, va, us
-C^206^36.174999999999997158^-115.13638888888890222^las vegas, nv, us
-C^207^-42.60^147.550^laucnceston, *, tasmania
-C^208^38.971666666666671119^-95.234999999999999432^lawrence, ks, us
-C^209^45.37^-71.85^lennoxville, *, canada
-C^210^41.47970^-81.67851^lerc, oh, us
-C^211^49.7^-112.18667^lethbridge, *, canada
-C^212^38.049166666666664582^-84.500277777777782262^lexington, ky, us
-C^213^38.70000^-9.08340^lisbon, *, portugal
-C^214^34.7884^-92.25543^little rock, ar, us
-C^215^37.681944444444440023^-121.76694444444444798^livermore, ca, us
-C^216^46.067^14.550^ljubljana, *, slovenia
-C^217^33.95095^-84.54114^lockheed inc, ga, us
-C^218^42.98805^-81.23416^london, *, canada
-C^219^51.50000^-0.11670^london, *, england
-C^220^51.50^-0.17^london, *, uk
-C^221^33.77^-118.18^long beach, ca, us
-C^222^40.18^-105.10^longmont, co, us
-C^223^35.731944444444444^-105.15111111111112^los alamos, nm, us
-C^224^34.052222222222219727^-118.24277777777777487^los angeles, ca, us
-C^225^38.22475^-85.74115^louisville, ky, us
-C^226^49.60^6.15^luxembourg, *, luxembourg
-C^227^0.07^-51.07^macapá, *, brazil
-C^228^-9.67^-35.73^maceió, *, brazil
-C^229^-22.25^148.27^mackay, *, australia
-C^230^32.84^-83.68^macon, ga, us
-C^231^43.073055555555555429^-89.401111111111120522^madison, wi, us
-C^232^40.500^-3.750^madrid, *, spain
-C^233^40.12^-74.06^manasquan, nj, us
-C^234^38.77^-77.49^manassas, va, us
-C^235^-3.10^-60.00^manaus, *, brazil
-C^236^53.5^-2.25^manchester, *, england
-C^237^-22.95^149.95^marlborough, *, australia
-C^238^20.86800^-156.62199^maui, hi, us
-C^239^33.079167^-87.555556^maxwell, al, us
-C^240^38.77765^-90.35962^mcdonnell douglas, mo, us
-C^241^38.93^-77.17^mclean, va, us
-C^242^42.34^-122.84^medford, or, us
-C^243^-37.83^145.0^melbourne, *, australia
-C^244^28.078611111111111853^-80.602777777777774304^melbourne, fl, us
-C^245^35.14^-90.05^memphis, tn, us
-C^246^37.453888888888890563^-122.18111111111112166^menlo park, ca, us
-C^247^38.89^-77.036^mfs, *, us
-C^248^25.70805^-80.29534^miami, fl, us
-C^249^35.50^-76.04^middletown, nc, us
-C^250^40.43957^-74.11930^middletown, nj, us
-C^251^32.56^-84.86^midland, *, us
-C^252^31.99^-102.06^midland, tx, us
-C^253^45.47^9.20^milan, *, italy
-C^254^45.466666^9.166666^milano, *, italy
-C^255^43.03888888888888431^-87.906388888888898236^milwaukee, wi, us
-C^256^44.980000000000003979^-93.26361111111111768^minneapolis, mn, us
-C^257^32.352499999999999147^-90.877777777777765778^misissippi state, ms, us
-C^258^30.69^-88.05^mobile, al, us
-C^259^46.01^-64.7833^moncton, *, canada
-C^260^40.28780^-074.15435^monmouth, nj, us
-C^261^36.600277777777776578^-121.89361111111111313^monterey, ca, us
-C^262^32.37^-86.31^montgomery, al, us
-C^263^45.50000^-73.58000^montreal, *, canada
-C^264^29.72^-91.12^morgan city, la, us
-C^265^37.386111111111112848^-122.08277777777777828^mountain view, ca, us
-C^266^48.13^11.58^munich, *, de
-C^267^36.65^138.17^nagano, *, japan
-C^268^35.1666^136.833333^nagoya, *, japan
-C^269^38.29^-122.28^napa, *, us
-C^270^36.165833333333331723^-86.784444444444446276^nashville, tn, us
-C^271^36.17^-86.78^nashville,tn, us, us
-C^272^-5.77^-35.25^natal, *, brazil
-C^273^42.283333333333331439^-71.349999999999994316^natick, ma, us
-C^274^38.03745^-078.48574^naval research labs, va, us
-C^275^38.97165^-076.50303^naval surface warfare center, md, us
-C^276^30.30^-89.32^navo, ms, us
-C^277^38.53^-76.74^nawc-ad, md, us
-C^278^35.62^-117.67^nawc-wd, ca, us
-C^279^40.013^-105.267^ncar, co, us
-C^280^45.45^-75.7^nepean, *, ontario
-C^281^37.75276^-122.27588^netstar, ca, us
-C^282^40.486111111111114269^-74.452222222222218306^new brunswick, nj, us
-C^283^30.06584^-89.93135^new orleans, la, us
-C^284^40.75^-74.00^new york, *, us
-C^285^40.714166666666670835^-74.006388888888892552^new york, ny, us
-C^286^39.68^-75.75^newark, de, us
-C^287^40.73555555555555685^-74.172777777777781694^newark, nj, us
-C^288^43.05^-77.09^newark, ny, us
-C^289^-32.85^151.75^newcastle, *, australia
-C^290^36.978611111111113985^-76.42833333333334167^newport news, va, us
-C^291^41.48^-71.32^newport, ri, us
-C^292^30.53000^-086.48417^niceville, fl, us
-C^293^36.846666666666671119^-76.285555555555546903^norfolk, va, us
-C^294^41.313611111111107732^-81.724722222222226264^north royalton, oh, us
-C^295^36.010277777777780273^-84.26972222222222797^oak ridge, tn, us
-C^296^37.77154^-122.22455^oakland, ca, us
-C^297^29.18^-82.13^ocala, fl, us
-C^298^25.96^-80.14^ojus, fl, us
-C^299^35.46705^-97.51349^oklahoma city, ok, us
-C^300^41.26390^-96.01174^omaha, ne, us
-C^301^34.03^-117.62^ontario, ca, us
-C^302^33.80525^-117.82399^orange county, ca, us
-C^303^-35.25^149.10^orange, *, australia
-C^304^28.50474^-81.37424^orlando, fl, us
-C^305^34.5^135.5^osaka, *, japan
-C^306^59.93330^10.68330^oslo, *, norway
-C^307^45.45^-75.7^ottawa, *, canada
-C^308^38.982222222222226549^-94.670555555555566229^overland park, ks, us
-C^309^37.75935^-87.11931^owensboro, ky, us
-C^310^26.72^-80.04^palm beach, fl, us
-C^311^33.84^-116.53^palm springs, ca, us
-C^312^-26.48^-52.00^palmas, *, brazil
-C^313^37.441944444444438034^-122.14194444444444798^palo alto, ca, us
-C^314^48.87^2.33^paris, *, fr
-C^315^48.85000^2.33330^paris, *, france
-C^316^34.147777777777776009^-118.14361111111111313^pasadena, ca, us
-C^317^42.62^-113.80^paul, *, us
-C^318^39.96365^-75.05617^pennsauken, nj, us
-C^319^30.42111111111111299^-87.216944444444450824^pensacola, fl, us
-C^320^39.46986^-76.20574^perryman, md, us
-C^321^-31.95^115.866^perth, *, australia
-C^322^44.33^-78.33^peterborough, *, canada
-C^323^52.58^-0.25^peterborough, *, uk
-C^324^39.952222222222225412^-75.164166666666673677^philadelphia, pa, us
-C^325^35.083333333333336^-106.65000000000001^phillips lab-kirtland, nm, us
-C^326^33.51623^-112.02711^phoenix, az, us
-C^327^40.440555555555555145^-79.996111111111105174^pittsburgh, pa, us
-C^328^37.662500000000001421^-121.8736111111111029^pleasanton, ca, us
-C^329^41.00^-82.66^plymouth, oh, us
-C^330^26.23686^-80.13286^pompano beach, fl, us
-C^331^-38.675^146.89^port albert, *, australia
-C^332^34.16208^-119.20342^port huenema, ca, us
-C^333^45.523611111111108585^-122.67500000000001137^portland, or, us
-C^334^-29.92^-50.83^porto alegre, *, brazil
-C^335^-8.75^-63.90^porto velho, *, brazil
-C^336^36.81^-76.37^portsmouth, va, us
-C^337^41.69^-73.92^poughkeepsie, ny, us
-C^338^50.10^14.43^prague, *, czech republic
-C^339^50.08330^14.43330^prague, *, czechrepublic
-C^340^26.70330^-80.0500^pratt-whitney, fl, us
-C^341^40.348611111111111427^-74.659444444444446276^princeton, nj, us
-C^342^41.82388888888889511^-71.413333333333341102^providence, ri, us
-C^343^42.05^-70.19^provincetown, ma, us
-C^344^40.233333333333334281^-111.65666666666666629^provo, ut, us
-C^345^40.437^-80.000^psc, pa, us
-C^346^38.29^-104.58^pueblo, co, us
-C^347^46.8166^-71.233^quebec, *, canada
-C^348^35.771944444444443434^-78.638888888888899942^raleigh, nc, us
-C^349^-8.10^-34.88^recife, *, brazil
-C^350^40.56^-122.41^redding, ca, us
-C^351^34.68407^-86.65403^redstone aresnal, al, us
-C^352^37.486111111111114269^-122.23333333333333428^redwood city, ca, us
-C^353^50.50^-104.63^regina, *, canada
-C^354^39.53^-119.81^reno, nv, us
-C^355^35.99388888888888971^-78.898888888888890847^research triangle park, nc, us
-C^356^38.968611111111115974^-77.341388888888886299^reston, va, us
-C^357^46.285833333333329165^-119.28333333333333144^richland, wa, us
-C^358^37.553611111111109722^-77.460555555555558271^richmond, va, us
-C^359^56.88^24.13^riga, *, latvia
-C^360^48.43^-68.37^rimouski, *, canada
-C^361^-9.98^-67.82^rio branco, *, brazil
-C^362^-23.000^-43.200^rio de janeiro, *, brazil
-C^363^33.99^-117.37^riverside, ca, us
-C^364^39.71733^-86.29439^roachdale, in, us
-C^365^40.80^-89.21^roanoke, *, us
-C^366^37.27^-79.94^roanoke, va, us
-C^367^44.021666666666668277^-92.469722222222230812^rochester, mn, us
-C^368^43.16^-77.61^rochester, ny, us
-C^369^35.95731^-77.81020^rocky mount, nc, us
-C^370^41.86670^12.61670^rome, *, italy
-C^371^43.22^-75.45^rome, ny, us
-C^372^38.73^-121.23^roseville, ca, us
-C^373^38.581666666666670551^-121.4933333333333394^sacramento, ca, us
-C^374^45.266^-66.05^saint john, *, canada
-C^375^44.93^-122.98^salem, or, us
-C^376^36.67^-121.66^salinas, ca, us
-C^377^40.760833333333330586^-111.89027777777778283^salt lake city, ut, us
-C^378^-12.97^-38.48^salvador, *, brazil
-C^379^29.423888888888889426^-98.493333333333339397^san antonio, tx, us
-C^380^34.11^-117.29^san bernardino, ca, us
-C^381^32.715277777777778567^-117.15638888888889824^san diego, ca, us
-C^382^37.774999999999998579^-122.41833333333333655^san francisco, ca, us
-C^383^37.335277777777783115^-121.89388888888889539^san jose, ca, us
-C^384^18.48^-66.13^san juan, *, pr
-C^385^35.28277777777777402^-120.6586111111111137^san luis obispo, ca, us
-C^386^37.973611111111111427^-122.53000000000000114^san rafael, ca, us
-C^387^33.76^-117.86^santa ana, ca, us
-C^388^34.42850^-119.7219^santa barbara, ca, us
-C^389^37.347500000000003695^-121.26749999999999829^santa clara, ca, us
-C^390^35.68^-105.9^santa fe, nm, us
-C^391^38.46541^-122.67958^santa rosa, ca, us
-C^392^-23.56660^-46.63320^sao paulo, *, brazil
-C^393^43.0^141.35^sapporo, *, japan
-C^394^52.17^-106.67^saskatoon, *, canada
-C^395^32.07^-81.10^savannah, *, us
-C^396^32.07^-81.10^savannah, ga, us
-C^397^42.03300^-88.08336^schaumburg, il, us
-C^398^47.606388888888886868^-122.33083333333333087^seattle, wa, us
-C^399^31.83^130.3^sendai, *, japan
-C^400^37.58330^127.05000^seoul, *, korea
-C^401^50.22^-66.37^sept iles, *, canada
-C^402^31.25^121.4333^shanghai, *, china
-C^403^45.416^-71.9^sherbrooke, *, canada
-C^404^34.15^-118.46^sherman oaks, ca, us
-C^405^40.74^-72.88^shirley, ny, us
-C^406^32.50^-93.75^shreveport, *, us
-C^407^1.16^103.51^singapore, *, singapore
-C^408^43.541666666666664298^-96.733333333333334281^sioux falls, sd, us
-C^409^41.67^-86.25^south bend, in, us
-C^410^47.67^-117.44^spokane, wa, us
-C^411^42.10^-72.59^springfield, ma, us
-C^412^37.21^-93.30^springfield, mo, us
-C^413^38.78603^77.17962^springfield, va, us
-C^414^33.54083^-81.72836^srs, sc, us
-C^415^34.73^-86.58^ssdc, al, us
-C^416^45.63^-72.95^st-hyacinthe, *, canada
-C^417^47.58^-52.67^st. john's, *, canada
-C^418^38.62722222222222257^-90.197777777777787378^st. louis, mo, us
-C^419^41.05^-73.54^stamford, *, us
-C^420^37.441944444444438034^-122.14194444444444798^stanford, ca, us
-C^421^40.793333333333329449^-77.860277777777767483^state college, pa, us
-C^422^59.38330^18.00000^stockholm, *, sweden
-C^423^37.957777777777778283^-121.28972222222222399^stockton, ca, us
-C^424^48.78^9.20^stuttgart, *, de
-C^425^37.36888888888888971^-122.03527777777777885^sunnyvale, ca, us
-C^426^-33.91660^151.28330^sydney, *, australia
-C^427^46.15^-60.183^sydney, *, canada
-C^428^43.04805555555555685^-76.14777777777779022^syracuse, ny, us
-C^429^47.25^-122.44^tacoma, wa, us
-C^430^25.03330^121.63330^taipei, *, taiwan
-C^431^30.438055555555557419^-84.280833333333333712^tallahassee, fl, us
-C^432^59.43^24.72^tallinn, *, estonia
-C^433^27.947222222222222854^-82.458611111111110858^tampa, fl, us
-C^434^-31.877^152.45^taree, *, australia
-C^435^32.06^34.77^tel aviv, *, israel
-C^436^-5.15^-42.77^teresina, *, brazil
-C^437^35.68330^139.73330^tokyo, *, japan
-C^438^35.75^139.50^tokyo, *, jp
-C^439^41.66388888888888431^-83.555277777777774872^toledo, oh, us
-C^440^39.98^-74.16^toms river, nj, us
-C^441^39.06^-95.68^topeka, ks, us
-C^442^43.67000^-79.37000^toronto, *, canada
-C^443^43.617^1.450^toulouse, *, france
-C^444^-19.45^146.235^townsville, *, australia
-C^445^34.74^-86.29^trenton, *, us
-C^446^40.22340^-74.76422^trenton, nj, us
-C^447^46.35^-72.57^trois-rivieres, *, canada
-C^448^42.6^-83.15^troy, mi, us
-C^449^42.730000000000004^-73.701666666666668^troy, ny, us
-C^450^32.221666666666671119^-110.92583333333334394^tucson, az, us
-C^451^47.55^-122.31^tukwila, wa, us
-C^452^36.153888888888886299^-95.992500000000006821^tulsa, ok, us
-C^453^38.9^-77.25^tyson's corner, va, us
-C^454^38.91865^-77.23174^tysons corner, va, us
-C^455^40.70^-74.27^union, nj, us
-C^456^40.869444444444447129^-72.887222222222234791^upton, ny, us
-C^457^40.11055555555555685^-88.20722222222222797^urbana, il, us
-C^458^30.266944444444444429^-97.742777777777774872^uta, tx, us
-C^459^35.90^14.53^valetta, *, malta
-C^460^49.25000^-123.08000^vancouver, *, canada
-C^461^-2.87^-52.00^victoria, *, brazil
-C^462^48.433^-123.35^victoria, *, canada
-C^463^46.07^-71.95^victoriaville, *, canada
-C^464^48.21670^16.36670^vienna, *, austria
-C^465^38.9^-77.25^vienna, va, us
-C^466^20.90^-156.50^wailuku, hi, us
-C^467^37.90201^-122.04084^walnut creek, ca, us
-C^468^42.376388888888889994^-71.236111111111114269^waltham, ma, us
-C^469^42.477499999999999147^-83.027777777777771462^warren, mi, us
-C^470^52.58340^21.08330^warsaw, *, poland
-C^471^38.894999999999996021^-77.03666666666666174^washington, dc, us
-C^472^43.47^-80.53^waterloo, *, canada
-C^473^44.35^-70.07^wayne, *, us
-C^474^39.758888888888890278^-84.191666666666677088^waynesville, oh, us
-C^475^41.82388888888889511^-71.413333333333341102^west greenwich, ri, us
-C^476^40.798611111111107164^-74.239444444444444571^west orange, nj, us
-C^477^26.71^-80.07^west palm beach, fl, us
-C^478^32.87861^-85.16786^west point, ga, us
-C^479^41.36234^-074.02731^west point, ny, us
-C^480^41.020285^-73.75742^white plains, ny, us
-C^481^32.38^-106.49^white sands, nm, us
-C^482^41.740833333333334565^-87.860277777777767483^willow springs, il, us
-C^483^39.745833333333337123^-75.546944444444449118^wilmington, de, us
-C^484^34.23670^-77.92330^wilmington, nc, us
-C^485^48.97^-55.67^windsor, *, canada
-C^486^49.9^-97.15^winnipeg, *, canada
-C^487^36.10^-80.22^winston salem, *, us
-C^488^36.10^-80.22^winston salem, nc, us
-C^489^41.3080555555556^-72.9286111111111^yale, ct, us
-C^490^43.8333^-66.115^yarmouth, *, canada
-C^491^35.45^139.5^yokohama, *, japan
-C^492^32.70^-114.64^yuma, az, us
-C^493^47.367^8.533^zurich, *, switzerland
-I^0^R^AAI
-P^0^471^155
-P^23^471^155
-P^40^23^155
-P^127^23^155
-P^127^98^155
-P^127^373^155
-P^127^471^155
-P^224^23^155
-P^224^325^155
-P^224^381^155
-P^257^23^155
-P^373^23^155
-P^373^224^155
-P^471^471^155
-E^AAI
+T ^ 495
+t ^ 4
+R ^ 113
+C ^ 0 ^ 39.51 ^ -76.18 ^ aberdeen, md, us
+C ^ 1 ^ -34.866 ^ 138.5 ^ adelaide, *, australia
+C ^ 2 ^ 39.003055555555555145 ^ -76.972222222222228538 ^ adelphi, md, us
+C ^ 3 ^ 13.47511 ^ 144.74844E ^ agana, gu, us
+C ^ 4 ^ 41.08040 ^ -81.52149 ^ akron, oh, us
+C ^ 5 ^ 40.16 ^ -76.21 ^ akron, pa, us
+C ^ 6 ^ 42.65030 ^ -73.75030 ^ albany, ny, us
+C ^ 7 ^ 35.08 ^ -106.65 ^ albuquerque, nm, us
+C ^ 8 ^ -36.00 ^ 146.75 ^ albury, *, australia
+C ^ 9 ^ 38.804722222222217454 ^ -77.047222222222217169 ^ alexandria, va, us
+C ^ 10 ^ 40.52 ^ -78.41 ^ altoona, pa, us
+C ^ 11 ^ 35.20 ^ -101.84 ^ amarillo, tx, us
+C ^ 12 ^ 42.034722222222221433 ^ -93.619722222222222285 ^ ames, ia, us
+C ^ 13 ^ 52.35000 ^ 4.86660 ^ amsterdam, *, netherlands
+C ^ 14 ^ 52.35 ^ 4.90 ^ amsterdam, *, nl
+C ^ 15 ^ 33.835277777777783115 ^ -117.91361111111112336 ^ anaheim, ca, us
+C ^ 16 ^ 61.21 ^ -149.88 ^ anchorage, ak, us
+C ^ 17 ^ 38.97165 ^ -76.50303 ^ annapolis, md, us
+C ^ 18 ^ 34.33 ^ -86.49 ^ arab, al, us
+C ^ 19 ^ -10.90 ^ -37.12 ^ aracaju, *, brazil
+C ^ 20 ^ 38.870833333333337123 ^ -77.101388888888877204 ^ arlington, va, us
+C ^ 21 ^ 36.69 ^ -97.55 ^ arm, ok, us
+C ^ 22 ^ 37.95 ^ 23.7 ^ athens, *, greece
+C ^ 23 ^ 33.748888888888892268 ^ -84.388055555555567366 ^ atlanta, ga, us
+C ^ 24 ^ -36.92 ^ 174.78 ^ auckland, *, new zealand
+C ^ 25 ^ -36.92 ^ 174.78 ^ auckland, *, nz
+C ^ 26 ^ 33.45735 ^ -81.99499 ^ augusta, ga, us
+C ^ 27 ^ 39.74 ^ -104.86 ^ aurora, *, us
+C ^ 28 ^ 39.74 ^ -104.86 ^ aurora, co, us
+C ^ 29 ^ 33.822000 ^ -84.64293 ^ austell, ga, us
+C ^ 30 ^ 30.30588 ^ -97.742777777777774872 ^ austin, tx, us
+C ^ 31 ^ 49.22 ^ -68.15 ^ baie-comeau, *, canada
+C ^ 32 ^ 35.39 ^ -119.02 ^ bakersfield, ca, us
+C ^ 33 ^ -37.55 ^ 143.833 ^ ballarat, *, australia
+C ^ 34 ^ 39.271944444444443434 ^ -76.732222222222219443 ^ baltimore, md, us
+C ^ 35 ^ 41.5 ^ 2.0 ^ barcelona, *, spain
+C ^ 36 ^ 44.37 ^ -79.70 ^ barrie, *, canada
+C ^ 37 ^ 41.850000000000001421 ^ -88.3125 ^ batavia, il, us
+C ^ 38 ^ 30.44896 ^ -091.12604 ^ baton rouge, la, us
+C ^ 39 ^ 42.30 ^ -85.21 ^ battle creek, mi, us
+C ^ 40 ^ 30.31 ^ -89.33 ^ bay saint louis, ms, us
+C ^ 41 ^ 30.07 ^ -94.10 ^ beaumont, tx, us
+C ^ 42 ^ 45.487222222222222001 ^ -122.80249999999999488 ^ beaverton, or, us
+C ^ 43 ^ 42.490555555555559408 ^ -71.276666666666670835 ^ bedford, ma, us
+C ^ 44 ^ 39.92 ^ 116.43 ^ beijing, *, china
+C ^ 45 ^ -1.45 ^ -48.48 ^ belem, *, brazil
+C ^ 46 ^ 44.83 ^ 20.50 ^ belgrade, *, yugoslavia
+C ^ 47 ^ -19.90 ^ -43.90 ^ belo horizonte, *, brazil
+C ^ 48 ^ -36.75 ^ 144.25 ^ bendigo, *, australia
+C ^ 49 ^ 37.871666666666669698 ^ -122.27166666666666117 ^ berkeley, ca, us
+C ^ 50 ^ 52.51670 ^ 13.33330 ^ berlin, *, germany
+C ^ 51 ^ 39.04445 ^ -77.11912 ^ bethesda, md, us
+C ^ 52 ^ 45.77 ^ -108.50 ^ billings, mt, us
+C ^ 53 ^ 33.52774 ^ -86.79922 ^ birmingham, al, us
+C ^ 54 ^ 2.85 ^ -60.72 ^ boa vista, *, brazil
+C ^ 55 ^ 30.79 ^ -83.80 ^ boston, *, us
+C ^ 56 ^ 42.358333333333334281 ^ -71.060277777777770325 ^ boston, ma, us
+C ^ 57 ^ 36.97370 ^ -86.44124 ^ bowling green, ky, us
+C ^ 58 ^ -15.7833 ^ -47.91667 ^ brasilia, *, brazil
+C ^ 59 ^ 48.17 ^ 17.17 ^ bratislava, *, slovakia
+C ^ 60 ^ 34.94 ^ -85.73 ^ bridgeport, *, us
+C ^ 61 ^ 38.77 ^ -90.4 ^ bridgeton, mo, us
+C ^ 62 ^ -27.4166 ^ 153.033 ^ brisbane, *, australia
+C ^ 63 ^ 40.714166666666670835 ^ -74.006388888888892552 ^ bronx, ny, us
+C ^ 64 ^ 40.69 ^ -73.99 ^ brooklyn, ny, us
+C ^ 65 ^ 29.42 ^ -98.49 ^ brooks air force base, tx, us
+C ^ 66 ^ 50.850 ^ 4.350 ^ brussels, *, belgium
+C ^ 67 ^ 43.73 ^ -81.25 ^ brussels, *, canada
+C ^ 68 ^ 30.63 ^ -96.37 ^ bryan, tx, us
+C ^ 69 ^ 44.43 ^ 26.10 ^ bucharest, *, romania
+C ^ 70 ^ 47.43300 ^ 19.25000 ^ budapest, *, hungary
+C ^ 71 ^ -34.67 ^ -58.50 ^ buenos aires, *, argentina
+C ^ 72 ^ 42.8898 ^ -78.85968 ^ buffalo, ny, us
+C ^ 73 ^ 34.19 ^ -118.30 ^ burbank, ca, us
+C ^ 74 ^ 44.475833333333333997 ^ -73.212500000000005684 ^ burlington, vt, us
+C ^ 75 ^ 30.00000 ^ 31.28330 ^ cairo, *, egypt
+C ^ 76 ^ 51.05000 ^ -114.08300 ^ calgary, *, canada
+C ^ 77 ^ 52.19000 ^ 0.17000 ^ cambridge, *, england
+C ^ 78 ^ 42.36500000000000199 ^ -71.104999999999989768 ^ cambridge, ma, us
+C ^ 79 ^ 45.05 ^ -69.44 ^ cambridge, me, us
+C ^ 80 ^ -7.25 ^ -35.83 ^ campina grande, *, brazil
+C ^ 81 ^ -22.90 ^ -43.57 ^ campo grande, *, brazil
+C ^ 82 ^ -35.30 ^ 149.13 ^ canberra, *, au
+C ^ 83 ^ -35.25 ^ 149.133 ^ canberra, *, australia
+C ^ 84 ^ 38.59 ^ -77.12 ^ carderock, md, us
+C ^ 85 ^ 32.97 ^ -96.88 ^ carrollton, tx, us
+C ^ 86 ^ 40.116388888888891984 ^ -88.243333333333339397 ^ champaign, il, us
+C ^ 87 ^ 38.35 ^ -81.63 ^ charleston, wv, us
+C ^ 88 ^ 35.226944444444448834 ^ -80.843333333333333712 ^ charlotte, nc, us
+C ^ 89 ^ 38.03745 ^ -78.48574 ^ charlottesville, va, us
+C ^ 90 ^ 35.04470 ^ -85.30890 ^ chattanooga, tn, us
+C ^ 91 ^ 37.3077777777778 ^ -75.9522222222222 ^ chesapeake, va, us
+C ^ 92 ^ 41.14545 ^ -104.79234 ^ cheyenne, wy, us
+C ^ 93 ^ 35.500 ^ 140.117 ^ chiba, *, japan
+C ^ 94 ^ 41.850000000000001421 ^ -87.650000000000005684 ^ chicago, il, us
+C ^ 95 ^ 39.728611111111113985 ^ -121.83638888888889085 ^ chico, ca, us
+C ^ 96 ^ 48.43 ^ -71.10 ^ chicoutimi, *, canada
+C ^ 97 ^ -26.85 ^ 150.33 ^ chinchilla, *, australia
+C ^ 98 ^ 39.104166666666671404 ^ -84.519444444444445708 ^ cincinnati, oh, us
+C ^ 99 ^ 41.48 ^ -81.68 ^ cleveland, oh, us
+C ^ 100 ^ 38.980555555555554292 ^ -76.937222222222231949 ^ college park, md, us
+C ^ 101 ^ 30.627777777777779988 ^ -96.334166666666661172 ^ college station, tx, us
+C ^ 102 ^ 38.833889 ^ -104.82083 ^ colorado springs, co, us
+C ^ 103 ^ 34.000555555555557419 ^ -81.034999999999996589 ^ columbia, sc, us
+C ^ 104 ^ 32.51071 ^ -84.87497 ^ columbus, ga, us
+C ^ 105 ^ 39.96111111111111569 ^ -82.998888888888885162 ^ columbus, oh, us
+C ^ 106 ^ 37.978055555555556566 ^ -122.03000000000000114 ^ concord, ca, us
+C ^ 107 ^ 42.45 ^ -71.33 ^ concord, ma, us
+C ^ 108 ^ 55.71670 ^ 12.45000 ^ copenhagen, *, denmark
+C ^ 109 ^ 30.80 ^ -85.38 ^ cottondale, fl, us
+C ^ 110 ^ 42.442 ^ -76.500 ^ ctc, ny, us
+C ^ 111 ^ -15.53 ^ -56.08 ^ cuiabï¿½, *, brazil
+C ^ 112 ^ 39.65 ^ -78.76 ^ cumberland, md, us
+C ^ 113 ^ -25.42 ^ -49.42 ^ curitiba, *, brazil
+C ^ 114 ^ 38.331111111111113132 ^ -77.051388888888880047 ^ dahlgren, va, us
+C ^ 115 ^ 32.783333333333331439 ^ -96.799999999999997158 ^ dallas, tx, us
+C ^ 116 ^ 33.50 ^ 36.32 ^ damascus, *, syria
+C ^ 117 ^ 36.58318 ^ -79.40830 ^ danville, va, us
+C ^ 118 ^ -12.4166 ^ 130.85 ^ darwin, *, australia
+C ^ 119 ^ 38.97165 ^ -076.50303 ^ david taylor research center, md, us
+C ^ 120 ^ 29.210555555555554719 ^ -81.023055555555558271 ^ daytona, fl, us
+C ^ 121 ^ 42.316666666667 ^ -83.183333333 ^ dearborn, mi, us
+C ^ 122 ^ 39.739166666666669414 ^ -104.98416666666666686 ^ denver, co, us
+C ^ 123 ^ 41.59 ^ -93.62 ^ des moines, ia, us
+C ^ 124 ^ 42.331388888888895394 ^ -83.045833333333334281 ^ detroit, mi, us
+C ^ 125 ^ 38.850277777777777 ^ -77.129999999999995 ^ disa, va, us
+C ^ 126 ^ 41.79720 ^ -88.0173 ^ dng, il, us
+C ^ 127 ^ 41.850000000000001421 ^ -87.650000000000005684 ^ downers grove, il, us
+C ^ 128 ^ 45.87 ^ -72.50 ^ drummondville, *, canada
+C ^ 129 ^ 53.82 ^ -6.08 ^ dublin, *, ireland
+C ^ 130 ^ 40.099166666666668846 ^ -83.114166666666662309 ^ dublin, oh, us
+C ^ 131 ^ 43.133 ^ -70.917 ^ durham, nh, us
+C ^ 132 ^ 44.78 ^ -91.49 ^ eau claire, wi, us
+C ^ 133 ^ 53.55 ^ -113.46667 ^ edmonton, *, canada
+C ^ 134 ^ 34.90962 ^ -117.93457 ^ edwards, ca, us
+C ^ 135 ^ 35.11 ^ -92.09 ^ el paso, *, us
+C ^ 136 ^ 31.76 ^ -106.48 ^ el paso, tx, us
+C ^ 137 ^ 41.054999999999999716 ^ -73.820555555555557703 ^ elmsford, ny, us
+C ^ 138 ^ 50.117 ^ 8.667 ^ eschborn, *, germany
+C ^ 139 ^ -27.350 ^ 152.430 ^ esk, *, australia
+C ^ 140 ^ 44.052222222222219727 ^ -123.08555555555554406 ^ eugene, or, us
+C ^ 141 ^ 47.99 ^ -122.20 ^ everett, wa, us
+C ^ 142 ^ 64.837777777777773736 ^ -147.71638888888887209 ^ fairbanks, ak, us
+C ^ 143 ^ 38.846111111111113701 ^ -77.306666666666657761 ^ fairfax, va, us
+C ^ 144 ^ 37.38 ^ -122.08 ^ fix west, ca, us
+C ^ 145 ^ -27.5 ^ -48.5 ^ florianopolis, *, brazil
+C ^ 146 ^ 38.70971 ^ -077.14698 ^ fort belvoir, va, us
+C ^ 147 ^ 26.121944444444444855 ^ -80.143611111111113132 ^ fort lauderdale, fl, us
+C ^ 148 ^ 32.75390 ^ -97.33624 ^ fort worth, tx, us
+C ^ 149 ^ -3.75 ^ -38.58 ^ fortaleza, *, brazil
+C ^ 150 ^ 42.30 ^ -71.43 ^ framingham, *, us
+C ^ 151 ^ 50.117 ^ 8.667 ^ frankfurt, *, germany
+C ^ 152 ^ 39.43 ^ -77.41 ^ frederick, md, us
+C ^ 153 ^ 38.30 ^ -77.48 ^ fredericksburg, va, us
+C ^ 154 ^ 37.56 ^ -122.00 ^ fremont, ca, us
+C ^ 155 ^ 36.74777777777777743 ^ -119.77138888888889312 ^ fresno, ca, us
+C ^ 156 ^ 33.65 ^ 130.35 ^ fukuoka, *, japan
+C ^ 157 ^ 29.651388888888888573 ^ -82.325000000000002842 ^ gainesville, fl, us
+C ^ 158 ^ 33.89 ^ -118.30 ^ gardena, ca, us
+C ^ 159 ^ -38.166 ^ 144.366 ^ geelong, *, australia
+C ^ 160 ^ 46.23330 ^ 6.06670 ^ geneva, *, switzerland
+C ^ 161 ^ -16.72 ^ -49.30 ^ goiania, *, brazil
+C ^ 162 ^ -29.575 ^ 152.85 ^ grafton, *, australia
+C ^ 163 ^ 39.08 ^ -108.55 ^ grand junction, co, us
+C ^ 164 ^ 42.97 ^ -85.65 ^ grand rapids, *, us
+C ^ 165 ^ 44.50 ^ -87.98 ^ green bay, wi, us
+C ^ 166 ^ 36.072500000000005116 ^ -79.792222222222221717 ^ greensboro, nc, us
+C ^ 167 ^ 40.88930 ^ -74.04611 ^ hackensack, nj, us
+C ^ 168 ^ 44.65 ^ -63.6 ^ halifax, *, canada
+C ^ 169 ^ 43.25 ^ -79.85 ^ hamilton, *, canada
+C ^ 170 ^ 40.273611111111108585 ^ -76.884722222222222854 ^ harrisburg, pa, us
+C ^ 171 ^ 41.75 ^ -72.68 ^ hartford, ct, us
+C ^ 172 ^ 20.75 ^ -156.5 ^ hawaii, hi, us
+C ^ 173 ^ 37.67 ^ -122.1 ^ hayward, ca, us
+C ^ 174 ^ 60.16660 ^ 24.88330 ^ helsinki, *, finland
+C ^ 175 ^ 51.20 ^ 6.93 ^ hilden, *, germany
+C ^ 176 ^ -42.833 ^ 147.35 ^ hobart, *, australia
+C ^ 177 ^ 40.39 ^ -74.17 ^ holmdel, nj, us
+C ^ 178 ^ 22.1833 ^ 114.2333 ^ hong kong, *, china
+C ^ 179 ^ 22.25 ^ 114.17 ^ hong kong, *, hk
+C ^ 180 ^ 21.306944444444443576 ^ -157.85833333333332007 ^ honolulu, hi, us
+C ^ 181 ^ 29.763055555555556708 ^ -95.363055555555547471 ^ houston, tx, us
+C ^ 182 ^ 45.43 ^ -75.75 ^ hull, *, canada
+C ^ 183 ^ 38.96944444444444855 ^ -77.386388888888902216 ^ hunter woods, va, us
+C ^ 184 ^ 43.466666666666668561 ^ -112.03333333333333144 ^ idaho falls, id, us
+C ^ 185 ^ 37.23 ^ -95.72 ^ independence, ks, us
+C ^ 186 ^ 39.77640 ^ -86.14619 ^ indianapolis, in, us
+C ^ 187 ^ 33.669444444444444287 ^ -117.82222222222222285 ^ irvine, ca, us
+C ^ 188 ^ 30.83 ^ -91.21 ^ jackson, la, us
+C ^ 189 ^ 32.32050 ^ -90.20759 ^ jackson, ms, us
+C ^ 190 ^ 30.331944444444445708 ^ -81.655833333333333712 ^ jacksonville, fl, us
+C ^ 191 ^ 31.76670 ^ 35.23330 ^ jerusalem, *, israel
+C ^ 192 ^ 39.114166666666669414 ^ -94.627222222222215464 ^ kansas city, ks, us
+C ^ 193 ^ 39.12231 ^ -94.55200 ^ kansas city, mo, us
+C ^ 194 ^ 36.12 ^ -80.08 ^ kernersville, nc, us
+C ^ 195 ^ 47.68460 ^ -122.19393 ^ kirkland, wa, us
+C ^ 196 ^ 36.73 ^ -108.35 ^ kirtland, nm, us
+C ^ 197 ^ 43.45 ^ -80.483 ^ kitchener, *, canada
+C ^ 198 ^ 35.960555555555558271 ^ -83.920833333333334281 ^ knoxville, tn, us
+C ^ 199 ^ 34.75 ^ 135.16666 ^ kobe, *, japan
+C ^ 200 ^ 35.000 ^ 135.750 ^ kyoto, *, japan
+C ^ 201 ^ 32.847222222222221433 ^ -117.27333333333332632 ^ la jolla, ca, us
+C ^ 202 ^ 30.223888888888886584 ^ -92.01972222222222797 ^ lafayette, la, us
+C ^ 203 ^ 30.23 ^ -93.19 ^ lake charles, la, us
+C ^ 204 ^ 30.17 ^ -82.66 ^ lake city, fl, us
+C ^ 205 ^ 37.04985 ^ -76.29497 ^ larc, va, us
+C ^ 206 ^ 36.174999999999997158 ^ -115.13638888888890222 ^ las vegas, nv, us
+C ^ 207 ^ -42.60 ^ 147.550 ^ laucnceston, *, tasmania
+C ^ 208 ^ 38.971666666666671119 ^ -95.234999999999999432 ^ lawrence, ks, us
+C ^ 209 ^ 45.37 ^ -71.85 ^ lennoxville, *, canada
+C ^ 210 ^ 41.47970 ^ -81.67851 ^ lerc, oh, us
+C ^ 211 ^ 49.7 ^ -112.18667 ^ lethbridge, *, canada
+C ^ 212 ^ 38.049166666666664582 ^ -84.500277777777782262 ^ lexington, ky, us
+C ^ 213 ^ 38.70000 ^ -9.08340 ^ lisbon, *, portugal
+C ^ 214 ^ 34.7884 ^ -92.25543 ^ little rock, ar, us
+C ^ 215 ^ 37.681944444444440023 ^ -121.76694444444444798 ^ livermore, ca, us
+C ^ 216 ^ 46.067 ^ 14.550 ^ ljubljana, *, slovenia
+C ^ 217 ^ 33.95095 ^ -84.54114 ^ lockheed inc, ga, us
+C ^ 218 ^ 42.98805 ^ -81.23416 ^ london, *, canada
+C ^ 219 ^ 51.50000 ^ -0.11670 ^ london, *, england
+C ^ 220 ^ 51.50 ^ -0.17 ^ london, *, uk
+C ^ 221 ^ 33.77 ^ -118.18 ^ long beach, ca, us
+C ^ 222 ^ 40.18 ^ -105.10 ^ longmont, co, us
+C ^ 223 ^ 35.731944444444444 ^ -105.15111111111112 ^ los alamos, nm, us
+C ^ 224 ^ 34.052222222222219727 ^ -118.24277777777777487 ^ los angeles, ca, us
+C ^ 225 ^ 38.22475 ^ -85.74115 ^ louisville, ky, us
+C ^ 226 ^ 49.60 ^ 6.15 ^ luxembourg, *, luxembourg
+C ^ 227 ^ 0.07 ^ -51.07 ^ macapï¿½, *, brazil
+C ^ 228 ^ -9.67 ^ -35.73 ^ maceiï¿½, *, brazil
+C ^ 229 ^ -22.25 ^ 148.27 ^ mackay, *, australia
+C ^ 230 ^ 32.84 ^ -83.68 ^ macon, ga, us
+C ^ 231 ^ 43.073055555555555429 ^ -89.401111111111120522 ^ madison, wi, us
+C ^ 232 ^ 40.500 ^ -3.750 ^ madrid, *, spain
+C ^ 233 ^ 40.12 ^ -74.06 ^ manasquan, nj, us
+C ^ 234 ^ 38.77 ^ -77.49 ^ manassas, va, us
+C ^ 235 ^ -3.10 ^ -60.00 ^ manaus, *, brazil
+C ^ 236 ^ 53.5 ^ -2.25 ^ manchester, *, england
+C ^ 237 ^ -22.95 ^ 149.95 ^ marlborough, *, australia
+C ^ 238 ^ 20.86800 ^ -156.62199 ^ maui, hi, us
+C ^ 239 ^ 33.079167 ^ -87.555556 ^ maxwell, al, us
+C ^ 240 ^ 38.77765 ^ -90.35962 ^ mcdonnell douglas, mo, us
+C ^ 241 ^ 38.93 ^ -77.17 ^ mclean, va, us
+C ^ 242 ^ 42.34 ^ -122.84 ^ medford, or, us
+C ^ 243 ^ -37.83 ^ 145.0 ^ melbourne, *, australia
+C ^ 244 ^ 28.078611111111111853 ^ -80.602777777777774304 ^ melbourne, fl, us
+C ^ 245 ^ 35.14 ^ -90.05 ^ memphis, tn, us
+C ^ 246 ^ 37.453888888888890563 ^ -122.18111111111112166 ^ menlo park, ca, us
+C ^ 247 ^ 38.89 ^ -77.036 ^ mfs, *, us
+C ^ 248 ^ 25.70805 ^ -80.29534 ^ miami, fl, us
+C ^ 249 ^ 35.50 ^ -76.04 ^ middletown, nc, us
+C ^ 250 ^ 40.43957 ^ -74.11930 ^ middletown, nj, us
+C ^ 251 ^ 32.56 ^ -84.86 ^ midland, *, us
+C ^ 252 ^ 31.99 ^ -102.06 ^ midland, tx, us
+C ^ 253 ^ 45.47 ^ 9.20 ^ milan, *, italy
+C ^ 254 ^ 45.466666 ^ 9.166666 ^ milano, *, italy
+C ^ 255 ^ 43.03888888888888431 ^ -87.906388888888898236 ^ milwaukee, wi, us
+C ^ 256 ^ 44.980000000000003979 ^ -93.26361111111111768 ^ minneapolis, mn, us
+C ^ 257 ^ 32.352499999999999147 ^ -90.877777777777765778 ^ misissippi state, ms, us
+C ^ 258 ^ 30.69 ^ -88.05 ^ mobile, al, us
+C ^ 259 ^ 46.01 ^ -64.7833 ^ moncton, *, canada
+C ^ 260 ^ 40.28780 ^ -074.15435 ^ monmouth, nj, us
+C ^ 261 ^ 36.600277777777776578 ^ -121.89361111111111313 ^ monterey, ca, us
+C ^ 262 ^ 32.37 ^ -86.31 ^ montgomery, al, us
+C ^ 263 ^ 45.50000 ^ -73.58000 ^ montreal, *, canada
+C ^ 264 ^ 29.72 ^ -91.12 ^ morgan city, la, us
+C ^ 265 ^ 37.386111111111112848 ^ -122.08277777777777828 ^ mountain view, ca, us
+C ^ 266 ^ 48.13 ^ 11.58 ^ munich, *, de
+C ^ 267 ^ 36.65 ^ 138.17 ^ nagano, *, japan
+C ^ 268 ^ 35.1666 ^ 136.833333 ^ nagoya, *, japan
+C ^ 269 ^ 38.29 ^ -122.28 ^ napa, *, us
+C ^ 270 ^ 36.165833333333331723 ^ -86.784444444444446276 ^ nashville, tn, us
+C ^ 271 ^ 36.17 ^ -86.78 ^ nashville,tn, us, us
+C ^ 272 ^ -5.77 ^ -35.25 ^ natal, *, brazil
+C ^ 273 ^ 42.283333333333331439 ^ -71.349999999999994316 ^ natick, ma, us
+C ^ 274 ^ 38.03745 ^ -078.48574 ^ naval research labs, va, us
+C ^ 275 ^ 38.97165 ^ -076.50303 ^ naval surface warfare center, md, us
+C ^ 276 ^ 30.30 ^ -89.32 ^ navo, ms, us
+C ^ 277 ^ 38.53 ^ -76.74 ^ nawc-ad, md, us
+C ^ 278 ^ 35.62 ^ -117.67 ^ nawc-wd, ca, us
+C ^ 279 ^ 40.013 ^ -105.267 ^ ncar, co, us
+C ^ 280 ^ 45.45 ^ -75.7 ^ nepean, *, ontario
+C ^ 281 ^ 37.75276 ^ -122.27588 ^ netstar, ca, us
+C ^ 282 ^ 40.486111111111114269 ^ -74.452222222222218306 ^ new brunswick, nj, us
+C ^ 283 ^ 30.06584 ^ -89.93135 ^ new orleans, la, us
+C ^ 284 ^ 40.75 ^ -74.00 ^ new york, *, us
+C ^ 285 ^ 40.714166666666670835 ^ -74.006388888888892552 ^ new york, ny, us
+C ^ 286 ^ 39.68 ^ -75.75 ^ newark, de, us
+C ^ 287 ^ 40.73555555555555685 ^ -74.172777777777781694 ^ newark, nj, us
+C ^ 288 ^ 43.05 ^ -77.09 ^ newark, ny, us
+C ^ 289 ^ -32.85 ^ 151.75 ^ newcastle, *, australia
+C ^ 290 ^ 36.978611111111113985 ^ -76.42833333333334167 ^ newport news, va, us
+C ^ 291 ^ 41.48 ^ -71.32 ^ newport, ri, us
+C ^ 292 ^ 30.53000 ^ -086.48417 ^ niceville, fl, us
+C ^ 293 ^ 36.846666666666671119 ^ -76.285555555555546903 ^ norfolk, va, us
+C ^ 294 ^ 41.313611111111107732 ^ -81.724722222222226264 ^ north royalton, oh, us
+C ^ 295 ^ 36.010277777777780273 ^ -84.26972222222222797 ^ oak ridge, tn, us
+C ^ 296 ^ 37.77154 ^ -122.22455 ^ oakland, ca, us
+C ^ 297 ^ 29.18 ^ -82.13 ^ ocala, fl, us
+C ^ 298 ^ 25.96 ^ -80.14 ^ ojus, fl, us
+C ^ 299 ^ 35.46705 ^ -97.51349 ^ oklahoma city, ok, us
+C ^ 300 ^ 41.26390 ^ -96.01174 ^ omaha, ne, us
+C ^ 301 ^ 34.03 ^ -117.62 ^ ontario, ca, us
+C ^ 302 ^ 33.80525 ^ -117.82399 ^ orange county, ca, us
+C ^ 303 ^ -35.25 ^ 149.10 ^ orange, *, australia
+C ^ 304 ^ 28.50474 ^ -81.37424 ^ orlando, fl, us
+C ^ 305 ^ 34.5 ^ 135.5 ^ osaka, *, japan
+C ^ 306 ^ 59.93330 ^ 10.68330 ^ oslo, *, norway
+C ^ 307 ^ 45.45 ^ -75.7 ^ ottawa, *, canada
+C ^ 308 ^ 38.982222222222226549 ^ -94.670555555555566229 ^ overland park, ks, us
+C ^ 309 ^ 37.75935 ^ -87.11931 ^ owensboro, ky, us
+C ^ 310 ^ 26.72 ^ -80.04 ^ palm beach, fl, us
+C ^ 311 ^ 33.84 ^ -116.53 ^ palm springs, ca, us
+C ^ 312 ^ -26.48 ^ -52.00 ^ palmas, *, brazil
+C ^ 313 ^ 37.441944444444438034 ^ -122.14194444444444798 ^ palo alto, ca, us
+C ^ 314 ^ 48.87 ^ 2.33 ^ paris, *, fr
+C ^ 315 ^ 48.85000 ^ 2.33330 ^ paris, *, france
+C ^ 316 ^ 34.147777777777776009 ^ -118.14361111111111313 ^ pasadena, ca, us
+C ^ 317 ^ 42.62 ^ -113.80 ^ paul, *, us
+C ^ 318 ^ 39.96365 ^ -75.05617 ^ pennsauken, nj, us
+C ^ 319 ^ 30.42111111111111299 ^ -87.216944444444450824 ^ pensacola, fl, us
+C ^ 320 ^ 39.46986 ^ -76.20574 ^ perryman, md, us
+C ^ 321 ^ -31.95 ^ 115.866 ^ perth, *, australia
+C ^ 322 ^ 44.33 ^ -78.33 ^ peterborough, *, canada
+C ^ 323 ^ 52.58 ^ -0.25 ^ peterborough, *, uk
+C ^ 324 ^ 39.952222222222225412 ^ -75.164166666666673677 ^ philadelphia, pa, us
+C ^ 325 ^ 35.083333333333336 ^ -106.65000000000001 ^ phillips lab-kirtland, nm, us
+C ^ 326 ^ 33.51623 ^ -112.02711 ^ phoenix, az, us
+C ^ 327 ^ 40.440555555555555145 ^ -79.996111111111105174 ^ pittsburgh, pa, us
+C ^ 328 ^ 37.662500000000001421 ^ -121.8736111111111029 ^ pleasanton, ca, us
+C ^ 329 ^ 41.00 ^ -82.66 ^ plymouth, oh, us
+C ^ 330 ^ 26.23686 ^ -80.13286 ^ pompano beach, fl, us
+C ^ 331 ^ -38.675 ^ 146.89 ^ port albert, *, australia
+C ^ 332 ^ 34.16208 ^ -119.20342 ^ port huenema, ca, us
+C ^ 333 ^ 45.523611111111108585 ^ -122.67500000000001137 ^ portland, or, us
+C ^ 334 ^ -29.92 ^ -50.83 ^ porto alegre, *, brazil
+C ^ 335 ^ -8.75 ^ -63.90 ^ porto velho, *, brazil
+C ^ 336 ^ 36.81 ^ -76.37 ^ portsmouth, va, us
+C ^ 337 ^ 41.69 ^ -73.92 ^ poughkeepsie, ny, us
+C ^ 338 ^ 50.10 ^ 14.43 ^ prague, *, czech republic
+C ^ 339 ^ 50.08330 ^ 14.43330 ^ prague, *, czechrepublic
+C ^ 340 ^ 26.70330 ^ -80.0500 ^ pratt-whitney, fl, us
+C ^ 341 ^ 40.348611111111111427 ^ -74.659444444444446276 ^ princeton, nj, us
+C ^ 342 ^ 41.82388888888889511 ^ -71.413333333333341102 ^ providence, ri, us
+C ^ 343 ^ 42.05 ^ -70.19 ^ provincetown, ma, us
+C ^ 344 ^ 40.233333333333334281 ^ -111.65666666666666629 ^ provo, ut, us
+C ^ 345 ^ 40.437 ^ -80.000 ^ psc, pa, us
+C ^ 346 ^ 38.29 ^ -104.58 ^ pueblo, co, us
+C ^ 347 ^ 46.8166 ^ -71.233 ^ quebec, *, canada
+C ^ 348 ^ 35.771944444444443434 ^ -78.638888888888899942 ^ raleigh, nc, us
+C ^ 349 ^ -8.10 ^ -34.88 ^ recife, *, brazil
+C ^ 350 ^ 40.56 ^ -122.41 ^ redding, ca, us
+C ^ 351 ^ 34.68407 ^ -86.65403 ^ redstone aresnal, al, us
+C ^ 352 ^ 37.486111111111114269 ^ -122.23333333333333428 ^ redwood city, ca, us
+C ^ 353 ^ 50.50 ^ -104.63 ^ regina, *, canada
+C ^ 354 ^ 39.53 ^ -119.81 ^ reno, nv, us
+C ^ 355 ^ 35.99388888888888971 ^ -78.898888888888890847 ^ research triangle park, nc, us
+C ^ 356 ^ 38.968611111111115974 ^ -77.341388888888886299 ^ reston, va, us
+C ^ 357 ^ 46.285833333333329165 ^ -119.28333333333333144 ^ richland, wa, us
+C ^ 358 ^ 37.553611111111109722 ^ -77.460555555555558271 ^ richmond, va, us
+C ^ 359 ^ 56.88 ^ 24.13 ^ riga, *, latvia
+C ^ 360 ^ 48.43 ^ -68.37 ^ rimouski, *, canada
+C ^ 361 ^ -9.98 ^ -67.82 ^ rio branco, *, brazil
+C ^ 362 ^ -23.000 ^ -43.200 ^ rio de janeiro, *, brazil
+C ^ 363 ^ 33.99 ^ -117.37 ^ riverside, ca, us
+C ^ 364 ^ 39.71733 ^ -86.29439 ^ roachdale, in, us
+C ^ 365 ^ 40.80 ^ -89.21 ^ roanoke, *, us
+C ^ 366 ^ 37.27 ^ -79.94 ^ roanoke, va, us
+C ^ 367 ^ 44.021666666666668277 ^ -92.469722222222230812 ^ rochester, mn, us
+C ^ 368 ^ 43.16 ^ -77.61 ^ rochester, ny, us
+C ^ 369 ^ 35.95731 ^ -77.81020 ^ rocky mount, nc, us
+C ^ 370 ^ 41.86670 ^ 12.61670 ^ rome, *, italy
+C ^ 371 ^ 43.22 ^ -75.45 ^ rome, ny, us
+C ^ 372 ^ 38.73 ^ -121.23 ^ roseville, ca, us
+C ^ 373 ^ 38.581666666666670551 ^ -121.4933333333333394 ^ sacramento, ca, us
+C ^ 374 ^ 45.266 ^ -66.05 ^ saint john, *, canada
+C ^ 375 ^ 44.93 ^ -122.98 ^ salem, or, us
+C ^ 376 ^ 36.67 ^ -121.66 ^ salinas, ca, us
+C ^ 377 ^ 40.760833333333330586 ^ -111.89027777777778283 ^ salt lake city, ut, us
+C ^ 378 ^ -12.97 ^ -38.48 ^ salvador, *, brazil
+C ^ 379 ^ 29.423888888888889426 ^ -98.493333333333339397 ^ san antonio, tx, us
+C ^ 380 ^ 34.11 ^ -117.29 ^ san bernardino, ca, us
+C ^ 381 ^ 32.715277777777778567 ^ -117.15638888888889824 ^ san diego, ca, us
+C ^ 382 ^ 37.774999999999998579 ^ -122.41833333333333655 ^ san francisco, ca, us
+C ^ 383 ^ 37.335277777777783115 ^ -121.89388888888889539 ^ san jose, ca, us
+C ^ 384 ^ 18.48 ^ -66.13 ^ san juan, *, pr
+C ^ 385 ^ 35.28277777777777402 ^ -120.6586111111111137 ^ san luis obispo, ca, us
+C ^ 386 ^ 37.973611111111111427 ^ -122.53000000000000114 ^ san rafael, ca, us
+C ^ 387 ^ 33.76 ^ -117.86 ^ santa ana, ca, us
+C ^ 388 ^ 34.42850 ^ -119.7219 ^ santa barbara, ca, us
+C ^ 389 ^ 37.347500000000003695 ^ -121.26749999999999829 ^ santa clara, ca, us
+C ^ 390 ^ 35.68 ^ -105.9 ^ santa fe, nm, us
+C ^ 391 ^ 38.46541 ^ -122.67958 ^ santa rosa, ca, us
+C ^ 392 ^ -23.56660 ^ -46.63320 ^ sao paulo, *, brazil
+C ^ 393 ^ 43.0 ^ 141.35 ^ sapporo, *, japan
+C ^ 394 ^ 52.17 ^ -106.67 ^ saskatoon, *, canada
+C ^ 395 ^ 32.07 ^ -81.10 ^ savannah, *, us
+C ^ 396 ^ 32.07 ^ -81.10 ^ savannah, ga, us
+C ^ 397 ^ 42.03300 ^ -88.08336 ^ schaumburg, il, us
+C ^ 398 ^ 47.606388888888886868 ^ -122.33083333333333087 ^ seattle, wa, us
+C ^ 399 ^ 31.83 ^ 130.3 ^ sendai, *, japan
+C ^ 400 ^ 37.58330 ^ 127.05000 ^ seoul, *, korea
+C ^ 401 ^ 50.22 ^ -66.37 ^ sept iles, *, canada
+C ^ 402 ^ 31.25 ^ 121.4333 ^ shanghai, *, china
+C ^ 403 ^ 45.416 ^ -71.9 ^ sherbrooke, *, canada
+C ^ 404 ^ 34.15 ^ -118.46 ^ sherman oaks, ca, us
+C ^ 405 ^ 40.74 ^ -72.88 ^ shirley, ny, us
+C ^ 406 ^ 32.50 ^ -93.75 ^ shreveport, *, us
+C ^ 407 ^ 1.16 ^ 103.51 ^ singapore, *, singapore
+C ^ 408 ^ 43.541666666666664298 ^ -96.733333333333334281 ^ sioux falls, sd, us
+C ^ 409 ^ 41.67 ^ -86.25 ^ south bend, in, us
+C ^ 410 ^ 47.67 ^ -117.44 ^ spokane, wa, us
+C ^ 411 ^ 42.10 ^ -72.59 ^ springfield, ma, us
+C ^ 412 ^ 37.21 ^ -93.30 ^ springfield, mo, us
+C ^ 413 ^ 38.78603 ^ 77.17962 ^ springfield, va, us
+C ^ 414 ^ 33.54083 ^ -81.72836 ^ srs, sc, us
+C ^ 415 ^ 34.73 ^ -86.58 ^ ssdc, al, us
+C ^ 416 ^ 45.63 ^ -72.95 ^ st-hyacinthe, *, canada
+C ^ 417 ^ 47.58 ^ -52.67 ^ st. john's, *, canada
+C ^ 418 ^ 38.62722222222222257 ^ -90.197777777777787378 ^ st. louis, mo, us
+C ^ 419 ^ 41.05 ^ -73.54 ^ stamford, *, us
+C ^ 420 ^ 37.441944444444438034 ^ -122.14194444444444798 ^ stanford, ca, us
+C ^ 421 ^ 40.793333333333329449 ^ -77.860277777777767483 ^ state college, pa, us
+C ^ 422 ^ 59.38330 ^ 18.00000 ^ stockholm, *, sweden
+C ^ 423 ^ 37.957777777777778283 ^ -121.28972222222222399 ^ stockton, ca, us
+C ^ 424 ^ 48.78 ^ 9.20 ^ stuttgart, *, de
+C ^ 425 ^ 37.36888888888888971 ^ -122.03527777777777885 ^ sunnyvale, ca, us
+C ^ 426 ^ -33.91660 ^ 151.28330 ^ sydney, *, australia
+C ^ 427 ^ 46.15 ^ -60.183 ^ sydney, *, canada
+C ^ 428 ^ 43.04805555555555685 ^ -76.14777777777779022 ^ syracuse, ny, us
+C ^ 429 ^ 47.25 ^ -122.44 ^ tacoma, wa, us
+C ^ 430 ^ 25.03330 ^ 121.63330 ^ taipei, *, taiwan
+C ^ 431 ^ 30.438055555555557419 ^ -84.280833333333333712 ^ tallahassee, fl, us
+C ^ 432 ^ 59.43 ^ 24.72 ^ tallinn, *, estonia
+C ^ 433 ^ 27.947222222222222854 ^ -82.458611111111110858 ^ tampa, fl, us
+C ^ 434 ^ -31.877 ^ 152.45 ^ taree, *, australia
+C ^ 435 ^ 32.06 ^ 34.77 ^ tel aviv, *, israel
+C ^ 436 ^ -5.15 ^ -42.77 ^ teresina, *, brazil
+C ^ 437 ^ 35.68330 ^ 139.73330 ^ tokyo, *, japan
+C ^ 438 ^ 35.75 ^ 139.50 ^ tokyo, *, jp
+C ^ 439 ^ 41.66388888888888431 ^ -83.555277777777774872 ^ toledo, oh, us
+C ^ 440 ^ 39.98 ^ -74.16 ^ toms river, nj, us
+C ^ 441 ^ 39.06 ^ -95.68 ^ topeka, ks, us
+C ^ 442 ^ 43.67000 ^ -79.37000 ^ toronto, *, canada
+C ^ 443 ^ 43.617 ^ 1.450 ^ toulouse, *, france
+C ^ 444 ^ -19.45 ^ 146.235 ^ townsville, *, australia
+C ^ 445 ^ 34.74 ^ -86.29 ^ trenton, *, us
+C ^ 446 ^ 40.22340 ^ -74.76422 ^ trenton, nj, us
+C ^ 447 ^ 46.35 ^ -72.57 ^ trois-rivieres, *, canada
+C ^ 448 ^ 42.6 ^ -83.15 ^ troy, mi, us
+C ^ 449 ^ 42.730000000000004 ^ -73.701666666666668 ^ troy, ny, us
+C ^ 450 ^ 32.221666666666671119 ^ -110.92583333333334394 ^ tucson, az, us
+C ^ 451 ^ 47.55 ^ -122.31 ^ tukwila, wa, us
+C ^ 452 ^ 36.153888888888886299 ^ -95.992500000000006821 ^ tulsa, ok, us
+C ^ 453 ^ 38.9 ^ -77.25 ^ tyson's corner, va, us
+C ^ 454 ^ 38.91865 ^ -77.23174 ^ tysons corner, va, us
+C ^ 455 ^ 40.70 ^ -74.27 ^ union, nj, us
+C ^ 456 ^ 40.869444444444447129 ^ -72.887222222222234791 ^ upton, ny, us
+C ^ 457 ^ 40.11055555555555685 ^ -88.20722222222222797 ^ urbana, il, us
+C ^ 458 ^ 30.266944444444444429 ^ -97.742777777777774872 ^ uta, tx, us
+C ^ 459 ^ 35.90 ^ 14.53 ^ valetta, *, malta
+C ^ 460 ^ 49.25000 ^ -123.08000 ^ vancouver, *, canada
+C ^ 461 ^ -2.87 ^ -52.00 ^ victoria, *, brazil
+C ^ 462 ^ 48.433 ^ -123.35 ^ victoria, *, canada
+C ^ 463 ^ 46.07 ^ -71.95 ^ victoriaville, *, canada
+C ^ 464 ^ 48.21670 ^ 16.36670 ^ vienna, *, austria
+C ^ 465 ^ 38.9 ^ -77.25 ^ vienna, va, us
+C ^ 466 ^ 20.90 ^ -156.50 ^ wailuku, hi, us
+C ^ 467 ^ 37.90201 ^ -122.04084 ^ walnut creek, ca, us
+C ^ 468 ^ 42.376388888888889994 ^ -71.236111111111114269 ^ waltham, ma, us
+C ^ 469 ^ 42.477499999999999147 ^ -83.027777777777771462 ^ warren, mi, us
+C ^ 470 ^ 52.58340 ^ 21.08330 ^ warsaw, *, poland
+C ^ 471 ^ 38.894999999999996021 ^ -77.03666666666666174 ^ washington, dc, us
+C ^ 472 ^ 43.47 ^ -80.53 ^ waterloo, *, canada
+C ^ 473 ^ 44.35 ^ -70.07 ^ wayne, *, us
+C ^ 474 ^ 39.758888888888890278 ^ -84.191666666666677088 ^ waynesville, oh, us
+C ^ 475 ^ 41.82388888888889511 ^ -71.413333333333341102 ^ west greenwich, ri, us
+C ^ 476 ^ 40.798611111111107164 ^ -74.239444444444444571 ^ west orange, nj, us
+C ^ 477 ^ 26.71 ^ -80.07 ^ west palm beach, fl, us
+C ^ 478 ^ 32.87861 ^ -85.16786 ^ west point, ga, us
+C ^ 479 ^ 41.36234 ^ -074.02731 ^ west point, ny, us
+C ^ 480 ^ 41.020285 ^ -73.75742 ^ white plains, ny, us
+C ^ 481 ^ 32.38 ^ -106.49 ^ white sands, nm, us
+C ^ 482 ^ 41.740833333333334565 ^ -87.860277777777767483 ^ willow springs, il, us
+C ^ 483 ^ 39.745833333333337123 ^ -75.546944444444449118 ^ wilmington, de, us
+C ^ 484 ^ 34.23670 ^ -77.92330 ^ wilmington, nc, us
+C ^ 485 ^ 48.97 ^ -55.67 ^ windsor, *, canada
+C ^ 486 ^ 49.9 ^ -97.15 ^ winnipeg, *, canada
+C ^ 487 ^ 36.10 ^ -80.22 ^ winston salem, *, us
+C ^ 488 ^ 36.10 ^ -80.22 ^ winston salem, nc, us
+C ^ 489 ^ 41.3080555555556 ^ -72.9286111111111 ^ yale, ct, us
+C ^ 490 ^ 43.8333 ^ -66.115 ^ yarmouth, *, canada
+C ^ 491 ^ 35.45 ^ 139.5 ^ yokohama, *, japan
+C ^ 492 ^ 32.70 ^ -114.64 ^ yuma, az, us
+C ^ 493 ^ 47.367 ^ 8.533 ^ zurich, *, switzerland
+I ^ 0 ^ R ^ AAI
+P ^ 0 ^ 471 ^ 155
+P ^ 23 ^ 471 ^ 155
+P ^ 40 ^ 23 ^ 155
+P ^ 127 ^ 23 ^ 155
+P ^ 127 ^ 98 ^ 155
+P ^ 127 ^ 373 ^ 155
+P ^ 127 ^ 471 ^ 155
+P ^ 224 ^ 23 ^ 155
+P ^ 224 ^ 325 ^ 155
+P ^ 224 ^ 381 ^ 155
+P ^ 257 ^ 23 ^ 155
+P ^ 373 ^ 23 ^ 155
+P ^ 373 ^ 224 ^ 155
+P ^ 471 ^ 471 ^ 155
+E ^ AAI
 
-I^1^R^AEROnet
-c^0^
-L^0^53^4
-L^0^148^5
-L^0^181^5
-L^0^265^5
-L^0^316^4
-L^0^265^5
-L^0^351^5
-P^53^181^1.5
-P^53^205^3
-P^53^217^1.5
-P^53^240^1.5
-P^53^340^1.5
-P^181^53^2.5
-P^181^316^2.5
-P^205^119^1.5
-P^205^274^1.5
-P^205^275^1.5
-P^205^421^1.5
-P^210^56^1.5
-P^210^74^1.5
-P^210^98^1.5
-P^210^105^1.5
-P^210^186^1.5
-P^210^265^45
-P^265^205^45
-P^265^316^3
-P^265^373^.56
-P^265^398^1.5
-P^316^181^1.5
-E^AEROnet
+I ^ 1 ^ R ^ AEROnet
+c ^ 0 ^ 
+L ^ 0 ^ 53 ^ 4
+L ^ 0 ^ 148 ^ 5
+L ^ 0 ^ 181 ^ 5
+L ^ 0 ^ 265 ^ 5
+L ^ 0 ^ 316 ^ 4
+L ^ 0 ^ 265 ^ 5
+L ^ 0 ^ 351 ^ 5
+P ^ 53 ^ 181 ^ 1.5
+P ^ 53 ^ 205 ^ 3
+P ^ 53 ^ 217 ^ 1.5
+P ^ 53 ^ 240 ^ 1.5
+P ^ 53 ^ 340 ^ 1.5
+P ^ 181 ^ 53 ^ 2.5
+P ^ 181 ^ 316 ^ 2.5
+P ^ 205 ^ 119 ^ 1.5
+P ^ 205 ^ 274 ^ 1.5
+P ^ 205 ^ 275 ^ 1.5
+P ^ 205 ^ 421 ^ 1.5
+P ^ 210 ^ 56 ^ 1.5
+P ^ 210 ^ 74 ^ 1.5
+P ^ 210 ^ 98 ^ 1.5
+P ^ 210 ^ 105 ^ 1.5
+P ^ 210 ^ 186 ^ 1.5
+P ^ 210 ^ 265 ^ 45
+P ^ 265 ^ 205 ^ 45
+P ^ 265 ^ 316 ^ 3
+P ^ 265 ^ 373 ^ .56
+P ^ 265 ^ 398 ^ 1.5
+P ^ 316 ^ 181 ^ 1.5
+E ^ AEROnet
 
-I^2^I^AGIS (updated 03/02/2000)
-P^4^327^822
-P^4^474^822
-P^7^390^-1
-P^10^170^822
-P^10^327^822
-P^15^381^155
-P^23^214^45
-P^23^297^45
-P^23^471^45
-P^26^103^155
-P^30^181^-1
-P^30^379^-1
-P^32^155^155
-P^32^224^155
-P^39^121^155
-P^39^409^155
-P^63^56^155
-P^63^170^822
-P^63^471^822
-P^88^166^155
-P^95^372^155
-P^98^186^822
-P^98^474^822
-P^101^41^155
-P^101^115^155
-P^103^88^155
-P^105^5^155
-P^115^214^45
-P^115^326^45
-P^121^124^155
-P^122^163^822
-P^122^192^822
-P^124^439^155
-P^127^105^45
-P^127^186^155
-P^127^256^45
-P^132^165^155
-P^132^256^155
-P^136^7^-1
-P^136^379^-1
-P^140^242^155
-P^147^190^45
-P^147^248^155
-P^147^477^155
-P^153^56^155
-P^157^297^155
-P^165^255^155
-P^181^23^155
-P^181^41^-1
-P^181^492^155
-P^190^120^155
-P^190^396^155
-P^192^452^155
-P^203^41^-1
-P^203^202^-1
-P^204^157^155
-P^206^224^-1
-P^206^224^45
-P^206^326^45
-P^224^15^155
-P^224^388^155
-P^242^350^155
-P^244^120^155
-P^244^477^155
-P^255^127^155
-P^264^202^-1
-P^264^258^-1
-P^296^373^822
-P^297^304^155
-P^297^433^155
-P^299^115^155
-P^299^452^155
-P^319^109^-1
-P^319^258^-1
-P^333^375^155
-P^333^398^155
-P^336^293^155
-P^344^163^822
-P^346^102^-1
-P^348^369^155
-P^350^95^155
-P^354^373^822
-P^354^377^822
-P^358^153^155
-P^358^293^155
-P^369^336^155
-P^372^373^155
-P^373^423^155
-P^375^140^155
-P^377^206^-1
-P^377^333^-1
-P^377^344^822
-P^381^492^155
-P^382^63^155
-P^382^398^155
-P^385^296^155
-P^385^388^155
-P^390^346^-1
-P^396^26^155
-P^398^333^-1
-P^418^186^822
-P^418^192^822
-P^423^155^155
-P^439^105^155
-P^450^136^-1
-P^450^326^-1
-P^471^56^45
-P^471^105^45
-P^488^147^155
-P^488^166^155
-P^488^348^155
-P^492^326^155
-E^AGIS (updated 03/02/2000)
+I ^ 2 ^ I ^ AGIS
+P ^ 4 ^ 327 ^ 822
+P ^ 4 ^ 474 ^ 822
+P ^ 7 ^ 390 ^ -1
+P ^ 10 ^ 170 ^ 822
+P ^ 10 ^ 327 ^ 822
+P ^ 15 ^ 381 ^ 155
+P ^ 23 ^ 214 ^ 45
+P ^ 23 ^ 297 ^ 45
+P ^ 23 ^ 471 ^ 45
+P ^ 26 ^ 103 ^ 155
+P ^ 30 ^ 181 ^ -1
+P ^ 30 ^ 379 ^ -1
+P ^ 32 ^ 155 ^ 155
+P ^ 32 ^ 224 ^ 155
+P ^ 39 ^ 121 ^ 155
+P ^ 39 ^ 409 ^ 155
+P ^ 63 ^ 56 ^ 155
+P ^ 63 ^ 170 ^ 822
+P ^ 63 ^ 471 ^ 822
+P ^ 88 ^ 166 ^ 155
+P ^ 95 ^ 372 ^ 155
+P ^ 98 ^ 186 ^ 822
+P ^ 98 ^ 474 ^ 822
+P ^ 101 ^ 41 ^ 155
+P ^ 101 ^ 115 ^ 155
+P ^ 103 ^ 88 ^ 155
+P ^ 105 ^ 5 ^ 155
+P ^ 115 ^ 214 ^ 45
+P ^ 115 ^ 326 ^ 45
+P ^ 121 ^ 124 ^ 155
+P ^ 122 ^ 163 ^ 822
+P ^ 122 ^ 192 ^ 822
+P ^ 124 ^ 439 ^ 155
+P ^ 127 ^ 105 ^ 45
+P ^ 127 ^ 186 ^ 155
+P ^ 127 ^ 256 ^ 45
+P ^ 132 ^ 165 ^ 155
+P ^ 132 ^ 256 ^ 155
+P ^ 136 ^ 7 ^ -1
+P ^ 136 ^ 379 ^ -1
+P ^ 140 ^ 242 ^ 155
+P ^ 147 ^ 190 ^ 45
+P ^ 147 ^ 248 ^ 155
+P ^ 147 ^ 477 ^ 155
+P ^ 153 ^ 56 ^ 155
+P ^ 157 ^ 297 ^ 155
+P ^ 165 ^ 255 ^ 155
+P ^ 181 ^ 23 ^ 155
+P ^ 181 ^ 41 ^ -1
+P ^ 181 ^ 492 ^ 155
+P ^ 190 ^ 120 ^ 155
+P ^ 190 ^ 396 ^ 155
+P ^ 192 ^ 452 ^ 155
+P ^ 203 ^ 41 ^ -1
+P ^ 203 ^ 202 ^ -1
+P ^ 204 ^ 157 ^ 155
+P ^ 206 ^ 224 ^ -1
+P ^ 206 ^ 224 ^ 45
+P ^ 206 ^ 326 ^ 45
+P ^ 224 ^ 15 ^ 155
+P ^ 224 ^ 388 ^ 155
+P ^ 242 ^ 350 ^ 155
+P ^ 244 ^ 120 ^ 155
+P ^ 244 ^ 477 ^ 155
+P ^ 255 ^ 127 ^ 155
+P ^ 264 ^ 202 ^ -1
+P ^ 264 ^ 258 ^ -1
+P ^ 296 ^ 373 ^ 822
+P ^ 297 ^ 304 ^ 155
+P ^ 297 ^ 433 ^ 155
+P ^ 299 ^ 115 ^ 155
+P ^ 299 ^ 452 ^ 155
+P ^ 319 ^ 109 ^ -1
+P ^ 319 ^ 258 ^ -1
+P ^ 333 ^ 375 ^ 155
+P ^ 333 ^ 398 ^ 155
+P ^ 336 ^ 293 ^ 155
+P ^ 344 ^ 163 ^ 822
+P ^ 346 ^ 102 ^ -1
+P ^ 348 ^ 369 ^ 155
+P ^ 350 ^ 95 ^ 155
+P ^ 354 ^ 373 ^ 822
+P ^ 354 ^ 377 ^ 822
+P ^ 358 ^ 153 ^ 155
+P ^ 358 ^ 293 ^ 155
+P ^ 369 ^ 336 ^ 155
+P ^ 372 ^ 373 ^ 155
+P ^ 373 ^ 423 ^ 155
+P ^ 375 ^ 140 ^ 155
+P ^ 377 ^ 206 ^ -1
+P ^ 377 ^ 333 ^ -1
+P ^ 377 ^ 344 ^ 822
+P ^ 381 ^ 492 ^ 155
+P ^ 382 ^ 63 ^ 155
+P ^ 382 ^ 398 ^ 155
+P ^ 385 ^ 296 ^ 155
+P ^ 385 ^ 388 ^ 155
+P ^ 390 ^ 346 ^ -1
+P ^ 396 ^ 26 ^ 155
+P ^ 398 ^ 333 ^ -1
+P ^ 418 ^ 186 ^ 822
+P ^ 418 ^ 192 ^ 822
+P ^ 423 ^ 155 ^ 155
+P ^ 439 ^ 105 ^ 155
+P ^ 450 ^ 136 ^ -1
+P ^ 450 ^ 326 ^ -1
+P ^ 471 ^ 56 ^ 45
+P ^ 471 ^ 105 ^ 45
+P ^ 488 ^ 147 ^ 155
+P ^ 488 ^ 166 ^ 155
+P ^ 488 ^ 348 ^ 155
+P ^ 492 ^ 326 ^ 155
+E ^ AGIS
 
-I^3^I^AT&T WorldNet (updated 07/08/2000)
-P^23^51^45
-P^23^53^155
-P^23^88^155
-P^23^88^45
-P^23^103^155
-P^23^103^45
-P^23^105^155
-P^23^105^45
-P^23^115^45
-P^23^270^155
-P^23^270^45
-P^23^304^45
-P^23^418^45
-P^23^433^45
-P^23^471^2488
-P^23^471^45
-P^30^181^2488
-P^30^379^155
-P^51^104^45
-P^51^285^45
-P^51^480^45
-P^56^124^45
-P^56^285^155
-P^61^418^45
-P^79^55^155
-P^79^56^155
-P^79^94^2488
-P^79^124^45
-P^79^150^155
-P^79^171^2488
-P^79^285^45
-P^79^333^155
-P^94^53^155
-P^94^53^45
-P^94^98^155
-P^94^98^45
-P^94^99^155
-P^94^99^45
-P^94^115^45
-P^94^122^45
-P^94^124^2488
-P^94^124^45
-P^94^164^45
-P^94^186^155
-P^94^186^45
-P^94^193^2488
-P^94^255^155
-P^94^255^45
-P^94^256^2488
-P^94^256^45
-P^94^285^45
-P^94^317^45
-P^94^327^45
-P^94^329^155
-P^94^329^45
-P^94^382^45
-P^94^398^45
-P^94^418^2488
-P^94^418^45
-P^94^471^45
-P^94^480^45
-P^105^51^45
-P^105^124^45
-P^105^285^45
-P^105^397^45
-P^115^23^2488
-P^115^30^2488
-P^115^148^155
-P^115^148^45
-P^115^181^2488
-P^115^181^45
-P^115^193^2488
-P^115^224^45
-P^115^285^45
-P^115^299^155
-P^115^299^45
-P^115^304^2488
-P^115^326^45
-P^115^382^45
-P^115^418^45
-P^115^452^155
-P^115^452^45
-P^115^471^45
-P^122^7^45
-P^122^102^155
-P^122^102^45
-P^122^115^2488
-P^122^377^45
-P^122^382^45
-P^124^77^45
-P^124^104^45
-P^124^418^45
-P^124^442^45
-P^181^283^155
-P^181^304^45
-P^193^381^2488
-P^193^412^155
-P^193^418^2488
-P^224^15^155
-P^224^15^45
-P^224^158^155
-P^224^158^45
-P^224^193^2488
-P^224^206^155
-P^224^206^45
-P^224^326^155
-P^224^326^45
-P^224^381^155
-P^224^382^155
-P^224^382^45
-P^224^397^45
-P^224^404^155
-P^224^404^45
-P^249^471^45
-P^256^300^2488
-P^263^442^45
-P^263^480^45
-P^285^6^155
-P^285^6^45
-P^285^60^155
-P^285^60^45
-P^285^77^45
-P^285^79^10000
-P^285^79^2488
-P^285^94^2488
-P^285^104^45
-P^285^150^155
-P^285^150^45
-P^285^171^2488
-P^285^285^155
-P^285^285^45
-P^285^287^155
-P^285^287^45
-P^285^324^155
-P^285^324^2488
-P^285^324^45
-P^285^327^2488
-P^285^382^45
-P^285^398^45
-P^285^419^155
-P^285^419^45
-P^285^428^155
-P^285^428^45
-P^285^433^45
-P^285^471^45
-P^285^473^155
-P^285^473^45
-P^285^475^155
-P^285^475^45
-P^285^480^155
-P^285^480^45
-P^300^123^155
-P^300^193^2488
-P^300^193^45
-P^304^23^2488
-P^304^147^155
-P^304^248^155
-P^304^285^45
-P^304^298^155
-P^304^310^155
-P^304^382^45
-P^324^170^155
-P^324^293^155
-P^324^327^45
-P^324^381^155
-P^324^383^155
-P^324^471^155
-P^324^480^45
-P^326^7^155
-P^326^115^2488
-P^326^381^45
-P^327^5^155
-P^327^368^155
-P^333^382^45
-P^333^398^45
-P^373^377^2488
-P^373^382^2488
-P^377^122^2488
-P^381^326^2488
-P^381^383^155
-P^382^94^2488
-P^382^122^2488
-P^382^180^45
-P^382^296^155
-P^382^296^45
-P^382^352^155
-P^382^352^45
-P^382^383^155
-P^382^383^45
-P^382^418^2488
-P^382^460^45
-P^383^398^45
-P^397^94^45
-P^398^16^45
-P^398^94^2488
-P^398^333^155
-P^398^382^2488
-P^398^410^155
-P^398^410^45
-P^418^214^155
-P^418^214^45
-P^418^245^155
-P^418^413^45
-P^471^250^45
-P^471^285^2488
-P^471^293^155
-P^471^304^45
-P^471^324^2488
-P^471^348^155
-P^471^348^45
-P^471^358^155
-P^471^358^45
-P^471^418^2488
-E^AT&T WorldNet (updated 07/08/2000)
+I ^ 3 ^ I ^ AT&T WorldNet
+P ^ 23 ^ 51 ^ 45
+P ^ 23 ^ 53 ^ 155
+P ^ 23 ^ 88 ^ 155
+P ^ 23 ^ 88 ^ 45
+P ^ 23 ^ 103 ^ 155
+P ^ 23 ^ 103 ^ 45
+P ^ 23 ^ 105 ^ 155
+P ^ 23 ^ 105 ^ 45
+P ^ 23 ^ 115 ^ 45
+P ^ 23 ^ 270 ^ 155
+P ^ 23 ^ 270 ^ 45
+P ^ 23 ^ 304 ^ 45
+P ^ 23 ^ 418 ^ 45
+P ^ 23 ^ 433 ^ 45
+P ^ 23 ^ 471 ^ 2488
+P ^ 23 ^ 471 ^ 45
+P ^ 30 ^ 181 ^ 2488
+P ^ 30 ^ 379 ^ 155
+P ^ 51 ^ 104 ^ 45
+P ^ 51 ^ 285 ^ 45
+P ^ 51 ^ 480 ^ 45
+P ^ 56 ^ 124 ^ 45
+P ^ 56 ^ 285 ^ 155
+P ^ 61 ^ 418 ^ 45
+P ^ 79 ^ 55 ^ 155
+P ^ 79 ^ 56 ^ 155
+P ^ 79 ^ 94 ^ 2488
+P ^ 79 ^ 124 ^ 45
+P ^ 79 ^ 150 ^ 155
+P ^ 79 ^ 171 ^ 2488
+P ^ 79 ^ 285 ^ 45
+P ^ 79 ^ 333 ^ 155
+P ^ 94 ^ 53 ^ 155
+P ^ 94 ^ 53 ^ 45
+P ^ 94 ^ 98 ^ 155
+P ^ 94 ^ 98 ^ 45
+P ^ 94 ^ 99 ^ 155
+P ^ 94 ^ 99 ^ 45
+P ^ 94 ^ 115 ^ 45
+P ^ 94 ^ 122 ^ 45
+P ^ 94 ^ 124 ^ 2488
+P ^ 94 ^ 124 ^ 45
+P ^ 94 ^ 164 ^ 45
+P ^ 94 ^ 186 ^ 155
+P ^ 94 ^ 186 ^ 45
+P ^ 94 ^ 193 ^ 2488
+P ^ 94 ^ 255 ^ 155
+P ^ 94 ^ 255 ^ 45
+P ^ 94 ^ 256 ^ 2488
+P ^ 94 ^ 256 ^ 45
+P ^ 94 ^ 285 ^ 45
+P ^ 94 ^ 317 ^ 45
+P ^ 94 ^ 327 ^ 45
+P ^ 94 ^ 329 ^ 155
+P ^ 94 ^ 329 ^ 45
+P ^ 94 ^ 382 ^ 45
+P ^ 94 ^ 398 ^ 45
+P ^ 94 ^ 418 ^ 2488
+P ^ 94 ^ 418 ^ 45
+P ^ 94 ^ 471 ^ 45
+P ^ 94 ^ 480 ^ 45
+P ^ 105 ^ 51 ^ 45
+P ^ 105 ^ 124 ^ 45
+P ^ 105 ^ 285 ^ 45
+P ^ 105 ^ 397 ^ 45
+P ^ 115 ^ 23 ^ 2488
+P ^ 115 ^ 30 ^ 2488
+P ^ 115 ^ 148 ^ 155
+P ^ 115 ^ 148 ^ 45
+P ^ 115 ^ 181 ^ 2488
+P ^ 115 ^ 181 ^ 45
+P ^ 115 ^ 193 ^ 2488
+P ^ 115 ^ 224 ^ 45
+P ^ 115 ^ 285 ^ 45
+P ^ 115 ^ 299 ^ 155
+P ^ 115 ^ 299 ^ 45
+P ^ 115 ^ 304 ^ 2488
+P ^ 115 ^ 326 ^ 45
+P ^ 115 ^ 382 ^ 45
+P ^ 115 ^ 418 ^ 45
+P ^ 115 ^ 452 ^ 155
+P ^ 115 ^ 452 ^ 45
+P ^ 115 ^ 471 ^ 45
+P ^ 122 ^ 7 ^ 45
+P ^ 122 ^ 102 ^ 155
+P ^ 122 ^ 102 ^ 45
+P ^ 122 ^ 115 ^ 2488
+P ^ 122 ^ 377 ^ 45
+P ^ 122 ^ 382 ^ 45
+P ^ 124 ^ 77 ^ 45
+P ^ 124 ^ 104 ^ 45
+P ^ 124 ^ 418 ^ 45
+P ^ 124 ^ 442 ^ 45
+P ^ 181 ^ 283 ^ 155
+P ^ 181 ^ 304 ^ 45
+P ^ 193 ^ 381 ^ 2488
+P ^ 193 ^ 412 ^ 155
+P ^ 193 ^ 418 ^ 2488
+P ^ 224 ^ 15 ^ 155
+P ^ 224 ^ 15 ^ 45
+P ^ 224 ^ 158 ^ 155
+P ^ 224 ^ 158 ^ 45
+P ^ 224 ^ 193 ^ 2488
+P ^ 224 ^ 206 ^ 155
+P ^ 224 ^ 206 ^ 45
+P ^ 224 ^ 326 ^ 155
+P ^ 224 ^ 326 ^ 45
+P ^ 224 ^ 381 ^ 155
+P ^ 224 ^ 382 ^ 155
+P ^ 224 ^ 382 ^ 45
+P ^ 224 ^ 397 ^ 45
+P ^ 224 ^ 404 ^ 155
+P ^ 224 ^ 404 ^ 45
+P ^ 249 ^ 471 ^ 45
+P ^ 256 ^ 300 ^ 2488
+P ^ 263 ^ 442 ^ 45
+P ^ 263 ^ 480 ^ 45
+P ^ 285 ^ 6 ^ 155
+P ^ 285 ^ 6 ^ 45
+P ^ 285 ^ 60 ^ 155
+P ^ 285 ^ 60 ^ 45
+P ^ 285 ^ 77 ^ 45
+P ^ 285 ^ 79 ^ 10000
+P ^ 285 ^ 79 ^ 2488
+P ^ 285 ^ 94 ^ 2488
+P ^ 285 ^ 104 ^ 45
+P ^ 285 ^ 150 ^ 155
+P ^ 285 ^ 150 ^ 45
+P ^ 285 ^ 171 ^ 2488
+P ^ 285 ^ 285 ^ 155
+P ^ 285 ^ 285 ^ 45
+P ^ 285 ^ 287 ^ 155
+P ^ 285 ^ 287 ^ 45
+P ^ 285 ^ 324 ^ 155
+P ^ 285 ^ 324 ^ 2488
+P ^ 285 ^ 324 ^ 45
+P ^ 285 ^ 327 ^ 2488
+P ^ 285 ^ 382 ^ 45
+P ^ 285 ^ 398 ^ 45
+P ^ 285 ^ 419 ^ 155
+P ^ 285 ^ 419 ^ 45
+P ^ 285 ^ 428 ^ 155
+P ^ 285 ^ 428 ^ 45
+P ^ 285 ^ 433 ^ 45
+P ^ 285 ^ 471 ^ 45
+P ^ 285 ^ 473 ^ 155
+P ^ 285 ^ 473 ^ 45
+P ^ 285 ^ 475 ^ 155
+P ^ 285 ^ 475 ^ 45
+P ^ 285 ^ 480 ^ 155
+P ^ 285 ^ 480 ^ 45
+P ^ 300 ^ 123 ^ 155
+P ^ 300 ^ 193 ^ 2488
+P ^ 300 ^ 193 ^ 45
+P ^ 304 ^ 23 ^ 2488
+P ^ 304 ^ 147 ^ 155
+P ^ 304 ^ 248 ^ 155
+P ^ 304 ^ 285 ^ 45
+P ^ 304 ^ 298 ^ 155
+P ^ 304 ^ 310 ^ 155
+P ^ 304 ^ 382 ^ 45
+P ^ 324 ^ 170 ^ 155
+P ^ 324 ^ 293 ^ 155
+P ^ 324 ^ 327 ^ 45
+P ^ 324 ^ 381 ^ 155
+P ^ 324 ^ 383 ^ 155
+P ^ 324 ^ 471 ^ 155
+P ^ 324 ^ 480 ^ 45
+P ^ 326 ^ 7 ^ 155
+P ^ 326 ^ 115 ^ 2488
+P ^ 326 ^ 381 ^ 45
+P ^ 327 ^ 5 ^ 155
+P ^ 327 ^ 368 ^ 155
+P ^ 333 ^ 382 ^ 45
+P ^ 333 ^ 398 ^ 45
+P ^ 373 ^ 377 ^ 2488
+P ^ 373 ^ 382 ^ 2488
+P ^ 377 ^ 122 ^ 2488
+P ^ 381 ^ 326 ^ 2488
+P ^ 381 ^ 383 ^ 155
+P ^ 382 ^ 94 ^ 2488
+P ^ 382 ^ 122 ^ 2488
+P ^ 382 ^ 180 ^ 45
+P ^ 382 ^ 296 ^ 155
+P ^ 382 ^ 296 ^ 45
+P ^ 382 ^ 352 ^ 155
+P ^ 382 ^ 352 ^ 45
+P ^ 382 ^ 383 ^ 155
+P ^ 382 ^ 383 ^ 45
+P ^ 382 ^ 418 ^ 2488
+P ^ 382 ^ 460 ^ 45
+P ^ 383 ^ 398 ^ 45
+P ^ 397 ^ 94 ^ 45
+P ^ 398 ^ 16 ^ 45
+P ^ 398 ^ 94 ^ 2488
+P ^ 398 ^ 333 ^ 155
+P ^ 398 ^ 382 ^ 2488
+P ^ 398 ^ 410 ^ 155
+P ^ 398 ^ 410 ^ 45
+P ^ 418 ^ 214 ^ 155
+P ^ 418 ^ 214 ^ 45
+P ^ 418 ^ 245 ^ 155
+P ^ 418 ^ 413 ^ 45
+P ^ 471 ^ 250 ^ 45
+P ^ 471 ^ 285 ^ 2488
+P ^ 471 ^ 293 ^ 155
+P ^ 471 ^ 304 ^ 45
+P ^ 471 ^ 324 ^ 2488
+P ^ 471 ^ 348 ^ 155
+P ^ 471 ^ 348 ^ 45
+P ^ 471 ^ 358 ^ 155
+P ^ 471 ^ 358 ^ 45
+P ^ 471 ^ 418 ^ 2488
+E ^ AT&T WorldNet
 
-I^4^I^Allegiance Telecom  (updated 03/15/2002)
-P^6^56^45
-P^6^285^45
-P^23^88^45
-P^23^115^2488
-P^23^115^622
-P^23^190^45
-P^23^248^155
-P^23^248^622
-P^23^283^45
-P^23^348^155
-P^30^115^45
-P^30^379^45
-P^34^446^45
-P^34^471^2488
-P^34^471^45
-P^56^475^45
-P^56^475^622
-P^88^348^45
-P^94^23^155
-P^94^115^155
-P^94^115^2488
-P^94^115^622
-P^94^124^45
-P^94^186^45
-P^94^193^155
-P^94^255^45
-P^94^256^155
-P^94^285^155
-P^94^285^2488
-P^94^285^622
-P^94^300^45
-P^94^418^45
-P^94^471^155
-P^94^471^2488
-P^94^471^622
-P^98^99^45
-P^98^124^45
-P^98^186^45
-P^99^72^45
-P^99^124^45
-P^99^225^45
-P^115^181^155
-P^115^181^45
-P^115^193^155
-P^115^224^2488
-P^115^224^622
-P^115^299^45
-P^115^406^45
-P^115^471^155
-P^122^256^45
-P^122^326^45
-P^147^190^45
-P^181^23^45
-P^181^283^45
-P^181^379^45
-P^224^181^45
-P^224^206^45
-P^224^326^45
-P^224^381^45
-P^224^382^155
-P^245^270^45
-P^245^406^45
-P^248^147^45
-P^248^433^155
-P^248^433^45
-P^248^471^155
-P^256^94^45
-P^256^122^155
-P^256^255^45
-P^270^225^45
-P^270^304^45
-P^285^56^155
-P^285^286^2488
-P^285^286^45
-P^285^324^45
-P^285^324^622
-P^285^471^2488
-P^285^471^622
-P^285^475^155
-P^287^324^2488
-P^304^190^45
-P^304^433^45
-P^324^34^2488
-P^324^34^622
-P^326^181^45
-P^333^382^155
-P^333^398^155
-P^358^88^45
-P^358^293^45
-P^358^348^45
-P^377^122^155
-P^377^122^45
-P^377^206^45
-P^377^373^45
-P^377^382^155
-P^377^398^155
-P^382^94^155
-P^382^94^2488
-P^382^94^622
-P^382^115^2488
-P^382^115^45
-P^382^115^622
-P^382^224^2488
-P^382^224^45
-P^382^224^622
-P^382^300^45
-P^382^373^45
-P^382^381^45
-P^382^471^155
-P^382^471^45
-P^471^23^2488
-P^471^23^622
-P^471^115^2488
-P^471^115^622
-P^471^285^155
-P^471^293^45
-P^471^324^155
-P^471^327^155
-P^471^327^45
-P^471^348^155
-P^471^358^45
-P^475^285^45
-E^Allegiance Telecom  (updated 03/15/2002)
+I ^ 4 ^ I ^ Allegiance Telecom
+P ^ 6 ^ 56 ^ 45
+P ^ 6 ^ 285 ^ 45
+P ^ 23 ^ 88 ^ 45
+P ^ 23 ^ 115 ^ 2488
+P ^ 23 ^ 115 ^ 622
+P ^ 23 ^ 190 ^ 45
+P ^ 23 ^ 248 ^ 155
+P ^ 23 ^ 248 ^ 622
+P ^ 23 ^ 283 ^ 45
+P ^ 23 ^ 348 ^ 155
+P ^ 30 ^ 115 ^ 45
+P ^ 30 ^ 379 ^ 45
+P ^ 34 ^ 446 ^ 45
+P ^ 34 ^ 471 ^ 2488
+P ^ 34 ^ 471 ^ 45
+P ^ 56 ^ 475 ^ 45
+P ^ 56 ^ 475 ^ 622
+P ^ 88 ^ 348 ^ 45
+P ^ 94 ^ 23 ^ 155
+P ^ 94 ^ 115 ^ 155
+P ^ 94 ^ 115 ^ 2488
+P ^ 94 ^ 115 ^ 622
+P ^ 94 ^ 124 ^ 45
+P ^ 94 ^ 186 ^ 45
+P ^ 94 ^ 193 ^ 155
+P ^ 94 ^ 255 ^ 45
+P ^ 94 ^ 256 ^ 155
+P ^ 94 ^ 285 ^ 155
+P ^ 94 ^ 285 ^ 2488
+P ^ 94 ^ 285 ^ 622
+P ^ 94 ^ 300 ^ 45
+P ^ 94 ^ 418 ^ 45
+P ^ 94 ^ 471 ^ 155
+P ^ 94 ^ 471 ^ 2488
+P ^ 94 ^ 471 ^ 622
+P ^ 98 ^ 99 ^ 45
+P ^ 98 ^ 124 ^ 45
+P ^ 98 ^ 186 ^ 45
+P ^ 99 ^ 72 ^ 45
+P ^ 99 ^ 124 ^ 45
+P ^ 99 ^ 225 ^ 45
+P ^ 115 ^ 181 ^ 155
+P ^ 115 ^ 181 ^ 45
+P ^ 115 ^ 193 ^ 155
+P ^ 115 ^ 224 ^ 2488
+P ^ 115 ^ 224 ^ 622
+P ^ 115 ^ 299 ^ 45
+P ^ 115 ^ 406 ^ 45
+P ^ 115 ^ 471 ^ 155
+P ^ 122 ^ 256 ^ 45
+P ^ 122 ^ 326 ^ 45
+P ^ 147 ^ 190 ^ 45
+P ^ 181 ^ 23 ^ 45
+P ^ 181 ^ 283 ^ 45
+P ^ 181 ^ 379 ^ 45
+P ^ 224 ^ 181 ^ 45
+P ^ 224 ^ 206 ^ 45
+P ^ 224 ^ 326 ^ 45
+P ^ 224 ^ 381 ^ 45
+P ^ 224 ^ 382 ^ 155
+P ^ 245 ^ 270 ^ 45
+P ^ 245 ^ 406 ^ 45
+P ^ 248 ^ 147 ^ 45
+P ^ 248 ^ 433 ^ 155
+P ^ 248 ^ 433 ^ 45
+P ^ 248 ^ 471 ^ 155
+P ^ 256 ^ 94 ^ 45
+P ^ 256 ^ 122 ^ 155
+P ^ 256 ^ 255 ^ 45
+P ^ 270 ^ 225 ^ 45
+P ^ 270 ^ 304 ^ 45
+P ^ 285 ^ 56 ^ 155
+P ^ 285 ^ 286 ^ 2488
+P ^ 285 ^ 286 ^ 45
+P ^ 285 ^ 324 ^ 45
+P ^ 285 ^ 324 ^ 622
+P ^ 285 ^ 471 ^ 2488
+P ^ 285 ^ 471 ^ 622
+P ^ 285 ^ 475 ^ 155
+P ^ 287 ^ 324 ^ 2488
+P ^ 304 ^ 190 ^ 45
+P ^ 304 ^ 433 ^ 45
+P ^ 324 ^ 34 ^ 2488
+P ^ 324 ^ 34 ^ 622
+P ^ 326 ^ 181 ^ 45
+P ^ 333 ^ 382 ^ 155
+P ^ 333 ^ 398 ^ 155
+P ^ 358 ^ 88 ^ 45
+P ^ 358 ^ 293 ^ 45
+P ^ 358 ^ 348 ^ 45
+P ^ 377 ^ 122 ^ 155
+P ^ 377 ^ 122 ^ 45
+P ^ 377 ^ 206 ^ 45
+P ^ 377 ^ 373 ^ 45
+P ^ 377 ^ 382 ^ 155
+P ^ 377 ^ 398 ^ 155
+P ^ 382 ^ 94 ^ 155
+P ^ 382 ^ 94 ^ 2488
+P ^ 382 ^ 94 ^ 622
+P ^ 382 ^ 115 ^ 2488
+P ^ 382 ^ 115 ^ 45
+P ^ 382 ^ 115 ^ 622
+P ^ 382 ^ 224 ^ 2488
+P ^ 382 ^ 224 ^ 45
+P ^ 382 ^ 224 ^ 622
+P ^ 382 ^ 300 ^ 45
+P ^ 382 ^ 373 ^ 45
+P ^ 382 ^ 381 ^ 45
+P ^ 382 ^ 471 ^ 155
+P ^ 382 ^ 471 ^ 45
+P ^ 471 ^ 23 ^ 2488
+P ^ 471 ^ 23 ^ 622
+P ^ 471 ^ 115 ^ 2488
+P ^ 471 ^ 115 ^ 622
+P ^ 471 ^ 285 ^ 155
+P ^ 471 ^ 293 ^ 45
+P ^ 471 ^ 324 ^ 155
+P ^ 471 ^ 327 ^ 155
+P ^ 471 ^ 327 ^ 45
+P ^ 471 ^ 348 ^ 155
+P ^ 471 ^ 358 ^ 45
+P ^ 475 ^ 285 ^ 45
+E ^ Allegiance Telecom
 
-I^5^I^At Home Network (updated 01/16/2000)
-P^34^471^2488
-P^38^181^2488
-P^52^222^2488
-P^56^171^2488
-P^56^220^2488
-P^56^342^2488
-P^72^171^2488
-P^94^99^2488
-P^94^123^2488
-P^94^124^2488
-P^94^255^2488
-P^99^72^2488
-P^99^186^2488
-P^99^327^2488
-P^103^190^2488
-P^103^293^2488
-P^115^181^2488
-P^115^326^2488
-P^115^452^2488
-P^123^300^2488
-P^124^72^2488
-P^124^99^2488
-P^190^248^2488
-P^193^452^2488
-P^212^186^2488
-P^212^270^2488
-P^222^122^2488
-P^222^300^2488
-P^222^377^2488
-P^224^302^2488
-P^262^23^2488
-P^262^270^2488
-P^262^283^2488
-P^270^23^2488
-P^283^38^2488
-P^284^455^2488
-P^293^471^2488
-P^299^122^2488
-P^300^193^2488
-P^302^381^2488
-P^324^34^2488
-P^324^327^2488
-P^333^383^2488
-P^342^285^2488
-P^381^326^2488
-P^383^224^2488
-P^383^377^2488
-P^398^333^2488
-P^398^410^2488
-P^410^52^2488
-P^433^23^2488
-P^433^248^2488
-P^433^283^2488
-P^452^299^2488
-P^455^324^2488
-E^At Home Network (updated 01/16/2000)
+I ^ 5 ^ I ^ At Home Network
+P ^ 34 ^ 471 ^ 2488
+P ^ 38 ^ 181 ^ 2488
+P ^ 52 ^ 222 ^ 2488
+P ^ 56 ^ 171 ^ 2488
+P ^ 56 ^ 220 ^ 2488
+P ^ 56 ^ 342 ^ 2488
+P ^ 72 ^ 171 ^ 2488
+P ^ 94 ^ 99 ^ 2488
+P ^ 94 ^ 123 ^ 2488
+P ^ 94 ^ 124 ^ 2488
+P ^ 94 ^ 255 ^ 2488
+P ^ 99 ^ 72 ^ 2488
+P ^ 99 ^ 186 ^ 2488
+P ^ 99 ^ 327 ^ 2488
+P ^ 103 ^ 190 ^ 2488
+P ^ 103 ^ 293 ^ 2488
+P ^ 115 ^ 181 ^ 2488
+P ^ 115 ^ 326 ^ 2488
+P ^ 115 ^ 452 ^ 2488
+P ^ 123 ^ 300 ^ 2488
+P ^ 124 ^ 72 ^ 2488
+P ^ 124 ^ 99 ^ 2488
+P ^ 190 ^ 248 ^ 2488
+P ^ 193 ^ 452 ^ 2488
+P ^ 212 ^ 186 ^ 2488
+P ^ 212 ^ 270 ^ 2488
+P ^ 222 ^ 122 ^ 2488
+P ^ 222 ^ 300 ^ 2488
+P ^ 222 ^ 377 ^ 2488
+P ^ 224 ^ 302 ^ 2488
+P ^ 262 ^ 23 ^ 2488
+P ^ 262 ^ 270 ^ 2488
+P ^ 262 ^ 283 ^ 2488
+P ^ 270 ^ 23 ^ 2488
+P ^ 283 ^ 38 ^ 2488
+P ^ 284 ^ 455 ^ 2488
+P ^ 293 ^ 471 ^ 2488
+P ^ 299 ^ 122 ^ 2488
+P ^ 300 ^ 193 ^ 2488
+P ^ 302 ^ 381 ^ 2488
+P ^ 324 ^ 34 ^ 2488
+P ^ 324 ^ 327 ^ 2488
+P ^ 333 ^ 383 ^ 2488
+P ^ 342 ^ 285 ^ 2488
+P ^ 381 ^ 326 ^ 2488
+P ^ 383 ^ 224 ^ 2488
+P ^ 383 ^ 377 ^ 2488
+P ^ 398 ^ 333 ^ 2488
+P ^ 398 ^ 410 ^ 2488
+P ^ 410 ^ 52 ^ 2488
+P ^ 433 ^ 23 ^ 2488
+P ^ 433 ^ 248 ^ 2488
+P ^ 433 ^ 283 ^ 2488
+P ^ 452 ^ 299 ^ 2488
+P ^ 455 ^ 324 ^ 2488
+E ^ At Home Network
 
-I^6^I^BBN Planet  (updated 04/16/2000)
-P^23^189^45
-P^23^270^155
-P^56^79^622
-P^56^468^622
-P^94^56^622
-P^94^99^155
-P^94^122^155
-P^94^186^155
-P^94^192^622
-P^94^256^155
-P^94^285^622
-P^94^382^622
-P^99^104^155
-P^99^124^155
-P^99^327^155
-P^115^23^622
-P^115^30^155
-P^115^68^155
-P^115^181^155
-P^115^224^622
-P^122^382^155
-P^141^42^155
-P^141^333^155
-P^141^382^155
-P^180^382^45
-P^180^383^45
-P^186^98^155
-P^186^418^155
-P^192^115^155
-P^224^221^155
-P^224^301^622
-P^224^326^155
-P^224^381^155
-P^224^382^622
-P^285^56^622
-P^285^79^622
-P^285^324^155
-P^285^368^155
-P^285^382^622
-P^382^313^622
-P^382^383^622
-P^420^383^622
-P^433^23^622
-P^433^248^622
-P^433^471^622
-P^471^23^622
-P^471^224^622
-P^471^285^622
-P^471^453^622
-E^BBN Planet  (updated 04/16/2000)
+I ^ 6 ^ I ^ BBN Planet
+P ^ 23 ^ 189 ^ 45
+P ^ 23 ^ 270 ^ 155
+P ^ 56 ^ 79 ^ 622
+P ^ 56 ^ 468 ^ 622
+P ^ 94 ^ 56 ^ 622
+P ^ 94 ^ 99 ^ 155
+P ^ 94 ^ 122 ^ 155
+P ^ 94 ^ 186 ^ 155
+P ^ 94 ^ 192 ^ 622
+P ^ 94 ^ 256 ^ 155
+P ^ 94 ^ 285 ^ 622
+P ^ 94 ^ 382 ^ 622
+P ^ 99 ^ 104 ^ 155
+P ^ 99 ^ 124 ^ 155
+P ^ 99 ^ 327 ^ 155
+P ^ 115 ^ 23 ^ 622
+P ^ 115 ^ 30 ^ 155
+P ^ 115 ^ 68 ^ 155
+P ^ 115 ^ 181 ^ 155
+P ^ 115 ^ 224 ^ 622
+P ^ 122 ^ 382 ^ 155
+P ^ 141 ^ 42 ^ 155
+P ^ 141 ^ 333 ^ 155
+P ^ 141 ^ 382 ^ 155
+P ^ 180 ^ 382 ^ 45
+P ^ 180 ^ 383 ^ 45
+P ^ 186 ^ 98 ^ 155
+P ^ 186 ^ 418 ^ 155
+P ^ 192 ^ 115 ^ 155
+P ^ 224 ^ 221 ^ 155
+P ^ 224 ^ 301 ^ 622
+P ^ 224 ^ 326 ^ 155
+P ^ 224 ^ 381 ^ 155
+P ^ 224 ^ 382 ^ 622
+P ^ 285 ^ 56 ^ 622
+P ^ 285 ^ 79 ^ 622
+P ^ 285 ^ 324 ^ 155
+P ^ 285 ^ 368 ^ 155
+P ^ 285 ^ 382 ^ 622
+P ^ 382 ^ 313 ^ 622
+P ^ 382 ^ 383 ^ 622
+P ^ 420 ^ 383 ^ 622
+P ^ 433 ^ 23 ^ 622
+P ^ 433 ^ 248 ^ 622
+P ^ 433 ^ 471 ^ 622
+P ^ 471 ^ 23 ^ 622
+P ^ 471 ^ 224 ^ 622
+P ^ 471 ^ 285 ^ 622
+P ^ 471 ^ 453 ^ 622
+E ^ BBN Planet
 
-I^7^R^CAIRN
-P^20^471^45
-P^49^49^45
-P^49^224^45
-P^49^265^1.5
-P^49^281^45
-P^49^420^45
-P^224^224^1.5
-P^224^224^45
-P^224^281^45
-P^224^308^45
-P^246^265^1.5
-P^246^308^45
-P^246^388^1.5
-P^265^224^1.5
-P^265^265^1.5
-P^265^420^1.5
-P^381^471^45
-P^420^78^1.5
-P^471^78^45
-P^471^224^45
-P^471^250^45
-P^471^327^1.5
-P^471^356^45
-P^471^471^45
-P^471^483^45
-E^CAIRN
+I ^ 7 ^ R ^ CAIRN
+P ^ 20 ^ 471 ^ 45
+P ^ 49 ^ 49 ^ 45
+P ^ 49 ^ 224 ^ 45
+P ^ 49 ^ 265 ^ 1.5
+P ^ 49 ^ 281 ^ 45
+P ^ 49 ^ 420 ^ 45
+P ^ 224 ^ 224 ^ 1.5
+P ^ 224 ^ 224 ^ 45
+P ^ 224 ^ 281 ^ 45
+P ^ 224 ^ 308 ^ 45
+P ^ 246 ^ 265 ^ 1.5
+P ^ 246 ^ 308 ^ 45
+P ^ 246 ^ 388 ^ 1.5
+P ^ 265 ^ 224 ^ 1.5
+P ^ 265 ^ 265 ^ 1.5
+P ^ 265 ^ 420 ^ 1.5
+P ^ 381 ^ 471 ^ 45
+P ^ 420 ^ 78 ^ 1.5
+P ^ 471 ^ 78 ^ 45
+P ^ 471 ^ 224 ^ 45
+P ^ 471 ^ 250 ^ 45
+P ^ 471 ^ 327 ^ 1.5
+P ^ 471 ^ 356 ^ 45
+P ^ 471 ^ 471 ^ 45
+P ^ 471 ^ 483 ^ 45
+E ^ CAIRN
 
-I^8^I^CAIS Internet (updated 04/23/2000)
-P^23^88^155
-P^30^181^155
-P^34^324^622
-P^56^327^45
-P^88^348^155
-P^94^124^622
-P^94^418^155
-P^115^23^155
-P^115^148^155
-P^115^418^155
-P^122^193^622
-P^124^99^622
-P^124^327^622
-P^181^115^155
-P^181^283^155
-P^193^94^622
-P^193^256^45
-P^206^377^155
-P^224^206^155
-P^224^381^155
-P^248^304^155
-P^256^94^45
-P^270^88^45
-P^283^433^45
-P^285^56^155
-P^304^23^155
-P^324^285^622
-P^326^379^155
-P^327^471^622
-P^333^373^155
-P^358^241^155
-P^358^348^155
-P^358^471^155
-P^377^122^622
-P^379^30^155
-P^381^326^155
-P^382^224^155
-P^382^373^155
-P^382^377^622
-P^398^333^155
-P^398^377^45
-P^418^270^45
-P^433^248^45
-P^471^34^622
-E^CAIS Internet (updated 04/23/2000)
+I ^ 8 ^ I ^ CAIS Internet
+P ^ 23 ^ 88 ^ 155
+P ^ 30 ^ 181 ^ 155
+P ^ 34 ^ 324 ^ 622
+P ^ 56 ^ 327 ^ 45
+P ^ 88 ^ 348 ^ 155
+P ^ 94 ^ 124 ^ 622
+P ^ 94 ^ 418 ^ 155
+P ^ 115 ^ 23 ^ 155
+P ^ 115 ^ 148 ^ 155
+P ^ 115 ^ 418 ^ 155
+P ^ 122 ^ 193 ^ 622
+P ^ 124 ^ 99 ^ 622
+P ^ 124 ^ 327 ^ 622
+P ^ 181 ^ 115 ^ 155
+P ^ 181 ^ 283 ^ 155
+P ^ 193 ^ 94 ^ 622
+P ^ 193 ^ 256 ^ 45
+P ^ 206 ^ 377 ^ 155
+P ^ 224 ^ 206 ^ 155
+P ^ 224 ^ 381 ^ 155
+P ^ 248 ^ 304 ^ 155
+P ^ 256 ^ 94 ^ 45
+P ^ 270 ^ 88 ^ 45
+P ^ 283 ^ 433 ^ 45
+P ^ 285 ^ 56 ^ 155
+P ^ 304 ^ 23 ^ 155
+P ^ 324 ^ 285 ^ 622
+P ^ 326 ^ 379 ^ 155
+P ^ 327 ^ 471 ^ 622
+P ^ 333 ^ 373 ^ 155
+P ^ 358 ^ 241 ^ 155
+P ^ 358 ^ 348 ^ 155
+P ^ 358 ^ 471 ^ 155
+P ^ 377 ^ 122 ^ 622
+P ^ 379 ^ 30 ^ 155
+P ^ 381 ^ 326 ^ 155
+P ^ 382 ^ 224 ^ 155
+P ^ 382 ^ 373 ^ 155
+P ^ 382 ^ 377 ^ 622
+P ^ 398 ^ 333 ^ 155
+P ^ 398 ^ 377 ^ 45
+P ^ 418 ^ 270 ^ 45
+P ^ 433 ^ 248 ^ 45
+P ^ 471 ^ 34 ^ 622
+E ^ CAIS Internet
 
-I^9^I^CRL Network Services (updated 06/18/2000)
-P^7^115^45
-P^7^122^45
-P^7^326^45
-P^15^224^45
-P^15^381^45
-P^23^115^45
-P^23^348^45
-P^23^433^45
-P^30^65^45
-P^30^115^45
-P^34^324^45
-P^34^471^45
-P^56^63^45
-P^56^99^45
-P^56^127^45
-P^63^127^45
-P^63^324^45
-P^65^181^45
-P^99^124^45
-P^99^327^45
-P^106^382^45
-P^106^423^45
-P^115^127^45
-P^115^181^45
-P^115^193^45
-P^115^382^45
-P^115^418^45
-P^115^471^45
-P^122^377^45
-P^122^418^45
-P^124^127^45
-P^127^382^45
-P^127^398^45
-P^127^418^45
-P^193^418^45
-P^224^383^45
-P^326^381^45
-P^327^471^45
-P^333^391^45
-P^333^398^45
-P^348^471^45
-P^373^391^45
-P^373^423^45
-P^382^107^45
-P^382^377^45
-P^382^383^45
-P^382^386^45
-P^382^471^45
-P^386^391^45
-P^398^377^45
-E^CRL Network Services (updated 06/18/2000)
+I ^ 9 ^ I ^ CRL Network Services
+P ^ 7 ^ 115 ^ 45
+P ^ 7 ^ 122 ^ 45
+P ^ 7 ^ 326 ^ 45
+P ^ 15 ^ 224 ^ 45
+P ^ 15 ^ 381 ^ 45
+P ^ 23 ^ 115 ^ 45
+P ^ 23 ^ 348 ^ 45
+P ^ 23 ^ 433 ^ 45
+P ^ 30 ^ 65 ^ 45
+P ^ 30 ^ 115 ^ 45
+P ^ 34 ^ 324 ^ 45
+P ^ 34 ^ 471 ^ 45
+P ^ 56 ^ 63 ^ 45
+P ^ 56 ^ 99 ^ 45
+P ^ 56 ^ 127 ^ 45
+P ^ 63 ^ 127 ^ 45
+P ^ 63 ^ 324 ^ 45
+P ^ 65 ^ 181 ^ 45
+P ^ 99 ^ 124 ^ 45
+P ^ 99 ^ 327 ^ 45
+P ^ 106 ^ 382 ^ 45
+P ^ 106 ^ 423 ^ 45
+P ^ 115 ^ 127 ^ 45
+P ^ 115 ^ 181 ^ 45
+P ^ 115 ^ 193 ^ 45
+P ^ 115 ^ 382 ^ 45
+P ^ 115 ^ 418 ^ 45
+P ^ 115 ^ 471 ^ 45
+P ^ 122 ^ 377 ^ 45
+P ^ 122 ^ 418 ^ 45
+P ^ 124 ^ 127 ^ 45
+P ^ 127 ^ 382 ^ 45
+P ^ 127 ^ 398 ^ 45
+P ^ 127 ^ 418 ^ 45
+P ^ 193 ^ 418 ^ 45
+P ^ 224 ^ 383 ^ 45
+P ^ 326 ^ 381 ^ 45
+P ^ 327 ^ 471 ^ 45
+P ^ 333 ^ 391 ^ 45
+P ^ 333 ^ 398 ^ 45
+P ^ 348 ^ 471 ^ 45
+P ^ 373 ^ 391 ^ 45
+P ^ 373 ^ 423 ^ 45
+P ^ 382 ^ 107 ^ 45
+P ^ 382 ^ 377 ^ 45
+P ^ 382 ^ 383 ^ 45
+P ^ 382 ^ 386 ^ 45
+P ^ 382 ^ 471 ^ 45
+P ^ 386 ^ 391 ^ 45
+P ^ 398 ^ 377 ^ 45
+E ^ CRL Network Services
 
-I^10^I^Cable & Wireless (updated 07/02/2000)
-P^94^482^622
-P^115^29^622
-P^115^185^622
-P^115^330^45
-P^166^29^2488
-P^181^115^45
-P^181^245^45
-P^185^28^622
-P^185^482^622
-P^224^380^45
-P^245^29^622
-P^245^115^622
-P^245^294^622
-P^256^28^622
-P^256^94^622
-P^294^29^622
-P^294^87^622
-P^294^185^622
-P^294^476^2488
-P^330^29^45
-P^373^27^2488
-P^373^383^2488
-P^380^115^2488
-P^383^224^45
-P^383^380^2488
-P^398^28^622
-P^398^256^622
-P^398^383^622
-P^471^166^2488
-P^476^87^622
-P^476^471^2488
-P^482^28^622
-P^482^245^622
-P^482^294^622
-E^Cable & Wireless (updated 07/02/2000)
+I ^ 10 ^ I ^ Cable & Wireless
+P ^ 94 ^ 482 ^ 622
+P ^ 115 ^ 29 ^ 622
+P ^ 115 ^ 185 ^ 622
+P ^ 115 ^ 330 ^ 45
+P ^ 166 ^ 29 ^ 2488
+P ^ 181 ^ 115 ^ 45
+P ^ 181 ^ 245 ^ 45
+P ^ 185 ^ 28 ^ 622
+P ^ 185 ^ 482 ^ 622
+P ^ 224 ^ 380 ^ 45
+P ^ 245 ^ 29 ^ 622
+P ^ 245 ^ 115 ^ 622
+P ^ 245 ^ 294 ^ 622
+P ^ 256 ^ 28 ^ 622
+P ^ 256 ^ 94 ^ 622
+P ^ 294 ^ 29 ^ 622
+P ^ 294 ^ 87 ^ 622
+P ^ 294 ^ 185 ^ 622
+P ^ 294 ^ 476 ^ 2488
+P ^ 330 ^ 29 ^ 45
+P ^ 373 ^ 27 ^ 2488
+P ^ 373 ^ 383 ^ 2488
+P ^ 380 ^ 115 ^ 2488
+P ^ 383 ^ 224 ^ 45
+P ^ 383 ^ 380 ^ 2488
+P ^ 398 ^ 28 ^ 622
+P ^ 398 ^ 256 ^ 622
+P ^ 398 ^ 383 ^ 622
+P ^ 471 ^ 166 ^ 2488
+P ^ 476 ^ 87 ^ 622
+P ^ 476 ^ 471 ^ 2488
+P ^ 482 ^ 28 ^ 622
+P ^ 482 ^ 245 ^ 622
+P ^ 482 ^ 294 ^ 622
+E ^ Cable & Wireless
 
-I^11^I^Cable Internet (updated 06/06/2001)
-P^219^14^155
-P^219^236^34
-P^219^314^155
-P^219^471^622
-P^471^285^155
-P^471^383^155
-P^471^465^155
-E^Cable Internet (updated 06/06/2001)
+I ^ 11 ^ I ^ Cable Internet
+P ^ 219 ^ 14 ^ 155
+P ^ 219 ^ 236 ^ 34
+P ^ 219 ^ 314 ^ 155
+P ^ 219 ^ 471 ^ 622
+P ^ 471 ^ 285 ^ 155
+P ^ 471 ^ 383 ^ 155
+P ^ 471 ^ 465 ^ 155
+E ^ Cable Internet
 
-I^12^I^CompuServe Network Services
-P^23^181^45
-P^23^471^45
-P^56^63^45
-P^56^127^45
-P^63^471^45
-P^105^115^45
-P^105^127^45
-P^105^218^1.5
-P^105^266^1.5
-P^105^315^1.5
-P^105^382^45
-P^105^471^45
-P^115^104^45
-P^115^181^45
-P^115^224^45
-P^127^104^45
-P^127^398^45
-P^219^104^1.5
-P^224^382^45
-P^266^104^1.5
-P^315^104^1.5
-P^382^398^45
-P^471^104^45
-E^CompuServe Network Services
+I ^ 12 ^ I ^ CompuServe Network Services
+P ^ 23 ^ 181 ^ 45
+P ^ 23 ^ 471 ^ 45
+P ^ 56 ^ 63 ^ 45
+P ^ 56 ^ 127 ^ 45
+P ^ 63 ^ 471 ^ 45
+P ^ 105 ^ 115 ^ 45
+P ^ 105 ^ 127 ^ 45
+P ^ 105 ^ 218 ^ 1.5
+P ^ 105 ^ 266 ^ 1.5
+P ^ 105 ^ 315 ^ 1.5
+P ^ 105 ^ 382 ^ 45
+P ^ 105 ^ 471 ^ 45
+P ^ 115 ^ 104 ^ 45
+P ^ 115 ^ 181 ^ 45
+P ^ 115 ^ 224 ^ 45
+P ^ 127 ^ 104 ^ 45
+P ^ 127 ^ 398 ^ 45
+P ^ 219 ^ 104 ^ 1.5
+P ^ 224 ^ 382 ^ 45
+P ^ 266 ^ 104 ^ 1.5
+P ^ 315 ^ 104 ^ 1.5
+P ^ 382 ^ 398 ^ 45
+P ^ 471 ^ 104 ^ 45
+E ^ CompuServe Network Services
 
-I^13^I^DataXchange Network, Inc.
-P^23^63^155
-P^23^115^155
-P^23^127^155
-P^23^224^155
-P^23^382^155
-P^23^471^155
-P^63^115^155
-P^63^127^155
-P^63^224^155
-P^63^241^155
-P^63^382^155
-P^63^471^155
-P^115^127^155
-P^115^224^155
-P^115^241^155
-P^115^382^155
-P^115^471^155
-P^127^224^155
-P^127^382^155
-P^127^471^155
-P^224^382^45
-P^224^471^155
-P^241^471^155
-P^382^471^155
-E^DataXchange Network, Inc.
+I ^ 13 ^ I ^ DataXchange Network, Inc.
+P ^ 23 ^ 63 ^ 155
+P ^ 23 ^ 115 ^ 155
+P ^ 23 ^ 127 ^ 155
+P ^ 23 ^ 224 ^ 155
+P ^ 23 ^ 382 ^ 155
+P ^ 23 ^ 471 ^ 155
+P ^ 63 ^ 115 ^ 155
+P ^ 63 ^ 127 ^ 155
+P ^ 63 ^ 224 ^ 155
+P ^ 63 ^ 241 ^ 155
+P ^ 63 ^ 382 ^ 155
+P ^ 63 ^ 471 ^ 155
+P ^ 115 ^ 127 ^ 155
+P ^ 115 ^ 224 ^ 155
+P ^ 115 ^ 241 ^ 155
+P ^ 115 ^ 382 ^ 155
+P ^ 115 ^ 471 ^ 155
+P ^ 127 ^ 224 ^ 155
+P ^ 127 ^ 382 ^ 155
+P ^ 127 ^ 471 ^ 155
+P ^ 224 ^ 382 ^ 45
+P ^ 224 ^ 471 ^ 155
+P ^ 241 ^ 471 ^ 155
+P ^ 382 ^ 471 ^ 155
+E ^ DataXchange Network, Inc.
 
-I^14^I^EPOCH Networks, Inc. (updated (06/30/2000)
-P^23^115^45
-P^23^371^45
-P^23^395^45
-P^23^433^45
-P^34^23^45
-P^34^212^45
-P^34^453^45
-P^94^99^45
-P^94^105^45
-P^94^122^45
-P^115^30^45
-P^206^122^45
-P^224^206^45
-P^224^311^45
-P^224^326^45
-P^224^381^45
-P^285^6^45
-P^285^34^45
-P^285^56^45
-P^285^318^45
-P^285^419^45
-P^285^428^45
-P^333^398^45
-P^420^34^45
-P^420^94^45
-P^420^206^45
-P^420^224^45
-P^420^269^45
-P^420^377^45
-P^420^398^45
-E^EPOCH Networks, Inc. (updated (06/30/2000)
+I ^ 14 ^ I ^ EPOCH Networks, Inc.
+P ^ 23 ^ 115 ^ 45
+P ^ 23 ^ 371 ^ 45
+P ^ 23 ^ 395 ^ 45
+P ^ 23 ^ 433 ^ 45
+P ^ 34 ^ 23 ^ 45
+P ^ 34 ^ 212 ^ 45
+P ^ 34 ^ 453 ^ 45
+P ^ 94 ^ 99 ^ 45
+P ^ 94 ^ 105 ^ 45
+P ^ 94 ^ 122 ^ 45
+P ^ 115 ^ 30 ^ 45
+P ^ 206 ^ 122 ^ 45
+P ^ 224 ^ 206 ^ 45
+P ^ 224 ^ 311 ^ 45
+P ^ 224 ^ 326 ^ 45
+P ^ 224 ^ 381 ^ 45
+P ^ 285 ^ 6 ^ 45
+P ^ 285 ^ 34 ^ 45
+P ^ 285 ^ 56 ^ 45
+P ^ 285 ^ 318 ^ 45
+P ^ 285 ^ 419 ^ 45
+P ^ 285 ^ 428 ^ 45
+P ^ 333 ^ 398 ^ 45
+P ^ 420 ^ 34 ^ 45
+P ^ 420 ^ 94 ^ 45
+P ^ 420 ^ 206 ^ 45
+P ^ 420 ^ 224 ^ 45
+P ^ 420 ^ 269 ^ 45
+P ^ 420 ^ 377 ^ 45
+P ^ 420 ^ 398 ^ 45
+E ^ EPOCH Networks, Inc.
 
-I^15^R^ESnet
-L^0^7^155
-L^0^11^155
-L^0^78^45
-L^0^127^155
-L^0^143^155
-L^0^215^155
-L^0^295^155
-L^0^296^155
-L^0^341^45
-L^0^357^45
-L^0^381^45
-L^0^456^45
-P^7^7^1.5
-P^7^7^155
-P^7^223^155
-P^12^127^1.5
-P^37^127^1.5
-P^49^215^45
-P^49^296^155
-P^49^420^1.5
-P^78^456^1.5
-P^117^50^155
-P^117^143^45
-P^117^219^45
-P^127^37^155
-P^127^127^155
-P^127^295^1.5
-P^143^290^45
-P^143^471^45
-P^144^296^45
-P^215^184^1.5
-P^215^215^155
-P^215^215^45
-P^215^296^155
-P^215^381^1.5
-P^224^316^45
-P^224^381^45
-P^290^143^1.5
-P^290^295^1.5
-P^290^471^1.5
-P^295^21^1.5
-P^295^91^1.5
-P^295^295^1.5
-P^295^414^1.5
-P^316^420^1.5
-P^341^282^1.5
-P^341^341^1.5
-P^341^370^1.5
-P^341^456^1.5
-P^357^215^1.5
-P^381^7^1.5
-P^381^201^45
-P^381^223^1.5
-P^381^381^45
-P^420^296^45
-P^431^295^1.5
-P^431^458^1.5
-P^437^402^1.5
-P^456^63^1.5
-P^456^489^1.5
-P^458^7^1.5
-P^471^471^1.5
-E^ESnet
+I ^ 15 ^ R ^ ESnet
+L ^ 0 ^ 7 ^ 155
+L ^ 0 ^ 11 ^ 155
+L ^ 0 ^ 78 ^ 45
+L ^ 0 ^ 127 ^ 155
+L ^ 0 ^ 143 ^ 155
+L ^ 0 ^ 215 ^ 155
+L ^ 0 ^ 295 ^ 155
+L ^ 0 ^ 296 ^ 155
+L ^ 0 ^ 341 ^ 45
+L ^ 0 ^ 357 ^ 45
+L ^ 0 ^ 381 ^ 45
+L ^ 0 ^ 456 ^ 45
+P ^ 7 ^ 7 ^ 1.5
+P ^ 7 ^ 7 ^ 155
+P ^ 7 ^ 223 ^ 155
+P ^ 12 ^ 127 ^ 1.5
+P ^ 37 ^ 127 ^ 1.5
+P ^ 49 ^ 215 ^ 45
+P ^ 49 ^ 296 ^ 155
+P ^ 49 ^ 420 ^ 1.5
+P ^ 78 ^ 456 ^ 1.5
+P ^ 117 ^ 50 ^ 155
+P ^ 117 ^ 143 ^ 45
+P ^ 117 ^ 219 ^ 45
+P ^ 127 ^ 37 ^ 155
+P ^ 127 ^ 127 ^ 155
+P ^ 127 ^ 295 ^ 1.5
+P ^ 143 ^ 290 ^ 45
+P ^ 143 ^ 471 ^ 45
+P ^ 144 ^ 296 ^ 45
+P ^ 215 ^ 184 ^ 1.5
+P ^ 215 ^ 215 ^ 155
+P ^ 215 ^ 215 ^ 45
+P ^ 215 ^ 296 ^ 155
+P ^ 215 ^ 381 ^ 1.5
+P ^ 224 ^ 316 ^ 45
+P ^ 224 ^ 381 ^ 45
+P ^ 290 ^ 143 ^ 1.5
+P ^ 290 ^ 295 ^ 1.5
+P ^ 290 ^ 471 ^ 1.5
+P ^ 295 ^ 21 ^ 1.5
+P ^ 295 ^ 91 ^ 1.5
+P ^ 295 ^ 295 ^ 1.5
+P ^ 295 ^ 414 ^ 1.5
+P ^ 316 ^ 420 ^ 1.5
+P ^ 341 ^ 282 ^ 1.5
+P ^ 341 ^ 341 ^ 1.5
+P ^ 341 ^ 370 ^ 1.5
+P ^ 341 ^ 456 ^ 1.5
+P ^ 357 ^ 215 ^ 1.5
+P ^ 381 ^ 7 ^ 1.5
+P ^ 381 ^ 201 ^ 45
+P ^ 381 ^ 223 ^ 1.5
+P ^ 381 ^ 381 ^ 45
+P ^ 420 ^ 296 ^ 45
+P ^ 431 ^ 295 ^ 1.5
+P ^ 431 ^ 458 ^ 1.5
+P ^ 437 ^ 402 ^ 1.5
+P ^ 456 ^ 63 ^ 1.5
+P ^ 456 ^ 489 ^ 1.5
+P ^ 458 ^ 7 ^ 1.5
+P ^ 471 ^ 471 ^ 1.5
+E ^ ESnet
 
-I^16^I^EUnet (updated 11/22/2000)
-P^13^46^45
-P^13^59^45
-P^13^66^45
-P^13^69^45
-P^13^75^45
-P^13^116^45
-P^13^129^45
-P^13^151^45
-P^13^213^45
-P^13^216^45
-P^13^219^45
-P^13^232^45
-P^13^315^45
-P^13^318^45
-P^13^338^45
-P^13^459^45
-P^13^464^45
-P^13^493^45
-P^66^443^45
-P^160^493^45
-P^174^13^45
-P^219^129^45
-P^219^285^45
-P^219^318^45
-P^306^422^45
-P^359^432^45
-P^422^13^45
-P^432^174^45
-P^443^160^45
-E^EUnet (updated 11/22/2000)
+I ^ 16 ^ I ^ EUnet
+P ^ 13 ^ 46 ^ 45
+P ^ 13 ^ 59 ^ 45
+P ^ 13 ^ 66 ^ 45
+P ^ 13 ^ 69 ^ 45
+P ^ 13 ^ 75 ^ 45
+P ^ 13 ^ 116 ^ 45
+P ^ 13 ^ 129 ^ 45
+P ^ 13 ^ 151 ^ 45
+P ^ 13 ^ 213 ^ 45
+P ^ 13 ^ 216 ^ 45
+P ^ 13 ^ 219 ^ 45
+P ^ 13 ^ 232 ^ 45
+P ^ 13 ^ 315 ^ 45
+P ^ 13 ^ 318 ^ 45
+P ^ 13 ^ 338 ^ 45
+P ^ 13 ^ 459 ^ 45
+P ^ 13 ^ 464 ^ 45
+P ^ 13 ^ 493 ^ 45
+P ^ 66 ^ 443 ^ 45
+P ^ 160 ^ 493 ^ 45
+P ^ 174 ^ 13 ^ 45
+P ^ 219 ^ 129 ^ 45
+P ^ 219 ^ 285 ^ 45
+P ^ 219 ^ 318 ^ 45
+P ^ 306 ^ 422 ^ 45
+P ^ 359 ^ 432 ^ 45
+P ^ 422 ^ 13 ^ 45
+P ^ 432 ^ 174 ^ 45
+P ^ 443 ^ 160 ^ 45
+E ^ EUnet
 
-I^17^I^Exodus (updated 05/31/2000)
-P^30^23^622
-P^30^94^622
-P^30^115^155
-P^94^56^155
-P^94^56^622
-P^94^285^622
-P^224^30^155
-P^224^285^155
-P^285^13^155
-P^285^50^155
-P^285^56^622
-P^285^219^155
-P^285^315^155
-P^285^471^622
-P^383^94^622
-P^383^224^622
-P^383^471^622
-P^398^94^155
-P^398^383^155
-P^471^23^622
-E^Exodus (updated 05/31/2000)
+I ^ 17 ^ I ^ Exodus
+P ^ 30 ^ 23 ^ 622
+P ^ 30 ^ 94 ^ 622
+P ^ 30 ^ 115 ^ 155
+P ^ 94 ^ 56 ^ 155
+P ^ 94 ^ 56 ^ 622
+P ^ 94 ^ 285 ^ 622
+P ^ 224 ^ 30 ^ 155
+P ^ 224 ^ 285 ^ 155
+P ^ 285 ^ 13 ^ 155
+P ^ 285 ^ 50 ^ 155
+P ^ 285 ^ 56 ^ 622
+P ^ 285 ^ 219 ^ 155
+P ^ 285 ^ 315 ^ 155
+P ^ 285 ^ 471 ^ 622
+P ^ 383 ^ 94 ^ 622
+P ^ 383 ^ 224 ^ 622
+P ^ 383 ^ 471 ^ 622
+P ^ 398 ^ 94 ^ 155
+P ^ 398 ^ 383 ^ 155
+P ^ 471 ^ 23 ^ 622
+E ^ Exodus
 
-I^18^I^Genuity
-P^6^337^45
-P^6^428^45
-P^34^324^45
-P^34^471^45
-P^56^405^45
-P^63^148^45
-P^63^181^45
-P^63^286^45
-P^63^480^45
-P^72^99^45
-P^72^367^45
-P^85^115^45
-P^85^299^45
-P^98^104^45
-P^98^186^45
-P^99^327^45
-P^105^98^45
-P^105^99^45
-P^115^148^45
-P^122^377^45
-P^122^441^45
-P^127^186^45
-P^141^398^45
-P^148^68^45
-P^181^68^45
-P^186^418^45
-P^192^418^45
-P^192^441^45
-P^192^452^45
-P^224^381^45
-P^224^388^45
-P^288^63^45
-P^288^324^45
-P^296^382^45
-P^299^452^45
-P^324^286^45
-P^333^373^45
-P^333^398^45
-P^337^480^45
-P^354^373^45
-P^354^377^45
-P^368^72^45
-P^368^428^45
-P^373^382^45
-P^376^383^45
-P^376^385^45
-P^382^383^45
-P^385^388^45
-P^405^480^45
-P^418^193^45
-P^428^367^45
-P^441^193^45
-P^452^193^45
-E^Genuity
+I ^ 18 ^ I ^ Genuity
+P ^ 6 ^ 337 ^ 45
+P ^ 6 ^ 428 ^ 45
+P ^ 34 ^ 324 ^ 45
+P ^ 34 ^ 471 ^ 45
+P ^ 56 ^ 405 ^ 45
+P ^ 63 ^ 148 ^ 45
+P ^ 63 ^ 181 ^ 45
+P ^ 63 ^ 286 ^ 45
+P ^ 63 ^ 480 ^ 45
+P ^ 72 ^ 99 ^ 45
+P ^ 72 ^ 367 ^ 45
+P ^ 85 ^ 115 ^ 45
+P ^ 85 ^ 299 ^ 45
+P ^ 98 ^ 104 ^ 45
+P ^ 98 ^ 186 ^ 45
+P ^ 99 ^ 327 ^ 45
+P ^ 105 ^ 98 ^ 45
+P ^ 105 ^ 99 ^ 45
+P ^ 115 ^ 148 ^ 45
+P ^ 122 ^ 377 ^ 45
+P ^ 122 ^ 441 ^ 45
+P ^ 127 ^ 186 ^ 45
+P ^ 141 ^ 398 ^ 45
+P ^ 148 ^ 68 ^ 45
+P ^ 181 ^ 68 ^ 45
+P ^ 186 ^ 418 ^ 45
+P ^ 192 ^ 418 ^ 45
+P ^ 192 ^ 441 ^ 45
+P ^ 192 ^ 452 ^ 45
+P ^ 224 ^ 381 ^ 45
+P ^ 224 ^ 388 ^ 45
+P ^ 288 ^ 63 ^ 45
+P ^ 288 ^ 324 ^ 45
+P ^ 296 ^ 382 ^ 45
+P ^ 299 ^ 452 ^ 45
+P ^ 324 ^ 286 ^ 45
+P ^ 333 ^ 373 ^ 45
+P ^ 333 ^ 398 ^ 45
+P ^ 337 ^ 480 ^ 45
+P ^ 354 ^ 373 ^ 45
+P ^ 354 ^ 377 ^ 45
+P ^ 368 ^ 72 ^ 45
+P ^ 368 ^ 428 ^ 45
+P ^ 373 ^ 382 ^ 45
+P ^ 376 ^ 383 ^ 45
+P ^ 376 ^ 385 ^ 45
+P ^ 382 ^ 383 ^ 45
+P ^ 385 ^ 388 ^ 45
+P ^ 405 ^ 480 ^ 45
+P ^ 418 ^ 193 ^ 45
+P ^ 428 ^ 367 ^ 45
+P ^ 441 ^ 193 ^ 45
+P ^ 452 ^ 193 ^ 45
+E ^ Genuity
 
-I^19^I^GeoNet Communications, Inc.
-P^56^63^45
-P^63^127^45
-P^63^471^45
-P^127^382^45
-P^206^224^45
-P^206^382^45
-P^206^471^45
-P^224^382^45
-P^296^382^1.5
-P^328^382^1.5
-P^382^471^45
-P^383^382^1.5
-P^389^382^1.5
-P^420^382^1.5
-P^467^382^1.5
-E^GeoNet Communications, Inc.
+I ^ 19 ^ I ^ GeoNet Communications, Inc.
+P ^ 56 ^ 63 ^ 45
+P ^ 63 ^ 127 ^ 45
+P ^ 63 ^ 471 ^ 45
+P ^ 127 ^ 382 ^ 45
+P ^ 206 ^ 224 ^ 45
+P ^ 206 ^ 382 ^ 45
+P ^ 206 ^ 471 ^ 45
+P ^ 224 ^ 382 ^ 45
+P ^ 296 ^ 382 ^ 1.5
+P ^ 328 ^ 382 ^ 1.5
+P ^ 382 ^ 471 ^ 45
+P ^ 383 ^ 382 ^ 1.5
+P ^ 389 ^ 382 ^ 1.5
+P ^ 420 ^ 382 ^ 1.5
+P ^ 467 ^ 382 ^ 1.5
+E ^ GeoNet Communications, Inc.
 
-I^20^I^GetNet International
-P^34^327^45
-P^34^471^45
-P^326^389^45
-P^326^471^45
-P^327^389^45
-P^389^471^45
-E^GetNet International
+I ^ 20 ^ I ^ GetNet International
+P ^ 34 ^ 327 ^ 45
+P ^ 34 ^ 471 ^ 45
+P ^ 326 ^ 389 ^ 45
+P ^ 326 ^ 471 ^ 45
+P ^ 327 ^ 389 ^ 45
+P ^ 389 ^ 471 ^ 45
+E ^ GetNet International
 
-I^21^I^GlobalCenter
-P^23^63^45
-P^23^115^45
-P^23^127^45
-P^23^256^45
-P^23^326^45
-P^23^383^45
-P^23^398^45
-P^23^453^45
-P^63^115^45
-P^63^127^45
-P^63^256^45
-P^63^326^45
-P^63^383^45
-P^63^398^45
-P^63^453^45
-P^115^127^45
-P^115^256^45
-P^115^326^45
-P^115^383^45
-P^115^398^45
-P^115^453^45
-P^127^256^45
-P^127^326^45
-P^127^383^45
-P^127^398^45
-P^127^453^45
-P^256^326^45
-P^256^383^45
-P^256^398^45
-P^256^453^45
-P^326^383^45
-P^326^398^45
-P^326^453^45
-P^383^398^45
-P^383^453^45
-P^398^453^45
-E^GlobalCenter
+I ^ 21 ^ I ^ GlobalCenter
+P ^ 23 ^ 63 ^ 45
+P ^ 23 ^ 115 ^ 45
+P ^ 23 ^ 127 ^ 45
+P ^ 23 ^ 256 ^ 45
+P ^ 23 ^ 326 ^ 45
+P ^ 23 ^ 383 ^ 45
+P ^ 23 ^ 398 ^ 45
+P ^ 23 ^ 453 ^ 45
+P ^ 63 ^ 115 ^ 45
+P ^ 63 ^ 127 ^ 45
+P ^ 63 ^ 256 ^ 45
+P ^ 63 ^ 326 ^ 45
+P ^ 63 ^ 383 ^ 45
+P ^ 63 ^ 398 ^ 45
+P ^ 63 ^ 453 ^ 45
+P ^ 115 ^ 127 ^ 45
+P ^ 115 ^ 256 ^ 45
+P ^ 115 ^ 326 ^ 45
+P ^ 115 ^ 383 ^ 45
+P ^ 115 ^ 398 ^ 45
+P ^ 115 ^ 453 ^ 45
+P ^ 127 ^ 256 ^ 45
+P ^ 127 ^ 326 ^ 45
+P ^ 127 ^ 383 ^ 45
+P ^ 127 ^ 398 ^ 45
+P ^ 127 ^ 453 ^ 45
+P ^ 256 ^ 326 ^ 45
+P ^ 256 ^ 383 ^ 45
+P ^ 256 ^ 398 ^ 45
+P ^ 256 ^ 453 ^ 45
+P ^ 326 ^ 383 ^ 45
+P ^ 326 ^ 398 ^ 45
+P ^ 326 ^ 453 ^ 45
+P ^ 383 ^ 398 ^ 45
+P ^ 383 ^ 453 ^ 45
+P ^ 398 ^ 453 ^ 45
+E ^ GlobalCenter
 
-I^22^I^GoodNet
-P^23^53^45
-P^23^190^45
-P^23^283^45
-P^23^471^45
-P^63^127^45
-P^63^171^45
-P^63^383^45
-P^63^471^45
-P^88^127^45
-P^88^383^45
-P^90^127^45
-P^90^471^45
-P^115^127^45
-P^115^181^45
-P^115^383^45
-P^115^471^45
-P^122^127^45
-P^122^383^45
-P^127^124^45
-P^127^181^45
-P^127^186^45
-P^127^224^45
-P^127^256^45
-P^127^283^45
-P^127^318^155
-P^127^324^155
-P^127^326^45
-P^127^377^45
-P^127^383^45
-P^127^389^155
-P^127^471^45
-P^186^471^45
-P^190^383^45
-P^190^433^45
-P^190^471^45
-P^224^383^45
-P^224^471^45
-P^256^383^45
-P^283^383^45
-P^283^433^45
-P^299^383^45
-P^299^471^45
-P^318^324^155
-P^318^389^155
-P^318^471^155
-P^324^471^155
-P^326^383^45
-P^326^450^45
-P^326^471^45
-P^377^383^45
-P^383^90^45
-P^383^181^45
-P^383^389^45
-P^383^471^45
-P^389^471^155
-P^453^115^45
-P^453^377^45
-P^471^88^45
-P^471^127^155
-E^GoodNet
+I ^ 22 ^ I ^ GoodNet
+P ^ 23 ^ 53 ^ 45
+P ^ 23 ^ 190 ^ 45
+P ^ 23 ^ 283 ^ 45
+P ^ 23 ^ 471 ^ 45
+P ^ 63 ^ 127 ^ 45
+P ^ 63 ^ 171 ^ 45
+P ^ 63 ^ 383 ^ 45
+P ^ 63 ^ 471 ^ 45
+P ^ 88 ^ 127 ^ 45
+P ^ 88 ^ 383 ^ 45
+P ^ 90 ^ 127 ^ 45
+P ^ 90 ^ 471 ^ 45
+P ^ 115 ^ 127 ^ 45
+P ^ 115 ^ 181 ^ 45
+P ^ 115 ^ 383 ^ 45
+P ^ 115 ^ 471 ^ 45
+P ^ 122 ^ 127 ^ 45
+P ^ 122 ^ 383 ^ 45
+P ^ 127 ^ 124 ^ 45
+P ^ 127 ^ 181 ^ 45
+P ^ 127 ^ 186 ^ 45
+P ^ 127 ^ 224 ^ 45
+P ^ 127 ^ 256 ^ 45
+P ^ 127 ^ 283 ^ 45
+P ^ 127 ^ 318 ^ 155
+P ^ 127 ^ 324 ^ 155
+P ^ 127 ^ 326 ^ 45
+P ^ 127 ^ 377 ^ 45
+P ^ 127 ^ 383 ^ 45
+P ^ 127 ^ 389 ^ 155
+P ^ 127 ^ 471 ^ 45
+P ^ 186 ^ 471 ^ 45
+P ^ 190 ^ 383 ^ 45
+P ^ 190 ^ 433 ^ 45
+P ^ 190 ^ 471 ^ 45
+P ^ 224 ^ 383 ^ 45
+P ^ 224 ^ 471 ^ 45
+P ^ 256 ^ 383 ^ 45
+P ^ 283 ^ 383 ^ 45
+P ^ 283 ^ 433 ^ 45
+P ^ 299 ^ 383 ^ 45
+P ^ 299 ^ 471 ^ 45
+P ^ 318 ^ 324 ^ 155
+P ^ 318 ^ 389 ^ 155
+P ^ 318 ^ 471 ^ 155
+P ^ 324 ^ 471 ^ 155
+P ^ 326 ^ 383 ^ 45
+P ^ 326 ^ 450 ^ 45
+P ^ 326 ^ 471 ^ 45
+P ^ 377 ^ 383 ^ 45
+P ^ 383 ^ 90 ^ 45
+P ^ 383 ^ 181 ^ 45
+P ^ 383 ^ 389 ^ 45
+P ^ 383 ^ 471 ^ 45
+P ^ 389 ^ 471 ^ 155
+P ^ 453 ^ 115 ^ 45
+P ^ 453 ^ 377 ^ 45
+P ^ 471 ^ 88 ^ 45
+P ^ 471 ^ 127 ^ 155
+E ^ GoodNet
 
-I^23^I^IDT Corp (updated 07/02/2000)
-P^23^248^45
-P^94^99^45
-P^99^98^45
-P^99^285^45
-P^122^94^45
-P^167^471^45
-P^224^181^45
-P^224^326^45
-P^285^56^45
-P^285^167^45
-P^285^471^45
-P^326^122^45
-P^358^23^45
-P^383^122^45
-P^383^224^45
-P^471^98^45
-P^471^181^45
-P^471^358^45
-E^IDT Corp (updated 07/02/2000)
+I ^ 23 ^ I ^ IDT Corp
+P ^ 23 ^ 248 ^ 45
+P ^ 94 ^ 99 ^ 45
+P ^ 99 ^ 98 ^ 45
+P ^ 99 ^ 285 ^ 45
+P ^ 122 ^ 94 ^ 45
+P ^ 167 ^ 471 ^ 45
+P ^ 224 ^ 181 ^ 45
+P ^ 224 ^ 326 ^ 45
+P ^ 285 ^ 56 ^ 45
+P ^ 285 ^ 167 ^ 45
+P ^ 285 ^ 471 ^ 45
+P ^ 326 ^ 122 ^ 45
+P ^ 358 ^ 23 ^ 45
+P ^ 383 ^ 122 ^ 45
+P ^ 383 ^ 224 ^ 45
+P ^ 471 ^ 98 ^ 45
+P ^ 471 ^ 181 ^ 45
+P ^ 471 ^ 358 ^ 45
+E ^ IDT Corp
 
-I^24^R^MAGIC Network
-P^49^382^155
-P^192^208^622
-P^192^256^622
-P^192^382^45
-P^192^408^622
-P^246^382^155
-E^MAGIC Network
+I ^ 24 ^ R ^ MAGIC Network
+P ^ 49 ^ 382 ^ 155
+P ^ 192 ^ 208 ^ 622
+P ^ 192 ^ 256 ^ 622
+P ^ 192 ^ 382 ^ 45
+P ^ 192 ^ 408 ^ 622
+P ^ 246 ^ 382 ^ 155
+E ^ MAGIC Network
 
-I^25^I^MindSpring (last updated 03/30/99)
-P^23^26^4.5
-P^23^53^14
-P^23^63^18
-P^23^89^1.5
-P^23^90^21
-P^23^103^22
-P^23^104^3
-P^23^104^4.5
-P^23^112^10
-P^23^127^3
-P^23^170^1.5
-P^23^190^3
-P^23^224^4.5
-P^23^224^7.5
-P^23^230^4.5
-P^23^248^9
-P^23^293^6
-P^23^296^3
-P^23^296^6
-P^23^304^45
-P^23^348^12
-P^23^358^6
-P^23^398^7.5
-P^23^423^3
-P^23^471^1.5
-P^23^478^3
-P^53^18^3
-P^53^115^6
-P^53^262^1.5
-P^56^64^1.5
-P^63^56^4.5
-P^63^64^4.5
-P^63^170^3
-P^90^57^1.5
-P^90^198^4.5
-P^90^212^3
-P^90^225^3
-P^90^270^7.5
-P^90^309^1.5
-P^115^326^4.5
-P^296^398^3
-P^296^423^3
-P^304^120^3
-P^304^157^3
-P^304^244^3
-P^304^433^7.5
-P^326^224^1.5
-P^348^355^1.5
-E^MindSpring (last updated 03/30/99)
+I ^ 25 ^ I ^ MindSpring
+P ^ 23 ^ 26 ^ 4.5
+P ^ 23 ^ 53 ^ 14
+P ^ 23 ^ 63 ^ 18
+P ^ 23 ^ 89 ^ 1.5
+P ^ 23 ^ 90 ^ 21
+P ^ 23 ^ 103 ^ 22
+P ^ 23 ^ 104 ^ 3
+P ^ 23 ^ 104 ^ 4.5
+P ^ 23 ^ 112 ^ 10
+P ^ 23 ^ 127 ^ 3
+P ^ 23 ^ 170 ^ 1.5
+P ^ 23 ^ 190 ^ 3
+P ^ 23 ^ 224 ^ 4.5
+P ^ 23 ^ 224 ^ 7.5
+P ^ 23 ^ 230 ^ 4.5
+P ^ 23 ^ 248 ^ 9
+P ^ 23 ^ 293 ^ 6
+P ^ 23 ^ 296 ^ 3
+P ^ 23 ^ 296 ^ 6
+P ^ 23 ^ 304 ^ 45
+P ^ 23 ^ 348 ^ 12
+P ^ 23 ^ 358 ^ 6
+P ^ 23 ^ 398 ^ 7.5
+P ^ 23 ^ 423 ^ 3
+P ^ 23 ^ 471 ^ 1.5
+P ^ 23 ^ 478 ^ 3
+P ^ 53 ^ 18 ^ 3
+P ^ 53 ^ 115 ^ 6
+P ^ 53 ^ 262 ^ 1.5
+P ^ 56 ^ 64 ^ 1.5
+P ^ 63 ^ 56 ^ 4.5
+P ^ 63 ^ 64 ^ 4.5
+P ^ 63 ^ 170 ^ 3
+P ^ 90 ^ 57 ^ 1.5
+P ^ 90 ^ 198 ^ 4.5
+P ^ 90 ^ 212 ^ 3
+P ^ 90 ^ 225 ^ 3
+P ^ 90 ^ 270 ^ 7.5
+P ^ 90 ^ 309 ^ 1.5
+P ^ 115 ^ 326 ^ 4.5
+P ^ 296 ^ 398 ^ 3
+P ^ 296 ^ 423 ^ 3
+P ^ 304 ^ 120 ^ 3
+P ^ 304 ^ 157 ^ 3
+P ^ 304 ^ 244 ^ 3
+P ^ 304 ^ 433 ^ 7.5
+P ^ 326 ^ 224 ^ 1.5
+P ^ 348 ^ 355 ^ 1.5
+E ^ MindSpring (last updated 03/30/99)
 
-I^26^I^Nap.Net, LLC
-P^115^127^45
-P^127^256^45
-P^127^383^45
-P^127^398^45
-P^127^453^45
-P^383^398^45
-P^383^453^45
-E^Nap.Net, LLC
+I ^ 26 ^ I ^ Nap.Net, LLC
+P ^ 115 ^ 127 ^ 45
+P ^ 127 ^ 256 ^ 45
+P ^ 127 ^ 383 ^ 45
+P ^ 127 ^ 398 ^ 45
+P ^ 127 ^ 453 ^ 45
+P ^ 383 ^ 398 ^ 45
+P ^ 383 ^ 453 ^ 45
+E ^ Nap.Net, LLC
 
-I^27^I^Netrail Incorporated (updated 07/03/2000)
-P^23^94^45
-P^23^115^45
-P^23^248^45
-P^23^382^45
-P^23^471^45
-P^94^186^45
-P^94^285^45
-P^94^382^45
-P^224^381^45
-P^248^304^45
-P^248^433^45
-P^248^471^45
-P^285^56^45
-P^285^324^45
-P^285^471^45
-P^381^115^45
-P^420^23^45
-P^420^94^45
-P^420^224^45
-P^420^333^45
-P^471^34^45
-E^Netrail Incorporated (updated 07/03/2000)
+I ^ 27 ^ I ^ Netrail Incorporated
+P ^ 23 ^ 94 ^ 45
+P ^ 23 ^ 115 ^ 45
+P ^ 23 ^ 248 ^ 45
+P ^ 23 ^ 382 ^ 45
+P ^ 23 ^ 471 ^ 45
+P ^ 94 ^ 186 ^ 45
+P ^ 94 ^ 285 ^ 45
+P ^ 94 ^ 382 ^ 45
+P ^ 224 ^ 381 ^ 45
+P ^ 248 ^ 304 ^ 45
+P ^ 248 ^ 433 ^ 45
+P ^ 248 ^ 471 ^ 45
+P ^ 285 ^ 56 ^ 45
+P ^ 285 ^ 324 ^ 45
+P ^ 285 ^ 471 ^ 45
+P ^ 381 ^ 115 ^ 45
+P ^ 420 ^ 23 ^ 45
+P ^ 420 ^ 94 ^ 45
+P ^ 420 ^ 224 ^ 45
+P ^ 420 ^ 333 ^ 45
+P ^ 471 ^ 34 ^ 45
+E ^ Netrail Incorporated
 
-I^28^I^PSINet (updated 06/12/2000)
-P^4^99^2
-P^4^104^2
-P^6^285^2
-P^6^428^2
-P^23^88^2
-P^23^181^45
-P^23^183^45
-P^23^189^2
-P^23^304^45
-P^30^181^45
-P^34^471^45
-P^34^484^45
-P^38^181^2
-P^38^189^2
-P^56^285^45
-P^56^353^45
-P^72^99^2
-P^72^367^2
-P^76^460^45
-P^88^131^45
-P^88^375^2
-P^94^129^45
-P^94^186^2
-P^94^231^45
-P^94^418^45
-P^94^439^45
-P^98^186^2
-P^98^418^45
-P^98^474^2
-P^105^4^2
-P^105^474^2
-P^115^148^2
-P^115^181^45
-P^115^193^45
-P^115^382^45
-P^115^452^45
-P^122^193^45
-P^122^326^45
-P^122^377^2
-P^124^439^45
-P^130^34^45
-P^130^94^45
-P^130^439^45
-P^133^394^45
-P^136^450^2
-P^148^115^45
-P^148^251^45
-P^183^131^45
-P^183^285^2
-P^183^365^2
-P^183^471^45
-P^186^418^2
-P^188^23^2
-P^188^38^2
-P^193^326^45
-P^193^418^45
-P^193^452^45
-P^206^224^2
-P^206^326^2
-P^206^377^45
-P^219^285^45
-P^219^318^45
-P^224^180^45
-P^224^326^45
-P^224^382^45
-P^248^304^45
-P^252^135^2
-P^252^148^2
-P^256^231^45
-P^256^255^155
-P^256^333^45
-P^285^56^155
-P^285^286^45
-P^285^448^45
-P^285^471^45
-P^287^285^45
-P^287^324^45
-P^299^115^2
-P^299^452^2
-P^304^88^155
-P^324^286^45
-P^324^484^45
-P^333^377^45
-P^333^382^45
-P^333^398^45
-P^348^88^155
-P^353^394^45
-P^355^88^45
-P^355^183^45
-P^366^183^2
-P^366^487^2
-P^368^72^2
-P^368^428^2
-P^377^382^2
-P^382^389^45
-P^383^94^155
-P^383^105^155
-P^398^256^45
-P^418^94^155
-P^418^248^155
-P^418^452^2
-P^428^367^2
-P^437^383^45
-P^439^129^45
-P^449^285^45
-P^450^135^2
-P^450^326^2
-P^460^462^45
-P^471^285^155
-P^471^348^155
-P^474^104^2
-P^483^34^45
-P^483^324^45
-P^488^88^2
-P^488^365^2
-P^491^333^45
-E^PSINet (updated 06/12/2000)
+I ^ 28 ^ I ^ PSINet
+P ^ 4 ^ 99 ^ 2
+P ^ 4 ^ 104 ^ 2
+P ^ 6 ^ 285 ^ 2
+P ^ 6 ^ 428 ^ 2
+P ^ 23 ^ 88 ^ 2
+P ^ 23 ^ 181 ^ 45
+P ^ 23 ^ 183 ^ 45
+P ^ 23 ^ 189 ^ 2
+P ^ 23 ^ 304 ^ 45
+P ^ 30 ^ 181 ^ 45
+P ^ 34 ^ 471 ^ 45
+P ^ 34 ^ 484 ^ 45
+P ^ 38 ^ 181 ^ 2
+P ^ 38 ^ 189 ^ 2
+P ^ 56 ^ 285 ^ 45
+P ^ 56 ^ 353 ^ 45
+P ^ 72 ^ 99 ^ 2
+P ^ 72 ^ 367 ^ 2
+P ^ 76 ^ 460 ^ 45
+P ^ 88 ^ 131 ^ 45
+P ^ 88 ^ 375 ^ 2
+P ^ 94 ^ 129 ^ 45
+P ^ 94 ^ 186 ^ 2
+P ^ 94 ^ 231 ^ 45
+P ^ 94 ^ 418 ^ 45
+P ^ 94 ^ 439 ^ 45
+P ^ 98 ^ 186 ^ 2
+P ^ 98 ^ 418 ^ 45
+P ^ 98 ^ 474 ^ 2
+P ^ 105 ^ 4 ^ 2
+P ^ 105 ^ 474 ^ 2
+P ^ 115 ^ 148 ^ 2
+P ^ 115 ^ 181 ^ 45
+P ^ 115 ^ 193 ^ 45
+P ^ 115 ^ 382 ^ 45
+P ^ 115 ^ 452 ^ 45
+P ^ 122 ^ 193 ^ 45
+P ^ 122 ^ 326 ^ 45
+P ^ 122 ^ 377 ^ 2
+P ^ 124 ^ 439 ^ 45
+P ^ 130 ^ 34 ^ 45
+P ^ 130 ^ 94 ^ 45
+P ^ 130 ^ 439 ^ 45
+P ^ 133 ^ 394 ^ 45
+P ^ 136 ^ 450 ^ 2
+P ^ 148 ^ 115 ^ 45
+P ^ 148 ^ 251 ^ 45
+P ^ 183 ^ 131 ^ 45
+P ^ 183 ^ 285 ^ 2
+P ^ 183 ^ 365 ^ 2
+P ^ 183 ^ 471 ^ 45
+P ^ 186 ^ 418 ^ 2
+P ^ 188 ^ 23 ^ 2
+P ^ 188 ^ 38 ^ 2
+P ^ 193 ^ 326 ^ 45
+P ^ 193 ^ 418 ^ 45
+P ^ 193 ^ 452 ^ 45
+P ^ 206 ^ 224 ^ 2
+P ^ 206 ^ 326 ^ 2
+P ^ 206 ^ 377 ^ 45
+P ^ 219 ^ 285 ^ 45
+P ^ 219 ^ 318 ^ 45
+P ^ 224 ^ 180 ^ 45
+P ^ 224 ^ 326 ^ 45
+P ^ 224 ^ 382 ^ 45
+P ^ 248 ^ 304 ^ 45
+P ^ 252 ^ 135 ^ 2
+P ^ 252 ^ 148 ^ 2
+P ^ 256 ^ 231 ^ 45
+P ^ 256 ^ 255 ^ 155
+P ^ 256 ^ 333 ^ 45
+P ^ 285 ^ 56 ^ 155
+P ^ 285 ^ 286 ^ 45
+P ^ 285 ^ 448 ^ 45
+P ^ 285 ^ 471 ^ 45
+P ^ 287 ^ 285 ^ 45
+P ^ 287 ^ 324 ^ 45
+P ^ 299 ^ 115 ^ 2
+P ^ 299 ^ 452 ^ 2
+P ^ 304 ^ 88 ^ 155
+P ^ 324 ^ 286 ^ 45
+P ^ 324 ^ 484 ^ 45
+P ^ 333 ^ 377 ^ 45
+P ^ 333 ^ 382 ^ 45
+P ^ 333 ^ 398 ^ 45
+P ^ 348 ^ 88 ^ 155
+P ^ 353 ^ 394 ^ 45
+P ^ 355 ^ 88 ^ 45
+P ^ 355 ^ 183 ^ 45
+P ^ 366 ^ 183 ^ 2
+P ^ 366 ^ 487 ^ 2
+P ^ 368 ^ 72 ^ 2
+P ^ 368 ^ 428 ^ 2
+P ^ 377 ^ 382 ^ 2
+P ^ 382 ^ 389 ^ 45
+P ^ 383 ^ 94 ^ 155
+P ^ 383 ^ 105 ^ 155
+P ^ 398 ^ 256 ^ 45
+P ^ 418 ^ 94 ^ 155
+P ^ 418 ^ 248 ^ 155
+P ^ 418 ^ 452 ^ 2
+P ^ 428 ^ 367 ^ 2
+P ^ 437 ^ 383 ^ 45
+P ^ 439 ^ 129 ^ 45
+P ^ 449 ^ 285 ^ 45
+P ^ 450 ^ 135 ^ 2
+P ^ 450 ^ 326 ^ 2
+P ^ 460 ^ 462 ^ 45
+P ^ 471 ^ 285 ^ 155
+P ^ 471 ^ 348 ^ 155
+P ^ 474 ^ 104 ^ 2
+P ^ 483 ^ 34 ^ 45
+P ^ 483 ^ 324 ^ 45
+P ^ 488 ^ 88 ^ 2
+P ^ 488 ^ 365 ^ 2
+P ^ 491 ^ 333 ^ 45
+E ^ PSINet
 
-I^29^I^Qwest
-P^23^181^2488
-P^23^433^2488
-P^23^471^2488
-P^56^94^2488
-P^56^285^2488
-P^73^224^2488
-P^94^192^2488
-P^94^285^2488
-P^94^382^622
-P^94^425^2488
-P^94^471^2488
-P^115^181^2488
-P^115^192^2488
-P^181^181^2488
-P^181^224^2488
-P^181^383^2488
-P^181^433^2488
-P^181^471^2488
-P^192^425^2488
-P^192^471^2488
-P^224^383^2488
-P^285^471^2488
-P^382^285^2488
-P^382^383^2488
-P^383^425^2488
-P^398^451^2488
-P^433^471^2488
-P^471^383^2488
-E^Qwest
+I ^ 29 ^ I ^ Qwest
+P ^ 23 ^ 181 ^ 2488
+P ^ 23 ^ 433 ^ 2488
+P ^ 23 ^ 471 ^ 2488
+P ^ 56 ^ 94 ^ 2488
+P ^ 56 ^ 285 ^ 2488
+P ^ 73 ^ 224 ^ 2488
+P ^ 94 ^ 192 ^ 2488
+P ^ 94 ^ 285 ^ 2488
+P ^ 94 ^ 382 ^ 622
+P ^ 94 ^ 425 ^ 2488
+P ^ 94 ^ 471 ^ 2488
+P ^ 115 ^ 181 ^ 2488
+P ^ 115 ^ 192 ^ 2488
+P ^ 181 ^ 181 ^ 2488
+P ^ 181 ^ 224 ^ 2488
+P ^ 181 ^ 383 ^ 2488
+P ^ 181 ^ 433 ^ 2488
+P ^ 181 ^ 471 ^ 2488
+P ^ 192 ^ 425 ^ 2488
+P ^ 192 ^ 471 ^ 2488
+P ^ 224 ^ 383 ^ 2488
+P ^ 285 ^ 471 ^ 2488
+P ^ 382 ^ 285 ^ 2488
+P ^ 382 ^ 383 ^ 2488
+P ^ 383 ^ 425 ^ 2488
+P ^ 398 ^ 451 ^ 2488
+P ^ 433 ^ 471 ^ 2488
+P ^ 471 ^ 383 ^ 2488
+E ^ Qwest
 
-I^30^I^RISQ Network (updated 10/16/2001)
-P^31^347^1
-P^31^401^1
-P^96^347^45
-P^128^263^155
-P^182^263^45
-P^209^403^155
-P^263^347^10000
-P^263^403^622
-P^263^416^155
-P^263^447^155
-P^263^463^155
-P^347^31^128
-P^347^360^155
-E^RISQ Network (updated 10/16/2001)
+I ^ 30 ^ I ^ RISQ Network
+P ^ 31 ^ 347 ^ 1
+P ^ 31 ^ 401 ^ 1
+P ^ 96 ^ 347 ^ 45
+P ^ 128 ^ 263 ^ 155
+P ^ 182 ^ 263 ^ 45
+P ^ 209 ^ 403 ^ 155
+P ^ 263 ^ 347 ^ 10000
+P ^ 263 ^ 403 ^ 622
+P ^ 263 ^ 416 ^ 155
+P ^ 263 ^ 447 ^ 155
+P ^ 263 ^ 463 ^ 155
+P ^ 347 ^ 31 ^ 128
+P ^ 347 ^ 360 ^ 155
+E ^ RISQ Network
 
-I^31^I^RNP  (updated 10/23/2001)
-P^19^47^1
-P^45^58^2
-P^47^228^1
-P^47^362^20
-P^47^392^18
-P^47^436^4
-P^54^58^1
-P^58^81^1
-P^58^111^1
-P^58^161^5
-P^58^227^1
-P^58^235^2
-P^58^312^1
-P^58^335^1
-P^58^361^1
-P^58^362^15
-P^58^392^10
-P^80^349^6
-P^113^362^14
-P^113^392^8
-P^145^362^20
-P^145^392^12
-P^149^362^4
-P^149^392^3
-P^272^362^3
-P^272^392^3
-P^334^362^25
-P^334^392^10
-P^349^362^10
-P^349^392^7
-P^362^378^6
-P^362^392^20
-P^362^461^2
-P^378^392^4
-E^RNP  (updated 10/23/2001)
+I ^ 31 ^ I ^ RNP
+P ^ 19 ^ 47 ^ 1
+P ^ 45 ^ 58 ^ 2
+P ^ 47 ^ 228 ^ 1
+P ^ 47 ^ 362 ^ 20
+P ^ 47 ^ 392 ^ 18
+P ^ 47 ^ 436 ^ 4
+P ^ 54 ^ 58 ^ 1
+P ^ 58 ^ 81 ^ 1
+P ^ 58 ^ 111 ^ 1
+P ^ 58 ^ 161 ^ 5
+P ^ 58 ^ 227 ^ 1
+P ^ 58 ^ 235 ^ 2
+P ^ 58 ^ 312 ^ 1
+P ^ 58 ^ 335 ^ 1
+P ^ 58 ^ 361 ^ 1
+P ^ 58 ^ 362 ^ 15
+P ^ 58 ^ 392 ^ 10
+P ^ 80 ^ 349 ^ 6
+P ^ 113 ^ 362 ^ 14
+P ^ 113 ^ 392 ^ 8
+P ^ 145 ^ 362 ^ 20
+P ^ 145 ^ 392 ^ 12
+P ^ 149 ^ 362 ^ 4
+P ^ 149 ^ 392 ^ 3
+P ^ 272 ^ 362 ^ 3
+P ^ 272 ^ 392 ^ 3
+P ^ 334 ^ 362 ^ 25
+P ^ 334 ^ 392 ^ 10
+P ^ 349 ^ 362 ^ 10
+P ^ 349 ^ 392 ^ 7
+P ^ 362 ^ 378 ^ 6
+P ^ 362 ^ 392 ^ 20
+P ^ 362 ^ 461 ^ 2
+P ^ 378 ^ 392 ^ 4
+E ^ RNP
 
-I^32^I^Savvis Communications
-P^23^248^155
-P^23^248^45
-P^23^285^155
-P^23^418^45
-P^23^471^45
-P^30^181^45
-P^94^23^155
-P^94^56^155
-P^94^99^45
-P^94^115^155
-P^94^124^45
-P^94^186^45
-P^94^256^155
-P^94^256^45
-P^94^418^155
-P^98^105^45
-P^105^99^45
-P^115^23^155
-P^115^30^45
-P^115^181^45
-P^115^285^155
-P^181^23^45
-P^186^98^45
-P^193^418^45
-P^224^23^155
-P^224^94^155
-P^224^115^155
-P^224^285^155
-P^224^326^45
-P^224^418^155
-P^285^56^155
-P^285^56^45
-P^285^287^45
-P^285^324^45
-P^324^34^45
-P^324^471^45
-P^326^115^45
-P^327^124^45
-P^327^285^45
-P^333^382^45
-P^382^23^155
-P^382^94^155
-P^382^115^155
-P^382^122^155
-P^382^193^45
-P^382^224^155
-P^382^224^45
-P^382^285^155
-P^382^418^155
-P^398^23^155
-P^398^94^155
-P^398^115^155
-P^398^224^155
-P^398^285^155
-P^398^333^45
-P^398^382^155
-P^398^382^45
-P^398^418^155
-P^418^115^155
-P^418^148^155
-P^418^285^155
-E^Savvis Communications
+I ^ 32 ^ I ^ Savvis Communications
+P ^ 23 ^ 248 ^ 155
+P ^ 23 ^ 248 ^ 45
+P ^ 23 ^ 285 ^ 155
+P ^ 23 ^ 418 ^ 45
+P ^ 23 ^ 471 ^ 45
+P ^ 30 ^ 181 ^ 45
+P ^ 94 ^ 23 ^ 155
+P ^ 94 ^ 56 ^ 155
+P ^ 94 ^ 99 ^ 45
+P ^ 94 ^ 115 ^ 155
+P ^ 94 ^ 124 ^ 45
+P ^ 94 ^ 186 ^ 45
+P ^ 94 ^ 256 ^ 155
+P ^ 94 ^ 256 ^ 45
+P ^ 94 ^ 418 ^ 155
+P ^ 98 ^ 105 ^ 45
+P ^ 105 ^ 99 ^ 45
+P ^ 115 ^ 23 ^ 155
+P ^ 115 ^ 30 ^ 45
+P ^ 115 ^ 181 ^ 45
+P ^ 115 ^ 285 ^ 155
+P ^ 181 ^ 23 ^ 45
+P ^ 186 ^ 98 ^ 45
+P ^ 193 ^ 418 ^ 45
+P ^ 224 ^ 23 ^ 155
+P ^ 224 ^ 94 ^ 155
+P ^ 224 ^ 115 ^ 155
+P ^ 224 ^ 285 ^ 155
+P ^ 224 ^ 326 ^ 45
+P ^ 224 ^ 418 ^ 155
+P ^ 285 ^ 56 ^ 155
+P ^ 285 ^ 56 ^ 45
+P ^ 285 ^ 287 ^ 45
+P ^ 285 ^ 324 ^ 45
+P ^ 324 ^ 34 ^ 45
+P ^ 324 ^ 471 ^ 45
+P ^ 326 ^ 115 ^ 45
+P ^ 327 ^ 124 ^ 45
+P ^ 327 ^ 285 ^ 45
+P ^ 333 ^ 382 ^ 45
+P ^ 382 ^ 23 ^ 155
+P ^ 382 ^ 94 ^ 155
+P ^ 382 ^ 115 ^ 155
+P ^ 382 ^ 122 ^ 155
+P ^ 382 ^ 193 ^ 45
+P ^ 382 ^ 224 ^ 155
+P ^ 382 ^ 224 ^ 45
+P ^ 382 ^ 285 ^ 155
+P ^ 382 ^ 418 ^ 155
+P ^ 398 ^ 23 ^ 155
+P ^ 398 ^ 94 ^ 155
+P ^ 398 ^ 115 ^ 155
+P ^ 398 ^ 224 ^ 155
+P ^ 398 ^ 285 ^ 155
+P ^ 398 ^ 333 ^ 45
+P ^ 398 ^ 382 ^ 155
+P ^ 398 ^ 382 ^ 45
+P ^ 398 ^ 418 ^ 155
+P ^ 418 ^ 115 ^ 155
+P ^ 418 ^ 148 ^ 155
+P ^ 418 ^ 285 ^ 155
+E ^ Savvis Communications
 
-I^33^I^ServInt Internet Services (updated 05/31/2000)
-P^23^181^155
-P^23^248^155
-P^23^418^155
-P^30^379^155
-P^56^124^155
-P^94^122^155
-P^94^124^155
-P^94^418^155
-P^115^30^155
-P^115^181^155
-P^115^224^155
-P^115^379^155
-P^115^418^155
-P^181^30^155
-P^181^248^155
-P^241^23^155
-P^241^34^155
-P^241^94^155
-P^241^122^155
-P^241^248^155
-P^241^293^155
-P^241^358^155
-P^256^94^155
-P^285^56^155
-P^285^324^155
-P^293^358^155
-P^324^34^155
-P^324^445^155
-P^383^122^155
-P^383^224^155
-P^383^398^155
-P^398^122^155
-P^398^256^155
-P^418^193^155
-E^ServInt Internet Services (updated 05/31/2000)
+I ^ 33 ^ I ^ ServInt Internet Services
+P ^ 23 ^ 181 ^ 155
+P ^ 23 ^ 248 ^ 155
+P ^ 23 ^ 418 ^ 155
+P ^ 30 ^ 379 ^ 155
+P ^ 56 ^ 124 ^ 155
+P ^ 94 ^ 122 ^ 155
+P ^ 94 ^ 124 ^ 155
+P ^ 94 ^ 418 ^ 155
+P ^ 115 ^ 30 ^ 155
+P ^ 115 ^ 181 ^ 155
+P ^ 115 ^ 224 ^ 155
+P ^ 115 ^ 379 ^ 155
+P ^ 115 ^ 418 ^ 155
+P ^ 181 ^ 30 ^ 155
+P ^ 181 ^ 248 ^ 155
+P ^ 241 ^ 23 ^ 155
+P ^ 241 ^ 34 ^ 155
+P ^ 241 ^ 94 ^ 155
+P ^ 241 ^ 122 ^ 155
+P ^ 241 ^ 248 ^ 155
+P ^ 241 ^ 293 ^ 155
+P ^ 241 ^ 358 ^ 155
+P ^ 256 ^ 94 ^ 155
+P ^ 285 ^ 56 ^ 155
+P ^ 285 ^ 324 ^ 155
+P ^ 293 ^ 358 ^ 155
+P ^ 324 ^ 34 ^ 155
+P ^ 324 ^ 445 ^ 155
+P ^ 383 ^ 122 ^ 155
+P ^ 383 ^ 224 ^ 155
+P ^ 383 ^ 398 ^ 155
+P ^ 398 ^ 122 ^ 155
+P ^ 398 ^ 256 ^ 155
+P ^ 418 ^ 193 ^ 155
+E ^ ServInt Internet Services
 
-I^34^I^Sprint (last modified 08/22/2001)
-P^15^180^155
-P^15^383^2488
-P^15^383^2488
-P^15^383^2488
-P^15^383^2488
-P^23^148^2488
-P^23^148^2488
-P^23^285^2488
-P^23^285^2488
-P^23^304^2488
-P^92^94^2488
-P^92^94^2488
-P^94^23^2488
-P^94^23^2488
-P^94^148^2488
-P^94^148^2488
-P^94^192^2488
-P^94^285^2488
-P^94^285^2488
-P^94^364^2488
-P^94^411^2488
-P^148^15^2488
-P^148^15^2488
-P^148^15^2488
-P^148^192^2488
-P^148^192^2488
-P^148^192^2488
-P^148^192^2488
-P^148^318^2488
-P^148^318^2488
-P^192^318^2488
-P^192^318^2488
-P^233^108^9952
-P^233^219^9952
-P^285^219^155
-P^285^219^155
-P^285^219^155
-P^285^219^155
-P^285^233^2488
-P^285^233^2488
-P^285^318^2488
-P^285^318^2488
-P^285^318^2488
-P^285^318^2488
-P^285^318^2488
-P^285^318^2488
-P^318^423^2488
-P^318^423^2488
-P^318^423^2488
-P^364^318^2488
-P^383^429^2488
-P^383^429^2488
-P^398^94^2488
-P^398^192^2488
-P^398^429^2488
-P^398^429^2488
-P^398^429^2488
-P^411^318^2488
-P^423^180^155
-P^423^383^2488
-P^423^383^2488
-P^423^383^2488
-P^423^383^2488
-P^423^438^155
-P^429^92^2488
-P^429^92^2488
-P^429^426^2488
-P^429^437^2488
-P^471^23^2488
-P^471^23^2488
-P^471^233^2488
-P^471^285^2488
-P^471^285^2488
-P^471^285^2488
-P^471^285^2488
-P^471^318^2488
-P^471^318^2488
-P^471^383^2488
-P^471^383^2488
-E^Sprint (last modified 08/22/2001)
+I ^ 34 ^ I ^ Sprint
+P ^ 15 ^ 180 ^ 155
+P ^ 15 ^ 383 ^ 2488
+P ^ 15 ^ 383 ^ 2488
+P ^ 15 ^ 383 ^ 2488
+P ^ 15 ^ 383 ^ 2488
+P ^ 23 ^ 148 ^ 2488
+P ^ 23 ^ 148 ^ 2488
+P ^ 23 ^ 285 ^ 2488
+P ^ 23 ^ 285 ^ 2488
+P ^ 23 ^ 304 ^ 2488
+P ^ 92 ^ 94 ^ 2488
+P ^ 92 ^ 94 ^ 2488
+P ^ 94 ^ 23 ^ 2488
+P ^ 94 ^ 23 ^ 2488
+P ^ 94 ^ 148 ^ 2488
+P ^ 94 ^ 148 ^ 2488
+P ^ 94 ^ 192 ^ 2488
+P ^ 94 ^ 285 ^ 2488
+P ^ 94 ^ 285 ^ 2488
+P ^ 94 ^ 364 ^ 2488
+P ^ 94 ^ 411 ^ 2488
+P ^ 148 ^ 15 ^ 2488
+P ^ 148 ^ 15 ^ 2488
+P ^ 148 ^ 15 ^ 2488
+P ^ 148 ^ 192 ^ 2488
+P ^ 148 ^ 192 ^ 2488
+P ^ 148 ^ 192 ^ 2488
+P ^ 148 ^ 192 ^ 2488
+P ^ 148 ^ 318 ^ 2488
+P ^ 148 ^ 318 ^ 2488
+P ^ 192 ^ 318 ^ 2488
+P ^ 192 ^ 318 ^ 2488
+P ^ 233 ^ 108 ^ 9952
+P ^ 233 ^ 219 ^ 9952
+P ^ 285 ^ 219 ^ 155
+P ^ 285 ^ 219 ^ 155
+P ^ 285 ^ 219 ^ 155
+P ^ 285 ^ 219 ^ 155
+P ^ 285 ^ 233 ^ 2488
+P ^ 285 ^ 233 ^ 2488
+P ^ 285 ^ 318 ^ 2488
+P ^ 285 ^ 318 ^ 2488
+P ^ 285 ^ 318 ^ 2488
+P ^ 285 ^ 318 ^ 2488
+P ^ 285 ^ 318 ^ 2488
+P ^ 285 ^ 318 ^ 2488
+P ^ 318 ^ 423 ^ 2488
+P ^ 318 ^ 423 ^ 2488
+P ^ 318 ^ 423 ^ 2488
+P ^ 364 ^ 318 ^ 2488
+P ^ 383 ^ 429 ^ 2488
+P ^ 383 ^ 429 ^ 2488
+P ^ 398 ^ 94 ^ 2488
+P ^ 398 ^ 192 ^ 2488
+P ^ 398 ^ 429 ^ 2488
+P ^ 398 ^ 429 ^ 2488
+P ^ 398 ^ 429 ^ 2488
+P ^ 411 ^ 318 ^ 2488
+P ^ 423 ^ 180 ^ 155
+P ^ 423 ^ 383 ^ 2488
+P ^ 423 ^ 383 ^ 2488
+P ^ 423 ^ 383 ^ 2488
+P ^ 423 ^ 383 ^ 2488
+P ^ 423 ^ 438 ^ 155
+P ^ 429 ^ 92 ^ 2488
+P ^ 429 ^ 92 ^ 2488
+P ^ 429 ^ 426 ^ 2488
+P ^ 429 ^ 437 ^ 2488
+P ^ 471 ^ 23 ^ 2488
+P ^ 471 ^ 23 ^ 2488
+P ^ 471 ^ 233 ^ 2488
+P ^ 471 ^ 285 ^ 2488
+P ^ 471 ^ 285 ^ 2488
+P ^ 471 ^ 285 ^ 2488
+P ^ 471 ^ 285 ^ 2488
+P ^ 471 ^ 318 ^ 2488
+P ^ 471 ^ 318 ^ 2488
+P ^ 471 ^ 383 ^ 2488
+P ^ 471 ^ 383 ^ 2488
+E ^ Sprint (last modified 08/22/2001)
 
-I^35^R^TEN-155 Network (updated  8/25/1999)
-P^13^22^34
-P^13^66^34
-P^13^160^155
-P^13^226^10
-P^138^13^155
-P^138^160^155
-P^138^254^155
-P^138^315^155
-P^138^339^155
-P^138^422^155
-P^138^464^155
-P^138^470^34
-P^219^13^155
-P^219^63^155
-P^219^129^10
-P^219^213^34
-P^219^315^155
-P^219^435^34
-P^219^437^2
-P^315^232^34
-P^422^13^155
-P^464^70^34
-P^464^216^10
-E^TEN-155 Network (updated  8/25/1999)
+I ^ 35 ^ R ^ TEN-155 Network
+P ^ 13 ^ 22 ^ 34
+P ^ 13 ^ 66 ^ 34
+P ^ 13 ^ 160 ^ 155
+P ^ 13 ^ 226 ^ 10
+P ^ 138 ^ 13 ^ 155
+P ^ 138 ^ 160 ^ 155
+P ^ 138 ^ 254 ^ 155
+P ^ 138 ^ 315 ^ 155
+P ^ 138 ^ 339 ^ 155
+P ^ 138 ^ 422 ^ 155
+P ^ 138 ^ 464 ^ 155
+P ^ 138 ^ 470 ^ 34
+P ^ 219 ^ 13 ^ 155
+P ^ 219 ^ 63 ^ 155
+P ^ 219 ^ 129 ^ 10
+P ^ 219 ^ 213 ^ 34
+P ^ 219 ^ 315 ^ 155
+P ^ 219 ^ 435 ^ 34
+P ^ 219 ^ 437 ^ 2
+P ^ 315 ^ 232 ^ 34
+P ^ 422 ^ 13 ^ 155
+P ^ 464 ^ 70 ^ 34
+P ^ 464 ^ 216 ^ 10
+E ^ TEN-155 Network
 
-I^36^I^Telstra Internet
-P^1^243^6.0
-P^1^426^4.0
-P^8^426^8.0
-P^33^243^4.0
-P^48^243^4.0
-P^62^139^4.0
-P^83^243^8.0
-P^83^426^8.0
-P^97^139^4.0
-P^118^426^2.0
-P^139^444^4.0
-P^159^243^4.0
-P^162^426^2.0
-P^176^207^2.0
-P^176^243^2.0
-P^229^139^2.0
-P^237^139^2.0
-P^243^331^4.0
-P^243^381^32.0
-P^243^426^34.0
-P^289^426^4.0
-P^303^426^2.0
-P^321^381^8.0
-P^321^426^6.0
-P^426^24^6.0
-P^426^381^106.0
-P^426^400^2.0
-P^426^434^2.0
-P^426^437^2.0
-E^Telstra Internet
+I ^ 36 ^ I ^ Telstra Internet
+P ^ 1 ^ 243 ^ 6.0
+P ^ 1 ^ 426 ^ 4.0
+P ^ 8 ^ 426 ^ 8.0
+P ^ 33 ^ 243 ^ 4.0
+P ^ 48 ^ 243 ^ 4.0
+P ^ 62 ^ 139 ^ 4.0
+P ^ 83 ^ 243 ^ 8.0
+P ^ 83 ^ 426 ^ 8.0
+P ^ 97 ^ 139 ^ 4.0
+P ^ 118 ^ 426 ^ 2.0
+P ^ 139 ^ 444 ^ 4.0
+P ^ 159 ^ 243 ^ 4.0
+P ^ 162 ^ 426 ^ 2.0
+P ^ 176 ^ 207 ^ 2.0
+P ^ 176 ^ 243 ^ 2.0
+P ^ 229 ^ 139 ^ 2.0
+P ^ 237 ^ 139 ^ 2.0
+P ^ 243 ^ 331 ^ 4.0
+P ^ 243 ^ 381 ^ 32.0
+P ^ 243 ^ 426 ^ 34.0
+P ^ 289 ^ 426 ^ 4.0
+P ^ 303 ^ 426 ^ 2.0
+P ^ 321 ^ 381 ^ 8.0
+P ^ 321 ^ 426 ^ 6.0
+P ^ 426 ^ 24 ^ 6.0
+P ^ 426 ^ 381 ^ 106.0
+P ^ 426 ^ 400 ^ 2.0
+P ^ 426 ^ 434 ^ 2.0
+P ^ 426 ^ 437 ^ 2.0
+E ^ Telstra Internet
 
-I^37^I^UUNET (last updated 12/03/2001)
-P^1^321^155
-P^1^426^155
-P^3^437^45
-P^3^437^45
-P^7^172^45
-P^7^181^45
-P^7^224^155
-P^7^224^45
-P^13^66^155
-P^13^66^2488
-P^13^70^45
-P^13^108^155
-P^13^151^155
-P^13^175^2488
-P^13^219^155
-P^13^219^2488
-P^13^219^155
-P^13^219^155
-P^13^285^155
-P^13^285^155
-P^13^285^155
-P^13^285^155
-P^13^285^155
-P^13^338^45
-P^13^422^155
-P^13^422^45
-P^13^422^155
-P^13^422^45
-P^13^422^45
-P^13^464^45
-P^13^493^45
-P^23^94^622
-P^23^94^622
-P^23^94^622
-P^23^115^2488
-P^23^115^45
-P^23^115^622
-P^23^115^622
-P^23^115^622
-P^23^166^45
-P^23^181^2488
-P^23^181^45
-P^23^181^622
-P^23^181^2488
-P^23^181^622
-P^23^190^622
-P^23^190^622
-P^23^248^45
-P^23^248^622
-P^23^248^622
-P^23^248^622
-P^23^248^622
-P^23^248^622
-P^23^248^622
-P^23^248^622
-P^23^285^2488
-P^23^285^45
-P^23^285^2488
-P^23^287^45
-P^23^304^622
-P^23^304^622
-P^23^377^2488
-P^23^433^45
-P^23^471^2488
-P^23^471^45
-P^23^471^622
-P^23^471^2488
-P^23^471^622
-P^23^471^2488
-P^23^471^622
-P^25^343^15
-P^30^115^45
-P^30^115^45
-P^30^115^45
-P^30^115^45
-P^30^115^45
-P^30^115^45
-P^30^181^45
-P^30^181^45
-P^30^181^45
-P^30^181^45
-P^30^181^45
-P^30^181^45
-P^34^324^622
-P^34^471^622
-P^36^322^45
-P^56^171^155
-P^56^171^45
-P^56^171^622
-P^56^285^2488
-P^56^285^622
-P^56^285^622
-P^56^285^622
-P^56^288^622
-P^56^288^622
-P^56^480^622
-P^62^426^155
-P^62^426^155
-P^66^219^155
-P^66^315^155
-P^66^315^2488
-P^67^13^155
-P^67^219^155
-P^67^315^155
-P^70^151^45
-P^71^362^45
-P^71^392^1
-P^71^392^45
-P^72^285^622
-P^72^285^622
-P^72^286^622
-P^76^94^155
-P^76^94^622
-P^76^133^45
-P^76^133^45
-P^76^133^45
-P^76^263^45
-P^76^353^1
-P^76^353^45
-P^76^353^1
-P^76^394^1
-P^76^394^1
-P^76^394^1
-P^76^442^155
-P^76^442^45
-P^76^460^155
-P^76^460^45
-P^76^460^622
-P^76^460^45
-P^76^460^45
-P^93^437^155
-P^93^437^45
-P^93^491^155
-P^93^491^45
-P^94^72^155
-P^94^72^622
-P^94^99^45
-P^94^99^622
-P^94^105^622
-P^94^122^45
-P^94^124^45
-P^94^124^622
-P^94^124^622
-P^94^186^45
-P^94^186^622
-P^94^192^622
-P^94^192^622
-P^94^192^622
-P^94^224^622
-P^94^256^45
-P^94^256^622
-P^94^256^622
-P^94^285^10000
-P^94^285^2488
-P^94^285^622
-P^94^285^622
-P^94^285^622
-P^94^285^622
-P^94^285^622
-P^94^285^622
-P^94^288^155
-P^94^324^155
-P^94^324^622
-P^94^333^2488
-P^94^389^622
-P^94^389^622
-P^94^398^45
-P^94^398^622
-P^94^418^155
-P^94^418^2488
-P^94^418^45
-P^94^442^155
-P^94^442^622
-P^94^442^155
-P^94^442^622
-P^94^471^10000
-P^94^471^622
-P^94^471^10000
-P^94^471^622
-P^94^471^10000
-P^94^471^10000
-P^99^94^155
-P^99^94^45
-P^99^171^45
-P^99^186^45
-P^99^186^622
-P^99^256^45
-P^99^285^45
-P^99^324^45
-P^99^327^45
-P^99^471^45
-P^105^94^622
-P^108^151^155
-P^108^174^155
-P^108^306^155
-P^108^422^155
-P^115^122^45
-P^115^181^2488
-P^115^181^45
-P^115^181^622
-P^115^181^2488
-P^115^181^622
-P^115^181^622
-P^115^181^622
-P^115^192^622
-P^115^192^622
-P^115^192^622
-P^115^193^45
-P^115^224^2488
-P^115^224^622
-P^115^224^2488
-P^115^224^622
-P^115^224^622
-P^115^256^622
-P^115^283^45
-P^115^283^622
-P^115^286^45
-P^115^356^45
-P^115^377^2488
-P^115^377^622
-P^115^382^45
-P^115^383^45
-P^115^418^2488
-P^115^418^45
-P^115^418^622
-P^115^471^2488
-P^115^471^45
-P^122^115^622
-P^122^192^45
-P^122^192^622
-P^122^377^45
-P^122^377^622
-P^122^377^622
-P^122^382^45
-P^122^398^45
-P^122^418^45
-P^122^418^622
-P^129^219^45
-P^129^219^45
-P^133^460^155
-P^137^263^622
-P^137^263^622
-P^138^306^45
-P^138^422^155
-P^138^464^45
-P^138^493^155
-P^138^493^45
-P^143^454^622
-P^143^454^622
-P^143^454^622
-P^143^454^622
-P^143^471^2488
-P^143^471^622
-P^143^471^622
-P^143^471^622
-P^143^471^622
-P^143^471^622
-P^143^471^622
-P^151^175^2488
-P^151^219^155
-P^151^219^155
-P^151^253^155
-P^151^253^45
-P^151^285^155
-P^151^285^155
-P^151^285^155
-P^151^285^155
-P^151^285^155
-P^151^315^155
-P^151^315^2488
-P^151^338^45
-P^151^422^155
-P^151^464^45
-P^151^493^155
-P^151^493^45
-P^156^305^45
-P^156^305^6
-P^156^305^45
-P^166^471^45
-P^169^442^155
-P^169^442^155
-P^171^285^155
-P^171^285^45
-P^171^285^622
-P^171^285^622
-P^172^180^45
-P^172^313^45
-P^172^382^45
-P^172^382^45
-P^173^224^622
-P^173^383^622
-P^173^389^622
-P^173^389^622
-P^173^389^622
-P^173^389^622
-P^174^422^155
-P^177^285^622
-P^177^285^622
-P^177^288^155
-P^177^288^155
-P^179^219^2
-P^179^219^2
-P^179^224^155
-P^179^224^155
-P^179^305^45
-P^179^373^155
-P^179^373^155
-P^179^373^155
-P^179^407^45
-P^179^407^45
-P^179^407^45
-P^179^407^45
-P^179^407^45
-P^179^407^45
-P^179^407^45
-P^179^426^45
-P^180^373^45
-P^180^373^45
-P^181^224^45
-P^181^248^45
-P^181^283^622
-P^181^285^45
-P^186^324^622
-P^190^304^622
-P^190^304^622
-P^192^224^622
-P^192^224^622
-P^192^377^622
-P^192^389^622
-P^192^389^622
-P^192^471^622
-P^192^471^622
-P^194^471^622
-P^194^471^622
-P^194^471^622
-P^194^471^622
-P^194^471^622
-P^195^333^2488
-P^195^398^2488
-P^195^398^622
-P^195^398^622
-P^199^200^45
-P^199^305^45
-P^200^268^45
-P^206^224^45
-P^206^224^45
-P^206^326^45
-P^206^326^45
-P^219^138^155
-P^219^232^45
-P^219^253^45
-P^219^285^155
-P^219^285^2488
-P^219^285^155
-P^219^285^2488
-P^219^285^155
-P^219^285^155
-P^219^315^155
-P^219^315^2488
-P^219^471^2488
-P^219^471^2488
-P^219^493^45
-P^224^248^45
-P^224^285^45
-P^224^285^622
-P^224^326^622
-P^224^326^622
-P^224^326^622
-P^224^326^622
-P^224^326^622
-P^224^326^622
-P^224^326^622
-P^224^326^622
-P^224^373^2488
-P^224^373^622
-P^224^377^2488
-P^224^381^45
-P^224^381^622
-P^224^381^622
-P^224^381^622
-P^224^382^45
-P^224^383^622
-P^224^383^622
-P^224^389^45
-P^224^389^622
-P^224^389^622
-P^224^389^622
-P^224^389^622
-P^224^400^45
-P^224^407^155
-P^224^418^2488
-P^224^426^155
-P^224^426^155
-P^224^437^155
-P^224^437^155
-P^224^471^622
-P^232^35^45
-P^232^315^45
-P^234^471^622
-P^234^471^622
-P^243^426^155
-P^243^426^155
-P^248^285^45
-P^248^304^622
-P^248^304^622
-P^248^304^622
-P^248^304^622
-P^248^384^2
-P^248^384^2
-P^248^384^2
-P^248^384^2
-P^248^384^2
-P^248^384^2
-P^248^384^2
-P^248^384^2
-P^248^384^2
-P^248^384^2
-P^248^384^2
-P^248^384^2
-P^253^315^155
-P^263^168^45
-P^263^285^155
-P^263^285^622
-P^263^285^622
-P^263^307^155
-P^263^307^622
-P^263^307^155
-P^263^307^622
-P^263^347^155
-P^263^347^45
-P^263^347^45
-P^263^442^622
-P^263^442^622
-P^267^305^155
-P^267^305^45
-P^267^491^155
-P^267^491^45
-P^268^305^45
-P^268^491^45
-P^280^285^155
-P^283^23^622
-P^285^72^45
-P^285^94^2488
-P^285^138^155
-P^285^171^155
-P^285^171^155
-P^285^171^155
-P^285^171^155
-P^285^171^155
-P^285^286^45
-P^285^288^622
-P^285^288^622
-P^285^288^622
-P^285^288^622
-P^285^288^622
-P^285^288^622
-P^285^288^622
-P^285^288^622
-P^285^288^622
-P^285^288^622
-P^285^288^622
-P^285^315^155
-P^285^315^155
-P^285^318^622
-P^285^318^622
-P^285^324^45
-P^285^356^45
-P^285^373^2488
-P^285^377^622
-P^285^418^2488
-P^285^418^2488
-P^285^422^155
-P^285^442^155
-P^285^442^622
-P^285^442^155
-P^285^442^155
-P^285^442^155
-P^285^471^10000
-P^285^471^2488
-P^285^471^45
-P^285^471^622
-P^285^471^2488
-P^285^471^622
-P^285^471^2488
-P^285^471^622
-P^285^471^2488
-P^285^471^2488
-P^285^471^2488
-P^287^115^45
-P^287^285^45
-P^287^382^45
-P^287^471^45
-P^288^318^45
-P^304^433^622
-P^304^433^622
-P^304^433^622
-P^305^156^6
-P^305^267^155
-P^305^373^155
-P^305^437^155
-P^305^437^45
-P^305^437^622
-P^305^437^155
-P^305^437^45
-P^305^437^622
-P^305^437^45
-P^305^437^45
-P^306^422^155
-P^307^322^45
-P^307^442^155
-P^307^442^622
-P^313^383^2488
-P^313^383^622
-P^313^383^2488
-P^313^383^622
-P^313^383^622
-P^313^383^622
-P^313^389^2488
-P^313^389^622
-P^313^389^2488
-P^313^389^622
-P^313^389^622
-P^313^389^622
-P^313^426^155
-P^313^426^155
-P^313^426^155
-P^315^493^155
-P^318^285^45
-P^318^471^2488
-P^321^426^155
-P^322^442^45
-P^324^327^622
-P^324^471^45
-P^324^471^622
-P^326^224^45
-P^327^471^622
-P^333^373^2488
-P^333^377^2488
-P^333^377^2488
-P^333^382^2488
-P^333^398^2488
-P^333^398^622
-P^333^398^2488
-P^333^398^622
-P^333^398^2488
-P^339^13^45
-P^339^151^45
-P^347^168^45
-P^348^358^622
-P^348^471^45
-P^348^471^622
-P^348^471^622
-P^348^471^622
-P^356^285^45
-P^356^418^45
-P^356^471^45
-P^356^471^45
-P^358^170^45
-P^358^471^622
-P^362^115^2
-P^362^248^155
-P^362^392^155
-P^362^392^155
-P^373^94^2488
-P^373^173^622
-P^373^173^622
-P^373^173^622
-P^373^173^622
-P^373^382^2488
-P^373^382^622
-P^373^382^2488
-P^373^382^622
-P^373^383^2488
-P^373^383^622
-P^373^383^2488
-P^373^383^622
-P^373^383^622
-P^373^383^622
-P^373^389^2488
-P^373^389^622
-P^373^389^2488
-P^373^407^155
-P^373^407^2
-P^373^407^155
-P^373^407^2
-P^373^407^2
-P^373^407^2
-P^373^407^2
-P^373^426^155
-P^373^426^155
-P^373^426^155
-P^373^426^155
-P^373^430^45
-P^377^192^622
-P^377^373^2488
-P^377^389^622
-P^377^398^622
-P^377^398^622
-P^377^418^2488
-P^377^418^622
-P^377^418^2488
-P^377^418^2488
-P^381^326^45
-P^382^23^45
-P^382^94^622
-P^382^224^622
-P^382^285^622
-P^382^286^45
-P^382^377^2488
-P^382^377^45
-P^382^377^622
-P^382^383^2488
-P^382^383^45
-P^382^383^622
-P^382^383^622
-P^382^389^622
-P^382^389^622
-P^382^389^622
-P^382^389^622
-P^382^398^45
-P^382^453^622
-P^382^466^45
-P^382^471^2488
-P^382^471^45
-P^382^471^622
-P^383^389^2488
-P^383^389^45
-P^383^389^622
-P^383^389^2488
-P^383^389^622
-P^383^389^2488
-P^383^389^622
-P^383^389^622
-P^384^454^45
-P^389^288^622
-P^389^382^2488
-P^389^382^2488
-P^389^383^622
-P^389^398^622
-P^389^398^622
-P^389^398^622
-P^389^398^622
-P^389^471^622
-P^392^23^2
-P^392^248^155
-P^392^248^2
-P^392^248^2
-P^392^248^2
-P^392^248^2
-P^392^248^2
-P^392^248^2
-P^392^248^2
-P^392^248^2
-P^392^248^2
-P^392^248^2
-P^392^248^2
-P^392^248^2
-P^393^399^45
-P^393^399^6
-P^393^437^45
-P^393^437^6
-P^394^442^1
-P^398^94^2488
-P^398^115^2488
-P^398^115^45
-P^398^193^45
-P^398^285^2488
-P^398^286^45
-P^398^333^45
-P^398^373^622
-P^398^377^2488
-P^398^377^45
-P^398^382^622
-P^398^383^45
-P^398^383^622
-P^398^389^45
-P^398^460^155
-P^398^460^45
-P^398^460^622
-P^398^460^155
-P^398^460^155
-P^398^471^622
-P^399^93^45
-P^399^93^6
-P^399^93^45
-P^407^426^45
-P^418^373^2488
-P^418^471^2488
-P^426^437^45
-P^437^491^155
-P^437^491^45
-P^437^491^45
-P^442^76^622
-P^442^124^45
-P^442^133^45
-P^442^137^622
-P^442^280^155
-P^442^353^45
-P^442^442^155
-P^442^454^155
-P^442^454^622
-P^442^454^155
-P^442^454^622
-P^442^472^155
-P^442^472^155
-P^442^485^155
-P^442^486^45
-P^454^471^622
-P^460^462^45
-P^471^13^155
-P^471^34^622
-P^471^138^155
-P^471^192^2488
-P^471^192^2488
-P^471^219^155
-P^471^285^155
-P^471^285^10000
-P^471^286^45
-P^471^288^622
-P^471^288^622
-P^471^288^622
-P^471^373^2488
-P^471^373^2488
-P^471^442^155
-P^472^94^155
-P^472^94^622
-P^472^94^155
-P^472^94^622
-P^472^442^622
-P^491^437^45
-P^491^437^45
-E^UUNET (last updated 12/03/2001)
+I ^ 37 ^ I ^ UUNET
+P ^ 1 ^ 321 ^ 155
+P ^ 1 ^ 426 ^ 155
+P ^ 3 ^ 437 ^ 45
+P ^ 3 ^ 437 ^ 45
+P ^ 7 ^ 172 ^ 45
+P ^ 7 ^ 181 ^ 45
+P ^ 7 ^ 224 ^ 155
+P ^ 7 ^ 224 ^ 45
+P ^ 13 ^ 66 ^ 155
+P ^ 13 ^ 66 ^ 2488
+P ^ 13 ^ 70 ^ 45
+P ^ 13 ^ 108 ^ 155
+P ^ 13 ^ 151 ^ 155
+P ^ 13 ^ 175 ^ 2488
+P ^ 13 ^ 219 ^ 155
+P ^ 13 ^ 219 ^ 2488
+P ^ 13 ^ 219 ^ 155
+P ^ 13 ^ 219 ^ 155
+P ^ 13 ^ 285 ^ 155
+P ^ 13 ^ 285 ^ 155
+P ^ 13 ^ 285 ^ 155
+P ^ 13 ^ 285 ^ 155
+P ^ 13 ^ 285 ^ 155
+P ^ 13 ^ 338 ^ 45
+P ^ 13 ^ 422 ^ 155
+P ^ 13 ^ 422 ^ 45
+P ^ 13 ^ 422 ^ 155
+P ^ 13 ^ 422 ^ 45
+P ^ 13 ^ 422 ^ 45
+P ^ 13 ^ 464 ^ 45
+P ^ 13 ^ 493 ^ 45
+P ^ 23 ^ 94 ^ 622
+P ^ 23 ^ 94 ^ 622
+P ^ 23 ^ 94 ^ 622
+P ^ 23 ^ 115 ^ 2488
+P ^ 23 ^ 115 ^ 45
+P ^ 23 ^ 115 ^ 622
+P ^ 23 ^ 115 ^ 622
+P ^ 23 ^ 115 ^ 622
+P ^ 23 ^ 166 ^ 45
+P ^ 23 ^ 181 ^ 2488
+P ^ 23 ^ 181 ^ 45
+P ^ 23 ^ 181 ^ 622
+P ^ 23 ^ 181 ^ 2488
+P ^ 23 ^ 181 ^ 622
+P ^ 23 ^ 190 ^ 622
+P ^ 23 ^ 190 ^ 622
+P ^ 23 ^ 248 ^ 45
+P ^ 23 ^ 248 ^ 622
+P ^ 23 ^ 248 ^ 622
+P ^ 23 ^ 248 ^ 622
+P ^ 23 ^ 248 ^ 622
+P ^ 23 ^ 248 ^ 622
+P ^ 23 ^ 248 ^ 622
+P ^ 23 ^ 248 ^ 622
+P ^ 23 ^ 285 ^ 2488
+P ^ 23 ^ 285 ^ 45
+P ^ 23 ^ 285 ^ 2488
+P ^ 23 ^ 287 ^ 45
+P ^ 23 ^ 304 ^ 622
+P ^ 23 ^ 304 ^ 622
+P ^ 23 ^ 377 ^ 2488
+P ^ 23 ^ 433 ^ 45
+P ^ 23 ^ 471 ^ 2488
+P ^ 23 ^ 471 ^ 45
+P ^ 23 ^ 471 ^ 622
+P ^ 23 ^ 471 ^ 2488
+P ^ 23 ^ 471 ^ 622
+P ^ 23 ^ 471 ^ 2488
+P ^ 23 ^ 471 ^ 622
+P ^ 30 ^ 115 ^ 45
+P ^ 30 ^ 115 ^ 45
+P ^ 30 ^ 115 ^ 45
+P ^ 30 ^ 115 ^ 45
+P ^ 30 ^ 115 ^ 45
+P ^ 30 ^ 115 ^ 45
+P ^ 30 ^ 181 ^ 45
+P ^ 30 ^ 181 ^ 45
+P ^ 30 ^ 181 ^ 45
+P ^ 30 ^ 181 ^ 45
+P ^ 30 ^ 181 ^ 45
+P ^ 30 ^ 181 ^ 45
+P ^ 34 ^ 324 ^ 622
+P ^ 34 ^ 471 ^ 622
+P ^ 36 ^ 322 ^ 45
+P ^ 56 ^ 171 ^ 155
+P ^ 56 ^ 171 ^ 45
+P ^ 56 ^ 171 ^ 622
+P ^ 56 ^ 285 ^ 2488
+P ^ 56 ^ 285 ^ 622
+P ^ 56 ^ 285 ^ 622
+P ^ 56 ^ 285 ^ 622
+P ^ 56 ^ 288 ^ 622
+P ^ 56 ^ 288 ^ 622
+P ^ 56 ^ 480 ^ 622
+P ^ 62 ^ 426 ^ 155
+P ^ 62 ^ 426 ^ 155
+P ^ 66 ^ 219 ^ 155
+P ^ 66 ^ 315 ^ 155
+P ^ 66 ^ 315 ^ 2488
+P ^ 67 ^ 13 ^ 155
+P ^ 67 ^ 219 ^ 155
+P ^ 67 ^ 315 ^ 155
+P ^ 70 ^ 151 ^ 45
+P ^ 71 ^ 362 ^ 45
+P ^ 71 ^ 392 ^ 1
+P ^ 71 ^ 392 ^ 45
+P ^ 72 ^ 285 ^ 622
+P ^ 72 ^ 285 ^ 622
+P ^ 72 ^ 286 ^ 622
+P ^ 76 ^ 94 ^ 155
+P ^ 76 ^ 94 ^ 622
+P ^ 76 ^ 133 ^ 45
+P ^ 76 ^ 133 ^ 45
+P ^ 76 ^ 133 ^ 45
+P ^ 76 ^ 263 ^ 45
+P ^ 76 ^ 353 ^ 1
+P ^ 76 ^ 353 ^ 45
+P ^ 76 ^ 353 ^ 1
+P ^ 76 ^ 394 ^ 1
+P ^ 76 ^ 394 ^ 1
+P ^ 76 ^ 394 ^ 1
+P ^ 76 ^ 442 ^ 155
+P ^ 76 ^ 442 ^ 45
+P ^ 76 ^ 460 ^ 155
+P ^ 76 ^ 460 ^ 45
+P ^ 76 ^ 460 ^ 622
+P ^ 76 ^ 460 ^ 45
+P ^ 76 ^ 460 ^ 45
+P ^ 93 ^ 437 ^ 155
+P ^ 93 ^ 437 ^ 45
+P ^ 93 ^ 491 ^ 155
+P ^ 93 ^ 491 ^ 45
+P ^ 94 ^ 72 ^ 155
+P ^ 94 ^ 72 ^ 622
+P ^ 94 ^ 99 ^ 45
+P ^ 94 ^ 99 ^ 622
+P ^ 94 ^ 105 ^ 622
+P ^ 94 ^ 122 ^ 45
+P ^ 94 ^ 124 ^ 45
+P ^ 94 ^ 124 ^ 622
+P ^ 94 ^ 124 ^ 622
+P ^ 94 ^ 186 ^ 45
+P ^ 94 ^ 186 ^ 622
+P ^ 94 ^ 192 ^ 622
+P ^ 94 ^ 192 ^ 622
+P ^ 94 ^ 192 ^ 622
+P ^ 94 ^ 224 ^ 622
+P ^ 94 ^ 256 ^ 45
+P ^ 94 ^ 256 ^ 622
+P ^ 94 ^ 256 ^ 622
+P ^ 94 ^ 285 ^ 10000
+P ^ 94 ^ 285 ^ 2488
+P ^ 94 ^ 285 ^ 622
+P ^ 94 ^ 285 ^ 622
+P ^ 94 ^ 285 ^ 622
+P ^ 94 ^ 285 ^ 622
+P ^ 94 ^ 285 ^ 622
+P ^ 94 ^ 285 ^ 622
+P ^ 94 ^ 288 ^ 155
+P ^ 94 ^ 324 ^ 155
+P ^ 94 ^ 324 ^ 622
+P ^ 94 ^ 333 ^ 2488
+P ^ 94 ^ 389 ^ 622
+P ^ 94 ^ 389 ^ 622
+P ^ 94 ^ 398 ^ 45
+P ^ 94 ^ 398 ^ 622
+P ^ 94 ^ 418 ^ 155
+P ^ 94 ^ 418 ^ 2488
+P ^ 94 ^ 418 ^ 45
+P ^ 94 ^ 442 ^ 155
+P ^ 94 ^ 442 ^ 622
+P ^ 94 ^ 442 ^ 155
+P ^ 94 ^ 442 ^ 622
+P ^ 94 ^ 471 ^ 10000
+P ^ 94 ^ 471 ^ 622
+P ^ 94 ^ 471 ^ 10000
+P ^ 94 ^ 471 ^ 622
+P ^ 94 ^ 471 ^ 10000
+P ^ 94 ^ 471 ^ 10000
+P ^ 99 ^ 94 ^ 155
+P ^ 99 ^ 94 ^ 45
+P ^ 99 ^ 171 ^ 45
+P ^ 99 ^ 186 ^ 45
+P ^ 99 ^ 186 ^ 622
+P ^ 99 ^ 256 ^ 45
+P ^ 99 ^ 285 ^ 45
+P ^ 99 ^ 324 ^ 45
+P ^ 99 ^ 327 ^ 45
+P ^ 99 ^ 471 ^ 45
+P ^ 105 ^ 94 ^ 622
+P ^ 108 ^ 151 ^ 155
+P ^ 108 ^ 174 ^ 155
+P ^ 108 ^ 306 ^ 155
+P ^ 108 ^ 422 ^ 155
+P ^ 115 ^ 122 ^ 45
+P ^ 115 ^ 181 ^ 2488
+P ^ 115 ^ 181 ^ 45
+P ^ 115 ^ 181 ^ 622
+P ^ 115 ^ 181 ^ 2488
+P ^ 115 ^ 181 ^ 622
+P ^ 115 ^ 181 ^ 622
+P ^ 115 ^ 181 ^ 622
+P ^ 115 ^ 192 ^ 622
+P ^ 115 ^ 192 ^ 622
+P ^ 115 ^ 192 ^ 622
+P ^ 115 ^ 193 ^ 45
+P ^ 115 ^ 224 ^ 2488
+P ^ 115 ^ 224 ^ 622
+P ^ 115 ^ 224 ^ 2488
+P ^ 115 ^ 224 ^ 622
+P ^ 115 ^ 224 ^ 622
+P ^ 115 ^ 256 ^ 622
+P ^ 115 ^ 283 ^ 45
+P ^ 115 ^ 283 ^ 622
+P ^ 115 ^ 286 ^ 45
+P ^ 115 ^ 356 ^ 45
+P ^ 115 ^ 377 ^ 2488
+P ^ 115 ^ 377 ^ 622
+P ^ 115 ^ 382 ^ 45
+P ^ 115 ^ 383 ^ 45
+P ^ 115 ^ 418 ^ 2488
+P ^ 115 ^ 418 ^ 45
+P ^ 115 ^ 418 ^ 622
+P ^ 115 ^ 471 ^ 2488
+P ^ 115 ^ 471 ^ 45
+P ^ 122 ^ 115 ^ 622
+P ^ 122 ^ 192 ^ 45
+P ^ 122 ^ 192 ^ 622
+P ^ 122 ^ 377 ^ 45
+P ^ 122 ^ 377 ^ 622
+P ^ 122 ^ 377 ^ 622
+P ^ 122 ^ 382 ^ 45
+P ^ 122 ^ 398 ^ 45
+P ^ 122 ^ 418 ^ 45
+P ^ 122 ^ 418 ^ 622
+P ^ 129 ^ 219 ^ 45
+P ^ 129 ^ 219 ^ 45
+P ^ 133 ^ 460 ^ 155
+P ^ 137 ^ 263 ^ 622
+P ^ 137 ^ 263 ^ 622
+P ^ 138 ^ 306 ^ 45
+P ^ 138 ^ 422 ^ 155
+P ^ 138 ^ 464 ^ 45
+P ^ 138 ^ 493 ^ 155
+P ^ 138 ^ 493 ^ 45
+P ^ 143 ^ 454 ^ 622
+P ^ 143 ^ 454 ^ 622
+P ^ 143 ^ 454 ^ 622
+P ^ 143 ^ 454 ^ 622
+P ^ 143 ^ 471 ^ 2488
+P ^ 143 ^ 471 ^ 622
+P ^ 143 ^ 471 ^ 622
+P ^ 143 ^ 471 ^ 622
+P ^ 143 ^ 471 ^ 622
+P ^ 143 ^ 471 ^ 622
+P ^ 143 ^ 471 ^ 622
+P ^ 151 ^ 175 ^ 2488
+P ^ 151 ^ 219 ^ 155
+P ^ 151 ^ 219 ^ 155
+P ^ 151 ^ 253 ^ 155
+P ^ 151 ^ 253 ^ 45
+P ^ 151 ^ 285 ^ 155
+P ^ 151 ^ 285 ^ 155
+P ^ 151 ^ 285 ^ 155
+P ^ 151 ^ 285 ^ 155
+P ^ 151 ^ 285 ^ 155
+P ^ 151 ^ 315 ^ 155
+P ^ 151 ^ 315 ^ 2488
+P ^ 151 ^ 338 ^ 45
+P ^ 151 ^ 422 ^ 155
+P ^ 151 ^ 464 ^ 45
+P ^ 151 ^ 493 ^ 155
+P ^ 151 ^ 493 ^ 45
+P ^ 156 ^ 305 ^ 45
+P ^ 156 ^ 305 ^ 6
+P ^ 156 ^ 305 ^ 45
+P ^ 166 ^ 471 ^ 45
+P ^ 169 ^ 442 ^ 155
+P ^ 169 ^ 442 ^ 155
+P ^ 171 ^ 285 ^ 155
+P ^ 171 ^ 285 ^ 45
+P ^ 171 ^ 285 ^ 622
+P ^ 171 ^ 285 ^ 622
+P ^ 172 ^ 180 ^ 45
+P ^ 172 ^ 313 ^ 45
+P ^ 172 ^ 382 ^ 45
+P ^ 172 ^ 382 ^ 45
+P ^ 173 ^ 224 ^ 622
+P ^ 173 ^ 383 ^ 622
+P ^ 173 ^ 389 ^ 622
+P ^ 173 ^ 389 ^ 622
+P ^ 173 ^ 389 ^ 622
+P ^ 173 ^ 389 ^ 622
+P ^ 174 ^ 422 ^ 155
+P ^ 177 ^ 285 ^ 622
+P ^ 177 ^ 285 ^ 622
+P ^ 177 ^ 288 ^ 155
+P ^ 177 ^ 288 ^ 155
+P ^ 179 ^ 219 ^ 2
+P ^ 179 ^ 219 ^ 2
+P ^ 179 ^ 224 ^ 155
+P ^ 179 ^ 224 ^ 155
+P ^ 179 ^ 305 ^ 45
+P ^ 179 ^ 373 ^ 155
+P ^ 179 ^ 373 ^ 155
+P ^ 179 ^ 373 ^ 155
+P ^ 179 ^ 407 ^ 45
+P ^ 179 ^ 407 ^ 45
+P ^ 179 ^ 407 ^ 45
+P ^ 179 ^ 407 ^ 45
+P ^ 179 ^ 407 ^ 45
+P ^ 179 ^ 407 ^ 45
+P ^ 179 ^ 407 ^ 45
+P ^ 179 ^ 426 ^ 45
+P ^ 180 ^ 373 ^ 45
+P ^ 180 ^ 373 ^ 45
+P ^ 181 ^ 224 ^ 45
+P ^ 181 ^ 248 ^ 45
+P ^ 181 ^ 283 ^ 622
+P ^ 181 ^ 285 ^ 45
+P ^ 186 ^ 324 ^ 622
+P ^ 190 ^ 304 ^ 622
+P ^ 190 ^ 304 ^ 622
+P ^ 192 ^ 224 ^ 622
+P ^ 192 ^ 224 ^ 622
+P ^ 192 ^ 377 ^ 622
+P ^ 192 ^ 389 ^ 622
+P ^ 192 ^ 389 ^ 622
+P ^ 192 ^ 471 ^ 622
+P ^ 192 ^ 471 ^ 622
+P ^ 194 ^ 471 ^ 622
+P ^ 194 ^ 471 ^ 622
+P ^ 194 ^ 471 ^ 622
+P ^ 194 ^ 471 ^ 622
+P ^ 194 ^ 471 ^ 622
+P ^ 195 ^ 333 ^ 2488
+P ^ 195 ^ 398 ^ 2488
+P ^ 195 ^ 398 ^ 622
+P ^ 195 ^ 398 ^ 622
+P ^ 199 ^ 200 ^ 45
+P ^ 199 ^ 305 ^ 45
+P ^ 200 ^ 268 ^ 45
+P ^ 206 ^ 224 ^ 45
+P ^ 206 ^ 224 ^ 45
+P ^ 206 ^ 326 ^ 45
+P ^ 206 ^ 326 ^ 45
+P ^ 219 ^ 138 ^ 155
+P ^ 219 ^ 232 ^ 45
+P ^ 219 ^ 253 ^ 45
+P ^ 219 ^ 285 ^ 155
+P ^ 219 ^ 285 ^ 2488
+P ^ 219 ^ 285 ^ 155
+P ^ 219 ^ 285 ^ 2488
+P ^ 219 ^ 285 ^ 155
+P ^ 219 ^ 285 ^ 155
+P ^ 219 ^ 315 ^ 155
+P ^ 219 ^ 315 ^ 2488
+P ^ 219 ^ 471 ^ 2488
+P ^ 219 ^ 471 ^ 2488
+P ^ 219 ^ 493 ^ 45
+P ^ 224 ^ 248 ^ 45
+P ^ 224 ^ 285 ^ 45
+P ^ 224 ^ 285 ^ 622
+P ^ 224 ^ 326 ^ 622
+P ^ 224 ^ 326 ^ 622
+P ^ 224 ^ 326 ^ 622
+P ^ 224 ^ 326 ^ 622
+P ^ 224 ^ 326 ^ 622
+P ^ 224 ^ 326 ^ 622
+P ^ 224 ^ 326 ^ 622
+P ^ 224 ^ 326 ^ 622
+P ^ 224 ^ 373 ^ 2488
+P ^ 224 ^ 373 ^ 622
+P ^ 224 ^ 377 ^ 2488
+P ^ 224 ^ 381 ^ 45
+P ^ 224 ^ 381 ^ 622
+P ^ 224 ^ 381 ^ 622
+P ^ 224 ^ 381 ^ 622
+P ^ 224 ^ 382 ^ 45
+P ^ 224 ^ 383 ^ 622
+P ^ 224 ^ 383 ^ 622
+P ^ 224 ^ 389 ^ 45
+P ^ 224 ^ 389 ^ 622
+P ^ 224 ^ 389 ^ 622
+P ^ 224 ^ 389 ^ 622
+P ^ 224 ^ 389 ^ 622
+P ^ 224 ^ 400 ^ 45
+P ^ 224 ^ 407 ^ 155
+P ^ 224 ^ 418 ^ 2488
+P ^ 224 ^ 426 ^ 155
+P ^ 224 ^ 426 ^ 155
+P ^ 224 ^ 437 ^ 155
+P ^ 224 ^ 437 ^ 155
+P ^ 224 ^ 471 ^ 622
+P ^ 232 ^ 35 ^ 45
+P ^ 232 ^ 315 ^ 45
+P ^ 234 ^ 471 ^ 622
+P ^ 234 ^ 471 ^ 622
+P ^ 243 ^ 426 ^ 155
+P ^ 243 ^ 426 ^ 155
+P ^ 248 ^ 285 ^ 45
+P ^ 248 ^ 304 ^ 622
+P ^ 248 ^ 304 ^ 622
+P ^ 248 ^ 304 ^ 622
+P ^ 248 ^ 304 ^ 622
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 248 ^ 384 ^ 2
+P ^ 253 ^ 315 ^ 155
+P ^ 263 ^ 168 ^ 45
+P ^ 263 ^ 285 ^ 155
+P ^ 263 ^ 285 ^ 622
+P ^ 263 ^ 285 ^ 622
+P ^ 263 ^ 307 ^ 155
+P ^ 263 ^ 307 ^ 622
+P ^ 263 ^ 307 ^ 155
+P ^ 263 ^ 307 ^ 622
+P ^ 263 ^ 347 ^ 155
+P ^ 263 ^ 347 ^ 45
+P ^ 263 ^ 347 ^ 45
+P ^ 263 ^ 442 ^ 622
+P ^ 263 ^ 442 ^ 622
+P ^ 267 ^ 305 ^ 155
+P ^ 267 ^ 305 ^ 45
+P ^ 267 ^ 491 ^ 155
+P ^ 267 ^ 491 ^ 45
+P ^ 268 ^ 305 ^ 45
+P ^ 268 ^ 491 ^ 45
+P ^ 280 ^ 285 ^ 155
+P ^ 283 ^ 23 ^ 622
+P ^ 285 ^ 72 ^ 45
+P ^ 285 ^ 94 ^ 2488
+P ^ 285 ^ 138 ^ 155
+P ^ 285 ^ 171 ^ 155
+P ^ 285 ^ 171 ^ 155
+P ^ 285 ^ 171 ^ 155
+P ^ 285 ^ 171 ^ 155
+P ^ 285 ^ 171 ^ 155
+P ^ 285 ^ 286 ^ 45
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 288 ^ 622
+P ^ 285 ^ 315 ^ 155
+P ^ 285 ^ 315 ^ 155
+P ^ 285 ^ 318 ^ 622
+P ^ 285 ^ 318 ^ 622
+P ^ 285 ^ 324 ^ 45
+P ^ 285 ^ 356 ^ 45
+P ^ 285 ^ 373 ^ 2488
+P ^ 285 ^ 377 ^ 622
+P ^ 285 ^ 418 ^ 2488
+P ^ 285 ^ 418 ^ 2488
+P ^ 285 ^ 422 ^ 155
+P ^ 285 ^ 442 ^ 155
+P ^ 285 ^ 442 ^ 622
+P ^ 285 ^ 442 ^ 155
+P ^ 285 ^ 442 ^ 155
+P ^ 285 ^ 442 ^ 155
+P ^ 285 ^ 471 ^ 10000
+P ^ 285 ^ 471 ^ 2488
+P ^ 285 ^ 471 ^ 45
+P ^ 285 ^ 471 ^ 622
+P ^ 285 ^ 471 ^ 2488
+P ^ 285 ^ 471 ^ 622
+P ^ 285 ^ 471 ^ 2488
+P ^ 285 ^ 471 ^ 622
+P ^ 285 ^ 471 ^ 2488
+P ^ 285 ^ 471 ^ 2488
+P ^ 285 ^ 471 ^ 2488
+P ^ 287 ^ 115 ^ 45
+P ^ 287 ^ 285 ^ 45
+P ^ 287 ^ 382 ^ 45
+P ^ 287 ^ 471 ^ 45
+P ^ 288 ^ 318 ^ 45
+P ^ 304 ^ 433 ^ 622
+P ^ 304 ^ 433 ^ 622
+P ^ 304 ^ 433 ^ 622
+P ^ 305 ^ 156 ^ 6
+P ^ 305 ^ 267 ^ 155
+P ^ 305 ^ 373 ^ 155
+P ^ 305 ^ 437 ^ 155
+P ^ 305 ^ 437 ^ 45
+P ^ 305 ^ 437 ^ 622
+P ^ 305 ^ 437 ^ 155
+P ^ 305 ^ 437 ^ 45
+P ^ 305 ^ 437 ^ 622
+P ^ 305 ^ 437 ^ 45
+P ^ 305 ^ 437 ^ 45
+P ^ 306 ^ 422 ^ 155
+P ^ 307 ^ 322 ^ 45
+P ^ 307 ^ 442 ^ 155
+P ^ 307 ^ 442 ^ 622
+P ^ 313 ^ 383 ^ 2488
+P ^ 313 ^ 383 ^ 622
+P ^ 313 ^ 383 ^ 2488
+P ^ 313 ^ 383 ^ 622
+P ^ 313 ^ 383 ^ 622
+P ^ 313 ^ 383 ^ 622
+P ^ 313 ^ 389 ^ 2488
+P ^ 313 ^ 389 ^ 622
+P ^ 313 ^ 389 ^ 2488
+P ^ 313 ^ 389 ^ 622
+P ^ 313 ^ 389 ^ 622
+P ^ 313 ^ 389 ^ 622
+P ^ 313 ^ 426 ^ 155
+P ^ 313 ^ 426 ^ 155
+P ^ 313 ^ 426 ^ 155
+P ^ 315 ^ 493 ^ 155
+P ^ 318 ^ 285 ^ 45
+P ^ 318 ^ 471 ^ 2488
+P ^ 321 ^ 426 ^ 155
+P ^ 322 ^ 442 ^ 45
+P ^ 324 ^ 327 ^ 622
+P ^ 324 ^ 471 ^ 45
+P ^ 324 ^ 471 ^ 622
+P ^ 326 ^ 224 ^ 45
+P ^ 327 ^ 471 ^ 622
+P ^ 333 ^ 373 ^ 2488
+P ^ 333 ^ 377 ^ 2488
+P ^ 333 ^ 377 ^ 2488
+P ^ 333 ^ 382 ^ 2488
+P ^ 333 ^ 398 ^ 2488
+P ^ 333 ^ 398 ^ 622
+P ^ 333 ^ 398 ^ 2488
+P ^ 333 ^ 398 ^ 622
+P ^ 333 ^ 398 ^ 2488
+P ^ 339 ^ 13 ^ 45
+P ^ 339 ^ 151 ^ 45
+P ^ 347 ^ 168 ^ 45
+P ^ 348 ^ 358 ^ 622
+P ^ 348 ^ 471 ^ 45
+P ^ 348 ^ 471 ^ 622
+P ^ 348 ^ 471 ^ 622
+P ^ 348 ^ 471 ^ 622
+P ^ 356 ^ 285 ^ 45
+P ^ 356 ^ 418 ^ 45
+P ^ 356 ^ 471 ^ 45
+P ^ 356 ^ 471 ^ 45
+P ^ 358 ^ 170 ^ 45
+P ^ 358 ^ 471 ^ 622
+P ^ 362 ^ 115 ^ 2
+P ^ 362 ^ 248 ^ 155
+P ^ 362 ^ 392 ^ 155
+P ^ 362 ^ 392 ^ 155
+P ^ 373 ^ 94 ^ 2488
+P ^ 373 ^ 173 ^ 622
+P ^ 373 ^ 173 ^ 622
+P ^ 373 ^ 173 ^ 622
+P ^ 373 ^ 173 ^ 622
+P ^ 373 ^ 382 ^ 2488
+P ^ 373 ^ 382 ^ 622
+P ^ 373 ^ 382 ^ 2488
+P ^ 373 ^ 382 ^ 622
+P ^ 373 ^ 383 ^ 2488
+P ^ 373 ^ 383 ^ 622
+P ^ 373 ^ 383 ^ 2488
+P ^ 373 ^ 383 ^ 622
+P ^ 373 ^ 383 ^ 622
+P ^ 373 ^ 383 ^ 622
+P ^ 373 ^ 389 ^ 2488
+P ^ 373 ^ 389 ^ 622
+P ^ 373 ^ 389 ^ 2488
+P ^ 373 ^ 407 ^ 155
+P ^ 373 ^ 407 ^ 2
+P ^ 373 ^ 407 ^ 155
+P ^ 373 ^ 407 ^ 2
+P ^ 373 ^ 407 ^ 2
+P ^ 373 ^ 407 ^ 2
+P ^ 373 ^ 407 ^ 2
+P ^ 373 ^ 426 ^ 155
+P ^ 373 ^ 426 ^ 155
+P ^ 373 ^ 426 ^ 155
+P ^ 373 ^ 426 ^ 155
+P ^ 373 ^ 430 ^ 45
+P ^ 377 ^ 192 ^ 622
+P ^ 377 ^ 373 ^ 2488
+P ^ 377 ^ 389 ^ 622
+P ^ 377 ^ 398 ^ 622
+P ^ 377 ^ 398 ^ 622
+P ^ 377 ^ 418 ^ 2488
+P ^ 377 ^ 418 ^ 622
+P ^ 377 ^ 418 ^ 2488
+P ^ 377 ^ 418 ^ 2488
+P ^ 381 ^ 326 ^ 45
+P ^ 382 ^ 23 ^ 45
+P ^ 382 ^ 94 ^ 622
+P ^ 382 ^ 224 ^ 622
+P ^ 382 ^ 285 ^ 622
+P ^ 382 ^ 286 ^ 45
+P ^ 382 ^ 377 ^ 2488
+P ^ 382 ^ 377 ^ 45
+P ^ 382 ^ 377 ^ 622
+P ^ 382 ^ 383 ^ 2488
+P ^ 382 ^ 383 ^ 45
+P ^ 382 ^ 383 ^ 622
+P ^ 382 ^ 383 ^ 622
+P ^ 382 ^ 389 ^ 622
+P ^ 382 ^ 389 ^ 622
+P ^ 382 ^ 389 ^ 622
+P ^ 382 ^ 389 ^ 622
+P ^ 382 ^ 398 ^ 45
+P ^ 382 ^ 453 ^ 622
+P ^ 382 ^ 466 ^ 45
+P ^ 382 ^ 471 ^ 2488
+P ^ 382 ^ 471 ^ 45
+P ^ 382 ^ 471 ^ 622
+P ^ 383 ^ 389 ^ 2488
+P ^ 383 ^ 389 ^ 45
+P ^ 383 ^ 389 ^ 622
+P ^ 383 ^ 389 ^ 2488
+P ^ 383 ^ 389 ^ 622
+P ^ 383 ^ 389 ^ 2488
+P ^ 383 ^ 389 ^ 622
+P ^ 383 ^ 389 ^ 622
+P ^ 384 ^ 454 ^ 45
+P ^ 389 ^ 288 ^ 622
+P ^ 389 ^ 382 ^ 2488
+P ^ 389 ^ 382 ^ 2488
+P ^ 389 ^ 383 ^ 622
+P ^ 389 ^ 398 ^ 622
+P ^ 389 ^ 398 ^ 622
+P ^ 389 ^ 398 ^ 622
+P ^ 389 ^ 398 ^ 622
+P ^ 389 ^ 471 ^ 622
+P ^ 392 ^ 23 ^ 2
+P ^ 392 ^ 248 ^ 155
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 392 ^ 248 ^ 2
+P ^ 393 ^ 399 ^ 45
+P ^ 393 ^ 399 ^ 6
+P ^ 393 ^ 437 ^ 45
+P ^ 393 ^ 437 ^ 6
+P ^ 394 ^ 442 ^ 1
+P ^ 398 ^ 94 ^ 2488
+P ^ 398 ^ 115 ^ 2488
+P ^ 398 ^ 115 ^ 45
+P ^ 398 ^ 193 ^ 45
+P ^ 398 ^ 285 ^ 2488
+P ^ 398 ^ 286 ^ 45
+P ^ 398 ^ 333 ^ 45
+P ^ 398 ^ 373 ^ 622
+P ^ 398 ^ 377 ^ 2488
+P ^ 398 ^ 377 ^ 45
+P ^ 398 ^ 382 ^ 622
+P ^ 398 ^ 383 ^ 45
+P ^ 398 ^ 383 ^ 622
+P ^ 398 ^ 389 ^ 45
+P ^ 398 ^ 460 ^ 155
+P ^ 398 ^ 460 ^ 45
+P ^ 398 ^ 460 ^ 622
+P ^ 398 ^ 460 ^ 155
+P ^ 398 ^ 460 ^ 155
+P ^ 398 ^ 471 ^ 622
+P ^ 399 ^ 93 ^ 45
+P ^ 399 ^ 93 ^ 6
+P ^ 399 ^ 93 ^ 45
+P ^ 407 ^ 426 ^ 45
+P ^ 418 ^ 373 ^ 2488
+P ^ 418 ^ 471 ^ 2488
+P ^ 426 ^ 437 ^ 45
+P ^ 437 ^ 491 ^ 155
+P ^ 437 ^ 491 ^ 45
+P ^ 437 ^ 491 ^ 45
+P ^ 442 ^ 76 ^ 622
+P ^ 442 ^ 124 ^ 45
+P ^ 442 ^ 133 ^ 45
+P ^ 442 ^ 137 ^ 622
+P ^ 442 ^ 280 ^ 155
+P ^ 442 ^ 353 ^ 45
+P ^ 442 ^ 442 ^ 155
+P ^ 442 ^ 454 ^ 155
+P ^ 442 ^ 454 ^ 622
+P ^ 442 ^ 454 ^ 155
+P ^ 442 ^ 454 ^ 622
+P ^ 442 ^ 472 ^ 155
+P ^ 442 ^ 472 ^ 155
+P ^ 442 ^ 485 ^ 155
+P ^ 442 ^ 486 ^ 45
+P ^ 454 ^ 471 ^ 622
+P ^ 460 ^ 462 ^ 45
+P ^ 471 ^ 13 ^ 155
+P ^ 471 ^ 34 ^ 622
+P ^ 471 ^ 138 ^ 155
+P ^ 471 ^ 192 ^ 2488
+P ^ 471 ^ 192 ^ 2488
+P ^ 471 ^ 219 ^ 155
+P ^ 471 ^ 285 ^ 155
+P ^ 471 ^ 285 ^ 10000
+P ^ 471 ^ 286 ^ 45
+P ^ 471 ^ 288 ^ 622
+P ^ 471 ^ 288 ^ 622
+P ^ 471 ^ 288 ^ 622
+P ^ 471 ^ 373 ^ 2488
+P ^ 471 ^ 373 ^ 2488
+P ^ 471 ^ 442 ^ 155
+P ^ 472 ^ 94 ^ 155
+P ^ 472 ^ 94 ^ 622
+P ^ 472 ^ 94 ^ 155
+P ^ 472 ^ 94 ^ 622
+P ^ 472 ^ 442 ^ 622
+P ^ 491 ^ 437 ^ 45
+P ^ 491 ^ 437 ^ 45
+E ^ UUNET (last updated 12/03/2001)
 
-I^38^I^Unilat Inc. (last updated 04/08/1999)
-P^363^73^1.5
-P^363^73^45
-P^363^301^1.5
-P^363^311^45
-P^382^398^45
-E^Unilat Inc. (last updated 04/08/1999)
+I ^ 38 ^ I ^ Unilat Inc.
+P ^ 363 ^ 73 ^ 1.5
+P ^ 363 ^ 73 ^ 45
+P ^ 363 ^ 301 ^ 1.5
+P ^ 363 ^ 311 ^ 45
+P ^ 382 ^ 398 ^ 45
+E ^ Unilat Inc. (last updated 04/08/1999)
 
-I^39^R^VBNS
-P^23^181^622
-P^23^320^622
-P^63^99^622
-P^63^320^622
-P^99^110^155
-P^99^126^622
-P^99^320^622
-P^99^345^155
-P^122^126^622
-P^126^127^155
-P^126^181^622
-P^126^457^155
-P^224^181^622
-P^224^381^155
-P^279^122^155
-P^320^471^155
-P^373^122^622
-P^373^224^622
-P^382^373^155
-P^382^382^118
-E^VBNS
+I ^ 39 ^ R ^ VBNS
+P ^ 23 ^ 181 ^ 622
+P ^ 23 ^ 320 ^ 622
+P ^ 63 ^ 99 ^ 622
+P ^ 63 ^ 320 ^ 622
+P ^ 99 ^ 110 ^ 155
+P ^ 99 ^ 126 ^ 622
+P ^ 99 ^ 320 ^ 622
+P ^ 99 ^ 345 ^ 155
+P ^ 122 ^ 126 ^ 622
+P ^ 126 ^ 127 ^ 155
+P ^ 126 ^ 181 ^ 622
+P ^ 126 ^ 457 ^ 155
+P ^ 224 ^ 181 ^ 622
+P ^ 224 ^ 381 ^ 155
+P ^ 279 ^ 122 ^ 155
+P ^ 320 ^ 471 ^ 155
+P ^ 373 ^ 122 ^ 622
+P ^ 373 ^ 224 ^ 622
+P ^ 382 ^ 373 ^ 155
+P ^ 382 ^ 382 ^ 118
+E ^ VBNS
 
-I^40^I^Verio (updated 07/08/2000)
-P^7^224^45
-P^23^115^45
-P^23^181^155
-P^23^418^155
-P^23^471^155
-P^23^471^45
-P^34^324^45
-P^34^471^45
-P^56^285^155
-P^56^367^45
-P^86^94^155
-P^86^418^155
-P^94^124^155
-P^94^124^45
-P^94^256^155
-P^94^324^155
-P^94^383^45
-P^94^398^155
-P^94^418^155
-P^115^181^155
-P^115^181^45
-P^115^192^155
-P^115^326^155
-P^115^377^155
-P^115^383^45
-P^115^471^155
-P^122^383^155
-P^122^383^45
-P^122^471^155
-P^122^471^45
-P^124^327^45
-P^170^324^45
-P^170^327^45
-P^181^283^45
-P^192^418^155
-P^193^122^155
-P^193^418^155
-P^224^326^155
-P^224^381^155
-P^224^383^45
-P^224^389^155
-P^224^471^45
-P^283^115^45
-P^283^304^45
-P^285^324^155
-P^285^367^45
-P^285^383^45
-P^304^471^45
-P^324^471^155
-P^327^124^155
-P^327^285^155
-P^333^373^155
-P^333^398^155
-P^333^471^45
-P^368^56^45
-P^368^285^45
-P^368^383^45
-P^368^471^45
-P^373^383^155
-P^377^122^155
-P^377^373^155
-P^377^383^155
-P^377^418^155
-P^381^115^155
-P^381^383^155
-P^382^373^155
-P^382^389^155
-P^382^398^155
-P^382^420^45
-P^383^224^155
-P^383^367^45
-P^383^420^155
-P^383^471^45
-P^383^471^622
-P^398^383^622
-P^418^452^155
-P^420^382^155
-P^452^115^155
-P^471^94^45
-P^471^367^45
-P^471^398^45
-E^Verio (updated 07/08/2000)
+I ^ 40 ^ I ^ Verio
+P ^ 7 ^ 224 ^ 45
+P ^ 23 ^ 115 ^ 45
+P ^ 23 ^ 181 ^ 155
+P ^ 23 ^ 418 ^ 155
+P ^ 23 ^ 471 ^ 155
+P ^ 23 ^ 471 ^ 45
+P ^ 34 ^ 324 ^ 45
+P ^ 34 ^ 471 ^ 45
+P ^ 56 ^ 285 ^ 155
+P ^ 56 ^ 367 ^ 45
+P ^ 86 ^ 94 ^ 155
+P ^ 86 ^ 418 ^ 155
+P ^ 94 ^ 124 ^ 155
+P ^ 94 ^ 124 ^ 45
+P ^ 94 ^ 256 ^ 155
+P ^ 94 ^ 324 ^ 155
+P ^ 94 ^ 383 ^ 45
+P ^ 94 ^ 398 ^ 155
+P ^ 94 ^ 418 ^ 155
+P ^ 115 ^ 181 ^ 155
+P ^ 115 ^ 181 ^ 45
+P ^ 115 ^ 192 ^ 155
+P ^ 115 ^ 326 ^ 155
+P ^ 115 ^ 377 ^ 155
+P ^ 115 ^ 383 ^ 45
+P ^ 115 ^ 471 ^ 155
+P ^ 122 ^ 383 ^ 155
+P ^ 122 ^ 383 ^ 45
+P ^ 122 ^ 471 ^ 155
+P ^ 122 ^ 471 ^ 45
+P ^ 124 ^ 327 ^ 45
+P ^ 170 ^ 324 ^ 45
+P ^ 170 ^ 327 ^ 45
+P ^ 181 ^ 283 ^ 45
+P ^ 192 ^ 418 ^ 155
+P ^ 193 ^ 122 ^ 155
+P ^ 193 ^ 418 ^ 155
+P ^ 224 ^ 326 ^ 155
+P ^ 224 ^ 381 ^ 155
+P ^ 224 ^ 383 ^ 45
+P ^ 224 ^ 389 ^ 155
+P ^ 224 ^ 471 ^ 45
+P ^ 283 ^ 115 ^ 45
+P ^ 283 ^ 304 ^ 45
+P ^ 285 ^ 324 ^ 155
+P ^ 285 ^ 367 ^ 45
+P ^ 285 ^ 383 ^ 45
+P ^ 304 ^ 471 ^ 45
+P ^ 324 ^ 471 ^ 155
+P ^ 327 ^ 124 ^ 155
+P ^ 327 ^ 285 ^ 155
+P ^ 333 ^ 373 ^ 155
+P ^ 333 ^ 398 ^ 155
+P ^ 333 ^ 471 ^ 45
+P ^ 368 ^ 56 ^ 45
+P ^ 368 ^ 285 ^ 45
+P ^ 368 ^ 383 ^ 45
+P ^ 368 ^ 471 ^ 45
+P ^ 373 ^ 383 ^ 155
+P ^ 377 ^ 122 ^ 155
+P ^ 377 ^ 373 ^ 155
+P ^ 377 ^ 383 ^ 155
+P ^ 377 ^ 418 ^ 155
+P ^ 381 ^ 115 ^ 155
+P ^ 381 ^ 383 ^ 155
+P ^ 382 ^ 373 ^ 155
+P ^ 382 ^ 389 ^ 155
+P ^ 382 ^ 398 ^ 155
+P ^ 382 ^ 420 ^ 45
+P ^ 383 ^ 224 ^ 155
+P ^ 383 ^ 367 ^ 45
+P ^ 383 ^ 420 ^ 155
+P ^ 383 ^ 471 ^ 45
+P ^ 383 ^ 471 ^ 622
+P ^ 398 ^ 383 ^ 622
+P ^ 418 ^ 452 ^ 155
+P ^ 420 ^ 382 ^ 155
+P ^ 452 ^ 115 ^ 155
+P ^ 471 ^ 94 ^ 45
+P ^ 471 ^ 367 ^ 45
+P ^ 471 ^ 398 ^ 45
+E ^ Verio
 
-I^41^I^VisiNet (updated 06/10/2000)
-P^94^471^45
-P^115^471^45
-P^224^115^45
-P^293^290^45
-P^358^290^45
-P^382^94^45
-P^382^224^45
-P^382^290^45
-P^382^471^45
-P^471^23^45
-P^471^285^45
-P^471^348^45
-P^471^358^45
-E^VisiNet (updated 06/10/2000)
+I ^ 41 ^ I ^ VisiNet
+P ^ 94 ^ 471 ^ 45
+P ^ 115 ^ 471 ^ 45
+P ^ 224 ^ 115 ^ 45
+P ^ 293 ^ 290 ^ 45
+P ^ 358 ^ 290 ^ 45
+P ^ 382 ^ 94 ^ 45
+P ^ 382 ^ 224 ^ 45
+P ^ 382 ^ 290 ^ 45
+P ^ 382 ^ 471 ^ 45
+P ^ 471 ^ 23 ^ 45
+P ^ 471 ^ 285 ^ 45
+P ^ 471 ^ 348 ^ 45
+P ^ 471 ^ 358 ^ 45
+E ^ VisiNet
 
-I^42^I^XO Communications (last updated 06/05/2002)
-P^23^115^10000
-P^23^248^622
-P^23^248^622
-P^23^433^622
-P^23^433^622
-P^23^471^10000
-P^56^285^622
-P^56^285^622
-P^94^105^622
-P^94^105^622
-P^94^115^10000
-P^94^122^10000
-P^94^124^622
-P^94^124^622
-P^94^285^10000
-P^94^418^622
-P^94^418^622
-P^94^471^10000
-P^115^30^622
-P^115^30^622
-P^115^122^10000
-P^115^181^622
-P^115^181^622
-P^115^224^10000
-P^115^245^622
-P^115^245^622
-P^115^379^622
-P^115^379^622
-P^122^383^10000
-P^154^383^622
-P^154^383^622
-P^187^224^622
-P^187^383^622
-P^224^206^622
-P^224^206^622
-P^224^326^622
-P^224^326^622
-P^224^381^622
-P^224^381^622
-P^224^383^10000
-P^224^383^622
-P^224^383^622
-P^224^387^622
-P^224^387^622
-P^256^94^622
-P^256^94^622
-P^271^23^622
-P^271^23^622
-P^285^471^10000
-P^333^383^622
-P^333^383^622
-P^373^383^622
-P^373^383^622
-P^377^122^622
-P^377^122^622
-P^383^398^622
-P^383^398^622
-P^383^471^10000
-P^398^410^155
-P^398^410^155
-P^471^99^622
-P^471^99^622
-P^471^324^622
-P^471^324^622
-E^XO Communications (last updated 06/05/2002)
+I ^ 42 ^ I ^ XO Communications
+P ^ 23 ^ 115 ^ 10000
+P ^ 23 ^ 248 ^ 622
+P ^ 23 ^ 248 ^ 622
+P ^ 23 ^ 433 ^ 622
+P ^ 23 ^ 433 ^ 622
+P ^ 23 ^ 471 ^ 10000
+P ^ 56 ^ 285 ^ 622
+P ^ 56 ^ 285 ^ 622
+P ^ 94 ^ 105 ^ 622
+P ^ 94 ^ 105 ^ 622
+P ^ 94 ^ 115 ^ 10000
+P ^ 94 ^ 122 ^ 10000
+P ^ 94 ^ 124 ^ 622
+P ^ 94 ^ 124 ^ 622
+P ^ 94 ^ 285 ^ 10000
+P ^ 94 ^ 418 ^ 622
+P ^ 94 ^ 418 ^ 622
+P ^ 94 ^ 471 ^ 10000
+P ^ 115 ^ 30 ^ 622
+P ^ 115 ^ 30 ^ 622
+P ^ 115 ^ 122 ^ 10000
+P ^ 115 ^ 181 ^ 622
+P ^ 115 ^ 181 ^ 622
+P ^ 115 ^ 224 ^ 10000
+P ^ 115 ^ 245 ^ 622
+P ^ 115 ^ 245 ^ 622
+P ^ 115 ^ 379 ^ 622
+P ^ 115 ^ 379 ^ 622
+P ^ 122 ^ 383 ^ 10000
+P ^ 154 ^ 383 ^ 622
+P ^ 154 ^ 383 ^ 622
+P ^ 187 ^ 224 ^ 622
+P ^ 187 ^ 383 ^ 622
+P ^ 224 ^ 206 ^ 622
+P ^ 224 ^ 206 ^ 622
+P ^ 224 ^ 326 ^ 622
+P ^ 224 ^ 326 ^ 622
+P ^ 224 ^ 381 ^ 622
+P ^ 224 ^ 381 ^ 622
+P ^ 224 ^ 383 ^ 10000
+P ^ 224 ^ 383 ^ 622
+P ^ 224 ^ 383 ^ 622
+P ^ 224 ^ 387 ^ 622
+P ^ 224 ^ 387 ^ 622
+P ^ 256 ^ 94 ^ 622
+P ^ 256 ^ 94 ^ 622
+P ^ 271 ^ 23 ^ 622
+P ^ 271 ^ 23 ^ 622
+P ^ 285 ^ 471 ^ 10000
+P ^ 333 ^ 383 ^ 622
+P ^ 333 ^ 383 ^ 622
+P ^ 373 ^ 383 ^ 622
+P ^ 373 ^ 383 ^ 622
+P ^ 377 ^ 122 ^ 622
+P ^ 377 ^ 122 ^ 622
+P ^ 383 ^ 398 ^ 622
+P ^ 383 ^ 398 ^ 622
+P ^ 383 ^ 471 ^ 10000
+P ^ 398 ^ 410 ^ 155
+P ^ 398 ^ 410 ^ 155
+P ^ 471 ^ 99 ^ 622
+P ^ 471 ^ 99 ^ 622
+P ^ 471 ^ 324 ^ 622
+P ^ 471 ^ 324 ^ 622
+E ^ XO Communications (last updated 06/05/2002)
 
-I^43^I^above.net (updated 01/28/2000)
-P^13^151^155
-P^23^465^45
-P^94^23^45
-P^94^115^45
-P^94^465^155
-P^115^224^45
-P^151^464^155
-P^219^13^155
-P^219^315^155
-P^285^219^622
-P^315^151^155
-P^383^44^45
-P^383^82^45
-P^383^94^155
-P^383^94^622
-P^383^178^45
-P^383^224^155
-P^383^333^155
-P^383^398^155
-P^383^400^45
-P^383^407^45
-P^383^430^45
-P^383^437^45
-P^383^465^155
-P^383^465^622
-P^465^285^45
-P^465^318^155
-E^above.net (updated 01/28/2000)
+I ^ 43 ^ I ^ above.net
+P ^ 13 ^ 151 ^ 155
+P ^ 23 ^ 465 ^ 45
+P ^ 94 ^ 23 ^ 45
+P ^ 94 ^ 115 ^ 45
+P ^ 94 ^ 465 ^ 155
+P ^ 115 ^ 224 ^ 45
+P ^ 151 ^ 464 ^ 155
+P ^ 219 ^ 13 ^ 155
+P ^ 219 ^ 315 ^ 155
+P ^ 285 ^ 219 ^ 622
+P ^ 315 ^ 151 ^ 155
+P ^ 383 ^ 44 ^ 45
+P ^ 383 ^ 82 ^ 45
+P ^ 383 ^ 94 ^ 155
+P ^ 383 ^ 94 ^ 622
+P ^ 383 ^ 178 ^ 45
+P ^ 383 ^ 224 ^ 155
+P ^ 383 ^ 333 ^ 155
+P ^ 383 ^ 398 ^ 155
+P ^ 383 ^ 400 ^ 45
+P ^ 383 ^ 407 ^ 45
+P ^ 383 ^ 430 ^ 45
+P ^ 383 ^ 437 ^ 45
+P ^ 383 ^ 465 ^ 155
+P ^ 383 ^ 465 ^ 622
+P ^ 465 ^ 285 ^ 45
+P ^ 465 ^ 318 ^ 155
+E ^ above.net
 
-I^44^R^iDREN (updated 03/15/2002)
-P^0^2^1.5
-P^0^51^1.5
-P^0^84^1.5
-P^0^98^45
-P^0^105^1.5
-P^0^152^1.5
-P^0^277^1.5
-P^0^291^1.5
-P^0^318^45
-P^0^440^1.5
-P^0^469^1.5
-P^0^471^45
-P^43^371^1.5
-P^98^43^1.5
-P^98^256^1.5
-P^98^276^45
-P^98^381^45
-P^98^469^1.5
-P^114^277^1.5
-P^146^2^1.5
-P^146^9^1.5
-P^196^65^1.5
-P^196^134^1.5
-P^196^223^45
-P^196^257^45
-P^196^481^1.5
-P^238^265^45
-P^257^7^1.5
-P^257^239^1.5
-P^257^292^1.5
-P^265^381^45
-P^276^257^45
-P^276^292^1.5
-P^276^415^1.5
-P^278^134^1.5
-P^292^11^1.5
-P^381^142^1.5
-P^381^196^45
-P^381^261^1.5
-P^381^278^1.5
-P^381^332^1.5
-P^381^381^45
-P^415^7^1.5
-P^440^43^1.5
-P^440^260^1.5
-P^440^273^1.5
-P^440^449^1.5
-P^440^479^1.5
-P^471^9^1.5
-P^471^17^1.5
-P^471^125^1.5
-P^471^257^45
-E^iDREN (updated 03/15/2002)
+I ^ 44 ^ R ^ iDREN
+P ^ 0 ^ 2 ^ 1.5
+P ^ 0 ^ 51 ^ 1.5
+P ^ 0 ^ 84 ^ 1.5
+P ^ 0 ^ 98 ^ 45
+P ^ 0 ^ 105 ^ 1.5
+P ^ 0 ^ 152 ^ 1.5
+P ^ 0 ^ 277 ^ 1.5
+P ^ 0 ^ 291 ^ 1.5
+P ^ 0 ^ 318 ^ 45
+P ^ 0 ^ 440 ^ 1.5
+P ^ 0 ^ 469 ^ 1.5
+P ^ 0 ^ 471 ^ 45
+P ^ 43 ^ 371 ^ 1.5
+P ^ 98 ^ 43 ^ 1.5
+P ^ 98 ^ 256 ^ 1.5
+P ^ 98 ^ 276 ^ 45
+P ^ 98 ^ 381 ^ 45
+P ^ 98 ^ 469 ^ 1.5
+P ^ 114 ^ 277 ^ 1.5
+P ^ 146 ^ 2 ^ 1.5
+P ^ 146 ^ 9 ^ 1.5
+P ^ 196 ^ 65 ^ 1.5
+P ^ 196 ^ 134 ^ 1.5
+P ^ 196 ^ 223 ^ 45
+P ^ 196 ^ 257 ^ 45
+P ^ 196 ^ 481 ^ 1.5
+P ^ 238 ^ 265 ^ 45
+P ^ 257 ^ 7 ^ 1.5
+P ^ 257 ^ 239 ^ 1.5
+P ^ 257 ^ 292 ^ 1.5
+P ^ 265 ^ 381 ^ 45
+P ^ 276 ^ 257 ^ 45
+P ^ 276 ^ 292 ^ 1.5
+P ^ 276 ^ 415 ^ 1.5
+P ^ 278 ^ 134 ^ 1.5
+P ^ 292 ^ 11 ^ 1.5
+P ^ 381 ^ 142 ^ 1.5
+P ^ 381 ^ 196 ^ 45
+P ^ 381 ^ 261 ^ 1.5
+P ^ 381 ^ 278 ^ 1.5
+P ^ 381 ^ 332 ^ 1.5
+P ^ 381 ^ 381 ^ 45
+P ^ 415 ^ 7 ^ 1.5
+P ^ 440 ^ 43 ^ 1.5
+P ^ 440 ^ 260 ^ 1.5
+P ^ 440 ^ 273 ^ 1.5
+P ^ 440 ^ 449 ^ 1.5
+P ^ 440 ^ 479 ^ 1.5
+P ^ 471 ^ 9 ^ 1.5
+P ^ 471 ^ 17 ^ 1.5
+P ^ 471 ^ 125 ^ 1.5
+P ^ 471 ^ 257 ^ 45
+E ^ iDREN
 
-I^45^I^iSTAR Internet Inc.
-P^76^133^1.5
-P^76^211^1.5
-P^76^460^1.5
-P^168^259^1.5
-P^168^427^1.5
-P^168^490^1.5
-P^169^442^1.5
-P^197^442^1.5
-P^218^442^1.5
-P^259^263^1.5
-P^259^374^1.5
-P^263^280^45
-P^263^347^1.5
-P^263^403^1.5
-P^263^442^45
-P^280^442^45
-P^280^460^1.5
-P^280^486^1.5
-P^417^259^1.5
-P^460^263^1.5
-P^460^462^1.5
-P^486^263^1.5
-E^iSTAR Internet Inc.
+I ^ 45 ^ I ^ iSTAR Internet Inc.
+P ^ 76 ^ 133 ^ 1.5
+P ^ 76 ^ 211 ^ 1.5
+P ^ 76 ^ 460 ^ 1.5
+P ^ 168 ^ 259 ^ 1.5
+P ^ 168 ^ 427 ^ 1.5
+P ^ 168 ^ 490 ^ 1.5
+P ^ 169 ^ 442 ^ 1.5
+P ^ 197 ^ 442 ^ 1.5
+P ^ 218 ^ 442 ^ 1.5
+P ^ 259 ^ 263 ^ 1.5
+P ^ 259 ^ 374 ^ 1.5
+P ^ 263 ^ 280 ^ 45
+P ^ 263 ^ 347 ^ 1.5
+P ^ 263 ^ 403 ^ 1.5
+P ^ 263 ^ 442 ^ 45
+P ^ 280 ^ 442 ^ 45
+P ^ 280 ^ 460 ^ 1.5
+P ^ 280 ^ 486 ^ 1.5
+P ^ 417 ^ 259 ^ 1.5
+P ^ 460 ^ 263 ^ 1.5
+P ^ 460 ^ 462 ^ 1.5
+P ^ 486 ^ 263 ^ 1.5
+E ^ iSTAR Internet Inc.
 
-I^46^I^ipf.net
-P^220^138^4
-P^383^220^4
-P^383^313^1.536
-P^383^471^4
-P^471^138^4
-E^ipf.net
+I ^ 46 ^ I ^ ipf.net
+P ^ 220 ^ 138 ^ 4
+P ^ 383 ^ 220 ^ 4
+P ^ 383 ^ 313 ^ 1.536
+P ^ 383 ^ 471 ^ 4
+P ^ 471 ^ 138 ^ 4
+E ^ ipf.net
 
-i^47^???
-p^318^2^47
-p^382^2^47
-p^383^2^47
-p^471^2^47
-p^94^3^47
-p^224^3^47
-p^313^3^47
-p^318^3^47
-p^383^3^47
-p^389^3^47
-p^442^3^47
-p^464^3^47
-p^471^3^47
-i^48^AMX-IX
-p^13^3^48
-i^49^DGIX
-p^422^3^49
-i^50^GIX
-p^315^3^50
-i^51^HKIX
-p^178^3^51
-i^52^IIX
-p^191^3^52
-i^53^MFS
-p^138^3^53
-i^54^Peterborough, England
-p^219^3^54
-i^55^X_ROUTER
-p^66^3^55
-p^23^4^47
-p^94^4^47
-p^115^4^47
-p^224^4^47
-p^285^4^47
-p^382^4^47
-p^471^4^47
-p^23^6^47
-p^79^6^47
-p^94^6^47
-p^115^6^47
-p^224^6^47
-p^285^6^47
-p^383^6^47
-p^420^6^47
-p^471^6^47
-p^94^8^47
-p^383^8^47
-p^471^8^47
-p^94^9^47
-p^127^9^47
-p^173^9^47
-p^313^9^47
-p^318^9^47
-p^383^9^47
-p^471^9^47
-i^56^EBone
-p^266^9^56
-p^315^9^56
-p^315^9^50
-p^178^9^51
-i^57^NSP_IXP
-p^437^9^57
-p^219^9^54
-p^94^10^47
-p^173^10^47
-p^318^10^47
-p^383^10^47
-p^471^10^47
-i^58^   ???
-p^14^11^58
-p^219^11^58
-p^236^11^58
-p^285^11^58
-p^314^11^58
-p^383^11^58
-p^465^11^58
-i^59^   CARRIER1
-p^219^11^59
-i^60^   LEVEL3
-p^471^11^60
-p^94^12^47
-p^127^12^47
-p^173^12^47
-p^313^12^47
-p^383^12^47
-p^471^12^47
-p^219^12^54
-p^94^13^47
-p^173^13^47
-p^313^13^47
-p^318^13^47
-p^383^13^47
-p^471^13^47
-i^61^Cable&Wireless
-p^471^13^61
-i^62^UUNET
-p^471^13^62
-p^94^14^47
-p^173^14^47
-p^224^14^47
-p^313^14^47
-p^318^14^47
-p^383^14^47
-p^471^14^47
-p^127^15^47
-p^383^15^47
-p^471^15^47
-p^94^17^47
-p^224^17^47
-p^265^17^47
-p^285^17^47
-p^383^17^47
-p^471^17^47
-p^173^19^47
-p^318^19^47
-p^382^19^47
-p^383^19^47
-p^471^19^47
-p^173^20^47
-p^383^20^47
-p^471^20^47
-p^127^21^47
-p^383^21^47
-p^420^21^47
-p^471^21^47
-p^127^22^47
-p^173^22^47
-p^318^22^47
-p^382^22^47
-p^383^22^47
-p^471^22^47
-p^94^23^47
-p^318^23^47
-p^383^23^47
-p^471^23^47
-i^63^Digex
-p^23^25^63
-p^248^25^63
-p^348^25^63
-i^64^GTEI
-p^23^25^64
-p^63^25^64
-p^115^25^64
-p^224^25^64
-p^296^25^64
-i^65^GridNet
-p^23^25^65
-i^66^MWAN
-p^23^25^66
-p^398^25^66
-i^67^PSINet
-p^23^25^67
-i^68^UUNet
-p^23^25^68
-i^69^Verio
-p^398^25^69
-i^70^ViperNet
-p^53^25^70
-p^103^25^70
-p^297^25^70
-p^94^26^47
-p^383^26^47
-p^471^26^47
-p^23^27^47
-p^94^27^47
-p^100^27^47
-p^173^27^47
-p^265^27^47
-p^313^27^47
-p^318^27^47
-p^383^27^47
-p^389^27^47
-p^420^27^47
-p^471^27^47
-p^173^28^47
-p^183^28^47
-p^318^28^47
-p^389^28^47
-p^420^28^47
-p^471^28^47
-i^71^NSP/IXP
-p^437^28^71
-p^219^28^54
-i^72^CA*net II
-p^263^30^72
-i^73^CA*net III
-p^263^30^73
-p^263^30^62
-p^362^31^47
-i^74^internet2
-p^362^31^74
-p^94^33^47
-p^241^33^47
-p^318^33^47
-p^383^33^47
-p^453^33^47
-p^94^34^47
-p^173^34^47
-p^318^34^47
-p^389^34^47
-p^471^34^47
-i^75^iDREN
-p^100^34^75
-p^265^34^75
-p^318^34^75
-p^420^34^75
-p^173^37^47
-p^313^37^47
-p^318^37^47
-p^382^37^47
-p^383^37^47
-p^442^37^47
-p^471^37^47
-i^76^GST Telecom
-p^301^38^76
-p^363^38^21
-p^127^39^47
-p^471^39^47
-p^265^40^47
-p^285^40^47
-p^383^40^47
-p^420^40^47
-p^471^40^47
-p^94^41^47
-p^173^41^47
-p^313^41^47
-p^318^41^47
-p^383^41^47
-p^389^41^47
-p^453^41^47
-p^471^41^47
-i^77^AGIS
-p^318^44^77
-i^78^ANS
-p^265^44^78
-p^318^44^78
-p^420^44^78
-i^79^ASN-DNA-SCN
-p^100^44^79
-i^80^ATMNET
-p^265^44^80
-p^420^44^80
-i^81^ATT-DISC, DISC/DREN
-p^100^44^81
-i^82^Aimnet Corporation
-p^265^44^82
-p^420^44^82
-i^83^Alternet
-p^100^44^83
-p^265^44^83
-p^318^44^83
-p^420^44^83
-i^84^BBN Planet
-p^100^44^84
-p^265^44^84
-p^318^44^84
-p^420^44^84
-i^85^BNSFSBA
-p^265^44^85
-p^420^44^85
-i^86^CERFnet
-p^265^44^86
-p^318^44^86
-p^420^44^86
-i^87^CRL Network Services
-p^265^44^87
-p^420^44^87
-i^88^CWIX Cable and Wireless
-p^318^44^88
-p^265^44^61
-p^318^44^61
-p^420^44^61
-i^89^DIGEX
-p^100^44^89
-p^265^44^89
-p^318^44^89
-p^420^44^89
-p^265^44^15
-p^318^44^15
-p^420^44^15
-i^90^EUnet Backbone AS
-p^100^44^90
-p^265^44^90
-p^318^44^90
-p^420^44^90
-i^91^Epoch Internet
-p^100^44^91
-p^265^44^91
-p^420^44^91
-i^92^Genuity Inc
-p^265^44^92
-p^420^44^92
-i^93^Global IP
-p^265^44^93
-p^318^44^93
-p^420^44^93
-i^94^Gridnet International
-p^100^44^94
-p^265^44^94
-p^420^44^94
-i^95^HE.net (Hurricane Electric)
-p^265^44^95
-p^420^44^95
-i^96^ICM-Atlantic
-p^100^44^96
-p^318^44^96
-i^97^ICONNET
-p^265^44^97
-p^420^44^97
-i^98^JIS
-p^265^44^98
-p^318^44^98
-p^420^44^98
-i^99^MAE-East NAP
-p^100^44^99
-i^100^MAE-West NAP
-p^265^44^100
-p^420^44^100
-i^101^MAI Network Services
-p^100^44^101
-i^102^MFS Communications Company
-p^265^44^102
-p^420^44^102
-i^103^NAP-THREE
-p^318^44^103
-i^104^NAP.NET, LLC (ASN-NN-CNSM)
-p^100^44^104
-p^265^44^104
-p^420^44^104
-i^105^NETCOM On-line
-p^100^44^105
-p^265^44^105
-p^318^44^105
-p^420^44^105
-i^106^Nac, Incorporatedamar
-p^265^44^106
-p^420^44^106
-i^107^NetRail
-p^100^44^107
-p^265^44^107
-p^318^44^107
-p^420^44^107
-p^100^44^67
-p^265^44^67
-p^420^44^67
-i^108^Primary AS for Abovenet
-p^100^44^108
-p^265^44^108
-p^420^44^108
-i^109^Sprint IP Services
-p^100^44^109
-p^265^44^109
-p^318^44^109
-p^420^44^109
-i^110^VBCnet US West Coast
-p^265^44^110
-p^420^44^110
-p^318^44^39
-i^111^WNA
-p^100^44^111
-p^265^44^111
-p^318^44^111
-p^420^44^111
-p^442^45^47
-p^138^46^47
-p^247^46^47
-p^266^46^47
-p^313^46^47
-p^323^46^47
-p^383^46^47
-p^424^46^47
-p^471^46^47
-i^112^UNISOURCE
-p^138^46^112
-p^138^46^62
+i ^ 47 ^ ???
+p ^ 318 ^ 2 ^ 47
+p ^ 382 ^ 2 ^ 47
+p ^ 383 ^ 2 ^ 47
+p ^ 471 ^ 2 ^ 47
+p ^ 94 ^ 3 ^ 47
+p ^ 224 ^ 3 ^ 47
+p ^ 313 ^ 3 ^ 47
+p ^ 318 ^ 3 ^ 47
+p ^ 383 ^ 3 ^ 47
+p ^ 389 ^ 3 ^ 47
+p ^ 442 ^ 3 ^ 47
+p ^ 464 ^ 3 ^ 47
+p ^ 471 ^ 3 ^ 47
+i ^ 48 ^ AMX-IX
+p ^ 13 ^ 3 ^ 48
+i ^ 49 ^ DGIX
+p ^ 422 ^ 3 ^ 49
+i ^ 50 ^ GIX
+p ^ 315 ^ 3 ^ 50
+i ^ 51 ^ HKIX
+p ^ 178 ^ 3 ^ 51
+i ^ 52 ^ IIX
+p ^ 191 ^ 3 ^ 52
+i ^ 53 ^ MFS
+p ^ 138 ^ 3 ^ 53
+i ^ 54 ^ Peterborough, England
+p ^ 219 ^ 3 ^ 54
+i ^ 55 ^ X_ROUTER
+p ^ 66 ^ 3 ^ 55
+p ^ 23 ^ 4 ^ 47
+p ^ 94 ^ 4 ^ 47
+p ^ 115 ^ 4 ^ 47
+p ^ 224 ^ 4 ^ 47
+p ^ 285 ^ 4 ^ 47
+p ^ 382 ^ 4 ^ 47
+p ^ 471 ^ 4 ^ 47
+p ^ 23 ^ 6 ^ 47
+p ^ 79 ^ 6 ^ 47
+p ^ 94 ^ 6 ^ 47
+p ^ 115 ^ 6 ^ 47
+p ^ 224 ^ 6 ^ 47
+p ^ 285 ^ 6 ^ 47
+p ^ 383 ^ 6 ^ 47
+p ^ 420 ^ 6 ^ 47
+p ^ 471 ^ 6 ^ 47
+p ^ 94 ^ 8 ^ 47
+p ^ 383 ^ 8 ^ 47
+p ^ 471 ^ 8 ^ 47
+p ^ 94 ^ 9 ^ 47
+p ^ 127 ^ 9 ^ 47
+p ^ 173 ^ 9 ^ 47
+p ^ 313 ^ 9 ^ 47
+p ^ 318 ^ 9 ^ 47
+p ^ 383 ^ 9 ^ 47
+p ^ 471 ^ 9 ^ 47
+i ^ 56 ^ EBone
+p ^ 266 ^ 9 ^ 56
+p ^ 315 ^ 9 ^ 56
+p ^ 315 ^ 9 ^ 50
+p ^ 178 ^ 9 ^ 51
+i ^ 57 ^ NSP_IXP
+p ^ 437 ^ 9 ^ 57
+p ^ 219 ^ 9 ^ 54
+p ^ 94 ^ 10 ^ 47
+p ^ 173 ^ 10 ^ 47
+p ^ 318 ^ 10 ^ 47
+p ^ 383 ^ 10 ^ 47
+p ^ 471 ^ 10 ^ 47
+i ^ 58 ^    ???
+p ^ 14 ^ 11 ^ 58
+p ^ 219 ^ 11 ^ 58
+p ^ 236 ^ 11 ^ 58
+p ^ 285 ^ 11 ^ 58
+p ^ 314 ^ 11 ^ 58
+p ^ 383 ^ 11 ^ 58
+p ^ 465 ^ 11 ^ 58
+i ^ 59 ^    CARRIER1
+p ^ 219 ^ 11 ^ 59
+i ^ 60 ^    LEVEL3
+p ^ 471 ^ 11 ^ 60
+p ^ 94 ^ 12 ^ 47
+p ^ 127 ^ 12 ^ 47
+p ^ 173 ^ 12 ^ 47
+p ^ 313 ^ 12 ^ 47
+p ^ 383 ^ 12 ^ 47
+p ^ 471 ^ 12 ^ 47
+p ^ 219 ^ 12 ^ 54
+p ^ 94 ^ 13 ^ 47
+p ^ 173 ^ 13 ^ 47
+p ^ 313 ^ 13 ^ 47
+p ^ 318 ^ 13 ^ 47
+p ^ 383 ^ 13 ^ 47
+p ^ 471 ^ 13 ^ 47
+i ^ 61 ^ Cable&Wireless
+p ^ 471 ^ 13 ^ 61
+i ^ 62 ^ UUNET
+p ^ 471 ^ 13 ^ 62
+p ^ 94 ^ 14 ^ 47
+p ^ 173 ^ 14 ^ 47
+p ^ 224 ^ 14 ^ 47
+p ^ 313 ^ 14 ^ 47
+p ^ 318 ^ 14 ^ 47
+p ^ 383 ^ 14 ^ 47
+p ^ 471 ^ 14 ^ 47
+p ^ 127 ^ 15 ^ 47
+p ^ 383 ^ 15 ^ 47
+p ^ 471 ^ 15 ^ 47
+p ^ 94 ^ 17 ^ 47
+p ^ 224 ^ 17 ^ 47
+p ^ 265 ^ 17 ^ 47
+p ^ 285 ^ 17 ^ 47
+p ^ 383 ^ 17 ^ 47
+p ^ 471 ^ 17 ^ 47
+p ^ 173 ^ 19 ^ 47
+p ^ 318 ^ 19 ^ 47
+p ^ 382 ^ 19 ^ 47
+p ^ 383 ^ 19 ^ 47
+p ^ 471 ^ 19 ^ 47
+p ^ 173 ^ 20 ^ 47
+p ^ 383 ^ 20 ^ 47
+p ^ 471 ^ 20 ^ 47
+p ^ 127 ^ 21 ^ 47
+p ^ 383 ^ 21 ^ 47
+p ^ 420 ^ 21 ^ 47
+p ^ 471 ^ 21 ^ 47
+p ^ 127 ^ 22 ^ 47
+p ^ 173 ^ 22 ^ 47
+p ^ 318 ^ 22 ^ 47
+p ^ 382 ^ 22 ^ 47
+p ^ 383 ^ 22 ^ 47
+p ^ 471 ^ 22 ^ 47
+p ^ 94 ^ 23 ^ 47
+p ^ 318 ^ 23 ^ 47
+p ^ 383 ^ 23 ^ 47
+p ^ 471 ^ 23 ^ 47
+i ^ 63 ^ Digex
+p ^ 23 ^ 25 ^ 63
+p ^ 248 ^ 25 ^ 63
+p ^ 348 ^ 25 ^ 63
+i ^ 64 ^ GTEI
+p ^ 23 ^ 25 ^ 64
+p ^ 63 ^ 25 ^ 64
+p ^ 115 ^ 25 ^ 64
+p ^ 224 ^ 25 ^ 64
+p ^ 296 ^ 25 ^ 64
+i ^ 65 ^ GridNet
+p ^ 23 ^ 25 ^ 65
+i ^ 66 ^ MWAN
+p ^ 23 ^ 25 ^ 66
+p ^ 398 ^ 25 ^ 66
+i ^ 67 ^ PSINet
+p ^ 23 ^ 25 ^ 67
+i ^ 68 ^ UUNet
+p ^ 23 ^ 25 ^ 68
+i ^ 69 ^ Verio
+p ^ 398 ^ 25 ^ 69
+i ^ 70 ^ ViperNet
+p ^ 53 ^ 25 ^ 70
+p ^ 103 ^ 25 ^ 70
+p ^ 297 ^ 25 ^ 70
+p ^ 94 ^ 26 ^ 47
+p ^ 383 ^ 26 ^ 47
+p ^ 471 ^ 26 ^ 47
+p ^ 23 ^ 27 ^ 47
+p ^ 94 ^ 27 ^ 47
+p ^ 100 ^ 27 ^ 47
+p ^ 173 ^ 27 ^ 47
+p ^ 265 ^ 27 ^ 47
+p ^ 313 ^ 27 ^ 47
+p ^ 318 ^ 27 ^ 47
+p ^ 383 ^ 27 ^ 47
+p ^ 389 ^ 27 ^ 47
+p ^ 420 ^ 27 ^ 47
+p ^ 471 ^ 27 ^ 47
+p ^ 173 ^ 28 ^ 47
+p ^ 183 ^ 28 ^ 47
+p ^ 318 ^ 28 ^ 47
+p ^ 389 ^ 28 ^ 47
+p ^ 420 ^ 28 ^ 47
+p ^ 471 ^ 28 ^ 47
+i ^ 71 ^ NSP/IXP
+p ^ 437 ^ 28 ^ 71
+p ^ 219 ^ 28 ^ 54
+i ^ 72 ^ CA*net II
+p ^ 263 ^ 30 ^ 72
+i ^ 73 ^ CA*net III
+p ^ 263 ^ 30 ^ 73
+p ^ 263 ^ 30 ^ 62
+p ^ 362 ^ 31 ^ 47
+i ^ 74 ^ internet2
+p ^ 362 ^ 31 ^ 74
+p ^ 94 ^ 33 ^ 47
+p ^ 241 ^ 33 ^ 47
+p ^ 318 ^ 33 ^ 47
+p ^ 383 ^ 33 ^ 47
+p ^ 453 ^ 33 ^ 47
+p ^ 94 ^ 34 ^ 47
+p ^ 173 ^ 34 ^ 47
+p ^ 318 ^ 34 ^ 47
+p ^ 389 ^ 34 ^ 47
+p ^ 471 ^ 34 ^ 47
+i ^ 75 ^ iDREN
+p ^ 100 ^ 34 ^ 75
+p ^ 265 ^ 34 ^ 75
+p ^ 318 ^ 34 ^ 75
+p ^ 420 ^ 34 ^ 75
+p ^ 173 ^ 37 ^ 47
+p ^ 313 ^ 37 ^ 47
+p ^ 318 ^ 37 ^ 47
+p ^ 382 ^ 37 ^ 47
+p ^ 383 ^ 37 ^ 47
+p ^ 442 ^ 37 ^ 47
+p ^ 471 ^ 37 ^ 47
+i ^ 76 ^ GST Telecom
+p ^ 301 ^ 38 ^ 76
+p ^ 363 ^ 38 ^ 21
+p ^ 127 ^ 39 ^ 47
+p ^ 471 ^ 39 ^ 47
+p ^ 265 ^ 40 ^ 47
+p ^ 285 ^ 40 ^ 47
+p ^ 383 ^ 40 ^ 47
+p ^ 420 ^ 40 ^ 47
+p ^ 471 ^ 40 ^ 47
+p ^ 94 ^ 41 ^ 47
+p ^ 173 ^ 41 ^ 47
+p ^ 313 ^ 41 ^ 47
+p ^ 318 ^ 41 ^ 47
+p ^ 383 ^ 41 ^ 47
+p ^ 389 ^ 41 ^ 47
+p ^ 453 ^ 41 ^ 47
+p ^ 471 ^ 41 ^ 47
+i ^ 77 ^ AGIS
+p ^ 318 ^ 44 ^ 77
+i ^ 78 ^ ANS
+p ^ 265 ^ 44 ^ 78
+p ^ 318 ^ 44 ^ 78
+p ^ 420 ^ 44 ^ 78
+i ^ 79 ^ ASN-DNA-SCN
+p ^ 100 ^ 44 ^ 79
+i ^ 80 ^ ATMNET
+p ^ 265 ^ 44 ^ 80
+p ^ 420 ^ 44 ^ 80
+i ^ 81 ^ ATT-DISC, DISC/DREN
+p ^ 100 ^ 44 ^ 81
+i ^ 82 ^ Aimnet Corporation
+p ^ 265 ^ 44 ^ 82
+p ^ 420 ^ 44 ^ 82
+i ^ 83 ^ Alternet
+p ^ 100 ^ 44 ^ 83
+p ^ 265 ^ 44 ^ 83
+p ^ 318 ^ 44 ^ 83
+p ^ 420 ^ 44 ^ 83
+i ^ 84 ^ BBN Planet
+p ^ 100 ^ 44 ^ 84
+p ^ 265 ^ 44 ^ 84
+p ^ 318 ^ 44 ^ 84
+p ^ 420 ^ 44 ^ 84
+i ^ 85 ^ BNSFSBA
+p ^ 265 ^ 44 ^ 85
+p ^ 420 ^ 44 ^ 85
+i ^ 86 ^ CERFnet
+p ^ 265 ^ 44 ^ 86
+p ^ 318 ^ 44 ^ 86
+p ^ 420 ^ 44 ^ 86
+i ^ 87 ^ CRL Network Services
+p ^ 265 ^ 44 ^ 87
+p ^ 420 ^ 44 ^ 87
+i ^ 88 ^ CWIX Cable and Wireless
+p ^ 318 ^ 44 ^ 88
+p ^ 265 ^ 44 ^ 61
+p ^ 318 ^ 44 ^ 61
+p ^ 420 ^ 44 ^ 61
+i ^ 89 ^ DIGEX
+p ^ 100 ^ 44 ^ 89
+p ^ 265 ^ 44 ^ 89
+p ^ 318 ^ 44 ^ 89
+p ^ 420 ^ 44 ^ 89
+p ^ 265 ^ 44 ^ 15
+p ^ 318 ^ 44 ^ 15
+p ^ 420 ^ 44 ^ 15
+i ^ 90 ^ EUnet Backbone AS
+p ^ 100 ^ 44 ^ 90
+p ^ 265 ^ 44 ^ 90
+p ^ 318 ^ 44 ^ 90
+p ^ 420 ^ 44 ^ 90
+i ^ 91 ^ Epoch Internet
+p ^ 100 ^ 44 ^ 91
+p ^ 265 ^ 44 ^ 91
+p ^ 420 ^ 44 ^ 91
+i ^ 92 ^ Genuity Inc
+p ^ 265 ^ 44 ^ 92
+p ^ 420 ^ 44 ^ 92
+i ^ 93 ^ Global IP
+p ^ 265 ^ 44 ^ 93
+p ^ 318 ^ 44 ^ 93
+p ^ 420 ^ 44 ^ 93
+i ^ 94 ^ Gridnet International
+p ^ 100 ^ 44 ^ 94
+p ^ 265 ^ 44 ^ 94
+p ^ 420 ^ 44 ^ 94
+i ^ 95 ^ HE.net (Hurricane Electric)
+p ^ 265 ^ 44 ^ 95
+p ^ 420 ^ 44 ^ 95
+i ^ 96 ^ ICM-Atlantic
+p ^ 100 ^ 44 ^ 96
+p ^ 318 ^ 44 ^ 96
+i ^ 97 ^ ICONNET
+p ^ 265 ^ 44 ^ 97
+p ^ 420 ^ 44 ^ 97
+i ^ 98 ^ JIS
+p ^ 265 ^ 44 ^ 98
+p ^ 318 ^ 44 ^ 98
+p ^ 420 ^ 44 ^ 98
+i ^ 99 ^ MAE-East NAP
+p ^ 100 ^ 44 ^ 99
+i ^ 100 ^ MAE-West NAP
+p ^ 265 ^ 44 ^ 100
+p ^ 420 ^ 44 ^ 100
+i ^ 101 ^ MAI Network Services
+p ^ 100 ^ 44 ^ 101
+i ^ 102 ^ MFS Communications Company
+p ^ 265 ^ 44 ^ 102
+p ^ 420 ^ 44 ^ 102
+i ^ 103 ^ NAP-THREE
+p ^ 318 ^ 44 ^ 103
+i ^ 104 ^ NAP.NET, LLC (ASN-NN-CNSM)
+p ^ 100 ^ 44 ^ 104
+p ^ 265 ^ 44 ^ 104
+p ^ 420 ^ 44 ^ 104
+i ^ 105 ^ NETCOM On-line
+p ^ 100 ^ 44 ^ 105
+p ^ 265 ^ 44 ^ 105
+p ^ 318 ^ 44 ^ 105
+p ^ 420 ^ 44 ^ 105
+i ^ 106 ^ Nac, Incorporatedamar
+p ^ 265 ^ 44 ^ 106
+p ^ 420 ^ 44 ^ 106
+i ^ 107 ^ NetRail
+p ^ 100 ^ 44 ^ 107
+p ^ 265 ^ 44 ^ 107
+p ^ 318 ^ 44 ^ 107
+p ^ 420 ^ 44 ^ 107
+p ^ 100 ^ 44 ^ 67
+p ^ 265 ^ 44 ^ 67
+p ^ 420 ^ 44 ^ 67
+i ^ 108 ^ Primary AS for Abovenet
+p ^ 100 ^ 44 ^ 108
+p ^ 265 ^ 44 ^ 108
+p ^ 420 ^ 44 ^ 108
+i ^ 109 ^ Sprint IP Services
+p ^ 100 ^ 44 ^ 109
+p ^ 265 ^ 44 ^ 109
+p ^ 318 ^ 44 ^ 109
+p ^ 420 ^ 44 ^ 109
+i ^ 110 ^ VBCnet US West Coast
+p ^ 265 ^ 44 ^ 110
+p ^ 420 ^ 44 ^ 110
+p ^ 318 ^ 44 ^ 39
+i ^ 111 ^ WNA
+p ^ 100 ^ 44 ^ 111
+p ^ 265 ^ 44 ^ 111
+p ^ 318 ^ 44 ^ 111
+p ^ 420 ^ 44 ^ 111
+p ^ 442 ^ 45 ^ 47
+p ^ 138 ^ 46 ^ 47
+p ^ 247 ^ 46 ^ 47
+p ^ 266 ^ 46 ^ 47
+p ^ 313 ^ 46 ^ 47
+p ^ 323 ^ 46 ^ 47
+p ^ 383 ^ 46 ^ 47
+p ^ 424 ^ 46 ^ 47
+p ^ 471 ^ 46 ^ 47
+i ^ 112 ^ UNISOURCE
+p ^ 138 ^ 46 ^ 112
+  ^  p ^ 138 ^ 46 ^ 62

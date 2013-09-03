@@ -3,6 +3,8 @@ package Parsing;
 import Graph.Node;
 import Graph.Graph;
 import Graph.Edge;
+import ads1.graphprinter.GraphPrinter;
+import ads1.graphprinter.Traversable;
 import org.apache.log4j.Logger;
 
 import java.util.*;
@@ -19,6 +21,14 @@ public class SLRLInstance {
 
     public String getTestInstanceName() {
         return testInstanceName;
+    }
+    public void snapshotG(){
+        List<String> dirty = new ArrayList<String>();
+        dirty.add("-g");
+        GraphPrinter gp = GraphPrinter.ParseArgs(dirty);
+        gp.put(testInstanceName, graph.getGraph().toArray(new Traversable[graph.size()]), false);
+        gp.print();
+
     }
 
 
@@ -43,7 +53,7 @@ public class SLRLInstance {
     private int r;
 
     /**
-     * lower bound of r, calculated by: |E| / k
+     * lower bound of r, calculated by: |V| / k
      */
     private int r_lower;
 
@@ -107,7 +117,7 @@ public class SLRLInstance {
                 nodemap.put(entry.getKey().getName(), node);
             }
 
-            Set<Edge> edges = new HashSet<Edge>();
+            List<Edge> edges = new ArrayList<Edge>();
 
             for(ParseNode n : entry.getValue())
             {
@@ -152,14 +162,15 @@ public class SLRLInstance {
 
         //set r_lower
         if (k != 0) {
-            this.r_lower = Math.round(getE() / k);
+            this.r_lower =(int) Math.ceil((double)getV() /(double) k);
         } else {
             log.error("this instance doesnt work: (same for the paper)\t  " + this.toString());
         }
 
         //set c
         int d = 4;
-        this.c = (int) Math.ceil(((double)getV()/(double)(this.k * maxDegree)) * (double)d);
+        this.c =(int) Math.ceil(((double) getV() / (double) (this.k * (maxDegree))) * d);
+
 
         this.c_lower = (int) Math.ceil(((double)getV()/(double)(this.k * maxDegree)));
 
@@ -295,5 +306,22 @@ public class SLRLInstance {
 
     public void setR_lower(int r_lower) {
         this.r_lower = r_lower;
+    }
+
+    public void setGraph(Graph graph) {
+        this.graph = graph;
+
+    }
+
+    public void setR(int i) {
+        this.r = i;
+    }
+
+    public void setK(int k) {
+        this.k = k;
+    }
+
+    public void setC(int c) {
+        this.c = c;
     }
 }

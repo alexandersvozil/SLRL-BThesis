@@ -1,8 +1,12 @@
+import ads1.graphprinter.GraphPrinter;
+import ads1.graphprinter.Traversable;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import Graph.*;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
+import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
@@ -107,14 +111,19 @@ public class TestGraph {
         C.addEdge(e6_C);
         E.addEdge(e6_E);
 
-       Node path =  A.BFS(E);
+        Graph graph1 = new Graph();
+        graph1.addNode(A);
+        graph1.addNode(B);
+        graph1.addNode(C);
+        graph1.addNode(D);
+        graph1.addNode(E);
+        graph1.addNode(F);
+        graph1.resetDistance();
 
-        while(path.getParent() != null){
-            log.debug(path);
-            path = path.getParent();
-
-        }
-        log.debug(A);
+       Node path =  graph1.BFS2(A,E);
+        graph1.markPath2(path);
+        snapshotG(graph);
+        //log.debug(A);
         assertTrue(e6_C.getTimesUsed()==1);
         assertTrue(e6_E.getTimesUsed()==1);
 
@@ -135,6 +144,150 @@ public class TestGraph {
         assertTrue(e1_A.getTimesUsed()==0);
 
 
+    }
+    @Test
+    public void test_moreThanOneShortestPath2() throws Exception {
+        Node A = new Node ("A");
+        Node B = new Node ("B");
+        Node C = new Node ("C");
+        Node D = new Node ("D");
+        Node E = new Node ("E");
+        Node F = new Node ("F");
+
+        Edge e1_A = new Edge(A,B);
+        Edge e1_B = new Edge(B,A);
+        A.addEdge(e1_A);
+        B.addEdge(e1_B);
+
+        Edge e2_A = new Edge(A,C);
+        Edge e2_C = new Edge(C,A);
+        A.addEdge(e2_A);
+        C.addEdge(e2_C);
+
+        Edge e3_A = new Edge(A,D);
+        Edge e3_D = new Edge(D,A);
+        A.addEdge(e3_A);
+        D.addEdge(e3_D);
+
+
+
+        Edge e4_E = new Edge(E,F);
+        Edge e4_F = new Edge(F,E);
+        E.addEdge(e4_E);
+        F.addEdge(e4_F);
+
+        Edge e5_B = new Edge(B,E);
+        Edge e5_E = new Edge(E,B);
+        B.addEdge(e5_B);
+        E.addEdge(e5_E);
+
+
+        Edge e6_C = new Edge(C,E);
+        Edge e6_E = new Edge(E,C);
+        C.addEdge(e6_C);
+        E.addEdge(e6_E);
+
+
+        Edge e7_D = new Edge(D,E);
+        Edge e7_E = new Edge(E,D);
+        D.addEdge(e7_D);
+        E.addEdge(e7_E);
+
+        Graph graph1 = new Graph();
+        graph1.addNode(A);
+        graph1.addNode(B);
+        graph1.addNode(C);
+        graph1.addNode(D);
+        graph1.addNode(E);
+        graph1.addNode(F);
+
+        graph1.BFS2(A,F);
+        graph1.markPath2(F);
+        graph1.clearParents();
+
+        assertTrue(e1_B.getTimesUsed()==1);
+        assertTrue(e1_A.getTimesUsed() == 1);
+
+        assertTrue(e2_C.getTimesUsed()==1);
+        assertTrue(e2_A.getTimesUsed() == 1);
+
+        assertTrue(e3_A.getTimesUsed()==1);
+        assertTrue(e3_D.getTimesUsed()==1);
+
+        assertTrue(e4_E.getTimesUsed()==3);
+        assertTrue(e4_F.getTimesUsed()==3);
+
+        assertTrue(e5_E.getTimesUsed()==1);
+        assertTrue(e5_B.getTimesUsed()==1);
+
+        assertTrue(e6_E.getTimesUsed()==1);
+        assertTrue(e6_C.getTimesUsed()==1);
+
+        assertTrue(e7_E.getTimesUsed()==1);
+        assertTrue(e7_D.getTimesUsed()==1);
+        graph1.BFS2(E,F);
+        graph1.markPath2(F);
+        graph1.clearParents();
+        graph1.BFS2(B,F);
+        graph1.markPath2(F);
+        graph1.clearParents();
+        graph1.BFS2(C,F);
+        graph1.markPath2(F);
+        graph1.clearParents();
+        graph1.BFS2(D,F);
+        graph1.markPath2(F);
+        graph1.clearParents();
+        assertTrue(graph1.getMaxUsage()==7);
+        assertTrue(e4_E.getTimesUsed()==7);
+        assertTrue(e4_F.getTimesUsed()==7);
+    }
+    @Test
+    public void test_moreThanOneShortestPath() throws Exception {
+        Node A = new Node ("A");
+        Node B = new Node ("B");
+        Node C = new Node ("C");
+        Node D = new Node ("D");
+
+        Edge e1_A = new Edge(A,B);
+        Edge e1_B = new Edge(B,A);
+        A.addEdge(e1_A);
+        B.addEdge(e1_B);
+
+        Edge e2_A = new Edge(A,C);
+        Edge e2_C = new Edge(C,A);
+        A.addEdge(e2_A);
+        C.addEdge(e2_C);
+
+        Edge e3_B = new Edge(B,D);
+        Edge e3_D = new Edge(D,B);
+        B.addEdge(e3_B);
+        D.addEdge(e3_D);
+
+        Edge e4_C = new Edge(C,D);
+        Edge e4_D = new Edge(D,C);
+        C.addEdge(e4_C);
+        D.addEdge(e4_D);
+
+
+        Graph graph1 = new Graph();
+        graph1.addNode(A);
+        graph1.addNode(B);
+        graph1.addNode(C);
+        graph1.addNode(D);
+
+        Node path = graph1.BFS2(A,D);
+        graph1.markPath2(path);
+        assertTrue(e1_B.getTimesUsed()==1);
+        assertTrue(e1_A.getTimesUsed() == 1);
+
+        assertTrue(e2_C.getTimesUsed()==1);
+        assertTrue(e2_A.getTimesUsed() == 1);
+
+        assertTrue(e3_B.getTimesUsed()==1);
+        assertTrue(e3_D.getTimesUsed()==1);
+
+        assertTrue(e4_C.getTimesUsed()==1);
+        assertTrue(e4_D.getTimesUsed()==1);
     }
     @Test (expected = NodeNotFoundException.class)
     public void testInvalidRoute () throws NodeNotFoundException {
@@ -185,6 +338,14 @@ public class TestGraph {
         E.addEdge(e6_E);
 
         E.BFS(G);
+
+    }
+    public void snapshotG(Graph g){
+        List<String> dirty = new ArrayList<String>();
+        dirty.add("-g");
+        GraphPrinter gp = GraphPrinter.ParseArgs(dirty);
+        gp.put("testgraphprint", g.getGraph().toArray(new Traversable[g.size()]), false);
+        gp.print();
 
     }
 

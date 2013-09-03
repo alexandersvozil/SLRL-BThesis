@@ -46,4 +46,32 @@ public class Edge {
         this.node2 = node2;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Edge edge = (Edge) o;
+
+        if (node1 != null ? !node1.equals(edge.node1) : edge.node1 != null) return false;
+        if (node2 != null ? !node2.equals(edge.node2) : edge.node2 != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = node1 != null ? node1.hashCode() : 0;
+        result = 31 * result + (node2 != null ? node2.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Edge{" +
+                "node1=" + node1.getName() +
+                ", node2=" + node2.getName() +
+                ", timesUsed=" + timesUsed +
+                '}';
+    }
 }

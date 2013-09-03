@@ -1,9 +1,6 @@
 import Graph.Node;
 import Graph.NodeNotFoundException;
-import Parsing.ParseTestInstances;
 import Parsing.SLRLInstance;
-import org.apache.log4j.Logger;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.Iterator;
@@ -12,23 +9,12 @@ import java.util.List;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created with IntelliJ IDEA.
  * User: svozil
- * Date: 7/29/13
- * Time: 11:33 AM
- * To change this template use File | Settings | File Templates.
+ * Date: 8/16/13
+ * Time: 4:58 PM
  */
-public class TestInstances {
-    private static List<SLRLInstance> instanceList;
-    private static Logger log = Logger.getLogger(TestInstances.class);
-//    private List<Parsing.SLRLInstance> instanceList;// = parseTestInstances.parse();
-
-    @BeforeClass
-    public static void prepare(){
-      ParseTestInstances parseTestInstances = new ParseTestInstances();
-      instanceList = parseTestInstances.parse();
-    }
-
+public abstract class AbstractInstancesTest {
+    protected static List<SLRLInstance> instanceList;
     @Test
     public void above_net(){
         String instancename = "above.net";
@@ -36,13 +22,16 @@ public class TestInstances {
         for(SLRLInstance instance : instanceList){
             if(instance.getTestInstanceName().equals(instancename)){
                 found = true;
-               assertTrue(instance.getV()==22);
-               assertTrue(instance.getE()==25);
+                assertTrue(instance.getV()==22);
+                assertTrue(instance.getE()==25);
             }
         }
         assertTrue(found);
 
     }
+
+
+
     @Test
     public void AGIS(){
         String instancename = "AGIS";
@@ -420,8 +409,8 @@ public class TestInstances {
         for(SLRLInstance instance : instanceList){
             if(instance.getTestInstanceName().equals(instancename)){
                 found = true;
-                assertTrue(""+instance.getV(),instance.getV()==12);
-                assertTrue(instance.getE()==27);
+                assertTrue(""+instance.getV(),instance.getV()==14);
+                assertTrue(instance.getE()==26);
             }
         }
         assertTrue(found);
@@ -497,7 +486,6 @@ public class TestInstances {
         assertTrue(found);
 
     }
-    //Wrong in the paper (!!)
     @Test
     public void TelstraInternet(){
         String instancename = "Telstra Internet";
@@ -505,8 +493,8 @@ public class TestInstances {
         for(SLRLInstance instance : instanceList){
             if(instance.getTestInstanceName().equals(instancename)){
                 found = true;
-                assertTrue(instance.graphToString(),instance.getV()==27);
-                assertTrue(instance.getE()==29);
+                assertTrue(instance.graphToString(),instance.getV()==21);
+                assertTrue(instance.getE()==24);
             }
         }
         assertTrue(found);
@@ -519,7 +507,7 @@ public class TestInstances {
         for(SLRLInstance instance : instanceList){
             if(instance.getTestInstanceName().equals(instancename)){
                 found = true;
-                assertTrue(instance.getV()==128);
+                assertTrue(""+instance.getV(),instance.getV()==128);
                 assertTrue(""+instance.getE(),instance.getE()==321);
             }
         }
@@ -574,7 +562,7 @@ public class TestInstances {
         String instancename = "XO Communications";
         for(SLRLInstance instance : instanceList){
             if(instance.getTestInstanceName().equals(instancename)){
-            Iterator<Node> nodeIterator =  instance.getGraph().getGraph().iterator();
+                Iterator<Node> nodeIterator =  instance.getGraph().getGraph().iterator();
                 Node node1 = nodeIterator.next();
                 Node node2 = nodeIterator.next();
                 Node path = node1.BFS(node2);
@@ -583,6 +571,5 @@ public class TestInstances {
 
 
     }
-
 
 }
