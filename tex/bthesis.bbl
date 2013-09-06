@@ -1,0 +1,20 @@
+\begin{thebibliography}{Wik13b}
+
+\bibitem[NM11]{mirrorserver}
+R.~Nakamura and H.~Miwa.
+\newblock Method of locating mirror servers to alleviate load on servers and
+  links.
+\newblock In {\em Applications and the Internet (SAINT), 2011 IEEE/IPSJ 11th
+  International Symposium on}, pages 513--518, 2011.
+
+\bibitem[Wik13a]{wiki:cdn}
+Wikipedia.
+\newblock Content delivery network, 2013.
+\newblock [Online; accessed 4-September-2013].
+
+\bibitem[Wik13b]{wiki:lastmile}
+Wikipedia.
+\newblock Last mile, 2013.
+\newblock [Online; accessed 4-September-2013].
+
+\end{thebibliography}
