@@ -47,6 +47,13 @@ sequel to the existing greedy algorithm proposed by Miwa et al. \cite{mirrorserv
         load of the other servers providing the data.
         
     \subsection {Similar Problems}
+    A lot of thought has already been put into the server location problem.
+    Two problems that describe this problem would be the p-center and the
+    p-median problem. The purpose of these problems is mainly to shorten delay
+    time from the client to the server. 
+    There are several similar problems that are well known, like the p-center
+    or the p-median problem. 
+    %%NA-Edge connectivity fehlt
     \subsubsection {P-Center Problem}
     \subsubsection {P-Median Problem}
     \subsubsection {NA (Node to Area)-connectivity}
@@ -54,7 +61,18 @@ sequel to the existing greedy algorithm proposed by Miwa et al. \cite{mirrorserv
 \section{Server Location Problem with Restricted Loads on Servers and Links}
 \subsection{Formal Definition}
 \subsubsection{Neighbour Set}
+    The neighbour set is the set, that belongs to a server. In our problem, it is
+    defined as follows: If the node has a shortest path to a server node, he 
+    belongs to this server nodes neighbour set. If the node has several shortest
+    paths to multiple server nodes, it will belong to all of those server nodes neighbour
+    set. The server itself will belong to its own neighbour set.
 \subsubsection{Load on a Link}
+    The load on a link is defined as follows: 
+    It is defined as the sum of shortest paths, that cross a link. If there
+    are several shortest paths with the same length to one or more servers every
+    one of them is taken into account. This is done, because we must always consider
+    the worst case when locating a server.
+    \subsubsection{The Problem}
 \textbf{Given:}
 {\itshape Undirected graph G(V,E) and  positive integers k,r and c. \\
 $k = \|S\|$, where S is the set of servers $S = \{s_1,s_2,\dots s_k\} \subseteq V$\\
