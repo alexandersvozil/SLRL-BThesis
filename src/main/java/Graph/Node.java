@@ -273,9 +273,9 @@ public class Node implements Traversable {
     public String getLabel() {
         //return getName();
         if(isServer)
-        return label+"SERVER " + getName() ;  //To change body of implemented methods use File | Settings | File Templates.
+        return label+"SERVER ";// + getName() ;  //To change body of implemented methods use File | Settings | File Templates.
         else
-        return  label+" " + getName() ;
+        return  label+" ";// + getName() ;
     }
 
     @Override

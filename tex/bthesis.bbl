@@ -5,6 +5,12 @@ Rajkumar Buyya, Mukaddim Pathan, and Athena Vakali.
 \newblock {\em Content Delivery Networks}.
 \newblock Springer Publishing Company, Incorporated, 1st edition, 2008.
 
+\bibitem[Cai13]{caidabarebones}
+Caida.
+\newblock Barebones -
+  http://www.caida.org/tools/visualization/mapnet/data/inc.txt, 2013.
+\newblock [Online; accessed 9-September-2013].
+
 \bibitem[NM11]{mirrorserver}
 R.~Nakamura and H.~Miwa.
 \newblock Method of locating mirror servers to alleviate load on servers and

@@ -24,7 +24,7 @@ public class Application {
         log.debug("Instance Size: "+instanceList.size());
         GreedyLocation greedyLocation = new GreedyLocation() ;
         for(SLRLInstance slrlInstance: instanceList){
-            if(slrlInstance.getTestInstanceName().equals("Genuity")) {
+            if(slrlInstance.getTestInstanceName().equals("Cable & Wireless")) {
             log.debug("------------------------------");
             greedyLocation.solve(slrlInstance);
             log.debug(slrlInstance.toString());
