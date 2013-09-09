@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bthesis.aux
 The style file: alpha.bst
 Database file #1: bibtex.bib
-You've used 3 entries,
+You've used 4 entries,
             2543 wiz_defined-function locations,
-            571 strings with 4746 characters,
-and the built_in function-call counts, 1078 in all, are:
-= -- 103
-> -- 35
+            578 strings with 4918 characters,
+and the built_in function-call counts, 1452 in all, are:
+= -- 137
+> -- 60
 < -- 3
-+ -- 11
-- -- 10
-* -- 54
-:= -- 167
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 16
-chr.to.int$ -- 2
-cite$ -- 3
-duplicate$ -- 48
-empty$ -- 95
-format.name$ -- 15
-if$ -- 235
++ -- 20
+- -- 19
+* -- 81
+:= -- 233
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 23
+chr.to.int$ -- 3
+cite$ -- 4
+duplicate$ -- 63
+empty$ -- 120
+format.name$ -- 25
+if$ -- 309
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 1
-newline$ -- 18
-num.names$ -- 9
-pop$ -- 28
+missing$ -- 3
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 37
 preamble$ -- 1
-purify$ -- 19
+purify$ -- 27
 quote$ -- 0
-skip$ -- 48
+skip$ -- 59
 stack$ -- 0
-substring$ -- 49
-swap$ -- 13
+substring$ -- 56
+swap$ -- 14
 text.length$ -- 3
 text.prefix$ -- 2
 top$ -- 0
-type$ -- 24
+type$ -- 28
 warning$ -- 0
-while$ -- 9
-width$ -- 4
-write$ -- 39
+while$ -- 12
+width$ -- 5
+write$ -- 52

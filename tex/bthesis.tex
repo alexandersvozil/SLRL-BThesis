@@ -35,12 +35,39 @@ sequel to the existing greedy algorithm proposed by Miwa et al. \cite{mirrorserv
 
 \section{Introduction}
     \subsection {CDNs}
-
+        "A content delivery network is a collaborative collection of network elements spanning
+        the Internet, where content is replicated over several mirrored Web servers in order
+        to perform transparent and effective delivery of content to the end user."\cite[p. 3]{Buyya:2008:CDN:1457653}
+        To perform efficient delivery of data, CDNs need to have several mirrored Web servers
+        and thus it is important to place them well, because placing the mirror server 
+        could be an expensive choice considering no prior calculation where it should go. 
+        The expensive choice manifests in high link usages and or a maximal neighbourhood being
+        too big for the server to handle.
+        The mirror servers naturally serve the same data, as they are there to alleviate the 
+        load of the other servers providing the data.
+        
     \subsection {Similar Problems}
-    \subsection {}
+    \subsubsection {P-Center Problem}
+    \subsubsection {P-Median Problem}
+    \subsubsection {NA (Node to Area)-connectivity}
+    \subsection{Open Shortest Path First}
 \section{Server Location Problem with Restricted Loads on Servers and Links}
 \subsection{Formal Definition}
-\subsection{An Instance of the Problem}
+\subsubsection{Neighbour Set}
+\subsubsection{Load on a Link}
+\textbf{Given:}
+{\itshape Undirected graph G(V,E) and  positive integers k,r and c. \\
+$k = \|S\|$, where S is the set of servers $S = \{s_1,s_2,\dots s_k\} \subseteq V$\\
+r $\geq  \|V_i\|$ $(i=1,2,\dots,k)$ where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$\\
+$c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.} \\
+\\
+\textbf{Wanted:} 
+{\itshape A set of Servers $S = \{s_1, s_2,\dots, s_k \} \subseteq V$ such that $|V_i|\leq r$
+    $(i = 1,2, \dots,k)$ where $V_i$ is the neighbour set of $s_i$  $(i = 1,2,\dots,k)$ and that
+$m(e) \leq c$ $(\forall e \in E)$.}
+
+\subsection{An Instance Of The Problem}
+bla
 \subsection{Proof of NP-Completeness}
 \section{Algorithm}
     \subsection{Prior Algorithms}

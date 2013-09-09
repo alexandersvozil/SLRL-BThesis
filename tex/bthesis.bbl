@@ -1,5 +1,10 @@
 \begin{thebibliography}{Wik13b}
 
+\bibitem[BPV08]{Buyya:2008:CDN:1457653}
+Rajkumar Buyya, Mukaddim Pathan, and Athena Vakali.
+\newblock {\em Content Delivery Networks}.
+\newblock Springer Publishing Company, Incorporated, 1st edition, 2008.
+
 \bibitem[NM11]{mirrorserver}
 R.~Nakamura and H.~Miwa.
 \newblock Method of locating mirror servers to alleviate load on servers and
