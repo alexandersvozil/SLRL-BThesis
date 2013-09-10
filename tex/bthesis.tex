@@ -52,11 +52,19 @@ sequel to the existing greedy algorithm proposed by Miwa et al. \cite{mirrorserv
     Two problems that describe this problem would be the p-center and the
     p-median problem. The purpose of these problems is mainly to shorten delay
     time from the client to the server. 
-    There are several similar problems that are well known, like the p-center
-    or the p-median problem. 
-    %%NA-Edge connectivity fehlt
+    %%NA-Edge connectivity fehlt:
     \subsubsection {P-Center Problem}
+    "The p-Center problem consists of locating p facilities and assigning clients
+    to them in order to minimize the maximum distance between a client and the facility
+    to which he or she is allocated. It is used for example in locating fire stations or ambulances,
+    where the distance from the facilities 
+    to their farthest assigned potential client should be minimum."\cite{Mladenovic00solvingthe}
+    The p-center problem is one of the best known NP-hard discrete location problems.\cite{KarivHakimi1979}
+    For large instances, it is impractical to solve the problem exactly.
+    There have been very good results with the tabu-search and variable neighborhood search.
+    \cite{Mladenovic00solvingthe}
     \subsubsection {P-Median Problem}
+    
     \subsubsection {NA (Node to Area)-connectivity}
     \subsection{Open Shortest Path First}
 \section{Server Location Problem with Restricted Loads on Servers and Links}
@@ -69,9 +77,9 @@ sequel to the existing greedy algorithm proposed by Miwa et al. \cite{mirrorserv
     set. The server itself will belong to its own neighbour sets.
     \subsubsection{Load on a Link, m(e) or multiplicity of an edge}
     The load on a link is defined as follows: 
-    It is defined as the sum of shortest paths, that cross a link. If there
-    are several shortest paths with the same length to one or more servers every
-    one of them is taken into account. This is done, because we must always consider
+    It is defined as the number of shortest paths, that cross a link. If there
+    are several shortest paths with the same length to one or more servers from a vertice every
+    used edge is taken into account. This is done, because we must always consider
     the worst case when locating a server.
     \subsubsection{The Problem}
 \textbf{Given:}
@@ -86,7 +94,11 @@ $c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.} \\
 $m(e) \leq c$ $(\forall e \in E)$.}
 
 \subsection{An Instance Of The Problem}
-\includegraphics [scale=0.2]{cableandwireless1.png}\\
+\indent
+\indent
+\indent
+
+\includegraphics [scale=0.23]{cableandwireless1.png}\\
 The above shown graph is from the barebone network "Cable and Wireless".
 It is parsed out of a dataset of barebone networks provided by caida.\cite{caidabarebones}
 \\
@@ -94,17 +106,16 @@ The nodes have two values in their bubbles: "NH and m(e)". NH stands for
 the maximum neighbourhood if that node was chosen as a server. Choosing the first
 server obviously implicates the maximum neighbourhood, because there are
 no mirror servers yet on the graph.\\
-The multiplicity of an edge e, m(e) is explained above. The number after
-m(e) in the bubble describes m(e) $\forall e \in E$, not only for a single edge,
+The multiplicity of an edge e, $m(e)$ is explained above. The number after
+$m(e)$ in the bubble describes $max(m(e))$ $ \forall e \in E$,
 if one decides to take this node as a server.
-The greedy algorithm takes the node with the lowest max m(e) first.
-The great numbers for m(e) are due to more than one shortest path 
-to the server. \\
+The greedy algorithm takes the node with the lowest $max(m(e))$ first.
 \\
-\includegraphics [scale=0.2]{cableandwireless2.png}\\
-This graph shows the second server pick. This time our m(e) is already low enough
+\includegraphics [scale=0.23]{cableandwireless2.png}\\
+This graph shows the second server pick. This time our $m(e)$ is already low enough
 to suffice the constraint $m(e)\leq c $ thus the greedy algorithm proposed in the paper 
-by Miwa et al. \cite{mirrorserver} chooses the node with the lowest max neighbourhood.
+by Miwa et al. \cite{mirrorserver} chooses the node with the lowest max neighbourhood which is
+coincidentally also the one with the lowest $m(e)$.
 
 
 \subsection{Proof of NP-Completeness}
@@ -137,7 +148,7 @@ by Miwa et al. \cite{mirrorserver} chooses the node with the lowest max neighbou
     \end{itemize}
 
         All those modifications were done to match the graphs proposed by \cite{mirrorserver}.
-        As I did not have the data, I tried to match them with the number of
+        As I did not have the data of the other paper used, I tried to match them with the number of
         nodes and number of vertices. Unfortunately three instances of my instances do not
         match the number of nodes and / or vertices proposed from the paper above.
         The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".

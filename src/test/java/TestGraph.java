@@ -122,6 +122,7 @@ public class TestGraph {
 
        Node path =  graph1.BFS2(A,E);
         graph1.markPath2(path);
+        graph1.markEdges();
         snapshotG(graph);
         //log.debug(A);
         assertTrue(e6_C.getTimesUsed()==1);
@@ -203,6 +204,7 @@ public class TestGraph {
 
         graph1.BFS2(A,F);
         graph1.markPath2(F);
+        graph1.markEdges();
         graph1.clearParents();
 
         assertTrue(e1_B.getTimesUsed()==1);
@@ -214,8 +216,8 @@ public class TestGraph {
         assertTrue(e3_A.getTimesUsed()==1);
         assertTrue(e3_D.getTimesUsed()==1);
 
-        assertTrue(e4_E.getTimesUsed()==3);
-        assertTrue(e4_F.getTimesUsed()==3);
+        assertTrue(e4_E.getTimesUsed()==1);
+        assertTrue(e4_F.getTimesUsed()==1);
 
         assertTrue(e5_E.getTimesUsed()==1);
         assertTrue(e5_B.getTimesUsed()==1);
@@ -227,19 +229,23 @@ public class TestGraph {
         assertTrue(e7_D.getTimesUsed()==1);
         graph1.BFS2(E,F);
         graph1.markPath2(F);
+        graph1.markEdges();
         graph1.clearParents();
         graph1.BFS2(B,F);
         graph1.markPath2(F);
+        graph1.markEdges();
         graph1.clearParents();
         graph1.BFS2(C,F);
         graph1.markPath2(F);
+        graph1.markEdges();
         graph1.clearParents();
         graph1.BFS2(D,F);
         graph1.markPath2(F);
+        graph1.markEdges();
         graph1.clearParents();
-        assertTrue(graph1.getMaxUsage()==7);
-        assertTrue(e4_E.getTimesUsed()==7);
-        assertTrue(e4_F.getTimesUsed()==7);
+        assertTrue(graph1.getMaxUsage()==5);
+        assertTrue(e4_E.getTimesUsed()==5);
+        assertTrue(e4_F.getTimesUsed()==5);
     }
     @Test
     public void test_moreThanOneShortestPath() throws Exception {
@@ -277,6 +283,7 @@ public class TestGraph {
 
         Node path = graph1.BFS2(A,D);
         graph1.markPath2(path);
+        graph1.markEdges();
         assertTrue(e1_B.getTimesUsed()==1);
         assertTrue(e1_A.getTimesUsed() == 1);
 

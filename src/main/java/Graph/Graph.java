@@ -17,6 +17,7 @@ public class Graph {
     private List<Node> graph;
     private List<Node> servers;
     private Logger log =  Logger.getLogger(Graph.class);
+    private List<Edge> usedEdgesInShortestPaths;
 
     public void resetDistance(){
         for(Node n : graph){
@@ -36,11 +37,13 @@ public class Graph {
     public Graph(List<Node> graph) {
         this.graph = graph;
         this.servers = new ArrayList<Node>();
+        this.usedEdgesInShortestPaths = new ArrayList<Edge>();
     }
 
     public Graph() {
         graph = new ArrayList<Node>();
         servers = new ArrayList<Node>();
+        this.usedEdgesInShortestPaths = new ArrayList<Edge>();
     }
 
     public void addNode(Node n) {
@@ -153,12 +156,12 @@ public class Graph {
                         BFS2(n,nearestServer);
 
                     }catch (NodeNotFoundException e) {
-
                         e.printStackTrace();
                         return;
                     }
                     //log.debug(p + " is the SERVER ---");
-                    markPath2(nearestServer);
+                        markPath2(nearestServer);
+                        markEdges();
                     clearParents();
                 }
 
@@ -214,6 +217,16 @@ public class Graph {
         }
         throw new NodeNotFoundException("Node was not found by bfs: Goal: " + goalNode.getName()+ " Start: "+ from.getName());
     }
+
+    /**
+     * Marks all edges used by the paths. Then clears the list
+     */
+    public void markEdges(){
+        for(Edge e : usedEdgesInShortestPaths){
+            e.setTimesUsed(e.getTimesUsed()+1);
+        }
+        usedEdgesInShortestPaths.clear();
+    }
     class Nodepair {
         Node node;
         Node parent;
@@ -225,10 +238,12 @@ public class Graph {
     }
     /**
      * FOR BFS2
+     * marks all edges used and puts them into the usedEdgesInShortestPaths List. This List will mark all used Edges
      * @param n
      */
     public void markPath2(Node n) {
         Node tmp = n;
+
         if(tmp.getParents().isEmpty())
             return;
 
@@ -238,25 +253,21 @@ public class Graph {
             for(Edge e : tmp.getEdges())
             {
                 if(e.getNode2().equals(parent)) {
-                    if(e.getNode2().getParents().size()>0){
-                        number = e.getNode2().getParents().size();
-                        e.setTimesUsed(e.getTimesUsed()+number);
+                    if(!usedEdgesInShortestPaths.contains(e)){
+                    usedEdgesInShortestPaths.add(e);
                     }
-
-                    else{
-                        number = 1;
-                        e.setTimesUsed(e.getTimesUsed()+number);
-                    }
-                    //log.debug(e);
                 }
             }
             for(Edge e: parent.getEdges())
             {
                 if(e.getNode2().equals(tmp))
                 {
-                    e.setTimesUsed(e.getTimesUsed()+number);
+                    if(!usedEdgesInShortestPaths.contains(e)){
+                        usedEdgesInShortestPaths.add(e);
+                    }
 
-                    //log.debug(e);
+
+
                 }
             }
             markPath2(parent);

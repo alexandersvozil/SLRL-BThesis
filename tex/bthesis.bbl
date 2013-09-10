@@ -1,4 +1,5 @@
-\begin{thebibliography}{Wik13b}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{MLH{\etalchar{+}}00}
 
 \bibitem[BPV08]{Buyya:2008:CDN:1457653}
 Rajkumar Buyya, Mukaddim Pathan, and Athena Vakali.
@@ -10,6 +11,18 @@ Caida.
 \newblock Barebones -
   http://www.caida.org/tools/visualization/mapnet/data/inc.txt, 2013.
 \newblock [Online; accessed 9-September-2013].
+
+\bibitem[KH79]{KarivHakimi1979}
+O.~Kariv and S.~L. Hakimi.
+\newblock An algorithmic approach to network location problems. {I}: The
+  \$p\$-centers.
+\newblock {\em SIAM Journal on Applied Mathematics}, 37:513--538, 1979.
+
+\bibitem[MLH{\etalchar{+}}00]{Mladenovic00solvingthe}
+Nenad Mladenovic, Martine Labbé, Pierre Hansen, Etudes Commerciales, and
+  Etudes Commerciales.
+\newblock Solving the p-center problem with tabu search and variable
+  neighborhood search, 2000.
 
 \bibitem[NM11]{mirrorserver}
 R.~Nakamura and H.~Miwa.
