@@ -1,44 +1,50 @@
-\newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{MLH{\etalchar{+}}00}
+\begin{thebibliography}{10}
 
-\bibitem[BPV08]{Buyya:2008:CDN:1457653}
-Rajkumar Buyya, Mukaddim Pathan, and Athena Vakali.
-\newblock {\em Content Delivery Networks}.
-\newblock Springer Publishing Company, Incorporated, 1st edition, 2008.
+\bibitem{mirrorserver}
+R.~Nakamura and H.~Miwa, ``Method of locating mirror servers to alleviate load
+  on servers and links,'' in {\em Applications and the Internet (SAINT), 2011
+  IEEE/IPSJ 11th International Symposium on}, pp.~513--518, 2011.
 
-\bibitem[Cai13]{caidabarebones}
-Caida.
-\newblock Barebones -
-  http://www.caida.org/tools/visualization/mapnet/data/inc.txt, 2013.
+\bibitem{wiki:cdn}
+Wikipedia, ``Content delivery network,'' 2013.
+\newblock [Online; accessed 4-September-2013].
+
+\bibitem{wiki:lastmile}
+Wikipedia, ``Last mile,'' 2013.
+\newblock [Online; accessed 4-September-2013].
+
+\bibitem{Buyya:2008:CDN:1457653}
+R.~Buyya, M.~Pathan, and A.~Vakali, {\em Content Delivery Networks}.
+\newblock Springer Publishing Company, Incorporated, 1st~ed., 2008.
+
+\bibitem{Mladenovic00solvingthe}
+N.~Mladenovic, M.~Labbé, P.~Hansen, E.~Commerciales, and E.~Commerciales,
+  ``Solving the p-center problem with tabu search and variable neighborhood
+  search,'' 2000.
+
+\bibitem{KarivHakimi1979}
+O.~Kariv and S.~L. Hakimi, ``An algorithmic approach to network location
+  problems. {I}: The \$p\$-centers,'' {\em SIAM Journal on Applied
+  Mathematics}, vol.~37, pp.~513--538, 1979.
+
+\bibitem{Rolland1997329}
+E.~Rolland, D.~A. Schilling, and J.~R. Current, ``An efficient tabu search
+  procedure for the p-median problem,'' {\em European Journal of Operational
+  Research}, vol.~96, no.~2, pp.~329 -- 342, 1997.
+
+\bibitem{KarivHakimi1979median}
+O.~Kariv and S.~L. Hakimi, ``An algorithmic approach to network location
+  problems. {I}: The \$p\$-medians,'' {\em SIAM Journal on Applied
+  Mathematics}, vol.~37, pp.~539--560, 1979.
+
+\bibitem{rosing1979p}
+K.~E. Rosing, C.~ReVelle, and H.~Rosing-Vogelaar, ``The p-median and its linear
+  programming relaxation: An approach to large problems,'' {\em Journal of the
+  Operational Research Society}, pp.~815--823, 1979.
+
+\bibitem{caidabarebones}
+Caida, ``Barebones -
+  http://www.caida.org/tools/visualization/mapnet/data/inc.txt,'' 2013.
 \newblock [Online; accessed 9-September-2013].
-
-\bibitem[KH79]{KarivHakimi1979}
-O.~Kariv and S.~L. Hakimi.
-\newblock An algorithmic approach to network location problems. {I}: The
-  \$p\$-centers.
-\newblock {\em SIAM Journal on Applied Mathematics}, 37:513--538, 1979.
-
-\bibitem[MLH{\etalchar{+}}00]{Mladenovic00solvingthe}
-Nenad Mladenovic, Martine Labbé, Pierre Hansen, Etudes Commerciales, and
-  Etudes Commerciales.
-\newblock Solving the p-center problem with tabu search and variable
-  neighborhood search, 2000.
-
-\bibitem[NM11]{mirrorserver}
-R.~Nakamura and H.~Miwa.
-\newblock Method of locating mirror servers to alleviate load on servers and
-  links.
-\newblock In {\em Applications and the Internet (SAINT), 2011 IEEE/IPSJ 11th
-  International Symposium on}, pages 513--518, 2011.
-
-\bibitem[Wik13a]{wiki:cdn}
-Wikipedia.
-\newblock Content delivery network, 2013.
-\newblock [Online; accessed 4-September-2013].
-
-\bibitem[Wik13b]{wiki:lastmile}
-Wikipedia.
-\newblock Last mile, 2013.
-\newblock [Online; accessed 4-September-2013].
 
 \end{thebibliography}

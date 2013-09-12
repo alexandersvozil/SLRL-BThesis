@@ -4,6 +4,7 @@
 \documentclass [12pt]{article}
 \usepackage [utf8]{inputenc}
 \usepackage {graphicx}
+\bibliographystyle{ieeetr} 
 
 
 \begin{document}
@@ -52,7 +53,6 @@ sequel to the existing greedy algorithm proposed by Miwa et al. \cite{mirrorserv
     Two problems that describe this problem would be the p-center and the
     p-median problem. The purpose of these problems is mainly to shorten delay
     time from the client to the server. 
-    %%NA-Edge connectivity fehlt:
     \subsubsection {P-Center Problem}
     "The p-Center problem consists of locating p facilities and assigning clients
     to them in order to minimize the maximum distance between a client and the facility
@@ -64,9 +64,18 @@ sequel to the existing greedy algorithm proposed by Miwa et al. \cite{mirrorserv
     There have been very good results with the tabu-search and variable neighborhood search.
     \cite{Mladenovic00solvingthe}
     \subsubsection {P-Median Problem}
+    The p-Median Problem is very similar to the p-center problem. It can be defined as follows:
+    given a graph G=(V,E) we are asked to find a set of nodes, S, of size p, where $ S\subset V$, such that the weighted
+    sum of the distances from the remaining nodes \{V-S\} to the Set S is minimized. \cite{Rolland1997329}
+    This problem belongs to the class of problems known as NP-hard.\cite{KarivHakimi1979median} There have been
+    approaches to solve this problem with the tabu search \cite{Rolland1997329} and solving the linear program by
+    relaxing the binary constraints.\cite{rosing1979p}
+    
     
     \subsubsection {NA (Node to Area)-connectivity}
+    %%TODO: NA-Edge connectivity fehlt:
     \subsection{Open Shortest Path First}
+    %%TODO:
 \section{Server Location Problem with Restricted Loads on Servers and Links}
 \subsection{Formal Definition}
 \subsubsection{Neighbour Set}
@@ -78,7 +87,7 @@ sequel to the existing greedy algorithm proposed by Miwa et al. \cite{mirrorserv
     \subsubsection{Load on a Link, m(e) or multiplicity of an edge}
     The load on a link is defined as follows: 
     It is defined as the number of shortest paths, that cross a link. If there
-    are several shortest paths with the same length to one or more servers from a vertice every
+    are several shortest paths with the same length to one or more servers every
     used edge is taken into account. This is done, because we must always consider
     the worst case when locating a server.
     \subsubsection{The Problem}
@@ -157,5 +166,4 @@ coincidentally also the one with the lowest $m(e)$.
 \section{Conclusion}
 
 \bibliography{bibtex}
-\bibliographystyle{alpha}
 \end{document}
