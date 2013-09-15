@@ -1,5 +1,7 @@
 package Parsing;
 
+import Algorithms.LocalSearch;
+import Algorithms.Solution;
 import Graph.Node;
 import Graph.Graph;
 import Graph.Edge;
@@ -18,6 +20,7 @@ import java.util.*;
  */
 public class SLRLInstance {
     private final static Logger log = Logger.getLogger(SLRLInstance.class);
+    private boolean solved;
 
     public String getTestInstanceName() {
         return testInstanceName;
@@ -31,6 +34,11 @@ public class SLRLInstance {
 
     }
 
+
+    /**
+     *the last maxUsage of the solution
+     */
+    private int cLast;
 
     //servers
     private List<Node> servers;
@@ -226,6 +234,7 @@ public class SLRLInstance {
                 ", maxDegree=" + maxDegree +
                 ", V=" + V +
                 ", E=" + E +
+                ", cLast="+ cLast +
                 //", nodeVectorHashMap=" + graphToString() +
                 '}';
     }
@@ -323,5 +332,45 @@ public class SLRLInstance {
 
     public void setC(int c) {
         this.c = c;
+    }
+
+    public int getcLast() {
+        return cLast;
+    }
+
+    public void setcLast(int cLast) {
+        this.cLast = cLast;
+    }
+
+    public void setSolution(Solution solution) {
+
+        this.ratio_r= solution.getR();
+        this.cLast = solution.getLastC();
+        this.graph = solution.getGraph();
+
+        for(Node n : graph.getGraph()){
+            n.setServer(false);
+        }
+
+        for(Node n:graph.getServers()){
+            n.setServer(true);
+        }
+
+    }
+
+    public void snapshotL() {
+        List<String> dirty = new ArrayList<String>();
+        dirty.add("-g");
+        GraphPrinter gp = GraphPrinter.ParseArgs(dirty);
+        gp.put(testInstanceName+"L", graph.getGraph().toArray(new Traversable[graph.size()]), false);
+        gp.print();
+    }
+
+    public void setSolved(boolean solved) {
+        this.solved = solved;
+    }
+
+    public boolean getSolved() {
+        return solved;
     }
 }

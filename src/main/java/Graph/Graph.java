@@ -1,6 +1,7 @@
 package Graph;
 
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import ads1.graphprinter.GraphPrinter;
 import ads1.graphprinter.Traversable;
@@ -27,22 +28,37 @@ public class Graph {
     }
 
     public void addServer(Node server) {
+        server.setServer(true);
         servers.add(server);
     }
 
     public void removeServer(Node exServer) {
+        exServer.setServer(false);
         servers.remove(exServer);
     }
 
     public Graph(List<Node> graph) {
         this.graph = graph;
-        this.servers = new ArrayList<Node>();
+        this.servers = new CopyOnWriteArrayList<Node>();
+        this.usedEdgesInShortestPaths = new ArrayList<Edge>();
+
+    }
+    public Graph(List<Node> graph, List<Node> servers) {
+        this.graph=new ArrayList<Node>();
+        for(Node n: graph){
+            this.graph.add(n);
+        }
+        this.servers = new CopyOnWriteArrayList<Node>();
+        for(Node n: servers){
+            this.graph.add(n);
+        }
+        this.servers.addAll(servers);
         this.usedEdgesInShortestPaths = new ArrayList<Edge>();
     }
 
     public Graph() {
         graph = new ArrayList<Node>();
-        servers = new ArrayList<Node>();
+        this.servers = new CopyOnWriteArrayList<Node>();
         this.usedEdgesInShortestPaths = new ArrayList<Edge>();
     }
 
@@ -227,6 +243,15 @@ public class Graph {
         }
         usedEdgesInShortestPaths.clear();
     }
+
+    public int getServerSize() {
+        return servers.size();
+    }
+
+    public List<Node> getServers() {
+        return servers;
+    }
+
     class Nodepair {
         Node node;
         Node parent;

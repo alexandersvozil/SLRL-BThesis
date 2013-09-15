@@ -36,65 +36,65 @@ sequel to the existing greedy algorithm proposed by Miwa et al. \cite{mirrorserv
 \tableofcontents
 
 \section{Introduction}
-    \subsection {CDNs}
-        "A content delivery network is a collaborative collection of network elements spanning
-        the Internet, where content is replicated over several mirrored Web servers in order
-        to perform transparent and effective delivery of content to the end user."\cite[p. 3]{Buyya:2008:CDN:1457653}
-        To perform efficient delivery of data, CDNs need to have several mirrored Web servers
-        and thus it is important to place them well, because placing the mirror server 
-        could be an expensive choice considering no prior calculation where it should go. 
-        The expensive choice manifests in high link usages and or a maximal neighbourhood being
-        too big for the server to handle.
-        The mirror servers naturally serve the same data, as they are there to alleviate the 
-        load of the other servers providing the data.
-        
-    \subsection {Similar Problems}
-    A lot of thought has already been put into the server location problem.
-    Two problems that describe this problem would be the p-center and the
-    p-median problem. The purpose of these problems is mainly to shorten delay
-    time from the client to the server. 
-    \subsubsection {P-Center Problem}
-    "The p-Center problem consists of locating p facilities and assigning clients
-    to them in order to minimize the maximum distance between a client and the facility
-    to which he or she is allocated. It is used for example in locating fire stations or ambulances,
-    where the distance from the facilities 
-    to their farthest assigned potential client should be minimum."\cite{Mladenovic00solvingthe}
-    The p-center problem is one of the best known NP-hard discrete location problems.\cite{KarivHakimi1979}
-    For large instances, it is impractical to solve the problem exactly.
-    There have been very good results with the tabu-search and variable neighborhood search.
-    \cite{Mladenovic00solvingthe}
-    \subsubsection {P-Median Problem}
-    The p-Median Problem is very similar to the p-center problem. It can be defined as follows:
-    given a graph G=(V,E) we are asked to find a set of nodes, S, of size p, where $ S\subset V$, such that the weighted
-    sum of the distances from the remaining nodes \{V-S\} to the Set S is minimized. \cite{Rolland1997329}
-    This problem belongs to the class of problems known as NP-hard.\cite{KarivHakimi1979median} There have been
-    approaches to solve this problem with the tabu search \cite{Rolland1997329} and solving the linear program by
-    relaxing the binary constraints.\cite{rosing1979p}
-    
-    
-    \subsubsection {NA (Node to Area)-connectivity}
-    %%TODO: NA-Edge connectivity fehlt:
-    \subsection{Open Shortest Path First}
-    %%TODO:
+\subsection {CDNs}
+"A content delivery network is a collaborative collection of network elements spanning
+the Internet, where content is replicated over several mirrored Web servers in order
+to perform transparent and effective delivery of content to the end user."\cite[p. 3]{Buyya:2008:CDN:1457653}
+To perform efficient delivery of data, CDNs need to have several mirrored Web servers
+and thus it is important to place them well, because placing the mirror server 
+could be an expensive choice considering no prior calculation where it should go. 
+The expensive choice manifests in high link usages and or a maximal neighbourhood being
+too big for the server to handle.
+The mirror servers naturally serve the same data, as they are there to alleviate the 
+load of the other servers providing the data.
+
+\subsection {Similar Problems}
+A lot of thought has already been put into the server location problem.
+Two problems that describe this problem would be the p-center and the
+p-median problem. The purpose of these problems is mainly to shorten delay
+time from the client to the server. 
+\subsubsection {P-Center Problem}
+"The p-Center problem consists of locating p facilities and assigning clients
+to them in order to minimize the maximum distance between a client and the facility
+to which he or she is allocated. It is used for example in locating fire stations or ambulances,
+where the distance from the facilities 
+to their farthest assigned potential client should be minimum."\cite{Mladenovic00solvingthe}
+The p-center problem is one of the best known NP-hard discrete location problems.\cite{KarivHakimi1979}
+For large instances, it is impractical to solve the problem exactly.
+There have been very good results with the tabu-search and variable neighborhood search.
+\cite{Mladenovic00solvingthe}
+\subsubsection {P-Median Problem}
+The p-Median Problem is very similar to the p-center problem. It can be defined as follows:
+given a graph G=(V,E) we are asked to find a set of nodes, S, of size p, where $ S\subset V$, such that the weighted
+sum of the distances from the remaining nodes \{V-S\} to the Set S is minimized. \cite{Rolland1997329}
+This problem belongs to the class of problems known as NP-hard.\cite{KarivHakimi1979median} There have been
+approaches to solve this problem with the tabu search \cite{Rolland1997329} and solving the linear program by
+relaxing the binary constraints.\cite{rosing1979p}
+
+
+\subsubsection {NA (Node to Area)-connectivity}
+%%TODO: NA-Edge connectivity fehlt:
+\subsection{Open Shortest Path First}
+%%TODO:
 \section{Server Location Problem with Restricted Loads on Servers and Links}
 \subsection{Formal Definition}
 \subsubsection{Neighbour Set}
-    The neighbour set is the set, that belongs to a server. In our problem, it is
-    defined as follows: If the node has a shortest path to a server node, he 
-    belongs to this server nodes neighbour set. If the node has several shortest
-    paths to multiple server nodes, it will belong to all of those server nodes neighbour
-    set. The server itself will belong to its own neighbour sets.
-    \subsubsection{Load on a Link, m(e) or multiplicity of an edge}
-    The load on a link is defined as follows: 
-    It is defined as the number of shortest paths, that cross a link. If there
-    are several shortest paths with the same length to one or more servers every
-    used edge is taken into account. This is done, because we must always consider
-    the worst case when locating a server.
-    \subsubsection{The Problem}
+The neighbour set is the set, that belongs to a server. In our problem, it is
+defined as follows: If the node has a shortest path to a server node, he 
+belongs to this server nodes neighbour set. If the node has several shortest
+paths to multiple server nodes, it will belong to all of those server nodes neighbour
+set. The server itself will belong to its own neighbour sets.
+\subsubsection{Load on a Link, m(e) or multiplicity of an edge}
+The load on a link is defined as follows: 
+It is defined as the number of shortest paths, that cross a link. If there
+are several shortest paths with the same length to one or more servers every
+used edge is taken into account. This is done, because we must always consider
+the worst case when locating a server.
+\subsubsection{The Problem}
 \textbf{Given:}
 {\itshape Undirected graph G(V,E) and  positive integers k,r and c. \\
-$k = \|S\|$, where S is the set of servers $S = \{s_1,s_2,\dots s_k\} \subseteq V$\\
-r $\geq  \|V_i\|$ $(i=1,2,\dots,k)$ where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$\\
+    $k = \|S\|$, where S is the set of servers $S = \{s_1,s_2,\dots s_k\} \subseteq V$\\
+    r $\geq  \|V_i\|$ $(i=1,2,\dots,k)$ where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$\\
 $c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.} \\
 \\
 \textbf{Wanted:} 
@@ -129,40 +129,40 @@ coincidentally also the one with the lowest $m(e)$.
 
 \subsection{Proof of NP-Completeness}
 \section{Algorithm}
-    \subsection{Rules and Assumptions}
-    \subsection{Other Algorithms}
-    The only prior algorithm for this problem is the greedy algorithm proposed by
-    Miwa et al. \cite{mirrorserver}. It greedily chooses the node with the 
-    lowest maximal neighbourhood if the constraint $c\geq m(e) (\forall e \in E)$ is fulfilled. 
-    Otherwise it will choose a node where $min(m(e)(\forall e \in E))$ is true.
-    
-    \subsection{Data (Testinstances)}
-    The data taken for the tests is from caida \cite{caidabarebones}. Parsing the
-    data was one of the most difficult parts, because the data is not formatted well.
-    It does not really follow the syntax proposed in the beginning of the file. I also
-    modified the data in some concerns:
-    \begin{itemize}
-        \item If the graph G given for the barebone network was not connected,
-            the connected component with less nodes of that graph is cut out.
-            
-        \item Normally the connected cities are listed in this manner:
-            "city,state,country", in order to match with the numbers 
-            in the paper \cite{mirrorserver} only city and state are used for
-            identification and the country is left out. Sometimes London
-            is used on one hand as City in Canada and on the other hand in GB, denoted like this
-            London, *, Canada and London, *, England. They are differentiated.
-        \item Sometimes the State has a number. One example would be "Kansas City, KS2~"
-            This is interpreted as "Kansas City, KS".
+\subsection{Rules and Assumptions}
+\subsection{Other Algorithms}
+The only prior algorithm for this problem is the greedy algorithm proposed by
+Miwa et al. \cite{mirrorserver}. It greedily chooses the node with the 
+lowest maximal neighbourhood if the constraint $c\geq m(e) (\forall e \in E)$ is fulfilled. 
+Otherwise it will choose a node where $min(m(e)(\forall e \in E))$ is true.
 
-    \end{itemize}
+\subsection{Data (Testinstances)}
+The data taken for the tests is from caida \cite{caidabarebones}. Parsing the
+data was one of the most difficult parts, because the data is not formatted well.
+It does not really follow the syntax proposed in the beginning of the file. I also
+modified the data in some concerns:
+\begin{itemize}
+    \item If the graph G given for the barebone network was not connected,
+        the connected component with less nodes of that graph is cut out.
 
-        All those modifications were done to match the graphs proposed by \cite{mirrorserver}.
-        As I did not have the data of the other paper used, I tried to match them with the number of
-        nodes and number of vertices. Unfortunately three instances of my instances do not
-        match the number of nodes and / or vertices proposed from the paper above.
-        The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".
-         
-    \subsection{Implementation}
+    \item Normally the connected cities are listed in this manner:
+        "city,state,country", in order to match with the numbers 
+        in the paper \cite{mirrorserver} only city and state are used for
+        identification and the country is left out. Sometimes London
+        is used on one hand as City in Canada and on the other hand in GB, denoted like this
+        London, *, Canada and London, *, England. They are differentiated.
+    \item Sometimes the State has a number. One example would be "Kansas City, KS2~"
+        This is interpreted as "Kansas City, KS".
+
+\end{itemize}
+
+All those modifications were done to match the graphs proposed by \cite{mirrorserver}.
+As I did not have the data of the other paper used, I tried to match them with the number of
+nodes and number of vertices. Unfortunately three instances of my instances do not
+match the number of nodes and / or vertices proposed from the paper above.
+The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".
+
+\subsection{Implementation}
 \section{Conclusion}
 
 \bibliography{bibtex}

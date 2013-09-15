@@ -565,7 +565,6 @@ public abstract class AbstractInstancesTest {
                 Iterator<Node> nodeIterator =  instance.getGraph().getGraph().iterator();
                 Node node1 = nodeIterator.next();
                 Node node2 = nodeIterator.next();
-                Node path = node1.BFS(node2);
             }
         }
 

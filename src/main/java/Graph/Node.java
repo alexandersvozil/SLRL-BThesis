@@ -37,11 +37,15 @@ public class Node implements Traversable {
         this.id = n.id;
         this.name = n.getName();
         edges = new ArrayList<Edge>();
+        for(Edge e : n.getEdges()){
+            edges.add(new Edge(e.getNode1(),e.getNode2()));
+        }
         this.parent = n.getParent();
         isServer = n.isServer();
         this.neighbourhood = n.getNeighbourhood();
         this.maxEdgeUsage = n.getMaxEdgeUsage();
         parents = new CopyOnWriteArrayList<Node>();
+
     }
 
     public Node(String name) {
@@ -96,41 +100,7 @@ public class Node implements Traversable {
     }
 
 
-    /**
-     * BFS. WARNING this does not work with the algorithm, because it doesn't find EVERY shortest path.
-     * needs modification
-     * @param goalNode
-     * @return
-     * @throws NodeNotFoundException
-     */
-    public Node BFS(Node goalNode) throws NodeNotFoundException {
-        /** pseudocode von wikipedia entnommen: http://de.wikipedia.org/wiki/Breitensuche **/
-        if (goalNode == null)
-            throw new IllegalArgumentException("goalNode is null");
-        Queue<Node> nodeQueue = new LinkedList<Node>();
-        //for the nodes already visited. HashSet because "contains" is O(1)
-        HashSet<Node> visited = new HashSet<Node>();
-        visited.add(this);
-        nodeQueue.offer(this);
-        this.distance = 0;
-        while (!nodeQueue.isEmpty()) {
-            Node node = nodeQueue.poll();
-            //log.debug("expanding"+node);
-            if (node.equals(goalNode)) {
-             //ziel erreicht
-            //log.debug("Found node"+ goalNode+"coming from"+ node.getParent());
-            return goalNode;
-            }
-                for(Edge e: node.getEdges()){
-                    if(!visited.contains(e.getNode2())){
-                        nodeQueue.offer(e.getNode2());
-                        e.getNode2().setParent(node);
-                        visited.add(e.getNode2());
-                    }
-            }
-        }
-        throw new NodeNotFoundException("Node was not found by bfs: Goal: " + goalNode.getName()+ " Start: "+ this.getName());
-    }
+
 
 
 
@@ -168,37 +138,6 @@ public class Node implements Traversable {
         if(!(parent==null))
         parents.add(parent);
     }
-
-    /**
-     * FOR BFS
-     * @param n
-     */
-    public void markPath(Node n) {
-        Node tmp = n;
-        Node lastNode = null;
-        while(tmp.getParent() != null)
-        {
-          for(Edge e : tmp.getEdges())
-          {
-              if(e.getNode2().equals(tmp.getParent()) || e.getNode2().equals(lastNode)){
-                //System.out.println(e.getNode1() + "  " + e.getNode2());
-                e.setTimesUsed(e.getTimesUsed()+1);
-              }
-          }
-          lastNode = tmp;
-          tmp = tmp.getParent();
-        }
-
-        for(Edge e : this.getEdges())
-        {
-            if(e.getNode2().equals(tmp.getParent()) || e.getNode2().equals(lastNode)){
-                //System.out.println(e.getNode1() + "  " + e.getNode2());
-                e.setTimesUsed(e.getTimesUsed()+1);
-            }
-        }
-
-    }
-
 
     @Override
     public String toString() {

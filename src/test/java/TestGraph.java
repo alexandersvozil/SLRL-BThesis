@@ -344,7 +344,6 @@ public class TestGraph {
         C.addEdge(e6_C);
         E.addEdge(e6_E);
 
-        E.BFS(G);
 
     }
     public void snapshotG(Graph g){
