@@ -1,5 +1,6 @@
 import Algorithms.GreedyLocation;
 import Algorithms.LocalSearch;
+import Algorithms.TabuSearch;
 import Graph.NodeNotFoundException;
 import Parsing.ParseTestInstances;
 import Parsing.SLRLInstance;
@@ -24,15 +25,17 @@ public class Application {
         List<SLRLInstance> instanceList = parseTestInstances.parse();//parser.parse();
         log.debug("Instance Size: "+instanceList.size());
         GreedyLocation greedyLocation = new GreedyLocation() ;
-        LocalSearch localSearch = new LocalSearch();
+        //LocalSearch localSearch = new LocalSearch();
+        TabuSearch tabuSearch = new TabuSearch();
         for(SLRLInstance slrlInstance: instanceList){
-            ////if(slrlInstance.getTestInstanceName().equals("XO Communications")) {
+           // if(!slrlInstance.getTestInstanceName().equals("AT&T WorldNet") && !slrlInstance.getTestInstanceName().equals("AGIS")) {
             log.debug("------------------------------");
             greedyLocation.solve(slrlInstance);
             log.debug(slrlInstance.toString());
-            localSearch.localSearchBI(slrlInstance);
+            tabuSearch.tabu_search(slrlInstance);
+            //localSearch.localSearchBI(slrlInstance);
             log.debug(slrlInstance.toString());
-           ////}
+           //}
         }
     }
 }

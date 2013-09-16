@@ -24,7 +24,7 @@ public class LocalSearch {
      * @return
      */
     public SLRLInstance localSearchBI(SLRLInstance instance){
-        Solution initialSolution = new Solution(instance.getGraph(),instance.getK(),instance.getC(), instance.getRatio_r(), instance.getcLast(), instance.getSolved());
+        Solution initialSolution = new Solution(instance.getGraph(),instance.getK(),instance.getC(), instance.getRatio_r(), instance.getcLast(), instance.getSolved(),instance.getR_lower());
         int nrOfServers = initialSolution.getK();
         Solution bestSolution = initialSolution;
 
@@ -46,9 +46,8 @@ public class LocalSearch {
                     double newr =((double)(max_neighbourset+1)/(double)instance.getR_lower());
                     int c = initialSolution.getC();
 
-                    log.debug("^^^^^^^^^Found better solution"+  " new k: "+ newr+" old k: " +initialSolution.getR()+ " new Max usage: " + max_usage);
-                    bestSolution = new Solution(initialSolution.getGraph(),initialSolution.getK(),c,newr,max_usage,instance.getSolved());
-                    bestSolution.setSolved(true);
+                    log.debug("^^^^^^^^^Found better (solved)solution"+  " new k: "+ newr+" old k: " +initialSolution.getR()+ " new Max usage: " + max_usage);
+                    bestSolution = new Solution(initialSolution.getGraph(),initialSolution.getK(),c,newr,max_usage,true,bestSolution.getR_lower());
                 }
 
                 if(!bestSolution.isSolved() && bestSolution.getLastC() > max_usage)
@@ -57,7 +56,7 @@ public class LocalSearch {
                     int c = initialSolution.getC();
 
                     log.debug("^^^^^^^^^Found better solution in terms of c"+  " new k: "+ newr+" old k: " +initialSolution.getR()+ " new Max usage: " + max_usage);
-                    bestSolution = new Solution(initialSolution.getGraph(),initialSolution.getK(),c,newr,max_usage,instance.getSolved());
+                    bestSolution = new Solution(initialSolution.getGraph(),initialSolution.getK(),c,newr,max_usage, max_usage <= c,bestSolution.getR_lower());
 
 
                 }
@@ -67,7 +66,6 @@ public class LocalSearch {
                     double newk =((double)(max_neighbourset+1)/(double)instance.getR_lower());
                     int c = initialSolution.getC();
                     int newMaxUsage = initialSolution.getGraph().getMaxUsage();
-                    log.debug("^^^^^^^^^Nothing"+  " new k: "+ newk+" old k: " +initialSolution.r+ " new Max usage: " + newMaxUsage);
                 }*/
                 initialSolution.getGraph().removeServer(otherNode);
              }

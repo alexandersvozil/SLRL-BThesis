@@ -45,13 +45,8 @@ public class Graph {
     }
     public Graph(List<Node> graph, List<Node> servers) {
         this.graph=new ArrayList<Node>();
-        for(Node n: graph){
-            this.graph.add(n);
-        }
+        this.graph.addAll(graph);
         this.servers = new CopyOnWriteArrayList<Node>();
-        for(Node n: servers){
-            this.graph.add(n);
-        }
         this.servers.addAll(servers);
         this.usedEdgesInShortestPaths = new ArrayList<Edge>();
     }
@@ -128,7 +123,7 @@ public class Graph {
         for (Node n : graph) {
             nearestServers.clear();
             int minStepsToServer = 0;
-            if (!n.isServer()) {
+            if (!servers.contains(n)) {
                 //look for nearest servers
                // log.debug("server size: " + servers.size());
                 for (Node server : servers) {
