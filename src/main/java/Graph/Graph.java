@@ -150,18 +150,12 @@ public class Graph {
                             }
                         nearestServers.clear();
                         usedEdgesInShortestPaths.clear();
-                        //clearParents(); /**/
-                    //        clearUsages();
                         }
                         minStepsToServer = stepCounter;
                         nearestServers.add(server);
                         server.setTmpNeighbourhood(server.getTmpNeighbourhood()+1);
                         markPath2(server);
-
-                     //   markPath2(server);
-
                     }
-
                     clearParents();
                 }
 
