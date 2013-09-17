@@ -172,9 +172,9 @@ public class Graph {
                     }
                     //log.debug(p + " is the SERVER ---");
                         markPath2(nearestServer);
-                        markEdges();
                     clearParents();
                 }
+                markEdges();
 
 
             }
