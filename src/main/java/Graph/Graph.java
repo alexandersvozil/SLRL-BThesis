@@ -145,12 +145,18 @@ public class Graph {
                     if (stepCounter <= minStepsToServer || nearestServers.isEmpty()) {
                         //log.debug("Stepcounter to nearest Server found yet: " + stepCounter);
                         if (stepCounter < minStepsToServer) {
+                            for(Node  nServer:nearestServers){
+                                nServer.setTmpNeighbourhood(0);
+                            }
                         nearestServers.clear();
+                        usedEdgesInShortestPaths.clear();
                         //clearParents(); /**/
                     //        clearUsages();
                         }
                         minStepsToServer = stepCounter;
                         nearestServers.add(server);
+                        server.setTmpNeighbourhood(server.getTmpNeighbourhood()+1);
+                        markPath2(server);
 
                      //   markPath2(server);
 
@@ -159,22 +165,16 @@ public class Graph {
                     clearParents();
                 }
 
-                //log.debug("nearestServers: " + nearestServers.size());
+               /* //log.debug("nearestServers: " + nearestServers.size()); */
                 for (Node nearestServer : nearestServers) {
-                    nearestServer.increaseNeighbourhood();
 
-                    try {
-                        BFS2(n,nearestServer);
-
-                    }catch (NodeNotFoundException e) {
-                        e.printStackTrace();
-                        return;
+                    nearestServer.setNeighbourhood(nearestServer.getTmpNeighbourhood()+nearestServer.getNeighbourhood());
+                    nearestServer.setTmpNeighbourhood(0);
                     }
                     //log.debug(p + " is the SERVER ---");
-                        markPath2(nearestServer);
-                        markEdges();
-                    clearParents();
-                }
+
+                markEdges();
+                clearParents();
 
 
             }
