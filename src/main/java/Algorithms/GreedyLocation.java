@@ -51,6 +51,7 @@ public class GreedyLocation {
             for (Node node : graph.getGraph()) {
                 if (node.isServer())
                     continue;
+                long start = System.currentTimeMillis();
                 graph.addServer(node);
 
                 //this is the method that calculates all the stuff after adding a server. m(e) for each Edge and the Neighbourhood of the Server
@@ -87,6 +88,8 @@ public class GreedyLocation {
                     //log.debug("new best neighbourset: "+ newMaxNeighbourSet);
                     maxNeighbourSet = newMaxNeighbourSet;
                 }
+                long end = System.currentTimeMillis();
+                log.debug("$$$$Execution time was " + (end - start) + " ms.");
                 // As we have to try every node, reset usages of the edges, and size of neighbhouring sets
                 graph.clearUsages();
                 //remove the node to try new one

@@ -34,6 +34,7 @@ public class TabuSearch {
 
         for(int i = 0; i<50; i++){
             //search the best out of N(currentSol)
+            long start = System.currentTimeMillis();
             neighbourSol = local_search_withTabuList(currentSol);
             //add the best neighbourSol to the tabulist
             tabuList.add(neighbourSol);
@@ -65,6 +66,8 @@ public class TabuSearch {
            // log.debug("TABUDEBUG"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ "" +
             //        "old max usage: "+ bestSolution.getLastC()+ " new max usage: " + currentSol.getLastC());
 
+            long end = System.currentTimeMillis();
+            log.debug("--Execution time was "+(end-start)+" ms.");
         }
 
 
