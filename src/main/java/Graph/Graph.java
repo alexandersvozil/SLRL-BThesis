@@ -70,6 +70,7 @@ public class Graph {
     public void clearUsages() {
         for (Node n : graph) {
             n.resetNeighbourhood();
+            n.setTmpNeighbourhood(0);
             for (Edge e : n.getEdges()) {
                 e.setTimesUsed(0);
             }
@@ -145,37 +146,28 @@ public class Graph {
                     if (stepCounter <= minStepsToServer || nearestServers.isEmpty()) {
                         //log.debug("Stepcounter to nearest Server found yet: " + stepCounter);
                         if (stepCounter < minStepsToServer) {
+                            for(Node  nServer:nearestServers){
+                                nServer.setTmpNeighbourhood(0);
+                            }
                         nearestServers.clear();
-                        //clearParents(); /**/
-                    //        clearUsages();
+                        usedEdgesInShortestPaths.clear();
                         }
                         minStepsToServer = stepCounter;
                         nearestServers.add(server);
-
-                     //   markPath2(server);
-
+                        server.setTmpNeighbourhood(server.getTmpNeighbourhood()+1);
+                        markPath2(server);
                     }
-
                     clearParents();
                 }
 
-                //log.debug("nearestServers: " + nearestServers.size());
                 for (Node nearestServer : nearestServers) {
-                    nearestServer.increaseNeighbourhood();
 
-                    try {
-                        BFS2(n,nearestServer);
-
-                    }catch (NodeNotFoundException e) {
-                        e.printStackTrace();
-                        return;
+                    nearestServer.setNeighbourhood(nearestServer.getTmpNeighbourhood()+nearestServer.getNeighbourhood());
+                    nearestServer.setTmpNeighbourhood(0);
                     }
-                    //log.debug(p + " is the SERVER ---");
-                        markPath2(nearestServer);
-                    clearParents();
-                }
-                markEdges();
 
+                markEdges();
+                clearParents();
 
             }
         }

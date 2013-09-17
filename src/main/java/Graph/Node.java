@@ -30,6 +30,7 @@ public class Node implements Traversable {
     private String label;
     //to get EVERY shortest path
     private List<Node> parents;
+    private int tmpNeighbourhood;
 
     private int distance;
 
@@ -253,5 +254,17 @@ public class Node implements Traversable {
 
     public void setParents(List<Node> parents) {
         this.parents = parents;
+    }
+
+    public void setNeighbourhood(int neighbourhood) {
+        this.neighbourhood = neighbourhood;
+    }
+
+    public int getTmpNeighbourhood() {
+        return tmpNeighbourhood;
+    }
+
+    public void setTmpNeighbourhood(int tmpNeighbourhood) {
+        this.tmpNeighbourhood = tmpNeighbourhood;
     }
 }
