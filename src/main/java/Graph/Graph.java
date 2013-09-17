@@ -70,6 +70,7 @@ public class Graph {
     public void clearUsages() {
         for (Node n : graph) {
             n.resetNeighbourhood();
+            n.setTmpNeighbourhood(0);
             for (Edge e : n.getEdges()) {
                 e.setTimesUsed(0);
             }
@@ -159,18 +160,13 @@ public class Graph {
                     clearParents();
                 }
 
-               /* //log.debug("nearestServers: " + nearestServers.size()); */
                 for (Node nearestServer : nearestServers) {
 
                     nearestServer.setNeighbourhood(nearestServer.getTmpNeighbourhood()+nearestServer.getNeighbourhood());
                     nearestServer.setTmpNeighbourhood(0);
                     }
-                    //log.debug(p + " is the SERVER ---");
-
                 markEdges();
                 clearParents();
-
-
             }
         }
     }

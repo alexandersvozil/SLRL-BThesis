@@ -31,7 +31,7 @@ public class Application {
 
         long start = System.currentTimeMillis();
         for(SLRLInstance slrlInstance: instanceList){
-           // if(!slrlInstance.getTestInstanceName().equals("AT&T WorldNet") && !slrlInstance.getTestInstanceName().equals("AGIS")) {
+            //if(slrlInstance.getTestInstanceName().equals("UUNET")) {
             log.debug("------------------------------");
             greedyLocation.solve(slrlInstance);
             log.debug(slrlInstance.toString());
