@@ -35,7 +35,7 @@ public class Application {
             greedyLocation.solve(slrlInstance);
             log.debug(slrlInstance.toString());
 
-            tabuSearch.tabu_search(slrlInstance);
+            //tabuSearch.tabu_search(slrlInstance);
 
             //localSearch.localSearchBI(slrlInstance);
             log.debug(slrlInstance.toString());

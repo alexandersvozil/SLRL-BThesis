@@ -19,6 +19,7 @@ public class Graph {
     private List<Node> servers;
     private Logger log = Logger.getLogger(Graph.class);
     private List<Edge> usedEdgesInShortestPaths;
+    long sumsum;
 
     public void resetDistance() {
         for (Node n : graph) {
@@ -158,7 +159,7 @@ public class Graph {
                         server.setTmpNeighbourhood(server.getTmpNeighbourhood() + 1);
                         markPath2(server);
                     }
-                    clearParents();
+                    clearParents(); // VERY EXPENSIVE 5 Seconds!!!
                 }
 
                 for (Node nearestServer : nearestServers) {
@@ -175,14 +176,19 @@ public class Graph {
 
     /**
      * BFS2. USE THIS
-     * needs modification
      *
      * @param goalNode
      * @return
      * @throws NodeNotFoundException
      */
     public Node BFS2(Node from, Node goalNode) throws NodeNotFoundException {
+        long sum = 0;
+        long start = System.currentTimeMillis();
         resetDistance();
+        long end = System.currentTimeMillis();
+        sum = end - start;
+        sumsum+=sum;
+        log.debug("$$$$Execution time was " + sumsum + " ms.");
         /** pseudocode partly taken from wikipedia: http://de.wikipedia.org/wiki/Breitensuche **/
         if (goalNode == null)
             throw new IllegalArgumentException("goalNode is null");
