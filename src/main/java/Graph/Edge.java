@@ -11,7 +11,6 @@ public class Edge {
  private Node node1;
  private Node node2;
  private int timesUsed;
- private int tmpTimesUsed;
 
  public Edge(Node n1, Node n2){
         this.node1 = n1;

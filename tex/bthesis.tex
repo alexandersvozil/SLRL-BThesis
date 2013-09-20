@@ -4,8 +4,10 @@
 \documentclass [12pt]{article}
 \usepackage [utf8]{inputenc}
 \usepackage {graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \bibliographystyle{ieeetr} 
-
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
 
 \begin{document}
 \author{Alexander Svozil}
@@ -75,7 +77,7 @@ relaxing the binary constraints.\cite{rosing1979p}
 \subsubsection {NA (Node to Area)-connectivity}
 %%TODO: NA-Edge connectivity fehlt:
 \subsection{Open Shortest Path First}
-%%TODO:
+%%TODO: Facility Location with hops
 \section{Server Location Problem with Restricted Loads on Servers and Links}
 \subsection{Formal Definition}
 \subsubsection{Neighbour Set}
@@ -163,6 +165,52 @@ match the number of nodes and / or vertices proposed from the paper above.
 The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".
 
 \subsection{Implementation}
+I decided to implement a tabu-search.
+    \subsection{Modified BFS}
+    \subsection{Determination of the neighbour sets of a server and loads of the links}
+    \begin{algorithm}[H]
+        \caption{constraintsCalculation}
+        \begin{algorithmic}[1]
+            \Require Graph (V,E) G, Servers S
+            \For{Each node n $\in G$}
+                \If{!($n \in S$)}
+                    \State $nearestServersList \gets \{\};$ 
+                    \State $minServer \gets 0;$ \Comment The stepcounter to the nearest server(s)
+                    \For {Each Server $ s \in S$}
+                        \State $BFS2(n,s)$
+                        \State $p \gets s;$
+                        \State $i \gets 0;$ \Comment Count steps to server
+                        \While {$!p.parents().isEmpty())$}
+                            \State $i=i+1;$
+                            \State $p \gets p.parents[0];$
+                        \EndWhile
+                        \If {$i \leq minServer || nearestServersList.isEmpty()$}
+                            \If {$i < minServer$}
+                                \For{Each Server prevNearest $\in nearestServersList$}
+                                    \State $prevnearest.tmpNeighbourhood=0;$
+                                    \State $nearestServersList.clear();$
+                                    \State $usedEdges.clear();$
+                                \EndFor
+                            \EndIf
+                            \State $minServer = i;$ \Comment new nearest server found, set length
+                            \State $nearestServersList.add(s);$ \Comment add it to the list of nearest servers 
+                            \State $s.tmpNeighbourhood += 1;$ \Comment adds one to the temporal neighbourhood (it may get reset later on)
+                            \State $markPath2(s)$ \Comment This method recusively walks back every node's parents list to determine every path and add it to the usedEdges list.
+                        \EndIf 
+                    \EndFor
+                        \For{Each Server s $\in nearestServerList$}
+                            \State $s.neighborhood += s.tmpNeighbourhood;$
+                            \State $s.tmpNeighbourhood = 0;$
+                        \EndFor
+                    \State $markEdges();$ \Comment increments usage of each usedEdges
+                \EndIf
+            \EndFor
+        \end{algorithmic}
+    \end{algorithm}
+ewfw
+    \subsection{The local search}
+    \subsection{The tabu-search}
+    \subsection{Networks and the approximation ratio}
 \section{Conclusion}
 
 \bibliography{bibtex}

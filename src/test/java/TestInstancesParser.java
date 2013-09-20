@@ -1,14 +1,6 @@
-import Graph.Node;
-import Graph.NodeNotFoundException;
-import Parsing.ParseTestInstances;
-import Parsing.SLRLInstance;
-import ParsingData.Parser;
+import Parsing.ParserAlternative;
 import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
-import org.junit.Test;
-
-import java.util.Iterator;
-import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
@@ -25,7 +17,7 @@ public class TestInstancesParser extends AbstractInstancesTest {
 
     @BeforeClass
     public static void prepare(){
-        Parser parser = new Parser();
+        ParserAlternative parser = new ParserAlternative();
         instanceList = parser.parse();
 
     }

@@ -26,15 +26,14 @@ public class TabuSearch {
 
         Solution currentSol;
         Solution neighbourSol;
-        int t_L=5;
+        int t_L=200;
 
 
         Solution bestSolution = currentSol = new Solution(instance.getGraph(),instance.getK(),instance.getC(), instance.getRatio_r(), instance.getcLast(), instance.getSolved(), instance.getR_lower());
         tabuList.add(currentSol);
 
-        for(int i = 0; i<50; i++){
+        for(int i = 0; i<1000; i++){
             //search the best out of N(currentSol)
-            long start = System.currentTimeMillis();
             neighbourSol = local_search_withTabuList(currentSol);
             //add the best neighbourSol to the tabulist
             tabuList.add(neighbourSol);
@@ -43,7 +42,6 @@ public class TabuSearch {
                 tabuList.remove(0);
             }
             currentSol = neighbourSol;
-
             //if better exchange
             if(currentSol.getLastC()<=bestSolution.getC() && currentSol.getR() < bestSolution.getR() ){
                 log.debug("TABU^^^^^^^^^Found better solution"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ " new max usage: " + currentSol.getLastC());
@@ -63,11 +61,8 @@ public class TabuSearch {
                 currentSol.setSolved(currentSol.getLastC() <= currentSol.getC());
                 bestSolution = currentSol;
             }
-           // log.debug("TABUDEBUG"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ "" +
-            //        "old max usage: "+ bestSolution.getLastC()+ " new max usage: " + currentSol.getLastC());
+            log.debug("done");
 
-            long end = System.currentTimeMillis();
-            log.debug("--Execution time was "+(end-start)+" ms.");
         }
 
 
@@ -77,7 +72,7 @@ public class TabuSearch {
     }
     private Solution local_search_withTabuList(Solution initialSolution){
         //log.debug("-------------------NEW LOCAL SEARCH INDUCED BY TABU -------------");
-
+        long sumsum=0;
         int nrOfServers = initialSolution.getK();
         Solution bestSolution =  new Solution(initialSolution.getGraph(),initialSolution.getK(),initialSolution.getC(), Double.MAX_VALUE, Integer.MAX_VALUE,false
                 , initialSolution.getR_lower());

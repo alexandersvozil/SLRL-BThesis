@@ -131,12 +131,10 @@ public class Graph {
                 // log.debug("server size: " + servers.size());
                 for (Node server : servers) {
                     Node p = null;
-                    //Node f = null;
                     try {
                         p = BFS2(n, server);
-                        //   f =new Node(p);
-
                     } catch (NodeNotFoundException e) {
+                        log.error("Node not found");
                         e.printStackTrace();
                         return;
                     }
@@ -146,7 +144,6 @@ public class Graph {
                         p = p.getParents().get(0);
                     }
                     if (stepCounter <= minStepsToServer || nearestServers.isEmpty()) {
-                        //log.debug("Stepcounter to nearest Server found yet: " + stepCounter);
                         if (stepCounter < minStepsToServer) {
                             for (Node nServer : nearestServers) {
                                 nServer.setTmpNeighbourhood(0);
@@ -159,7 +156,6 @@ public class Graph {
                         server.setTmpNeighbourhood(server.getTmpNeighbourhood() + 1);
                         markPath2(server);
                     }
-                    clearParents(); // VERY EXPENSIVE 5 Seconds!!!
                 }
 
                 for (Node nearestServer : nearestServers) {
@@ -167,28 +163,22 @@ public class Graph {
                     nearestServer.setNeighbourhood(nearestServer.getTmpNeighbourhood() + nearestServer.getNeighbourhood());
                     nearestServer.setTmpNeighbourhood(0);
                 }
-
+                //mark used edges
                 markEdges();
-                clearParents();
             }
         }
     }
 
     /**
-     * BFS2. USE THIS
+     * BFS2. Gets all paths from a node to another and stores it into the parents list of each node
      *
      * @param goalNode
      * @return
      * @throws NodeNotFoundException
      */
     public Node BFS2(Node from, Node goalNode) throws NodeNotFoundException {
-        long sum = 0;
-        long start = System.currentTimeMillis();
+        clearParents(); // VERY EXPENSIVE 5 Seconds!!!
         resetDistance();
-        long end = System.currentTimeMillis();
-        sum = end - start;
-        sumsum+=sum;
-        log.debug("$$$$Execution time was " + sumsum + " ms.");
         /** pseudocode partly taken from wikipedia: http://de.wikipedia.org/wiki/Breitensuche **/
         if (goalNode == null)
             throw new IllegalArgumentException("goalNode is null");
@@ -201,6 +191,7 @@ public class Graph {
             Nodepair nodepair = nodeQueue.poll();
             visited.add(nodepair.node);
             nodepair.node.addParent(nodepair.parent);
+            //this is needed in order to ensure every path is looked at
             while (!nodeQueue.isEmpty() && nodeQueue.peek().node.equals(nodepair.node)) {
                 nodepair = nodeQueue.poll();
                 nodepair.node.addParent(nodepair.parent);
