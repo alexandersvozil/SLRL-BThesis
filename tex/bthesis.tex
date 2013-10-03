@@ -167,10 +167,53 @@ The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".
 \subsection{Implementation}
 I decided to implement a tabu-search.
     \subsection{Modified BFS}
+    The Breadth first search needs to be modified in a way, that it finds all shortest paths
+    from one node to another, as we need to consider every shortest path in order to simulate
+    the worst case scenario regarding load on links.
+    \begin{algorithm}[H]
+        \caption{BFS2}
+        \begin{algorithmic}[2]
+            \Require Graph(V,E) G, Node dest, Node start
+            \State $clearParents();$
+            \State $resetDistance();$
+            \State Queue$<$Node$>$ nodeQueue $\gets \{\};$
+            \State Set$<$Node$>$ visited $\gets \{\};$
+            \State $visited.add(start);$
+            \State $nodeQueue.offer(start);$ \Comment \begin{itshape} Nodepair saves the node and the parentnode,
+            so all the paths can be reconstructed\end{itshape}
+            \While {$!nodeQueue.isEmpty()$}
+            \State $Node$ $curNode$ $=$ $nodeQueue.poll();$ \Comment \begin{itshape} get first node out of queue\end{itshape}
+            \State $visited.add(curNode);$ \Comment \begin{itshape} mark node as visited\end{itshape}            
+                \If{$!curNode.equals(dest)$}
+                \State {$return$ $dest;$}
+                \EndIf
+            \For{$Edge$ $e$ : $curNode.getEdges()$}
+                \If{$!visited.contains(e.getNode2())$}
+                    \If{$e.getNode2().getDistance() == curNode.getDistance() + 1 \| e.getNode2().getDistance() == -1$}
+                        \State $alreadyVis \gets false;$
+                        \For{$Node$ $node$ : $nodeQueue$}
+                            \State $node.addParent(curNode);$
+                            \State $alreadyVis \gets true;$
+                            \State $break;$
+                        \EndFor
+                        \If{$!alreadyVis$}
+                        \State $nodeQueue.offer(e.getNode2());$
+                        \State $e.getNode2().addParent(curNode);$
+                        \State $e.getNode2().setdistance(curNode.getDistance()+1);$
+                        \EndIf
+                    \EndIf
+                \EndIf
+            \EndFor
+            \EndWhile
+
+
+            
+        \end{algorithmic}
+    \end{algorithm}
     \subsection{Determination of the neighbour sets of a server and loads of the links}
     \begin{algorithm}[H]
         \caption{constraintsCalculation}
-        \begin{algorithmic}[1]
+        \begin{algorithmic}[2]
             \Require Graph (V,E) G, Servers S
             \For{Each node n $\in G$}
                 \If{!($n \in S$)}

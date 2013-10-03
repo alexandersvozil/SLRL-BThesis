@@ -27,7 +27,7 @@ public class Application {
         TabuSearch tabuSearch = new TabuSearch();
 
         for(SLRLInstance slrlInstance: instanceList){
-            if(slrlInstance.getTestInstanceName().equals("UUNET")) {
+            if(!slrlInstance.getTestInstanceName().equals("UUNET")) {
             log.debug("------------------------------");
             long start = System.currentTimeMillis();
             greedyLocation.solve(slrlInstance);

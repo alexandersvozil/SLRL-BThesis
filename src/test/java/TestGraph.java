@@ -296,6 +296,71 @@ public class TestGraph {
         assertTrue(e4_C.getTimesUsed()==1);
         assertTrue(e4_D.getTimesUsed()==1);
     }
+    @Test
+    public void testComplicatedRoute() throws  NodeNotFoundException{
+        Node A = new Node ("A");
+        Node B = new Node ("B");
+        Node C = new Node ("C");
+        Node D = new Node ("D");
+        Node E = new Node ("E");
+        Node F = new Node ("F");
+
+        Edge e1_A = new Edge(A,B);
+        Edge e1_B = new Edge(B,A);
+        A.addEdge(e1_A);
+        B.addEdge(e1_B);
+
+        Edge e2_A = new Edge(A,C);
+        Edge e2_C = new Edge(C,A);
+        A.addEdge(e2_A);
+        C.addEdge(e2_C);
+
+        Edge e3_D = new Edge(D,A);
+        Edge e3_A = new Edge(A,D);
+        D.addEdge(e3_D);
+        A.addEdge(e3_A);
+
+        Edge EC = new Edge (E,C);
+        Edge CE = new Edge (C,E);
+        E.addEdge(EC);
+        C.addEdge(CE);
+
+        Edge EF = new Edge(E,F);
+        Edge FE = new Edge (F,E);
+
+        E.addEdge(EF);
+        F.addEdge(FE);
+
+        Edge BF = new Edge(B,F);
+        Edge FB = new Edge(F,B);
+
+        B.addEdge(BF);
+        F.addEdge(FB);
+
+        Edge DF = new Edge(D,F);
+        Edge FD = new Edge(F,D);
+
+        D.addEdge(DF);
+        F.addEdge(FD);
+
+        Graph graph1 = new Graph();
+        graph1.addNode(A);
+        graph1.addNode(B);
+        graph1.addNode(C);
+        graph1.addNode(D);
+        graph1.addNode(E);
+        graph1.addNode(F);
+
+        graph1.addServer(F);
+        graph1.calculateUsagesAndNeighbourhoodsAfterServerAddition();
+        //FEHLER
+        assertTrue(BF.getTimesUsed()==2);
+        assertTrue(DF.getTimesUsed()==2);
+
+
+
+
+    }
     @Test (expected = NodeNotFoundException.class)
     public void testInvalidRoute () throws NodeNotFoundException {
         Node A = new Node ("A");
@@ -343,6 +408,12 @@ public class TestGraph {
 
         C.addEdge(e6_C);
         E.addEdge(e6_E);
+        Graph graph1 = new Graph();
+        graph1.addNode(A);
+        graph1.addNode(B);
+        graph1.addNode(C);
+        graph1.addNode(D);
+        Node path = graph1.BFS2(A,G);
 
 
     }

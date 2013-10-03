@@ -176,46 +176,99 @@ public class Graph {
      * @return
      * @throws NodeNotFoundException
      */
-    public Node BFS2(Node from, Node goalNode) throws NodeNotFoundException {
+   /* public Node BFS2(Node from, Node goalNode) throws NodeNotFoundException {
         clearParents(); // VERY EXPENSIVE 5 Seconds!!!
         resetDistance();
-        /** pseudocode partly taken from wikipedia: http://de.wikipedia.org/wiki/Breitensuche **/
+
+        // pseudocode partly taken from wikipedia: http://de.wikipedia.org/wiki/Breitensuche
         if (goalNode == null)
             throw new IllegalArgumentException("goalNode is null");
-        Queue<Nodepair> nodeQueue = new LinkedList<Nodepair>();
+        Queue<Node> nodeQueue = new LinkedList<Node>();
+        HashMap<Integer, Node> nodeHash= new HashMap<Integer, Node>();
         //for the nodes already visited. HashSet because "contains" is O(1)
         HashSet<Node> visited = new HashSet<Node>();
         visited.add(from);
-        nodeQueue.offer(new Nodepair(from, null));
+        nodeQueue.offer(from);
+        nodeHash.put(from.getId(), from);
         while (!nodeQueue.isEmpty()) {
-            Nodepair nodepair = nodeQueue.poll();
-            visited.add(nodepair.node);
-            nodepair.node.addParent(nodepair.parent);
-            //this is needed in order to ensure every path is looked at
-            while (!nodeQueue.isEmpty() && nodeQueue.peek().node.equals(nodepair.node)) {
-                nodepair = nodeQueue.poll();
-                nodepair.node.addParent(nodepair.parent);
-            }
+            Node curNode = nodeQueue.poll();
 
+            visited.add(curNode);
             // log.debug("expanding"+nodepair.node);
-            if (nodepair.node.equals(goalNode)) {
+            if (curNode.equals(goalNode)) {
                 //ziel erreicht
                 //log.debug("Found node"+ goalNode+"coming from"+ node.getParent());
                 return goalNode;
             }
 
-            for (Edge e : nodepair.node.getEdges()) {
+            for (Edge e : curNode.getEdges()) {
                 if (!visited.contains(e.getNode2())) {
-                    if (e.getNode2().getDistance() == nodepair.node.getDistance() + 1 || e.getNode2().getDistance() == -1) {
-                        //log.debug("adding node" + e.getNode2() + " to queue with distance: "+ (nodepair.node.getDistance()+1));
-                        nodeQueue.offer(new Nodepair(e.getNode2(), nodepair.node));
-                        e.getNode2().setDistance(nodepair.node.getDistance() + 1);
-                        //e.getNode2().setParent(nodepair.node);
+                    if (e.getNode2().getDistance() == curNode.getDistance() + 1 || e.getNode2().getDistance() == -1) {
+                        if(nodeHash.containsKey(e.getNode2().getId())){
+                            nodeHash.get(e.getNode2().getId()).addParent(curNode);
+
+                        }else{
+                            e.getNode2().addParent(curNode);
+                            nodeQueue.offer(e.getNode2());
+                            nodeHash.put(e.getNode2().getId(), e.getNode2());
+
+                        }
+
+                        e.getNode2().setDistance(curNode.getDistance() + 1);
+
+                    }
+
+                }
+            }
+        }
+
+        throw new NodeNotFoundException("Node was not found by bfs: Goal: " + goalNode.getName() + " Start: " + from.getName());
+    }*/
+    public Node BFS2(Node from, Node goalNode) throws NodeNotFoundException {
+        clearParents(); // VERY EXPENSIVE 5 Seconds!!!
+        resetDistance();
+
+        // pseudocode partly taken from wikipedia: http://de.wikipedia.org/wiki/Breitensuche
+        if (goalNode == null)
+            throw new IllegalArgumentException("goalNode is null");
+        Queue<Node> nodeQueue = new LinkedList<Node>();
+        //for the nodes already visited. HashSet because "contains" is O(1)
+        HashSet<Node> visited = new HashSet<Node>();
+        visited.add(from);
+        nodeQueue.offer(from);
+        while (!nodeQueue.isEmpty()) {
+            Node curNode = nodeQueue.poll();
+            visited.add(curNode);
+            // log.debug("expanding"+nodepair.node);
+            if (curNode.equals(goalNode)) {
+                //ziel erreicht
+                //log.debug("Found node"+ goalNode+"coming from"+ node.getParent());
+                return goalNode;
+            }
+
+            for (Edge e : curNode.getEdges()) {
+                if (!visited.contains(e.getNode2())) {
+                    if (e.getNode2().getDistance() == curNode.getDistance() + 1 || e.getNode2().getDistance() == -1) {
+                        boolean alreadyVis = false;
+                        for(Node node : nodeQueue){
+                            if(node.equals(e.getNode2()) ){
+                                node.addParent(curNode);
+                                alreadyVis = true;
+                                break;
+                            }
+                        }
+
+                        if(!alreadyVis){
+                        nodeQueue.offer(e.getNode2());
+                        e.getNode2().addParent(curNode);
+                        }
+                        e.getNode2().setDistance(curNode.getDistance() + 1);
+                        }
 
                     }
                 }
             }
-        }
+
         throw new NodeNotFoundException("Node was not found by bfs: Goal: " + goalNode.getName() + " Start: " + from.getName());
     }
 

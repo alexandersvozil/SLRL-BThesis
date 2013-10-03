@@ -26,13 +26,13 @@ public class TabuSearch {
 
         Solution currentSol;
         Solution neighbourSol;
-        int t_L=200;
+        int t_L=30;
 
 
         Solution bestSolution = currentSol = new Solution(instance.getGraph(),instance.getK(),instance.getC(), instance.getRatio_r(), instance.getcLast(), instance.getSolved(), instance.getR_lower());
         tabuList.add(currentSol);
 
-        for(int i = 0; i<1000; i++){
+        for(int i = 0; i<100; i++){
             //search the best out of N(currentSol)
             neighbourSol = local_search_withTabuList(currentSol);
             //add the best neighbourSol to the tabulist
@@ -51,6 +51,8 @@ public class TabuSearch {
                 for(Node n : bestSolution.getGraph().getServers()){
                     servers +=" " + n .getName();
                 }
+                if(currentSol.getR()==1)
+                    break;
                 log.debug(servers);
             }
 
@@ -61,7 +63,6 @@ public class TabuSearch {
                 currentSol.setSolved(currentSol.getLastC() <= currentSol.getC());
                 bestSolution = currentSol;
             }
-            log.debug("done");
 
         }
 

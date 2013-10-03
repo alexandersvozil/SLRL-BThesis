@@ -1,0 +1,1387 @@
+/usr/lib/jvm/java-7-openjdk-amd64/bin/java -Didea.launcher.port=7535 -Didea.launcher.bin.path=/home/svozil/Desktop/idea-IU-129.713/bin -Dfile.encoding=UTF-8 -classpath /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/compilefontconfig.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/management-agent.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/javazic.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/pulse-java.jar:/home/svozil/Dropbox/Bachelorarbeit/target/classes:/home/svozil/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/svozil/Dropbox/Bachelorarbeit/lib/ads1.jar:/home/svozil/Desktop/idea-IU-129.713/lib/idea_rt.jar com.intellij.rt.execution.application.AppMain Application
+2013-09-19 16:39:06,001 [main] DEBUG Application - Instance Size: 38
+2013-09-19 16:39:06,002 [main] DEBUG Application - ------------------------------
+2013-09-19 16:39:06,265 [main] DEBUG Application - Greedy location costed 263ms
+2013-09-19 16:39:06,265 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='above.net', k=3, r=13, r_lower=8, ratio_r=1.625, c=3, c_lower=1, maxDegree=12, V=22, E=25, cLast=3}
+2013-09-19 16:39:06,315 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,327 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,334 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,340 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,345 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,351 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,359 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,366 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,373 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,379 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,385 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,392 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,397 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,403 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,409 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,414 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,420 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,428 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,435 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,443 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,450 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,459 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,464 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,470 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,476 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,483 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,488 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,494 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,499 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,505 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:06,656 [main] DEBUG Application - tabu search costed 391ms
+2013-09-19 16:39:06,656 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='above.net', k=3, r=13, r_lower=8, ratio_r=1.625, c=3, c_lower=1, maxDegree=12, V=22, E=25, cLast=3}
+2013-09-19 16:39:06,656 [main] DEBUG Application - ------------------------------
+2013-09-19 16:39:07,182 [main] DEBUG Application - Greedy location costed 526ms
+2013-09-19 16:39:07,182 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='At Home Network', k=5, r=13, r_lower=10, ratio_r=1.3, c=8, c_lower=2, maxDegree=5, V=46, E=55, cLast=5}
+2013-09-19 16:39:07,357 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.2 old r: 1.3 new max usage: 8
+2013-09-19 16:39:07,357 [main] DEBUG Algorithms.TabuSearch -  Hartford, CT, San Jose, CA, Omaha, NE, Philadelphia, PA, Baton Rouge, LA,
+2013-09-19 16:39:07,357 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:07,538 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.1 old r: 1.2 new max usage: 7
+2013-09-19 16:39:07,538 [main] DEBUG Algorithms.TabuSearch -  San Jose, CA, Omaha, NE, Philadelphia, PA, Baton Rouge, LA, Buffalo, NY,
+2013-09-19 16:39:07,538 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:07,721 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:07,883 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:08,043 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.0 old r: 1.1 new max usage: 7
+2013-09-19 16:39:08,043 [main] DEBUG Algorithms.TabuSearch -  Kansas City, MO, Philadelphia, PA, Nashville, TN, Buffalo, NY, Billings, MT,
+2013-09-19 16:39:08,044 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:08,203 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:08,365 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:08,521 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:08,679 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:08,846 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:09,022 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:09,185 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:09,350 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:09,519 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:09,694 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:09,856 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:10,019 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:10,191 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:10,358 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:10,525 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:10,696 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:10,876 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:11,045 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:11,221 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:11,381 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:11,546 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:11,721 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:11,888 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:12,058 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:12,235 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:39:12,612 [main] DEBUG Application - tabu search costed 5430ms
+2013-09-19 16:39:12,612 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='At Home Network', k=5, r=13, r_lower=10, ratio_r=1.0, c=8, c_lower=2, maxDegree=5, V=46, E=55, cLast=7}
+2013-09-19 16:39:12,612 [main] DEBUG Application - ------------------------------
+2013-09-19 16:39:24,949 [main] DEBUG Application - Greedy location costed 12337ms
+2013-09-19 16:39:24,950 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='AGIS', k=9, r=15, r_lower=10, ratio_r=1.5, c=10, c_lower=3, maxDegree=4, V=82, E=92, cLast=8}
+2013-09-19 16:40:11,691 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:40:58,064 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:41:44,628 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:42:31,185 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.4 old r: 1.5 new max usage: 7
+2013-09-19 16:42:31,185 [main] DEBUG Algorithms.TabuSearch -  Fort Lauderdale, FL, Eugene, OR, Los Angeles, CA, Columbus, OH, Cincinnati, OH, Dearborn, MI, Atlanta, GA, Washington, DC, Rocky Mount, NC,
+2013-09-19 16:42:31,185 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:43:54,373 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.3 old r: 1.4 new max usage: 10
+2013-09-19 16:43:54,373 [main] DEBUG Algorithms.TabuSearch -  Columbus, OH, Cincinnati, OH, Dearborn, MI, Atlanta, GA, Washington, DC, Rocky Mount, NC, Fort Lauderdale, FL, Eugene, OR, Houston, TX,
+2013-09-19 16:43:54,373 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:45:21,301 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.2 old r: 1.3 new max usage: 10
+2013-09-19 16:45:21,301 [main] DEBUG Algorithms.TabuSearch -  Dearborn, MI, Atlanta, GA, Washington, DC, Rocky Mount, NC, Fort Lauderdale, FL, Eugene, OR, Houston, TX, Columbus, OH, Denver, CO,
+2013-09-19 16:45:21,301 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:46:47,351 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:48:12,605 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:51:30,801 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:54:33,420 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 16:57:42,021 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:00:48,562 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:03:50,023 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:06:49,998 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.1 old r: 1.2 new max usage: 7
+2013-09-19 17:06:49,998 [main] DEBUG Algorithms.TabuSearch -  Oklahoma City, OK, Columbus, OH, Reno, NV, Downers Grove, IL, Atlanta, GA, Washington, DC, Augusta, GA, Rocky Mount, NC, Chico, CA,
+2013-09-19 17:06:49,998 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:09:47,485 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:12:45,125 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:15:43,090 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:17:45,670 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:19:48,561 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:21:50,193 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:23:54,451 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:26:54,736 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:28:57,059 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:30:57,939 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:32:50,091 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:34:41,596 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:37:30,320 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:40:19,109 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:43:08,215 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:45:58,928 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:45:59,455 [main] DEBUG Application - tabu search costed 3994505ms
+2013-09-19 17:45:59,455 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='AGIS', k=9, r=15, r_lower=10, ratio_r=1.1, c=10, c_lower=3, maxDegree=4, V=82, E=92, cLast=7}
+2013-09-19 17:45:59,455 [main] DEBUG Application - ------------------------------
+2013-09-19 17:46:02,405 [main] DEBUG Algorithms.GreedyLocation - -----------  Greedy Location didn't solve the instance -----------
+2013-09-19 17:46:03,590 [main] DEBUG Application - Greedy location costed 4135ms
+2013-09-19 17:46:03,590 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='AT&T WorldNet', k=10, r=27, r_lower=10, ratio_r=2.7, c=2, c_lower=1, maxDegree=27, V=93, E=154, cLast=5}
+2013-09-19 17:46:08,371 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:46:13,423 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:46:18,926 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:46:24,707 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:46:30,550 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:46:37,019 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:46:43,580 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:46:50,207 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:46:56,593 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:47:02,957 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:47:09,492 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:47:16,310 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:47:23,030 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:47:29,164 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:47:35,069 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:47:41,542 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:47:47,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:47:54,060 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:48:00,453 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:48:07,010 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:48:13,554 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:48:20,368 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:48:26,546 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:48:32,834 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:48:38,968 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:48:44,748 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:48:50,793 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:48:57,341 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:04,092 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:10,808 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:12,053 [main] DEBUG Application - tabu search costed 188463ms
+2013-09-19 17:49:12,053 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='AT&T WorldNet', k=10, r=27, r_lower=10, ratio_r=2.7, c=2, c_lower=1, maxDegree=27, V=93, E=154, cLast=5}
+2013-09-19 17:49:12,053 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:12,388 [main] DEBUG Application - Greedy location costed 335ms
+2013-09-19 17:49:12,388 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='BBN Planet', k=5, r=13, r_lower=9, ratio_r=1.4444444444444444, c=5, c_lower=2, maxDegree=8, V=41, E=49, cLast=4}
+2013-09-19 17:49:12,487 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:12,572 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:12,665 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:12,767 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:12,858 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:12,944 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:13,032 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:13,130 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:13,237 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:13,344 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:13,436 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:13,534 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:13,631 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:13,735 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:13,835 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:13,923 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,015 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,108 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,199 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,292 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,387 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,482 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,577 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,676 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,770 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,872 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:14,973 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,077 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,171 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,262 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,538 [main] DEBUG Application - tabu search costed 3150ms
+2013-09-19 17:49:15,538 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='BBN Planet', k=5, r=13, r_lower=9, ratio_r=1.4444444444444444, c=5, c_lower=2, maxDegree=8, V=41, E=49, cLast=4}
+2013-09-19 17:49:15,538 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:15,586 [main] DEBUG Application - Greedy location costed 48ms
+2013-09-19 17:49:15,586 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Cable Internet', k=1, r=8, r_lower=8, ratio_r=1.0, c=8, c_lower=2, maxDegree=4, V=8, E=7, cLast=4}
+2013-09-19 17:49:15,586 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,588 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,588 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,588 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,588 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,588 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,588 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,588 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,588 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,588 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,588 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,589 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,589 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,589 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,589 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,589 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,589 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,589 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,589 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,589 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:15,634 [main] DEBUG Application - tabu search costed 48ms
+2013-09-19 17:49:15,635 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Cable Internet', k=1, r=8, r_lower=8, ratio_r=1.0, c=8, c_lower=2, maxDegree=4, V=8, E=7, cLast=4}
+2013-09-19 17:49:15,635 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:15,930 [main] DEBUG Application - Greedy location costed 295ms
+2013-09-19 17:49:15,930 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CAIS Internet', k=4, r=12, r_lower=10, ratio_r=1.2, c=10, c_lower=3, maxDegree=4, V=37, E=44, cLast=8}
+2013-09-19 17:49:15,995 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.1 old r: 1.2 new max usage: 7
+2013-09-19 17:49:15,995 [main] DEBUG Algorithms.TabuSearch -  Minneapolis, MN, Richmond, VA, San Diego, CA, Nashville, TN,
+2013-09-19 17:49:15,995 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,060 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,125 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,192 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,258 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,321 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,387 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,458 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,523 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,586 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.0 old r: 1.1 new max usage: 7
+2013-09-19 17:49:16,586 [main] DEBUG Algorithms.TabuSearch -  Las Vegas, NV, Miami, FL, Kansas City, MO, Baltimore, MD,
+2013-09-19 17:49:16,586 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,648 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,713 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,774 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,837 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,901 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:16,967 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,040 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,107 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,169 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,231 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,296 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,360 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,423 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,483 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,548 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,613 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,680 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,742 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,806 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:17,870 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,119 [main] DEBUG Application - tabu search costed 2189ms
+2013-09-19 17:49:18,119 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CAIS Internet', k=4, r=12, r_lower=10, ratio_r=1.0, c=10, c_lower=3, maxDegree=4, V=37, E=44, cLast=7}
+2013-09-19 17:49:18,119 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:18,239 [main] DEBUG Application - Greedy location costed 120ms
+2013-09-19 17:49:18,240 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CompuServe Network Services', k=2, r=11, r_lower=8, ratio_r=1.375, c=5, c_lower=2, maxDegree=7, V=16, E=23, cLast=3}
+2013-09-19 17:49:18,241 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.25 old r: 1.375 new max usage: 3
+2013-09-19 17:49:18,241 [main] DEBUG Algorithms.TabuSearch -  Dallas, TX, Columbus, GA,
+2013-09-19 17:49:18,241 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,242 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,243 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,246 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,247 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,248 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,250 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,252 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,253 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,254 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,256 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,257 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,258 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,260 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,261 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,263 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,264 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,265 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,267 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,268 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,270 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,271 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,274 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,275 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,277 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,278 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,279 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,281 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,283 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,284 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,403 [main] DEBUG Application - tabu search costed 163ms
+2013-09-19 17:49:18,404 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CompuServe Network Services', k=2, r=11, r_lower=8, ratio_r=1.25, c=5, c_lower=2, maxDegree=7, V=16, E=23, cLast=3}
+2013-09-19 17:49:18,404 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:18,697 [main] DEBUG Application - Greedy location costed 293ms
+2013-09-19 17:49:18,697 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CRL Network Services', k=4, r=12, r_lower=9, ratio_r=1.3333333333333333, c=4, c_lower=1, maxDegree=9, V=35, E=50, cLast=4}
+2013-09-19 17:49:18,738 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,780 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,820 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,867 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,907 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,952 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:18,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,040 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,082 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,126 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,166 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,210 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,251 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,299 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,345 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,394 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,433 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,476 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,523 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,565 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,605 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,648 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,695 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,741 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,785 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,829 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,872 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,913 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,953 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:19,996 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,240 [main] DEBUG Application - tabu search costed 1543ms
+2013-09-19 17:49:20,240 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CRL Network Services', k=4, r=12, r_lower=9, ratio_r=1.3333333333333333, c=4, c_lower=1, maxDegree=9, V=35, E=50, cLast=4}
+2013-09-19 17:49:20,240 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:20,321 [main] DEBUG Application - Greedy location costed 81ms
+2013-09-19 17:49:20,321 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='DataXchange Network, Inc.', k=1, r=8, r_lower=8, ratio_r=1.0, c=5, c_lower=2, maxDegree=7, V=8, E=24, cLast=1}
+2013-09-19 17:49:20,321 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,321 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,321 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,321 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,322 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,322 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,322 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,322 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,322 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,322 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,322 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,323 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,323 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,323 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,323 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,323 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,323 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,323 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,324 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,324 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,324 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,324 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,324 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,324 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,324 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,325 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,325 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,325 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,325 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,325 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:20,400 [main] DEBUG Application - tabu search costed 79ms
+2013-09-19 17:49:20,400 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='DataXchange Network, Inc.', k=1, r=8, r_lower=8, ratio_r=1.0, c=5, c_lower=2, maxDegree=7, V=8, E=24, cLast=1}
+2013-09-19 17:49:20,401 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:20,614 [main] DEBUG Algorithms.GreedyLocation - -----------  Greedy Location didn't solve the instance -----------
+2013-09-19 17:49:21,126 [main] DEBUG Application - Greedy location costed 725ms
+2013-09-19 17:49:21,126 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Allegiance Telecom', k=6, r=15, r_lower=9, ratio_r=1.6666666666666667, c=3, c_lower=1, maxDegree=12, V=53, E=88, cLast=5}
+2013-09-19 17:49:21,428 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution in terms of c new r: 1.7777777777777777 old r: 1.6666666666666667old max usage: 5 new max usage: 4
+2013-09-19 17:49:21,428 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:21,826 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:22,330 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:22,843 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:23,396 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:23,922 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:24,360 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:24,798 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:25,241 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:25,717 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:26,266 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:26,819 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:27,370 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:27,894 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:28,332 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:28,770 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:29,168 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:29,602 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:30,116 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:30,641 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:31,197 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:31,730 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:32,182 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:32,620 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:33,057 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:33,531 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:34,014 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:34,486 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:34,951 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:35,380 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:35,875 [main] DEBUG Application - tabu search costed 14749ms
+2013-09-19 17:49:35,875 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Allegiance Telecom', k=6, r=15, r_lower=9, ratio_r=1.7777777777777777, c=3, c_lower=1, maxDegree=12, V=53, E=88, cLast=4}
+2013-09-19 17:49:35,875 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:36,111 [main] DEBUG Application - Greedy location costed 236ms
+2013-09-19 17:49:36,111 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='EPOCH Networks, Inc.', k=3, r=14, r_lower=10, ratio_r=1.4, c=6, c_lower=2, maxDegree=7, V=29, E=30, cLast=6}
+2013-09-19 17:49:36,123 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,136 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,152 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,165 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,178 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,194 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,206 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,217 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,229 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,243 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,256 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,270 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,281 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,294 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,306 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,319 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,330 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,342 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,353 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,365 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,379 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,392 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,404 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,417 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,428 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,441 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,453 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,466 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,479 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,492 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,706 [main] DEBUG Application - tabu search costed 595ms
+2013-09-19 17:49:36,706 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='EPOCH Networks, Inc.', k=3, r=14, r_lower=10, ratio_r=1.4, c=6, c_lower=2, maxDegree=7, V=29, E=30, cLast=6}
+2013-09-19 17:49:36,706 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:36,970 [main] DEBUG Application - Greedy location costed 264ms
+2013-09-19 17:49:36,970 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='EUnet', k=3, r=23, r_lower=10, ratio_r=2.3, c=2, c_lower=1, maxDegree=21, V=28, E=30, cLast=2}
+2013-09-19 17:49:36,982 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:36,992 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,003 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,014 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,025 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,038 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,052 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,064 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,076 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,088 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,100 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,113 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,126 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,140 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,153 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,167 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,181 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,194 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,207 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,218 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,230 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,242 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,255 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,266 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,277 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,288 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,300 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,310 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,321 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,333 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,583 [main] DEBUG Application - tabu search costed 613ms
+2013-09-19 17:49:37,583 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='EUnet', k=3, r=23, r_lower=10, ratio_r=2.3, c=2, c_lower=1, maxDegree=21, V=28, E=30, cLast=2}
+2013-09-19 17:49:37,583 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:37,692 [main] DEBUG Application - Greedy location costed 109ms
+2013-09-19 17:49:37,692 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Exodus', k=2, r=9, r_lower=7, ratio_r=1.2857142857142858, c=4, c_lower=1, maxDegree=8, V=14, E=19, cLast=3}
+2013-09-19 17:49:37,693 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,694 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,695 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,695 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,696 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,697 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,698 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,699 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,700 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,701 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,701 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,702 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,703 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,704 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,705 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,706 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,707 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,708 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,709 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,710 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,711 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,712 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,713 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,714 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,715 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,716 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,716 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,717 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,718 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,719 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:37,824 [main] DEBUG Application - tabu search costed 132ms
+2013-09-19 17:49:37,824 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Exodus', k=2, r=9, r_lower=7, ratio_r=1.2857142857142858, c=4, c_lower=1, maxDegree=8, V=14, E=19, cLast=3}
+2013-09-19 17:49:37,824 [main] DEBUG Application - ------------------------------
+2013-09-19 17:49:38,765 [main] DEBUG Application - Greedy location costed 941ms
+2013-09-19 17:49:38,765 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Genuity', k=5, r=18, r_lower=10, ratio_r=1.8, c=8, c_lower=2, maxDegree=5, V=48, E=53, cLast=8}
+2013-09-19 17:49:41,311 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.3 old r: 1.8 new max usage: 7
+2013-09-19 17:49:41,311 [main] DEBUG Algorithms.TabuSearch -  Dallas, TX, Newark, NY, Kansas City, MO, Albany, NY, San Jose, CA,
+2013-09-19 17:49:41,311 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:43,338 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:45,391 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:47,592 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:49,798 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:51,395 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.2 old r: 1.3 new max usage: 8
+2013-09-19 17:49:51,395 [main] DEBUG Algorithms.TabuSearch -  Fort Worth, TX, Philadelphia, PA, Kansas City, KS, Columbus, OH, San Luis Obispo, CA,
+2013-09-19 17:49:51,395 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:53,191 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:55,022 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:56,743 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:49:58,482 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:00,215 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:01,836 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:03,611 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:05,395 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:07,112 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:08,840 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:10,437 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:12,021 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:13,604 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:15,233 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:16,776 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:18,320 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:19,893 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:21,347 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:23,069 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:24,707 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:26,334 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:28,134 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:29,768 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,406 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,732 [main] DEBUG Application - tabu search costed 52967ms
+2013-09-19 17:50:31,732 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Genuity', k=5, r=18, r_lower=10, ratio_r=1.2, c=8, c_lower=2, maxDegree=5, V=48, E=53, cLast=8}
+2013-09-19 17:50:31,732 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:31,833 [main] DEBUG Application - Greedy location costed 101ms
+2013-09-19 17:50:31,833 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GeoNet Communications, Inc.', k=2, r=11, r_lower=7, ratio_r=1.5714285714285714, c=3, c_lower=1, maxDegree=10, V=13, E=15, cLast=1}
+2013-09-19 17:50:31,834 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.4285714285714286 old r: 1.5714285714285714 new max usage: 2
+2013-09-19 17:50:31,834 [main] DEBUG Algorithms.TabuSearch -  San Francisco, CA, Downers Grove, IL,
+2013-09-19 17:50:31,834 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,835 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,835 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,836 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,837 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,837 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,838 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,839 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,839 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,840 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,841 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,842 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,843 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,844 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,845 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,845 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,846 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,847 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,848 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,849 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,849 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,850 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,851 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,852 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,852 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,853 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,854 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,855 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,856 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,857 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,957 [main] DEBUG Application - tabu search costed 124ms
+2013-09-19 17:50:31,957 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GeoNet Communications, Inc.', k=2, r=11, r_lower=7, ratio_r=1.4285714285714286, c=3, c_lower=1, maxDegree=10, V=13, E=15, cLast=2}
+2013-09-19 17:50:31,957 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:31,996 [main] DEBUG Application - Greedy location costed 39ms
+2013-09-19 17:50:31,996 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GetNet International', k=1, r=5, r_lower=5, ratio_r=1.0, c=7, c_lower=2, maxDegree=3, V=5, E=6, cLast=2}
+2013-09-19 17:50:31,996 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,996 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,998 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,998 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,998 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,998 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,998 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,998 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,998 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,998 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,999 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,999 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,999 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,999 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,999 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,999 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,999 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,999 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:31,999 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,000 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,000 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,033 [main] DEBUG Application - tabu search costed 37ms
+2013-09-19 17:50:32,033 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GetNet International', k=1, r=5, r_lower=5, ratio_r=1.0, c=7, c_lower=2, maxDegree=3, V=5, E=6, cLast=2}
+2013-09-19 17:50:32,033 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:32,136 [main] DEBUG Application - Greedy location costed 103ms
+2013-09-19 17:50:32,136 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GlobalCenter', k=1, r=9, r_lower=9, ratio_r=1.0, c=5, c_lower=2, maxDegree=8, V=9, E=36, cLast=1}
+2013-09-19 17:50:32,136 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,137 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,137 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,137 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,137 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,137 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,138 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,138 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,138 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,138 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,139 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,139 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,139 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,139 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,140 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,140 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,140 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,140 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,141 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,141 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,141 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,141 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,142 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,142 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,142 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,142 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,143 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,143 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,143 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,144 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,253 [main] DEBUG Application - tabu search costed 117ms
+2013-09-19 17:50:32,253 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GlobalCenter', k=1, r=9, r_lower=9, ratio_r=1.0, c=5, c_lower=2, maxDegree=8, V=9, E=36, cLast=1}
+2013-09-19 17:50:32,253 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:32,604 [main] DEBUG Application - Greedy location costed 351ms
+2013-09-19 17:50:32,604 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GoodNet', k=3, r=20, r_lower=9, ratio_r=2.2222222222222223, c=2, c_lower=1, maxDegree=18, V=27, E=58, cLast=2}
+2013-09-19 17:50:32,618 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 2.111111111111111 old r: 2.2222222222222223 new max usage: 2
+2013-09-19 17:50:32,618 [main] DEBUG Algorithms.TabuSearch -  Washington, DC, Dallas, TX, San Jose, CA,
+2013-09-19 17:50:32,618 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,636 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,653 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,667 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,682 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,698 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,711 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,725 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,737 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,749 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,763 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,777 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,791 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,805 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,823 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,836 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,852 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,870 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,885 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,898 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,917 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,934 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,949 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,968 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,983 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:32,997 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,011 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,028 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,043 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,057 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,380 [main] DEBUG Application - tabu search costed 776ms
+2013-09-19 17:50:33,380 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GoodNet', k=3, r=20, r_lower=9, ratio_r=2.111111111111111, c=2, c_lower=1, maxDegree=18, V=27, E=58, cLast=2}
+2013-09-19 17:50:33,380 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:33,473 [main] DEBUG Application - Greedy location costed 93ms
+2013-09-19 17:50:33,473 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='IDT Corp', k=2, r=10, r_lower=8, ratio_r=1.25, c=6, c_lower=2, maxDegree=5, V=15, E=18, cLast=4}
+2013-09-19 17:50:33,474 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.125 old r: 1.25 new max usage: 6
+2013-09-19 17:50:33,474 [main] DEBUG Algorithms.TabuSearch -  New York, NY, Cleveland, OH,
+2013-09-19 17:50:33,474 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,475 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,476 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,477 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,479 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,480 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.0 old r: 1.125 new max usage: 6
+2013-09-19 17:50:33,480 [main] DEBUG Algorithms.TabuSearch -  Atlanta, GA, San Jose, CA,
+2013-09-19 17:50:33,480 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,482 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,483 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,484 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,485 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,486 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,487 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,488 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,489 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,490 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,491 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,492 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,494 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,495 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,496 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,497 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,498 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,500 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,501 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,502 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,503 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,504 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,505 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,506 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,508 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,602 [main] DEBUG Application - tabu search costed 129ms
+2013-09-19 17:50:33,602 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='IDT Corp', k=2, r=10, r_lower=8, ratio_r=1.0, c=6, c_lower=2, maxDegree=5, V=15, E=18, cLast=6}
+2013-09-19 17:50:33,602 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:33,632 [main] DEBUG Application - Greedy location costed 30ms
+2013-09-19 17:50:33,632 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='ipf.net', k=1, r=5, r_lower=5, ratio_r=1.0, c=7, c_lower=2, maxDegree=3, V=5, E=5, cLast=2}
+2013-09-19 17:50:33,632 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,632 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,632 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,633 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,633 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,633 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,633 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,633 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,633 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,633 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,634 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,634 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,634 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,634 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,634 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,634 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,634 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,635 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,635 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,635 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,635 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,635 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,635 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,635 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,635 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,636 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,636 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,636 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,636 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,636 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,666 [main] DEBUG Application - tabu search costed 34ms
+2013-09-19 17:50:33,666 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='ipf.net', k=1, r=5, r_lower=5, ratio_r=1.0, c=7, c_lower=2, maxDegree=3, V=5, E=5, cLast=2}
+2013-09-19 17:50:33,666 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:33,785 [main] DEBUG Application - Greedy location costed 119ms
+2013-09-19 17:50:33,785 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='iSTAR Internet Inc.', k=2, r=14, r_lower=10, ratio_r=1.4, c=6, c_lower=2, maxDegree=7, V=20, E=22, cLast=6}
+2013-09-19 17:50:33,788 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,790 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,792 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,794 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,796 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,799 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,802 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,804 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,806 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,809 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,811 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,814 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,816 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,819 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,821 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,824 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,826 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,828 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,831 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,833 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,836 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,838 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,841 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,843 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,846 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,849 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,852 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,854 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,857 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,859 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:33,979 [main] DEBUG Application - tabu search costed 194ms
+2013-09-19 17:50:33,980 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='iSTAR Internet Inc.', k=2, r=14, r_lower=10, ratio_r=1.4, c=6, c_lower=2, maxDegree=7, V=20, E=22, cLast=6}
+2013-09-19 17:50:33,980 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:34,154 [main] DEBUG Application - Greedy location costed 174ms
+2013-09-19 17:50:34,154 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Cable & Wireless', k=2, r=12, r_lower=10, ratio_r=1.2, c=7, c_lower=2, maxDegree=6, V=20, E=34, cLast=4}
+2013-09-19 17:50:34,157 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.1 old r: 1.2 new max usage: 4
+2013-09-19 17:50:34,157 [main] DEBUG Algorithms.TabuSearch -  Dallas, TX, Independence, KS,
+2013-09-19 17:50:34,157 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,160 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,162 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,165 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,168 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,170 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,174 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,178 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,181 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,184 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,188 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,191 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.0 old r: 1.1 new max usage: 7
+2013-09-19 17:50:34,191 [main] DEBUG Algorithms.TabuSearch -  Seattle, WA, Greensboro, NC,
+2013-09-19 17:50:34,191 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,195 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,199 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,202 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,205 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,209 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,213 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,216 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,220 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,223 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,226 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,229 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,232 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,236 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,239 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,242 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,246 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,249 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,252 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:34,422 [main] DEBUG Application - tabu search costed 268ms
+2013-09-19 17:50:34,423 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Cable & Wireless', k=2, r=12, r_lower=10, ratio_r=1.0, c=7, c_lower=2, maxDegree=6, V=20, E=34, cLast=7}
+2013-09-19 17:50:34,423 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:34,869 [main] DEBUG Application - Greedy location costed 446ms
+2013-09-19 17:50:34,869 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='MindSpring', k=5, r=22, r_lower=9, ratio_r=2.4444444444444446, c=2, c_lower=1, maxDegree=23, V=41, E=45, cLast=2}
+2013-09-19 17:50:34,965 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:35,073 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:35,173 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:35,277 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:35,378 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:35,473 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:35,569 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:35,671 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:35,773 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:35,868 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:35,964 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:36,069 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:36,173 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:36,278 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:36,380 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:36,488 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:36,584 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:36,684 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:36,781 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:36,882 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:36,978 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:37,077 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:37,173 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:37,273 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:37,377 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:37,480 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:37,579 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:37,675 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:37,773 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:37,876 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,257 [main] DEBUG Application - tabu search costed 3388ms
+2013-09-19 17:50:38,257 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='MindSpring', k=5, r=22, r_lower=9, ratio_r=2.4444444444444446, c=2, c_lower=1, maxDegree=23, V=41, E=45, cLast=2}
+2013-09-19 17:50:38,257 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:38,298 [main] DEBUG Application - Greedy location costed 41ms
+2013-09-19 17:50:38,299 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Nap.Net, LLC', k=1, r=6, r_lower=6, ratio_r=1.0, c=5, c_lower=2, maxDegree=5, V=6, E=7, cLast=1}
+2013-09-19 17:50:38,299 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,299 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,299 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,299 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,299 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,299 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,300 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,300 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,300 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,300 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,300 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,301 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,301 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,301 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,301 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,301 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,302 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,302 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,302 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,302 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,303 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,303 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,303 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,303 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,303 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,304 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,304 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,304 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,304 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,304 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,345 [main] DEBUG Application - tabu search costed 46ms
+2013-09-19 17:50:38,346 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Nap.Net, LLC', k=1, r=6, r_lower=6, ratio_r=1.0, c=5, c_lower=2, maxDegree=5, V=6, E=7, cLast=1}
+2013-09-19 17:50:38,346 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:38,449 [main] DEBUG Application - Greedy location costed 103ms
+2013-09-19 17:50:38,449 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Netrail Incorporated', k=2, r=12, r_lower=9, ratio_r=1.3333333333333333, c=6, c_lower=2, maxDegree=6, V=17, E=21, cLast=3}
+2013-09-19 17:50:38,451 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.2222222222222223 old r: 1.3333333333333333 new max usage: 3
+2013-09-19 17:50:38,451 [main] DEBUG Algorithms.TabuSearch -  Washington, DC, Stanford, CA,
+2013-09-19 17:50:38,451 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,452 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,453 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,455 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,457 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,458 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,459 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,461 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,462 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,464 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,465 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,467 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,469 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,470 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,471 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,473 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,474 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,476 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,478 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,480 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,481 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,483 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,484 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,486 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,487 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,489 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,491 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,493 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,494 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,496 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:38,599 [main] DEBUG Application - tabu search costed 150ms
+2013-09-19 17:50:38,599 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Netrail Incorporated', k=2, r=12, r_lower=9, ratio_r=1.2222222222222223, c=6, c_lower=2, maxDegree=6, V=17, E=21, cLast=3}
+2013-09-19 17:50:38,599 [main] DEBUG Application - ------------------------------
+2013-09-19 17:50:40,997 [main] DEBUG Application - Greedy location costed 2398ms
+2013-09-19 17:50:40,997 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='PSINet', k=8, r=16, r_lower=10, ratio_r=1.6, c=5, c_lower=2, maxDegree=9, V=78, E=110, cLast=5}
+2013-09-19 17:50:43,201 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:45,445 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:47,625 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:49,760 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:51,895 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:54,030 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:56,423 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.5 old r: 1.6 new max usage: 5
+2013-09-19 17:50:56,423 [main] DEBUG Algorithms.TabuSearch -  Chicago, IL, Washington, DC, Buffalo, NY, San Francisco, CA, New York, NY, Dallas, TX, Hunter Woods, VA, Orlando, FL,
+2013-09-19 17:50:56,423 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:50:58,791 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:01,182 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:03,794 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:06,416 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:09,077 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:11,715 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:14,422 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:17,205 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:19,982 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:22,718 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:25,477 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:28,251 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:31,006 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:33,713 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:36,426 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:39,075 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:41,420 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:43,872 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:46,282 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:48,698 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:51,349 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:53,953 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:56,044 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:56,915 [main] DEBUG Application - tabu search costed 75918ms
+2013-09-19 17:51:56,915 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='PSINet', k=8, r=16, r_lower=10, ratio_r=1.5, c=5, c_lower=2, maxDegree=9, V=78, E=110, cLast=5}
+2013-09-19 17:51:56,915 [main] DEBUG Application - ------------------------------
+2013-09-19 17:51:57,018 [main] DEBUG Application - Greedy location costed 103ms
+2013-09-19 17:51:57,018 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Qwest', k=2, r=9, r_lower=7, ratio_r=1.2857142857142858, c=4, c_lower=1, maxDegree=7, V=14, E=26, cLast=2}
+2013-09-19 17:51:57,019 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,020 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.1428571428571428 old r: 1.2857142857142858 new max usage: 4
+2013-09-19 17:51:57,020 [main] DEBUG Algorithms.TabuSearch -  Sunnyvale, CA, New York, NY,
+2013-09-19 17:51:57,020 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,021 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,022 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,023 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,024 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,025 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,026 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,027 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,028 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,029 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,030 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,031 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,032 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,033 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,034 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,036 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,037 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,038 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,039 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,040 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,041 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,042 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,043 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,045 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,046 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,047 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,048 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,049 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,051 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,150 [main] DEBUG Application - tabu search costed 132ms
+2013-09-19 17:51:57,150 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Qwest', k=2, r=9, r_lower=7, ratio_r=1.1428571428571428, c=4, c_lower=1, maxDegree=7, V=14, E=26, cLast=4}
+2013-09-19 17:51:57,150 [main] DEBUG Application - ------------------------------
+2013-09-19 17:51:57,234 [main] DEBUG Application - Greedy location costed 84ms
+2013-09-19 17:51:57,234 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='RISQ Network', k=2, r=8, r_lower=7, ratio_r=1.1428571428571428, c=4, c_lower=1, maxDegree=7, V=13, E=12, cLast=2}
+2013-09-19 17:51:57,235 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,235 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,236 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,237 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,237 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,238 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,239 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,240 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,241 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,241 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,242 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,243 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,244 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,245 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,246 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,246 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,247 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,248 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,249 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,249 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,250 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,251 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,251 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,252 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,253 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,254 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,254 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,255 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,256 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,257 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,341 [main] DEBUG Application - tabu search costed 107ms
+2013-09-19 17:51:57,341 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='RISQ Network', k=2, r=8, r_lower=7, ratio_r=1.1428571428571428, c=4, c_lower=1, maxDegree=7, V=13, E=12, cLast=2}
+2013-09-19 17:51:57,341 [main] DEBUG Application - ------------------------------
+2013-09-19 17:51:57,492 [main] DEBUG Application - Greedy location costed 151ms
+2013-09-19 17:51:57,492 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='RNP', k=3, r=12, r_lower=9, ratio_r=1.3333333333333333, c=3, c_lower=1, maxDegree=12, V=27, E=35, cLast=2}
+2013-09-19 17:51:57,502 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,513 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,526 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,538 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,551 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,563 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,585 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,599 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,611 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,624 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,635 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,645 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,657 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,668 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,678 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,689 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,701 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,713 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,726 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,737 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,748 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,759 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,769 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,781 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,792 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,804 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,816 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,828 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,839 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,850 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:57,993 [main] DEBUG Application - tabu search costed 501ms
+2013-09-19 17:51:57,993 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='RNP', k=3, r=12, r_lower=9, ratio_r=1.3333333333333333, c=3, c_lower=1, maxDegree=12, V=27, E=35, cLast=2}
+2013-09-19 17:51:57,993 [main] DEBUG Application - ------------------------------
+2013-09-19 17:51:58,277 [main] DEBUG Application - Greedy location costed 284ms
+2013-09-19 17:51:58,277 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Savvis Communications', k=3, r=19, r_lower=10, ratio_r=1.9, c=4, c_lower=1, maxDegree=11, V=28, E=56, cLast=3}
+2013-09-19 17:51:58,292 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,313 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,336 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,357 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,378 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,395 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,415 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,436 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,453 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,470 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,486 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,504 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,525 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,547 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,569 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,590 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,607 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,625 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,643 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,658 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,672 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,689 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,706 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,722 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,739 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,755 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,772 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,788 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,804 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:58,821 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,096 [main] DEBUG Application - tabu search costed 819ms
+2013-09-19 17:51:59,096 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Savvis Communications', k=3, r=19, r_lower=10, ratio_r=1.9, c=4, c_lower=1, maxDegree=11, V=28, E=56, cLast=3}
+2013-09-19 17:51:59,096 [main] DEBUG Application - ------------------------------
+2013-09-19 17:51:59,264 [main] DEBUG Application - Greedy location costed 168ms
+2013-09-19 17:51:59,264 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='ServInt Internet Services', k=3, r=11, r_lower=8, ratio_r=1.375, c=5, c_lower=2, maxDegree=7, V=23, E=34, cLast=5}
+2013-09-19 17:51:59,271 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,278 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,285 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,293 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,302 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.25 old r: 1.375 new max usage: 4
+2013-09-19 17:51:59,302 [main] DEBUG Algorithms.TabuSearch -  Dallas, TX, Seattle, WA, New York, NY,
+2013-09-19 17:51:59,302 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,311 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.125 old r: 1.25 new max usage: 4
+2013-09-19 17:51:59,311 [main] DEBUG Algorithms.TabuSearch -  Seattle, WA, New York, NY, Austin, TX,
+2013-09-19 17:51:59,311 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,320 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,330 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,339 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,347 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,356 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,364 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,373 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,381 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,388 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,396 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,403 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,411 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,419 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,427 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,435 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,442 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,449 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,458 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,465 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,473 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,481 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,488 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,496 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,503 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,669 [main] DEBUG Application - tabu search costed 404ms
+2013-09-19 17:51:59,669 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='ServInt Internet Services', k=3, r=11, r_lower=8, ratio_r=1.125, c=5, c_lower=2, maxDegree=7, V=23, E=34, cLast=4}
+2013-09-19 17:51:59,669 [main] DEBUG Application - ------------------------------
+2013-09-19 17:51:59,860 [main] DEBUG Application - Greedy location costed 191ms
+2013-09-19 17:51:59,861 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Sprint', k=3, r=11, r_lower=7, ratio_r=1.5714285714285714, c=4, c_lower=1, maxDegree=8, V=21, E=37, cLast=3}
+2013-09-19 17:51:59,866 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.2857142857142858 old r: 1.5714285714285714 new max usage: 2
+2013-09-19 17:51:59,866 [main] DEBUG Algorithms.TabuSearch -  Chicago, IL, San Jose, CA, New York, NY,
+2013-09-19 17:51:59,866 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,872 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,878 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,885 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,892 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,897 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,903 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,909 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,915 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,921 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,928 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,935 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,942 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,950 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,956 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,962 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,968 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,974 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,980 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,987 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,994 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:51:59,999 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,005 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,012 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,018 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,025 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,031 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,037 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,043 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,050 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,225 [main] DEBUG Application - tabu search costed 364ms
+2013-09-19 17:52:00,225 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Sprint', k=3, r=11, r_lower=7, ratio_r=1.2857142857142858, c=4, c_lower=1, maxDegree=8, V=21, E=37, cLast=2}
+2013-09-19 17:52:00,225 [main] DEBUG Application - ------------------------------
+2013-09-19 17:52:00,368 [main] DEBUG Application - Greedy location costed 143ms
+2013-09-19 17:52:00,368 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Telstra Internet', k=3, r=13, r_lower=7, ratio_r=1.8571428571428572, c=2, c_lower=1, maxDegree=14, V=21, E=24, cLast=2}
+2013-09-19 17:52:00,376 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,381 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,386 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,391 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,396 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,401 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,406 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,411 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,416 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,421 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,426 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,431 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,437 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,442 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,448 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,453 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,458 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,463 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,469 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,474 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,479 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,485 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,490 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,495 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,500 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,506 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,512 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,517 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,523 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,529 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:52:00,667 [main] DEBUG Application - tabu search costed 299ms
+2013-09-19 17:52:00,667 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Telstra Internet', k=3, r=13, r_lower=7, ratio_r=1.8571428571428572, c=2, c_lower=1, maxDegree=14, V=21, E=24, cLast=2}
+2013-09-19 17:52:00,667 [main] DEBUG Application - ------------------------------
+2013-09-19 17:52:18,966 [main] DEBUG Algorithms.GreedyLocation - -----------  Greedy Location didn't solve the instance -----------
+2013-09-19 17:52:22,129 [main] DEBUG Application - Greedy location costed 21461ms
+2013-09-19 17:52:22,129 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='UUNET', k=13, r=32, r_lower=10, ratio_r=3.2, c=2, c_lower=1, maxDegree=32, V=126, E=316, cLast=4}
+2013-09-19 17:52:52,874 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution in terms of c new r: 3.5 old r: 3.2old max usage: 4 new max usage: 3
+2013-09-19 17:52:52,874 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:53:25,683 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:53:58,066 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:54:31,839 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:55:11,245 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:55:47,545 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:56:25,087 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:57:02,143 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:57:40,038 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:58:17,596 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:58:49,458 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:59:24,725 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 17:59:58,501 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:00:32,383 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:01:05,726 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:01:39,456 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:02:15,409 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:02:48,009 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:03:22,065 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:03:55,578 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:04:30,376 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:05:04,207 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:05:35,509 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:06:09,917 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:06:42,685 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:07:15,587 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:07:49,065 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:08:22,799 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:02,701 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:39,271 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:42,205 [main] DEBUG Application - tabu search costed 1040076ms
+2013-09-19 18:09:42,205 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='UUNET', k=13, r=32, r_lower=10, ratio_r=3.5, c=2, c_lower=1, maxDegree=32, V=126, E=316, cLast=3}
+2013-09-19 18:09:42,205 [main] DEBUG Application - ------------------------------
+2013-09-19 18:09:42,581 [main] DEBUG Application - Greedy location costed 376ms
+2013-09-19 18:09:42,581 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Verio', k=4, r=17, r_lower=9, ratio_r=1.8888888888888888, c=3, c_lower=1, maxDegree=13, V=35, E=72, cLast=3}
+2013-09-19 18:09:42,644 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:42,692 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:42,745 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:42,799 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:42,853 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:42,903 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:42,955 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,006 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,059 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,114 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,168 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,229 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,299 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,361 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,428 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,480 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,531 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,585 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,641 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,701 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,758 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,823 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,877 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,928 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:43,987 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,049 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,111 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,165 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,218 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,270 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,606 [main] DEBUG Application - tabu search costed 2025ms
+2013-09-19 18:09:44,607 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Verio', k=4, r=17, r_lower=9, ratio_r=1.8888888888888888, c=3, c_lower=1, maxDegree=13, V=35, E=72, cLast=3}
+2013-09-19 18:09:44,607 [main] DEBUG Application - ------------------------------
+2013-09-19 18:09:44,682 [main] DEBUG Application - Greedy location costed 75ms
+2013-09-19 18:09:44,682 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='VisiNet', k=2, r=7, r_lower=6, ratio_r=1.1666666666666667, c=4, c_lower=1, maxDegree=7, V=11, E=13, cLast=2}
+2013-09-19 18:09:44,682 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,683 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,683 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,684 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,684 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,685 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,685 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,686 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,687 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,687 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,688 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,688 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,689 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,689 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,690 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,691 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,691 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,692 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,692 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,693 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,694 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,694 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,695 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,695 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,696 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,696 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,697 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,697 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,698 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,699 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:44,774 [main] DEBUG Application - tabu search costed 92ms
+2013-09-19 18:09:44,774 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='VisiNet', k=2, r=7, r_lower=6, ratio_r=1.1666666666666667, c=4, c_lower=1, maxDegree=7, V=11, E=13, cLast=2}
+2013-09-19 18:09:44,774 [main] DEBUG Application - ------------------------------
+2013-09-19 18:09:44,970 [main] DEBUG Application - Greedy location costed 196ms
+2013-09-19 18:09:44,970 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='XO Communications', k=4, r=12, r_lower=9, ratio_r=1.3333333333333333, c=5, c_lower=2, maxDegree=8, V=33, E=38, cLast=5}
+2013-09-19 18:09:45,002 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,032 [main] DEBUG Algorithms.TabuSearch - TABU^^^^^^^^^Found better solution new r: 1.2222222222222223 old r: 1.3333333333333333 new max usage: 5
+2013-09-19 18:09:45,032 [main] DEBUG Algorithms.TabuSearch -  San Jose, CA, Los Angeles, CA, Washington, DC, Atlanta, GA,
+2013-09-19 18:09:45,032 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,062 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,094 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,124 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,159 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,191 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,226 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,259 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,291 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,323 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,354 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,385 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,421 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,453 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,485 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,518 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,550 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,582 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,614 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,648 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,681 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,715 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,749 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,781 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,815 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,847 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,881 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,913 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:45,948 [main] DEBUG Algorithms.TabuSearch - done
+2013-09-19 18:09:46,121 [main] DEBUG Application - tabu search costed 1151ms
+2013-09-19 18:09:46,121 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='XO Communications', k=4, r=12, r_lower=9, ratio_r=1.2222222222222223, c=5, c_lower=2, maxDegree=8, V=33, E=38, cLast=5}
