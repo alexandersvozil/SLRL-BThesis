@@ -118,7 +118,6 @@ public class TestGraph {
         graph1.addNode(D);
         graph1.addNode(E);
         graph1.addNode(F);
-        graph1.resetDistance();
 
        Node path =  graph1.BFS2(A,E);
         graph1.markPath2(path);

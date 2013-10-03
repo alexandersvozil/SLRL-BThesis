@@ -138,20 +138,16 @@ public class Graph {
                         e.printStackTrace();
                         return;
                     }
-                    int stepCounter = 0;
-                    while (!p.getParents().isEmpty()) {
-                        stepCounter++;
-                        p = p.getParents().get(0);
-                    }
-                    if (stepCounter <= minStepsToServer || nearestServers.isEmpty()) {
-                        if (stepCounter < minStepsToServer) {
+                    int serverDistance = server.getDistance();
+                    if (serverDistance <= minStepsToServer || nearestServers.isEmpty()) {
+                        if (serverDistance < minStepsToServer) {
                             for (Node nServer : nearestServers) {
                                 nServer.setTmpNeighbourhood(0);
                             }
                             nearestServers.clear();
                             usedEdgesInShortestPaths.clear();
                         }
-                        minStepsToServer = stepCounter;
+                        minStepsToServer = serverDistance;
                         nearestServers.add(server);
                         server.setTmpNeighbourhood(server.getTmpNeighbourhood() + 1);
                         markPath2(server);
