@@ -25,6 +25,8 @@ public class SLRLInstance {
     public String getTestInstanceName() {
         return testInstanceName;
     }
+
+
     public void snapshotG(){
         List<String> dirty = new ArrayList<String>();
         dirty.add("-g");

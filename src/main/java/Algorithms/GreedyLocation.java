@@ -124,8 +124,10 @@ public class GreedyLocation {
         }
 
         instance.setSolved(solved);
-        //make the screenshot
-        instance.snapshotG();
+
+       // //make the screenshot
+       // instance.snapshotG();
+
         instance.setcLast(cLast);
 
         return instance;

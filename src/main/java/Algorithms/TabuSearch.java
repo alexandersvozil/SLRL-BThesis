@@ -45,24 +45,24 @@ public class TabuSearch {
 
             //if better exchange
             if(currentSol.getLastC()<=bestSolution.getC() && currentSol.getR() < bestSolution.getR() ){
-                log.debug("TABU^^^^^^^^^Found better solution"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ " new max usage: " + currentSol.getLastC());
+                //log.debug("TABU^^^^^^^^^Found better solution"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ " new max usage: " + currentSol.getLastC());
                 bestSolution.setSolved(true);
                 bestSolution = currentSol;
                 String servers = "";
                 for(Node n : bestSolution.getGraph().getServers()){
                     servers +=" " + n .getName();
                 }
-                log.debug(servers);
+               // log.debug(servers);
             }
 
             if(!bestSolution.isSolved() && bestSolution.getLastC() > currentSol.getLastC() )
             {
-                log.debug("TABU^^^^^^^^^Found better solution in terms of c"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ "" +
-                        "old max usage: "+ bestSolution.getLastC()+ " new max usage: " + currentSol.getLastC());
+                 // log.info("TABU^^^^^^^^^Found better solution in terms of c"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ "" +
+                 //       "old max usage: "+ bestSolution.getLastC()+ " new max usage: " + currentSol.getLastC());
                 currentSol.setSolved(currentSol.getLastC() <= currentSol.getC());
                 bestSolution = currentSol;
             }
-           // log.debug("TABUDEBUG"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ "" +
+            //  log.info("TABUDEBUG"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ "" +
             //        "old max usage: "+ bestSolution.getLastC()+ " new max usage: " + currentSol.getLastC());
 
         }

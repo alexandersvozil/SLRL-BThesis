@@ -3,8 +3,6 @@ package Graph;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import ads1.graphprinter.GraphPrinter;
-import ads1.graphprinter.Traversable;
 import org.apache.log4j.Logger;
 
 /**

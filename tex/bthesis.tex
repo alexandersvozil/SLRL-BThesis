@@ -8,11 +8,12 @@
 
 
 \begin{document}
-\author{Alexander Svozil}
-\title{Bachelor Thesis \\ The Server Location Problem with Restricted Loads 
+\author{Alexander Svozil\\ TU Wien}
+\title{The Server Location Problem with Restricted Loads 
 on Servers and Links}
 
 \maketitle
+\newpage
 
 \section{Abstract}
 The server location problem with restricted loads on servers and links (SLRL) is an NP-Complete
@@ -20,20 +21,21 @@ problem, introduced by Hiroyoshi Miwa et al. in the Paper "Method of Locating Mi
 to Alleviate Load on Servers and Links" \cite{mirrorserver}. The problem 
 came up, because the massive volume of data distributed by content delivery networks (CDNs) 
 require well located mirror servers in order not to badly influence the quality of their service.
-Two examples for CDNs would be "Amazon CloudFront" a traditional commercial CDN, or the "AT\&T Inc."
-a Telco CDN which has advantages over traditional CDNs because they own the so called "last mile",
-the final leg of the telecommunications networks. CDN nodes are usually deployed in multiple 
-locations, often over multiple backbones, reaching thousands of nodes with tens of thousands of 
-servers. \cite{wiki:cdn} \cite{wiki:lastmile}
+%Two examples for CDNs would be "Amazon CloudFront" a traditional commercial CDN, or the "AT\&T Inc."
+%a Telco CDN which has advantages over traditional CDNs because they own the so called "last mile",
+%the final leg of the telecommunications networks. CDN nodes are usually deployed in multiple 
+%locations, often over multiple backbones, reaching thousands of nodes with tens of thousands of 
+%servers. \cite{wiki:cdn} \cite{wiki:lastmile}
 The two constraints induced by the choice of mirror servers is the number of maximum nodes
 accessing a mirror server and maximum number of nodes accessing a mirror server 
 through a specific link. The constraint mentioned first, corresponds to the network load on
 the (mirror-)servers. The second constraint corresponds to the restricted load on the links.
-First I want to prove that SLRL is NP-complete. Next, I want to propose my own algorithm as a
-sequel to the existing greedy algorithm proposed by Miwa et al. \cite{mirrorserver}.
-
-
+First, I will formulate the problem, explain some of the terminology used and prove that SLRL is NP-complete.
+Then I will introduce my own algorithm and show performance evaluations comparing the old algorithm proposed 
+by Miwa et. al, to my implementation of the tabu search algorithm. 
+\newpage
 \tableofcontents
+\newpage
 
 \section{Introduction}
 \subsection {CDNs}

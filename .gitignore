@@ -1,4 +1,4 @@
-/gitIgnore/*
+/gitignore/*
 .idea*
 /target/*
 *.iml
@@ -7,4 +7,7 @@
 *.log
 *.toc
 *.png
+*.blg
+*.bbl
+*.pdf
 
