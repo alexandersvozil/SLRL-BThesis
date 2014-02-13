@@ -1,10 +1,9 @@
-package ParsingData;
+package Parsing;
 
 
 import Graph.Graph;
 import Graph.Node;
 import Graph.Edge;
-import Parsing.SLRLInstance;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -17,9 +16,9 @@ import java.util.*;
  * Time: 4:07 PM
  * The parser for data.txt
  */
-public class Parser {
+public class ParserAlternative {
 
-    private static Logger log = Logger.getLogger(Parser.class);
+    private static Logger log = Logger.getLogger(ParserAlternative.class);
     private HashMap<Integer, Node> reference = new HashMap<Integer, Node>();
     private Scanner sc2 = null;
 

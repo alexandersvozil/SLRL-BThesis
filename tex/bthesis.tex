@@ -4,8 +4,10 @@
 \documentclass [12pt]{article}
 \usepackage [utf8]{inputenc}
 \usepackage {graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \bibliographystyle{ieeetr} 
-
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
 
 \begin{document}
 \author{Alexander Svozil\\ TU Wien}
@@ -77,7 +79,7 @@ relaxing the binary constraints.\cite{rosing1979p}
 \subsubsection {NA (Node to Area)-connectivity}
 %%TODO: NA-Edge connectivity fehlt:
 \subsection{Open Shortest Path First}
-%%TODO:
+%%TODO: Facility Location with hops
 \section{Server Location Problem with Restricted Loads on Servers and Links}
 \subsection{Formal Definition}
 \subsubsection{Neighbour Set}
@@ -138,6 +140,7 @@ Miwa et al. \cite{mirrorserver}. It greedily chooses the node with the
 lowest maximal neighbourhood if the constraint $c\geq m(e) (\forall e \in E)$ is fulfilled. 
 Otherwise it will choose a node where $min(m(e)(\forall e \in E))$ is true.
 
+
 \subsection{Data (Testinstances)}
 The data taken for the tests is from caida \cite{caidabarebones}. Parsing the
 data was one of the most difficult parts, because the data is not formatted well.
@@ -164,7 +167,107 @@ nodes and number of vertices. Unfortunately three instances of my instances do n
 match the number of nodes and / or vertices proposed from the paper above.
 The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".
 
-\subsection{Implementation}
+\section{Implementation}
+I decided to implement a tabu-search.
+    \subsection{Determination of the neighbour sets of a server and loads of the links}
+    When a server is added to the graph, r and $max(m(e))$ $\forall e\in E $ need to be recalculated, as the shortest paths from the clients
+    to the servers change. This has to be done for every client in order to ensure that every client has its path(s) and server(s).
+    The outer loop goes through every n that is not a server and tests out every server if it is the closest. There can be more than one 
+    closest server. It will be saved in the nearestServersList. The path to the server is then marked. If there is a new nearest Server, these
+    stats are reset and the newly found nearest servers edges are marked.
+    It takes $\mathcal O(|V|-|S| * |S| * |V+E|^2 ) $ to calculate the new r and the new $max(m(e))$ $\forall e\in E$, as BFS costs $ \mathcal O(|V| + |E|) $
+    and backtracking every path can also result in visiting every node and every edge and thus costs $\mathcal O(|V| + |E|)$.
+    \begin{algorithm}[H]
+        \caption{constraintsCalculation}
+        \begin{algorithmic}[2]
+            \Require Graph (V,E) G, Servers S
+            \For{Each node n $\in G$}
+                \If{!($n \in S$)}
+                    \State $nearestServersList \gets \{\};$ 
+                    \State $minServer \gets 0;$ \Comment The stepcounter to the nearest server(s)
+                    \For {Each Server $ s \in S$}
+                        \State $BFS2(n,s)$
+                        \State $p \gets s;$
+                        \State $i \gets s.getDistance() $ \Comment distance to server acquired in BFS 
+                        \If {$i \leq minServer || nearestServersList.isEmpty()$}
+                            \If {$i < minServer$}
+                                \For{Each Server prevNearest $\in nearestServersList$}
+                                    \State $prevnearest.tmpNeighbourhood=0;$
+                                    \State $nearestServersList.clear();$
+                                    \State $usedEdges.clear();$
+                                \EndFor
+                            \EndIf
+                            \State $minServer = i;$ \Comment new nearest server found, set length
+                            \State $nearestServersList.add(s);$ \Comment add it to the list of nearest servers 
+                            \State $s.tmpNeighbourhood += 1;$ \Comment adds one to the temporal neighbourhood (it may get reset later on)
+                            \State $markPath2(s)$ \Comment This method recusively walks back every node's parents list to determine every path and add it to the usedEdges list.
+                        \EndIf 
+                    \EndFor
+                        \For{Each Server s $\in nearestServerList$}
+                            \State $s.neighborhood += s.tmpNeighbourhood;$
+                            \State $s.tmpNeighbourhood = 0;$
+                        \EndFor
+                    \State $markEdges();$ \Comment increments usage of each usedEdges
+                \EndIf
+            \EndFor
+        \end{algorithmic}
+    \end{algorithm}
+    \subsection{Modified BFS}
+    The Breadth first search needed to be modified in order for it to be able to find all shortest paths
+    from one node to another, as we need to consider every shortest path in order to simulate
+    the worst case scenario regarding load on links. It's runtime $\mathcal O(|V| + |E|)$ is unmodifed.
+
+    \begin{algorithm}[H]
+        \caption{BFS2}
+        \begin{algorithmic}[2]
+            \Require Graph(V,E) G, Node dest, Node start
+            \State $clearParents();$
+            \State $resetDistance();$
+            \State Queue$<$Node$>$ nodeQueue $\gets \{\};$
+            \State Set$<$Node$>$ visited $\gets \{\};$
+            \State $visited.add(start);$
+            \State $nodeQueue.offer(start);$ \Comment \begin{itshape} Nodepair saves the node and the parentnode,
+            so all the paths can be reconstructed\end{itshape}
+            \While {$!nodeQueue.isEmpty()$}
+            \State $Node$ $curNode$ $=$ $nodeQueue.poll();$ \Comment \begin{itshape} get first node out of queue\end{itshape}
+            \State $visited.add(curNode);$ \Comment \begin{itshape} mark node as visited\end{itshape}            
+                \If{$!curNode.equals(dest)$}
+                \State {$return$ $dest;$}
+                \EndIf
+            \For{$Edge$ $e$ : $curNode.getEdges()$}
+                \If{$!visited.contains(e.getNode2())$}
+                    \If{$e.getNode2().getDistance() == curNode.getDistance() + 1 \| e.getNode2().getDistance() == -1$}
+                        \State $alreadyVis \gets false;$
+                        \For{$Node$ $node$ : $nodeQueue$}
+                            \State $node.addParent(curNode);$
+                            \State $alreadyVis \gets true;$
+                            \State $break;$
+                        \EndFor
+                        \If{$!alreadyVis$}
+                        \State $nodeQueue.offer(e.getNode2());$
+                        \State $e.getNode2().addParent(curNode);$
+                        \State $e.getNode2().setdistance(curNode.getDistance()+1);$
+                        \EndIf
+                    \EndIf
+                \EndIf
+            \EndFor
+            \EndWhile
+
+
+            
+        \end{algorithmic}
+    \end{algorithm}
+    \subsection{The local search}
+    The Local search simply exchanges a server with a client and recalculates the constraints to create a neighborhood N of feasible solutions.
+
+    \begin {algorithm} [H]
+        \caption {localsearch}
+        \begin {algorithmic} [3]
+        \Require Graph(V,E), Set
+        \end {algorithmic}
+    \end {algorithm}
+    \subsection{The tabu-search}
+    \subsection{Networks and the approximation ratio}
 \section{Conclusion}
 
 \bibliography{bibtex}

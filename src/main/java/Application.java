@@ -1,10 +1,8 @@
 import Algorithms.GreedyLocation;
-import Algorithms.LocalSearch;
 import Algorithms.TabuSearch;
 import Graph.NodeNotFoundException;
 import Parsing.ParseTestInstances;
 import Parsing.SLRLInstance;
-import ParsingData.Parser;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -19,7 +17,7 @@ import java.util.List;
 public class Application {
     public static void main (String args[]) throws NodeNotFoundException {
         final Logger log = Logger.getLogger(Application.class);
-        //Parser parser = new Parser();
+        //ParserAlternative parser = new ParserAlternative();
         //parser.parse();
         ParseTestInstances parseTestInstances = new ParseTestInstances();
         List<SLRLInstance> instanceList = parseTestInstances.parse();//parser.parse();
@@ -27,15 +25,23 @@ public class Application {
         GreedyLocation greedyLocation = new GreedyLocation() ;
         //LocalSearch localSearch = new LocalSearch();
         TabuSearch tabuSearch = new TabuSearch();
+
         for(SLRLInstance slrlInstance: instanceList){
-           // if(!slrlInstance.getTestInstanceName().equals("AT&T WorldNet") && !slrlInstance.getTestInstanceName().equals("AGIS")) {
+            if(!slrlInstance.getTestInstanceName().equals("UUNET")) {
             log.debug("------------------------------");
+            long start = System.currentTimeMillis();
             greedyLocation.solve(slrlInstance);
+            long end = System.currentTimeMillis();
+            log.debug ("Greedy location costed "+ (end-start) + "ms");
             log.debug(slrlInstance.toString());
+
+            start = System.currentTimeMillis();
             tabuSearch.tabu_search(slrlInstance);
-            //localSearch.localSearchBI(slrlInstance);
+            end = System.currentTimeMillis();
+            log.debug ("tabu search costed "+ (end-start) + "ms");
             log.debug(slrlInstance.toString());
-           //}
+           }
         }
     }
+
 }
