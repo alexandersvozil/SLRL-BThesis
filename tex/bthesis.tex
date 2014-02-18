@@ -8,6 +8,7 @@
 \usepackage{algpseudocode}
 \bibliographystyle{ieeetr} 
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\newtheorem{mydef}{Definition}
 
 \begin{document}
 \author{Alexander Svozil\\ TU Wien}
@@ -43,68 +44,86 @@ by Miwa et. al, to my implementation of the tabu search algorithm.
 \subsection {CDNs}
 "A content delivery network is a collaborative collection of network elements spanning
 the Internet, where content is replicated over several mirrored Web servers in order
-to perform transparent and effective delivery of content to the end user."\cite[p. 3]{Buyya:2008:CDN:1457653}
+to perform transparent and effective delivery of content to the end user."\cite[p. 3]{Buyya:2008:CDN:1457653}\\
+"A CDN signs up individual content providers for scalable content delivery and delivers
+their content to any client that accesses the Web sites of these content providers."\cite[p. 193]{Rabinovich:2002:WCR:507107}\\
 To perform efficient delivery of data, CDNs need to have several mirrored Web servers
 and thus it is important to place them well, because placing the mirror server 
 could be an expensive choice considering no prior calculation where it should go. 
-The expensive choice manifests in high link usages and or a maximal neighbourhood being
-too big for the server to handle.
+The expensive choice manifests in high link usages and/or a maximal neighbourhood being
+too big for the server to handle. A CDN is able to distribute load among its servers avoid
+links that are overused.
 The mirror servers naturally serve the same data, as they are there to alleviate the 
 load of the other servers providing the data.
 
 \subsection {Similar Problems}
-A lot of thought has already been put into the server location problem.
+SLRL could be described as an augmented server location problem: 
 Two problems that describe this problem would be the p-center and the
 p-median problem. The purpose of these problems is mainly to shorten delay
 time from the client to the server. 
+This class of problems does not care about the maximum load on a link.
+
 \subsubsection {P-Center Problem}
-"The p-Center problem consists of locating p facilities and assigning clients
+"The P-Center problem consists of locating p facilities and assigning clients
 to them in order to minimize the maximum distance between a client and the facility
 to which he or she is allocated. It is used for example in locating fire stations or ambulances,
 where the distance from the facilities 
-to their farthest assigned potential client should be minimum."\cite{Mladenovic00solvingthe}
-The p-center problem is one of the best known NP-hard discrete location problems.\cite{KarivHakimi1979}
+to their farthest assigned potential client should be minimum."
+The p-center problem is one of the best known NP-hard discrete location problems.
 For large instances, it is impractical to solve the problem exactly.
-There have been very good results with the tabu-search and variable neighborhood search.
-\cite{Mladenovic00solvingthe}
+There have been very good results with the tabu-search and variable neighborhood search \cite{Mladenovic00solvingthe}
+\cite{KarivHakimi1979}.
+
 \subsubsection {P-Median Problem}
-The p-Median Problem is very similar to the p-center problem. It can be defined as follows:
-given a graph G=(V,E) we are asked to find a set of nodes, S, of size p, where $ S\subset V$, such that the weighted
-sum of the distances from the remaining nodes \{V-S\} to the Set S is minimized. \cite{Rolland1997329}
-This problem belongs to the class of problems known as NP-hard.\cite{KarivHakimi1979median} There have been
-approaches to solve this problem with the tabu search \cite{Rolland1997329} and solving the linear program by
-relaxing the binary constraints.\cite{rosing1979p}
+The P-Median Problem is very similar to the P-center problem. It can be defined as follows:
+Given a graph G=(V,E) we are asked to find a set of nodes, S, of size p, where $ S\subset V$, such that the weighted
+sum of the distances from the remaining nodes \{V-S\} to the Set S is minimized \cite{Rolland1997329}.
+This problem belongs to the class of problems known as NP-hard \cite{KarivHakimi1979median}. There have been
+approaches to solve this problem with the tabu search \cite{Rolland1997329} and solving the linear program 
+\cite{rosing1979p}.
 
 
-\subsubsection {NA (Node to Area)-connectivity}
+%\subsubsection {NA (Node to Area)-connectivity}
 %%TODO: NA-Edge connectivity fehlt:
-\subsection{Open Shortest Path First}
+%\subsection{Open Shortest Path First}
 %%TODO: Facility Location with hops
 \section{Server Location Problem with Restricted Loads on Servers and Links}
 \subsection{Formal Definition}
 \subsubsection{Neighbour Set}
-The neighbour set is the set, that belongs to a server. In our problem, it is
-defined as follows: If the node has a shortest path to a server node, he 
+The neighbour set is the set of nodes, that belongs to a server. In the SLRL problem, it is
+defined as follows: If a non-server node has a shortest path to a server node, he 
 belongs to this server nodes neighbour set. If the node has several shortest
-paths to multiple server nodes, it will belong to all of those server nodes neighbour
-set. The server itself will belong to its own neighbour sets.
+paths to multiple server nodes, it belongs to all of the server nodes neighbour
+sets. The server itself belongs to its own neighbour set.
 \subsubsection{Load on a Link, m(e) or multiplicity of an edge}
-The load on a link is defined as follows: 
-It is defined as the number of shortest paths, that cross a link. If there
+The load on a link (edge) is defined as the number of shortest paths, that use this link. If there
 are several shortest paths with the same length to one or more servers every
-used edge is taken into account. This is done, because we must always consider
-the worst case when locating a server.
-\subsubsection{The Problem}
-\textbf{Given:}
-{\itshape Undirected graph G(V,E) and  positive integers k,r and c. \\
-    $k = \|S\|$, where S is the set of servers $S = \{s_1,s_2,\dots s_k\} \subseteq V$\\
-    r $\geq  \|V_i\|$ $(i=1,2,\dots,k)$ where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$\\
-$c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.} \\
-\\
-\textbf{Wanted:} 
-{\itshape A set of Servers $S = \{s_1, s_2,\dots, s_k \} \subseteq V$ such that $|V_i|\leq r$
-    $(i = 1,2, \dots,k)$ where $V_i$ is the neighbour set of $s_i$  $(i = 1,2,\dots,k)$ and that
-$m(e) \leq c$ $(\forall e \in E)$.}
+used edge is taken into account. It is mandatory to do this, because we must always consider
+the worst case when locating a server. 
+\begin{mydef}
+  Given a graph G(V,E), and a Set $A= \{ load(e) \ | \ e \in E \}$, m(e) is defined as $e:= max(A)$.
+\end{mydef}
+\subsubsection{SLRL Problem Definition}
+
+\begin{mydef}
+  {\itshape \textbf{Given:} an undirected graph G(V,E) and  positive integers k,r and c.\\
+    \textbf{Question:} 
+    Is there a subset of Servers S, $S \subseteq V$, where $|S| = k$, $|V|$ $\geq$ k,
+    and a subset $|V_i|$ for each Server $s_i \in S$, where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$, r $\geq  |V_i|$ 
+    and is $c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.} 
+
+  %$k = \|S\|$, where S is the set of servers $S = \{s_1,s_2,\dots s_k\} \subseteq V$\\
+  %  r $\geq  \|V_i\|$ $(i=1,2,\dots,k)$ where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$\\
+  %$c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.
+  %\textbf{Wanted:} 
+  %{\itshape A set of Servers $S = \{s_1, s_2,\dots, s_k \} \subseteq V$ such that $|V_i|\leq r$
+  %    $(i = 1,2, \dots,k)$ where $V_i$ is the neighbour set of $s_i$  $(i = 1,2,\dots,k)$ and that
+  %$m(e) \leq c$ $(\forall e \in E)$.}
+\end{mydef}
+
+It is easy to see, that the subset of servers S is a solution to the problem, because the neighborhood subset
+of every server can easily be calculated with the graph and the set of servers. Also the load of each edge
+can be checked after each shortest path to the server has been looked at (the maximum is m(e)).
 
 \subsection{An Instance Of The Problem}
 \indent
@@ -132,6 +151,44 @@ coincidentally also the one with the lowest $m(e)$.
 
 
 \subsection{Proof of NP-Completeness}
+First, we have to show that SLRL is in NP. After guessing a solution of servers, meaning we 
+have an instance of SLRL (G,r,c,k) and a guessed set of servers S, one can clearly check 
+in polynomial time whether it is a valid solution for SLRL: We need to check that every neighbor set is smaller
+or equal to r. Also the number of servers have to be k and the maximum usage of every edge may not exceed c.
+Calculating every neighbor set is done with breadth-first search: Every vertex that is not a server calculates
+the path to every server and marks the path so the usage gets tracked. This is in $\mathcal{O}(V*(V+E)*S)$, as breadth first
+search is in $\mathcal{O}(V+E)$. Checking the set for size is also trivial as is looking at the usage of
+every edge and comparing the maximum with c.\\
+After proving that SLRL is in NP, it can be shown, that 3SAT can be reduced to SLRL in polynomial time,
+implying SLRL is NP-Complete \cite{Garey:1979:CIG:578533}.
+This proof is merely a rewriting of Miwa et al. \cite{mirrorserver}, it is one of the first proofs I saw of 
+this kind, and it was really interesting for me to figure it out.
+3SAT is like the satisfiability problem for arbitrary formulars, but in 3SAT the formula must be in KNF and 
+each clause may only consist of three literals. A solution for 3SAT would be a truth assignment to every
+variable. An instance of 3SAT (U,C) consists of a set of clauses C and a set of variables U.\\
+To reduce 3SAT to SLRL, and thus to prove that SLRL is at least as hard as 3SAT, we need to find a 
+transformation $R: x \rightarrow y$ where $x \in 3SAT$ and $y \in SLRL$. This transformation must be 
+done in polynomial time. After the transformation, we need to show that 3SAT has a solution if and only if 
+SLRL has a solution.\\
+The steps to construct an instance of SLRL (G=(V,E),k,r,c) of an instance of 3SAT (U,C) are described below.
+\begin{enumerate}
+  \item{Let V $\leftarrow \emptyset$ and E $\leftarrow \emptyset$.}
+  \item{For each $C_i \in C$ where (i = 1,\dots,m), let $c_i$ be a vertex, and for each $u_j \in U$ for (j = 1,\dots,n),
+    let $t_j$ and $f_j$ be a vertex.}
+  \item {Let V $\leftarrow \{c_1, \dots, c_m\} \cup \{t_1, \dots, t_n, f_1, \dots, f_n\} $ }
+  \item {Let E $\leftarrow \{(t_i,f_i)\}$ for (i = 1,\dots,n) }
+  \item {For each $C_i \in C$ for (i = 1,\dots,m), if $u_j \in C_i$, let E $\leftarrow$ E $\cup \ \{ (c_i ,t_j) \}$
+    and if $\neg u_j \in C_i$, let E $\leftarrow$ E $\cup \ \{(c_i,f_j)\}$ }
+  \item{For each (i=1,\dots,m) and (j=1,\dots,n) let V $\leftarrow$  V $\cup \ \{v_{ij}\}$ and E $\leftarrow$ E $\cup \ \{(t_i,v_{ij}), (f_i, v_{ij} \}$ }
+  \item{Let k = n, r = 2m+2 and c = 1}
+    
+  
+\end{enumerate}
+
+
+
+
+
 \section{Algorithm}
 \subsection{Rules and Assumptions}
 \subsection{Other Algorithms}
@@ -215,7 +272,7 @@ I decided to implement a tabu-search.
     \subsection{Modified BFS}
     The Breadth first search needed to be modified in order for it to be able to find all shortest paths
     from one node to another, as we need to consider every shortest path in order to simulate
-    the worst case scenario regarding load on links. It's runtime $\mathcal O(|V| + |E|)$ is unmodifed.
+    the worst case scenario regarding load on links. It's runtime $\mathcal O(|V| + |E|)$ remains unmodifed.
 
     \begin{algorithm}[H]
         \caption{BFS2}

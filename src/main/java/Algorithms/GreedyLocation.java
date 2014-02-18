@@ -124,16 +124,12 @@ public class GreedyLocation {
             log.debug("-----------  Greedy Location didn't solve the instance -----------");
         }
 
-<<<<<<< HEAD
         instance.setSolved(solved);
 
        // //make the screenshot
        // instance.snapshotG();
 
-=======
         //make the screenshot
-        instance.snapshotG();
->>>>>>> 60842728bbd450b321b28bbc60c75afe85575ee0
         instance.setcLast(cLast);
 
         return instance;

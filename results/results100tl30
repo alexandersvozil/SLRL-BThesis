@@ -1,0 +1,191 @@
+2014-02-13 18:31:40,442 [main] DEBUG Application - Instance Size: 38
+2014-02-13 18:31:40,443 [main] DEBUG Application - ------------------------------
+2014-02-13 18:31:40,519 [main] DEBUG Application - Greedy location costed 76ms
+2014-02-13 18:31:40,519 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='above.net', k=3, r=13, r_lower=8, ratio_r=1.625, c=3, c_lower=1, maxDegree=12, V=22, E=25, cLast=3}
+2014-02-13 18:31:41,294 [main] DEBUG Application - tabu search costed 775ms
+2014-02-13 18:31:41,294 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='above.net', k=3, r=13, r_lower=8, ratio_r=1.625, c=3, c_lower=1, maxDegree=12, V=22, E=25, cLast=3}
+2014-02-13 18:31:41,294 [main] DEBUG Application - ------------------------------
+2014-02-13 18:31:41,435 [main] DEBUG Application - Greedy location costed 141ms
+2014-02-13 18:31:41,436 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='At Home Network', k=5, r=13, r_lower=10, ratio_r=1.3, c=8, c_lower=2, maxDegree=5, V=46, E=55, cLast=5}
+2014-02-13 18:31:42,345 [main] DEBUG Application - tabu search costed 909ms
+2014-02-13 18:31:42,346 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='At Home Network', k=5, r=13, r_lower=10, ratio_r=1.0, c=8, c_lower=2, maxDegree=5, V=46, E=55, cLast=7}
+2014-02-13 18:31:42,346 [main] DEBUG Application - ------------------------------
+2014-02-13 18:31:44,045 [main] DEBUG Application - Greedy location costed 1699ms
+2014-02-13 18:31:44,045 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='AGIS', k=9, r=15, r_lower=10, ratio_r=1.5, c=10, c_lower=3, maxDegree=4, V=82, E=92, cLast=8}
+2014-02-13 18:34:02,885 [main] DEBUG Application - tabu search costed 138840ms
+2014-02-13 18:34:02,885 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='AGIS', k=9, r=15, r_lower=10, ratio_r=1.0, c=10, c_lower=3, maxDegree=4, V=82, E=92, cLast=7}
+2014-02-13 18:34:02,885 [main] DEBUG Application - ------------------------------
+2014-02-13 18:34:07,513 [main] DEBUG Algorithms.GreedyLocation - -----------  Greedy Location didn't solve the instance -----------
+2014-02-13 18:34:07,513 [main] DEBUG Application - Greedy location costed 4628ms
+2014-02-13 18:34:07,513 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='AT&T WorldNet', k=10, r=28, r_lower=10, ratio_r=2.8, c=2, c_lower=1, maxDegree=27, V=93, E=154, cLast=5}
+2014-02-13 18:50:11,025 [main] DEBUG Application - tabu search costed 963512ms
+2014-02-13 18:50:11,025 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='AT&T WorldNet', k=10, r=28, r_lower=10, ratio_r=4.2, c=2, c_lower=1, maxDegree=27, V=93, E=154, cLast=4}
+2014-02-13 18:50:11,025 [main] DEBUG Application - ------------------------------
+2014-02-13 18:50:11,100 [main] DEBUG Application - Greedy location costed 74ms
+2014-02-13 18:50:11,100 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='BBN Planet', k=5, r=13, r_lower=9, ratio_r=1.4444444444444444, c=5, c_lower=2, maxDegree=8, V=41, E=49, cLast=4}
+2014-02-13 18:50:22,902 [main] DEBUG Application - tabu search costed 11802ms
+2014-02-13 18:50:22,902 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='BBN Planet', k=5, r=13, r_lower=9, ratio_r=1.4444444444444444, c=5, c_lower=2, maxDegree=8, V=41, E=49, cLast=4}
+2014-02-13 18:50:22,902 [main] DEBUG Application - ------------------------------
+2014-02-13 18:50:22,902 [main] DEBUG Application - Greedy location costed 0ms
+2014-02-13 18:50:22,902 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Cable Internet', k=1, r=8, r_lower=8, ratio_r=1.0, c=8, c_lower=2, maxDegree=4, V=8, E=7, cLast=4}
+2014-02-13 18:50:22,918 [main] DEBUG Application - tabu search costed 16ms
+2014-02-13 18:50:22,918 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Cable Internet', k=1, r=8, r_lower=8, ratio_r=1.0, c=8, c_lower=2, maxDegree=4, V=8, E=7, cLast=4}
+2014-02-13 18:50:22,918 [main] DEBUG Application - ------------------------------
+2014-02-13 18:50:22,963 [main] DEBUG Application - Greedy location costed 45ms
+2014-02-13 18:50:22,963 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CAIS Internet', k=4, r=12, r_lower=10, ratio_r=1.2, c=10, c_lower=3, maxDegree=4, V=37, E=44, cLast=8}
+2014-02-13 18:50:23,614 [main] DEBUG Application - tabu search costed 651ms
+2014-02-13 18:50:23,614 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CAIS Internet', k=4, r=12, r_lower=10, ratio_r=1.0, c=10, c_lower=3, maxDegree=4, V=37, E=44, cLast=7}
+2014-02-13 18:50:23,614 [main] DEBUG Application - ------------------------------
+2014-02-13 18:50:23,615 [main] DEBUG Application - Greedy location costed 1ms
+2014-02-13 18:50:23,615 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CompuServe Network Services', k=2, r=11, r_lower=8, ratio_r=1.375, c=5, c_lower=2, maxDegree=7, V=16, E=23, cLast=3}
+2014-02-13 18:50:23,796 [main] DEBUG Application - tabu search costed 181ms
+2014-02-13 18:50:23,796 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CompuServe Network Services', k=2, r=11, r_lower=8, ratio_r=1.25, c=5, c_lower=2, maxDegree=7, V=16, E=23, cLast=3}
+2014-02-13 18:50:23,796 [main] DEBUG Application - ------------------------------
+2014-02-13 18:50:23,837 [main] DEBUG Algorithms.GreedyLocation - -----------  Greedy Location didn't solve the instance -----------
+2014-02-13 18:50:23,837 [main] DEBUG Application - Greedy location costed 41ms
+2014-02-13 18:50:23,837 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CRL Network Services', k=4, r=21, r_lower=9, ratio_r=2.3333333333333335, c=4, c_lower=1, maxDegree=9, V=35, E=50, cLast=6}
+2014-02-13 18:50:29,310 [main] DEBUG Application - tabu search costed 5473ms
+2014-02-13 18:50:29,310 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='CRL Network Services', k=4, r=21, r_lower=9, ratio_r=1.3333333333333333, c=4, c_lower=1, maxDegree=9, V=35, E=50, cLast=4}
+2014-02-13 18:50:29,310 [main] DEBUG Application - ------------------------------
+2014-02-13 18:50:29,310 [main] DEBUG Application - Greedy location costed 0ms
+2014-02-13 18:50:29,310 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='DataXchange Network, Inc.', k=1, r=8, r_lower=8, ratio_r=1.0, c=5, c_lower=2, maxDegree=7, V=8, E=24, cLast=1}
+2014-02-13 18:50:29,337 [main] DEBUG Application - tabu search costed 27ms
+2014-02-13 18:50:29,337 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='DataXchange Network, Inc.', k=1, r=8, r_lower=8, ratio_r=1.0, c=5, c_lower=2, maxDegree=7, V=8, E=24, cLast=1}
+2014-02-13 18:50:29,337 [main] DEBUG Application - ------------------------------
+2014-02-13 18:50:29,636 [main] DEBUG Algorithms.GreedyLocation - -----------  Greedy Location didn't solve the instance -----------
+2014-02-13 18:50:29,636 [main] DEBUG Application - Greedy location costed 299ms
+2014-02-13 18:50:29,636 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Allegiance Telecom', k=6, r=26, r_lower=9, ratio_r=2.888888888888889, c=3, c_lower=1, maxDegree=12, V=53, E=88, cLast=5}
+2014-02-13 18:51:21,567 [main] DEBUG Application - tabu search costed 51931ms
+2014-02-13 18:51:21,567 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Allegiance Telecom', k=6, r=26, r_lower=9, ratio_r=2.7777777777777777, c=3, c_lower=1, maxDegree=12, V=53, E=88, cLast=4}
+2014-02-13 18:51:21,567 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:21,577 [main] DEBUG Application - Greedy location costed 10ms
+2014-02-13 18:51:21,577 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='EPOCH Networks, Inc.', k=3, r=14, r_lower=10, ratio_r=1.4, c=6, c_lower=2, maxDegree=7, V=29, E=30, cLast=6}
+2014-02-13 18:51:23,232 [main] DEBUG Application - tabu search costed 1655ms
+2014-02-13 18:51:23,232 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='EPOCH Networks, Inc.', k=3, r=14, r_lower=10, ratio_r=1.4, c=6, c_lower=2, maxDegree=7, V=29, E=30, cLast=6}
+2014-02-13 18:51:23,232 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:23,243 [main] DEBUG Application - Greedy location costed 11ms
+2014-02-13 18:51:23,243 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='EUnet', k=3, r=23, r_lower=10, ratio_r=2.3, c=2, c_lower=1, maxDegree=21, V=28, E=30, cLast=2}
+2014-02-13 18:51:24,895 [main] DEBUG Application - tabu search costed 1652ms
+2014-02-13 18:51:24,895 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='EUnet', k=3, r=23, r_lower=10, ratio_r=2.3, c=2, c_lower=1, maxDegree=21, V=28, E=30, cLast=2}
+2014-02-13 18:51:24,895 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:24,896 [main] DEBUG Application - Greedy location costed 1ms
+2014-02-13 18:51:24,896 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Exodus', k=2, r=9, r_lower=7, ratio_r=1.2857142857142858, c=4, c_lower=1, maxDegree=8, V=14, E=19, cLast=3}
+2014-02-13 18:51:25,037 [main] DEBUG Application - tabu search costed 141ms
+2014-02-13 18:51:25,037 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Exodus', k=2, r=9, r_lower=7, ratio_r=1.2857142857142858, c=4, c_lower=1, maxDegree=8, V=14, E=19, cLast=3}
+2014-02-13 18:51:25,037 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:25,181 [main] DEBUG Algorithms.GreedyLocation - -----------  Greedy Location didn't solve the instance -----------
+2014-02-13 18:51:25,182 [main] DEBUG Application - Greedy location costed 145ms
+2014-02-13 18:51:25,182 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Genuity', k=5, r=12, r_lower=10, ratio_r=1.2, c=8, c_lower=2, maxDegree=5, V=48, E=53, cLast=9}
+2014-02-13 18:51:47,385 [main] DEBUG Application - tabu search costed 22203ms
+2014-02-13 18:51:47,385 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Genuity', k=5, r=12, r_lower=10, ratio_r=1.2, c=8, c_lower=2, maxDegree=5, V=48, E=53, cLast=8}
+2014-02-13 18:51:47,385 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:47,385 [main] DEBUG Application - Greedy location costed 0ms
+2014-02-13 18:51:47,385 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GeoNet Communications, Inc.', k=2, r=11, r_lower=7, ratio_r=1.5714285714285714, c=3, c_lower=1, maxDegree=10, V=13, E=15, cLast=1}
+2014-02-13 18:51:47,507 [main] DEBUG Application - tabu search costed 122ms
+2014-02-13 18:51:47,507 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GeoNet Communications, Inc.', k=2, r=11, r_lower=7, ratio_r=1.4285714285714286, c=3, c_lower=1, maxDegree=10, V=13, E=15, cLast=2}
+2014-02-13 18:51:47,508 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:47,508 [main] DEBUG Application - Greedy location costed 0ms
+2014-02-13 18:51:47,508 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GetNet International', k=1, r=5, r_lower=5, ratio_r=1.0, c=7, c_lower=2, maxDegree=3, V=5, E=6, cLast=2}
+2014-02-13 18:51:47,534 [main] DEBUG Application - tabu search costed 26ms
+2014-02-13 18:51:47,534 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GetNet International', k=1, r=5, r_lower=5, ratio_r=1.0, c=7, c_lower=2, maxDegree=3, V=5, E=6, cLast=2}
+2014-02-13 18:51:47,534 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:47,534 [main] DEBUG Application - Greedy location costed 0ms
+2014-02-13 18:51:47,534 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GlobalCenter', k=1, r=9, r_lower=9, ratio_r=1.0, c=5, c_lower=2, maxDegree=8, V=9, E=36, cLast=1}
+2014-02-13 18:51:47,597 [main] DEBUG Application - tabu search costed 62ms
+2014-02-13 18:51:47,597 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GlobalCenter', k=1, r=9, r_lower=9, ratio_r=1.0, c=5, c_lower=2, maxDegree=8, V=9, E=36, cLast=1}
+2014-02-13 18:51:47,597 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:47,609 [main] DEBUG Application - Greedy location costed 12ms
+2014-02-13 18:51:47,609 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GoodNet', k=3, r=20, r_lower=9, ratio_r=2.2222222222222223, c=2, c_lower=1, maxDegree=18, V=27, E=58, cLast=2}
+2014-02-13 18:51:49,739 [main] DEBUG Application - tabu search costed 2130ms
+2014-02-13 18:51:49,739 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='GoodNet', k=3, r=20, r_lower=9, ratio_r=2.111111111111111, c=2, c_lower=1, maxDegree=18, V=27, E=58, cLast=2}
+2014-02-13 18:51:49,739 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:49,740 [main] DEBUG Application - Greedy location costed 1ms
+2014-02-13 18:51:49,740 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='IDT Corp', k=2, r=10, r_lower=8, ratio_r=1.25, c=6, c_lower=2, maxDegree=5, V=15, E=18, cLast=4}
+2014-02-13 18:51:49,748 [main] DEBUG Application - tabu search costed 8ms
+2014-02-13 18:51:49,748 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='IDT Corp', k=2, r=10, r_lower=8, ratio_r=1.0, c=6, c_lower=2, maxDegree=5, V=15, E=18, cLast=6}
+2014-02-13 18:51:49,748 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:49,748 [main] DEBUG Application - Greedy location costed 0ms
+2014-02-13 18:51:49,748 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='ipf.net', k=1, r=5, r_lower=5, ratio_r=1.0, c=7, c_lower=2, maxDegree=3, V=5, E=5, cLast=2}
+2014-02-13 18:51:49,780 [main] DEBUG Application - tabu search costed 32ms
+2014-02-13 18:51:49,780 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='ipf.net', k=1, r=5, r_lower=5, ratio_r=1.0, c=7, c_lower=2, maxDegree=3, V=5, E=5, cLast=2}
+2014-02-13 18:51:49,780 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:49,782 [main] DEBUG Application - Greedy location costed 2ms
+2014-02-13 18:51:49,782 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='iSTAR Internet Inc.', k=2, r=14, r_lower=10, ratio_r=1.4, c=6, c_lower=2, maxDegree=7, V=20, E=22, cLast=6}
+2014-02-13 18:51:50,119 [main] DEBUG Application - tabu search costed 337ms
+2014-02-13 18:51:50,119 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='iSTAR Internet Inc.', k=2, r=14, r_lower=10, ratio_r=1.4, c=6, c_lower=2, maxDegree=7, V=20, E=22, cLast=6}
+2014-02-13 18:51:50,119 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:50,122 [main] DEBUG Application - Greedy location costed 3ms
+2014-02-13 18:51:50,122 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Cable & Wireless', k=2, r=14, r_lower=10, ratio_r=1.4, c=7, c_lower=2, maxDegree=6, V=20, E=34, cLast=4}
+2014-02-13 18:51:50,163 [main] DEBUG Application - tabu search costed 41ms
+2014-02-13 18:51:50,163 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Cable & Wireless', k=2, r=14, r_lower=10, ratio_r=1.0, c=7, c_lower=2, maxDegree=6, V=20, E=34, cLast=7}
+2014-02-13 18:51:50,163 [main] DEBUG Application - ------------------------------
+2014-02-13 18:51:50,234 [main] DEBUG Application - Greedy location costed 71ms
+2014-02-13 18:51:50,234 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='MindSpring', k=5, r=22, r_lower=9, ratio_r=2.4444444444444446, c=2, c_lower=1, maxDegree=23, V=41, E=45, cLast=2}
+2014-02-13 18:52:03,088 [main] DEBUG Application - tabu search costed 12854ms
+2014-02-13 18:52:03,088 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='MindSpring', k=5, r=22, r_lower=9, ratio_r=2.4444444444444446, c=2, c_lower=1, maxDegree=23, V=41, E=45, cLast=2}
+2014-02-13 18:52:03,088 [main] DEBUG Application - ------------------------------
+2014-02-13 18:52:03,088 [main] DEBUG Application - Greedy location costed 0ms
+2014-02-13 18:52:03,088 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Nap.Net, LLC', k=1, r=6, r_lower=6, ratio_r=1.0, c=5, c_lower=2, maxDegree=5, V=6, E=7, cLast=1}
+2014-02-13 18:52:03,136 [main] DEBUG Application - tabu search costed 48ms
+2014-02-13 18:52:03,136 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Nap.Net, LLC', k=1, r=6, r_lower=6, ratio_r=1.0, c=5, c_lower=2, maxDegree=5, V=6, E=7, cLast=1}
+2014-02-13 18:52:03,136 [main] DEBUG Application - ------------------------------
+2014-02-13 18:52:03,137 [main] DEBUG Application - Greedy location costed 1ms
+2014-02-13 18:52:03,137 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Netrail Incorporated', k=2, r=12, r_lower=9, ratio_r=1.3333333333333333, c=6, c_lower=2, maxDegree=6, V=17, E=21, cLast=3}
+2014-02-13 18:52:03,385 [main] DEBUG Application - tabu search costed 248ms
+2014-02-13 18:52:03,385 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Netrail Incorporated', k=2, r=12, r_lower=9, ratio_r=1.2222222222222223, c=6, c_lower=2, maxDegree=6, V=17, E=21, cLast=3}
+2014-02-13 18:52:03,385 [main] DEBUG Application - ------------------------------
+2014-02-13 18:52:04,981 [main] DEBUG Algorithms.GreedyLocation - -----------  Greedy Location didn't solve the instance -----------
+2014-02-13 18:52:04,981 [main] DEBUG Application - Greedy location costed 1596ms
+2014-02-13 18:52:04,981 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='PSINet', k=8, r=20, r_lower=10, ratio_r=2.0, c=5, c_lower=2, maxDegree=9, V=78, E=110, cLast=11}
+2014-02-13 18:56:20,905 [main] DEBUG Application - tabu search costed 255924ms
+2014-02-13 18:56:20,905 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='PSINet', k=8, r=20, r_lower=10, ratio_r=1.7, c=5, c_lower=2, maxDegree=9, V=78, E=110, cLast=5}
+2014-02-13 18:56:20,905 [main] DEBUG Application - ------------------------------
+2014-02-13 18:56:20,906 [main] DEBUG Application - Greedy location costed 1ms
+2014-02-13 18:56:20,906 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Qwest', k=2, r=9, r_lower=7, ratio_r=1.2857142857142858, c=4, c_lower=1, maxDegree=7, V=14, E=26, cLast=2}
+2014-02-13 18:56:21,084 [main] DEBUG Application - tabu search costed 178ms
+2014-02-13 18:56:21,084 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Qwest', k=2, r=9, r_lower=7, ratio_r=1.1428571428571428, c=4, c_lower=1, maxDegree=7, V=14, E=26, cLast=4}
+2014-02-13 18:56:21,084 [main] DEBUG Application - ------------------------------
+2014-02-13 18:56:21,085 [main] DEBUG Application - Greedy location costed 1ms
+2014-02-13 18:56:21,085 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='RISQ Network', k=2, r=8, r_lower=7, ratio_r=1.1428571428571428, c=4, c_lower=1, maxDegree=7, V=13, E=12, cLast=2}
+2014-02-13 18:56:21,214 [main] DEBUG Application - tabu search costed 129ms
+2014-02-13 18:56:21,214 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='RISQ Network', k=2, r=8, r_lower=7, ratio_r=1.1428571428571428, c=4, c_lower=1, maxDegree=7, V=13, E=12, cLast=2}
+2014-02-13 18:56:21,214 [main] DEBUG Application - ------------------------------
+2014-02-13 18:56:21,227 [main] DEBUG Application - Greedy location costed 13ms
+2014-02-13 18:56:21,227 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='RNP', k=3, r=12, r_lower=9, ratio_r=1.3333333333333333, c=3, c_lower=1, maxDegree=12, V=27, E=35, cLast=2}
+2014-02-13 18:56:22,827 [main] DEBUG Application - tabu search costed 1600ms
+2014-02-13 18:56:22,827 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='RNP', k=3, r=12, r_lower=9, ratio_r=1.3333333333333333, c=3, c_lower=1, maxDegree=12, V=27, E=35, cLast=2}
+2014-02-13 18:56:22,827 [main] DEBUG Application - ------------------------------
+2014-02-13 18:56:22,848 [main] DEBUG Application - Greedy location costed 21ms
+2014-02-13 18:56:22,848 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Savvis Communications', k=3, r=20, r_lower=10, ratio_r=2.0, c=4, c_lower=1, maxDegree=11, V=28, E=56, cLast=4}
+2014-02-13 18:56:25,017 [main] DEBUG Application - tabu search costed 2169ms
+2014-02-13 18:56:25,018 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Savvis Communications', k=3, r=20, r_lower=10, ratio_r=1.9, c=4, c_lower=1, maxDegree=11, V=28, E=56, cLast=4}
+2014-02-13 18:56:25,018 [main] DEBUG Application - ------------------------------
+2014-02-13 18:56:25,024 [main] DEBUG Application - Greedy location costed 6ms
+2014-02-13 18:56:25,024 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='ServInt Internet Services', k=3, r=11, r_lower=8, ratio_r=1.375, c=5, c_lower=2, maxDegree=7, V=23, E=34, cLast=5}
+2014-02-13 18:56:25,999 [main] DEBUG Application - tabu search costed 975ms
+2014-02-13 18:56:25,999 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='ServInt Internet Services', k=3, r=11, r_lower=8, ratio_r=1.125, c=5, c_lower=2, maxDegree=7, V=23, E=34, cLast=5}
+2014-02-13 18:56:25,999 [main] DEBUG Application - ------------------------------
+2014-02-13 18:56:26,005 [main] DEBUG Application - Greedy location costed 6ms
+2014-02-13 18:56:26,006 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Sprint', k=3, r=12, r_lower=7, ratio_r=1.7142857142857142, c=4, c_lower=1, maxDegree=8, V=21, E=37, cLast=3}
+2014-02-13 18:56:26,839 [main] DEBUG Application - tabu search costed 833ms
+2014-02-13 18:56:26,839 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Sprint', k=3, r=12, r_lower=7, ratio_r=1.2857142857142858, c=4, c_lower=1, maxDegree=8, V=21, E=37, cLast=3}
+2014-02-13 18:56:26,839 [main] DEBUG Application - ------------------------------
+2014-02-13 18:56:26,843 [main] DEBUG Application - Greedy location costed 4ms
+2014-02-13 18:56:26,844 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Telstra Internet', k=3, r=13, r_lower=7, ratio_r=1.8571428571428572, c=2, c_lower=1, maxDegree=14, V=21, E=24, cLast=2}
+2014-02-13 18:56:27,551 [main] DEBUG Application - tabu search costed 707ms
+2014-02-13 18:56:27,551 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Telstra Internet', k=3, r=13, r_lower=7, ratio_r=1.8571428571428572, c=2, c_lower=1, maxDegree=14, V=21, E=24, cLast=2}
+2014-02-13 18:56:27,551 [main] DEBUG Application - ------------------------------
+2014-02-13 18:56:27,595 [main] DEBUG Application - Greedy location costed 44ms
+2014-02-13 18:56:27,595 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Verio', k=4, r=19, r_lower=9, ratio_r=2.111111111111111, c=3, c_lower=1, maxDegree=13, V=35, E=72, cLast=3}
+2014-02-13 18:56:35,263 [main] DEBUG Application - tabu search costed 7668ms
+2014-02-13 18:56:35,263 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='Verio', k=4, r=19, r_lower=9, ratio_r=1.8888888888888888, c=3, c_lower=1, maxDegree=13, V=35, E=72, cLast=3}
+2014-02-13 18:56:35,263 [main] DEBUG Application - ------------------------------
+2014-02-13 18:56:35,264 [main] DEBUG Application - Greedy location costed 0ms
+2014-02-13 18:56:35,264 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='VisiNet', k=2, r=7, r_lower=6, ratio_r=1.1666666666666667, c=4, c_lower=1, maxDegree=7, V=11, E=13, cLast=2}
+2014-02-13 18:56:35,398 [main] DEBUG Application - tabu search costed 134ms
+2014-02-13 18:56:35,398 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='VisiNet', k=2, r=7, r_lower=6, ratio_r=1.1666666666666667, c=4, c_lower=1, maxDegree=7, V=11, E=13, cLast=2}
+2014-02-13 18:56:35,399 [main] DEBUG Application - ------------------------------
+2014-02-13 18:56:35,425 [main] DEBUG Application - Greedy location costed 26ms
+2014-02-13 18:56:35,425 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='XO Communications', k=4, r=16, r_lower=9, ratio_r=1.7777777777777777, c=5, c_lower=2, maxDegree=8, V=33, E=38, cLast=5}
+2014-02-13 18:56:39,795 [main] DEBUG Application - tabu search costed 4370ms
+2014-02-13 18:56:39,795 [main] DEBUG Application - Parsing.SLRLInstance{testInstanceName='XO Communications', k=4, r=16, r_lower=9, ratio_r=1.2222222222222223, c=5, c_lower=2, maxDegree=8, V=33, E=38, cLast=5}

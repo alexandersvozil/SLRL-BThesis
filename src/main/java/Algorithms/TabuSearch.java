@@ -51,13 +51,10 @@ public class TabuSearch {
                 for(Node n : bestSolution.getGraph().getServers()){
                     servers +=" " + n .getName();
                 }
-<<<<<<< HEAD
                // log.debug(servers);
-=======
                 if(currentSol.getR()==1)
                     break;
-                log.debug(servers);
->>>>>>> 60842728bbd450b321b28bbc60c75afe85575ee0
+               // log.debug(servers);
             }
 
             if(!bestSolution.isSolved() && bestSolution.getLastC() > currentSol.getLastC() )
@@ -67,17 +64,16 @@ public class TabuSearch {
                 currentSol.setSolved(currentSol.getLastC() <= currentSol.getC());
                 bestSolution = currentSol;
             }
-<<<<<<< HEAD
             //  log.info("TABUDEBUG"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ "" +
             //        "old max usage: "+ bestSolution.getLastC()+ " new max usage: " + currentSol.getLastC());
-=======
->>>>>>> 60842728bbd450b321b28bbc60c75afe85575ee0
 
         }
 
 
         instance.setSolution(bestSolution);
-        instance.snapshotL();
+
+        /* Snapshot */
+        //instance.snapshotL();
         return instance;
     }
     private Solution local_search_withTabuList(Solution initialSolution){
