@@ -6,6 +6,7 @@
 \usepackage {graphicx}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{amssymb}
 \bibliographystyle{ieeetr} 
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \newtheorem{mydef}{Definition}
@@ -110,7 +111,7 @@ the worst case when locating a server.
     \textbf{Question:} 
     Is there a subset of Servers S, $S \subseteq V$, where $|S| = k$, $|V|$ $\geq$ k,
     and a subset $|V_i|$ for each Server $s_i \in S$, where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$, r $\geq  |V_i|$ 
-    and is $c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.} 
+  and is $c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.} 
 
   %$k = \|S\|$, where S is the set of servers $S = \{s_1,s_2,\dots s_k\} \subseteq V$\\
   %  r $\geq  \|V_i\|$ $(i=1,2,\dots,k)$ where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$\\
@@ -161,8 +162,8 @@ search is in $\mathcal{O}(V+E)$. Checking the set for size is also trivial as is
 every edge and comparing the maximum with c.\\
 After proving that SLRL is in NP, it can be shown, that 3SAT can be reduced to SLRL in polynomial time,
 implying SLRL is NP-Complete \cite{Garey:1979:CIG:578533}.
-This proof is merely a rewriting of Miwa et al. \cite{mirrorserver}, it is one of the first proofs I saw of 
-this kind, and it was really interesting for me to figure it out.
+This proof is merely a rewriting of Miwa et al. \cite{mirrorserver}, as it is one of the first proofs I saw of 
+this kind, it was really interesting for me to figure it out.
 3SAT is like the satisfiability problem for arbitrary formulars, but in 3SAT the formula must be in KNF and 
 each clause may only consist of three literals. A solution for 3SAT would be a truth assignment to every
 variable. An instance of 3SAT (U,C) consists of a set of clauses C and a set of variables U.\\
@@ -181,14 +182,57 @@ The steps to construct an instance of SLRL (G=(V,E),k,r,c) of an instance of 3SA
     and if $\neg u_j \in C_i$, let E $\leftarrow$ E $\cup \ \{(c_i,f_j)\}$ }
   \item{For each (i=1,\dots,m) and (j=1,\dots,n) let V $\leftarrow$  V $\cup \ \{v_{ij}\}$ and E $\leftarrow$ E $\cup \ \{(t_i,v_{ij}), (f_i, v_{ij} \}$ }
   \item{Let k = n, r = 2m+2 and c = 1}
-    
-  
 \end{enumerate}
 
+Now it must be proven, that 3SAT has a solution if and only if SLRL has a solution. 
+To prove the statement, it will be first shown, that if 3SAT has a Solution SLRL has a solution.
+\begin{enumerate}
+  \item{Assume 3SAT has a solution, that means we have a truth assignment, 
+    which satisfies all the clauses.}
+  \item{Construct the set of servers S as follows: If variable $u_j \in U$ is true
+      in the truth assignment, then add $t_j$ to the server set. If variable $u_j \in U$
+      is false, then add $f_j$ to the server set. Do this for each variable $u_j$ for $j = (1,\dots,n)$.
+      As there are exactly n variables in U, this clearly satisfies our constraint 
+    for k, i.e., the number of servers.}
+  \item{At most m clauses inherit the variable $u_j$. There are m vertices connected to every
+      $t_j$ and $f_j$, i.e., $v_{ij}$ for $i=(1,\dots,m)$.
+      Thus the number of vertices in the neighbor set is $m+m+2 = 2m+2 \leq r $ for every 
+      $t_j$ or $f_j$. The additional two vertices result of the server and the respective 
+    vertex representing the other truth value.}
+  \item{The usage of each edge is one, which means it is smaller and equal to c. $1\leq c$.
+    Thus it is obvious that this constraint is not violated.}
 
+  \item{Consequently this instance of SLRL, (G,k,r,c) has a solution, because all constraints are satisfied 
+    and as a result the first part of the equivalence is proved.}
+\end{enumerate}
+To finish our prove we need to show the converse, i.e., 
+if (G,k,r,c) is a solution there is a solution for 3SAT aswell. 
 
-
-
+\begin{enumerate}
+  \item{Assume (G,k,r,c) has a solution. Let $G_i, (i=1,\dots,n)$ be the subgraph induced
+    by $t_i, f_i$ and $v_{ij},(j=1,\dots,m)$.}
+  \item{We will now show, that there is only one way to place the servers, namely the truth
+    value assignment for the variables, that satisfy the 3SAT instance}
+  \item{Assume that there is no server in $G_i$. This would imply that the servers is a subset of
+      $c_j for j=(1..m)$. The problem there is, that not only is m != n(concerning constraint k),
+      but also that constraint c would be unsatisfied, because more than one path would use 
+      the edge connecting $c_j$ and either $f_i$ or $t_i$ (there are m + 2 vertices in $G_i$).
+    Thus placing a server on any $c_j$ is not possible, because it would automatically violate contraint c.}
+  \item{Assume that the servers are placed on $v_{ij}$. This would also satisfy the neighborhood 
+      constraint r, but it would certainly violate the constraint c, because the degree of $v_{ij}$ is two and
+      and the number of vertices in $G_i$ is m+2. All of them would need to use one of the two edges for their shortest path,
+    resulting in a violation.}
+  \item{The only spare option that would satisfy the neighborhood constraint 
+      are the vertices $t_i$ and $f_i$. Let $u_i$ be true if a server is located on
+      $t_i$ and let $u_i$ be false if a server is located on $f_i$. Now this would not yet 
+      guarantee a solved 3SAT instance nor a solution of the SLRL because we need to put
+      the servers on the right spots. If a $c_j$ has no adjacent vertices which are servers,
+      the SLRL would not be fulfilled because there would be two shortest paths passing edge
+      $(t_i,f_i)$. This would contradict $c = 1$. Therefore, the truth assignments satisfy all
+    clauses.}
+\end{enumerate}
+Thus 3SAT was successfully reduced to SLRL in polynomial time.
+Consequently, SLRL is NP-complete.$\square$
 \section{Algorithm}
 \subsection{Rules and Assumptions}
 \subsection{Other Algorithms}
@@ -204,17 +248,17 @@ data was one of the most difficult parts, because the data is not formatted well
 It does not really follow the syntax proposed in the beginning of the file. I also
 modified the data in some concerns:
 \begin{itemize}
-    \item If the graph G given for the barebone network was not connected,
-        the connected component with less nodes of that graph is cut out.
+  \item If the graph G given for the barebone network was not connected,
+    the connected component with less nodes of that graph is cut out.
 
-    \item Normally the connected cities are listed in this manner:
-        "city,state,country", in order to match with the numbers 
-        in the paper \cite{mirrorserver} only city and state are used for
-        identification and the country is left out. Sometimes London
-        is used on one hand as City in Canada and on the other hand in GB, denoted like this
-        London, *, Canada and London, *, England. They are differentiated.
-    \item Sometimes the State has a number. One example would be "Kansas City, KS2~"
-        This is interpreted as "Kansas City, KS".
+  \item Normally the connected cities are listed in this manner:
+    "city,state,country", in order to match with the numbers 
+    in the paper \cite{mirrorserver} only city and state are used for
+    identification and the country is left out. Sometimes London
+    is used on one hand as City in Canada and on the other hand in GB, denoted like this
+    London, *, Canada and London, *, England. They are differentiated.
+  \item Sometimes the State has a number. One example would be "Kansas City, KS2~"
+    This is interpreted as "Kansas City, KS".
 
 \end{itemize}
 
@@ -226,105 +270,105 @@ The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".
 
 \section{Implementation}
 I decided to implement a tabu-search.
-    \subsection{Determination of the neighbour sets of a server and loads of the links}
-    When a server is added to the graph, r and $max(m(e))$ $\forall e\in E $ need to be recalculated, as the shortest paths from the clients
-    to the servers change. This has to be done for every client in order to ensure that every client has its path(s) and server(s).
-    The outer loop goes through every n that is not a server and tests out every server if it is the closest. There can be more than one 
-    closest server. It will be saved in the nearestServersList. The path to the server is then marked. If there is a new nearest Server, these
-    stats are reset and the newly found nearest servers edges are marked.
-    It takes $\mathcal O(|V|-|S| * |S| * |V+E|^2 ) $ to calculate the new r and the new $max(m(e))$ $\forall e\in E$, as BFS costs $ \mathcal O(|V| + |E|) $
-    and backtracking every path can also result in visiting every node and every edge and thus costs $\mathcal O(|V| + |E|)$.
-    \begin{algorithm}[H]
-        \caption{constraintsCalculation}
-        \begin{algorithmic}[2]
-            \Require Graph (V,E) G, Servers S
-            \For{Each node n $\in G$}
-                \If{!($n \in S$)}
-                    \State $nearestServersList \gets \{\};$ 
-                    \State $minServer \gets 0;$ \Comment The stepcounter to the nearest server(s)
-                    \For {Each Server $ s \in S$}
-                        \State $BFS2(n,s)$
-                        \State $p \gets s;$
-                        \State $i \gets s.getDistance() $ \Comment distance to server acquired in BFS 
-                        \If {$i \leq minServer || nearestServersList.isEmpty()$}
-                            \If {$i < minServer$}
-                                \For{Each Server prevNearest $\in nearestServersList$}
-                                    \State $prevnearest.tmpNeighbourhood=0;$
-                                    \State $nearestServersList.clear();$
-                                    \State $usedEdges.clear();$
-                                \EndFor
-                            \EndIf
-                            \State $minServer = i;$ \Comment new nearest server found, set length
-                            \State $nearestServersList.add(s);$ \Comment add it to the list of nearest servers 
-                            \State $s.tmpNeighbourhood += 1;$ \Comment adds one to the temporal neighbourhood (it may get reset later on)
-                            \State $markPath2(s)$ \Comment This method recusively walks back every node's parents list to determine every path and add it to the usedEdges list.
-                        \EndIf 
-                    \EndFor
-                        \For{Each Server s $\in nearestServerList$}
-                            \State $s.neighborhood += s.tmpNeighbourhood;$
-                            \State $s.tmpNeighbourhood = 0;$
-                        \EndFor
-                    \State $markEdges();$ \Comment increments usage of each usedEdges
-                \EndIf
-            \EndFor
-        \end{algorithmic}
-    \end{algorithm}
-    \subsection{Modified BFS}
-    The Breadth first search needed to be modified in order for it to be able to find all shortest paths
-    from one node to another, as we need to consider every shortest path in order to simulate
-    the worst case scenario regarding load on links. It's runtime $\mathcal O(|V| + |E|)$ remains unmodifed.
+\subsection{Determination of the neighbour sets of a server and loads of the links}
+When a server is added to the graph, r and $max(m(e))$ $\forall e\in E $ need to be recalculated, as the shortest paths from the clients
+to the servers change. This has to be done for every client in order to ensure that every client has its path(s) and server(s).
+The outer loop goes through every n that is not a server and tests out every server if it is the closest. There can be more than one 
+closest server. It will be saved in the nearestServersList. The path to the server is then marked. If there is a new nearest Server, these
+stats are reset and the newly found nearest servers edges are marked.
+It takes $\mathcal O(|V|-|S| * |S| * |V+E|^2 ) $ to calculate the new r and the new $max(m(e))$ $\forall e\in E$, as BFS costs $ \mathcal O(|V| + |E|) $
+and backtracking every path can also result in visiting every node and every edge and thus costs $\mathcal O(|V| + |E|)$.
+\begin{algorithm}[H]
+  \caption{constraintsCalculation}
+  \begin{algorithmic}[2]
+    \Require Graph (V,E) G, Servers S
+    \For{Each node n $\in G$}
+    \If{!($n \in S$)}
+    \State $nearestServersList \gets \{\};$ 
+    \State $minServer \gets 0;$ \Comment The stepcounter to the nearest server(s)
+    \For {Each Server $ s \in S$}
+    \State $BFS2(n,s)$
+    \State $p \gets s;$
+    \State $i \gets s.getDistance() $ \Comment distance to server acquired in BFS 
+    \If {$i \leq minServer || nearestServersList.isEmpty()$}
+    \If {$i < minServer$}
+    \For{Each Server prevNearest $\in nearestServersList$}
+    \State $prevnearest.tmpNeighbourhood=0;$
+    \State $nearestServersList.clear();$
+    \State $usedEdges.clear();$
+    \EndFor
+    \EndIf
+    \State $minServer = i;$ \Comment new nearest server found, set length
+    \State $nearestServersList.add(s);$ \Comment add it to the list of nearest servers 
+    \State $s.tmpNeighbourhood += 1;$ \Comment adds one to the temporal neighbourhood (it may get reset later on)
+    \State $markPath2(s)$ \Comment This method recusively walks back every node's parents list to determine every path and add it to the usedEdges list.
+    \EndIf 
+    \EndFor
+    \For{Each Server s $\in nearestServerList$}
+    \State $s.neighborhood += s.tmpNeighbourhood;$
+    \State $s.tmpNeighbourhood = 0;$
+    \EndFor
+    \State $markEdges();$ \Comment increments usage of each usedEdges
+    \EndIf
+    \EndFor
+  \end{algorithmic}
+\end{algorithm}
+\subsection{Modified BFS}
+The Breadth first search needed to be modified in order for it to be able to find all shortest paths
+from one node to another, as we need to consider every shortest path in order to simulate
+the worst case scenario regarding load on links. It's runtime $\mathcal O(|V| + |E|)$ remains unmodifed.
 
-    \begin{algorithm}[H]
-        \caption{BFS2}
-        \begin{algorithmic}[2]
-            \Require Graph(V,E) G, Node dest, Node start
-            \State $clearParents();$
-            \State $resetDistance();$
-            \State Queue$<$Node$>$ nodeQueue $\gets \{\};$
-            \State Set$<$Node$>$ visited $\gets \{\};$
-            \State $visited.add(start);$
-            \State $nodeQueue.offer(start);$ \Comment \begin{itshape} Nodepair saves the node and the parentnode,
-            so all the paths can be reconstructed\end{itshape}
-            \While {$!nodeQueue.isEmpty()$}
-            \State $Node$ $curNode$ $=$ $nodeQueue.poll();$ \Comment \begin{itshape} get first node out of queue\end{itshape}
-            \State $visited.add(curNode);$ \Comment \begin{itshape} mark node as visited\end{itshape}            
-                \If{$!curNode.equals(dest)$}
-                \State {$return$ $dest;$}
-                \EndIf
-            \For{$Edge$ $e$ : $curNode.getEdges()$}
-                \If{$!visited.contains(e.getNode2())$}
-                    \If{$e.getNode2().getDistance() == curNode.getDistance() + 1 \| e.getNode2().getDistance() == -1$}
-                        \State $alreadyVis \gets false;$
-                        \For{$Node$ $node$ : $nodeQueue$}
-                            \State $node.addParent(curNode);$
-                            \State $alreadyVis \gets true;$
-                            \State $break;$
-                        \EndFor
-                        \If{$!alreadyVis$}
-                        \State $nodeQueue.offer(e.getNode2());$
-                        \State $e.getNode2().addParent(curNode);$
-                        \State $e.getNode2().setdistance(curNode.getDistance()+1);$
-                        \EndIf
-                    \EndIf
-                \EndIf
-            \EndFor
-            \EndWhile
+\begin{algorithm}[H]
+  \caption{BFS2}
+  \begin{algorithmic}[2]
+    \Require Graph(V,E) G, Node dest, Node start
+    \State $clearParents();$
+    \State $resetDistance();$
+    \State Queue$<$Node$>$ nodeQueue $\gets \{\};$
+    \State Set$<$Node$>$ visited $\gets \{\};$
+    \State $visited.add(start);$
+    \State $nodeQueue.offer(start);$ \Comment \begin{itshape} Nodepair saves the node and the parentnode,
+    so all the paths can be reconstructed\end{itshape}
+    \While {$!nodeQueue.isEmpty()$}
+  \State $Node$ $curNode$ $=$ $nodeQueue.poll();$ \Comment \begin{itshape} get first node out of queue\end{itshape}
+  \State $visited.add(curNode);$ \Comment \begin{itshape} mark node as visited\end{itshape}            
+    \If{$!curNode.equals(dest)$}
+    \State {$return$ $dest;$}
+    \EndIf
+    \For{$Edge$ $e$ : $curNode.getEdges()$}
+    \If{$!visited.contains(e.getNode2())$}
+    \If{$e.getNode2().getDistance() == curNode.getDistance() + 1 \| e.getNode2().getDistance() == -1$}
+    \State $alreadyVis \gets false;$
+    \For{$Node$ $node$ : $nodeQueue$}
+    \State $node.addParent(curNode);$
+    \State $alreadyVis \gets true;$
+    \State $break;$
+    \EndFor
+    \If{$!alreadyVis$}
+    \State $nodeQueue.offer(e.getNode2());$
+    \State $e.getNode2().addParent(curNode);$
+    \State $e.getNode2().setdistance(curNode.getDistance()+1);$
+    \EndIf
+    \EndIf
+    \EndIf
+    \EndFor
+    \EndWhile
 
 
-            
-        \end{algorithmic}
-    \end{algorithm}
-    \subsection{The local search}
-    The Local search simply exchanges a server with a client and recalculates the constraints to create a neighborhood N of feasible solutions.
 
-    \begin {algorithm} [H]
-        \caption {localsearch}
-        \begin {algorithmic} [3]
-        \Require Graph(V,E), Set
-        \end {algorithmic}
-    \end {algorithm}
-    \subsection{The tabu-search}
-    \subsection{Networks and the approximation ratio}
+  \end{algorithmic}
+\end{algorithm}
+\subsection{The local search}
+The Local search simply exchanges a server with a client and recalculates the constraints to create a neighborhood N of feasible solutions.
+
+\begin {algorithm} [H]
+\caption {localsearch}
+\begin {algorithmic} [3]
+\Require Graph(V,E), Set
+\end {algorithmic}
+\end {algorithm}
+\subsection{The tabu-search}
+\subsection{Networks and the approximation ratio}
 \section{Conclusion}
 
 \bibliography{bibtex}
