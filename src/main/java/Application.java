@@ -1,5 +1,7 @@
 import Algorithms.GreedyLocation;
 import Algorithms.TabuSearch;
+import Correctness.CorrectnessTester;
+import Correctness.SolutionWrongException;
 import Graph.NodeNotFoundException;
 import Parsing.ParseTestInstances;
 import Parsing.SLRLInstance;
@@ -28,19 +30,28 @@ public class Application {
 
         for(SLRLInstance slrlInstance: instanceList){
             if(!slrlInstance.getTestInstanceName().equals("UUNET")) {
-            log.debug("------------------------------");
-            long start = System.currentTimeMillis();
-            greedyLocation.solve(slrlInstance);
-            long end = System.currentTimeMillis();
-            log.debug ("Greedy location costed "+ (end-start) + "ms");
-            log.debug(slrlInstance.toString());
+                log.debug("------------------------------");
+                long start = System.currentTimeMillis();
+                greedyLocation.solve(slrlInstance);
+                long end = System.currentTimeMillis();
+                log.debug ("Greedy location costed "+ (end-start) + "ms");
+                log.debug(slrlInstance.toString());
 
-            start = System.currentTimeMillis();
-            tabuSearch.tabu_search(slrlInstance);
-            end = System.currentTimeMillis();
-            log.debug ("tabu search costed "+ (end-start) + "ms");
-            log.debug(slrlInstance.toString());
-           }
+                start = System.currentTimeMillis();
+                tabuSearch.tabu_search(slrlInstance);
+                end = System.currentTimeMillis();
+                log.debug ("tabu search costed "+ (end-start) + "ms");
+                log.debug(slrlInstance.toString());
+
+                log.debug("correctness check:");
+                CorrectnessTester k = new CorrectnessTester();
+                try {
+                    k.testCorrectness(slrlInstance);
+                } catch (SolutionWrongException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    log.error("solution incorrect");
+                }
+            }
         }
     }
 

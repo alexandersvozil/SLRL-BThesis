@@ -375,4 +375,8 @@ public class SLRLInstance {
     public boolean getSolved() {
         return solved;
     }
+
+    public int getR() {
+        return r;
+    }
 }

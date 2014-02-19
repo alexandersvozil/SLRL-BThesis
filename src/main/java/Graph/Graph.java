@@ -330,4 +330,40 @@ public class Graph {
         }
 
     }
+    /**
+     * FOR BFS2
+     * marks all edges used and puts them into a List that is returned.
+     *
+     * @param n
+     */
+    public List<Edge> markPath2_list(Node n) {
+        Node tmp = n;
+        List<Edge> usedEdges = new ArrayList<Edge>();
+
+        if (tmp.getParents().isEmpty())
+            return usedEdges;
+
+        for (Node parent : tmp.getParents()) {
+            for (Edge e : tmp.getEdges()) {
+                if (e.getNode2().equals(parent)) {
+                    if (!usedEdges.contains(e)) {
+                        usedEdges.add(e);
+                    }
+                }
+            }
+            for (Edge e : parent.getEdges()) {
+                if (e.getNode2().equals(tmp)) {
+                    if (!usedEdges.contains(e)) {
+                        usedEdges.add(e);
+                    }
+
+
+                }
+            }
+            markPath2_list(parent);
+
+        }
+        return usedEdges;
+
+    }
 }
