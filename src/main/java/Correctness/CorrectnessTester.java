@@ -131,6 +131,7 @@ public class CorrectnessTester {
         for(Node n : nodeList){
             pathsMap.put(n,new ShortestPaths(n,graph));
         }
+        //System.out.println("pre calculations done");
         return pathsMap;  //To change body of created methods use File | Settings | File Templates.
     }
 

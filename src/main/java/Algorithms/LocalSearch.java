@@ -35,7 +35,7 @@ public class LocalSearch {
              if(!otherNode.equals(server) && !initialSolution.getGraph().getServers().contains(otherNode)){
              initialSolution.getGraph().clearUsages();
              initialSolution.getGraph().addServer(otherNode);
-             initialSolution.getGraph().calculateUsagesAndNeighbourhoodsAfterServerAddition();
+             initialSolution.getGraph().updateConstraints();//.calculateUsagesAndNeighbourhoodsAfterServerAddition();
 
                 int max_usage = initialSolution.getGraph().getMaxUsage();
                 int max_neighbourset = initialSolution.getGraph().getMaxNeighbourSet();

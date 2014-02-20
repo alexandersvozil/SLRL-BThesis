@@ -107,4 +107,5 @@ public class Solution {
     public int hashCode() {
         return graph != null ? graph.hashCode() : 0;
     }
+
 }

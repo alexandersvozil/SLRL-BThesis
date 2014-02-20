@@ -92,7 +92,7 @@ public class TabuSearch {
                 if(!otherNode.equals(server) && !currentSolution.getGraph().getServers().contains(otherNode)){
                     currentSolution.getGraph().clearUsages();
                     currentSolution.getGraph().addServer(otherNode);
-                    currentSolution.getGraph().calculateUsagesAndNeighbourhoodsAfterServerAddition();
+                    currentSolution.getGraph().updateConstraints();//calculateUsagesAndNeighbourhoodsAfterServerAddition();
 
                     int max_usage = currentSolution.getGraph().getMaxUsage();
                     int max_neighbourset = currentSolution.getGraph().getMaxNeighbourSet();

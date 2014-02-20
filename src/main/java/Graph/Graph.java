@@ -18,6 +18,7 @@ public class Graph {
     private Logger log = Logger.getLogger(Graph.class);
     private List<Edge> usedEdgesInShortestPaths;
     long sumsum;
+    Map<Node, ShortestPaths> pathsMap;
 
     public void resetDistance() {
         for (Node n : graph) {
@@ -49,6 +50,18 @@ public class Graph {
         this.servers = new CopyOnWriteArrayList<Node>();
         this.servers.addAll(servers);
         this.usedEdgesInShortestPaths = new ArrayList<Edge>();
+        this.pathsMap = createPathsMap();
+    }
+
+    private Map<Node, ShortestPaths> createPathsMap() {
+
+        Map<Node, ShortestPaths> pathsMap = new HashMap<Node, ShortestPaths>();
+        List<Node> nodeList = getGraph();
+        for(Node n : nodeList){
+            pathsMap.put(n,new ShortestPaths(n,this));
+        }
+        //log.debug("precalculations done");
+        return pathsMap;  //To change body of created methods use File | Settings | File Templates.
     }
 
     public Graph() {
@@ -115,7 +128,57 @@ public class Graph {
         }
 
     }
+    public void updateConstraints(){
+        clearUsages();
 
+        /*Map<Node, Integer> maxNeighborhood = new HashMap<Node, Integer>();
+        for(Node n : getServers()){
+            maxNeighborhood.put(n,0);
+        }*/
+
+        //check for the nearest servers of every member of the graph
+        for(Node n : getGraph()){
+
+            List<Node> nearestServers = new ArrayList<Node>();
+            int currentLowest = -1;
+            if(!getServers().contains(n)){
+                for(Node server : getServers()){
+                    ShortestPaths n_paths = pathsMap.get(n);
+                    int i = n_paths.getPathLength().get(server);
+                    if(currentLowest == -1 || i <= currentLowest){
+
+                        if(currentLowest == i){
+                            nearestServers.add(server);
+
+                        }else{
+                            nearestServers.clear();
+                            nearestServers.add(server);
+                            currentLowest = i;
+                        }
+                    }
+
+                }
+
+                //increment usage of each and every server
+                //increment usage of the edges
+                for(Node k : nearestServers){
+                   // maxNeighborhood.put(k,maxNeighborhood.get(k)+1);
+                    k.increaseNeighbourhood();
+                    List<Edge> usedEdges = pathsMap.get(n).getShortest_Paths().get(k);
+
+                    //mark used edges
+                    for(Edge e : usedEdges){
+                        e.setTimesUsed(e.getTimesUsed()+1);
+                    }
+                }
+            }else{
+                //maxNeighborhood.put(n,maxNeighborhood.get(n)+1);
+                n.increaseNeighbourhood();
+            }
+
+        }
+
+    }
 
     public void calculateUsagesAndNeighbourhoodsAfterServerAddition() {
         //log.debug("calculateUsages got called, current server size: "+servers.size());
