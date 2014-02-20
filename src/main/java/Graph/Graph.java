@@ -53,14 +53,15 @@ public class Graph {
         this.pathsMap = createPathsMap();
     }
 
-    private Map<Node, ShortestPaths> createPathsMap() {
+    public Map<Node, ShortestPaths> createPathsMap() {
 
         Map<Node, ShortestPaths> pathsMap = new HashMap<Node, ShortestPaths>();
         List<Node> nodeList = getGraph();
         for(Node n : nodeList){
             pathsMap.put(n,new ShortestPaths(n,this));
         }
-        //log.debug("precalculations done");
+       log.debug("precalculations done");
+        this.pathsMap = pathsMap;
         return pathsMap;  //To change body of created methods use File | Settings | File Templates.
     }
 

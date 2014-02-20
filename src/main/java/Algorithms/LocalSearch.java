@@ -23,7 +23,7 @@ public class LocalSearch {
      * @param instance
      * @return
      */
-    public SLRLInstance localSearchBI(SLRLInstance instance){
+    /*public SLRLInstance localSearchBI(SLRLInstance instance){
         Solution initialSolution = new Solution(instance.getGraph(),instance.getK(),instance.getC(), instance.getRatio_r(), instance.getcLast(), instance.getSolved(),instance.getR_lower());
         int nrOfServers = initialSolution.getK();
         Solution bestSolution = initialSolution;
@@ -35,7 +35,7 @@ public class LocalSearch {
              if(!otherNode.equals(server) && !initialSolution.getGraph().getServers().contains(otherNode)){
              initialSolution.getGraph().clearUsages();
              initialSolution.getGraph().addServer(otherNode);
-             initialSolution.getGraph().updateConstraints();//.calculateUsagesAndNeighbourhoodsAfterServerAddition();
+             initialSolution.getGraph().calculateUsagesAndNeighbourhoodsAfterServerAddition();
 
                 int max_usage = initialSolution.getGraph().getMaxUsage();
                 int max_neighbourset = initialSolution.getGraph().getMaxNeighbourSet();
@@ -62,11 +62,11 @@ public class LocalSearch {
                 }
 
                 //for debugging purpose
-                /* else {
+                // else {
                     double newk =((double)(max_neighbourset+1)/(double)instance.getR_lower());
                     int c = initialSolution.getC();
                     int newMaxUsage = initialSolution.getGraph().getMaxUsage();
-                }*/
+                }//
                 initialSolution.getGraph().removeServer(otherNode);
              }
             }
@@ -75,7 +75,7 @@ public class LocalSearch {
         instance.setSolution(bestSolution);
         instance.snapshotL();
       return instance;
-    }
+    }*/
 
 
 

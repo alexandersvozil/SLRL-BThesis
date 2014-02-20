@@ -348,13 +348,19 @@ public class SLRLInstance {
 
         this.ratio_r= solution.getR();
         this.cLast = solution.getLastC();
-        this.graph = solution.getGraph();
+
+        graph.getServers().clear();
+        for(Node n : solution.getServers()){
+            graph.getServers().add(n);
+
+
+        }
 
         for(Node n : graph.getGraph()){
             n.setServer(false);
         }
 
-        for(Node n:graph.getServers()){
+        for(Node n:solution.getServers()){
             n.setServer(true);
         }
 

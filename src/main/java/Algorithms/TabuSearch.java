@@ -3,6 +3,7 @@ package Algorithms;
 import Graph.Node;
 import Parsing.SLRLInstance;
 import org.apache.log4j.Logger;
+import Graph.Graph;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,15 +27,17 @@ public class TabuSearch {
 
         Solution currentSol;
         Solution neighbourSol;
-        int t_L=30;
+        Graph g = instance.getGraph();
+        int t_L=180;
+        g.createPathsMap();
 
 
         Solution bestSolution = currentSol = new Solution(instance.getGraph(),instance.getK(),instance.getC(), instance.getRatio_r(), instance.getcLast(), instance.getSolved(), instance.getR_lower());
         tabuList.add(currentSol);
 
-        for(int i = 0; i<100; i++){
+        for(int i = 0; i<10000; i++){
             //search the best out of N(currentSol)
-            neighbourSol = local_search_withTabuList(currentSol);
+            neighbourSol = local_search_withTabuList(currentSol, g);
             //add the best neighbourSol to the tabulist
             tabuList.add(neighbourSol);
             //delete elements of tabulist which are older than t_L iterations
@@ -48,7 +51,7 @@ public class TabuSearch {
                 bestSolution.setSolved(true);
                 bestSolution = currentSol;
                 String servers = "";
-                for(Node n : bestSolution.getGraph().getServers()){
+                for(Node n : bestSolution.getServers()){
                     servers +=" " + n .getName();
                 }
                // log.debug(servers);
@@ -76,56 +79,64 @@ public class TabuSearch {
         //instance.snapshotL();
         return instance;
     }
-    private Solution local_search_withTabuList(Solution initialSolution){
+
+    private Solution local_search_withTabuList(Solution initialSolution,Graph g){
         //log.debug("-------------------NEW LOCAL SEARCH INDUCED BY TABU -------------");
         long sumsum=0;
         int nrOfServers = initialSolution.getK();
-        Solution bestSolution =  new Solution(initialSolution.getGraph(),initialSolution.getK(),initialSolution.getC(), Double.MAX_VALUE, Integer.MAX_VALUE,false
+        Solution bestSolution =  new Solution(initialSolution,initialSolution.getK(),initialSolution.getC(), Double.MAX_VALUE, Integer.MAX_VALUE,false
                 , initialSolution.getR_lower());
-        Solution currentSolution =new Solution(initialSolution.getGraph(),initialSolution.getK(),initialSolution.getC(), initialSolution.getR(),
+        Solution currentSolution =new Solution(initialSolution,initialSolution.getK(),initialSolution.getC(), initialSolution.getR(),
                 initialSolution.getLastC(),initialSolution.isSolved(), initialSolution.getR_lower());
 
+        g.getServers().clear();
+        for(Node n : currentSolution.getServers()){
+            g.getServers().add(n);
+        }
 
-        for(Node server : currentSolution.getGraph().getServers()){
-            currentSolution.getGraph().removeServer(server);
-            for(Node otherNode: currentSolution.getGraph().getGraph()){
-                if(!otherNode.equals(server) && !currentSolution.getGraph().getServers().contains(otherNode)){
-                    currentSolution.getGraph().clearUsages();
-                    currentSolution.getGraph().addServer(otherNode);
-                    currentSolution.getGraph().updateConstraints();//calculateUsagesAndNeighbourhoodsAfterServerAddition();
+         for(Node server : g.getServers()){
+            g.removeServer(server);
+            for(Node otherNode: g.getGraph()){
+                if(!otherNode.equals(server) && !g.getServers().contains(otherNode)){
+                    g.clearUsages();
+                    g.addServer(otherNode);
+                    g.updateConstraints();//calculateUsagesAndNeighbourhoodsAfterServerAddition();
 
-                    int max_usage = currentSolution.getGraph().getMaxUsage();
-                    int max_neighbourset = currentSolution.getGraph().getMaxNeighbourSet();
+                    int max_usage = g.getMaxUsage();
+                    int max_neighbourset = g.getMaxNeighbourSet();
 
 
                     //if better exchange
-                   // log.debug(max_usage +" "+ max_neighbourset+ " " + currentSolution.getGraph().size());
+                    //log.debug(max_usage +" "+ max_neighbourset+ " " + g.size());
 
 
-                    if(max_usage<=bestSolution.getC() && ((double)(max_neighbourset+1)/bestSolution.getR_lower()) < bestSolution.getR() && !tabuList.contains(currentSolution)){
+                    if(max_usage<=bestSolution.getC() && ((double)(max_neighbourset+1)/bestSolution.getR_lower()) < bestSolution.getR() && !tabuList.contains(g.getServers())){
                         double newr =((double)(max_neighbourset+1)/(double)bestSolution.getR_lower());
                         int c = currentSolution.getC();
 
-                   //  log.debug("^^^^^^^^^Found better solution"+  " new r: "+ newr+" old r: " +currentSolution.getR()+ " new Max usage: " + max_usage);
-                        bestSolution = new Solution(currentSolution.getGraph(),currentSolution.getK(),c,newr,max_usage,true,bestSolution.getR_lower());
-                        String servers = "";
-                       // for(Node n : currentSolution.getGraph().getServers()){
+                     //log.debug("^^^^^^^^^Found better solution"+  " new r: "+ newr+" old r: " +currentSolution.getR()+ " new Max usage: " + max_usage);
+                        bestSolution = new Solution(g,currentSolution.getK(),c,newr,max_usage,true,bestSolution.getR_lower());
+
+                        // String servers = "";
+                        // for(Node n : currentSolution.getGraph().getServers()){
                         //    servers +=" " + n .getName();
-                       // }
-                       // log.debug("Local search returning"+ bestSolution.getR() + " " + bestSolution.getLastC()+ " servers: "+ servers+ " neighbourset: "+ max_neighbourset);
+                        // }
+                        // log.debug("Local search returning"+ bestSolution.getR() + " " + bestSolution.getLastC()+ " servers: "+ servers+ " neighbourset: "+ max_neighbourset);
                     }
 
-                    if(!bestSolution.isSolved() && bestSolution.getLastC() > max_usage && !tabuList.contains(currentSolution))
+                    if(!bestSolution.isSolved() && bestSolution.getLastC() > max_usage && !tabuList.contains(g.getServers()))
                     {
                         double newr =((double)(max_neighbourset+1)/(double)bestSolution.getR_lower());
                         int c = currentSolution.getC();
-                    //    log.debug("^^^^^^^^^Found better solution in terms of c"+  " new r: "+ newr+" old r: " +currentSolution.getR()+ " new Max usage: " + max_usage);
-                        bestSolution = new Solution(currentSolution.getGraph(),currentSolution.getK(),c,newr,max_usage, max_usage<=c, bestSolution.getR_lower());
+                        //log.debug("^^^^^^^^^Found better solution in terms of c"+  " new r: "+ newr+" old r: " +currentSolution.getR()+ " new Max usage: " + max_usage);
+                        bestSolution = new Solution(g,currentSolution.getK(),c,newr,max_usage, max_usage<=c, bestSolution.getR_lower());
                     }
-                    currentSolution.getGraph().removeServer(otherNode);
+//                    currentSolution.removeServer(otherNode);
+                    g.removeServer(otherNode);
                 }
             }
-            currentSolution.getGraph().addServer(server);
+ //           currentSolution.addServer(server);
+             g.addServer(server);
         }
 
         return  bestSolution;

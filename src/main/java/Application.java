@@ -29,7 +29,6 @@ public class Application {
         TabuSearch tabuSearch = new TabuSearch();
 
         for(SLRLInstance slrlInstance: instanceList){
-            if(!slrlInstance.getTestInstanceName().equals("UUNET")) {
                 log.debug("------------------------------");
                 long start = System.currentTimeMillis();
                 greedyLocation.solve(slrlInstance);
@@ -51,7 +50,6 @@ public class Application {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                     log.error("solution incorrect");
                 }
-            }
         }
     }
 
