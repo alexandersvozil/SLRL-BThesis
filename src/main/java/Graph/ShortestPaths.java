@@ -23,10 +23,15 @@ public class ShortestPaths {
         pathLength = new HashMap<Node, Integer>();
 
         enrichPaths(n,graph);
+        /*System.out.println("--------" + n  + "--------");
+        for(Map.Entry<Node, Integer> entry : pathLength.entrySet()){
+            System.out.println(entry.getKey() + " shortest path: " +  entry.getValue());
+
+        }*/
     }
 
     private void enrichPaths(Node n, Graph graph) {
-        for(Node curNode : graph.getGraph())
+        for(Node curNode : graph.getGraph()){
             if(!curNode.equals(n)){
                 try {
                     Node path = graph.BFS2(n,curNode);
@@ -39,6 +44,7 @@ public class ShortestPaths {
                     e.printStackTrace();
                 }
             }
+        }
     }
 
     public Map<Node, List<Edge>> getShortest_Paths() {

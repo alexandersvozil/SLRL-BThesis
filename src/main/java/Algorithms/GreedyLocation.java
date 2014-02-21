@@ -31,6 +31,7 @@ public class GreedyLocation {
         boolean solved = false;
         //number of max connections passing one link
         Graph graph = instance.getGraph();
+        graph.createPathsMap();
         //number of servers allowed
         int k = instance.getK();
         // as long as there are servers left to be set, set a server
@@ -51,20 +52,22 @@ public class GreedyLocation {
             for (Node node : graph.getGraph()) {
                 if (node.isServer())
                     continue;
+
+
                 graph.addServer(node);
 
-                //this is the method that calculates all the stuff after adding a server. m(e) for each Edge and the Neighbourhood of the Server
-                graph.calculateUsagesAndNeighbourhoodsAfterServerAddition();
-
+                //this is the method that calculates all the stuff after adding a server. m(e) for each Edge and the neighbourhood of the servers
+                graph.updateConstraints();
                 int newMaxEdgeUsage = graph.getMaxUsage();
                 int newMaxNeighbourSet = graph.getMaxNeighbourSet();
+              // System.out.println(node.getName() +  "  " + newMaxNeighbourSet + " " +graph.getMaxUsage());
                 node.setMaxEdgeUsage(newMaxEdgeUsage);
-                node.setLabel("NH: "+newMaxNeighbourSet+ " m(e): " + newMaxEdgeUsage+" " );
+                node.setLabel("NH: "+newMaxNeighbourSet+ " m(e): " + newMaxEdgeUsage+" " ); /*for printing the graph */
 
                 /*
                 Two possibilities :
                  1.either is it a new minimum for the max m(e) € E
-                 2.it is a new minimum for maximum size of the neighbour sets
+                 2. or it is a new minimum for maximum size of the neighbour sets
                 */
 
                 /*Possibility 1:
@@ -75,34 +78,32 @@ public class GreedyLocation {
                     maxEdgeUsage = newMaxEdgeUsage;
                     bestNodeEdgeUsage = node;
                     maxEdgeUsageNeighbourSet = newMaxNeighbourSet;
-                    maxNeighbourSet = newMaxNeighbourSet;
+                    if ((maxNeighbourSet > newMaxNeighbourSet  && newMaxEdgeUsage <= c)) {
+                        maxNeighbourSet = newMaxNeighbourSet;
+                        bestNodeMinumNeighbourSet = node;
+                    }
+
 
                 }
+
                 /*Possibility 2:
                     new minimum for maximum size of the neighbour sets under the constraint that m(e) <= c
                  */
-
                 if ((maxNeighbourSet > newMaxNeighbourSet  && newMaxEdgeUsage <= c)) {
                     bestNodeMinumNeighbourSet = node;
-                    //log.debug("new best neighbourset: "+ newMaxNeighbourSet);
                     maxNeighbourSet = newMaxNeighbourSet;
+                   // log.debug("new bestnodeminimumneighbourset " + node);
                 }
                 // As we have to try every node, reset usages of the edges, and size of neighbhouring sets
                 graph.clearUsages();
                 //remove the node to try new one
-
                 instance.getGraph().removeServer(node);
-                instance.setSolved(solved);
             }
 
             /* After we tried every node choose the node with the lowest max neighbour set. */
 
             if (bestNodeMinumNeighbourSet == null ) {
                 //if there was none under the constraint m(e) < c, we choose the node with minimum maxEdge usage
-
-               // log.debug("C is not yet satisfied with the minimum neighbour set node, upper Bound c:"+ c+" with the lowest neighbourhood usage: " +  maxEdgeUsageNeighbourSet+ " hence" +
-               //        " I will choose this node with max usage: "+ bestNodeEdgeUsage.getMaxEdgeUsage());
-               //servers.add(bestNodeEdgeUsage);
                 bestNodeEdgeUsage.setServer(true);
                 graph.addServer(bestNodeEdgeUsage);
                 solved = bestNodeEdgeUsage.getMaxEdgeUsage() <= c;
@@ -112,24 +113,21 @@ public class GreedyLocation {
                 bestNodeMinumNeighbourSet.setServer(true);
                 cLast=bestNodeMinumNeighbourSet.getMaxEdgeUsage();
                 graph.addServer(bestNodeMinumNeighbourSet);
-               //log.debug("C is satisfied "+bestNodeMinumNeighbourSet.getMaxEdgeUsage()+" thus taking node with lowest neighbhourhood  "+ maxNeighbourSet );
                 solved=true;
             }
-            instance.setR(maxNeighbourSet + 1);
-            instance.setRatio_r((double) (maxNeighbourSet + 1) / (double) instance.getR_lower());
-            //log.debug("max neighbour set:" + (1 + maxNeighbourSet) + " R_lower: " + instance.getR_lower());
 
+            instance.setR(maxNeighbourSet);
+            instance.setRatio_r((double) (maxNeighbourSet) / (double) instance.getR_lower());
+            //log.debug("max neighbour set:" + (1 + maxNeighbourSet) + " R_lower: " + instance.getR_lower());
         }
-        if(!solved){
+       /* if(!solved){
             log.debug("-----------  Greedy Location didn't solve the instance -----------");
-        }
+        }*/
 
         instance.setSolved(solved);
 
-       // //make the screenshot
+       // make a screenshot
        // instance.snapshotG();
-
-        //make the screenshot
         instance.setcLast(cLast);
 
         return instance;

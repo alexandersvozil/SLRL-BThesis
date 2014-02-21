@@ -9,6 +9,7 @@ import ads1.graphprinter.GraphPrinter;
 import ads1.graphprinter.Traversable;
 import org.apache.log4j.Logger;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 /**
@@ -225,7 +226,18 @@ public class SLRLInstance {
 
     @Override
     public String toString() {
-        return "Parsing.SLRLInstance{" +
+        //modifying it for latex output
+        return
+                testInstanceName + " & " +
+                V + " & " +
+                E + " & " +
+                k + " & " +
+                r_lower + " & " +
+                r + " & " +
+                ratio_r + " & " +
+                c + " & "+
+                cLast + "\\\\ \\hline";
+        /*return "Parsing.SLRLInstance{" +
                 "testInstanceName='" + testInstanceName + '\'' +
                 ", k=" + k +
                 ", r=" + r +
@@ -238,7 +250,7 @@ public class SLRLInstance {
                 ", E=" + E +
                 ", cLast="+ cLast +
                 //", nodeVectorHashMap=" + graphToString() +
-                '}';
+                '}'; */
     }
 
     public String graphToString() {
@@ -345,15 +357,16 @@ public class SLRLInstance {
     }
 
     public void setSolution(Solution solution) {
-
-        this.ratio_r= solution.getR();
+        this.r= solution.getR();
+        this.ratio_r =  Math.floor(((double) solution.getR() /(double) r_lower) *1000)/1000;
         this.cLast = solution.getLastC();
+
+        if(solution.isSolved())
+            solved = true;
 
         graph.getServers().clear();
         for(Node n : solution.getServers()){
             graph.getServers().add(n);
-
-
         }
 
         for(Node n : graph.getGraph()){

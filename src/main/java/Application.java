@@ -29,20 +29,21 @@ public class Application {
         TabuSearch tabuSearch = new TabuSearch();
 
         for(SLRLInstance slrlInstance: instanceList){
-                log.debug("------------------------------");
+            if(slrlInstance.getTestInstanceName().equals("UUNET")){
+               // log.debug("------------------------------");
                 long start = System.currentTimeMillis();
                 greedyLocation.solve(slrlInstance);
                 long end = System.currentTimeMillis();
-                log.debug ("Greedy location costed "+ (end-start) + "ms");
-                log.debug(slrlInstance.toString());
+                //log.debug ("Greedy location costed "+ (end-start) + "ms");
+                //log.debug(slrlInstance.toString());
 
                 start = System.currentTimeMillis();
                 tabuSearch.tabu_search(slrlInstance);
                 end = System.currentTimeMillis();
-                log.debug ("tabu search costed "+ (end-start) + "ms");
+                //log.debug ("tabu search costed "+ (end-start) + "ms");
                 log.debug(slrlInstance.toString());
 
-                log.debug("correctness check:");
+                //log.debug("correctness check:");
                 CorrectnessTester k = new CorrectnessTester();
                 try {
                     k.testCorrectness(slrlInstance);
@@ -50,6 +51,7 @@ public class Application {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                     log.error("solution incorrect");
                 }
+            }
         }
     }
 

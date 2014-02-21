@@ -26,10 +26,7 @@ public class CorrectnessTester {
      * @throws SolutionWrongException this is thrown if the solution is not correct.
      */
     public void testCorrectness(SLRLInstance slrlInstance) throws SolutionWrongException{
-        //The instance was not solved, cannot check for correctness here
         Graph graph = slrlInstance.getGraph();
-        if(slrlInstance.getSolved()==false)
-            return;
 
         //k does not equal server size
         if(slrlInstance.getGraph().getServers().size() != slrlInstance.getK()){
@@ -94,17 +91,17 @@ public class CorrectnessTester {
         for(Node n : maxNeighborhood.keySet()){
             //first test, read out the usages
 
-            System.out.println("Server "+ n.getName()+ " has neighborhood of " + maxNeighborhood.get(n));
+           // System.out.println("Server "+ n.getName()+ " has neighborhood of " + maxNeighborhood.get(n));
             if(max < maxNeighborhood.get(n))
             {
                 max = maxNeighborhood.get(n);
             }
         }
-        //check if the neighhborhood constraint is fulfilled
-        if(max>slrlInstance.getR())
+        //check if the neighhborhood constraint is the same as the one that was calculated
+        if(!(max==slrlInstance.getR()))
         {
-            throw new SolutionWrongException("The neighborhood constraint was not fulfilled:" +
-                    "" + max +" is more than the allowed r:" + slrlInstance.getR());
+            throw new SolutionWrongException("The neighborhood constraint is not the same. Correctness calculated: " +
+                    "" + max +" is not the r of the instance: " + slrlInstance.getR());
         }
 
         int max_edge = -1;
@@ -115,7 +112,6 @@ public class CorrectnessTester {
                 }
             }
         }
-        System.out.println("m(e) is " + max_edge);
         if(max_edge > slrlInstance.getC()){
             throw  new SolutionWrongException("The edge usage constraint is was not fulfilled:" + max_edge + "is bigger" +
                     "than c: " + slrlInstance.getC());
@@ -131,7 +127,6 @@ public class CorrectnessTester {
         for(Node n : nodeList){
             pathsMap.put(n,new ShortestPaths(n,graph));
         }
-        //System.out.println("pre calculations done");
         return pathsMap;  //To change body of created methods use File | Settings | File Templates.
     }
 

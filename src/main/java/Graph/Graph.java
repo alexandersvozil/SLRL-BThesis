@@ -60,7 +60,6 @@ public class Graph {
         for(Node n : nodeList){
             pathsMap.put(n,new ShortestPaths(n,this));
         }
-       log.debug("precalculations done");
         this.pathsMap = pathsMap;
         return pathsMap;  //To change body of created methods use File | Settings | File Templates.
     }
@@ -160,12 +159,14 @@ public class Graph {
 
                 }
 
+
                 //increment usage of each and every server
                 //increment usage of the edges
                 for(Node k : nearestServers){
                    // maxNeighborhood.put(k,maxNeighborhood.get(k)+1);
                     k.increaseNeighbourhood();
                     List<Edge> usedEdges = pathsMap.get(n).getShortest_Paths().get(k);
+
 
                     //mark used edges
                     for(Edge e : usedEdges){
