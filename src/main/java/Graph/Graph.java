@@ -349,6 +349,10 @@ public class Graph {
         return servers;
     }
 
+    public void setServers(List<Node> servers) {
+       this.servers = servers;
+    }
+
     class Nodepair {
         Node node;
         Node parent;

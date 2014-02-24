@@ -1,4 +1,5 @@
 import Algorithms.GreedyLocation;
+import Algorithms.SimulatedAnnealing;
 import Algorithms.TabuSearch;
 import Correctness.CorrectnessTester;
 import Correctness.SolutionWrongException;
@@ -35,10 +36,12 @@ public class Application {
                 greedyLocation.solve(slrlInstance);
                 long end = System.currentTimeMillis();
                 //log.debug ("Greedy location costed "+ (end-start) + "ms");
-                //log.debug(slrlInstance.toString());
+                log.debug(slrlInstance.toString());
 
                 start = System.currentTimeMillis();
-                tabuSearch.tabu_search(slrlInstance);
+                //tabuSearch.tabu_search(slrlInstance);
+                SimulatedAnnealing sim = new SimulatedAnnealing(slrlInstance);
+                sim.calculate();
                 end = System.currentTimeMillis();
                 //log.debug ("tabu search costed "+ (end-start) + "ms");
                 log.debug(slrlInstance.toString());

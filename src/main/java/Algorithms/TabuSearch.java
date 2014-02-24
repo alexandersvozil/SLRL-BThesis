@@ -7,7 +7,9 @@ import Graph.Graph;
 import org.omg.PortableInterceptor.INACTIVE;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * User: svozil
@@ -22,21 +24,20 @@ public class TabuSearch {
      * @return instance after tabu search
      */
     private static Logger log = Logger.getLogger(TabuSearch.class);
-    private List<Solution> tabuList = new ArrayList<Solution>();
+    private Set<Solution> tabuList = new HashSet<Solution>();
 
     public SLRLInstance tabu_search(SLRLInstance instance){
+
+        //cannot be optimized further in regard to R
+        if(instance.getR() == 1 && instance.getcLast() <= instance.getC())
+            return instance;
 
         Solution currentSol;
         Solution neighbourSol;
         Graph g = instance.getGraph();
         int t_L=180;
-//        g.createPathsMap();
-
-
-
         Solution bestSolution = currentSol = new Solution(instance.getGraph(), instance.getR(), instance.getcLast(), instance.getSolved());
         tabuList.add(currentSol);
-        System.out.println(instance);
 
         for(int i = 0; i<1000; i++){
             //search the best out of N(currentSol)
@@ -48,35 +49,24 @@ public class TabuSearch {
                 tabuList.remove(0);
             }
             currentSol = neighbourSol;
+
             //if better exchange
             if(currentSol.getLastC()<=instance.getC() && currentSol.getR() < bestSolution.getR() ){
-                //log.debug("TABU^^^^^^^^^Found better solution"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ " new max usage: " + currentSol.getLastC());
                 bestSolution.setSolved(true);
                 bestSolution = currentSol;
-               /* String servers = "";
-                for(Node n : bestSolution.getServers()){
-                    servers +=" " + n .getName();
-                }
-               // log.debug(servers); */
 
+                //if the solution is the best possible solution, stop.
                 if(currentSol.getR()==1)
                     break;
-               // log.debug(servers);
             }
 
             if(!bestSolution.isSolved() && bestSolution.getLastC() > currentSol.getLastC() )
             {
-                 // log.info("TABU^^^^^^^^^Found better solution in terms of c"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ "" +
-                 //       "old max usage: "+ bestSolution.getLastC()+ " new max usage: " + currentSol.getLastC());
                 currentSol.setSolved(currentSol.getLastC() <= instance.getC());
                 bestSolution = currentSol;
             }
-            //  log.info("TABUDEBUG"+  " new r: "+ currentSol.getR()+" old r: " +bestSolution.getR()+ "" +
-            //        "old max usage: "+ bestSolution.getLastC()+ " new max usage: " + currentSol.getLastC());
 
         }
-
-
         instance.setSolution(bestSolution);
 
         /* Snapshot */
@@ -94,7 +84,7 @@ public class TabuSearch {
             g.getServers().add(n);
         }
 
-         for(Node server : g.getServers()){
+        for(Node server : g.getServers()){
             g.removeServer(server);
             for(Node otherNode: g.getGraph()){
                 if(!otherNode.equals(server) && !g.getServers().contains(otherNode)){
@@ -106,29 +96,18 @@ public class TabuSearch {
                     int max_neighbourset = g.getMaxNeighbourSet();
 
                     if(max_usage<=c
-                      && ((double)(max_neighbourset)) < bestSolution.getR()
-                      && !tabuList.contains(g.getServers())){
-
-
-                     //log.debug("^^^^^^^^^Found better solution"+  " new r: "+ newr+" old r: " +currentSolution.getR()+ " new Max usage: " + max_usage);
+                            && ((double)(max_neighbourset)) < bestSolution.getR()
+                            && !tabuList.contains(g.getServers())){
                         bestSolution = new Solution(g,max_neighbourset,max_usage,true);
-
-                        // String servers = "";
-                        // for(Node n : currentSolution.getGraph().getServers()){
-                        //    servers +=" " + n .getName();
-                        // }
-                        // log.debug("Local search returning"+ bestSolution.getR() + " " + bestSolution.getLastC()+ " servers: "+ servers+ " neighbourset: "+ max_neighbourset);
                     }
-
                     if(!bestSolution.isSolved() && bestSolution.getLastC() > max_usage && !tabuList.contains(g.getServers()))
                     {
-                        //log.debug("^^^^^^^^^Found better solution in terms of c"+  " new r: "+ newr+" old r: " +currentSolution.getR()+ " new Max usage: " + max_usage);
                         bestSolution = new Solution(g,max_neighbourset,max_usage, max_usage<=c);
                     }
                     g.removeServer(otherNode);
                 }
             }
-             g.addServer(server);
+            g.addServer(server);
         }
 
         return  bestSolution;

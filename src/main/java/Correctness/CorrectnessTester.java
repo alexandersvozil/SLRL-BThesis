@@ -20,7 +20,7 @@ import java.util.Map;
  */
 public class CorrectnessTester {
     /**
-     *  Tests correctness of given SLRL Soluion, i.e., neighbourhood constraint r, edge usage c,
+     *  Tests correctness of given SLRL Solution, i.e., neighbourhood constraint r, edge usage c,
      *  size of Server set k
      * @param slrlInstance the solved instance of the problem
      * @throws SolutionWrongException this is thrown if the solution is not correct.
@@ -28,9 +28,14 @@ public class CorrectnessTester {
     public void testCorrectness(SLRLInstance slrlInstance) throws SolutionWrongException{
         Graph graph = slrlInstance.getGraph();
 
+        //instance was not solved
+        if(!slrlInstance.getSolved())
+            return;
+
         //k does not equal server size
         if(slrlInstance.getGraph().getServers().size() != slrlInstance.getK()){
-            throw new SolutionWrongException("Server size does not equal constraint k");
+            throw new SolutionWrongException("Server size: "+ slrlInstance.getGraph().getServers().size() +
+                    ", does not equal constraint k:" + slrlInstance.getK());
         }
 
         /*prior to checking the neighborhood constraint, we will create a map pathsMap with
@@ -113,7 +118,7 @@ public class CorrectnessTester {
             }
         }
         if(max_edge > slrlInstance.getC()){
-            throw  new SolutionWrongException("The edge usage constraint is was not fulfilled:" + max_edge + "is bigger" +
+            throw  new SolutionWrongException("The edge usage constraint is not fulfilled:" + max_edge + "is bigger" +
                     "than c: " + slrlInstance.getC());
         }
 

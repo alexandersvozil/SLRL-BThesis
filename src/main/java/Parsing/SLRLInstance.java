@@ -234,9 +234,10 @@ public class SLRLInstance {
                 k + " & " +
                 r_lower + " & " +
                 r + " & " +
-                ratio_r + " & " +
+                Math.floor(ratio_r*1000)/1000 + " & " +
                 c + " & "+
-                cLast + "\\\\ \\hline";
+                cLast + " & "+
+                solved + "\\\\ \\hline";
         /*return "Parsing.SLRLInstance{" +
                 "testInstanceName='" + testInstanceName + '\'' +
                 ", k=" + k +
@@ -358,16 +359,20 @@ public class SLRLInstance {
 
     public void setSolution(Solution solution) {
         this.r= solution.getR();
-        this.ratio_r =  Math.floor(((double) solution.getR() /(double) r_lower) *1000)/1000;
+        this.ratio_r =  ((double) solution.getR() /(double) r_lower) ;
         this.cLast = solution.getLastC();
 
         if(solution.isSolved())
             solved = true;
+        else
+            solved = false;
 
-        graph.getServers().clear();
+        /*graph.getServers().clear();
         for(Node n : solution.getServers()){
             graph.getServers().add(n);
-        }
+            System.out.println(n);
+        }*/
+        graph.setServers(solution.getServers());
 
         for(Node n : graph.getGraph()){
             n.setServer(false);

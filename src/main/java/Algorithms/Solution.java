@@ -79,4 +79,13 @@ public class Solution {
         return servers;
     }
 
+    @Override
+    public String toString() {
+        return "Solution{" +
+                "r=" + r +
+                ", lastC=" + lastC +
+                ", solved=" + solved +
+                ", servers=" + servers +
+                '}';
+    }
 }

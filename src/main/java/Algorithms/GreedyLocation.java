@@ -108,16 +108,18 @@ public class GreedyLocation {
                 graph.addServer(bestNodeEdgeUsage);
                 solved = bestNodeEdgeUsage.getMaxEdgeUsage() <= c;
                 cLast = bestNodeEdgeUsage.getMaxEdgeUsage();
+                instance.setR(maxEdgeUsageNeighbourSet);
+                instance.setRatio_r((double) (maxEdgeUsageNeighbourSet) / (double) instance.getR_lower());
             } else {
                 //else choose the node with minimum maxneighbour set
                 bestNodeMinumNeighbourSet.setServer(true);
                 cLast=bestNodeMinumNeighbourSet.getMaxEdgeUsage();
                 graph.addServer(bestNodeMinumNeighbourSet);
                 solved=true;
+                instance.setR(maxNeighbourSet);
+                instance.setRatio_r((double) (maxNeighbourSet) / (double) instance.getR_lower());
             }
 
-            instance.setR(maxNeighbourSet);
-            instance.setRatio_r((double) (maxNeighbourSet) / (double) instance.getR_lower());
             //log.debug("max neighbour set:" + (1 + maxNeighbourSet) + " R_lower: " + instance.getR_lower());
         }
        /* if(!solved){
