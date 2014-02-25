@@ -1,3 +1,4 @@
+import Algorithms.GreedyDegree;
 import Algorithms.GreedyLocation;
 import Algorithms.SimulatedAnnealing;
 import Algorithms.TabuSearch;
@@ -26,36 +27,42 @@ public class Application {
         List<SLRLInstance> instanceList = parseTestInstances.parse();//parser.parse();
         log.debug("Instance Size: "+instanceList.size());
         GreedyLocation greedyLocation = new GreedyLocation() ;
+        GreedyDegree greedyDegree = new GreedyDegree();
         //LocalSearch localSearch = new LocalSearch();
         TabuSearch tabuSearch = new TabuSearch();
+        int solvedcounter =  0;
 
         for(SLRLInstance slrlInstance: instanceList){
-            if(slrlInstance.getTestInstanceName().equals("UUNET")){
-               // log.debug("------------------------------");
-                long start = System.currentTimeMillis();
-                greedyLocation.solve(slrlInstance);
-                long end = System.currentTimeMillis();
-                //log.debug ("Greedy location costed "+ (end-start) + "ms");
-                log.debug(slrlInstance.toString());
+            // log.debug("------------------------------");
+            long start = System.currentTimeMillis();
+            //greedyDegree.solve(slrlInstance);
+            greedyLocation.solve(slrlInstance);
+            long end = System.currentTimeMillis();
+            //log.debug ("Greedy location "+ (end-start) + "ms");
+            //log.debug(slrlInstance.toString());
 
-                start = System.currentTimeMillis();
-                //tabuSearch.tabu_search(slrlInstance);
-                SimulatedAnnealing sim = new SimulatedAnnealing(slrlInstance);
-                sim.calculate();
-                end = System.currentTimeMillis();
-                //log.debug ("tabu search costed "+ (end-start) + "ms");
-                log.debug(slrlInstance.toString());
+            start = System.currentTimeMillis();
+//            tabuSearch.tabu_search(slrlInstance);
+           // SimulatedAnnealing sim = new SimulatedAnnealing(slrlInstance);
+           // sim.calculate();
+            end = System.currentTimeMillis();
+            //log.debug ("tabu search costed "+ (end-start) + "ms");
+            //log.debug(slrlInstance.toString());
+            System.out.println(slrlInstance.toString());
 
-                //log.debug("correctness check:");
-                CorrectnessTester k = new CorrectnessTester();
-                try {
-                    k.testCorrectness(slrlInstance);
-                } catch (SolutionWrongException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                    log.error("solution incorrect");
-                }
+            if(slrlInstance.getSolved()){
+                solvedcounter++;
+            }
+            //log.debug("correctness check:");
+            CorrectnessTester k = new CorrectnessTester();
+            try {
+                k.testCorrectness(slrlInstance);
+            } catch (SolutionWrongException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                log.error("solution incorrect");
             }
         }
+        log.debug("Number of Instances: " + instanceList.size() + ", Solved:" + solvedcounter);
     }
 
 }

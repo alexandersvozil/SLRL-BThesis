@@ -235,56 +235,8 @@ public class Graph {
      * @return
      * @throws NodeNotFoundException
      */
-   /* public Node BFS2(Node from, Node goalNode) throws NodeNotFoundException {
-        clearParents(); // VERY EXPENSIVE 5 Seconds!!!
-        resetDistance();
-
-        // pseudocode partly taken from wikipedia: http://de.wikipedia.org/wiki/Breitensuche
-        if (goalNode == null)
-            throw new IllegalArgumentException("goalNode is null");
-        Queue<Node> nodeQueue = new LinkedList<Node>();
-        HashMap<Integer, Node> nodeHash= new HashMap<Integer, Node>();
-        //for the nodes already visited. HashSet because "contains" is O(1)
-        HashSet<Node> visited = new HashSet<Node>();
-        visited.add(from);
-        nodeQueue.offer(from);
-        nodeHash.put(from.getId(), from);
-        while (!nodeQueue.isEmpty()) {
-            Node curNode = nodeQueue.poll();
-
-            visited.add(curNode);
-            // log.debug("expanding"+nodepair.node);
-            if (curNode.equals(goalNode)) {
-                //ziel erreicht
-                //log.debug("Found node"+ goalNode+"coming from"+ node.getParent());
-                return goalNode;
-            }
-
-            for (Edge e : curNode.getEdges()) {
-                if (!visited.contains(e.getNode2())) {
-                    if (e.getNode2().getDistance() == curNode.getDistance() + 1 || e.getNode2().getDistance() == -1) {
-                        if(nodeHash.containsKey(e.getNode2().getId())){
-                            nodeHash.get(e.getNode2().getId()).addParent(curNode);
-
-                        }else{
-                            e.getNode2().addParent(curNode);
-                            nodeQueue.offer(e.getNode2());
-                            nodeHash.put(e.getNode2().getId(), e.getNode2());
-
-                        }
-
-                        e.getNode2().setDistance(curNode.getDistance() + 1);
-
-                    }
-
-                }
-            }
-        }
-
-        throw new NodeNotFoundException("Node was not found by bfs: Goal: " + goalNode.getName() + " Start: " + from.getName());
-    }*/
     public Node BFS2(Node from, Node goalNode) throws NodeNotFoundException {
-        clearParents(); // VERY EXPENSIVE 5 Seconds!!!
+        clearParents();
         resetDistance();
 
         // pseudocode partly taken from wikipedia: http://de.wikipedia.org/wiki/Breitensuche

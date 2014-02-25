@@ -40,6 +40,7 @@ public class GreedyLocation {
             int c =(int) Math.ceil((double)instance.getV() /(double) ((graph.getServerSize()+1) * instance.getMaxDegree()) * 4);
             instance.setC(c);
 
+
             int maxEdgeUsage = Integer.MAX_VALUE;
             int maxEdgeUsageNeighbourSet = Integer.MAX_VALUE;
             Node bestNodeEdgeUsage = null;

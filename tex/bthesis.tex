@@ -8,6 +8,10 @@
 \usepackage{algpseudocode}
 \usepackage{amssymb}
 \usepackage{tikz}
+\usepackage{float}
+
+\usetikzlibrary{shapes.multipart}
+
 \bibliographystyle{ieeetr} 
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \newtheorem{mydef}{Definition}
@@ -126,31 +130,6 @@ the worst case when locating a server.
 It is easy to see, that the subset of servers S is a solution to the problem, because the neighborhood subset
 of every server can easily be calculated with the graph and the set of servers. Also the load of each edge
 can be checked after each shortest path to the server has been looked at (the maximum is m(e)).
-
-\subsection{An Instance Of The Problem}
-\indent
-\indent
-\indent
-
-\includegraphics [scale=0.23]{cableandwireless1.png}\\
-The above shown graph is from the barebone network "Cable and Wireless".
-It is parsed out of a dataset of barebone networks provided by caida.\cite{caidabarebones}
-\\
-The nodes have two values in their bubbles: "NH and m(e)". NH stands for 
-the maximum neighbourhood if that node was chosen as a server. Choosing the first
-server obviously implicates the maximum neighbourhood, because there are
-no mirror servers yet on the graph.\\
-The multiplicity of an edge e, $m(e)$ is explained above. The number after
-$m(e)$ in the bubble describes $max(m(e))$ $ \forall e \in E$,
-if one decides to take this node as a server.
-The greedy algorithm takes the node with the lowest $max(m(e))$ first.
-\\
-\includegraphics [scale=0.23]{cableandwireless2.png}\\
-This graph shows the second server pick. This time our $m(e)$ is already low enough
-to suffice the constraint $m(e)\leq c $ thus the greedy algorithm proposed in the paper 
-by Miwa et al. \cite{mirrorserver} chooses the node with the lowest max neighbourhood which is
-coincidentally also the one with the lowest $m(e)$.
-
 
 \subsection{Proof of NP-Completeness}
 First, we have to show that SLRL is in NP. After guessing a solution of servers, meaning we 
@@ -274,43 +253,117 @@ if (G,k,r,c) is a solution there is a solution for 3SAT aswell.
 \end{enumerate}
 Thus 3SAT was successfully reduced to SLRL in polynomial time.
 Consequently, SLRL is NP-complete.$\square$
-\section{Algorithm}
-\subsection{Rules and Assumptions}
-\subsection{Other Algorithms}
-The only prior algorithm for this problem is the greedy algorithm proposed by
-Miwa et al. \cite{mirrorserver}. It greedily chooses the node with the 
-lowest maximal neighbourhood if the constraint $c\geq m(e) (\forall e \in E)$ is fulfilled. 
-Otherwise it will choose a node where $min(m(e)(\forall e \in E))$ is true.
 
+
+
+\section{SLRL as Optimization Problem}
+
+After thorougly discussing the decision problem of SLRL, the optimization problem
+of SLRL will be tackled next. Like \cite{mirrorserver}, I decided to optimize the maximum 
+neighborhood constraint considering the maximum usage of edges c.
+
+\subsection{An Instance Of The Problem}
+\begin{figure}[H]
+  \centering
+\begin{tikzpicture}
+  [scale=0.8,auto=left,every node/.style={circle split, draw,double, scale=0.65}]
+  \node (a) at (0,3) {Santa Clara, CA \nodepart{lower} NH:5, m(e):2};
+  \node (b) at (4,0) {Phoenix, AZ \nodepart{lower} NH:5, m(e):2};
+  \node (c) at (8,2) {Washington, DC \nodepart{lower} NH:5, m(e):2};
+  \node (d) at (9,5) {Baltimore, MD \nodepart{lower} NH:5, m(e):3};
+  \node (e) at (4,7) {Pittsburgh, PA \nodepart{lower} NH:5, m(e):3};
+     \foreach \from/\to in {a/b, a/c, a/e, b/c, c/d, d/e}
+      \draw (\from) -- (\to);
+\end{tikzpicture}
+  \caption{GetNet International as an Instance of SLRL}
+\end{figure}
+The above shown graph is from the barebone network "GetNet International".
+It is parsed out of a dataset of barebone networks provided by caida \cite{caidabarebones}.
+\\
+The nodes have two values in their lower part: "NH and m(e)". NH stands for 
+the maximum neighbourhood if that node was chosen as a server. Choosing the first
+server obviously implicates the maximum neighbourhood, because there are
+no mirror servers yet on the graph.\\
+The multiplicity of an edge e, $m(e)$ is explained above. The number after
+$m(e)$ in the lower part of the node describes $max(m(e))$ $ \forall e \in E$,
+if one decides to take this node as a server.
+The greedy algorithm takes the node with the lowest $max(m(e))$ first.
+
+\section{Implementation}
 
 \subsection{Data (Testinstances)}
 The data taken for the tests is from caida \cite{caidabarebones}. Parsing the
-data was one of the most difficult parts, because the data is not formatted well.
-It does not really follow the syntax proposed in the beginning of the file. I also
-modified the data in some concerns:
+data was not as trivial as it sounds, because the data is not formatted well,
+and several modifications have been done to fit the problem.
+Unfortunately the syntax proposed in the beginning of the file is not considered
+for each and every network, because different people added networks to the file.
+I also modified the data to make it fit for the problem and to approximate the
+data of the paper \cite{mirrorserver} as best as I could:
 \begin{itemize}
   \item If the graph G given for the barebone network was not connected,
     the connected component with less nodes of that graph is cut out.
-
   \item Normally the connected cities are listed in this manner:
-    "city,state,country", in order to match with the numbers 
+    "city,state,country", in order to match with the number of Nodes and Edges
     in the paper \cite{mirrorserver} only city and state are used for
     identification and the country is left out. Sometimes London
     is used on one hand as City in Canada and on the other hand in GB, denoted like this
     London, *, Canada and London, *, England. They are differentiated.
   \item Sometimes the State has a number. One example would be "Kansas City, KS2~"
     This is interpreted as "Kansas City, KS".
-
 \end{itemize}
 
-All those modifications were done to match the graphs proposed by \cite{mirrorserver}.
-As I did not have the data of the other paper used, I tried to match them with the number of
+All those modifications were done to match the graphs of \cite{mirrorserver} as closely as possible.
+As I did not have the data of the other paper, I tried to match them with the number of
 nodes and number of vertices. Unfortunately three instances of my instances do not
 match the number of nodes and / or vertices proposed from the paper above.
 The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".
 
-\section{Implementation}
-I decided to implement a tabu-search.
+\subsection{Other Algorithms}
+The only prior algorithm for this problem is the greedy algorithm proposed by
+Miwa et al. \cite{mirrorserver}. It greedily chooses the node with the 
+lowest maximal neighbourhood if the constraint $c\geq m(e) (\forall e \in E)$ is fulfilled. 
+Otherwise it will choose a node where $min(m(e)(\forall e \in E))$ is true:
+\begin{algorithm}[H]
+  \caption{GreedyLocation}
+  \begin{algorithmic}[2]
+    \Require G = (V,E), k, c 
+    \State $S \gets \emptyset$
+    \While {$|S| < k$}
+    \State Choose vertex $v$ such that the
+    maximum size of the neighbor sets of
+    $S \cup \{v\}$ is the minimum
+    for all vertices $v \in V$
+    under the constraint that $m(e) \leq c$
+    for all edges $e$. If there is no vertex 
+    satisfying this constraint, choose v
+    under the constraint that $max_{e \in E}m(e)$
+    is the minimum.
+    \State $S \gets S \cup \{ v \}$
+    \EndWhile
+    \If{$max_{e \in E}m(e) > c}$
+    \State Output infeasible
+    \EndIf\\
+    \Return S
+  \end{algorithmic}
+\end{algorithm}
+The evaluation of this algorithm using the test instances can be seen on table 
+\ref{table:greedyloc}. The runtime of the original algorithm is $\mathcal O(kn^{2}*(V+E))$,
+where $m = |E|$ and $n = |V|$. Seen  in general it is $\mathcal O(k * updateConstraints)$. 
+In the paper \cite{mirrorserver}, the constraints calculation works like this:
+To determine the shortest paths from one node to every other node the runtime
+is $\mathcal O(V+E)$ using Breadth-First Search. This needs to be done for every node once,
+which implies a runtime of $\mathcal O(n*(V+E))$. 
+This calculations suffice to determine the neighbor sets. To determine the maximum
+edge usage, every node (except the nodes in the server set) need to be looked 
+at again (the usage of the edges in the
+path(s) to the server(s) need to be incremented), 
+which results in a runtime of $\mathcal O(n^{2}*(V+E))$. 
+This process is executed for every server added thus resulting in the final runtime
+$\mathcal O(kn^{2}*(V+E))$.
+
+
+
+
 \subsection{Determination of the neighbour sets of a server and loads of the links}
 When a server is added to the graph, r and $max(m(e))$ $\forall e\in E $ need to be recalculated, as the shortest paths from the clients
 to the servers change. This has to be done for every client in order to ensure that every client has its path(s) and server(s).
@@ -408,48 +461,149 @@ The Local search simply exchanges a server with a client and recalculates the co
 \subsection{The tabu-search}
 \subsection{Networks and the approximation ratio}
 \section{Performance Evaluation}
-  \begin{tabular}{ | l | l | l | l | l | l | l | l | l |  }
+\newpage  
+\thispagestyle{empty}
+\begin{table}[H]
+  \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | }
     \hline
-    Networks & n & m &\# of Servers & r* & r & r/r* & c & m(c) \\ \hline
-    above.net & 22 & 25 & 3 & 8 & 13 & 1.625 & 3 & 3\\ \hline
-    At Home Network & 46 & 55 & 5 & 10 & 13 & 1.1 & 8 & 7\\ \hline
-    AGIS & 82 & 92 & 9 & 10 & 15 & 1.1 & 10 & 7\\ \hline
-    AT\&T WorldNet & 93 & 154 & 10 & 10 & 28 & 4.3 & 2 & 4\\ \hline
-    BBN Planet & 41 & 49 & 5 & 9 & 13 & 1.44 & 5 & 4\\ \hline
-    Cable Internet & 8 & 7 & 1 & 8 & 8 & 1.0 & 8 & 4\\ \hline
-    CAIS Internet & 37 & 44 & 4 & 10 & 12 & 1.1 & 10 & 7\\ \hline
-    CompuServe Network Services & 16 & 23 & 2 & 8 & 11 & 1.375 & 5 & 3\\ \hline
-    CRL Network Services & 35 & 50 & 4 & 9 & 21 & 1.44 & 4 & 4\\ \hline
-    DataXchange Network, Inc. & 8 & 24 & 1 & 8 & 8 & 1.0 & 5 & 1\\ \hline
-    Allegiance Telecom & 53 & 88 & 6 & 9 & 26 & 2.888 & 3 & 4\\ \hline
-    EPOCH Networks, Inc. & 29 & 30 & 3 & 10 & 14 & 1.4 & 6 & 6\\ \hline
-    EUnet & 28 & 30 & 3 & 10 & 23 & 2.3 & 2 & 2\\ \hline
-    Exodus & 14 & 19 & 2 & 7 & 9 & 1.285 & 4 & 3\\ \hline
-    Genuity & 48 & 53 & 5 & 10 & 12 & 1.3 & 8 & 8\\ \hline
-    GeoNet Communications, Inc. & 13 & 15 & 2 & 7 & 11 & 1.571& 3 & 1\\ \hline
-    GetNet International & 5 & 6 & 1 & 5 & 5 & 1.0 & 7 & 2\\ \hline
-    GlobalCenter & 9 & 36 & 1 & 9 & 9 & 1.0 & 5 & 1\\ \hline
-    GoodNet & 27 & 58 & 3 & 9 & 20 & 2.223 & 2 & 2\\ \hline
-    IDT Corp & 15 & 18 & 2 & 8 & 10 & 1.25 & 6 & 4\\ \hline
-    ipf.net & 5 & 5 & 1 & 5 & 5 & 1.0 & 7 & 2\\ \hline
-    iSTAR Internet Inc. & 20 & 22 & 2 & 10 & 14 & 1.4 & 6 & 6\\ \hline
-    Cable \& Wireless & 20 & 34 & 2 & 10 & 14 & 1.3 & 7 & 7\\ \hline
-    MindSpring & 41 & 45 & 5 & 9 & 22 & 2.44 & 2 & 2\\ \hline
-    Nap.Net, LLC & 6 & 7 & 1 & 6 & 6 & 1.0 & 5 & 1\\ \hline
-    Netrail Incorporated & 17 & 21 & 2 & 9 & 12 & 1.33 & 6 & 3\\ \hline
-    PSINet & 78 & 110 & 8 & 10 & 20 & 1.8 & 5 & 5\\ \hline
-    Qwest & 14 & 26 & 2 & 7 & 9 & 1.285 & 4 & 2\\ \hline
-    RISQ Network & 13 & 12 & 2 & 7 & 8 & 1.142 & 4 & 2\\ \hline
-    RNP & 27 & 35 & 3 & 9 & 12 & 1.333 & 3 & 2\\ \hline
-    Savvis Communications & 28 & 56 & 3 & 10 & 20 & 2.0 & 4 & 4\\ \hline
-    ServInt Internet Services & 23 & 34 & 3 & 8 & 11 & 1.375 & 5 & 5\\ \hline
-    Sprint & 21 & 37 & 3 & 7 & 12 & 1.428 & 4 & 3\\ \hline
-    Telstra Internet & 21 & 24 & 3 & 7 & 13 & 1.857 & 2 & 2\\ \hline
-    UUNET & 126 & 316 & 13 & 10 & 29 & 2.9 & 2 & 6\\ \hline
-    Verio & 35 & 72 & 4 & 9 & 19 & 2.0 & 3 & 3\\ \hline
-    VisiNet & 11 & 13 & 2 & 6 & 7 & 1.1666 & 4 & 2\\ \hline
-    XO Communications & 33 & 38 & 4 & 9 & 16 & 1.333 & 5 & 5\\ \hline
+    Networks & n & m &k & r* & r & r/r* & c & m(c) & solved \\ \hline
+    above.net & 22 & 25 & 3 & 8 & 13 & 1.625 & 3 & 3 & true\\ \hline
+    At Home Network & 46 & 55 & 5 & 10 & 11 & 1.1 & 8 & 7 & true\\ \hline
+    AGIS & 82 & 92 & 9 & 10 & 14 & 1.4 & 10 & 10 & true\\ \hline
+    AT\&T WorldNet & 93 & 154 & 10 & 10 & 28 & 2.8 & 2 & 5 & false\\ \hline
+    BBN Planet & 41 & 49 & 5 & 9 & 17 & 1.888 & 5 & 6 & false\\ \hline
+    Cable Internet & 8 & 7 & 1 & 8 & 8 & 1.0 & 8 & 7 & true\\ \hline
+    CAIS Internet & 37 & 44 & 4 & 10 & 12 & 1.2 & 10 & 9 & true\\ \hline
+    CompuServe Network Services & 16 & 23 & 2 & 8 & 11 & 1.375 & 5 & 3 & true\\ \hline
+    CRL Network Services & 35 & 50 & 4 & 9 & 12 & 1.333 & 4 & 4 & true\\ \hline
+    DataXchange Network, Inc. & 8 & 24 & 1 & 8 & 8 & 1.0 & 5 & 1 & true\\ \hline
+    Allegiance Telecom & 53 & 88 & 6 & 9 & 26 & 2.888 & 3 & 5 & false\\ \hline
+    EPOCH Networks, Inc. & 29 & 30 & 3 & 10 & 14 & 1.4 & 6 & 6 & true\\ \hline
+    EUnet & 28 & 30 & 3 & 10 & 23 & 2.3 & 2 & 2 & true\\ \hline
+    Exodus & 14 & 19 & 2 & 7 & 9 & 1.285 & 4 & 3 & true\\ \hline
+    Genuity & 48 & 53 & 5 & 10 & 14 & 1.4 & 8 & 8 & true\\ \hline
+    GeoNet Communications, Inc. & 13 & 15 & 2 & 7 & 10 & 1.428 & 3 & 2 & true\\ \hline
+    GetNet International & 5 & 6 & 1 & 5 & 5 & 1.0 & 7 & 2 & true\\ \hline
+    GlobalCenter & 9 & 36 & 1 & 9 & 9 & 1.0 & 5 & 1 & true\\ \hline
+    GoodNet & 27 & 58 & 3 & 9 & 20 & 2.222 & 2 & 2 & true\\ \hline
+    IDT Corp & 15 & 18 & 2 & 8 & 9 & 1.125 & 6 & 6 & true\\ \hline
+    ipf.net & 5 & 5 & 1 & 5 & 5 & 1.0 & 7 & 3 & true\\ \hline
+    iSTAR Internet Inc. & 20 & 22 & 2 & 10 & 14 & 1.4 & 6 & 5 & true\\ \hline
+    Cable \& Wireless & 20 & 34 & 2 & 10 & 12 & 1.2 & 7 & 7 & true\\ \hline
+    MindSpring & 41 & 45 & 5 & 9 & 22 & 2.444 & 2 & 2 & true\\ \hline
+    Nap.Net, LLC & 6 & 7 & 1 & 6 & 6 & 1.0 & 5 & 5 & true\\ \hline
+    Netrail Incorporated & 17 & 21 & 2 & 9 & 12 & 1.333 & 6 & 3 & true\\ \hline
+    PSINet & 78 & 110 & 8 & 10 & 19 & 1.9 & 5 & 8 & false\\ \hline
+    Qwest & 14 & 26 & 2 & 7 & 8 & 1.142 & 4 & 4 & true\\ \hline
+    RISQ Network & 13 & 12 & 2 & 7 & 8 & 1.142 & 4 & 2 & true\\ \hline
+    RNP & 27 & 35 & 3 & 9 & 12 & 1.333 & 3 & 2 & true\\ \hline
+    Savvis Communications & 28 & 56 & 3 & 10 & 20 & 2.0 & 4 & 4 & true\\ \hline
+    ServInt Internet Services & 23 & 34 & 3 & 8 & 12 & 1.5 & 5 & 4 & true\\ \hline
+    Sprint & 21 & 37 & 3 & 7 & 11 & 1.571 & 4 & 4 & true\\ \hline
+    Telstra Internet & 21 & 24 & 3 & 7 & 13 & 1.857 & 2 & 2 & true\\ \hline
+    UUNET & 126 & 316 & 13 & 10 & 29 & 2.9 & 2 & 6 & false\\ \hline
+    Verio & 35 & 72 & 4 & 9 & 17 & 1.888 & 3 & 3 & true\\ \hline
+    VisiNet & 11 & 13 & 2 & 6 & 10 & 1.666 & 4 & 4 & true\\ \hline
+    XO Communications & 33 & 38 & 4 & 9 & 16 & 1.777 & 5 & 5 & true\\ \hline
+ \end{tabular}
+ \caption{Greedy Algorithm}
+ \label{table:greedyloc}
+ \end{table}
+  
+\thispagestyle{empty}
+ \begin {table}[H]
+  \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | }
+    \hline
+    Networks & n & m & k & r* & r & r/r* & c & m(c) & Solved\\ \hline
+    above.net & 22 & 25 & 3 & 8 & 13 & 1.625 & 3 & 3 & true\\ \hline
+    At Home Network & 46 & 55 & 5 & 10 & 10 & 1.0 & 8 & 8 & true\\ \hline
+    AGIS & 82 & 92 & 9 & 10 & 11 & 1.1 & 10 & 8 & true\\ \hline
+    AT\&T WorldNet & 93 & 154 & 10 & 10 & 27 & 2.7 & 2 & 8 & false\\ \hline
+    BBN Planet & 41 & 49 & 5 & 9 & 13 & 1.444 & 5 & 5 & true\\ \hline
+    Cable Internet & 8 & 7 & 1 & 8 & 8 & 1.0 & 8 & 4 & true\\ \hline
+    CAIS Internet & 37 & 44 & 4 & 10 & 10 & 1.0 & 10 & 9 & true\\ \hline
+    CompuServe Network Services & 16 & 23 & 2 & 8 & 10 & 1.25 & 5 & 3 & true\\ \hline
+    CRL Network Services & 35 & 50 & 4 & 9 & 12 & 1.333 & 4 & 4 & true\\ \hline
+    DataXchange Network, Inc. & 8 & 24 & 1 & 8 & 8 & 1.0 & 5 & 2 & true\\ \hline
+    Allegiance Telecom & 53 & 88 & 6 & 9 & 19 & 2.111 & 3 & 5 & false\\ \hline
+    EPOCH Networks, Inc. & 29 & 30 & 3 & 10 & 14 & 1.4 & 6 & 6 & true\\ \hline
+    EUnet & 28 & 30 & 3 & 10 & 23 & 2.3 & 2 & 2 & true\\ \hline
+    Exodus & 14 & 19 & 2 & 7 & 9 & 1.285 & 4 & 3 & true\\ \hline
+    Genuity & 48 & 53 & 5 & 10 & 11 & 1.1 & 8 & 7 & true\\ \hline
+    GeoNet Communications, Inc. & 13 & 15 & 2 & 7 & 10 & 1.428 & 3 & 2 & true\\ \hline
+    GetNet International & 5 & 6 & 1 & 5 & 5 & 1.0 & 7 & 2 & true\\ \hline
+    GlobalCenter & 9 & 36 & 1 & 9 & 9 & 1.0 & 5 & 1 & true\\ \hline
+    GoodNet & 27 & 58 & 3 & 9 & 19 & 2.111 & 2 & 2 & true\\ \hline
+    IDT Corp & 15 & 18 & 2 & 8 & 8 & 1.0 & 6 & 6 & true\\ \hline
+    ipf.net & 5 & 5 & 1 & 5 & 5 & 1.0 & 7 & 3 & true\\ \hline
+    iSTAR Internet Inc. & 20 & 22 & 2 & 10 & 14 & 1.4 & 6 & 5 & true\\ \hline
+    Cable \& Wireless & 20 & 34 & 2 & 10 & 10 & 1.0 & 7 & 7 & true\\ \hline
+    MindSpring & 41 & 45 & 5 & 9 & 22 & 2.444 & 2 & 2 & true\\ \hline
+    Nap.Net, LLC & 6 & 7 & 1 & 6 & 6 & 1.0 & 5 & 5 & true\\ \hline
+    Netrail Incorporated & 17 & 21 & 2 & 9 & 11 & 1.222 & 6 & 3 & true\\ \hline
+    PSINet & 78 & 110 & 8 & 10 & 16 & 1.6 & 5 & 5 & true\\ \hline
+    Qwest & 14 & 26 & 2 & 7 & 8 & 1.142 & 4 & 2 & true\\ \hline
+    RISQ Network & 13 & 12 & 2 & 7 & 8 & 1.142 & 4 & 2 & true\\ \hline
+    RNP & 27 & 35 & 3 & 9 & 12 & 1.333 & 3 & 2 & true\\ \hline
+    Savvis Communications & 28 & 56 & 3 & 10 & 19 & 1.9 & 4 & 4 & true\\ \hline
+    ServInt Internet Services & 23 & 34 & 3 & 8 & 9 & 1.125 & 5 & 5 & true\\ \hline
+    Sprint & 21 & 37 & 3 & 7 & 9 & 1.285 & 4 & 3 & true\\ \hline
+    Telstra Internet & 21 & 24 & 3 & 7 & 13 & 1.857 & 2 & 2 & true\\ \hline
+    UUNET & 126 & 316 & 13 & 10 & 30 & 3.0 & 2 & 4 & false\\ \hline
+    Verio & 35 & 72 & 4 & 9 & 17 & 1.888 & 3 & 3 & true\\ \hline
+    VisiNet & 11 & 13 & 2 & 6 & 7 & 1.166 & 4 & 2 & true\\ \hline
+    XO Communications & 33 & 38 & 4 & 9 & 11 & 1.222 & 5 & 5 & true\\ \hline
   \end{tabular}
+  \caption{Simulated Annealing}
+\end{table}
+
+\thispagestyle{empty}
+\begin{table}[H]
+  \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l |  }
+    \hline
+    Networks & n & m & k & r* & r & r/r* & c & m(c) & Solved\\ \hline
+    above.net & 22 & 25 & 3 & 8 & 13 & 1.625 & 3 & 3 & true\\ \hline
+    At Home Network & 46 & 55 & 5 & 10 & 10 & 1.0 & 8 & 6 & true\\ \hline
+    AGIS & 82 & 92 & 9 & 10 & 11 & 1.1 & 10 & 9 & true\\ \hline
+    AT\&T WorldNet & 93 & 154 & 10 & 10 & 42 & 4.2 & 2 & 4 & false\\ \hline
+    BBN Planet & 41 & 49 & 5 & 9 & 13 & 1.444 & 5 & 5 & true\\ \hline
+    Cable Internet & 8 & 7 & 1 & 8 & 8 & 1.0 & 8 & 7 & true\\ \hline
+    CAIS Internet & 37 & 44 & 4 & 10 & 10 & 1.0 & 10 & 9 & true\\ \hline
+    CompuServe Network Services & 16 & 23 & 2 & 8 & 10 & 1.25 & 5 & 3 & true\\ \hline
+    CRL Network Services & 35 & 50 & 4 & 9 & 12 & 1.333 & 4 & 4 & true\\ \hline
+    DataXchange Network, Inc. & 8 & 24 & 1 & 8 & 8 & 1.0 & 5 & 1 & true\\ \hline
+    Allegiance Telecom & 53 & 88 & 6 & 9 & 25 & 2.777 & 3 & 4 & false\\ \hline
+    EPOCH Networks, Inc. & 29 & 30 & 3 & 10 & 14 & 1.4 & 6 & 6 & true\\ \hline
+    EUnet & 28 & 30 & 3 & 10 & 23 & 2.3 & 2 & 2 & true\\ \hline
+    Exodus & 14 & 19 & 2 & 7 & 9 & 1.285 & 4 & 3 & true\\ \hline
+    Genuity & 48 & 53 & 5 & 10 & 12 & 1.2 & 8 & 8 & true\\ \hline
+    GeoNet Communications, Inc. & 13 & 15 & 2 & 7 & 10 & 1.428 & 3 & 2 & true\\ \hline
+    GetNet International & 5 & 6 & 1 & 5 & 5 & 1.0 & 7 & 2 & true\\ \hline
+    GlobalCenter & 9 & 36 & 1 & 9 & 9 & 1.0 & 5 & 1 & true\\ \hline
+    GoodNet & 27 & 58 & 3 & 9 & 19 & 2.111 & 2 & 2 & true\\ \hline
+    IDT Corp & 15 & 18 & 2 & 8 & 9 & 1.125 & 6 & 6 & true\\ \hline
+    ipf.net & 5 & 5 & 1 & 5 & 5 & 1.0 & 7 & 3 & true\\ \hline
+    iSTAR Internet Inc. & 20 & 22 & 2 & 10 & 14 & 1.4 & 6 & 5 & true\\ \hline
+    Cable \& Wireless & 20 & 34 & 2 & 10 & 12 & 1.2 & 7 & 7 & true\\ \hline
+    MindSpring & 41 & 45 & 5 & 9 & 22 & 2.444 & 2 & 2 & true\\ \hline
+    Nap.Net, LLC & 6 & 7 & 1 & 6 & 6 & 1.0 & 5 & 5 & true\\ \hline
+    Netrail Incorporated & 17 & 21 & 2 & 9 & 11 & 1.222 & 6 & 3 & true\\ \hline
+    PSINet & 78 & 110 & 8 & 10 & 18 & 1.8 & 5 & 5 & true\\ \hline
+    Qwest & 14 & 26 & 2 & 7 & 8 & 1.142 & 4 & 4 & true\\ \hline
+    RISQ Network & 13 & 12 & 2 & 7 & 8 & 1.142 & 4 & 2 & true\\ \hline
+    RNP & 27 & 35 & 3 & 9 & 12 & 1.333 & 3 & 2 & true\\ \hline
+    Savvis Communications & 28 & 56 & 3 & 10 & 19 & 1.9 & 4 & 4 & true\\ \hline
+    ServInt Internet Services & 23 & 34 & 3 & 8 & 11 & 1.375 & 5 & 5 & true\\ \hline
+    Sprint & 21 & 37 & 3 & 7 & 9 & 1.285 & 4 & 4 & true\\ \hline
+    Telstra Internet & 21 & 24 & 3 & 7 & 13 & 1.857 & 2 & 2 & true\\ \hline
+    UUNET & 126 & 316 & 13 & 10 & 29 & 2.9 & 2 & 6 & false\\ \hline
+    Verio & 35 & 72 & 4 & 9 & 17 & 1.888 & 3 & 3 & true\\ \hline
+    VisiNet & 11 & 13 & 2 & 6 & 7 & 1.166 & 4 & 2 & true\\ \hline
+    XO Communications & 33 & 38 & 4 & 9 & 11 & 1.222 & 5 & 5 & true\\ \hline
+  \end{tabular}
+  \caption{Tabu Search}
+\end{table}
+
 \section{Conclusion}
 
 \bibliography{bibtex}
