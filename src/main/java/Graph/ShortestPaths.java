@@ -31,6 +31,18 @@ public class ShortestPaths {
     }
 
     private void enrichPaths(Node n, Graph graph) {
+        graph.BFS(n);
+        for(Node curNode : graph.getGraph()){
+            if(!curNode.equals(n)){
+                    pathLength.put(curNode, curNode.getDistance());
+                    //the edges used, are stored in the parent nodes, so we need to extract them
+                    List<Edge> usedEdges = graph.markPath2_list(curNode);
+                    shortest_Paths.put(curNode,usedEdges);
+            }
+        }
+    }
+
+/*    private void enrichPaths2(Node n, Graph graph) {
         for(Node curNode : graph.getGraph()){
             if(!curNode.equals(n)){
                 try {
@@ -45,7 +57,7 @@ public class ShortestPaths {
                 }
             }
         }
-    }
+    }*/
 
     public Map<Node, List<Edge>> getShortest_Paths() {
         return shortest_Paths;

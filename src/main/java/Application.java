@@ -43,8 +43,8 @@ public class Application {
 
             start = System.currentTimeMillis();
 //            tabuSearch.tabu_search(slrlInstance);
-           // SimulatedAnnealing sim = new SimulatedAnnealing(slrlInstance);
-           // sim.calculate();
+            SimulatedAnnealing sim = new SimulatedAnnealing(slrlInstance);
+            sim.calculate();
             end = System.currentTimeMillis();
             //log.debug ("tabu search costed "+ (end-start) + "ms");
             //log.debug(slrlInstance.toString());

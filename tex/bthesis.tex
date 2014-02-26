@@ -77,7 +77,7 @@ where the distance from the facilities
 to their farthest assigned potential client should be minimum."
 The p-center problem is one of the best known NP-hard discrete location problems.
 For large instances, it is impractical to solve the problem exactly.
-There have been very good results with the tabu-search and variable neighborhood search \cite{Mladenovic00solvingthe}
+There have been very good results with the tabu search and variable neighborhood search \cite{Mladenovic00solvingthe}
 \cite{KarivHakimi1979}.
 
 \subsubsection {P-Median Problem}
@@ -118,13 +118,6 @@ the worst case when locating a server.
     and a subset $|V_i|$ for each Server $s_i \in S$, where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$, r $\geq  |V_i|$ 
   and is $c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.} 
 
-  %$k = \|S\|$, where S is the set of servers $S = \{s_1,s_2,\dots s_k\} \subseteq V$\\
-  %  r $\geq  \|V_i\|$ $(i=1,2,\dots,k)$ where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$\\
-  %$c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.
-  %\textbf{Wanted:} 
-  %{\itshape A set of Servers $S = \{s_1, s_2,\dots, s_k \} \subseteq V$ such that $|V_i|\leq r$
-  %    $(i = 1,2, \dots,k)$ where $V_i$ is the neighbour set of $s_i$  $(i = 1,2,\dots,k)$ and that
-  %$m(e) \leq c$ $(\forall e \in E)$.}
 \end{mydef}
 
 It is easy to see, that the subset of servers S is a solution to the problem, because the neighborhood subset
@@ -144,7 +137,7 @@ After proving that SLRL is in NP, it can be shown, that 3SAT can be reduced to S
 implying SLRL is NP-Complete \cite{Garey:1979:CIG:578533}.
 This proof is merely a rewriting of Miwa et al. \cite{mirrorserver}, as it is one of the first proofs I saw of 
 this kind, it was really interesting for me to figure it out.
-3SAT is like the satisfiability problem for arbitrary formulars, but in 3SAT the formula must be in KNF and 
+3SAT is like the satisfiability problem for arbitrary formulas, but in 3SAT the formula must be in KNF and 
 each clause may only consist of three literals. A solution for 3SAT would be a truth assignment to every
 variable. An instance of 3SAT (U,C) consists of a set of clauses C and a set of variables U.\\
 To reduce 3SAT to SLRL, and thus to prove that SLRL is at least as hard as 3SAT, we need to find a 
@@ -226,7 +219,7 @@ To prove the statement, it will be first shown, that if 3SAT has a Solution SLRL
     and as a result the first part of the equivalence is proved.}
 \end{enumerate}
 To finish our prove we need to show the converse, i.e., 
-if (G,k,r,c) is a solution there is a solution for 3SAT aswell. 
+if (G,k,r,c) is a solution there is also a solution for 3SAT. 
 
 \begin{enumerate}
   \item{Assume (G,k,r,c) has a solution. Let $G_i, (i=1,\dots,n)$ be the subgraph induced
@@ -237,7 +230,7 @@ if (G,k,r,c) is a solution there is a solution for 3SAT aswell.
       $c_j for j=(1..m)$. The problem there is, that not only is m != n(concerning constraint k),
       but also that constraint c would be unsatisfied, because more than one path would use 
       the edge connecting $c_j$ and either $f_i$ or $t_i$ (there are m + 2 vertices in $G_i$).
-    Thus placing a server on any $c_j$ is not possible, because it would automatically violate contraint c.}
+    Thus placing a server on any $c_j$ is not possible, because it would automatically violate constraint c.}
   \item{Assume that the servers are placed on $v_{ij}$. This would also satisfy the neighborhood 
       constraint r, but it would certainly violate the constraint c, because the degree of $v_{ij}$ is two and
       and the number of vertices in $G_i$ is m+2. All of them would need to use one of the two edges for their shortest path,
@@ -258,7 +251,7 @@ Consequently, SLRL is NP-complete.$\square$
 
 \section{SLRL as Optimization Problem}
 
-After thorougly discussing the decision problem of SLRL, the optimization problem
+After thoroughly discussing the decision problem of SLRL, the optimization problem
 of SLRL will be tackled next. Like \cite{mirrorserver}, I decided to optimize the maximum 
 neighborhood constraint considering the maximum usage of edges c.
 
@@ -291,7 +284,7 @@ The greedy algorithm takes the node with the lowest $max(m(e))$ first.
 
 \section{Implementation}
 
-\subsection{Data (Testinstances)}
+\subsection{Data (test instances)}
 The data taken for the tests is from caida \cite{caidabarebones}. Parsing the
 data was not as trivial as it sounds, because the data is not formatted well,
 and several modifications have been done to fit the problem.
@@ -346,71 +339,40 @@ Otherwise it will choose a node where $min(m(e)(\forall e \in E))$ is true:
     \Return S
   \end{algorithmic}
 \end{algorithm}
-The evaluation of this algorithm using the test instances can be seen on table 
-\ref{table:greedyloc}. The runtime of the original algorithm is $\mathcal O(kn^{2}*(V+E))$,
+ The runtime of the original algorithm is $\mathcal O(kn^{2}*(V+E))$,
 where $m = |E|$ and $n = |V|$. Seen  in general it is $\mathcal O(k * updateConstraints)$. 
 In the paper \cite{mirrorserver}, the constraints calculation works like this:
-To determine the shortest paths from one node to every other node the runtime
-is $\mathcal O(V+E)$ using Breadth-First Search. This needs to be done for every node once,
+To determine the shortest paths from one node to every other node takes 
+$\mathcal O(V+E)$ using Breadth-First Search. This needs to be done for every node once,
 which implies a runtime of $\mathcal O(n*(V+E))$. 
-This calculations suffice to determine the neighbor sets. To determine the maximum
-edge usage, every node (except the nodes in the server set) need to be looked 
+This calculations suffice to determine the size of the maximum neighbor set r . To determine the maximum
+edge usage, every node (except the nodes in the server set) needs to be looked 
 at again (the usage of the edges in the
-path(s) to the server(s) need to be incremented), 
-which results in a runtime of $\mathcal O(n^{2}*(V+E))$. 
-This process is executed for every server added thus resulting in the final runtime
-$\mathcal O(kn^{2}*(V+E))$.
-
-
-
+path(s) to the server(s) need to be incremented, and a path can maximally be the whole graph), 
+which results in a runtime of $\mathcal O(n^{2}*(V+E))$.   
+This process is executed for every server added, thus resulting in the final runtime
+$\mathcal O(kn^{2}*(V+E))$. The evaluation of this algorithm using the test instances can be seen on table 
+\ref{table:greedyloc}.
 
 \subsection{Determination of the neighbour sets of a server and loads of the links}
-When a server is added to the graph, r and $max(m(e))$ $\forall e\in E $ need to be recalculated, as the shortest paths from the clients
-to the servers change. This has to be done for every client in order to ensure that every client has its path(s) and server(s).
-The outer loop goes through every n that is not a server and tests out every server if it is the closest. There can be more than one 
-closest server. It will be saved in the nearestServersList. The path to the server is then marked. If there is a new nearest Server, these
-stats are reset and the newly found nearest servers edges are marked.
-It takes $\mathcal O(|V|-|S| * |S| * |V+E|^2 ) $ to calculate the new r and the new $max(m(e))$ $\forall e\in E$, as BFS costs $ \mathcal O(|V| + |E|) $
-and backtracking every path can also result in visiting every node and every edge and thus costs $\mathcal O(|V| + |E|)$.
-\begin{algorithm}[H]
-  \caption{constraintsCalculation}
-  \begin{algorithmic}[2]
-    \Require Graph (V,E) G, Servers S
-    \For{Each node n $\in G$}
-    \If{!($n \in S$)}
-    \State $nearestServersList \gets \{\};$ 
-    \State $minServer \gets 0;$ \Comment The stepcounter to the nearest server(s)
-    \For {Each Server $ s \in S$}
-    \State $BFS2(n,s)$
-    \State $p \gets s;$
-    \State $i \gets s.getDistance() $ \Comment distance to server acquired in BFS 
-    \If {$i \leq minServer || nearestServersList.isEmpty()$}
-    \If {$i < minServer$}
-    \For{Each Server prevNearest $\in nearestServersList$}
-    \State $prevnearest.tmpNeighbourhood=0;$
-    \State $nearestServersList.clear();$
-    \State $usedEdges.clear();$
-    \EndFor
-    \EndIf
-    \State $minServer = i;$ \Comment new nearest server found, set length
-    \State $nearestServersList.add(s);$ \Comment add it to the list of nearest servers 
-    \State $s.tmpNeighbourhood += 1;$ \Comment adds one to the temporal neighbourhood (it may get reset later on)
-    \State $markPath2(s)$ \Comment This method recusively walks back every node's parents list to determine every path and add it to the usedEdges list.
-    \EndIf 
-    \EndFor
-    \For{Each Server s $\in nearestServerList$}
-    \State $s.neighborhood += s.tmpNeighbourhood;$
-    \State $s.tmpNeighbourhood = 0;$
-    \EndFor
-    \State $markEdges();$ \Comment increments usage of each usedEdges
-    \EndIf
-    \EndFor
-  \end{algorithmic}
-\end{algorithm}
+As briefly described in the last section, when a server is added to the graph, the size of the maximum neighbor set r and
+$ max_{e \in E}m(e)$ (namely the maximum usage of all edges) need to be recalculated, as the shortest paths from the nodes 
+to the servers change. This has to be done for every node (except the vertices in the server set) in order to ensure, that 
+every node has its path(s) to the nearest server(s). I tried to speed up the constraint calculation, 
+because on a big graph it took a lot of time and also for local search algorithms the constraints need to be calculated
+far more often than k times (servers need to be swapped a lot, implying a need for a faster constraint calculation).
+My approach was to calculate all the paths before adding servers and also to save the edges used in the paths.
+This is indeed in $\mathcal O(n^{3}*(V+E))$, but constraint calculation after adding and removing a server is much faster,
+because the edges used are already saved and every node knows it's nearest server(s) in $\mathcal O(|S|)$. Saving the 
+every edge used in every path enabled me to do the constraint calculation without using the breadth first search. Which results
+in a runtime $\mathcal O(kn*(V+E))$ which is a obviously faster than $\mathcal O(kn^{2}*(V+E))$ with the disadvantage of more memory usage.
+
 \subsection{Modified BFS}
-The Breadth first search needed to be modified in order for it to be able to find all shortest paths
+The breadth first search needed to be modified enabling it to find all the shortest paths 
 from one node to another, as we need to consider every shortest path in order to simulate
-the worst case scenario regarding load on links. It's runtime $\mathcal O(|V| + |E|)$ remains unmodifed.
+the worst case scenario regarding load on links. Also, to reconstruct the paths, a list of parent nodes is saved
+in every node, when reached.
+It's runtime $\mathcal O(|V| + |E|)$, remains unmodified.
 
 \begin{algorithm}[H]
   \caption{BFS2}
@@ -421,7 +383,7 @@ the worst case scenario regarding load on links. It's runtime $\mathcal O(|V| + 
     \State Queue$<$Node$>$ nodeQueue $\gets \{\};$
     \State Set$<$Node$>$ visited $\gets \{\};$
     \State $visited.add(start);$
-    \State $nodeQueue.offer(start);$ \Comment \begin{itshape} Nodepair saves the node and the parentnode,
+    \State $nodeQueue.offer(start);$ \Comment \begin{itshape} Nodepair saves the node and the parent node,
     so all the paths can be reconstructed\end{itshape}
     \While {$!nodeQueue.isEmpty()$}
   \State $Node$ $curNode$ $=$ $nodeQueue.poll();$ \Comment \begin{itshape} get first node out of queue\end{itshape}
@@ -449,6 +411,7 @@ the worst case scenario regarding load on links. It's runtime $\mathcal O(|V| + 
     \EndWhile
   \end{algorithmic}
 \end{algorithm}
+
 \subsection{The local search}
 The Local search simply exchanges a server with a client and recalculates the constraints to create a neighborhood N of feasible solutions.
 
@@ -458,8 +421,13 @@ The Local search simply exchanges a server with a client and recalculates the co
 \Require Graph(V,E), Set
 \end {algorithmic}
 \end {algorithm}
+
 \subsection{The tabu-search}
-\subsection{Networks and the approximation ratio}
+
+\subsection{Simulated Annealing}
+
+\subsection{A faster greedy algorithm: GreedyDegree}
+
 \section{Performance Evaluation}
 \newpage  
 \thispagestyle{empty}

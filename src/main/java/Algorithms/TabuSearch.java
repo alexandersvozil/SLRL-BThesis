@@ -35,11 +35,11 @@ public class TabuSearch {
         Solution currentSol;
         Solution neighbourSol;
         Graph g = instance.getGraph();
-        int t_L=180;
+        int t_L=580;
         Solution bestSolution = currentSol = new Solution(instance.getGraph(), instance.getR(), instance.getcLast(), instance.getSolved());
         tabuList.add(currentSol);
 
-        for(int i = 0; i<1000; i++){
+        for(int i = 0; i<4000; i++){
             //search the best out of N(currentSol)
             neighbourSol = local_search_withTabuList(currentSol, g, instance.getK(), instance.getC());
             //add the best neighbourSol to the tabulist
