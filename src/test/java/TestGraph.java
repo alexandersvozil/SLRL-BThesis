@@ -119,8 +119,9 @@ public class TestGraph {
         graph1.addNode(E);
         graph1.addNode(F);
 
-       Node path =  graph1.BFS2(A,E);
-        graph1.markPath2(path);
+       //Node path =  graph1.BFS2(A,E);
+        graph1.BFS(A);
+        graph1.markPath2(E);
         graph1.markEdges();
         snapshotG(graph);
         //log.debug(A);
@@ -201,13 +202,15 @@ public class TestGraph {
         graph1.addNode(E);
         graph1.addNode(F);
 
-        graph1.BFS2(A,F);
+        log.debug("here");
+        graph1.BFS(A);
+        log.debug("here");
         graph1.markPath2(F);
         graph1.markEdges();
         graph1.clearParents();
-
         assertTrue(e1_B.getTimesUsed()==1);
         assertTrue(e1_A.getTimesUsed() == 1);
+        snapshotG(graph1);
 
         assertTrue(e2_C.getTimesUsed()==1);
         assertTrue(e2_A.getTimesUsed() == 1);
@@ -226,19 +229,19 @@ public class TestGraph {
 
         assertTrue(e7_E.getTimesUsed()==1);
         assertTrue(e7_D.getTimesUsed()==1);
-        graph1.BFS2(E,F);
+        graph1.BFS(E);
         graph1.markPath2(F);
         graph1.markEdges();
         graph1.clearParents();
-        graph1.BFS2(B,F);
+        graph1.BFS(B);
         graph1.markPath2(F);
         graph1.markEdges();
         graph1.clearParents();
-        graph1.BFS2(C,F);
+        graph1.BFS(C);
         graph1.markPath2(F);
         graph1.markEdges();
         graph1.clearParents();
-        graph1.BFS2(D,F);
+        graph1.BFS(D);
         graph1.markPath2(F);
         graph1.markEdges();
         graph1.clearParents();
@@ -280,8 +283,8 @@ public class TestGraph {
         graph1.addNode(C);
         graph1.addNode(D);
 
-        Node path = graph1.BFS2(A,D);
-        graph1.markPath2(path);
+        graph1.BFS(A);
+        graph1.markPath2(D);
         graph1.markEdges();
         assertTrue(e1_B.getTimesUsed()==1);
         assertTrue(e1_A.getTimesUsed() == 1);
@@ -351,68 +354,13 @@ public class TestGraph {
         graph1.addNode(F);
 
         graph1.addServer(F);
-        graph1.calculateUsagesAndNeighbourhoodsAfterServerAddition();
-        //FEHLER
+        graph1.createPathsMap();
+        graph1.updateConstraints();
+
         assertTrue(BF.getTimesUsed()==2);
         assertTrue(DF.getTimesUsed()==2);
 
 
-
-
-    }
-    @Test (expected = NodeNotFoundException.class)
-    public void testInvalidRoute () throws NodeNotFoundException {
-        Node A = new Node ("A");
-        Node B = new Node ("B");
-        Node C = new Node ("C");
-        Node D = new Node ("D");
-        Node E = new Node ("E");
-        Node F = new Node ("F");
-        Node G = new Node ("G");
-
-        Edge e1_A = new Edge(A,B);
-        Edge e1_B = new Edge(B,A);
-
-        A.addEdge(e1_A);
-        B.addEdge(e1_B);
-
-
-        Edge e2_B = new Edge(B,D);
-        Edge e2_D = new Edge(D,B);
-
-        B.addEdge(e2_B);
-        D.addEdge(e2_D);
-
-        Edge e5_B = new Edge (B,C);
-        Edge e5_C = new Edge (C,B);
-
-        B.addEdge(e5_B);
-        C.addEdge(e5_C);
-
-        Edge e3_D = new Edge(D,F);
-        Edge e3_F = new Edge(F,D);
-
-        D.addEdge(e3_D);
-        F.addEdge(e3_F);
-
-        Edge e4_F = new Edge(F,E);
-        Edge e4_E = new Edge(E,F);
-
-        F.addEdge(e4_F);
-        E.addEdge(e4_E);
-
-
-        Edge e6_C = new Edge(C,E);
-        Edge e6_E = new Edge(E,C);
-
-        C.addEdge(e6_C);
-        E.addEdge(e6_E);
-        Graph graph1 = new Graph();
-        graph1.addNode(A);
-        graph1.addNode(B);
-        graph1.addNode(C);
-        graph1.addNode(D);
-        Node path = graph1.BFS2(A,G);
 
 
     }

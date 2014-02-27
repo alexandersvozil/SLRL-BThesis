@@ -375,39 +375,35 @@ in every node, when reached.
 It's runtime $\mathcal O(|V| + |E|)$, remains unmodified.
 
 \begin{algorithm}[H]
-  \caption{BFS2}
+  \caption{BFS}
   \begin{algorithmic}[2]
-    \Require Graph(V,E) G, Node dest, Node start
-    \State $clearParents();$
-    \State $resetDistance();$
-    \State Queue$<$Node$>$ nodeQueue $\gets \{\};$
-    \State Set$<$Node$>$ visited $\gets \{\};$
-    \State $visited.add(start);$
-    \State $nodeQueue.offer(start);$ \Comment \begin{itshape} Nodepair saves the node and the parent node,
-    so all the paths can be reconstructed\end{itshape}
-    \While {$!nodeQueue.isEmpty()$}
-  \State $Node$ $curNode$ $=$ $nodeQueue.poll();$ \Comment \begin{itshape} get first node out of queue\end{itshape}
-  \State $visited.add(curNode);$ \Comment \begin{itshape} mark node as visited\end{itshape}            
-    \If{$!curNode.equals(dest)$}
-    \State {$return$ $dest;$}
-    \EndIf
-    \For{$Edge$ $e$ : $curNode.getEdges()$}
-    \If{$!visited.contains(e.getNode2())$}
-    \If{$e.getNode2().getDistance() == curNode.getDistance() + 1 \| e.getNode2().getDistance() == -1$}
-    \State $alreadyVis \gets false;$
-    \For{$Node$ $node$ : $nodeQueue$}
-    \State $node.addParent(curNode);$
-    \State $alreadyVis \gets true;$
-    \State $break;$
-    \EndFor
-    \If{$!alreadyVis$}
-    \State $nodeQueue.offer(e.getNode2());$
-    \State $e.getNode2().addParent(curNode);$
-    \State $e.getNode2().setdistance(curNode.getDistance()+1);$
-    \EndIf
-    \EndIf
-    \EndIf
-    \EndFor
+    \Require Graph(V,E) G, Node start
+    \State $clearParents();$ \Comment Clear parents from previous BFS
+    \State $resetDistance();$ \Comment Clear distances from previous BFS
+    \State Queue$<$Node$>$ nodeQueue $\gets \emptyset;$
+    \State Set$<$Node$>$ visited $\gets \emptyset;$
+    \State visited.add(start);
+    \State nodeQueue.offer(start); \Comment Add the beginning node to the queue 
+  \While {$!nodeQueue.isEmpty()$}
+    \State Node curNode = nodeQueue.poll(); \Comment Get first node of queue (FIFO)
+    \State visited.add(curNode); \Comment mark node as visited
+      \For{Edge e : curNode.getEdges()}
+        \If{!visited.contains(e.getNode2())}
+          \State alreadyVis $\gets$ false;
+          \If{e.getNode2().getDistance() == curNode.getDistance() + 1 $\|$ e.getNode2().getDistance() == -1}
+            \For{Node node : nodeQueue}
+              \State node.addParent(curNode);
+              \State alreadyVis $\gets$ true;
+              \State break;
+            \EndFor
+            \If{!alreadyVis}
+              \State nodeQueue.offer(e.getNode2());
+              \State e.getNode2().addParent(curNode);
+              \State e.getNode2().setdistance(curNode.getDistance()+1);
+            \EndIf
+           \EndIf
+        \EndIf
+      \EndFor
     \EndWhile
   \end{algorithmic}
 \end{algorithm}

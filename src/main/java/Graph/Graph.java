@@ -287,7 +287,6 @@ public class Graph {
         return usedEdges;
 
     }
-
     /**
      * BFS. Gets all paths from a node to every other node and stores it into the parents list of each node
      *
@@ -299,140 +298,29 @@ public class Graph {
         // pseudocode partly taken from wikipedia: http://de.wikipedia.org/wiki/Breitensuche
         if (from == null)
             throw new IllegalArgumentException("start node is null");
+
         Queue<Node> nodeQueue = new LinkedList<Node>();
         //for the nodes already visited. HashSet because "contains" is O(1)
         HashSet<Node> visited = new HashSet<Node>();
-        visited.add(from);
+//        visited.add(from);
         nodeQueue.offer(from);
         while (!nodeQueue.isEmpty()) {
             Node curNode = nodeQueue.poll();
             visited.add(curNode);
-            // log.debug("expanding"+nodepair.node);
+//            log.debug("expanding"+curNode);
             for (Edge e : curNode.getEdges()) {
                 if (!visited.contains(e.getNode2())) {
-                    if (e.getNode2().getDistance() == curNode.getDistance() + 1 || e.getNode2().getDistance() == -1) {
-                        boolean alreadyVis = false;
-                        for(Node node : nodeQueue){
-                            if(node.equals(e.getNode2()) ){
-                                node.addParent(curNode);
-                                alreadyVis = true;
-                                break;
-                            }
-                        }
-
-                        if(!alreadyVis){
-                            nodeQueue.offer(e.getNode2());
-                            e.getNode2().addParent(curNode);
-                        }
-                        e.getNode2().setDistance(curNode.getDistance() + 1);
-                    }
-
+                    nodeQueue.offer(e.getNode2());
+                    visited.add(e.getNode2());
+                    ///e.getNode2().addParent(curNode);
+                    e.getNode2().setDistance(curNode.getDistance() + 1);
+                }
+                if(e.getNode2().getDistance() == curNode.getDistance() +1){
+                    e.getNode2().addParent(curNode);
                 }
             }
         }
     }
 
-    /**
-     * the old, slow method of calculating the constraints, used in tests
-     */
-    public void calculateUsagesAndNeighbourhoodsAfterServerAddition() {
-        //log.debug("calculateUsages got called, current server size: "+servers.size());
 
-        List<Node> nearestServers = new ArrayList<Node>();
-        for (Node n : graph) {
-            nearestServers.clear();
-            int minStepsToServer = 0;
-            if (!servers.contains(n)) {
-                //look for nearest servers
-                // log.debug("server size: " + servers.size());
-                for (Node server : servers) {
-                    Node p = null;
-                    try {
-                        p = BFS2(n, server);
-                    } catch (NodeNotFoundException e) {
-                        log.error("Node not found");
-                        e.printStackTrace();
-                        return;
-                    }
-                    int serverDistance = server.getDistance();
-                    if (serverDistance <= minStepsToServer || nearestServers.isEmpty()) {
-                        if (serverDistance < minStepsToServer) {
-                            for (Node nServer : nearestServers) {
-                                nServer.setTmpNeighbourhood(0);
-                            }
-                            nearestServers.clear();
-                            usedEdgesInShortestPaths.clear();
-                        }
-                        minStepsToServer = serverDistance;
-                        nearestServers.add(server);
-                        server.setTmpNeighbourhood(server.getTmpNeighbourhood() + 1);
-                        markPath2(server);
-                    }
-                }
-
-                for (Node nearestServer : nearestServers) {
-
-                    nearestServer.setNeighbourhood(nearestServer.getTmpNeighbourhood() + nearestServer.getNeighbourhood());
-                    nearestServer.setTmpNeighbourhood(0);
-                }
-                //mark used edges
-                markEdges();
-            }
-        }
-    }
-
-    /**
-     * BFS2. Gets all paths from a node to another and stores it into the parents list of each node
-     * used in the tests, not in the real algorithm
-     * @param goalNode
-     * @return
-     * @throws NodeNotFoundException
-     */
-    public Node BFS2(Node from, Node goalNode) throws NodeNotFoundException {
-        clearParents();
-        resetDistance();
-
-        // pseudocode partly taken from wikipedia: http://de.wikipedia.org/wiki/Breitensuche
-        if (goalNode == null)
-            throw new IllegalArgumentException("goalNode is null");
-        Queue<Node> nodeQueue = new LinkedList<Node>();
-        //for the nodes already visited. HashSet because "contains" is O(1)
-        HashSet<Node> visited = new HashSet<Node>();
-        visited.add(from);
-        nodeQueue.offer(from);
-        while (!nodeQueue.isEmpty()) {
-            Node curNode = nodeQueue.poll();
-            visited.add(curNode);
-            // log.debug("expanding"+nodepair.node);
-            if (curNode.equals(goalNode)) {
-                //ziel erreicht
-                //log.debug("Found node"+ goalNode+"coming from"+ node.getParent());
-                return goalNode;
-            }
-
-            for (Edge e : curNode.getEdges()) {
-                if (!visited.contains(e.getNode2())) {
-                    if (e.getNode2().getDistance() == curNode.getDistance() + 1 || e.getNode2().getDistance() == -1) {
-                        boolean alreadyVis = false;
-                        for(Node node : nodeQueue){
-                            if(node.equals(e.getNode2()) ){
-                                node.addParent(curNode);
-                                alreadyVis = true;
-                                break;
-                            }
-                        }
-
-                        if(!alreadyVis){
-                            nodeQueue.offer(e.getNode2());
-                            e.getNode2().addParent(curNode);
-                        }
-                        e.getNode2().setDistance(curNode.getDistance() + 1);
-                    }
-
-                }
-            }
-        }
-
-        throw new NodeNotFoundException("Node was not found by bfs: Goal: " + goalNode.getName() + " Start: " + from.getName());
-    }
 }
