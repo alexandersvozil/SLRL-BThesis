@@ -371,8 +371,12 @@ in a runtime $\mathcal O(kn*(V+E))$ which is a obviously faster than $\mathcal O
 The breadth first search needed to be modified enabling it to find all the shortest paths 
 from one node to another, as we need to consider every shortest path in order to simulate
 the worst case scenario regarding load on links. Also, to reconstruct the paths, a list of parent nodes is saved
-in every node, when reached.
-It's runtime $\mathcal O(|V| + |E|)$, remains unmodified.
+in every node, when reached. The important step to get all the shortest paths to a node is saving the distance needed to reach it:
+Doing this enables nodes who are expanded later, to also be parent of a node which already has a parent, where this parent was
+expanded before the current node. This condition is expressed in the second if statement.
+The runtime of BFS $\mathcal O(|V| + |E|)$, remains unmodified. In order to augment
+the chance of correctness I wrote test cases that would check the algorithm.
+These tests are to be found in the "Test" package.
 
 \begin{algorithm}[H]
   \caption{BFS}
@@ -389,19 +393,11 @@ It's runtime $\mathcal O(|V| + |E|)$, remains unmodified.
     \State visited.add(curNode); \Comment mark node as visited
       \For{Edge e : curNode.getEdges()}
         \If{!visited.contains(e.getNode2())}
-          \State alreadyVis $\gets$ false;
-          \If{e.getNode2().getDistance() == curNode.getDistance() + 1 $\|$ e.getNode2().getDistance() == -1}
-            \For{Node node : nodeQueue}
-              \State node.addParent(curNode);
-              \State alreadyVis $\gets$ true;
-              \State break;
-            \EndFor
-            \If{!alreadyVis}
               \State nodeQueue.offer(e.getNode2());
-              \State e.getNode2().addParent(curNode);
               \State e.getNode2().setdistance(curNode.getDistance()+1);
-            \EndIf
-           \EndIf
+        \EndIf
+        \If{!e.getNode2().getDistance() == curNode.getDistance()+1}
+              \State e.getNode2().addParent(curNode); \Comment every shortest path is saved 
         \EndIf
       \EndFor
     \EndWhile

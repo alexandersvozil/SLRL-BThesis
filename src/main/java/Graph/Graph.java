@@ -312,10 +312,10 @@ public class Graph {
                 if (!visited.contains(e.getNode2())) {
                     nodeQueue.offer(e.getNode2());
                     visited.add(e.getNode2());
-                    ///e.getNode2().addParent(curNode);
-                    e.getNode2().setDistance(curNode.getDistance() + 1);
+                    e.getNode2().setDistance(curNode.getDistance()+1);
                 }
-                if(e.getNode2().getDistance() == curNode.getDistance() +1){
+                //this is needed, because every path needs to be tracked
+                if(e.getNode2().getDistance() == curNode.getDistance()+1){
                     e.getNode2().addParent(curNode);
                 }
             }
