@@ -35,13 +35,13 @@ public class TabuSearch {
         Solution currentSol;
         Solution neighbourSol;
         Graph g = instance.getGraph();
-        int t_L=580;
+        int t_L=100;
         Solution bestSolution = currentSol = new Solution(instance.getGraph(), instance.getR(), instance.getcLast(), instance.getSolved());
         tabuList.add(currentSol);
 
         for(int i = 0; i<4000; i++){
             //search the best out of N(currentSol)
-            neighbourSol = local_search_withTabuList(currentSol, g, instance.getK(), instance.getC());
+            neighbourSol = local_search_withTabuList(currentSol, g, instance.getC());
             //add the best neighbourSol to the tabulist
             tabuList.add(neighbourSol);
             //delete elements of tabulist which are older than t_L iterations
@@ -74,9 +74,9 @@ public class TabuSearch {
         return instance;
     }
 
-    private Solution local_search_withTabuList(Solution initialSolution,Graph g,int k ,int c){
+    private Solution local_search_withTabuList(Solution initialSolution,Graph g, int c){
         Solution bestSolution =  new Solution(initialSolution, Integer.MAX_VALUE, Integer.MAX_VALUE,false);
-        Solution currentSolution =new Solution(initialSolution, initialSolution.getR(), initialSolution.getLastC(),
+        Solution currentSolution = new Solution(initialSolution, initialSolution.getR(), initialSolution.getLastC(),
                 initialSolution.isSolved());
 
         g.getServers().clear();

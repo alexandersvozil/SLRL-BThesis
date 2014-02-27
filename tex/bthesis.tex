@@ -380,6 +380,7 @@ These tests are to be found in the "Test" package.
 
 \begin{algorithm}[H]
   \caption{BFS}
+  \label{BFS}
   \begin{algorithmic}[2]
     \Require Graph(V,E) G, Node start
     \State $clearParents();$ \Comment Clear parents from previous BFS
@@ -404,17 +405,77 @@ These tests are to be found in the "Test" package.
   \end{algorithmic}
 \end{algorithm}
 
-\subsection{The local search}
-The Local search simply exchanges a server with a client and recalculates the constraints to create a neighborhood N of feasible solutions.
-
+\subsection{The tabu search}
+The tabu search is the first meta search heuristics I tried to use on SLRL.
 \begin {algorithm} [H]
-\caption {localsearch}
+\caption {tabu search}
+\label {tabusa}
 \begin {algorithmic} [3]
-\Require Graph(V,E), Set
+\Require Graph(V,E) G, Solution startingS, Tabulistsize $t_{size}$, Iterations iter, MaxEdgeUsage c
+\State Solution curS;
+\State Solution neighborS;
+\State Solution bestS;
+\State Tabulist l $\gets$ $\emptyset$
+\State bestS = curS = startingS;
+\State tabulist $\gets$ curS;
+\For{i=0; i$<$iter; i++}
+  \State  neighborS = localSearch(curS, G, c, l); \Comment described in Algorithm \ref{localS}
+  \State  tabulist $\gets$ neighborS;
+  \If {tabulist.size() $>$ $t_{size}$}
+    \State tabulist.remove(0);
+  \EndIf
+  \State  curS = neighborS;
+  \If{(curS.getLastC()$\leq$ c) $\&\&$ (curS.getR() $<$ bestS.getR()) }
+    \State bestSolution.setSolved(true);
+    \State bestSolution = currentSol;
+    \If{curS.getR()==1}
+      \State break; \Comment {Best possible feasible Solution}
+    \EndIf
+  \EndIf  
+   \If{(!bestS.isSolved()) $\&\&$ (bestS.getLastC() $>$ curS.getLastC()) }
+    \State curS.setSolved(curS.getLastC() $\leq$ instance.getC());
+    \State bestS = curS;
+   \EndIf 
+\EndFor
+\Return bestS;
 \end {algorithmic}
 \end {algorithm}
 
-\subsection{The tabu-search}
+\subsection{The local search}
+The Local search simply exchanges a server with a client and recalculates the constraints to create a neighborhood N of solutions.
+
+\begin {algorithm} [H]
+\caption {localsearch}
+\label {localS}
+\begin {algorithmic} [3]
+\Require Solution curS, Graph(V,E) g, MaxEdgeUsage c, l 
+\State        Solution bestS = curS;
+\For{Node server : g.getServers()}
+  \State    g.removeServer(server);
+  \For{Node otherNode: g.getGraph())}
+    \If{(!otherNode.equals(server))\&\&(!g.getServers().contains(otherNode))}
+      \State g.clearUsages();
+      \State g.updateConstraints();
+      \State g.addServer(otherNode);
+      \State max\_usage = g.getMaxUsage();
+      \State max\_neighbourset = g.getMaxNeighbourSet();
+      \If{(max\_usage$\leq$c)\&\&((max\_neighbourset)$<$bestSolution.getR())
+      \&\&(!tabuList.contains(g.getServers()))}
+        \State bestSolution=new Solution(g,max\_neighbourset,max\_usage,true);
+      \EndIf 
+      \If{(!bestSolution.isSolved())\&\&(bestSolution.getLastC()$>$max\_usage)
+      \&\&(!tabuList.contains(g.getServers()))}
+        \State bestSolution=new Solution(g,max\_neighbourset,max\_usage, max\_usage$\leq$c);
+        \State g.removeServer(otherNode);
+      \EndIf
+      \EndIf
+   \EndFor
+   \State g.addServer(server);
+\EndFor\\
+    \Return  bestS;
+\end {algorithmic}
+\end {algorithm}
+
 
 \subsection{Simulated Annealing}
 
