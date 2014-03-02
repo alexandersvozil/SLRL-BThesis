@@ -26,13 +26,11 @@ public class SimulatedAnnealing {
         double temperature = 2.9;
         int runtimeS = 10;
 
-
         Solution solX = new Solution(instance.getGraph(), instance.getR(), instance.getcLast(), instance.getSolved());
         long startTime = System.currentTimeMillis()/1000;
         while(true){
             // for(int i = 0; i < 100000; i++){
             Solution solY = randomNeighbor(solX);
-
             if(compareSolutions(solX,solY)){
                 solX = solY;
             }else{
@@ -40,18 +38,14 @@ public class SimulatedAnnealing {
                     solX = solY;
                 }
             }
-
             //geometric cooling
             temperature = temperature*t;
-
             if(((System.currentTimeMillis()/1000)- startTime) > runtimeS){
                 break;
             }
-
             if(solX.getR() == instance.getR_lower() && solX.getLastC() <= instance.getC()){
                 break;
             }
-
         }
         instance.setSolution(solX);
 

@@ -25,26 +25,23 @@ on Servers and Links}
 \newpage
 
 \section{Abstract}
-The server location problem with restricted loads on servers and links (SLRL) is an NP-Complete
-problem, introduced by Hiroyoshi Miwa et al. in the Paper "Method of Locating Mirror Servers
-to Alleviate Load on Servers and Links" \cite{mirrorserver}. The problem 
-came up, because the massive volume of data distributed by content delivery networks (CDNs) 
-require well located mirror servers in order not to badly influence the quality of their service.
-%Two examples for CDNs would be "Amazon CloudFront" a traditional commercial CDN, or the "AT\&T Inc."
-%a Telco CDN which has advantages over traditional CDNs because they own the so called "last mile",
-%the final leg of the telecommunications networks. CDN nodes are usually deployed in multiple 
-%locations, often over multiple backbones, reaching thousands of nodes with tens of thousands of 
-%servers. \cite{wiki:cdn} \cite{wiki:lastmile}
-The two constraints induced by the choice of mirror servers is the number of maximum nodes
-accessing a mirror server and maximum number of nodes accessing a mirror server 
-through a specific link. The constraint mentioned first, corresponds to the network load on
+The server location problem with restricted loads on servers and links (SLRL) is an NP-complete
+problem, introduced by Hiroyoshi Miwa et al. in the Paper \cite{mirrorserver}. The problem 
+can be motivated, because the massive volume of data distributed by content delivery networks (CDNs) 
+require well located mirror servers in order to render a satisfactory performance in terms of quality of service.
+The two constraints induced by the choice of mirror servers is (i) the number of maximum nodes
+accessing a mirror server and (ii) the maximum number of nodes accessing a mirror server 
+through a specific link. The constraint mentioned first corresponds to the network load on
 the (mirror-)servers. The second constraint corresponds to the restricted load on the links.
-First, I will formulate the problem, explain some of the terminology used and prove that SLRL is NP-complete.
-Then I will introduce my own algorithm and show performance evaluations comparing the old algorithm proposed 
-by Miwa et. al, to my implementation of the tabu search algorithm. 
+The problem will be formulated by explaining some of the terminology used and by proving that SLRL is NP-complete.
+Then new algorithms will be introduced and their performances will be evaluated in comparison with the old algorithm proposed 
+by Miwa et. al \cite{mirrorserver}. 
+
+
 \newpage
 \tableofcontents
 \newpage
+
 
 \section{Introduction}
 \subsection {CDNs}
@@ -76,8 +73,7 @@ to which he or she is allocated. It is used for example in locating fire station
 where the distance from the facilities 
 to their farthest assigned potential client should be minimum."
 The p-center problem is one of the best known NP-hard discrete location problems.
-For large instances, it is impractical to solve the problem exactly.
-There have been very good results with the tabu search and variable neighborhood search \cite{Mladenovic00solvingthe}
+For large instances, it is impractical to solve the problem exactly
 \cite{KarivHakimi1979}.
 
 \subsubsection {P-Median Problem}
@@ -124,7 +120,7 @@ It is easy to see, that the subset of servers S is a solution to the problem, be
 of every server can easily be calculated with the graph and the set of servers. Also the load of each edge
 can be checked after each shortest path to the server has been looked at (the maximum is m(e)).
 
-\subsection{Proof of NP-Completeness}
+\subsection{Proof of NP-completeness}
 First, we have to show that SLRL is in NP. After guessing a solution of servers, meaning we 
 have an instance of SLRL (G,r,c,k) and a guessed set of servers S, one can clearly check 
 in polynomial time whether it is a valid solution for SLRL: We need to check that every neighbor set is smaller
@@ -134,7 +130,7 @@ the path to every server and marks the path so the usage gets tracked. This is i
 search is in $\mathcal{O}(V+E)$. Checking the set for size is also trivial as is looking at the usage of
 every edge and comparing the maximum with c.\\
 After proving that SLRL is in NP, it can be shown, that 3SAT can be reduced to SLRL in polynomial time,
-implying SLRL is NP-Complete \cite{Garey:1979:CIG:578533}.
+implying SLRL is NP-complete \cite{Garey:1979:CIG:578533}.
 This proof is merely a rewriting of Miwa et al. \cite{mirrorserver}, as it is one of the first proofs I saw of 
 this kind, it was really interesting for me to figure it out.
 3SAT is like the satisfiability problem for arbitrary formulas, but in 3SAT the formula must be in KNF and 
@@ -247,8 +243,6 @@ if (G,k,r,c) is a solution there is also a solution for 3SAT.
 Thus 3SAT was successfully reduced to SLRL in polynomial time.
 Consequently, SLRL is NP-complete.$\square$
 
-
-
 \section{SLRL as Optimization Problem}
 
 After thoroughly discussing the decision problem of SLRL, the optimization problem
@@ -311,7 +305,7 @@ nodes and number of vertices. Unfortunately three instances of my instances do n
 match the number of nodes and / or vertices proposed from the paper above.
 The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".
 
-\subsection{Other Algorithms}
+\subsection{Greedy Algorithms}
 The only prior algorithm for this problem is the greedy algorithm proposed by
 Miwa et al. \cite{mirrorserver}. It greedily chooses the node with the 
 lowest maximal neighbourhood if the constraint $c\geq m(e) (\forall e \in E)$ is fulfilled. 
@@ -353,6 +347,24 @@ which results in a runtime of $\mathcal O(n^{2}*(V+E))$.
 This process is executed for every server added, thus resulting in the final runtime
 $\mathcal O(kn^{2}*(V+E))$. The evaluation of this algorithm using the test instances can be seen on table 
 \ref{table:greedyloc}.
+
+\subsection{A faster greedy algorithm: GreedyDegree}
+\begin{algorithm}[H]
+  \caption{GreedyDegree}
+  \label{greedydeg}
+  \begin{algorithmic}[2]
+    \Require G = (V,E), k, c 
+    \State $S \gets \emptyset$
+    \While {$|S| < k$}
+    \State Choose vertex $v$ such that the degree of the vertex is maximal
+    and $v \notin S$.
+    \EndWhile
+    \If{$max_{e \in E}m(e) > c}$
+    \State Output infeasible
+    \EndIf\\
+    \Return S
+  \end{algorithmic}
+\end{algorithm}
 
 \subsection{Determination of the neighbour sets of a server and loads of the links}
 As briefly described in the last section, when a server is added to the graph, the size of the maximum neighbor set r and
@@ -405,7 +417,7 @@ These tests are to be found in the "Test" package.
   \end{algorithmic}
 \end{algorithm}
 
-\subsection{The tabu search}
+\subsection{Tabu Search}
 The tabu search is the first meta search heuristics I tried to use on SLRL.
 \begin {algorithm} [H]
 \caption {tabu search}
@@ -432,24 +444,28 @@ The tabu search is the first meta search heuristics I tried to use on SLRL.
       \State break; \Comment {Best possible feasible Solution}
     \EndIf
   \EndIf  
-   \If{(!bestS.isSolved()) $\&\&$ (bestS.getLastC() $>$ curS.getLastC()) }
-    \State curS.setSolved(curS.getLastC() $\leq$ instance.getC());
+   \If{(!bestS.isSolved()) $\&\&$ (bestS.getLastC()$>$curS.getLastC()) }
+    \State curS.setSolved(curS.getLastC()$\leq$c);
     \State bestS = curS;
    \EndIf 
-\EndFor
+\EndFor\\
 \Return bestS;
 \end {algorithmic}
 \end {algorithm}
 
-\subsection{The local search}
-The Local search simply exchanges a server with a client and recalculates the constraints to create a neighborhood N of solutions.
+The local search exchanges a server with every other node and 
+recalculates the constraints to create a neighborhood N of solutions.
+The process is repeated for every server in the given Set of Servers.
+The algorithm chooses the solution by the best improvement strategy,
+meaning it enumerates the whole neighborhood and then chooses the 
+best possible solution.
 
 \begin {algorithm} [H]
 \caption {localsearch}
 \label {localS}
 \begin {algorithmic} [3]
 \Require Solution curS, Graph(V,E) g, MaxEdgeUsage c, l 
-\State        Solution bestS = curS;
+\State Solution bestS = curS;
 \For{Node server : g.getServers()}
   \State    g.removeServer(server);
   \For{Node otherNode: g.getGraph())}
@@ -475,11 +491,63 @@ The Local search simply exchanges a server with a client and recalculates the co
     \Return  bestS;
 \end {algorithmic}
 \end {algorithm}
-
-
 \subsection{Simulated Annealing}
 
-\subsection{A faster greedy algorithm: GreedyDegree}
+\begin {algorithm} [H]
+\caption {Simulated Annealing}
+\label {simA}
+\begin {algorithmic} [3]
+\Require Solution curS, Graph(V,E) g, MaxEdgeUsage c, Runtime $r_{sec}$, Temperature $t_{init}$, Cooling factor c,
+        Lowerbound\_r r\_lower; 
+        \State Temperature temp = $t_{init}$;
+        \State Solution solX = curS; 
+        \While{timepassed $<$ $r_{sec}$}
+        \If{compareSolutions(solX,solY)} \Comment If solY is better than solX
+                \State solX = solY;
+         \Else
+        \State Solution solY = randomNeighbor(solX);
+         \If{metropoliscriterion(solX,solY,temperature)}
+                    \State solX = solY;\Comment see algorithm \ref{metcrit}
+                \EndIf
+        \EndIf    
+            \State temp = temp*c; \Comment Cooling takes place here
+            \If{(solX.getR()==r\_lower)\&\&(solX.getLastC() $\leq$ c)}
+               \State break;
+            \EndIf 
+      \EndWhile\\
+      \Return solX;
+\end {algorithmic}
+\end {algorithm}
+
+\begin {algorithm} [H]
+\caption {Metropolis Criterion}
+\label {metcrit}
+\begin {algorithmic} [3]
+\Require Solution y, Solution x, Temperature T
+\State Z = random Number $\in [0,1)$
+  \If {$Z<e^{-|rating(y)-rating(x)|/T}$}\\ \Comment see Algorithm \ref{rating}
+\Return true;
+\EndIf\\
+\Return false;
+\end {algorithmic}
+\end {algorithm}
+
+\begin {algorithm} [H]
+\caption {Rating}
+\label {rating}
+\begin {algorithmic} [3]
+\Require Solution x, MaxEdgeUsage c, LowerBound r\_lower
+\State rating = 0;
+\State //solution is valid
+\If {x.getLastC()$<$C}
+    rating += 1;
+\EndIf
+\State rating+=c/x.getLastC();
+\State rating+=r\_lower/x.getR());\\
+\Return rating;
+
+\end {algorithmic}
+\end {algorithm}
 
 \section{Performance Evaluation}
 \newpage  
