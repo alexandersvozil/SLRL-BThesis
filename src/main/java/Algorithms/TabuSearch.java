@@ -6,10 +6,7 @@ import org.apache.log4j.Logger;
 import Graph.Graph;
 import org.omg.PortableInterceptor.INACTIVE;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * User: svozil
@@ -24,8 +21,17 @@ public class TabuSearch {
      * @return instance after tabu search
      */
     private static Logger log = Logger.getLogger(TabuSearch.class);
-    private Set<Solution> tabuList = new HashSet<Solution>();
+    private Set<Solution> tabuList = new LinkedHashSet<Solution>();
 
+
+    /**
+     * Removes oldest element of the tabuList, which is a LinkedHashSet
+     */
+    private void removeOldest(){
+       Iterator<Solution> iterator = tabuList.iterator();
+       iterator.next();
+       iterator.remove();
+    }
     public SLRLInstance tabu_search(SLRLInstance instance){
 
         //cannot be optimized further in regard to R
@@ -35,35 +41,35 @@ public class TabuSearch {
         Solution currentSol;
         Solution neighbourSol;
         Graph g = instance.getGraph();
-        int t_L=100;
+        int t_L=80;
         Solution bestSolution = currentSol = new Solution(instance.getGraph(), instance.getR(), instance.getcLast(), instance.getSolved());
         tabuList.add(currentSol);
 
-        for(int i = 0; i<4000; i++){
+        for(int i = 0; i<1000; i++){
             //search the best out of N(currentSol)
             neighbourSol = local_search_withTabuList(currentSol, g, instance.getC());
             //add the best neighbourSol to the tabulist
             tabuList.add(neighbourSol);
             //delete elements of tabulist which are older than t_L iterations
-            if(tabuList.size()==t_L){
-                tabuList.remove(0);
+            if(tabuList.size()>=t_L){
+                removeOldest();
             }
             currentSol = neighbourSol;
 
             //if better exchange
-            if(currentSol.getLastC()<=instance.getC() && currentSol.getR() < bestSolution.getR() ){
+            if(currentSol.getLastC()<=instance.getC() && currentSol.getR() <= bestSolution.getR() ){
                 bestSolution.setSolved(true);
                 bestSolution = currentSol;
 
                 //if the solution is the best possible solution, stop.
-                if(currentSol.getR()==1)
+                if(currentSol.getR()==instance.getR_lower())
                     break;
             }
 
             if(!bestSolution.isSolved() && bestSolution.getLastC() > currentSol.getLastC() )
             {
-                currentSol.setSolved(currentSol.getLastC() <= instance.getC());
-                bestSolution = currentSol;
+                    currentSol.setSolved(currentSol.getLastC() <= instance.getC());
+                    bestSolution = currentSol;
             }
 
         }

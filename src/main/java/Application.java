@@ -35,14 +35,14 @@ public class Application {
         for(SLRLInstance slrlInstance: instanceList){
             // log.debug("------------------------------");
             long start = System.currentTimeMillis();
-            //greedyDegree.solve(slrlInstance);
-            greedyLocation.solve(slrlInstance);
+            greedyDegree.solve(slrlInstance);
+            //greedyLocation.solve(slrlInstance);
             long end = System.currentTimeMillis();
             //log.debug ("Greedy location "+ (end-start) + "ms");
             //log.debug(slrlInstance.toString());
 
             start = System.currentTimeMillis();
-//            tabuSearch.tabu_search(slrlInstance);
+           tabuSearch.tabu_search(slrlInstance);
            // SimulatedAnnealing sim = new SimulatedAnnealing(slrlInstance);
            // sim.calculate();
             end = System.currentTimeMillis();

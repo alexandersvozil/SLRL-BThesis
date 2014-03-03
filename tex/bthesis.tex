@@ -418,12 +418,33 @@ These tests are to be found in the "Test" package.
 \end{algorithm}
 
 \subsection{Tabu Search}
-The tabu search is the first meta search heuristics I tried to use on SLRL.
+The tabu search introduced by Glover in 1986 \cite{Glover:1986:FPI:15310.15311} is the first meta search heuristics I tried to use on SLRL.
+The algorithm takes five parameters: The graph $G$, the solution
+to start from $startingS$, the maximum size of the tabulist $t_{size}$, the iterations $iter$, the lower bound for the maximum neighborhood
+$r\_lower$ and the constraint for the maximum edge usage $c$.\\
+The algorithm starts with adding $startingS$ to the tabulist.  
+After setting $startingS$ as current and best Solution the following operations will be carried out $iter$ times: 
+\begin{enumerate}
+  \item{A neighbor solution $neighborS$ determined by algorithm \ref{localS} is obtained.}
+  \item{The solution $neighborS$ is added to the tabulist.}
+  \item{If the size of the tabulist is greater than $t_{size}$ the oldest element will be removed.}
+  \item{The current solution $curS$ is set to be the $neighborS$ and it is then evaluated if it is the best Solution.}
+  \item{If $curS$ is a better solution than $bestS$, i.e., if the maximum neighborhood of servers in $curS$, $r$, is lower than the respective counterpart in 
+   $best$ and the maximum usage of edges is below $c$, $bestS$ is set to be $curS$. If the best solution is not solved, i.e., it does not fuilfill the
+  maximum edge usage constraint $c$, only the maximum edge usage values,
+  $bestS.lastC$ and $curS.lastC$ will be compared. If $curS.lastC$ is lower than $bestS.lastC$, it is the new best solution}
+  \item{If the new solution satisfies the maximum edge usage constraint c and the maximum neighborhood is equal to $r\_lower$, an optimal
+  solution is found and the algorithm stops and returns the solution.}
+\end{enumerate}
+After completing the above described procedure $iter$ times $bestS$ is returned.
+The implementation is shown in algorithm \ref{tabusa}. The datastructure used to represent the solution saves the maximum edge usage, the maximum neighborhood
+of the solution and the solution itself, i.e., the set of servers. 
+
 \begin {algorithm} [H]
 \caption {tabu search}
 \label {tabusa}
 \begin {algorithmic} [3]
-\Require Graph(V,E) G, Solution startingS, Tabulistsize $t_{size}$, Iterations iter, MaxEdgeUsage c
+\Require Graph(V,E) G, Solution startingS, Tabulistsize $t_{size}$, Iterations iter, MaxEdgeUsage c, NeighborhoodLowerBound r\_lower
 \State Solution curS;
 \State Solution neighborS;
 \State Solution bestS;
@@ -434,13 +455,13 @@ The tabu search is the first meta search heuristics I tried to use on SLRL.
   \State  neighborS = localSearch(curS, G, c, l); \Comment described in Algorithm \ref{localS}
   \State  tabulist $\gets$ neighborS;
   \If {tabulist.size() $>$ $t_{size}$}
-    \State tabulist.remove(0);
+    \State removeOldest();
   \EndIf
   \State  curS = neighborS;
   \If{(curS.getLastC()$\leq$ c) $\&\&$ (curS.getR() $<$ bestS.getR()) }
     \State bestSolution.setSolved(true);
     \State bestSolution = currentSol;
-    \If{curS.getR()==1}
+    \If{curS.getR()==r\_lower}
       \State break; \Comment {Best possible feasible Solution}
     \EndIf
   \EndIf  
@@ -452,27 +473,41 @@ The tabu search is the first meta search heuristics I tried to use on SLRL.
 \Return bestS;
 \end {algorithmic}
 \end {algorithm}
+\subsection{The local search for the tabu search}
 
-The local search exchanges a server with every other node and 
-recalculates the constraints to create a neighborhood N of solutions.
-The process is repeated for every server in the given Set of Servers.
-The algorithm chooses the solution by the best improvement strategy,
-meaning it enumerates the whole neighborhood and then chooses the 
-best possible solution.
+The local search algorithm displayed in algorithm \ref{localS} takes
+the following three parameters as input (i) the solution to start from $curS$
+(ii) the Graph $g$ to operate on and (iii) the limit for the maximum edge usage c.
+The purpose of the algorithm is to create a neighborhood N by swapping servers in the solution
+resulting in a different potentially better solution. If the new Solution is a new best Solution it is remembered as $bestS$.
+The only difference to an ordinary local search algorithm is, that it minds the tabu list mentioned in algorithm \ref{tabusa}.
+This means, that it will exchange the former best solution only if the new solution is not contained in the tabulist.
+It starts with setting the server set of the graph to the server set in the starting solution. After that the whole
+neighborhood induced by changing one server of the starting solution is looked at and the best solution is picked. As the first solution
+is already in the tabulist, the best solution is not set in the beginning.
+The following procedure is executed to create the neighborhood:
+\begin{enumerate}
+  \item{Start an outer loop and iterate over every server in the initial server set.}
+  \item{Remove the server from the server set that is currently iterated over}
+  \item{Iterate over every other node in the graph which is not a server and add it to the server set.}
+  \item{Recalculate the constraints and if the solution is better than the last solution, exchange it.}
+  \item{Remove the newly added node and continue with the next iteration of step 3.}
+  \item{After step 3 iterated over every relevant node, add the removed server again and continue with the next iteration of step 1.}
+\end{enumerate}
 
 \begin {algorithm} [H]
 \caption {localsearch}
 \label {localS}
 \begin {algorithmic} [3]
-\Require Solution curS, Graph(V,E) g, MaxEdgeUsage c, l 
-\State Solution bestS = curS;
+\Require Solution curS, Graph(V,E) g, MaxEdgeUsage c 
+\State Solution bestS $\gets \emptyset$;
+\State g.Servers $\gets$ curS.Servers;
 \For{Node server : g.getServers()}
   \State    g.removeServer(server);
   \For{Node otherNode: g.getGraph())}
     \If{(!otherNode.equals(server))\&\&(!g.getServers().contains(otherNode))}
-      \State g.clearUsages();
-      \State g.updateConstraints();
       \State g.addServer(otherNode);
+      \State g.updateConstraints();
       \State max\_usage = g.getMaxUsage();
       \State max\_neighbourset = g.getMaxNeighbourSet();
       \If{(max\_usage$\leq$c)\&\&((max\_neighbourset)$<$bestSolution.getR())
@@ -491,6 +526,7 @@ best possible solution.
     \Return  bestS;
 \end {algorithmic}
 \end {algorithm}
+
 \subsection{Simulated Annealing}
 
 \begin {algorithm} [H]
