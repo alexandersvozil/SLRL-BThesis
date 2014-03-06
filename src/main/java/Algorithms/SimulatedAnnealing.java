@@ -22,8 +22,8 @@ public class SimulatedAnnealing {
         rand = new Random();
     }
     public SLRLInstance calculate (){
-        double t = 0.999;
-        double temperature = 2.9;
+        double t = 0.99;
+        double temperature = 3.5;
         int runtimeS = 10;
 
         Solution solX = new Solution(instance.getGraph(), instance.getR(), instance.getcLast(), instance.getSolved());
@@ -70,10 +70,11 @@ public class SimulatedAnnealing {
         if (solution.getLastC() < instance.getC()){
             rating += 1;
         }
+
         rating+=(double)instance.getC() / (double)solution.getLastC();
         // System.out.println((double) instance.getR_lower()/(double)solution.getR());
         rating += ((double) instance.getR_lower()/(double)solution.getR());
-        //  System.out.println(rating);
+//          System.out.println(rating);
         return rating;
     }
 

@@ -474,7 +474,6 @@ of the solution and the solution itself, i.e., the set of servers.
 \end {algorithmic}
 \end {algorithm}
 \subsection{The local search for the tabu search}
-
 The local search algorithm displayed in algorithm \ref{localS} takes
 the following three parameters as input (i) the solution to start from $curS$
 (ii) the Graph $g$ to operate on and (iii) the limit for the maximum edge usage c.
@@ -528,20 +527,39 @@ The following procedure is executed to create the neighborhood:
 \end {algorithm}
 
 \subsection{Simulated Annealing}
+Simulated Annealing described in algorithm \ref{simA} is another heuristic approach that was applicated to tackle the SLRL-Problem. Simulated Annealing allows 
+escaping the local optima by initially allowing worse solutions and and then after lowering the temperature only allowing the better solutions.
+This feature comes from using the metropolis criterion as stated in algorithm \ref{metcrit}.
+As input parameters an initial solution $initS$, a graph $g$, the maximal usage of an edge $c$, the lowerbound for the maximum neighborhood $r\_lower$,
+the desired runtime $r_{sec}$, the temperature $t_{init}$ and the cooling factor c is required.
+After assigning the initial temperature and $initS$ to the variable $temp$ and $initS$ to $solX$,
+the algorithm executes a while loop for a minimum of $r_{sec}$ seconds:
+\begin{enumerate}
+  \item {A random neighbor solution is generated and saved to variable $solY$}
+  \item {The new random solution $solY$ is compared to the old solution $solX$. A function $compareSolution(.,.)$ takes care of 
+        comparing the values of the maximum neighbor set and the maximum edge usage.}
+  \item {If the solution is better, the new solution is set to be solX.}
+  \item {If it is not better, the solutions are compared with the metropolis criterion. The code for the criterion is stated in algorithm \ref{metcrit}. If the metropolis criterion
+        is fulfilled the new solution is also set to be solX. }
+  \item {The temperature is decremented, which results in a lower chance for the metropolis criterion.}
+  \item {If the runtime of the loop is not more than $r_{sec}$ go to step one.}
+\end{enumerate}
+After the loop, $solX$ is returned.
+
 
 \begin {algorithm} [H]
 \caption {Simulated Annealing}
 \label {simA}
 \begin {algorithmic} [3]
-\Require Solution curS, Graph(V,E) g, MaxEdgeUsage c, Runtime $r_{sec}$, Temperature $t_{init}$, Cooling factor c,
+\Require Solution initS, Graph(V,E) g, MaxEdgeUsage c, Runtime $r_{sec}$, Temperature $t_{init}$, Cooling factor c,
         Lowerbound\_r r\_lower; 
         \State Temperature temp = $t_{init}$;
-        \State Solution solX = curS; 
+        \State Solution solX = initS; 
         \While{timepassed $<$ $r_{sec}$}
+        \State Solution solY = randomNeighbor(solX);
         \If{compareSolutions(solX,solY)} \Comment If solY is better than solX
                 \State solX = solY;
          \Else
-        \State Solution solY = randomNeighbor(solX);
          \If{metropoliscriterion(solX,solY,temperature)}
                     \State solX = solY;\Comment see algorithm \ref{metcrit}
                 \EndIf
@@ -555,19 +573,28 @@ The following procedure is executed to create the neighborhood:
 \end {algorithmic}
 \end {algorithm}
 
+The Metropolis Criterion described in algorithm \ref{metcrit} allows simulated annealing to escape local optima. When a new solution is not better 
+than the current solution, it may still be replaced with the current solution under a certain probability,
+namely $p_{accept}=e^{-|rating(y)-rating(x)|/T}$. $rating(.)$ is a function displayed at algorithm \ref{rating}, which rates the quality of a solution under the condition
+that rating(x) $>$ 0, where x is a solution for the SLRL. T is the current temperature. If the new solution y is only slightly worse than solution x and the temperature T is very high,
+the chance for replacement is higher than with a lower temperature.
+
 \begin {algorithm} [H]
 \caption {Metropolis Criterion}
 \label {metcrit}
 \begin {algorithmic} [3]
 \Require Solution y, Solution x, Temperature T
 \State Z = random Number $\in [0,1)$
-  \If {$Z<e^{-|rating(y)-rating(x)|/T}$}\\ \Comment see Algorithm \ref{rating}
+  \If {$Z<e^{-|rating(y)-rating(x)|/T}$} \Comment see Algorithm \ref{rating}\\
 \Return true;
 \EndIf\\
 \Return false;
 \end {algorithmic}
 \end {algorithm}
 
+Rating a solution is done as described in algorithm \ref{rating}. It is highly valued, if the solution is
+feasible. The other part of the rating is done by adding the ratios of (i) the lower bound of maximum neighbor sets and the current maximum of neighbor sets and
+(ii) the ratio of the limit of the maximum edge usage and the current maximum edge usage.
 \begin {algorithm} [H]
 \caption {Rating}
 \label {rating}
