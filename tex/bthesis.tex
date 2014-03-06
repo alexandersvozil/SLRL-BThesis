@@ -528,8 +528,8 @@ The following procedure is executed to create the neighborhood:
 
 \subsection{Simulated Annealing}
 Simulated Annealing described in algorithm \ref{simA} is another heuristic approach that was applicated to tackle the SLRL-Problem. Simulated Annealing allows 
-escaping the local optima by initially allowing worse solutions and and then after lowering the temperature only allowing the better solutions.
-This feature comes from using the metropolis criterion as stated in algorithm \ref{metcrit}.
+escaping the local optima by initially allowing worse solutions and then after lowering the temperature with some time only allowing the better solutions.
+This feature is a result of using the metropolis criterion as stated in algorithm \ref{metcrit}.
 As input parameters an initial solution $initS$, a graph $g$, the maximal usage of an edge $c$, the lowerbound for the maximum neighborhood $r\_lower$,
 the desired runtime $r_{sec}$, the temperature $t_{init}$ and the cooling factor c is required.
 After assigning the initial temperature and $initS$ to the variable $temp$ and $initS$ to $solX$,
