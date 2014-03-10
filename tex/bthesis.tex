@@ -9,7 +9,7 @@
 \usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{float}
-
+\usepackage{pgfplots}
 \usetikzlibrary{shapes.multipart}
 
 \bibliographystyle{ieeetr} 
@@ -17,6 +17,7 @@
 \newtheorem{mydef}{Definition}
 
 \begin{document}
+
 \author{Alexander Svozil\\ TU Wien}
 \title{The Server Location Problem with Restricted Loads 
 on Servers and Links}
@@ -107,14 +108,12 @@ the worst case when locating a server.
 \end{mydef}
 \subsubsection{SLRL Problem Definition}
 
-\begin{mydef}
-  {\itshape \textbf{Given:} an undirected graph G(V,E) and  positive integers k,r and c.\\
-    \textbf{Question:} 
-    Is there a subset of Servers S, $S \subseteq V$, where $|S| = k$, $|V|$ $\geq$ k,
-    and a subset $|V_i|$ for each Server $s_i \in S$, where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$, r $\geq  |V_i|$ 
-  and is $c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.} 
+{\itshape \textbf{Instance:} An undirected graph G(V,E) and  positive integers k,r and c.\\
+  \textbf{Question:} 
+  Is there a subset of Servers S, $S \subseteq V$, where $|S| = k$, $|V|$ $\geq$ k,
+  and a subset $|V_i|$ for each Server $s_i \in S$, where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$, r $\geq  |V_i|$ 
+and is $c \geq m(e)$, where m(e) is the maximum load $\forall e \in E$.} 
 
-\end{mydef}
 
 It is easy to see, that the subset of servers S is a solution to the problem, because the neighborhood subset
 of every server can easily be calculated with the graph and the set of servers. Also the load of each edge
@@ -154,43 +153,43 @@ The steps to construct an instance of SLRL (G=(V,E),k,r,c) of an instance of 3SA
 \end{enumerate}
 \begin{figure}[h!]
   \centering
-\begin{tikzpicture}
-  [scale=0.8,auto=left,every node/.style={circle, draw, scale=0.75}]
-  \node (c1) at (1,0) {$c_1$};
-   \node (t1) at (4,0.5) {$t_1$};
-   \node (f1) at (4,1.5) {$f_1$};
-   \node (v11) at (7,0) {$v_{11}$};
-   \node (v12) at (7,1) {$v_{12}$};
-   \node (v1m) at (7,3) {$v_{1m}$};
-  \node (c2) at (1,3) {$c_2$};
-   \node (t2) at (4,3.5) {$t_2$};
-   \node (f2) at (4,4.5) {$f_2$};
-     \node (v21) at (7,5) {$v_{21}$};
-     \node (v22) at (7,6) {$v_{22}$};
-     \node (v2m) at (7,8) {$v_{2m}$};
+  \begin{tikzpicture}
+    [scale=0.8,auto=left,every node/.style={circle, draw, scale=0.75}]
+    \node (c1) at (1,0) {$c_1$};
+    \node (t1) at (4,0.5) {$t_1$};
+    \node (f1) at (4,1.5) {$f_1$};
+    \node (v11) at (7,0) {$v_{11}$};
+    \node (v12) at (7,1) {$v_{12}$};
+    \node (v1m) at (7,3) {$v_{1m}$};
+    \node (c2) at (1,3) {$c_2$};
+    \node (t2) at (4,3.5) {$t_2$};
+    \node (f2) at (4,4.5) {$f_2$};
+    \node (v21) at (7,5) {$v_{21}$};
+    \node (v22) at (7,6) {$v_{22}$};
+    \node (v2m) at (7,8) {$v_{2m}$};
 
-  \node (c3) at (1,6) {$c_3$};
-  \node (cm) at (1,13) {$c_m$};
+    \node (c3) at (1,6) {$c_3$};
+    \node (cm) at (1,13) {$c_m$};
 
-   \node (tn) at (4,11.5) {$t_n$};
-   \node (fn) at (4,12.5) {$f_n$};
-     \node (vn1) at (7,10) {$v_{n1}$};
-     \node (vn2) at (7,11) {$v_{n2}$};
-     \node (vnm) at (7,13) {$v_{nm}$};
-  
-  \draw[dotted,thick] (1,6.5) -- (1,12.5);
-  \draw[dotted,thick] (4,5) -- (4,11);
-  \draw[dotted,thick] (7,1.5) -- (7,2.5);
-  \draw[dotted,thick] (7,6.5) -- (7,7.5);
-  \draw[dotted,thick] (7,11.5) -- (7,12.5);
+    \node (tn) at (4,11.5) {$t_n$};
+    \node (fn) at (4,12.5) {$f_n$};
+    \node (vn1) at (7,10) {$v_{n1}$};
+    \node (vn2) at (7,11) {$v_{n2}$};
+    \node (vnm) at (7,13) {$v_{nm}$};
 
-  \foreach \from/\to in {c1/t1, c1/t2, c1/tn, c2/t1, c2/t2, c2/fn, c3/t1, c3/f2, c3/fn, cm/f1, 
-  cm/f2, cm/fn, 
-  v11/t1, v11/f1, v12/t1, v12/f1, v1m/t1, v1m/f1,
-  v21/t2, v21/f2, v22/t2, v22/f2, v2m/t2, v2m/f2,
-  vn1/tn, vn1/fn, vn2/tn, vn2/fn, vnm/tn, vnm/fn}
-      \draw (\from) -- (\to);
-\end{tikzpicture}
+    \draw[dotted,thick] (1,6.5) -- (1,12.5);
+    \draw[dotted,thick] (4,5) -- (4,11);
+    \draw[dotted,thick] (7,1.5) -- (7,2.5);
+    \draw[dotted,thick] (7,6.5) -- (7,7.5);
+    \draw[dotted,thick] (7,11.5) -- (7,12.5);
+
+    \foreach \from/\to in {c1/t1, c1/t2, c1/tn, c2/t1, c2/t2, c2/fn, c3/t1, c3/f2, c3/fn, cm/f1, 
+      cm/f2, cm/fn, 
+      v11/t1, v11/f1, v12/t1, v12/f1, v1m/t1, v1m/f1,
+      v21/t2, v21/f2, v22/t2, v22/f2, v2m/t2, v2m/f2,
+    vn1/tn, vn1/fn, vn2/tn, vn2/fn, vnm/tn, vnm/fn}
+    \draw (\from) -- (\to);
+  \end{tikzpicture}
   \caption{The transformation from 3SAT to SLRL}
 \end{figure}
 Now it must be proven, that 3SAT has a solution if and only if SLRL has a solution. 
@@ -252,16 +251,16 @@ neighborhood constraint considering the maximum usage of edges c.
 \subsection{An Instance Of The Problem}
 \begin{figure}[H]
   \centering
-\begin{tikzpicture}
-  [scale=0.8,auto=left,every node/.style={circle split, draw,double, scale=0.65}]
-  \node (a) at (0,3) {Santa Clara, CA \nodepart{lower} NH:5, m(e):2};
-  \node (b) at (4,0) {Phoenix, AZ \nodepart{lower} NH:5, m(e):2};
-  \node (c) at (8,2) {Washington, DC \nodepart{lower} NH:5, m(e):2};
-  \node (d) at (9,5) {Baltimore, MD \nodepart{lower} NH:5, m(e):3};
-  \node (e) at (4,7) {Pittsburgh, PA \nodepart{lower} NH:5, m(e):3};
-     \foreach \from/\to in {a/b, a/c, a/e, b/c, c/d, d/e}
-      \draw (\from) -- (\to);
-\end{tikzpicture}
+  \begin{tikzpicture}
+    [scale=0.8,auto=left,every node/.style={circle split, draw,double, scale=0.65}]
+    \node (a) at (0,3) {Santa Clara, CA \nodepart{lower} NH:5, m(e):2};
+    \node (b) at (4,0) {Phoenix, AZ \nodepart{lower} NH:5, m(e):2};
+    \node (c) at (8,2) {Washington, DC \nodepart{lower} NH:5, m(e):2};
+    \node (d) at (9,5) {Baltimore, MD \nodepart{lower} NH:5, m(e):3};
+    \node (e) at (4,7) {Pittsburgh, PA \nodepart{lower} NH:5, m(e):3};
+    \foreach \from/\to in {a/b, a/c, a/e, b/c, c/d, d/e}
+    \draw (\from) -- (\to);
+  \end{tikzpicture}
   \caption{GetNet International as an Instance of SLRL}
 \end{figure}
 The above shown graph is from the barebone network "GetNet International".
@@ -278,32 +277,6 @@ The greedy algorithm takes the node with the lowest $max(m(e))$ first.
 
 \section{Implementation}
 
-\subsection{Data (test instances)}
-The data taken for the tests is from caida \cite{caidabarebones}. Parsing the
-data was not as trivial as it sounds, because the data is not formatted well,
-and several modifications have been done to fit the problem.
-Unfortunately the syntax proposed in the beginning of the file is not considered
-for each and every network, because different people added networks to the file.
-I also modified the data to make it fit for the problem and to approximate the
-data of the paper \cite{mirrorserver} as best as I could:
-\begin{itemize}
-  \item If the graph G given for the barebone network was not connected,
-    the connected component with less nodes of that graph is cut out.
-  \item Normally the connected cities are listed in this manner:
-    "city,state,country", in order to match with the number of Nodes and Edges
-    in the paper \cite{mirrorserver} only city and state are used for
-    identification and the country is left out. Sometimes London
-    is used on one hand as City in Canada and on the other hand in GB, denoted like this
-    London, *, Canada and London, *, England. They are differentiated.
-  \item Sometimes the State has a number. One example would be "Kansas City, KS2~"
-    This is interpreted as "Kansas City, KS".
-\end{itemize}
-
-All those modifications were done to match the graphs of \cite{mirrorserver} as closely as possible.
-As I did not have the data of the other paper, I tried to match them with the number of
-nodes and number of vertices. Unfortunately three instances of my instances do not
-match the number of nodes and / or vertices proposed from the paper above.
-The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".
 
 \subsection{Greedy Algorithms}
 The only prior algorithm for this problem is the greedy algorithm proposed by
@@ -328,12 +301,12 @@ Otherwise it will choose a node where $min(m(e)(\forall e \in E))$ is true:
     \State $S \gets S \cup \{ v \}$
     \EndWhile
     \If{$max_{e \in E}m(e) > c}$
-    \State Output infeasible
+    \State output infeasible
     \EndIf\\
     \Return S
   \end{algorithmic}
 \end{algorithm}
- The runtime of the original algorithm is $\mathcal O(kn^{2}*(V+E))$,
+The runtime of the original algorithm is $\mathcal O(kn^{2}*(V+E))$,
 where $m = |E|$ and $n = |V|$. Seen  in general it is $\mathcal O(k * updateConstraints)$. 
 In the paper \cite{mirrorserver}, the constraints calculation works like this:
 To determine the shortest paths from one node to every other node takes 
@@ -360,7 +333,7 @@ $\mathcal O(kn^{2}*(V+E))$. The evaluation of this algorithm using the test inst
     and $v \notin S$.
     \EndWhile
     \If{$max_{e \in E}m(e) > c}$
-    \State Output infeasible
+    \State output infeasible
     \EndIf\\
     \Return S
   \end{algorithmic}
@@ -395,24 +368,24 @@ These tests are to be found in the "Test" package.
   \label{BFS}
   \begin{algorithmic}[2]
     \Require Graph(V,E) G, Node start
-    \State $clearParents();$ \Comment Clear parents from previous BFS
-    \State $resetDistance();$ \Comment Clear distances from previous BFS
+    \State clearParents();    // clear parents from previous BFS
+    \State resetDistance();   // clear distances from previous BFS
     \State Queue$<$Node$>$ nodeQueue $\gets \emptyset;$
     \State Set$<$Node$>$ visited $\gets \emptyset;$
     \State visited.add(start);
-    \State nodeQueue.offer(start); \Comment Add the beginning node to the queue 
-  \While {$!nodeQueue.isEmpty()$}
-    \State Node curNode = nodeQueue.poll(); \Comment Get first node of queue (FIFO)
-    \State visited.add(curNode); \Comment mark node as visited
-      \For{Edge e : curNode.getEdges()}
-        \If{!visited.contains(e.getNode2())}
-              \State nodeQueue.offer(e.getNode2());
-              \State e.getNode2().setdistance(curNode.getDistance()+1);
-        \EndIf
-        \If{!e.getNode2().getDistance() == curNode.getDistance()+1}
-              \State e.getNode2().addParent(curNode); \Comment every shortest path is saved 
-        \EndIf
-      \EndFor
+    \State nodeQueue.push(start); // add the beginning node to the queue 
+    \While {$\neg$nodeQueue.empty}
+    \State Node curNode = nodeQueue.pop(); // Get first node of queue (FIFO)
+    \State visited.add(curNode); // mark node as visited
+    \For{Edge e : curNode.edges} //iterate through all edges  
+    \If{$\neg$visited.contains(e.node2))}
+    \State nodeQueue.push(e.node2);
+    \State e.node2.distance(curNode.distance+1);
+    \EndIf
+    \If{e.node2.distance == curNode.distance+1}
+    \State e.node2.addParent(curNode); // every shortest path is saved 
+    \EndIf
+    \EndFor
     \EndWhile
   \end{algorithmic}
 \end{algorithm}
@@ -430,11 +403,11 @@ After setting $startingS$ as current and best Solution the following operations 
   \item{If the size of the tabulist is greater than $t_{size}$ the oldest element will be removed.}
   \item{The current solution $curS$ is set to be the $neighborS$ and it is then evaluated if it is the best Solution.}
   \item{If $curS$ is a better solution than $bestS$, i.e., if the maximum neighborhood of servers in $curS$, $r$, is lower than the respective counterpart in 
-   $best$ and the maximum usage of edges is below $c$, $bestS$ is set to be $curS$. If the best solution is not solved, i.e., it does not fuilfill the
-  maximum edge usage constraint $c$, only the maximum edge usage values,
-  $bestS.lastC$ and $curS.lastC$ will be compared. If $curS.lastC$ is lower than $bestS.lastC$, it is the new best solution}
-  \item{If the new solution satisfies the maximum edge usage constraint c and the maximum neighborhood is equal to $r\_lower$, an optimal
-  solution is found and the algorithm stops and returns the solution.}
+      $best$ and the maximum usage of edges is below $c$, $bestS$ is set to be $curS$. If the best solution is not solved, i.e., it does not fuilfill the
+      maximum edge usage constraint $c$, only the maximum edge usage values,
+    $bestS.lastC$ and $curS.lastC$ will be compared. If $curS.lastC$ is lower than $bestS.lastC$, it is the new best solution}
+  \item{If the new solution satisfies the maximum edge usage constraint c and the maximum neighborhood is equal to $r*$, an optimal
+    solution is found and the algorithm stops and returns the solution.}
 \end{enumerate}
 After completing the above described procedure $iter$ times $bestS$ is returned.
 The implementation is shown in algorithm \ref{tabusa}. The datastructure used to represent the solution saves the maximum edge usage, the maximum neighborhood
@@ -444,7 +417,7 @@ of the solution and the solution itself, i.e., the set of servers.
 \caption {tabu search}
 \label {tabusa}
 \begin {algorithmic} [3]
-\Require Graph(V,E) G, Solution startingS, Tabulistsize $t_{size}$, Iterations iter, MaxEdgeUsage c, NeighborhoodLowerBound r\_lower
+\Require Graph(V,E) G, Solution startingS, Tabulistsize $t_{size}$, Iterations iter, MaxEdgeUsage c, MaxNeighborhoodLowerBound r*
 \State Solution curS;
 \State Solution neighborS;
 \State Solution bestS;
@@ -452,23 +425,23 @@ of the solution and the solution itself, i.e., the set of servers.
 \State bestS = curS = startingS;
 \State tabulist $\gets$ curS;
 \For{i=0; i$<$iter; i++}
-  \State  neighborS = localSearch(curS, G, c, l); \Comment described in Algorithm \ref{localS}
-  \State  tabulist $\gets$ neighborS;
-  \If {tabulist.size() $>$ $t_{size}$}
-    \State removeOldest();
-  \EndIf
-  \State  curS = neighborS;
-  \If{(curS.getLastC()$\leq$ c) $\&\&$ (curS.getR() $<$ bestS.getR()) }
-    \State bestSolution.setSolved(true);
-    \State bestSolution = currentSol;
-    \If{curS.getR()==r\_lower}
-      \State break; \Comment {Best possible feasible Solution}
-    \EndIf
-  \EndIf  
-   \If{(!bestS.isSolved()) $\&\&$ (bestS.getLastC()$>$curS.getLastC()) }
-    \State curS.setSolved(curS.getLastC()$\leq$c);
-    \State bestS = curS;
-   \EndIf 
+\State  neighborS = localSearch(curS, G, c, l); // described in Algorithm \ref{localS}
+\State  tabulist $\gets$ neighborS;
+\If {tabulist.size $>$ $t_{size}$}
+\State removeOldestEntry();
+\EndIf
+\State  curS = neighborS;
+\If{(curS.lastC $\leq$ c) $\&\&$ (curS.r $<$ bestS.r) }
+\State bestSolution.setSolved(true);
+\State bestSolution = currentSol;
+\If{curS.getR()==r*}
+\State break; // best possible feasible Solution found
+\EndIf
+\EndIf  
+\If{($\neg$bestS.solved) $\&\&$ (bestS.lastC$>$curS.lastC) }
+\State curS.setSolved(curS.lastC$\leq$c);
+\State bestS = curS;
+\EndIf 
 \EndFor\\
 \Return bestS;
 \end {algorithmic}
@@ -501,28 +474,28 @@ The following procedure is executed to create the neighborhood:
 \Require Solution curS, Graph(V,E) g, MaxEdgeUsage c 
 \State Solution bestS $\gets \emptyset$;
 \State g.Servers $\gets$ curS.Servers;
-\For{Node server : g.getServers()}
-  \State    g.removeServer(server);
-  \For{Node otherNode: g.getGraph())}
-    \If{(!otherNode.equals(server))\&\&(!g.getServers().contains(otherNode))}
-      \State g.addServer(otherNode);
-      \State g.updateConstraints();
-      \State max\_usage = g.getMaxUsage();
-      \State max\_neighbourset = g.getMaxNeighbourSet();
-      \If{(max\_usage$\leq$c)\&\&((max\_neighbourset)$<$bestSolution.getR())
-      \&\&(!tabuList.contains(g.getServers()))}
-        \State bestSolution=new Solution(g,max\_neighbourset,max\_usage,true);
-      \EndIf 
-      \If{(!bestSolution.isSolved())\&\&(bestSolution.getLastC()$>$max\_usage)
-      \&\&(!tabuList.contains(g.getServers()))}
-        \State bestSolution=new Solution(g,max\_neighbourset,max\_usage, max\_usage$\leq$c);
-        \State g.removeServer(otherNode);
-      \EndIf
-      \EndIf
-   \EndFor
-   \State g.addServer(server);
+\For{Node server : g.servers}
+\State    g.removeServer(server);
+\For{Node otherNode: g.nodes}
+\If{(othernode $\neq$ server) $\wedge$ (otherNode $\notin$ g.servers)}
+\State g.addServer(otherNode);
+\State g.updateConstraints();
+\State max\_usage = g.maxUsage; //the maximum usage of the edges
+\State max\_neighbourset = g.MaxNeighbourSet; //size of biggest neighbor set
+\If{(max\_usage $\leq$ c) $\wedge$ ((max\_neighbourset)$<$bestSolution.r)
+$\wedge$(g.servers $\notin$ tabulist) }
+\State bestSolution=new Solution(g.servers,max\_neighbourset,max\_usage,true);
+\EndIf 
+\If{($\neg$bestSolution.solved) $\wedge$ (bestSolution.lastC$>$max\_usage)
+$\wedge$ (g.servers $\notin$ tabulist)}
+\State bestSolution=new Solution(g.servers,max\_neighbourset,max\_usage, max\_usage$\leq$c);
+\EndIf
+\State g.removeServer(otherNode);
+\EndIf
+\EndFor
+\State g.addServer(server);
 \EndFor\\
-    \Return  bestS;
+\Return  bestS;
 \end {algorithmic}
 \end {algorithm}
 
@@ -537,10 +510,10 @@ the algorithm executes a while loop for a minimum of $r_{sec}$ seconds:
 \begin{enumerate}
   \item {A random neighbor solution is generated and saved to variable $solY$}
   \item {The new random solution $solY$ is compared to the old solution $solX$. A function $compareSolution(.,.)$ takes care of 
-        comparing the values of the maximum neighbor set and the maximum edge usage.}
+    comparing the values of the maximum neighbor set and the maximum edge usage.}
   \item {If the solution is better, the new solution is set to be solX.}
   \item {If it is not better, the solutions are compared with the metropolis criterion. The code for the criterion is stated in algorithm \ref{metcrit}. If the metropolis criterion
-        is fulfilled the new solution is also set to be solX. }
+    is fulfilled the new solution is also set to be solX. }
   \item {The temperature is decremented, which results in a lower chance for the metropolis criterion.}
   \item {If the runtime of the loop is not more than $r_{sec}$ go to step one.}
 \end{enumerate}
@@ -552,24 +525,24 @@ After the loop, $solX$ is returned.
 \label {simA}
 \begin {algorithmic} [3]
 \Require Solution initS, Graph(V,E) g, MaxEdgeUsage c, Runtime $r_{sec}$, Temperature $t_{init}$, Cooling factor c,
-        Lowerbound\_r r\_lower; 
-        \State Temperature temp = $t_{init}$;
-        \State Solution solX = initS; 
-        \While{timepassed $<$ $r_{sec}$}
-        \State Solution solY = randomNeighbor(solX);
-        \If{compareSolutions(solX,solY)} \Comment If solY is better than solX
-                \State solX = solY;
-         \Else
-         \If{metropoliscriterion(solX,solY,temperature)}
-                    \State solX = solY;\Comment see algorithm \ref{metcrit}
-                \EndIf
-        \EndIf    
-            \State temp = temp*c; \Comment Cooling takes place here
-            \If{(solX.getR()==r\_lower)\&\&(solX.getLastC() $\leq$ c)}
-               \State break;
-            \EndIf 
-      \EndWhile\\
-      \Return solX;
+Lowerbound\_r $r*$; 
+\State Temperature temp = $t_{init}$;
+\State Solution solX = initS; 
+\While{timepassed $<$ $r_{sec}$}
+\State Solution solY = randomNeighbor(solX);
+\If{compareSolutions(solX,solY)} // if solY is better than solX
+\State solX = solY;
+\Else
+\If{metropoliscriterion(solX,solY,temperature)}
+\State solX = solY; // see algorithm \ref{metcrit}
+\EndIf
+\EndIf    
+\State temp = temp*c; // cooling takes place here
+\If{(solX.r==$r*$) $\wedge$ (solX.lastC $\leq$ c)}
+\State break;
+\EndIf 
+\EndWhile\\
+\Return solX;
 \end {algorithmic}
 \end {algorithm}
 
@@ -586,84 +559,122 @@ the chance for replacement is higher than with a lower temperature.
 \Require Solution y, Solution x, Temperature T
 \State Z = random Number $\in [0,1)$
   \If {$Z<e^{-|rating(y)-rating(x)|/T}$} \Comment see Algorithm \ref{rating}\\
-\Return true;
-\EndIf\\
-\Return false;
-\end {algorithmic}
-\end {algorithm}
+  \Return true;
+  \EndIf\\
+  \Return false;
+  \end {algorithmic}
+  \end {algorithm}
 
-Rating a solution is done as described in algorithm \ref{rating}. It is highly valued, if the solution is
-feasible. The other part of the rating is done by adding the ratios of (i) the lower bound of maximum neighbor sets and the current maximum of neighbor sets and
-(ii) the ratio of the limit of the maximum edge usage and the current maximum edge usage.
-\begin {algorithm} [H]
-\caption {Rating}
-\label {rating}
-\begin {algorithmic} [3]
-\Require Solution x, MaxEdgeUsage c, LowerBound r\_lower
-\State rating = 0;
-\State //solution is valid
-\If {x.getLastC()$<$C}
-    rating += 1;
-\EndIf
-\State rating+=c/x.getLastC();
-\State rating+=r\_lower/x.getR());\\
-\Return rating;
+  Rating a solution is done as described in algorithm \ref{rating}. It is highly valued, if the solution is
+  feasible. The other part of the rating is done by adding the ratios of (i) the lower bound of maximum neighbor sets and the current maximum of neighbor sets and
+  (ii) the ratio of the limit of the maximum edge usage and the current maximum edge usage.
+  \begin {algorithm} [H]
+  \caption {Rating}
+  \label {rating}
+  \begin {algorithmic} [3]
+  \Require Solution x, MaxEdgeUsage c, LowerBound r\_lower
+  \State rating = 0;
+  \State //solution is valid
+  \If {x.lastC$<$c}
+  rating += 1;
+  \EndIf
+  \State rating+=c/x.lastC;
+  \State rating+=r\_lower/x.r);\\
+  \Return rating;
 
-\end {algorithmic}
-\end {algorithm}
+  \end {algorithmic}
+  \end {algorithm}
 
-\section{Performance Evaluation}
-\newpage  
-\thispagestyle{empty}
-\begin{table}[H]
-  \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | }
-    \hline
-    Networks & n & m &k & r* & r & r/r* & c & m(c) & solved \\ \hline
-    above.net & 22 & 25 & 3 & 8 & 13 & 1.625 & 3 & 3 & true\\ \hline
-    At Home Network & 46 & 55 & 5 & 10 & 11 & 1.1 & 8 & 7 & true\\ \hline
-    AGIS & 82 & 92 & 9 & 10 & 14 & 1.4 & 10 & 10 & true\\ \hline
-    AT\&T WorldNet & 93 & 154 & 10 & 10 & 28 & 2.8 & 2 & 5 & false\\ \hline
-    BBN Planet & 41 & 49 & 5 & 9 & 17 & 1.888 & 5 & 6 & false\\ \hline
-    Cable Internet & 8 & 7 & 1 & 8 & 8 & 1.0 & 8 & 7 & true\\ \hline
-    CAIS Internet & 37 & 44 & 4 & 10 & 12 & 1.2 & 10 & 9 & true\\ \hline
-    CompuServe Network Services & 16 & 23 & 2 & 8 & 11 & 1.375 & 5 & 3 & true\\ \hline
-    CRL Network Services & 35 & 50 & 4 & 9 & 12 & 1.333 & 4 & 4 & true\\ \hline
-    DataXchange Network, Inc. & 8 & 24 & 1 & 8 & 8 & 1.0 & 5 & 1 & true\\ \hline
-    Allegiance Telecom & 53 & 88 & 6 & 9 & 26 & 2.888 & 3 & 5 & false\\ \hline
-    EPOCH Networks, Inc. & 29 & 30 & 3 & 10 & 14 & 1.4 & 6 & 6 & true\\ \hline
-    EUnet & 28 & 30 & 3 & 10 & 23 & 2.3 & 2 & 2 & true\\ \hline
-    Exodus & 14 & 19 & 2 & 7 & 9 & 1.285 & 4 & 3 & true\\ \hline
-    Genuity & 48 & 53 & 5 & 10 & 14 & 1.4 & 8 & 8 & true\\ \hline
-    GeoNet Communications, Inc. & 13 & 15 & 2 & 7 & 10 & 1.428 & 3 & 2 & true\\ \hline
-    GetNet International & 5 & 6 & 1 & 5 & 5 & 1.0 & 7 & 2 & true\\ \hline
-    GlobalCenter & 9 & 36 & 1 & 9 & 9 & 1.0 & 5 & 1 & true\\ \hline
-    GoodNet & 27 & 58 & 3 & 9 & 20 & 2.222 & 2 & 2 & true\\ \hline
-    IDT Corp & 15 & 18 & 2 & 8 & 9 & 1.125 & 6 & 6 & true\\ \hline
-    ipf.net & 5 & 5 & 1 & 5 & 5 & 1.0 & 7 & 3 & true\\ \hline
-    iSTAR Internet Inc. & 20 & 22 & 2 & 10 & 14 & 1.4 & 6 & 5 & true\\ \hline
-    Cable \& Wireless & 20 & 34 & 2 & 10 & 12 & 1.2 & 7 & 7 & true\\ \hline
-    MindSpring & 41 & 45 & 5 & 9 & 22 & 2.444 & 2 & 2 & true\\ \hline
-    Nap.Net, LLC & 6 & 7 & 1 & 6 & 6 & 1.0 & 5 & 5 & true\\ \hline
-    Netrail Incorporated & 17 & 21 & 2 & 9 & 12 & 1.333 & 6 & 3 & true\\ \hline
-    PSINet & 78 & 110 & 8 & 10 & 19 & 1.9 & 5 & 8 & false\\ \hline
-    Qwest & 14 & 26 & 2 & 7 & 8 & 1.142 & 4 & 4 & true\\ \hline
-    RISQ Network & 13 & 12 & 2 & 7 & 8 & 1.142 & 4 & 2 & true\\ \hline
-    RNP & 27 & 35 & 3 & 9 & 12 & 1.333 & 3 & 2 & true\\ \hline
-    Savvis Communications & 28 & 56 & 3 & 10 & 20 & 2.0 & 4 & 4 & true\\ \hline
-    ServInt Internet Services & 23 & 34 & 3 & 8 & 12 & 1.5 & 5 & 4 & true\\ \hline
-    Sprint & 21 & 37 & 3 & 7 & 11 & 1.571 & 4 & 4 & true\\ \hline
-    Telstra Internet & 21 & 24 & 3 & 7 & 13 & 1.857 & 2 & 2 & true\\ \hline
-    UUNET & 126 & 316 & 13 & 10 & 29 & 2.9 & 2 & 6 & false\\ \hline
-    Verio & 35 & 72 & 4 & 9 & 17 & 1.888 & 3 & 3 & true\\ \hline
-    VisiNet & 11 & 13 & 2 & 6 & 10 & 1.666 & 4 & 4 & true\\ \hline
-    XO Communications & 33 & 38 & 4 & 9 & 16 & 1.777 & 5 & 5 & true\\ \hline
- \end{tabular}
- \caption{Greedy Algorithm}
- \label{table:greedyloc}
- \end{table}
-  
-\thispagestyle{empty}
- \begin {table}[H]
+  \section{Performance Evaluation}
+
+  \subsection{Data (test instances)}
+  The data taken for the performance evaluation is from caida \cite{caidabarebones}. Parsing the
+  data was not as trivial as it sounds, because the data is not formatted well,
+  and several modifications have been done to fit the problem.
+  Unfortunately the syntax proposed in the beginning of the file is not considered
+  for each and every network, because different people added networks to the file.
+  I also modified the data to make it fit for the problem and to approximate the
+  data of the paper \cite{mirrorserver} as best as I could:
+  \begin{itemize}
+    \item If the graph G given for the barebone network was not connected,
+      the connected component with less nodes of that graph is cut out.
+    \item Normally the connected cities are listed in this manner:
+      "city,state,country", in order to match with the number of Nodes and Edges
+      in the paper \cite{mirrorserver} only city and state are used for
+      identification and the country is left out. Sometimes London
+      is used on one hand as City in Canada and on the other hand in GB, denoted like this
+      London, *, Canada and London, *, England. They are differentiated.
+    \item Sometimes the State has a number. One example would be "Kansas City, KS2~"
+      This is interpreted as "Kansas City, KS".
+  \end{itemize}
+
+  All those modifications were done to match the graphs of \cite{mirrorserver} as closely as possible.
+  As I did not have the data of the other paper, I tried to match them with the number of
+  nodes and number of vertices. Unfortunately three instances of my instances do not
+  match the number of nodes and / or vertices proposed from the paper above.
+  The varying instances are: "Sprint", "Cable and Wireless" and "UUNet".
+
+  \subsection{Evaluation}
+  In the following section, the performance of the described algorithms is evaluated. The data used is described in the previous section.
+  In \cite{caidabarebones} a way of defining the constraints given G=(V,E) is stated which was used for this evaluation as well: 
+  \begin{itemize}
+    \item{The number of servers $k = \lceil |V| * 0.1 \rceil$  }
+    \item{The limit of the maximum usage for every edge $c = \lceil(\frac{|V|}{(k*\Delta)}*d)\rceil$. $\Delta$ is the maximum degree and $d$ is a positive integer.}
+    \item{The lower bound of the maximum usage for every edge $c\_lower = \lceil(\frac{|V|}{(k*\Delta)})\rceil$. $\Delta$ is the maximum degree.}
+    \item{The lower bound of the maximum size of the neighbor sets $r*=\frac{|V|}{k}$.}
+  \end{itemize}
+  In \cite{mirrorserver} $d$ is defined as four. They defined a solution as solved if $\frac{r}{r*}$ was no more than two, and the maximum usage for every edge was below $c$. 
+  \newpage  
+  \thispagestyle{empty}
+  \begin{table}[H]
+    \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | }
+      \hline
+      Networks & n & m &k & r* & r & r/r* & c & m(c) & solved \\ \hline
+      above.net & 22 & 25 & 3 & 8 & 13 & 1.625 & 3 & 3 & true\\ \hline
+      At Home Network & 46 & 55 & 5 & 10 & 11 & 1.1 & 8 & 7 & true\\ \hline
+      AGIS & 82 & 92 & 9 & 10 & 14 & 1.4 & 10 & 10 & true\\ \hline
+      AT\&T WorldNet & 93 & 154 & 10 & 10 & 28 & 2.8 & 2 & 5 & false\\ \hline
+      BBN Planet & 41 & 49 & 5 & 9 & 17 & 1.888 & 5 & 6 & false\\ \hline
+      Cable Internet & 8 & 7 & 1 & 8 & 8 & 1.0 & 8 & 7 & true\\ \hline
+      CAIS Internet & 37 & 44 & 4 & 10 & 12 & 1.2 & 10 & 9 & true\\ \hline
+      CompuServe Network Services & 16 & 23 & 2 & 8 & 11 & 1.375 & 5 & 3 & true\\ \hline
+      CRL Network Services & 35 & 50 & 4 & 9 & 12 & 1.333 & 4 & 4 & true\\ \hline
+      DataXchange Network, Inc. & 8 & 24 & 1 & 8 & 8 & 1.0 & 5 & 1 & true\\ \hline
+      Allegiance Telecom & 53 & 88 & 6 & 9 & 26 & 2.888 & 3 & 5 & false\\ \hline
+      EPOCH Networks, Inc. & 29 & 30 & 3 & 10 & 14 & 1.4 & 6 & 6 & true\\ \hline
+      EUnet & 28 & 30 & 3 & 10 & 23 & 2.3 & 2 & 2 & true\\ \hline
+      Exodus & 14 & 19 & 2 & 7 & 9 & 1.285 & 4 & 3 & true\\ \hline
+      Genuity & 48 & 53 & 5 & 10 & 14 & 1.4 & 8 & 8 & true\\ \hline
+      GeoNet Communications, Inc. & 13 & 15 & 2 & 7 & 10 & 1.428 & 3 & 2 & true\\ \hline
+      GetNet International & 5 & 6 & 1 & 5 & 5 & 1.0 & 7 & 2 & true\\ \hline
+      GlobalCenter & 9 & 36 & 1 & 9 & 9 & 1.0 & 5 & 1 & true\\ \hline
+      GoodNet & 27 & 58 & 3 & 9 & 20 & 2.222 & 2 & 2 & true\\ \hline
+      IDT Corp & 15 & 18 & 2 & 8 & 9 & 1.125 & 6 & 6 & true\\ \hline
+      ipf.net & 5 & 5 & 1 & 5 & 5 & 1.0 & 7 & 3 & true\\ \hline
+      iSTAR Internet Inc. & 20 & 22 & 2 & 10 & 14 & 1.4 & 6 & 5 & true\\ \hline
+      Cable \& Wireless & 20 & 34 & 2 & 10 & 12 & 1.2 & 7 & 7 & true\\ \hline
+      MindSpring & 41 & 45 & 5 & 9 & 22 & 2.444 & 2 & 2 & true\\ \hline
+      Nap.Net, LLC & 6 & 7 & 1 & 6 & 6 & 1.0 & 5 & 5 & true\\ \hline
+      Netrail Incorporated & 17 & 21 & 2 & 9 & 12 & 1.333 & 6 & 3 & true\\ \hline
+      PSINet & 78 & 110 & 8 & 10 & 19 & 1.9 & 5 & 8 & false\\ \hline
+      Qwest & 14 & 26 & 2 & 7 & 8 & 1.142 & 4 & 4 & true\\ \hline
+      RISQ Network & 13 & 12 & 2 & 7 & 8 & 1.142 & 4 & 2 & true\\ \hline
+      RNP & 27 & 35 & 3 & 9 & 12 & 1.333 & 3 & 2 & true\\ \hline
+      Savvis Communications & 28 & 56 & 3 & 10 & 20 & 2.0 & 4 & 4 & true\\ \hline
+      ServInt Internet Services & 23 & 34 & 3 & 8 & 12 & 1.5 & 5 & 4 & true\\ \hline
+      Sprint & 21 & 37 & 3 & 7 & 11 & 1.571 & 4 & 4 & true\\ \hline
+      Telstra Internet & 21 & 24 & 3 & 7 & 13 & 1.857 & 2 & 2 & true\\ \hline
+      UUNET & 126 & 316 & 13 & 10 & 29 & 2.9 & 2 & 6 & false\\ \hline
+      Verio & 35 & 72 & 4 & 9 & 17 & 1.888 & 3 & 3 & true\\ \hline
+      VisiNet & 11 & 13 & 2 & 6 & 10 & 1.666 & 4 & 4 & true\\ \hline
+      XO Communications & 33 & 38 & 4 & 9 & 16 & 1.777 & 5 & 5 & true\\ \hline
+    \end{tabular}
+    \caption{Greedy Algorithm}
+    \label{table:greedyloc}
+  \end{table}
+
+  \thispagestyle{empty}
+  \begin {table}[H]
   \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | }
     \hline
     Networks & n & m & k & r* & r & r/r* & c & m(c) & Solved\\ \hline
@@ -755,8 +766,181 @@ feasible. The other part of the rating is done by adding the ratios of (i) the l
   \end{tabular}
   \caption{Tabu Search}
 \end{table}
+\begin{figure}[H]
+  \label{bar3algs}
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[
+          symbolic y coords={
+            above.net,
+            At Home Network,
+            AGIS,
+            BBN Planet,
+            Cable Internet,
+            CAIS Internet,
+            CompuServe Network Services,
+            CRL Network Services,
+            DataXchange Network Inc.,
+            EPOCH Networks Inc.,
+            EUnet,
+            Exodus,
+            Genuity,
+            GeoNet Communications Inc.,
+            GetNet International,
+            GlobalCenter,
+            GoodNet,
+            IDT Corp,
+            ipf.net,
+            iSTAR Internet Inc.,
+            Cable  Wireless,
+            MindSpring,
+            Nap.Net LLC,
+            Netrail Incorporated,
+            PSINet,
+            Qwest,
+            RISQ Network,
+            RNP,
+            Savvis Communications,
+            ServInt Internet Services,
+            Sprint,
+            Telstra Internet,
+            Verio,
+            VisiNet,
+            XO Communications,
+          },
+          y=14,
+          ytick=data,
+          y tick label style={/pgf/number format/1000 sep=},
+          xbar=0.7pt,
+          %xbar=0.7pt,
+          bar width=3pt
+        ]
+        %TS + GD
+        \addplot coordinates {
+          (13,above.net)
+          (11,At Home Network)
+          (11,AGIS)
+          (13,BBN Planet)
+          (8,Cable Internet)
+          (10,CAIS Internet)
+          (10,CompuServe Network Services)
+          (12,CRL Network Services)
+          (8,DataXchange Network Inc.)
+          (14,EPOCH Networks Inc.)
+          (23,EUnet)
+          (9,Exodus)
+          (12,Genuity)
+          (10,GeoNet Communications Inc.)
+          (5,GetNet International)
+          (9,GlobalCenter)
+          (19,GoodNet)
+          (9,IDT Corp)
+          (5,ipf.net)
+          (14,iSTAR Internet Inc.)
+          (11,Cable  Wireless)
+          (22,MindSpring)
+          (6,Nap.Net LLC)
+          (11,Netrail Incorporated)
+          (14,PSINet)
+          (8,Qwest)
+          (8,RISQ Network)
+          (12,RNP)
+          (19,Savvis Communications)
+          (11,ServInt Internet Services)
+          (9,Sprint)
+          (13,Telstra Internet)
+          (17,Verio)
+          (7,VisiNet)
+          (12,XO Communications)
+        };
 
-\section{Conclusion}
+        %%GD + SA
+        \addplot coordinates {
+
+          (13,above.net)
+          (10,At Home Network)
+          (11,AGIS)
+          (13,BBN Planet)
+          (8,Cable Internet)
+          (10,CAIS Internet)
+          (10,CompuServe Network Services)
+          (12,CRL Network Services)
+          (8,DataXchange Network Inc.)
+          (14,EPOCH Networks Inc.)
+          (23,EUnet)
+          (9,Exodus)
+          (11,Genuity)
+          (10,GeoNet Communications Inc.)
+          (5,GetNet International)
+          (9,GlobalCenter)
+          (19,GoodNet)
+          (8,IDT Corp)
+          (5,ipf.net)
+          (14,iSTAR Internet Inc.)
+          (10,Cable  Wireless)
+          (22,MindSpring)
+          (6,Nap.Net LLC)
+          (11,Netrail Incorporated)
+          (16,PSINet)
+          (9,Qwest)
+          (8,RISQ Network)
+          (12,RNP)
+          (19,Savvis Communications)
+          (11,ServInt Internet Services)
+          (9,Sprint)
+          (13,Telstra Internet)
+          (17,Verio)
+          (7,VisiNet)
+          (12,XO Communications)        
+        };
+        %%greedy location
+        \addplot coordinates {
+          (13,above.net)
+          (11,At Home Network)
+          (14,AGIS)
+          (8,Cable Internet)
+          (12,CAIS Internet)
+          (11,CompuServe Network Services)
+          (12,CRL Network Services)
+          (8,DataXchange Network Inc.)
+          (14,EPOCH Networks Inc.)
+          (23,EUnet)
+          (9,Exodus)
+          (14,Genuity)
+          (10,GeoNet Communications Inc.)
+          (5,GetNet International)
+          (9,GlobalCenter)
+          (20,GoodNet)
+          (9,IDT Corp)
+          (5,ipf.net)
+          (14,iSTAR Internet Inc.)
+          (12,Cable  Wireless)
+          (22,MindSpring)
+          (6,Nap.Net LLC)
+          (12,Netrail Incorporated)
+          (8,Qwest)
+          (8,RISQ Network)
+          (12,RNP)
+          (20,Savvis Communications)
+          (12,ServInt Internet Services)
+          (11,Sprint)
+          (13,Telstra Internet)
+          (17,Verio)
+          (10,VisiNet)
+          (16,XO Communications)
+        };
+        \legend{GD+TS,GD+SA,GL}
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+  \caption{Comparison of Greedy Location(GL),Greedy Degree with Tabu Search(GD+TS), Greedy Degree with Simulated Annealing(GD+SA)}
+\end{figure}
+\thispagestyle{empty}
+
+
+
+
+
 
 \bibliography{bibtex}
 \end{document}

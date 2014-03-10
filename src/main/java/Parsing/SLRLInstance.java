@@ -224,11 +224,12 @@ public class SLRLInstance {
         return result;
     }
 
-    @Override
-    public String toString() {
+    public String barChart(){
+        return "("+r+ "," + testInstanceName +")";
+    }
+    public String tabella(){
         //modifying it for latex output
-        return
-                testInstanceName + " & " +
+         return  testInstanceName + " & " +
                 V + " & " +
                 E + " & " +
                 k + " & " +
@@ -238,7 +239,11 @@ public class SLRLInstance {
                 c + " & "+
                 cLast + " & "+
                 solved + "\\\\ \\hline";
-        /*return "Parsing.SLRLInstance{" +
+
+    }
+    @Override
+    public String toString() {
+        return "Parsing.SLRLInstance{" +
                 "testInstanceName='" + testInstanceName + '\'' +
                 ", k=" + k +
                 ", r=" + r +
@@ -251,7 +256,7 @@ public class SLRLInstance {
                 ", E=" + E +
                 ", cLast="+ cLast +
                 //", nodeVectorHashMap=" + graphToString() +
-                '}'; */
+                '}';
     }
 
     public String graphToString() {

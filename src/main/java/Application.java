@@ -1,7 +1,4 @@
-import Algorithms.GreedyDegree;
-import Algorithms.GreedyLocation;
-import Algorithms.SimulatedAnnealing;
-import Algorithms.TabuSearch;
+import Algorithms.*;
 import Correctness.CorrectnessTester;
 import Correctness.SolutionWrongException;
 import Graph.NodeNotFoundException;
@@ -31,24 +28,28 @@ public class Application {
         //LocalSearch localSearch = new LocalSearch();
         TabuSearch tabuSearch = new TabuSearch();
         int solvedcounter =  0;
+        Enumerate enumerate = new Enumerate();
 
         for(SLRLInstance slrlInstance: instanceList){
             // log.debug("------------------------------");
+            //enumerate.start(slrlInstance);
             long start = System.currentTimeMillis();
-            greedyDegree.solve(slrlInstance);
-            //greedyLocation.solve(slrlInstance);
+           greedyDegree.solve(slrlInstance);
+           // greedyLocation.solve(slrlInstance);
             long end = System.currentTimeMillis();
             //log.debug ("Greedy location "+ (end-start) + "ms");
             //log.debug(slrlInstance.toString());
 
             start = System.currentTimeMillis();
            //tabuSearch.tabu_search(slrlInstance);
-            SimulatedAnnealing sim = new SimulatedAnnealing(slrlInstance);
+           // tabuSearch.tabu_search_s(slrlInstance);
+           SimulatedAnnealing sim = new SimulatedAnnealing(slrlInstance);
             sim.calculate();
             end = System.currentTimeMillis();
             //log.debug ("tabu search costed "+ (end-start) + "ms");
             //log.debug(slrlInstance.toString());
-            System.out.println(slrlInstance.toString());
+            if(slrlInstance.getSolved())
+            System.out.println(slrlInstance.barChart());
 
             if(slrlInstance.getSolved()){
                 solvedcounter++;

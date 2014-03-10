@@ -18,6 +18,7 @@ public class Solution {
     private int lastC;
     private boolean solved;
     private List<Node> servers;
+    private Node lastNode;
 
     public Solution(Graph g, int r, int lastC, boolean solved) {
         this.r = r;
@@ -39,6 +40,18 @@ public class Solution {
         for(Node n : other.getServers()){
             servers.add(n);
         }
+    }
+
+    public Solution(){
+        servers = new ArrayList<Node>();
+    }
+    public Solution(Solution solution) {
+        servers = new ArrayList<Node>();
+        for(Node n : solution.getServers()){
+            servers.add(n);
+        }
+        setLastNode(solution.getLastNode());
+
     }
 
 
@@ -85,7 +98,23 @@ public class Solution {
                 "r=" + r +
                 ", lastC=" + lastC +
                 ", solved=" + solved +
-                ", servers=" + servers +
+                //", servers=" + servers +
                 '}';
+    }
+
+    public Node getLastNode() {
+        return lastNode;
+    }
+
+    public void setLastNode(Node lastNode) {
+        this.lastNode = lastNode;
+    }
+
+    public void setR(int r) {
+        this.r = r;
+    }
+
+    public void setLastC(int lastC) {
+        this.lastC = lastC;
     }
 }
