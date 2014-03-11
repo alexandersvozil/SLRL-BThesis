@@ -6,6 +6,7 @@ import Parsing.ParseTestInstances;
 import Parsing.SLRLInstance;
 import org.apache.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,12 +31,15 @@ public class Application {
         int solvedcounter =  0;
         Enumerate enumerate = new Enumerate();
 
+        //to output barchart and the tabella of that algorithm
+        List<String> tabella = new ArrayList<String>();
+        List<String> barchart= new ArrayList<String>();
         for(SLRLInstance slrlInstance: instanceList){
             // log.debug("------------------------------");
             //enumerate.start(slrlInstance);
             long start = System.currentTimeMillis();
-           greedyDegree.solve(slrlInstance);
-           // greedyLocation.solve(slrlInstance);
+            //greedyDegree.solve(slrlInstance);
+            greedyLocation.solve(slrlInstance);
             long end = System.currentTimeMillis();
             //log.debug ("Greedy location "+ (end-start) + "ms");
             //log.debug(slrlInstance.toString());
@@ -43,13 +47,16 @@ public class Application {
             start = System.currentTimeMillis();
            //tabuSearch.tabu_search(slrlInstance);
            // tabuSearch.tabu_search_s(slrlInstance);
-           SimulatedAnnealing sim = new SimulatedAnnealing(slrlInstance);
-            sim.calculate();
+           //SimulatedAnnealing sim = new SimulatedAnnealing(slrlInstance);
+           //sim.calculate();
             end = System.currentTimeMillis();
             //log.debug ("tabu search costed "+ (end-start) + "ms");
             //log.debug(slrlInstance.toString());
-            if(slrlInstance.getSolved())
-            System.out.println(slrlInstance.barChart());
+
+            if(slrlInstance.getSolved()){
+            barchart.add(slrlInstance.barChart());
+            }
+            tabella.add(slrlInstance.tabella());
 
             if(slrlInstance.getSolved()){
                 solvedcounter++;
@@ -62,6 +69,12 @@ public class Application {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                 log.error("solution incorrect");
             }
+        }
+        for(String n : barchart){
+            System.out.println(n);
+        }
+        for(String n : tabella){
+            System.out.println(n);
         }
         log.debug("Number of Instances: " + instanceList.size() + ", Solved:" + solvedcounter);
     }
