@@ -10,34 +10,54 @@
 \usepackage{tikz}
 \usepackage{float}
 \usepackage{pgfplots}
+\usepackage{setspace}
+
 \usetikzlibrary{shapes.multipart}
 
 \bibliographystyle{ieeetr} 
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \newtheorem{mydef}{Definition}
-
 \begin{document}
+\vspace{20pt}
+\begin{center}
+  \fontsize{45pt}{25pt}\selectfont Bachelor Thesis 
+\end{center}
+\vspace{50pt}
+\begin{center}
+  \fontsize{55pt}{30pt}\selectfont\textbf{The Server Location Problem with Restricted Loads on Servers and Links} 
+\end{center}
+\vspace{50pt}
 
-\author{Alexander Svozil\\ TU Wien}
-\title{The Server Location Problem with Restricted Loads 
-on Servers and Links}
-
-\maketitle
+\begin{center}
+\large Alexander Svozil (1026213)\\April 10, 2014
+\end{center}
+\vspace{20pt}
+\begin{center}
+\large Institute of Computer Graphics and Algorithms (E186) at the Vienna University of Technology 
+\end{center}
+\vspace{20pt}
+\begin{center}
+\large Field of work: Algorithms and Datastructures \\ Supervisor: Univ.-Prof. Dipl.-Ing. Dr.techn. Günther Raidl \\
+\end{center}
+%\maketitle
+\thispagestyle{empty}
 \newpage
 
-\section{Abstract}
-The server location problem with restricted loads on servers and links (SLRL) is an NP-complete
-problem, introduced by Hiroyoshi Miwa et al. in the Paper \cite{mirrorserver}. The problem 
-can be motivated, because the massive volume of data distributed by content delivery networks (CDNs) 
-require well located mirror servers in order to render a satisfactory performance in terms of quality of service.
-The two constraints induced by the choice of mirror servers is (i) the number of maximum nodes
-accessing a mirror server and (ii) the maximum number of nodes accessing a mirror server 
-through a specific link. The constraint mentioned first corresponds to the network load on
-the (mirror-)servers. The second constraint corresponds to the restricted load on the links.
-The problem will be formulated by explaining some of the terminology used and by proving that SLRL is NP-complete.
-Then heuristic algorithms using tabu search and simulated annealing will be introduced and their performances will be evaluated in comparison with the old algorithm proposed 
-by Miwa et. al \cite{mirrorserver}. 
 
+\section*{Abstract}
+The server location problem with restricted loads on servers and links (SLRL) is an NP-complete
+problem, introduced by Miwa et al. The problem 
+is motivated by the fact that a massive volume of data distributed by content delivery networks (CDNs) 
+requires well located mirror servers in order to render a satisfactory performance in terms of quality of service.
+Two constraints important for the choice of mirror servers is (i) the number of maximum nodes
+accessing a mirror server and (ii) the maximum number of nodes accessing a mirror server 
+through a specific link. The constraint mentioned first limits the network load on
+the (mirror-)servers. The second constraint restricts the load on the links.
+The problem will be formally defined, some background information will be given and SLRL will be shown to be NP-complete.
+Then heuristic algorithms based on tabu search and simulated annealing will be introduced and their performances will be evaluated in comparison with the algorithm proposed 
+by Miwa et. al. 
+
+\thispagestyle{empty}
 
 \newpage
 \tableofcontents

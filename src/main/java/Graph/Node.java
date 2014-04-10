@@ -100,12 +100,6 @@ public class Node implements Traversable {
         edges.add(e);
     }
 
-
-
-
-
-
-
     public void setDistance(int distance) {
         this.distance = distance;
     }
