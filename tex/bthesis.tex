@@ -65,21 +65,28 @@ by Miwa et. al.
 
 
 \section{Introduction}
-\subsection {CDNs}
-The CDN also content delivery network is a collaborative collection of network elements.
-To perform transparent and effective delivery of content to the end user, content in CDNs is replicated over 
-several mirrored web servers. \cite[p. 3]{Buyya:2008:CDN:1457653}\\
-To perform efficient delivery of data, CDNs need to have several mirrored web servers
+Content delivery networks (CDNs) try to ensure satisfactory performance when users access their content 
+and have therefore put mirror servers that serve the same content to shorten the delay time to the users of content service.
+The mirror servers need to be well located in order to achieve this task. A method for finding those well located mirror servers thus needs to be introduced.
+In the server location problem with restricted loads on servers and links, a graph representing the network is given and a set of servers is chosen consisting of vertices from the graph. The vertices are then seen as clients
+accessing the servers for data. A client will always try to reach the nearest server(s). If there are several paths to the nearest server or if there are several nearest servers, the worst case is assumed
+and usage for all the paths used to reach the server(s) are considered.
+Depending on the choice of the server locations, a client will either have a long path or a short path to the nearest server(s). The links used to reach the nearest server(s), seen as the edges in the graph,
+are either used by many other clients, meaning the load of the links in the path is high, or not at all depending on the server and the client location. The server location problem with restricted loads
+on servers and links is abbreviated by SLRL and has first been formally introduced by Miwa et al. \cite{mirrorserver}
+
+\subsection {Content Delivery Network (CDN)}
+To perform efficient delivery of data, content delivery networks need to have several mirrored web servers
 and thus it is important to place them well, because placing the mirror server 
 could be an expensive choice considering no prior calculation where it should go. 
 The expensive choice manifests in high link usages and/or a maximal neighbourhood being
-too big for the server to handle. A CDN is able to distribute load among its servers to avoid
+too big for the server to handle. A content delivery network is able to distribute load among its servers to avoid
 links that are overused.
 The mirror servers naturally serve the same data, as they are there to alleviate the 
 load of the other servers providing the data.
 
 \subsection {Similar Problems}
-SLRL could be described as an augmented server location problem: 
+The server location problem with restricted loads on servers and links could be described as an augmented server location problem: 
 Two problems that describe this problem would be the p-center and the
 p-median problem. The purpose of these problems is mainly to shorten delay
 time from the client to the server. 
@@ -97,10 +104,10 @@ For large instances, it is impractical to solve the problem exactly.
 
 \subsubsection {P-Median Problem}
 The P-Median Problem is very similar to the P-center problem. It can be defined as follows:
-Given a graph G=(V,E) we are asked to find a set of nodes, S, of size p, where $ S\subset V$, such that the weighted
-sum of the distances from the remaining nodes \{V-S\} to the Set S is minimized \cite{Rolland1997329}.
+Given a graph $G=(V,E)$ we are asked to find a set of nodes, $S$, of size $p$, where $ S\subset V$, such that the weighted
+sum of the distances from the remaining nodes \{V-S\} to the set S is minimized \cite{Rolland1997329}.
 This problem belongs to the class of problems known as NP-hard \cite{KarivHakimi1979median}. There have been
-approaches to solve this problem with the tabu search \cite{Rolland1997329} and solving the linear program 
+approaches to solve this problem with tabu search \cite{Rolland1997329} and integer linear programming 
 \cite{rosing1979p}.
 
 
