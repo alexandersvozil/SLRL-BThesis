@@ -116,66 +116,99 @@ approaches to solve this problem with tabu search \cite{Rolland1997329} and inte
 %\subsection{Open Shortest Path First}
 %%TODO: Facility Location with hops
 \section{Server Location Problem with Restricted Loads on Servers and Links}
-\subsection{Formal Definition}
-\subsubsection{Neighbour Set}
-The neighbour set is the set of vertices, that belongs to a server. In the SLRL problem, it is
-defined as follows: If a non-server vertice has a shortest path to a server node, he 
-belongs to this server nodes neighbour set. If the vertice has several shortest
+In order to understand the SLRL decision problem definition, the definition of a neighbour set and the load on a link need to be explained. 
+\subsection{Neighbour Set}
+Given a graph $G=(V,E)$ and a set of servers $S \subseteq V$, the neighbour set of a server is the set of vertices, that belong to a server $s \in S$. In the SLRL problem, it is
+defined as follows: If a non-server vertex has a shortest path to a server node, it 
+belongs to this server nodes neighbour set. If the vertex has several shortest
 paths to multiple server nodes, it belongs to all of the server nodes neighbour
 sets. The server itself belongs to its own neighbour set.
-\subsubsection{Load on a Link, m(e) or multiplicity of an edge}
-The load on a link (edge) is an integer. It is defined as the number of shortest paths, that use this link. If there
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}
+    [scale=0.85,auto=left,every node/.style={scale=0.85}]
+    \node[circle,draw, red] (a) at (0,3) {s1};
+    \node[circle,draw] (b) at (1,4) {v1};
+    \node[circle,draw] (c) at (1,2) {v2};
+    \node[circle,draw] (d) at (2,3) {v3};
+    \node[circle,draw] (e) at (4,3) {v4};
+    \node[circle,draw] (f) at (6,3) {v5};
+    \node[circle,draw] (g) at (8,3) {v6};
+    \node[circle,draw, blue] (h) at (9,4) {s2};
+    \node[circle,draw] (i) at (9,2) {v7};
+    \node[circle,draw] (j) at (10,3) {v8};
+    \foreach \from/\to in {a/b, a/c, b/d, c/d, d/e, e/f, f/g, g/h, g/i, i/j, h/j}
+    \draw (\from) -- (\to);
+    \draw[dashed, red] (-1,3) .. controls (1,0) and (4,0) .. (5,3) 
+    .. controls (2,6) and (0,6) .. (-1,3) ;
+    \draw[dashed, blue] (11,3) .. controls (9,0) and (6,0) .. (3,3) 
+    .. controls (7,6) and (10,6) .. (11,3) ;
+    
+    \draw[dashed, red] (0,-1) -- (1,-1);
+\node[text width=6cm, anchor=west, right] at (2,-1)
+    {neighbour set of s1};
+    \draw[dashed, blue] (0,-2) -- (1,-2);
+\node[text width=6cm, anchor=west, right] at (2,-2)
+    {neighbour set of s2};
+
+  \end{tikzpicture}
+  \caption{An instance of SLRL, showing the neighbour set of the servers}
+\end{figure}
+
+\subsection{Load on a Link or multiplicity of an edge}
+Given a graph $G=(V,E)$ and a set of servers $S \subseteq V$, the load on a link (edge), also $m(e) \ e \in E$, is defined as the number of 
+shortest paths (between non-server vertices to their respective nearest server(s)) using this link. If there
 are several shortest paths with the same length to one or more servers every
 used edge is taken into account. It is mandatory to do this, because we must always consider
 the worst case when locating a server. 
-\begin{mydef}
-  Given a graph G(V,E), and a set of integers $A= \{ m(e) \ | \ e \in E \}$, max(m(e)) is defined as $max(m(e)):= max(A)$.
-\end{mydef}
-\subsubsection{SLRL Decision Problem Definition}
+%\begin{mydef}
+%  Given a graph $G(V,E)$, and a set of integers $A= \{ m(e) \ | \ e \in E \}$, max(m(e)) is defined as $max(m(e)):= max(A)$.
+%\end{mydef}
+\subsection{SLRL Decision Problem Definition}
 
 {\itshape \textbf{Instance:} An undirected graph G(V,E) and  positive integers k,r and c.\\
   \textbf{Question:} 
-  Is there a subset of Servers S, $S \subseteq V$, where $|S| = k$, $|V|$ $\geq$ k,
-  and a subset $|V_i|$ for each Server $s_i \in S$, where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$, r $\geq  |V_i|$ 
-and $c  \geq max(m(e))$}
+  Is there a subset of servers $S \subseteq V$, with $|S| = k$, $|V|$ $\geq$ k,
+  and a subset $V_i \subseteq V$ for each server $s_i \in S$, where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$, $|V_i| \leq r$ 
+and the load $m(e) \leq c \ \forall e \in E$ ?}
+\medskip
 
-
-It is easy to see, that the subset of servers S is a solution to the problem, because the neighborhood subset
+\noindent
+It is easy to verify whether or not a $S \subseteq V$ is a solution to the problem, because the neighborhood subset
 of every server can easily be calculated with the graph and the set of servers. Also the load of each edge
-can be checked after each shortest path to the server has been calculated (the maximum is m(e)).
+can be checked after each shortest path to the server has been calculated.
 
 \subsection{Proof of NP-completeness}
 First, we have to show that SLRL is in NP. After guessing a solution, meaning we 
-have an instance of SLRL (G,r,c,k) and a guessed set of servers S, one can clearly check 
+have an instance of SLRL $(G,r,c,k)$ and a guessed set of servers S, one can clearly check 
 in polynomial time whether it is a valid solution for SLRL: We need to check that every neighbor set is smaller
 or equal to r. Also the number of servers have to be k and the maximum usage of every edge may not exceed c.
 Calculating every neighbor set is done with breadth-first search: Every vertex that is not a server calculates
-the path to every server and marks the path so the usage gets tracked. This is in $\mathcal{O}(V*(V+E)*S)$, as breadth first
-search is in $\mathcal{O}(V+E)$. Checking that server set is below k is trivial as is looking at the usage of
+the path to every server and marks the path so the usage gets tracked. This is in $\mathcal{O}(|V|*(|V|+|E|)*|S|)$, as breadth first
+search is in $\mathcal{O}(|V|+|E|)$. Checking that server set is equal to $k$ is trivial as is looking at the usage of
 every edge and comparing the maximum with c.\\
 Now after showing that SLRL is in NP, we want to proof NP-completeness of SLRL.
-3SAT is NP-complete \cite{Garey:1979:CIG:578533} and can be shown, that 3SAT can be reduced to SLRL in polynomial time,
-implying SLRL is NP-hard and NP-complete because we showed membership of NP. 
-This proof is merely a rewriting of Miwa et al. \cite{mirrorserver}, as it is one of the first proofs I saw of 
-this kind, it was really interesting for me to figure it out.
-3SAT is similar to SAT the satisfiability problem for arbitrary formulas. In 3SAT the formula must be in CNF and 
+3SAT (3-satisfiability) is an NP-complete problem \cite{Garey:1979:CIG:578533} and can be reduced to SLRL in polynomial time,
+implying SLRL is NP-hard and NP-complete because we already showed the membership of NP. 
+This proof is merely a rewriting of Miwa et al. \cite{mirrorserver}.
+3SAT is similar to SAT, the satisfiability problem for arbitrary boolean formulas. In 3SAT the formula must be in conjunctive normal form and 
 each clause may only consist of three literals. A solution for 3SAT would be a truth assignment to every
-variable. An instance of 3SAT (U,C) consists of a set of clauses C and a set of variables U. The question is if there is a satisfying
+variable. An instance of 3SAT $(U,C)$ consists of a set of clauses $C$ and a set of variables $U$. The question is if there is a satisfying
 truth assignment.\\
 To reduce 3SAT to SLRL, and thus to prove that SLRL is at least as hard as 3SAT, we need to find a 
-transformation $R: x \rightarrow y$ where $x \in 3SAT$ and $y \in SLRL$. This transformation must be 
+transformation $R: x \rightarrow y$ where $x$ is an arbitrary instance of 3SAT and $y$ is the resulting instance of SLRL. This transformation must be 
 done in polynomial time. After the transformation, we need to show that 3SAT has a solution if and only if 
 SLRL has a solution.\\
-The steps to construct an instance of SLRL (G=(V,E),k,r,c) of an instance of 3SAT (U,C) are described below.
+The steps to construct an instance of SLRL $(G=(V,E),k,r,c)$ of an instance of 3SAT $(U,C)$ are described below.
 \begin{enumerate}
   \item{Let V $\leftarrow \emptyset$ and E $\leftarrow \emptyset$.}
-  \item{For each $C_i \in C$ where (i = 1,\dots,m), let $c_i$ be a vertex, and for each $u_j \in U$ for (j = 1,\dots,n),
+  \item{For each $C_i \in C$ where i = 1,\dots,m, let $c_i$ be a vertex, and for each $u_j \in U$ for j = 1,\dots,n,
     let $t_j$ and $f_j$ be a vertex.}
   \item {Let V $\leftarrow \{c_1, \dots, c_m\} \cup \{t_1, \dots, t_n, f_1, \dots, f_n\} $ }
-  \item {Let E $\leftarrow \{(t_i,f_i)\}$ for (i = 1,\dots,n) }
-  \item {For each $C_i \in C$ for (i = 1,\dots,m), if $u_j \in C_i$, let E $\leftarrow$ E $\cup \ \{ (c_i ,t_j) \}$
+  \item {Let E $\leftarrow \{(t_i,f_i)\}$ for i = 1,\dots,n }
+  \item {For each $C_i \in C$ for i = 1,\dots,m, if $u_j \in C_i$, let E $\leftarrow$ E $\cup \ \{ (c_i ,t_j) \}$
     and if $\neg u_j \in C_i$, let E $\leftarrow$ E $\cup \ \{(c_i,f_j)\}$ }
-  \item{For each (i=1,\dots,m) and (j=1,\dots,n) let V $\leftarrow$  V $\cup \ \{v_{ij}\}$ and E $\leftarrow$ E $\cup \ \{(t_i,v_{ij}), (f_i, v_{ij} \}$ }
+  \item{For each i=1,\dots,m and j=1,\dots,n let V $\leftarrow$  V $\cup \ \{v_{ij}\}$ and E $\leftarrow$ E $\cup \ \{(t_i,v_{ij}), (f_i, v_{ij} \}$ }
   \item{Let k = n, r = 2m+2 and c = 1}
 \end{enumerate}
 The transformation is displayed in figure \ref{transfo}.
@@ -221,60 +254,91 @@ The transformation is displayed in figure \ref{transfo}.
   \caption{The transformation from 3SAT to SLRL}
   \label{transfo}
 \end{figure}
-
+\noindent
 Now we prove, that 3SAT has a solution if and only if SLRL has a solution. 
-To prove the statement, it will be first shown, that if 3SAT has a solution SLRL also has a solution.
-\begin{enumerate}
-  \item{Assume 3SAT has a solution, that means we have a truth assignment, 
-    which satisfies all the clauses.}
-  \item{Construct the set of servers S as follows: If variable $u_j \in U$ is true
+To prove the statement, it will be first shown that if 3SAT has a solution SLRL also has a solution.
+\medskip
+
+\noindent
+  Assume 3SAT has a solution, this means we have a truth assignment, 
+    which satisfies all the clauses.
+\medskip
+
+\noindent
+  Construct the set of servers S as follows: If variable $u_j \in U$ is true
       in the truth assignment, then add $t_j$ to the server set. If variable $u_j \in U$
-      is false, then add $f_j$ to the server set. Do this for each variable $u_j$ for $j = (1,\dots,n)$.
-      As there are exactly n variables in U, this clearly satisfies our constraint 
-    for k, i.e., the number of servers.}
-  \item{At most m clauses inherit the variable $u_j$ and there are m vertices connected to every
-      $t_j$ and $f_j$, i.e., $v_{ij}$ for $i=(1,\dots,m)$.
+      is false, then add $f_j$ to the server set. Do this for each variable $u_j$ for $j = 1,\dots,n$.
+      As there are exactly $n$ variables in $U$, this clearly satisfies our constraint 
+    for $k$, i.e., the number of servers.
+\medskip
+
+\noindent
+  At most m clauses inherit the variable $u_j$ and there are m vertices connected to every
+      $t_j$ and $f_j$, i.e., $v_{ij}$ for $i=1,\dots,m$.
       Thus the number of vertices in the neighbor set is $m+m+2 = 2m+2 \leq r $ for every 
       $t_j$ or $f_j$. The additional two vertices result of the server and the respective 
-    vertex representing the other truth value.}
-  \item{The usage of each edge is at most one, which means it is smaller and equal to c. $1\leq c$.
-    Thus it is obvious that this constraint is not violated.}
-  \item{Consequently this instance of SLRL, (G,k,r,c) has a solution, because all constraints are satisfied 
-    and as a result the first part of the equivalence is proven.}
-\end{enumerate}
-To finish our proof, we need to show the converse, i.e., 
-if (G,k,r,c) is a solution there is also a solution for 3SAT. 
+    vertex representing the other truth value.
+\medskip
 
-\begin{enumerate}
-  \item{Assume (G,k,r,c) has a solution. Let $G_i, (i=1,\dots,n)$ be the subgraph induced
-    by $t_i, f_i$ and $v_{ij},(j=1,\dots,m)$.}
-  \item{We will now show, that there is only one way to place the servers, namely the truth
-    value assignment for the variables, that satisfy the 3SAT instance}
-  \item{Assume that there is no server in $G_i$. This would imply that the servers is a subset of
+\noindent
+  The usage of each edge is at most one, which means it is smaller and equal to $c$. $1\leq c$.
+    Thus it is obvious that this constraint is not violated.
+\medskip
+
+\noindent
+  Consequently this instance of SLRL, $(G,k,r,c)$, has a solution, because all constraints are satisfied 
+    and as a result the first part of the equivalence is proven.
+\medskip
+
+\noindent
+To finish our proof, we also need to show the reverse, i.e., 
+if $(G,k,r,c)$ has a solution there is also a solution for 3SAT. 
+  \medskip
+
+  \noindent
+  Assume $(G,k,r,c)$ has a solution. Let $G_i, i=1,\dots,n$ be the subgraph induced
+    by $t_i, f_i$ and $v_{ij},j=1,\dots,m$.
+  \medskip
+
+  \noindent
+  We will now show that there is only one way to place the servers, namely the truth
+    value assignment for the variables that satisfy the 3SAT instance
+  \medskip
+
+  \noindent
+  Assume that there is no server in $G_i$. This would imply that the servers is a subset of
       $c_j$ for $(j=1\dots m)$. The problem there is, that not only is m $\neq$ n(concerning constraint k),
       but also that constraint c would be unsatisfied, because more than one path would use 
       the edge connecting $c_j$ and either $f_i$ or $t_i$ (there are m + 2 vertices in $G_i$).
-    Thus placing a server on any $c_j$ is not possible, because it would automatically violate constraint c.}
-  \item{Assume that the servers are placed on $v_{ij}$. This would also satisfy the neighborhood 
+    Thus placing a server on any $c_j$ is not possible, because it would automatically violate constraint c.
+  \medskip
+
+  \noindent
+  Assume that the servers are placed on $v_{ij}$. This would also satisfy the neighborhood 
       constraint r, but it would certainly violate the constraint c, because the degree of $v_{ij}$ is two and
       and the number of vertices in $G_i$ is m+2. All of them would need to use one of the two edges for their shortest path,
-    resulting in a violation.}
-  \item{The only spare option that would satisfy the neighborhood constraint 
+    resulting in a violation.
+  \medskip
+
+  \noindent
+  The only spare option that would satisfy the neighborhood constraint 
       are the vertices $t_i$ and $f_i$. Let $u_i$ be true if a server is located on
       $t_i$ and let $u_i$ be false if a server is located on $f_i$.  
       If an arbitrary $c_j$ has no adjacent vertice which is a server,
       the SLRL would not be fulfilled because there would be two shortest paths passing edge
       $(t_i,f_i)$. This would contradict $c = 1$ and also means that there is always an adjacent vertice which is a server to $c_j$.
-      Therefore, the truth assignments satisfies all clauses.}
-\end{enumerate}
+      Therefore, the truth assignments satisfies all clauses.
+  \medskip
+
+  \noindent
 Thus 3SAT was successfully reduced to SLRL in polynomial time.
 Consequently, SLRL is NP-complete.$\square$
 
 \section{SLRL as Optimization Problem}
 
-After thoroughly discussing the decision problem of SLRL, the optimization problem
-of SLRL will be tackled next. Like \cite{mirrorserver}, I decided to optimize the maximum 
-neighborhood constraint considering the maximum usage of edges c.
+After discussing the decision problem of SLRL, the optimization version
+of SLRL will be tackled next. As in \cite{mirrorserver}, I decided to relax the maximum 
+neighborhood constraint.
 
 \subsection{An Instance Of The Problem}
 \begin{figure}[H]
@@ -290,8 +354,9 @@ neighborhood constraint considering the maximum usage of edges c.
     \draw (\from) -- (\to);
   \end{tikzpicture}
   \caption{GetNet International as an Instance of SLRL}
+  \label{instancelol}
 \end{figure}
-The above shown graph is from the barebone network "GetNet International".
+The graph in figure \ref{instancelol} is from the barebone network "GetNet International".
 It is parsed out of a dataset of barebone networks provided by caida \cite{caidabarebones}.
 \\
 The nodes have two values in their lower part: "NH and max(m(e))". NH stands for 
@@ -303,7 +368,7 @@ $max(m(e))$ in the lower part of the node describes $max(m(e)$ $ \forall e \in E
 if one decides to take this node as a server.
 The greedy algorithm takes the node with the lowest $max(m(e))$ first.
 
-\section{Implementation}
+\section{Heuristic Solution Approaches to SLRL}
 
 
 \subsection{Greedy Algorithms}
