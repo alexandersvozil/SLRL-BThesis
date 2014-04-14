@@ -11,6 +11,7 @@
 \usepackage{float}
 \usepackage{pgfplots}
 \usepackage{setspace}
+\usepackage{amsmath}
 
 \usetikzlibrary{shapes.multipart}
 
@@ -369,12 +370,12 @@ if one decides to take this node as a server.
 The greedy algorithm takes the node with the lowest $max(m(e))$ first.
 
 \section{Heuristic Solution Approaches to SLRL}
-
+In this section I will at first introduce two greedy algorithms for SLRL. After that my approach to a tabu search algorithm and a simulated annealing algorithm for SLRL is documented. 
 
 \subsection{Greedy Algorithms}
 The only prior algorithm for this problem is the greedy algorithm proposed by
-Miwa et al. \cite{mirrorserver}. It greedily puts the vertex with the 
-lowest maximal neighbourhood if the constraint $c\geq m(e) (\forall e \in E)$ is fulfilled into the server set. 
+Miwa et al. \cite{mirrorserver}. It greedily constructs a solution by iteratively selecting the vertex with the 
+lowest maximal neighbourhood if the constraint $c\geq m(e) (\forall e \in E)$ is fulfilled. 
 Otherwise it will choose a vertex as server where $max_{e \in E}m(e)$ is the minimum.
 \begin{algorithm}[H]
   \caption{GreedyLocation}
@@ -393,30 +394,30 @@ Otherwise it will choose a vertex as server where $max_{e \in E}m(e)$ is the min
     is the minimum.
     \State $S \gets S \cup \{ v \}$
     \EndWhile
-    \If{$max_{e \in E}m(e) > c}$
-    \State output infeasible
+    \If{$max_{e \in E}m(e) > c}$\\
+    \Return output infeasible
     \EndIf\\
     \Return S
   \end{algorithmic}
 \end{algorithm}
-The runtime of the original algorithm is $\mathcal O(kn^{2}*(V+E))$,
-where $m = |E|$ and $n = |V|$. Seen  in general it is $\mathcal O(k * updateConstraints)$. 
-In the paper \cite{mirrorserver}, the constraints calculation works like this:
+The runtime of the original algorithm is in $\mathcal O(k|V|^{2} \cdot (|V|+|E|))$. Seen in general it is $\mathcal O(k \cdot updateConstraints)$, where
+$updateConstraints$ is the runtime of the function updating two values, namely (i) the maximum neighbour set and (ii) the maximum edge usage. 
+In \cite{mirrorserver}, the constraints calculation works like this:
 To determine the shortest paths from one node to every other node takes 
-$\mathcal O(V+E)$ using Breadth-First Search. This needs to be done for every node once,
-which implies a runtime of $\mathcal O(n*(V+E))$. 
-This calculations suffice to determine the size of the maximum neighbor set r . To determine the maximum
+$\mathcal O(|V|+|E|)$ using Breadth-First Search. This needs to be done for every node once,
+which implies a runtime of $\mathcal O(|V| \cdot (|V|+|E|))$. 
+This calculations suffice to determine the size of the maximum neighbor set. To determine the maximum
 edge usage, every node (except the nodes in the server set) needs to be looked 
 at again (the usage of the edges in the
 path(s) to the server(s) need to be incremented, and a path can maximally be the whole graph), 
-which results in a runtime of $\mathcal O(n^{2}*(V+E))$.   
+which results in a runtime of $\mathcal O(|V|^{2} \cdot (|V|+|E|))$.   
 This process is executed for every server added, thus resulting in the final runtime of
-$\mathcal O(kn^{2}*(V+E))$. 
+$\mathcal O(k|V|^{2} \cdot (|V|+|E|))$. 
 \subsection{A faster greedy algorithm: GreedyDegree}
 Having seen greedy location yet another greedy algorithm is proposed namely GreedyDegree. This algorithm always chooses the vertex with the
-highest degree first and puts it in the server set(obviously only if it is not already in the server set). This does not pose
-a terrible solution because choosing nodes with a high degree often imply a lower usage of edges because it is well connected. It is obviously not very complicated 
-and thus produces worse results than GreedyLocation but its runtime is much better ($\mathcal O(V*E)$). It is also observed how 
+highest degree first and puts it in the server set obviously only if it is not already in the server set. 
+Choosing nodes with a high degree often imply a lower usage of edges because it is well connected. It is obviously not very complicated 
+and thus produces worse results than GreedyLocation but its runtime is much better ($\mathcal O(V \cdot E)$). It is also observed how 
 the two algorithms perform in combination with the tabu search and the simulated annealing algorithm in the last section. 
 \begin{algorithm}[H]
   \caption{GreedyDegree}
@@ -427,39 +428,37 @@ the two algorithms perform in combination with the tabu search and the simulated
     \While {$|S| < k$}
     \State Choose vertex $v$ such that the degree of the vertex is maximal
     and $v \notin S$.
+    \State $S \cup \{v\}$
     \EndWhile
-    \If{$max_{e \in E}m(e) > c}$
-    \State output infeasible
+    \If{$\max_{e \in E}m(e) > c}$\\
+    \Return output infeasible
     \EndIf\\
     \Return S
   \end{algorithmic}
 \end{algorithm}
 
 \subsection{Determination of the neighbour sets of a server and loads of the links}
-As briefly described in the last section, when a server is added to the server set, the size of the maximum neighbor set r and
-$ max_{e \in E}m(e)$ (namely the maximum usage of all edges) need to be recalculated, as the shortest paths from the nodes 
+As described in the last section, when a server is added to the server set, the size of the maximum neighbor set r and
+$\max_{e \in E}m(e)$ (namely the maximum usage of all edges) need to be recalculated, as the shortest paths from the nodes 
 to the servers change. I tried to speed up the constraint calculation, 
 because on a big graph it took a lot of time and also for local search algorithms the constraints need to be calculated
 far more often than k times (servers need to be swapped a lot, implying a need for a faster constraint calculation).
 My approach was to calculate all the paths before adding servers and also to save the edges used in the paths.
-This is indeed in $\mathcal O(n^{3}*(V+E))$, but constraint calculation after adding and removing a server is much faster,
+This is indeed in $\mathcal O(|V|^{3} \cdot (|V|+|E|))$, but constraint calculation after adding and removing a server is much faster,
 because the edges used are already saved and every node knows it's nearest server(s) in $\mathcal O(|S|)$. Saving 
 every edge used in every path shortest path to the respective servers enabled me to do the constraint calculation without using the breadth first search.
-Which results in a runtime of $\mathcal O(kn*(V+E))$ which is a obviously faster than $\mathcal O(kn^{2}*(V+E))$ with the disadvantage of more memory usage.
-$\mathcal O(V+E)$ results of the need to track the usages. Storing all the paths allows finding the nearest servers in $\mathcal O(|S|)$ but the load on the links 
+Which results in a runtime of $\mathcal O(k \cdot |V| \cdot (|V|+|E|))$ which is a obviously faster than $\mathcal O(k \cdot |V|^{2} \cdot (|V|+|E|))$ with the disadvantage of more memory usage.
+$\mathcal O(|V|+|E|)$ results of the need to track the usages. Storing all the paths allows finding the nearest servers in $\mathcal O(|S|)$ but the load on the links 
 still need to be calculated.
 
 \subsection{Modified BFS}
 The breadth first search needed to be modified enabling it to find all the shortest paths 
 from one node to another, as we need to consider every shortest path in order to simulate
-the worst case scenario regarding load on links. Also, to reconstruct the paths, a list of parent nodes is saved
+the worst case scenario regarding loads on links. Also, to reconstruct the paths, a list of parent nodes is saved
 in every node, when reached. The important step to get all the shortest paths to a node is saving the distance needed to reach it:
-Doing this enables vertices who are expanded later, to also be parent of a vertice which already has a parent, where this parent was
-expanded before the current vertice. This condition is expressed in the second if statement.
-The runtime of BFS $\mathcal O(|V| + |E|)$, remains unmodified. In order to augment
-the chance of correctness I wrote test cases that would check the algorithm.
-These tests are to be found in the "Test" package.
-
+Doing this enables vertices who are expanded later, to also be parent of a vertex which already has a parent, where this parent was
+expanded before the current vertex. This condition is expressed in the second if statement.
+The runtime of BFS $\mathcal O(|V| + |E|)$, remains unmodified. 
 \begin{algorithm}[H]
   \caption{BFS}
   \label{BFS}
@@ -488,66 +487,13 @@ These tests are to be found in the "Test" package.
 \end{algorithm}
 
 \subsection{Tabu Search}
-The tabu search introduced by Glover in 1986 \cite{Glover:1986:FPI:15310.15311} is the first meta search heuristics I tried to use on SLRL.
-The algorithm takes five parameters: The graph $G$, the solution
-to start from $startingS$, the maximum size of the tabulist $t_{size}$, the iterations $iter$, the lower bound for the maximum neighborhood
-$r*$ and the constraint for the maximum edge usage $c$.\\
-The algorithm starts with adding $startingS$ to the tabulist.  
-After setting $startingS$ as current and best Solution the following operations will be carried out $iter$ times: 
-\begin{enumerate}
-  \item{A neighbor solution $neighborS$ determined by algorithm \ref{localS} is obtained.}
-  \item{The solution $neighborS$ is added to the tabulist.}
-  \item{If the size of the tabulist is greater than $t_{size}$ the oldest element will be removed.}
-  \item{The current solution $curS$ is set to be the $neighborS$ and it is then evaluated if it is the best Solution.}
-  \item{If $curS$ is a better solution than $bestS$, i.e., if the maximum neighborhood of servers in $curS$, $r$, is lower than the respective counterpart in 
-      $best$ and the maximum usage of edges is below $c$, $bestS$ is set to be $curS$. If the best solution is not solved, i.e., it does not fuilfill the
-      maximum edge usage constraint $c$, only the maximum edge usage values,
-    $bestS.lastC$ and $curS.lastC$ will be compared. If $curS.lastC$ is lower than $bestS.lastC$, it is the new best solution}
-  \item{If the new solution satisfies the maximum edge usage constraint c and the maximum neighborhood is equal to $r*$, an optimal
-    solution is found and the algorithm stops and returns the solution.}
-\end{enumerate}
-After completing the above described procedure $iter$ times $bestS$ is returned.
-The implementation is shown in algorithm \ref{tabusa}. The datastructure used to represent the solution saves the maximum edge usage, the maximum neighborhood
-of the solution and the solution itself, i.e., the set of servers. 
+The Tabu search has been introduced by Glover in 1986 \cite{Glover:1986:FPI:15310.15311}. I applied this metaheuristic for SLRL.
 
-\begin {algorithm} [H]
-\caption {tabu search}
-\label {tabusa}
-\begin {algorithmic} [3]
-\Require Graph(V,E) G, Solution startingS, Tabulistsize $t_{size}$, Iterations iter, MaxEdgeUsage c, MaxNeighborhoodLowerBound r*
-\State Solution curS;
-\State Solution neighborS;
-\State Solution bestS;
-\State Tabulist l $\gets$ $\emptyset$
-\State bestS = curS = startingS;
-\State tabulist $\gets$ curS;
-\For{i=0; i$<$iter; i++}
-\State  neighborS = localSearch(curS, G, c, l); // described in Algorithm \ref{localS}
-\State  tabulist $\gets$ neighborS;
-\If {tabulist.size $>$ $t_{size}$}
-\State removeOldestEntry();
-\EndIf
-\State  curS = neighborS;
-\If{(curS.lastC $\leq$ c) $\&\&$ (curS.r $<$ bestS.r) }
-\State bestSolution.setSolved(true);
-\State bestSolution = currentSol;
-\If{curS.getR()==r*}
-\State break; // best possible feasible Solution found
-\EndIf
-\EndIf  
-\If{($\neg$bestS.solved) $\&\&$ (bestS.lastC$>$curS.lastC) }
-\State curS.setSolved(curS.lastC$\leq$c);
-\State bestS = curS;
-\EndIf 
-\EndFor\\
-\Return bestS;
-\end {algorithmic}
-\end {algorithm}
-\subsection{The local search for the tabu search}
-The local search algorithm displayed in algorithm \ref{localS} takes
+\subsubsection{Investigating the neighbourhood of a solution }
+The search algorithm displayed in algorithm \ref{localS} takes
 the following three parameters as input (i) the solution to start from $curS$
 (ii) the Graph $g$ to operate on and (iii) the limit for the maximum edge usage c.
-The purpose of the algorithm is to create a neighborhood N by swapping servers in the solution
+The purpose of the algorithm is to investigate a neighborhood N by swapping servers in the solution
 resulting in a different potentially better solution. If the new Solution is a new best Solution it is remembered as $bestS$.
 The only difference to an ordinary local search algorithm is, that it minds the tabu list mentioned in algorithm \ref{tabusa}.
 This means, that it will exchange the former best solution only if the new solution is not contained in the tabulist.
@@ -565,7 +511,7 @@ The following procedure is executed to create the neighborhood:
 \end{enumerate}
 
 \begin {algorithm} [H]
-\caption {localsearch}
+\caption {investigateNeighborhood}
 \label {localS}
 \begin {algorithmic} [3]
 \Require Solution curS, Graph(V,E) g, MaxEdgeUsage c 
@@ -596,14 +542,90 @@ $\wedge$ (g.servers $\notin$ tabulist)}
 \end {algorithmic}
 \end {algorithm}
 
+\subsubsection{The Tabu Search Algorithm}
+The algorithm takes five parameters: The graph $G$, the solution
+to start from $startingS$, the maximum size of the tabulist $t_{size}$, the number of iterations $iter$, the lower bound for the maximum neighborhood size
+$r*$ and the limit for the maximum edge usage $c$.\\
+The algorithm starts with adding $startingS$ to the tabulist.  
+After setting $startingS$ as current and best Solution the following operations will be carried out $iter$ times: 
+\begin{enumerate}
+  \item{A neighbor solution $neighborS$ determined by algorithm \ref{localS} is obtained.}
+  \item{The solution $neighborS$ is added to the tabulist.}
+  \item{If the size of the tabulist is greater than $t_{size}$ the oldest element will be removed.}
+  \item{The current solution $curS$ is set to be the $neighborS$ and it is then evaluated if it is the best Solution.}
+  \item{If $curS$ is a better solution than $bestS$, i.e., if the maximum neighborhood of servers in $curS$, $r$, is lower than the respective counterpart in 
+      $best$ and the maximum usage of edges is below $c$, $bestS$ is set to be $curS$. If the best solution is not solved, i.e., it does not fuilfill the
+      maximum edge usage constraint $c$, only the maximum edge usage values,
+    $bestS.lastC$ and $curS.lastC$ will be compared. If $curS.lastC$ is lower than $bestS.lastC$, it is the new best solution}
+  \item{If the new solution satisfies the maximum edge usage constraint c and the maximum neighborhood is equal to $r*$, an optimal
+    solution is found and the algorithm stops and returns the solution.}
+\end{enumerate}
+
+After completing the above described procedure $iter$ times $bestS$ is returned.
+A pseudocode is shown in algorithm \ref{tabusa}. The datastructure used to represent the solution saves the maximum edge usage, the maximum neighborhood
+of the solution and the solution itself, i.e., the set of servers. 
+
+\begin {algorithm} [H]
+\caption {tabu search}
+\label {tabusa}
+\begin {algorithmic} [3]
+\Require Graph(V,E) G, Solution startingS, Tabulistsize $t_{size}$, Iterations iter, MaxEdgeUsage c, MaxNeighborhoodLowerBound r*
+\State Solution curS;
+\State Solution neighborS;
+\State Solution bestS;
+\State Tabulist l $\gets$ $\emptyset$
+\State bestS = curS = startingS;
+\State tabulist $\gets$ curS;
+\For{i=0; i$<$iter; i++}
+\State  neighborS = investigateNeighborhood(curS, G, c, l); // described in Algorithm \ref{localS}
+\State  tabulist $\gets$ neighborS;
+\If {tabulist.size $>$ $t_{size}$}
+\State removeOldestEntry();
+\EndIf
+\State  curS = neighborS;
+\If{(curS.lastC $\leq$ c) $\&\&$ (curS.r $<$ bestS.r) }
+\State bestSolution.setSolved(true);
+\State bestSolution = currentSol;
+\If{curS.getR()==r*}
+\State break; // best possible feasible Solution found
+\EndIf
+\EndIf  
+\If{($\neg$bestS.solved) $\&\&$ (bestS.lastC$>$curS.lastC) }
+\State curS.setSolved(curS.lastC$\leq$c);
+\State bestS = curS;
+\EndIf 
+\EndFor\\
+\Return bestS;
+\end {algorithmic}
+\end {algorithm}
+
+
 \subsection{Simulated Annealing}
 Simulated Annealing described in algorithm \ref{simA} is another heuristic approach, introduced by Kirkpatrick et al. \cite{Kirkpatrick83optimizationby}, that
 was applicated to tackle the SLRL-Problem. Simulated Annealing allows 
-escaping the local optima by initially allowing worse solutions than the initial solution and then by lowering the temperature with some time (which steers the allowance probability for worse solutions)
+escaping the local optima by initially allowing worse solutions than the initial solution and then by lowering the temperature 
+with some time (which steers the allowance probability for worse solutions)
 only allowing the better solutions.
-This feature is a result of using the metropolis criterion as stated in algorithm \ref{metcrit}.
+This feature is a result of using the metropolis criterion as stated in algorithm \ref{metcrit}. The metropolis criterion uses an objective function to evaluate a solution.
 As input parameters an initial solution $initS$, a graph $g$, the maximal usage of an edge $c$, the lowerbound for the maximum neighborhood $r*$,
 the desired runtime $r_{sec}$, the temperature $t_{init}$ and the cooling factor c is required.
+The objective function, given a solution x, its maximum edge usage denoted as x.lastC and its maximum neighborhood size x.r, is defined by:
+
+\begin{equation*}
+      f(x) = \begin{cases}
+                       1 + c/x.lastC  + r\_lower/x.r             & \text {x fulfills the maximal edge usage constraint}\\
+                       0 + c/x.lastC + r\_lower/x.r            & \text{otherwise}
+                   \end{cases}
+\end{equation*}
+\medskip
+
+\noindent
+A solution is evaluated by the objective function. It is highly valued, if the solution is
+feasible. The other part of the evaluation is done by adding the ratios of (i) the lower bound of the maximum size of neighbor sets and the current maximum size of neighbor sets and
+(ii) the ratio of the limit of the maximum edge usage and the current maximum edge usage.
+\medskip
+
+\noindent
 After assigning the initial temperature and $initS$ to the variable $temp$ and $initS$ to $solX$,
 the algorithm executes a while loop for a minimum of $r_{sec}$ seconds:
 \begin{enumerate}
@@ -647,8 +669,7 @@ Lowerbound\_r $r*$;
 
 The Metropolis Criterion described in algorithm \ref{metcrit} allows simulated annealing to escape local optima. When a new solution is not better 
 than the current solution, it may still be replaced with the current solution under a certain probability,
-namely $p_{accept}=e^{-|rating(y)-rating(x)|/T}$. $rating(.)$ is a function displayed at algorithm \ref{rating}, which rates the quality of a solution under the condition
-that rating(x) $>$ 0, where x is a solution for the SLRL. T is the current temperature. If the new solution y is only slightly worse than solution x and the temperature T is very high,
+namely $p_{accept}=e^{-|f(y)-f(x)|/T}$. T is the current temperature. If the new solution y is only slightly worse than solution x and the temperature T is very high,
 the chance for replacement is higher than with a lower temperature.
 
 \begin {algorithm} [H]
@@ -657,30 +678,10 @@ the chance for replacement is higher than with a lower temperature.
 \begin {algorithmic} [3]
 \Require Solution y, Solution x, Temperature T
 \State Z = random Number $\in [0,1)$
-  \If {$Z<e^{-|rating(y)-rating(x)|/T}$} \Comment see Algorithm \ref{rating}\\
+  \If {$Z<e^{-|f(y)-f(x)|/T}$} 
   \Return true;
   \EndIf\\
   \Return false;
-  \end {algorithmic}
-  \end {algorithm}
-
-  Rating a solution is done as described in algorithm \ref{rating}. It is highly valued, if the solution is
-  feasible. The other part of the rating is done by adding the ratios of (i) the lower bound of maximum neighbor sets and the current maximum of neighbor sets and
-  (ii) the ratio of the limit of the maximum edge usage and the current maximum edge usage.
-  \begin {algorithm} [H]
-  \caption {Rating}
-  \label {rating}
-  \begin {algorithmic} [3]
-  \Require Solution x, MaxEdgeUsage c, LowerBound r\_lower
-  \State rating = 0;
-  \State //solution is valid
-  \If {x.lastC$<$c}
-  rating += 1;
-  \EndIf
-  \State rating+=c/x.lastC;
-  \State rating+=r\_lower/x.r);\\
-  \Return rating;
-
   \end {algorithmic}
   \end {algorithm}
 
@@ -698,7 +699,7 @@ the chance for replacement is higher than with a lower temperature.
     \item If the graph G given for the barebone network was not connected,
       the connected component with less nodes of that graph is cut out.
     \item Normally the connected cities are listed in the following manner:
-      "city,state,country" and in order to match with the number of Nodes and Edges
+      "city, state, country" and in order to match with the number of Nodes and Edges
       in the paper \cite{mirrorserver} only city and state are used for
       identification and the country is left out. Sometimes London
       is used on one hand as City in Canada and on the other hand in GB, denoted like this
@@ -744,7 +745,7 @@ the chance for replacement is higher than with a lower temperature.
   \newpage  
   \thispagestyle{empty}
   \begin{table}[H]
-  \scalebox{0.9}{
+  \scalebox{0.8}{
     \begin{tabular}{ | l | l | l | l | l | l | l | l | l | l | }
       \hline
       Networks                    & n   & m   & k   & r*  & GL   & GL+TS    & GL+SA   & GD+TS   & GD+SA \\ \hline
