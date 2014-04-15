@@ -796,6 +796,7 @@ the chance for replacement is higher than with a lower temperature.
 
 \begin{figure}[H]
   \begin{center}
+  \scalebox{0.86}{
     \begin{tikzpicture}
       \begin{axis}[
           symbolic y coords={
@@ -959,9 +960,11 @@ the chance for replacement is higher than with a lower temperature.
         \legend{GD+TS,GD+SA,GL}
       \end{axis}
     \end{tikzpicture}
+  }
   \end{center}
-  \caption{Comparison of Greedy Location(GL),Greedy Degree with Tabu Search(GD+TS), Greedy Degree with Simulated Annealing(GD+SA)}
+  \caption{Comparison of Greedy Location(GL), Greedy Degree with Tabu Search(GD+TS), Greedy Degree with Simulated Annealing(GD+SA)}
   \label{bar3algs}
+
 \end{figure}
 \thispagestyle{empty}
 
@@ -1037,6 +1040,13 @@ the chance for replacement is higher than with a lower temperature.
 \end{figure}
 \thispagestyle{empty}
 
+\section{Conclusion}
+I discussed the server location problem with restricted loads on servers and links (SLRL), motivating it by describing the importance of good mirror server locations in content delivery networks.
+A proof for the NP-completeness of SLRL was given and I introduced several heuristic approaches to SLRL, namely a tabu search algorithm and a simulated annealing algorithm.
+The metaheuristic approaches using tabu search or simulated annealing perform better than the greedy algorithm in 15 out of 38 problem instances. The problem instances were
+real ISP backbone topologies. Further research might investigate in exact algorithms for SLRL. It would also be interesting to get rid 
+of the assumption that the metrics of all the links in the network have the value one and to discuss the problem with a weighted graph.
+\newpage
 \bibliography{bibtex}
 
 \end{document}
