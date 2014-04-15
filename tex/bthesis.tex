@@ -30,7 +30,7 @@
 \vspace{50pt}
 
 \begin{center}
-\large Alexander Svozil (1026213)\\April 10, 2014
+\large Alexander Svozil (1026213)\\April 15, 2014
 \end{center}
 \vspace{20pt}
 \begin{center}
@@ -53,7 +53,7 @@ requires well located mirror servers in order to render a satisfactory performan
 Two constraints important for the choice of mirror servers are (i) the number of maximum nodes
 accessing a mirror server and (ii) the maximum number of nodes accessing a mirror server 
 through a specific link. The constraint mentioned first limits the network load on
-the (mirror-)servers. The second constraint restricts the load on the links.
+the (mirror-)servers. The second constraint restricts the load on the links.\\
 The problem will be formally defined, some background information will be given and SLRL will be shown to be NP-complete.
 Then heuristic algorithms based on tabu search and simulated annealing will be introduced and their performances will be evaluated in comparison with the algorithm proposed 
 by Miwa et. al. 
@@ -68,18 +68,18 @@ by Miwa et. al.
 \section{Introduction}
 Content delivery networks (CDNs) try to ensure satisfactory performance when users access their content 
 and have therefore put mirror servers that serve the same content to shorten the delay time to the users.
-The mirror servers need to be well located in order to achieve this task. A method for finding those well located mirror servers thus needs to be introduced.
-In the server location problem with restricted loads on servers and links, a graph representing the network is given and a set of servers is chosen consisting of vertices from the graph. The vertices are then seen as clients
+The mirror servers need to be well located in order to achieve this task. Thus a method for finding those well located mirror server locations needs to be introduced.
+In the server location problem with restricted loads on servers and links, a graph representing the network is given and a set of servers is chosen consisting of vertices from the graph. The vertices are then perceived as clients
 accessing the servers for data. A client will always try to reach the nearest server(s). If there are several paths to the nearest server or if there are several nearest servers, the worst case is assumed
-and usage for all the paths used to reach the server(s) are considered.
+and usage of all the paths used to reach the server(s) are considered.
 Depending on the choice of the server locations, a client will either have a long path or a short path to the nearest server(s). The links used to reach the nearest server(s), seen as the edges in the graph,
 are either used by many other clients, meaning the load of the links in the path is high, or not at all depending on the server and the client location. The server location problem with restricted loads
-on servers and links is abbreviated by SLRL and has first been formally introduced by Miwa et al. \cite{mirrorserver}
+on servers and links is abbreviated by SLRL and has first been formally introduced by Miwa et al. ~\cite{mirrorserver}
 
 \subsection {Content Delivery Network (CDN)}
-To perform efficient delivery of data, content delivery networks need to have several mirrored web servers
-and thus it is important to place them well, because placing the mirror server 
-could be an expensive choice considering no prior calculation where it should go. 
+To perform efficient delivery of data, content delivery networks need to have several mirrored web servers.
+Thus it is important to place them in "good" locations with regard to load balancing, because deploying the mirror server 
+could be an expensive choice, inparticular, if no qualifying calculation is done. %considering no prior calculation where it should go. 
 The expensive choice manifests in high link usages and/or a maximal neighbourhood being
 too big for the server to handle. A content delivery network is able to distribute load among its servers to avoid
 links that are overused.
@@ -89,22 +89,22 @@ load of the other servers providing the data.
 \subsection {Similar Problems}
 The server location problem with restricted loads on servers and links could be described as an augmented server location problem: 
 Two problems that describe this problem would be the $p$-center and the
-$p$-median problem. The purpose of these problems is mainly to shorten delay
+$p$-median problem. The purpose of these problems is mainly to shorten the delay
 time from the client to the server. 
 This class of problems does not care about the maximum load on a link.
 
 \subsubsection {$p$-Center Problem}
 The $p$-Center problem consists of locating $p$ facilities and assigning clients
 to them in order to minimize the maximum distance between a client and the facility
-to which he or she is allocated. It is used for example in locating fire stations or ambulances,
+to which the client is allocated. For example it is used in locating fire stations or ambulances,
 where the distance from the facilities 
-to their farthest assigned potential client should be minimum.
+to their farthest assigned potential client should be minimal.
 The $p$-center problem is NP-hard and a well known location problem.
 For large instances, it is impractical to solve the problem exactly.
 \cite{KarivHakimi1979}.
 
 \subsubsection {$p$-Median Problem}
-The $p$-Median Problem is very similar to the $p$-center problem. It can be defined as follows:
+The $p$-Median problem is very similar to the $p$-center problem. It can be defined as follows:
 Given a graph $G=(V,E)$ we are asked to find a set of nodes, $S$, of size $p$, where $ S\subset V$, such that the weighted
 sum of the distances from the remaining nodes $\{V-S\}$ to the set $S$ is minimized \cite{Rolland1997329}.
 This problem belongs to the class of problems known as NP-hard \cite{KarivHakimi1979median}. There have been
@@ -117,7 +117,7 @@ approaches to solve this problem with tabu search \cite{Rolland1997329} and inte
 %\subsection{Open Shortest Path First}
 %%TODO: Facility Location with hops
 \section{Server Location Problem with Restricted Loads on Servers and Links}
-In order to understand the SLRL decision problem definition, the definition of a neighbour set and the load on a link need to be explained. 
+In order to understand the definition of the SLRL decision problem, the notions of a neighbour set and the load on a link need to be introduced. 
 \subsection{Neighbour Set}
 Given a graph $G=(V,E)$ and a set of servers $S \subseteq V$, the neighbour set of a server is the set of vertices, that belong to a server $s \in S$. In the SLRL problem, it is
 defined as follows: If a non-server vertex has a shortest path to a server node, it 
@@ -180,7 +180,7 @@ of every server can easily be calculated with the graph and the set of servers. 
 can be checked after each shortest path to the server has been calculated.
 
 \subsection{Proof of NP-completeness}
-First, we have to show that SLRL is in NP. After guessing a solution, meaning we 
+First, we have to prove that SLRL is in NP. After guessing a solution, meaning we that
 have an instance of SLRL $(G,r,c,k)$ and a guessed set of servers S, one can clearly check 
 in polynomial time whether it is a valid solution for SLRL: We need to check that every neighbour set is smaller
 or equal to r. Also the number of servers have to be $k$ and the maximum usage of every edge may not exceed c.
@@ -256,8 +256,8 @@ The transformation is displayed in figure \ref{transfo}.
   \label{transfo}
 \end{figure}
 \noindent
-Now we prove, that 3SAT has a solution if and only if SLRL has a solution. 
-To prove the statement, it will be first shown that if 3SAT has a solution SLRL also has a solution.
+In the following we prove that 3SAT has a solution if and only if SLRL has a solution. 
+First, it will be shown that if 3SAT has a solution, also SLRL has a solution.
 \medskip
 
 \noindent
@@ -1041,12 +1041,14 @@ the chance for replacement is higher than with a lower temperature.
 \thispagestyle{empty}
 
 \section{Conclusion}
-I discussed the server location problem with restricted loads on servers and links (SLRL), motivating it by describing the importance of good mirror server locations in content delivery networks.
-A proof for the NP-completeness of SLRL was given and I introduced two metaheuristic approaches to SLRL, namely an algorithm based on tabu search and a second algorithm 
+The server location problem with restricted loads on servers and links (SLRL) was discussed and motivated by describing the importance of good mirror server locations in content delivery networks.
+A proof for the NP-completeness of SLRL was given. Furthermore, two metaheuristic approaches to SLRL have been introduced, namely an algorithm based on tabu search and a second algorithm 
 based on simulated annealing.
-The metaheuristic approaches using either tabu search or simulated annealing perform better than the greedy algorithm by Miwa et al. in 15 out of 38 problem instances. The problem instances were
-real ISP backbone topologies. Further research might investigate in exact algorithms for SLRL. It would also be interesting to get rid 
-of the assumption that the metrics of all the links in the network have the value one and to discuss the problem with a weighted graph.
+The metaheuristic approaches using either tabu search or simulated annealing perform better than the greedy algorithm by Miwa et al. \cite{mirrorserver} in 15 out of 38 problem instances. 
+The problem instances have been taken from existing "live"
+ISP backbone topologies.\\ We propose further research might investigate in exact algorithms for SLRL. It would also be interesting to weaken 
+the assumption that the metrics of all the links in the network have the value one, for instance, by introducing weights as the distances between members of the network
+and to discuss the problem with a weighted graph.
 \newpage
 \bibliography{bibtex}
 
