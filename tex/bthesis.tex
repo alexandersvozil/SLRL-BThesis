@@ -50,7 +50,7 @@ The server location problem with restricted loads on servers and links (SLRL) is
 problem, introduced by Miwa et al. The problem 
 is motivated by the fact that a massive volume of data distributed by content delivery networks (CDNs) 
 requires well located mirror servers in order to render a satisfactory performance in terms of quality of service.
-Two constraints important for the choice of mirror servers is (i) the number of maximum nodes
+Two constraints important for the choice of mirror servers are (i) the number of maximum nodes
 accessing a mirror server and (ii) the maximum number of nodes accessing a mirror server 
 through a specific link. The constraint mentioned first limits the network load on
 the (mirror-)servers. The second constraint restricts the load on the links.
@@ -67,7 +67,7 @@ by Miwa et. al.
 
 \section{Introduction}
 Content delivery networks (CDNs) try to ensure satisfactory performance when users access their content 
-and have therefore put mirror servers that serve the same content to shorten the delay time to the users of content service.
+and have therefore put mirror servers that serve the same content to shorten the delay time to the users.
 The mirror servers need to be well located in order to achieve this task. A method for finding those well located mirror servers thus needs to be introduced.
 In the server location problem with restricted loads on servers and links, a graph representing the network is given and a set of servers is chosen consisting of vertices from the graph. The vertices are then seen as clients
 accessing the servers for data. A client will always try to reach the nearest server(s). If there are several paths to the nearest server or if there are several nearest servers, the worst case is assumed
@@ -88,25 +88,25 @@ load of the other servers providing the data.
 
 \subsection {Similar Problems}
 The server location problem with restricted loads on servers and links could be described as an augmented server location problem: 
-Two problems that describe this problem would be the p-center and the
-p-median problem. The purpose of these problems is mainly to shorten delay
+Two problems that describe this problem would be the $p$-center and the
+$p$-median problem. The purpose of these problems is mainly to shorten delay
 time from the client to the server. 
 This class of problems does not care about the maximum load on a link.
 
-\subsubsection {P-Center Problem}
-The P-Center problem consists of locating p facilities and assigning clients
+\subsubsection {$p$-Center Problem}
+The $p$-Center problem consists of locating $p$ facilities and assigning clients
 to them in order to minimize the maximum distance between a client and the facility
 to which he or she is allocated. It is used for example in locating fire stations or ambulances,
 where the distance from the facilities 
 to their farthest assigned potential client should be minimum.
-The p-center problem is NP-hard and a well known location problem.
+The $p$-center problem is NP-hard and a well known location problem.
 For large instances, it is impractical to solve the problem exactly.
 \cite{KarivHakimi1979}.
 
-\subsubsection {P-Median Problem}
-The P-Median Problem is very similar to the P-center problem. It can be defined as follows:
+\subsubsection {$p$-Median Problem}
+The $p$-Median Problem is very similar to the $p$-center problem. It can be defined as follows:
 Given a graph $G=(V,E)$ we are asked to find a set of nodes, $S$, of size $p$, where $ S\subset V$, such that the weighted
-sum of the distances from the remaining nodes \{V-S\} to the set S is minimized \cite{Rolland1997329}.
+sum of the distances from the remaining nodes $\{V-S\}$ to the set $S$ is minimized \cite{Rolland1997329}.
 This problem belongs to the class of problems known as NP-hard \cite{KarivHakimi1979median}. There have been
 approaches to solve this problem with tabu search \cite{Rolland1997329} and integer linear programming 
 \cite{rosing1979p}.
@@ -153,7 +153,7 @@ sets. The server itself belongs to its own neighbour set.
     {neighbour set of s2};
 
   \end{tikzpicture}
-  \caption{An instance of SLRL, showing the neighbour set of the servers}
+  \caption{An instance of SLRL, showing the neighbour sets of the servers s1 and s2}
 \end{figure}
 
 \subsection{Load on a Link or multiplicity of an edge}
@@ -167,27 +167,27 @@ the worst case when locating a server.
 %\end{mydef}
 \subsection{SLRL Decision Problem Definition}
 
-{\itshape \textbf{Instance:} An undirected graph G(V,E) and  positive integers k,r and c.\\
+{\itshape \textbf{Instance:} An undirected graph $G(V,E)$ and  positive integers $k$,$r$ and $c$.\\
   \textbf{Question:} 
   Is there a subset of servers $S \subseteq V$, with $|S| = k$, $|V|$ $\geq$ k,
-  and a subset $V_i \subseteq V$ for each server $s_i \in S$, where $V_i$ is the neighbour set of $s_i$ $(i=1,2,\dots,k)$, $|V_i| \leq r$ 
+  and a subset $V_i \subseteq V$ for each server $s_i \in S$, where $V_i$ is the neighbour set of $s_i$ for $i=1,2,\dots,k$ with $|V_i| \leq r$ 
 and the load $m(e) \leq c \ \forall e \in E$ ?}
 \medskip
 
 \noindent
-It is easy to verify whether or not a $S \subseteq V$ is a solution to the problem, because the neighborhood subset
+It is easy to verify whether or not a $S \subseteq V$ is a solution to the problem, because the neighbour set
 of every server can easily be calculated with the graph and the set of servers. Also the load of each edge
 can be checked after each shortest path to the server has been calculated.
 
 \subsection{Proof of NP-completeness}
 First, we have to show that SLRL is in NP. After guessing a solution, meaning we 
 have an instance of SLRL $(G,r,c,k)$ and a guessed set of servers S, one can clearly check 
-in polynomial time whether it is a valid solution for SLRL: We need to check that every neighbor set is smaller
-or equal to r. Also the number of servers have to be k and the maximum usage of every edge may not exceed c.
-Calculating every neighbor set is done with breadth-first search: Every vertex that is not a server calculates
+in polynomial time whether it is a valid solution for SLRL: We need to check that every neighbour set is smaller
+or equal to r. Also the number of servers have to be $k$ and the maximum usage of every edge may not exceed c.
+Calculating every neighbour set is done with breadth-first search: Every vertex that is not a server calculates
 the path to every server and marks the path so the usage gets tracked. This is in $\mathcal{O}(|V|*(|V|+|E|)*|S|)$, as breadth first
 search is in $\mathcal{O}(|V|+|E|)$. Checking that server set is equal to $k$ is trivial as is looking at the usage of
-every edge and comparing the maximum with c.\\
+every edge and comparing the maximum with $c$.\\
 Now after showing that SLRL is in NP, we want to proof NP-completeness of SLRL.
 3SAT (3-satisfiability) is an NP-complete problem \cite{Garey:1979:CIG:578533} and can be reduced to SLRL in polynomial time,
 implying SLRL is NP-hard and NP-complete because we already showed the membership of NP. 
@@ -202,15 +202,15 @@ done in polynomial time. After the transformation, we need to show that 3SAT has
 SLRL has a solution.\\
 The steps to construct an instance of SLRL $(G=(V,E),k,r,c)$ of an instance of 3SAT $(U,C)$ are described below.
 \begin{enumerate}
-  \item{Let V $\leftarrow \emptyset$ and E $\leftarrow \emptyset$.}
-  \item{For each $C_i \in C$ where i = 1,\dots,m, let $c_i$ be a vertex, and for each $u_j \in U$ for j = 1,\dots,n,
+  \item{Let $V \leftarrow \emptyset$ and $E \leftarrow \emptyset$.}
+  \item{For each $C_i \in C$ where $i = 1,\dots,m$, let $c_i$ be a vertex, and for each $u_j \in U$ for $j = 1,\dots,n$,
     let $t_j$ and $f_j$ be a vertex.}
-  \item {Let V $\leftarrow \{c_1, \dots, c_m\} \cup \{t_1, \dots, t_n, f_1, \dots, f_n\} $ }
-  \item {Let E $\leftarrow \{(t_i,f_i)\}$ for i = 1,\dots,n }
-  \item {For each $C_i \in C$ for i = 1,\dots,m, if $u_j \in C_i$, let E $\leftarrow$ E $\cup \ \{ (c_i ,t_j) \}$
-    and if $\neg u_j \in C_i$, let E $\leftarrow$ E $\cup \ \{(c_i,f_j)\}$ }
-  \item{For each i=1,\dots,m and j=1,\dots,n let V $\leftarrow$  V $\cup \ \{v_{ij}\}$ and E $\leftarrow$ E $\cup \ \{(t_i,v_{ij}), (f_i, v_{ij} \}$ }
-  \item{Let k = n, r = 2m+2 and c = 1}
+  \item {Let $V \leftarrow \{c_1, \dots, c_m\} \cup \{t_1, \dots, t_n, f_1, \dots, f_n\} $ }
+  \item {Let $E \leftarrow \{(t_i,f_i)\}$ for $i = 1,\dots,n$ }
+  \item {For each $C_i \in C$ for $i = 1,\dots,m$, if $u_j \in C_i$, let $E \leftarrow$ $E \cup \ \{ (c_i ,t_j) \}$
+    and if $\neg u_j \in C_i$, let $E \leftarrow E \cup \ \{(c_i,f_j)\}$ }
+  \item{For each $i=1,\dots,m$ and $j=1,\dots,n$ let $V \leftarrow$  $V \cup \ \{v_{ij}\}$ and $E \leftarrow$ $E \cup \ \{(t_i,v_{ij}), (f_i, v_{ij} \}$ }
+  \item{Let $k = n$, $r = 2m+2$ and $c = 1$}
 \end{enumerate}
 The transformation is displayed in figure \ref{transfo}.
 \begin{figure}[H]
@@ -274,9 +274,9 @@ To prove the statement, it will be first shown that if 3SAT has a solution SLRL 
 \medskip
 
 \noindent
-  At most m clauses inherit the variable $u_j$ and there are m vertices connected to every
+  At most $m$ clauses inherit the variable $u_j$ and there are m vertices connected to every
       $t_j$ and $f_j$, i.e., $v_{ij}$ for $i=1,\dots,m$.
-      Thus the number of vertices in the neighbor set is $m+m+2 = 2m+2 \leq r $ for every 
+      Thus the number of vertices in the neighbour set is $m+m+2 = 2m+2 \leq r $ for every 
       $t_j$ or $f_j$. The additional two vertices result of the server and the respective 
     vertex representing the other truth value.
 \medskip
@@ -308,21 +308,21 @@ if $(G,k,r,c)$ has a solution there is also a solution for 3SAT.
 
   \noindent
   Assume that there is no server in $G_i$. This would imply that the servers is a subset of
-      $c_j$ for $(j=1\dots m)$. The problem there is, that not only is m $\neq$ n(concerning constraint k),
-      but also that constraint c would be unsatisfied, because more than one path would use 
-      the edge connecting $c_j$ and either $f_i$ or $t_i$ (there are m + 2 vertices in $G_i$).
-    Thus placing a server on any $c_j$ is not possible, because it would automatically violate constraint c.
+      $c_j$ for $(j=1\dots m)$. The problem there is, that not only is $m \neq n$ (concerning constraint $k$),
+      but also that constraint $c$ would be unsatisfied, because more than one path would use 
+      the edge connecting $c_j$ and either $f_i$ or $t_i$ (there are $m + 2$ vertices in $G_i$).
+    Thus placing a server on any $c_j$ is not possible, because it would automatically violate constraint $c$.
   \medskip
 
   \noindent
-  Assume that the servers are placed on $v_{ij}$. This would also satisfy the neighborhood 
-      constraint r, but it would certainly violate the constraint c, because the degree of $v_{ij}$ is two and
-      and the number of vertices in $G_i$ is m+2. All of them would need to use one of the two edges for their shortest path,
+  Assume that the servers are placed on $v_{ij}$. This would also satisfy the neighbourhood 
+      constraint $r$, but it would certainly violate the constraint $c$, because the degree of $v_{ij}$ is two and
+      and the number of vertices in $G_i$ is $m+2$. All of them would need to use one of the two edges for their shortest path,
     resulting in a violation.
   \medskip
 
   \noindent
-  The only spare option that would satisfy the neighborhood constraint 
+  The only spare option that would satisfy the neighbourhood constraint 
       are the vertices $t_i$ and $f_i$. Let $u_i$ be true if a server is located on
       $t_i$ and let $u_i$ be false if a server is located on $f_i$.  
       If an arbitrary $c_j$ has no adjacent vertice which is a server,
@@ -339,7 +339,7 @@ Consequently, SLRL is NP-complete.$\square$
 
 After discussing the decision problem of SLRL, the optimization version
 of SLRL will be tackled next. As in \cite{mirrorserver}, I decided to relax the maximum 
-neighborhood constraint.
+neighbourhood constraint.
 
 \subsection{An Instance Of The Problem}
 \begin{figure}[H]
@@ -384,7 +384,7 @@ Otherwise it will choose a vertex as server where $max_{e \in E}m(e)$ is the min
     \State $S \gets \emptyset$
     \While {$|S| < k$}
     \State Choose vertex $v$ such that the
-    maximum size of the neighbor sets of
+    maximum size of the neighbour sets of
     $S \cup \{v\}$ is the minimum
     for all vertices $v \in V$
     under the constraint that $m(e) \leq c$
@@ -406,7 +406,7 @@ In \cite{mirrorserver}, the constraints calculation works like this:
 To determine the shortest paths from one node to every other node takes 
 $\mathcal O(|V|+|E|)$ using Breadth-First Search. This needs to be done for every node once,
 which implies a runtime of $\mathcal O(|V| \cdot (|V|+|E|))$. 
-This calculations suffice to determine the size of the maximum neighbor set. To determine the maximum
+This calculations suffice to determine the size of the maximum neighbour set. To determine the maximum
 edge usage, every node (except the nodes in the server set) needs to be looked 
 at again (the usage of the edges in the
 path(s) to the server(s) need to be incremented, and a path can maximally be the whole graph), 
@@ -438,11 +438,11 @@ the two algorithms perform in combination with the tabu search and the simulated
 \end{algorithm}
 
 \subsection{Determination of the neighbour sets of a server and loads of the links}
-As described in the last section, when a server is added to the server set, the size of the maximum neighbor set r and
+As described in the last section, when a server is added to the server set, the size of the maximum neighbour set $r$ and
 $\max_{e \in E}m(e)$ (namely the maximum usage of all edges) need to be recalculated, as the shortest paths from the nodes 
 to the servers change. I tried to speed up the constraint calculation, 
 because on a big graph it took a lot of time and also for local search algorithms the constraints need to be calculated
-far more often than k times (servers need to be swapped a lot, implying a need for a faster constraint calculation).
+far more often than $k$ times (servers need to be swapped a lot, implying a need for a faster constraint calculation).
 My approach was to calculate all the paths before adding servers and also to save the edges used in the paths.
 This is indeed in $\mathcal O(|V|^{3} \cdot (|V|+|E|))$, but constraint calculation after adding and removing a server is much faster,
 because the edges used are already saved and every node knows it's nearest server(s) in $\mathcal O(|S|)$. Saving 
@@ -492,15 +492,15 @@ The Tabu search has been introduced by Glover in 1986 \cite{Glover:1986:FPI:1531
 \subsubsection{Investigating the neighbourhood of a solution }
 The search algorithm displayed in algorithm \ref{localS} takes
 the following three parameters as input (i) the solution to start from $curS$
-(ii) the Graph $g$ to operate on and (iii) the limit for the maximum edge usage c.
-The purpose of the algorithm is to investigate a neighborhood N by swapping servers in the solution
+(ii) the Graph $g$ to operate on and (iii) the limit for the maximum edge usage $c$.
+The purpose of the algorithm is to investigate a neighbourhood $N$ by swapping servers in the solution
 resulting in a different potentially better solution. If the new Solution is a new best Solution it is remembered as $bestS$.
 The only difference to an ordinary local search algorithm is, that it minds the tabu list mentioned in algorithm \ref{tabusa}.
 This means, that it will exchange the former best solution only if the new solution is not contained in the tabulist.
 It starts with setting the server set of the graph to the server set in the starting solution. After that the whole
-neighborhood induced by changing one server of the starting solution is looked at and the best solution is picked. As the first solution
+neighbourhood induced by changing one server of the starting solution is looked at and the best solution is picked. As the first solution
 is already in the tabulist, the best solution is not set in the beginning.
-The following procedure is executed to create the neighborhood:
+The following procedure is executed to create the neighbourhood:
 \begin{enumerate}
   \item{Start an outer loop and iterate over every server in the initial server set.}
   \item{Remove the server from the server set that is currently iterated over}
@@ -511,7 +511,7 @@ The following procedure is executed to create the neighborhood:
 \end{enumerate}
 
 \begin {algorithm} [H]
-\caption {investigateNeighborhood}
+\caption {investigateNeighbourhood}
 \label {localS}
 \begin {algorithmic} [3]
 \Require Solution curS, Graph(V,E) g, MaxEdgeUsage c 
@@ -524,7 +524,7 @@ The following procedure is executed to create the neighborhood:
 \State g.addServer(otherNode);
 \State g.updateConstraints();
 \State max\_usage = g.maxUsage; //the maximum usage of the edges
-\State max\_neighbourset = g.MaxNeighbourSet; //size of biggest neighbor set
+\State max\_neighbourset = g.MaxNeighbourSet; //size of biggest neighbour set
 \If{(max\_usage $\leq$ c) $\wedge$ ((max\_neighbourset)$<$bestSolution.r)
 $\wedge$(g.servers $\notin$ tabulist) }
 \State bestSolution=new Solution(g.servers,max\_neighbourset,max\_usage,true);
@@ -544,53 +544,53 @@ $\wedge$ (g.servers $\notin$ tabulist)}
 
 \subsubsection{The Tabu Search Algorithm}
 The algorithm takes five parameters: The graph $G$, the solution
-to start from $startingS$, the maximum size of the tabulist $t_{size}$, the number of iterations $iter$, the lower bound for the maximum neighborhood size
+to start from $startingS$, the maximum size of the tabulist $t_{size}$, the number of iterations $iter$, the lower bound for the maximum neighbourhood size
 $r*$ and the limit for the maximum edge usage $c$.\\
 The algorithm starts with adding $startingS$ to the tabulist.  
 After setting $startingS$ as current and best Solution the following operations will be carried out $iter$ times: 
 \begin{enumerate}
-  \item{A neighbor solution $neighborS$ determined by algorithm \ref{localS} is obtained.}
-  \item{The solution $neighborS$ is added to the tabulist.}
+  \item{A neighbour solution $neighbourS$ determined by algorithm \ref{localS} is obtained.}
+  \item{The solution $neighbourS$ is added to the tabulist.}
   \item{If the size of the tabulist is greater than $t_{size}$ the oldest element will be removed.}
-  \item{The current solution $curS$ is set to be the $neighborS$ and it is then evaluated if it is the best Solution.}
-  \item{If $curS$ is a better solution than $bestS$, i.e., if the maximum neighborhood of servers in $curS$, $r$, is lower than the respective counterpart in 
+  \item{The current solution $curS$ is set to be the $neighbourS$ and it is then evaluated if it is the best Solution.}
+  \item{If $curS$ is a better solution than $bestS$, i.e., if the maximum neighbourhood of servers in $curS$, $r$, is lower than the respective counterpart in 
       $best$ and the maximum usage of edges is below $c$, $bestS$ is set to be $curS$. If the best solution is not solved, i.e., it does not fuilfill the
       maximum edge usage constraint $c$, only the maximum edge usage values,
     $bestS.lastC$ and $curS.lastC$ will be compared. If $curS.lastC$ is lower than $bestS.lastC$, it is the new best solution}
-  \item{If the new solution satisfies the maximum edge usage constraint c and the maximum neighborhood is equal to $r*$, an optimal
+  \item{If the new solution satisfies the maximum edge usage constraint $c$ and the maximum neighbourhood is equal to $r*$, an optimal
     solution is found and the algorithm stops and returns the solution.}
 \end{enumerate}
 
 After completing the above described procedure $iter$ times $bestS$ is returned.
-A pseudocode is shown in algorithm \ref{tabusa}. The datastructure used to represent the solution saves the maximum edge usage, the maximum neighborhood
+A pseudocode is shown in algorithm \ref{tabusa}. The datastructure used to represent the solution saves the maximum edge usage, the maximum neighbourhood
 of the solution and the solution itself, i.e., the set of servers. 
 
 \begin {algorithm} [H]
 \caption {tabu search}
 \label {tabusa}
 \begin {algorithmic} [3]
-\Require Graph(V,E) G, Solution startingS, Tabulistsize $t_{size}$, Iterations iter, MaxEdgeUsage c, MaxNeighborhoodLowerBound r*
+\Require Graph(V,E) G, Solution startingS, Tabulistsize $t_{size}$, Iterations iter, MaxEdgeUsage c, MaxNeighbourhoodLowerBound r*
 \State Solution curS;
-\State Solution neighborS;
+\State Solution neighbourS;
 \State Solution bestS;
 \State Tabulist l $\gets$ $\emptyset$
 \State bestS = curS = startingS;
 \State tabulist $\gets$ curS;
 \For{i=0; i$<$iter; i++}
-\State  neighborS = investigateNeighborhood(curS, G, c, l); // described in Algorithm \ref{localS}
-\State  tabulist $\gets$ neighborS;
+\State  neighbourS = investigateNeighbourhood(curS, G, c, l); // described in Algorithm \ref{localS}
+\State  tabulist $\gets$ neighbourS;
 \If {tabulist.size $>$ $t_{size}$}
 \State removeOldestEntry();
 \EndIf
-\State  curS = neighborS;
-\If{(curS.lastC $\leq$ c) $\&\&$ (curS.r $<$ bestS.r) }
+\State  curS = neighbourS;
+\If{(curS.lastC $\leq$ c) $\wedge$ (curS.r $<$ bestS.r) }
 \State bestSolution.setSolved(true);
 \State bestSolution = currentSol;
 \If{curS.getR()==r*}
 \State break; // best possible feasible Solution found
 \EndIf
 \EndIf  
-\If{($\neg$bestS.solved) $\&\&$ (bestS.lastC$>$curS.lastC) }
+\If{($\neg$bestS.solved) $\wedge$ (bestS.lastC$>$curS.lastC) }
 \State curS.setSolved(curS.lastC$\leq$c);
 \State bestS = curS;
 \EndIf 
@@ -607,13 +607,13 @@ escaping the local optima by initially allowing worse solutions than the initial
 with some time (which steers the allowance probability for worse solutions)
 only allowing the better solutions.
 This feature is a result of using the metropolis criterion as stated in algorithm \ref{metcrit}. The metropolis criterion uses an objective function to evaluate a solution.
-As input parameters an initial solution $initS$, a graph $g$, the maximal usage of an edge $c$, the lowerbound for the maximum neighborhood $r*$,
-the desired runtime $r_{sec}$, the temperature $t_{init}$ and the cooling factor c is required.
-The objective function, given a solution x, its maximum edge usage denoted as x.lastC and its maximum neighborhood size x.r, is defined by:
+As input parameters an initial solution $initS$, a graph $g$, the constraint for the maximal usage of an edge $c$, the lowerbound for the maximum neighbourhood $r*$,
+the desired runtime $r_{sec}$, the temperature $t_{init}$ and the cooling factor $cool$ is required.
+The objective function, given a solution x, its maximum edge usage denoted as x.lastC and its maximum neighbourhood size x.r, is defined by:
 
 \begin{equation*}
       f(x) = \begin{cases}
-                       1 + c/x.lastC  + r\_lower/x.r             & \text {x fulfills the maximal edge usage constraint}\\
+                       1 + c/x.lastC  + r\_lower/x.r             & \text {if $x.lastC \leq c$ }\\
                        0 + c/x.lastC + r\_lower/x.r            & \text{otherwise}
                    \end{cases}
 \end{equation*}
@@ -621,7 +621,7 @@ The objective function, given a solution x, its maximum edge usage denoted as x.
 
 \noindent
 A solution is evaluated by the objective function. It is highly valued, if the solution is
-feasible. The other part of the evaluation is done by adding the ratios of (i) the lower bound of the maximum size of neighbor sets and the current maximum size of neighbor sets and
+feasible. The other part of the evaluation is done by adding the ratios of (i) the lower bound of the maximum size of neighbour sets and the current maximum size of neighbour sets and
 (ii) the ratio of the limit of the maximum edge usage and the current maximum edge usage.
 \medskip
 
@@ -629,9 +629,9 @@ feasible. The other part of the evaluation is done by adding the ratios of (i) t
 After assigning the initial temperature and $initS$ to the variable $temp$ and $initS$ to $solX$,
 the algorithm executes a while loop for a minimum of $r_{sec}$ seconds:
 \begin{enumerate}
-  \item {A random neighbor solution is generated and saved to variable $solY$}
+  \item {A random neighbour solution is generated and saved to variable $solY$}
   \item {The new random solution $solY$ is compared to the old solution $solX$. A function $compareSolution(.,.)$ takes care of 
-    comparing the values of the maximum neighbor set and the maximum edge usage.}
+    comparing the values of the maximum neighbour set and the maximum edge usage.}
   \item {If the solution is better, the new solution is set to be solX.}
   \item {If it is not better, the solutions are compared with the metropolis criterion. The code for the criterion is stated in algorithm \ref{metcrit}. If the metropolis criterion
     is fulfilled the new solution is also set to be solX. }
@@ -645,12 +645,12 @@ After the loop, $solX$ is returned.
 \caption {Simulated Annealing}
 \label {simA}
 \begin {algorithmic} [3]
-\Require Solution initS, Graph(V,E) g, MaxEdgeUsage c, Runtime $r_{sec}$, Temperature $t_{init}$, Cooling factor c,
+\Require Solution initS, Graph(V,E) g, MaxEdgeUsage c, Runtime $r_{sec}$, Temperature $t_{init}$, Cooling factor cool,
 Lowerbound\_r $r*$; 
 \State Temperature temp = $t_{init}$;
 \State Solution solX = initS; 
 \While{timepassed $<$ $r_{sec}$}
-\State Solution solY = randomNeighbor(solX);
+\State Solution solY = randomNeighbour(solX);
 \If{compareSolutions(solX,solY)} // if solY is better than solX
 \State solX = solY;
 \Else
@@ -658,7 +658,7 @@ Lowerbound\_r $r*$;
 \State solX = solY; // see algorithm \ref{metcrit}
 \EndIf
 \EndIf    
-\State temp = temp*c; // cooling takes place here
+\State temp = temp*cool; // cooling takes place here
 \If{(solX.r==$r*$) $\wedge$ (solX.lastC $\leq$ c)}
 \State break;
 \EndIf 
@@ -721,7 +721,7 @@ the chance for replacement is higher than with a lower temperature.
     \item{The number of servers $k = \lceil |V| * 0.1 \rceil$  }
     \item{The limit of the maximum usage for every edge $c = \lceil(\frac{|V|}{(k*\Delta)}*d)\rceil$. $\Delta$ is the maximum degree and $d$ is a positive integer.}
     \item{The lower bound of the maximum usage for every edge $c\_lower = \lceil(\frac{|V|}{(k*\Delta)})\rceil$. $\Delta$ is the maximum degree.}
-    \item{The lower bound of the maximum size of the neighbor sets $r*=\frac{|V|}{k}$.}
+    \item{The lower bound of the maximum size of the neighbour sets $r*=\frac{|V|}{k}$.}
   \end{itemize}
   In \cite{mirrorserver} $d$ is defined as four. %They defined a solution as solved if $\frac{r}{r*}$ was no more than two, and the maximum usage for every edge was below $c$.% 
   The following pages show performance evaluations of the algorithm.  Three instances could not be solved, because the maximum usage of the 
@@ -729,7 +729,7 @@ the chance for replacement is higher than with a lower temperature.
   for the instance "Allegiance Telecom". The instances  "AT\&T WorldNet" and "UUNet" are also instances which are unsolved. Unfortunately they are too big to be solved by enumeration so
   nothing can be said about them in this regard. In table \ref{table:compalgs} one can see the numerical results of the algorithms on the instances provided by caida. When no
   feasible solution was found for a specific instance the value is marked with -. n is the number of vertices, m the number of edges. The number displayed for each algorithm is r, i.e.,%abbreviations gl glts gdts %
-  the size of the maximum neighbor set of each server which is also the value we want to optimize. As shown by table \ref{table:compalgs}, better results for 15 out of 38 instances could be obtained 
+  the size of the maximum neighbour set of each server which is also the value we want to optimize. As shown by table \ref{table:compalgs}, better results for 15 out of 38 instances could be obtained 
   by either the tabu search or the simulated annealing algorithm. With $d$ being four one instance is not solvable, namely Allegiance Telecom. 
   The two instances AT\&T WorldNet and UUNet remain unsolved. For UUNet an infeasible solution could be found with an maximum edge usage of three, when two is required. 
   For AT\&T WorldNet the best infeasible solution regarding maximum edge usage found is four, but two is required for a feasible solution. 
@@ -1042,8 +1042,9 @@ the chance for replacement is higher than with a lower temperature.
 
 \section{Conclusion}
 I discussed the server location problem with restricted loads on servers and links (SLRL), motivating it by describing the importance of good mirror server locations in content delivery networks.
-A proof for the NP-completeness of SLRL was given and I introduced several heuristic approaches to SLRL, namely a tabu search algorithm and a simulated annealing algorithm.
-The metaheuristic approaches using tabu search or simulated annealing perform better than the greedy algorithm in 15 out of 38 problem instances. The problem instances were
+A proof for the NP-completeness of SLRL was given and I introduced two metaheuristic approaches to SLRL, namely an algorithm based on tabu search and a second algorithm 
+based on simulated annealing.
+The metaheuristic approaches using either tabu search or simulated annealing perform better than the greedy algorithm by Miwa et al. in 15 out of 38 problem instances. The problem instances were
 real ISP backbone topologies. Further research might investigate in exact algorithms for SLRL. It would also be interesting to get rid 
 of the assumption that the metrics of all the links in the network have the value one and to discuss the problem with a weighted graph.
 \newpage
